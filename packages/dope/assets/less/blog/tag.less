@@ -1,0 +1,64 @@
+.tag-feed {
+  padding: 0 60px
+}
+
+.tag {
+  border-radius: 5px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.tag-content {
+  bottom: 0;
+  left: 0;
+  padding: 30px;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+
+  &:before {
+    background-image: linear-gradient(transparent, rgba(0,0,0,.3) 50%, rgba(0,0,0,.75));
+    background-repeat: no-repeat;
+    bottom: 0;
+    content: "";
+    height: 150%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+  }
+}
+
+.tag-name {
+  color: @white-color;
+  margin-bottom: 0;
+}
+
+.tag-description {
+  color: @white-color;
+  line-height: 1.4;
+  margin-top: 8px;
+  opacity: .7;
+}
+
+.tag-count {
+  background-color: var(--primary-color);
+  border-radius: 3px;
+  color: @white-color;
+  display: inline-block;
+  font-size: 14px;
+  margin-top: 20px;
+  padding: 3px 15px;
+}
+
+@media (max-width: 991px) {
+  .tag-feed {
+    padding: 0 30px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .tag {
+    max-height: 600px;
+  }
+}

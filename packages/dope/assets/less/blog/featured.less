@@ -1,0 +1,45 @@
+.post-feed .post.featured {
+  min-height: 400px;
+  position: relative;
+
+  .post-media {
+    height: 100%;
+    margin-right: 0;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+
+    &:before {
+      background-color: rgba(0,0,0,.4);
+      bottom: 0;
+      content: "";
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 10;
+    }
+  }
+
+  .u-placeholder {
+    height: 100%;
+    padding-bottom: 0;
+  }
+
+  .post-wrapper {
+    margin-top: 0;
+    max-width: 600px;
+    padding: 60px 45px;
+  }
+
+  .post-meta,
+  .post-title-link,
+  .post-excerpt {
+    color: @white-color;
+  }
+
+  .post-meta,
+  .post-excerpt {
+    opacity: .7;
+  }
+}

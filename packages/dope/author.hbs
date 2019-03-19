@@ -1,0 +1,25 @@
+{{!< default}}
+
+<div class="content-area">
+  <main class="site-main">
+    {{#author}}
+      <section class="term">
+        {{#if profile_image}}
+          <div class="term-image-container u-placeholder">
+            <img class="term-image lazyload u-object-fit" data-src="{{profile_image}}" alt={{name}}>
+          </div>
+        {{/if}}
+        <div class="term-wrapper">
+          <h1 class="term-name">{{name}}</h1>
+          <div class="term-description">{{bio}}</div>
+        </div>
+      </section>
+    {{/author}}
+    <div class="post-feed">
+      {{#foreach posts}}
+        {{> "loop"}}
+      {{/foreach}}
+    </div>
+    {{pagination}}
+  </main>
+</div>
