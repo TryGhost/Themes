@@ -7,37 +7,25 @@
 
 .share-item {
   align-items: center;
-  background-color: @white-color;
-  border: 1px solid @mid-gray-color;
-  border-radius: 3px;
+  background-color: @dark-gray-color;
+  color: @white-color;
   display: flex;
   flex: 1;
   font-size: 15px;
   font-weight: 700;
   height: 40px;
   justify-content: center;
-  transition: border-color .2s @animation-base, color .2s @animation-base;
+  transition: background-color .2s @animation-base;
 
   & + & {
-    margin-left: 8px;
+    margin-left: 15px;
+  }
+
+  &:hover {
+    background-color: var(--primary-color);
   }
 }
 
 .share-label {
   margin-left: 5px;
-}
-
-.share-facebook:hover {
-  border-color: #3b5998;
-  color: #3b5998;
-}
-
-.share-twitter:hover {
-  border-color: #1da1f2;
-  color: #1da1f2;
-}
-
-.share-pinterest:hover {
-  border-color: #bd081c;
-  color: #bd081c;
 }
