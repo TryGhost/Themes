@@ -3,15 +3,18 @@
     margin-top: 45px;
   }
 
-  li + li {
-    margin-top: 19px;
+  li {
+    line-height: 1;
+
+    & + li {
+      margin-top: 20px;
+    }
   }
 
   a {
     display: block;
     font-size: 15px;
     font-weight: 700;
-    line-height: 1;
 
     &:hover {
       color: var(--primary-color);

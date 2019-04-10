@@ -33,6 +33,48 @@
   width: 100%;
 }
 
+.u-underline {
+  line-height: 1;
+  position: relative;
+
+  &:before,
+  &:after {
+    bottom: -5px;
+    content: "";
+    height: 1px;
+    position: absolute;
+    transition: width .5s ease;
+    width: 0;
+  }
+
+  &:before {
+    left: 0;
+    transition: .5s ease;
+    transition-property: background-color, width;
+    visibility: hidden;
+  }
+
+  &:after {
+    background-color: @dark-gray-color;
+    right: 0;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:hover:before {
+    background-color: @dark-gray-color;
+    visibility: visible;
+    width: 100%;
+  }
+
+  &:hover:after {
+    background-color: transparent !important;
+    width: 100%;
+  }
+}
+
 .u-placeholder {
   background-color: @light-gray-color;
   position: relative;
@@ -51,40 +93,6 @@
 
   &.square {
     padding-bottom: 100%;
-  }
-}
-
-.u-sep {
-  align-items: center;
-  display: flex;
-  position: relative;
-
-  &:after {
-    background-color: @mid-gray-color;
-    content: "";
-    height: 1px;
-    left: 0;
-    position: absolute;
-    width: 100%;
-  }
-
-  .text {
-    background-color: @white-color;
-    padding-right: 10px;
-    position: relative;
-    z-index: 10;
-  }
-}
-
-.u-hover-item {
-  transition: opacity .3s @animation-base;
-}
-
-.u-hover-wrapper:hover .u-hover-item {
-  opacity: .5;
-
-  &:hover {
-    opacity: 1;
   }
 }
 

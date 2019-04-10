@@ -5,9 +5,20 @@
 }
 
 .term-name {
+  align-items: center;
   color: var(--primary-color);
+  display: flex;
   font-size: 30px;
+  font-weight: 800;
   margin-bottom: 5px;
+
+  &:before {
+    background-color: var(--primary-color);
+    content: "";
+    height: 3px;
+    margin-right: 10px;
+    width: 30px;
+  }
 }
 
 @media (max-width: 767px) {
