@@ -5,13 +5,6 @@
     <div class="error">
       <div class="error-code">{{code}}</div>
       <div class="error-message">{{message}}.</div>
-      {{#get "posts" limit="1" as |recents|}}
-        <div class="post-feed error-posts">
-          {{#foreach recents}}
-            {{> "loop"}}
-          {{/foreach}}
-        </div>
-      {{/get}}
       <a class="error-link button-arrow-right" href="{{@site.url}}">Go to the front page <i class="button-arrow-icon icon icon-arrow-right"></i></a>
     </div>
   </main>
