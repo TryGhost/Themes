@@ -32,9 +32,6 @@ function carousel() {
     margin: 40,
     nav: true,
     navText: ['', ''],
-    onInitialized: function () {
-      moveNav();
-    },
     onResized: function () {
       moveNav();
     },

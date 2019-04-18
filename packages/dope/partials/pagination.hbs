@@ -1,6 +1,6 @@
-{{#if prev}}
+{{#if next}}
   <button class="pagination" data-url="{{page_url next}}">
-    <span class="load-more">Load More</span>
-    <span class="page-number">Page {{page}} of {{pages}}</span>
+    <span class="load-more">{{t 'Load More'}}</span>
+    <span class="page-number">{{t 'Page {page} of {pages}' page=page pages=pages}}</span>
   </button>
 {{/if}}
