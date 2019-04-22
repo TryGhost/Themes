@@ -43,13 +43,13 @@
     content: "";
     height: 1px;
     position: absolute;
-    transition: width .5s ease;
+    transition: width .5s @animation-base;
     width: 0;
   }
 
   &:before {
     left: 0;
-    transition: .5s ease;
+    transition: .5s @animation-base;
     transition-property: background-color, width;
     visibility: hidden;
   }

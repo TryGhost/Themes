@@ -7,6 +7,11 @@
   height: 100%;
   overflow: hidden;
   z-index: 10;
+
+  &:hover .tag-name:before {
+    margin-right: 10px;
+    width: 30px;
+  }
 }
 
 .tag-content {
@@ -31,9 +36,21 @@
 }
 
 .tag-name {
+  align-items: center;
   color: @white-color;
+  display: flex;
   font-weight: 800;
   margin-bottom: 0;
+
+  &:before {
+    background: @white-color;
+    content: "";
+    height: 3px;
+    margin-right: 0;
+    transition: .4s @animation-base;
+    transition-property: margin-right, width;
+    width: 0;
+  }
 }
 
 .tag-description {
@@ -61,8 +78,8 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
-  .tag {
+@media (min-width: 768px) and (max-width: 1024px) {
+  .tag-feed {
     max-height: 600px;
   }
 }

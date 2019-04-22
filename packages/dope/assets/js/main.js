@@ -1,7 +1,8 @@
 var html = $('html');
 
 $(function () {
-  carousel();
+  'use strict';
+  tagFeed();
   loadMore();
   gallery();
   comment();
@@ -11,30 +12,13 @@ $(function () {
   social();
 });
 
-function carousel() {
-  var carousel = $('.carousel');
-  var postImage = carousel.find('.tag-image');
-  var imageHeight, nav;
-
-  function moveNav() {
-    imageHeight = postImage.height();
-    if (!nav) {
-      nav = carousel.find('.owl-prev, .owl-next');
-    }
-    nav.css({
-      top: (imageHeight / 2) + 'px',
-      opacity: 1,
-    });
-  }
-
-  carousel.owlCarousel({
+function tagFeed() {
+  'use strict';
+  $('.tag-feed').owlCarousel({
     dots: false,
     margin: 40,
     nav: true,
     navText: ['', ''],
-    onResized: function () {
-      moveNav();
-    },
     responsive: {
       0: {
         items: 1,
@@ -61,6 +45,7 @@ function carousel() {
 }
 
 function loadMore() {
+  'use strict';
   var wrapper = $('.post-feed');
   var button = $('.pagination');
   var content, link, page;
@@ -86,6 +71,7 @@ function loadMore() {
 }
 
 function gallery() {
+  'use strict';
   var images = document.querySelectorAll('.kg-gallery-image img');
   images.forEach(function (image) {
     var container = image.closest('.kg-gallery-image');
@@ -97,18 +83,21 @@ function gallery() {
 }
 
 function comment() {
+  'use strict';
   if (themeOptions.disqus_shortname == '') {
     $('.comment-container').remove();
   }
 }
 
 function author() {
+  'use strict';
   $('.author-name').on('click', function () {
     $(this).next('.author-social').toggleClass('enabled');
   });
 }
 
 function offCanvas() {
+  'use strict';
   var burger = jQuery('.burger');
   var canvasClose = jQuery('.canvas-close');
 
@@ -146,12 +135,14 @@ function offCanvas() {
 }
 
 function copyright() {
+  'use strict';
   if (themeOptions.copyright != '') {
     $('.copyright').html(themeOptions.copyright);
   }
 }
 
 function social() {
+  'use strict';
   var data = {
     facebook: {name: 'Facebook', icon: 'facebook'},
     twitter: {name: 'Twitter', icon: 'twitter'},
@@ -177,7 +168,6 @@ function social() {
 
 function dimmer(action, speed) {
   'use strict';
-
   var dimmer = jQuery('.dimmer');
 
   switch (action) {
