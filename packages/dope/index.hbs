@@ -1,13 +1,15 @@
 {{!< default}}
 
-<style>
-  .owl .owl-prev:before {
-    content: "{{t 'Prev'}}";
-  }
-  .owl .owl-next:before {
-    content: "{{t 'Next'}}";
-  }
-</style>
+{{#contentFor "styles"}}
+  <style>
+    .owl .owl-prev:before {
+      content: "{{t 'Prev'}}";
+    }
+    .owl .owl-next:before {
+      content: "{{t 'Next'}}";
+    }
+  </style>
+{{/contentFor}}
 
 <div class="content-area">
   <main class="site-main kg-width-full">
@@ -18,7 +20,8 @@
             {{#if feature_image}}
               <img class="tag-image lazyload u-object-fit"
                 data-src="{{img_url feature_image}}"
-                alt="{{title}}"
+                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                alt="{{name}}"
               >
             {{/if}}
             <div class="tag-content">
