@@ -10,13 +10,6 @@
 }
 
 .home-template {
-  .site {
-    height: 100vh;
-  }
-
-  .content-area,
-  .site-main,
-  .tag-feed,
   .owl .owl-stage-outer,
   .owl .owl-stage,
   .owl .owl-item {
@@ -27,4 +20,18 @@
 .site-content {
   flex-basis: 0;
   flex-grow: 1;
+}
+
+@media (min-width: 1025px) {
+  .home-template {
+    .site {
+      height: 100vh;
+    }
+
+    .content-area,
+    .site-main,
+    .tag-feed {
+      height: 100%;
+    }
+  }
 }
