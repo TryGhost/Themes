@@ -1,0 +1,53 @@
+.site-header {
+  backface-visibility: hidden;
+  background-color: @white-color;
+  z-index: 80;
+}
+
+.navbar {
+  align-items: center;
+  display: flex;
+  height: 80px;
+  justify-content: space-between;
+}
+
+.navbar-left,
+.navbar-right {
+  flex: 2;
+}
+
+.navbar-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.logo {
+  display: inline-block;
+  margin-right: 15px;
+  position: relative;
+  vertical-align: middle;
+}
+
+.logo-image {
+  max-height: 60px;
+}
+
+.logo-text {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.nav-list {
+  display: flex;
+}
+
+.menu-item {
+  font-family: @font-alt;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1;
+  margin: 0 20px;
+  text-transform: uppercase;
+}

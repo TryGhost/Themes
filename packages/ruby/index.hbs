@@ -1,0 +1,16 @@
+{{!< default}}
+
+<div class="container">
+  <div class="content-area">
+    <main class="site-main">
+      <div class="post-feed">
+        <div class="row">
+          {{#foreach posts}}
+            {{> "loop"}}
+          {{/foreach}}
+        </div>
+      </div>
+      {{pagination}}
+    </main>
+  </div>
+</div>
