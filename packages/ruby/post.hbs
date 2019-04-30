@@ -1,0 +1,36 @@
+{{!< default}}
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3">
+      {{> related}}
+    </div>
+    <div class="col-lg-6">
+      <div class="content-area">
+        <main class="site-main">
+          {{#post}}
+            <article class="{{post_class}}{{#unless feature_image}} no-image{{/unless}} single">
+              {{> post-header single=true}}
+              <div class="post-meta">
+                <time class="post-meta-date" datetime="{{date format="YYYY-MM-DD"}}">
+                  {{date published_at}}
+                </time>
+              </div>
+              {{> post-media}}
+              <div class="post-wrapper">
+                <div class="post-content u-text-format">
+                  {{content}}
+                </div>
+                {{> share}}
+              </div>
+            </article>
+            {{> author}}
+          {{/post}}
+        </main>
+      </div>
+    </div>
+    <div class="col-lg-3">
+      
+    </div>
+  </div>
+</div>

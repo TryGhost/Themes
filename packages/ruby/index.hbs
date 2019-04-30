@@ -1,16 +1,25 @@
 {{!< default}}
 
 <div class="container">
-  <div class="content-area">
-    <main class="site-main">
-      <div class="post-feed">
-        <div class="row">
-          {{#foreach posts}}
-            {{> "loop"}}
-          {{/foreach}}
-        </div>
+  <div class="row">
+    <div class="col-lg-9">
+      <div class="content-area">
+        <main class="site-main">
+          <div class="post-feed">
+            <div class="row">
+              {{#foreach posts}}
+                <div class="post-column col-xl-4">
+                  {{> "loop"}}
+                </div>
+              {{/foreach}}
+            </div>
+          </div>
+          {{pagination}}
+        </main>
       </div>
-      {{pagination}}
-    </main>
+    </div>
+    <div class="col-lg-3">
+      
+    </div>
   </div>
 </div>

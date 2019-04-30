@@ -1,6 +1,8 @@
 $(function () {
   'use strict';
   social();
+  author();
+  stickySidebar();  
 });
 
 function social() {
@@ -26,4 +28,21 @@ function social() {
   }
   
   $('.social').html(output);
+}
+
+function author() {
+  'use strict';
+  $('.author-name').on('click', function () {
+    $(this).next('.author-social').toggleClass('enabled');
+  });
+}
+
+function stickySidebar() {
+  'use strict';
+  var marginTop = 30;
+
+  jQuery('.site-content > .container > .row > .col-lg-3').theiaStickySidebar({
+    additionalMarginTop: marginTop,
+    additionalMarginBottom: 30,
+  });
 }
