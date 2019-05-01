@@ -10,7 +10,7 @@
         <main class="site-main">
           {{#post}}
             <article class="{{post_class}}{{#unless feature_image}} no-image{{/unless}} single">
-              {{> post-header single=true}}
+              {{> post-header tag="h1" hide_link=true}}
               <div class="post-meta">
                 <time class="post-meta-date" datetime="{{date format="YYYY-MM-DD"}}">
                   {{date published_at}}
