@@ -1,4 +1,7 @@
 <header class="post-header">
+  {{#primary_tag}}
+    <a class="post-tag" href="{{url}}">{{name}}</a>
+  {{/primary_tag}}
   {{#if single}}
     <h1 class="post-title">{{title}}</h1>
   {{else}}
