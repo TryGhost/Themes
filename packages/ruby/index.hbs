@@ -1,6 +1,32 @@
 {{!< default}}
 
 <div class="container">
+  {{#is "tag"}}
+    <div class="term-tags">
+      {{#tag}}
+        <a class="tag tag-current" href="{{url}}">
+          <span class="tag-name">{{name}}</span>
+        </a>
+      {{/tag}}
+      {{#get "tags" limit="all" filter="id:-{{tag.id}}"}}
+        {{#foreach tags}}
+          <a class="tag" href="{{url}}">
+            <span class="tag-name">{{name}}</span>
+          </a>
+        {{/foreach}}
+      {{/get}}
+    </div>
+  {{/is}}
+  {{#is "author"}}
+    {{#author}}
+      <div class="term-author">
+        <div class="author-image-placeholder u-placeholder">
+          <img class="author-image lazyload u-object-fit" data-src="{{img_url profile_image size="xs"}}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="{{name}}">
+        </div>
+        <h1 class="author-name">{{name}}</h1>
+      </div>
+    {{/author}}
+  {{/is}}
   <div class="row">
     <div class="col-lg-9">
       <div class="content-area">

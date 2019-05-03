@@ -42,8 +42,10 @@
   background-color: @white-color;
   border-top: 1px solid @mid-gray-color;
   color: @secondary-text-color;
+  display: flex;
   font-size: 13px;
   font-weight: 700;
+  justify-content: space-between;
   padding: 10px 30px;
 }
 
@@ -63,6 +65,22 @@
 .post-content {
   font-size: 15px;
   line-height: 1.7;
+}
+
+.post-tags {
+  margin-top: 15px;
+
+  .tag {
+    font-weight: 700;
+
+    & + .tag {
+      margin-left: 10px;
+    }
+
+    &:before {
+      content: "#";
+    }
+  }
 }
 
 .post-footer {

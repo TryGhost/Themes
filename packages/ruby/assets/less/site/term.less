@@ -1,0 +1,40 @@
+.term-tags {
+  align-items: center;
+  display: flex;
+  margin-bottom: 30px;
+
+  .tag {
+    color: @secondary-text-color;
+    font-weight: 700;
+
+    & + .tag {
+      margin-left: 20px;
+    }
+  }
+
+  .tag-current {
+    background-color: var(--primary-color);
+    border-radius: 15px;
+    color: @white-color;
+    padding: 2px 10px 3px;
+  }
+}
+
+.term-author {
+  display: flex;
+  margin-bottom: 30px;
+
+  .author-image-placeholder {
+    height: 40px;
+    margin-right: 10px;
+    width: 40px;
+  }
+
+  .author-name {
+    font-size: 20px;
+
+    &:after {
+      display: none;
+    }
+  }
+}

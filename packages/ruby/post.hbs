@@ -15,22 +15,26 @@
                 <time class="post-meta-date" datetime="{{date format="YYYY-MM-DD"}}">
                   {{date published_at}}
                 </time>
+                <span class="post-meta-length">{{reading_time}}</span>
               </div>
               {{> post-media}}
               <div class="post-wrapper">
                 <div class="post-content u-text-format">
                   {{content}}
                 </div>
+                {{> tags}}
                 {{> share}}
               </div>
             </article>
             {{> author}}
+            {{> post-navigation}}
+            {{> disqus}}
           {{/post}}
         </main>
       </div>
     </div>
     <div class="col-lg-3">
-      
+      {{> widgets/widgets}}
     </div>
   </div>
 </div>
