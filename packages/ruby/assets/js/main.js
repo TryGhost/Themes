@@ -1,9 +1,12 @@
+var body = $('body');
+
 $(function () {
   'use strict';
   social();
   author();
   stickySidebar();
   pagination();
+  offCanvas();
 });
 
 function social() {
@@ -42,7 +45,7 @@ function stickySidebar() {
   'use strict';
   var marginTop = 30;
 
-  jQuery('.site-content > .container > .row > .col-lg-3').theiaStickySidebar({
+  jQuery('.sidebar-column, .related-column').theiaStickySidebar({
     additionalMarginTop: marginTop,
     additionalMarginBottom: 30,
   });
@@ -52,7 +55,7 @@ function pagination() {
   'use strict';
   var wrapper = $('.post-feed .row');
 
-  if ($('body').hasClass('paged-next')) {
+  if (body.hasClass('paged-next')) {
     wrapper.infiniteScroll({
       append: '.post-column',
       button: '.infinite-scroll-button',
@@ -64,4 +67,11 @@ function pagination() {
       status: '.infinite-scroll-status',
     });
   }
+}
+
+function offCanvas() {
+  'use strict';
+  $('.burger').on('click', function () {
+    body.toggleClass('canvas-opened');
+  });
 }

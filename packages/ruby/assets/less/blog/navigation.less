@@ -1,17 +1,15 @@
 .navigation {
-  background-color: @white-color;;
-  border-radius: 5px;
-  box-shadow: @shadow-base;
   display: flex;
   margin-top: 30px;
-  overflow: hidden;
 }
 
 .navigation-item {
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   min-height: 100px;
+  overflow: hidden;
   padding: 0 20px;
   position: relative;
   width: 50%;
@@ -34,14 +32,14 @@
   }
 }
 
-.navigation-next {
-  align-items: flex-end;
-  text-align: right;
+.navigation-previous {
+  margin-right: 7px;
 }
 
-.navigation-empty:before,
-.navigation-empty:hover:before {
-  opacity: 0;
+.navigation-next {
+  align-items: flex-end;
+  margin-left: auto;
+  text-align: right;
 }
 
 .navigation-label {
@@ -71,5 +69,9 @@
 
   .navigation-item {
     width: 100%;
+  }
+
+  .navigation-next {
+    margin-top: 7px;
   }
 }

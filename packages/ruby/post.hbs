@@ -2,10 +2,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-lg-3">
-      {{> related}}
-    </div>
-    <div class="col-lg-6">
+    <div class="content-column col-lg-6">
       <div class="content-area">
         <main class="site-main">
           {{#post}}
@@ -33,7 +30,10 @@
         </main>
       </div>
     </div>
-    <div class="col-lg-3">
+    <div class="related-column col-lg-3 hidden-xs hidden-sm hidden-md">
+      {{> related}}
+    </div>
+    <div class="sidebar-column col-lg-3 hidden-xs hidden-sm hidden-md">
       {{> widgets/widgets}}
     </div>
   </div>

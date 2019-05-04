@@ -28,13 +28,13 @@
     {{/author}}
   {{/is}}
   <div class="row">
-    <div class="col-lg-9">
+    <div class="content-column col-xl-9 col-lg-8">
       <div class="content-area">
         <main class="site-main">
           <div class="post-feed">
             <div class="row">
               {{#foreach posts}}
-                <div class="post-column col-xl-4">
+                <div class="post-column col-xl-4 col-md-6">
                   {{> "loop"}}
                 </div>
               {{/foreach}}
@@ -44,7 +44,7 @@
         </main>
       </div>
     </div>
-    <div class="col-lg-3">
+    <div class="sidebar-column col-xl-3 col-lg-4">
       {{> widgets/widgets}}
     </div>
   </div>
