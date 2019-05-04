@@ -2,7 +2,8 @@ $(function () {
   'use strict';
   social();
   author();
-  stickySidebar();  
+  stickySidebar();
+  pagination();
 });
 
 function social() {
@@ -45,4 +46,22 @@ function stickySidebar() {
     additionalMarginTop: marginTop,
     additionalMarginBottom: 30,
   });
+}
+
+function pagination() {
+  'use strict';
+  var wrapper = $('.post-feed .row');
+
+  if ($('body').hasClass('paged-next')) {
+    wrapper.infiniteScroll({
+      append: '.post-column',
+      button: '.infinite-scroll-button',
+      debug: false,
+      hideNav: '.pagination',
+      history: false,
+      path: '.pagination .older-posts',
+      scrollThreshold: false,
+      status: '.infinite-scroll-status',
+    });
+  }
 }
