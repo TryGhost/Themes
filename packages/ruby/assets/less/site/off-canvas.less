@@ -1,0 +1,57 @@
+.dimmer {
+  background: rgba(0,0,0,.7);
+  bottom: 0;
+  // display: none;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 90;
+}
+
+.off-canvas {
+  background-color: @light-gray-color;
+  height: 100vh;
+  overflow-y: scroll;
+  padding: 60px 0 30px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  // transform: translateX(320px);
+  transition: transform .6s @animation-base;
+  width: 320px;
+  z-index: 90;
+  -webkit-overflow-scrolling: touch;
+
+  .canvas-close {
+    &:extend(.navbar .navbar-button);
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    
+    .mdi {
+      transition: transform .5s @animation-base;
+    }
+
+    &:hover .mdi {
+      transform: rotate(-180deg);
+    }
+  }
+
+  .widget-area {
+    padding: 0 20px;
+  }
+}
+
+// body:not(.canvas-visible) .off-canvas {
+//   visibility: hidden;
+// }
+
+.canvas-opened {
+  overflow-y: hidden;
+}
+
+.canvas-opened .off-canvas {
+  transform: translateX(0);
+  visibility: visible;
+}
