@@ -1,5 +1,8 @@
 var body = $('body');
 
+window.lazySizesConfig = window.lazySizesConfig || {};
+window.lazySizesConfig.loadHidden = false;
+
 $(function () {
   'use strict';
   social();
@@ -71,7 +74,36 @@ function pagination() {
 
 function offCanvas() {
   'use strict';
-  $('.burger').on('click', function () {
-    body.toggleClass('canvas-opened');
+  $('.burger:not(.burger.close)').on('click', function () {
+    body.addClass('canvas-visible canvas-opened');
+    dimmer('open', 'medium');
   });
+
+  $('.burger-close').on('click', function () {
+    if (body.hasClass('canvas-opened')) {
+      body.removeClass('canvas-opened');
+      dimmer('close', 'medium');
+    }
+  });
+
+  $('.dimmer').on('click', function () {
+    if (body.hasClass('canvas-opened')) {
+      body.removeClass('canvas-opened');
+      dimmer('close', 'medium');
+    }
+  });
+}
+
+function dimmer(action, speed) {
+  'use strict';
+  var dimmer = $('.dimmer');
+
+  switch (action) {
+    case 'open':
+      dimmer.fadeIn(speed);
+      break;
+    case 'close':
+      dimmer.fadeOut(speed);
+      break;
+  }
 }

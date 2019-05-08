@@ -1,7 +1,7 @@
 .dimmer {
   background: rgba(0,0,0,.7);
   bottom: 0;
-  // display: none;
+  display: none;
   left: 0;
   position: fixed;
   right: 0;
@@ -17,25 +17,17 @@
   position: fixed;
   right: 0;
   top: 0;
-  // transform: translateX(320px);
-  transition: transform .6s @animation-base;
+  transform: translateX(320px);
+  transition: transform .6s cubic-bezier(.77,0,.175,1);
   width: 320px;
   z-index: 90;
   -webkit-overflow-scrolling: touch;
 
-  .canvas-close {
-    &:extend(.navbar .navbar-button);
+  .burger {
+    margin: 0;
     position: absolute;
-    right: 15px;
+    right: 12px;
     top: 15px;
-    
-    .mdi {
-      transition: transform .5s @animation-base;
-    }
-
-    &:hover .mdi {
-      transform: rotate(-180deg);
-    }
   }
 
   .widget-area {
@@ -43,9 +35,9 @@
   }
 }
 
-// body:not(.canvas-visible) .off-canvas {
-//   visibility: hidden;
-// }
+body:not(.canvas-visible) .off-canvas {
+  visibility: hidden;
+}
 
 .canvas-opened {
   overflow-y: hidden;
