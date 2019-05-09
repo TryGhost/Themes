@@ -9,6 +9,7 @@ $(function () {
   author();
   stickySidebar();
   pagination();
+  loadInstagram();
   offCanvas();
 });
 
@@ -57,8 +58,19 @@ function stickySidebar() {
 function pagination() {
   'use strict';
   var wrapper = $('.post-feed .row');
+  var button = $('.infinite-scroll-button');
 
   if (body.hasClass('paged-next')) {
+    wrapper.on('request.infiniteScroll', function (event, path) {
+      button.hide();
+    });
+
+    wrapper.on('load.infiniteScroll', function (event, response, path) {
+      if ($(response).find('body').hasClass('paged-next')) {
+        button.show();
+      }
+    });
+
     wrapper.infiniteScroll({
       append: '.post-column',
       button: '.infinite-scroll-button',
@@ -70,6 +82,50 @@ function pagination() {
       status: '.infinite-scroll-status',
     });
   }
+}
+
+function loadInstagram() {
+  'use strict';
+  var photos;
+  var feed = $('.instagram-feed');
+
+  if (themeOptions.instagram_token != '') {
+    if ( localStorage.getItem('instagram') !== null && (Math.floor(Date.now() / 1000) - JSON.parse(localStorage.getItem('instagram')).timestamp) < 300) {
+			photos = JSON.parse(localStorage.getItem('instagram')).photos;
+			outputInstagram(photos, feed);
+		} else {
+      $.ajax({
+        url: 'https://api.instagram.com/v1/users/self/media/recent/',
+        dataType: 'jsonp',
+        type: 'GET',
+        data: {access_token: themeOptions.instagram_token, count: 9},
+        success: function (result) {
+          photos = result.data;
+		    	var cache = {
+		    		photos: photos,
+		    		timestamp: Math.floor(Date.now() / 1000)
+		    	};
+		    	localStorage.setItem('instagram', JSON.stringify(cache));
+		    	outputInstagram(photos, feed);
+        }
+      } );
+		}
+  } else {
+    feed.remove();
+  }
+}
+
+function outputInstagram(photos, feed) {
+  'use strict';
+  var photo;
+	var output = '';
+
+	for (var index in photos) {
+		photo = photos[index];
+    output += '<a class="instagram-feed-item" href="' + photo.link + '" target="_blank">' + '<img class="u-object-fit" src="' + photo.images.thumbnail.url + '">' + '</a>';
+	}
+
+	feed.html(output);
 }
 
 function offCanvas() {

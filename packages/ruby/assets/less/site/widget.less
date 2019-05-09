@@ -91,3 +91,25 @@
     margin-top: 3px;
   }
 }
+
+.widget-instagram {
+  padding: 4px;
+  
+  .instagram-feed {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .instagram-feed-item {
+    flex-shrink: 0;
+    margin: 1px;
+    position: relative;
+    width: calc(~"33.3333333333% - 2px");
+
+    &:before {
+      content: "";
+      display: block;
+      padding-bottom: 100%;
+    }
+  }
+}
