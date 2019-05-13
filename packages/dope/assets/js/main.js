@@ -12,6 +12,19 @@ $(function () {
   social();
 });
 
+document.addEventListener('lazyloaded', function (e) {
+  'use strict';
+  var options = {
+    disableParallax: /iPad|iPhone|iPod|Android/,
+    disableVideo: /iPad|iPhone|iPod|Android/,
+    speed: 0.1,
+  };
+
+  if ($(e.target).closest('.post').hasClass('single-post')) {
+    $(e.target).parent().jarallax(options).addClass('initialized');
+  }
+})
+
 function tagFeed() {
   'use strict';
   $('.tag-feed').owlCarousel({

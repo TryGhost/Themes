@@ -6,14 +6,19 @@
     min-height: 450px;
 
     &:before {
-      background-color: rgba(0,0,0,.4);
+      background-color: rgba(0,0,0,1);
       bottom: 0;
       content: "";
       left: 0;
       position: absolute;
       right: 0;
       top: 0;
+      transition: background-color 1s @animation-base;
       z-index: 10;
+    }
+
+    &.initialized:before {
+      background-color: rgba(0,0,0,.4);
     }
   }
 
