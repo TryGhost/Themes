@@ -18,14 +18,14 @@
     </div>
   {{/is}}
   {{#is "author"}}
-    {{#author}}
+    {{#primary_author}}
       <div class="term-author">
         <div class="author-image-placeholder u-placeholder">
           <img class="author-image lazyload u-object-fit" data-src="{{img_url profile_image size="xs"}}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="{{name}}">
         </div>
         <h1 class="author-name">{{name}}</h1>
       </div>
-    {{/author}}
+    {{/primary_author}}
   {{/is}}
   <div class="row">
     <div class="content-column col-xl-9 col-lg-8">
@@ -44,7 +44,7 @@
         </main>
       </div>
     </div>
-    <div class="sidebar-column col-xl-3 col-lg-4">
+    <div class="sidebar-column col-xl-3 col-lg-4 hidden-xs hidden-sm hidden-md">
       {{> widgets/widgets}}
     </div>
   </div>
