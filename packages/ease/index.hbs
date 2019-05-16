@@ -1,0 +1,33 @@
+{{!< default}}
+
+<div class="content-area">
+  <main class="site-main">
+    {{> featured}}
+    {{#get "tags" limit="all" include="count.posts"}}
+      <div class="topic-feed">
+        <div class="row">
+          {{#foreach tags}}
+            <div class="col-md-6">
+              <section class="topic">
+                <header class="topic-header">
+                  <h2 class="topic-name">{{name}}</h2>
+                  <div class="topic-count">{{plural count.posts empty=(t 'No articles') singular=(t '1 article') plural=(t '% articles')}}</div>
+                </header>
+                {{#get "posts" filter="tag:{{slug}}" limit="10" as |featured|}}
+                  <ul class="topic-article-feed u-plain-list">
+                    {{#foreach featured}}
+                      <li class="topic-article">
+                        <h3 class="topic-article-title"><a class="topic-article-link" href="{{url}}"><i class="topic-article-icon icon icon-chevron-right"></i>{{title}}</a></h3>
+                      </li>
+                    {{/foreach}}
+                  </ul>
+                {{/get}}
+                <a class="topic-more" href="{{url}}">{{t 'View All'}}</a>
+              </section>
+            </div>
+          {{/foreach}}
+        </div>
+      </div>
+    {{/get}}
+  </main>
+</div>

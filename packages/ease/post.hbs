@@ -1,0 +1,17 @@
+{{!< default}}
+
+<div class="content-area">
+  <main class="site-main kg-width-normal">
+    {{#post}}
+      <article class="{{post_class}} single">
+        {{> post-header show_author=true}}
+        {{> post-media same_height=true ratio="horizontal"}}
+        <div class="post-content u-text-format">
+          {{content}}
+        </div>
+        {{> post-tags}}
+      </article>
+    {{/post}}
+    {{> related}}
+  </main>
+</div>

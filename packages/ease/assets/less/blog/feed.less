@@ -1,0 +1,20 @@
+.post-feed {
+  .post {
+    padding: 35px 0 33px;
+    position: relative;
+
+    & + .post {
+      border-top: 1px solid @mid-gray-color;
+    }
+  }
+
+  .post-link:hover ~ .post-header .post-title-link {
+    color: var(--primary-color);
+  }
+
+  .post-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 0;
+  }
+}

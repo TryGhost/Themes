@@ -1,0 +1,6 @@
+{{#if @labs.subscribers}}
+  <div class="subscribe">
+    {{subscribe_form form_id="subscribe-form" form_class="subscribe-form" button_id="subscribe-button" button_class="subscribe-button" placeholder=(t 'Your email address')}}
+    <p class="subscribe-message">{{t 'Get the latest news delivered right to your inbox.'}}</p>
+  </div>
+{{/if}}

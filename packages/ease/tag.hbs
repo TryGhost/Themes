@@ -1,0 +1,19 @@
+{{!< default}}
+
+<div class="content-area">
+  <main class="site-main">
+    {{#tag}}
+    <div class="term">
+      <h1 class="term-name">{{name}}</h1>
+      {{#if description}}
+      <div class="term-description">{{description}}</div>
+      {{/if}}
+    </div>
+    {{/tag}}
+    <div class="post-feed kg-width-normal">
+      {{#foreach posts}}
+      {{> loop}}
+      {{/foreach}}
+    </div>
+  </main>
+</div>

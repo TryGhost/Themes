@@ -1,0 +1,19 @@
+<header class="post-header">
+  <h2 class="post-title"><a class="post-title-link" href="{{url}}">{{title}}</a></h2>
+  <div class="post-meta">
+    {{#if show_author}}
+      <div class="post-meta-left">
+        {{> post-author}}
+      </div>
+      <div class="post-meta-right">
+        <div class="post-author-name">
+          <span class="post-author-by">Written by </span>
+          {{#foreach authors}}<a class="post-author-name-link" href="{{url}}">{{name}}</a>{{/foreach}}
+        </div>
+        {{> post-updated}}
+      </div>
+    {{else}}
+      {{> post-updated}}
+    {{/if}}
+  </div>
+</header>

@@ -1,0 +1,48 @@
+$(function () {
+  social();
+  copyright();
+});
+
+document.addEventListener('lazyloaded', function (e) {
+  'use strict';
+  var options = {
+    disableParallax: /iPad|iPhone|iPod|Android/,
+    disableVideo: /iPad|iPhone|iPod|Android/,
+    speed: 0.1,
+  };
+
+  if ($(e.target).parent('.site-cover').length) {
+    $(e.target).parent().jarallax(options).addClass('initialized');
+  }
+})
+
+function social() {
+  var data = {
+    facebook: {name: 'Facebook', icon: 'facebook'},
+    twitter: {name: 'Twitter', icon: 'twitter'},
+    instagram: {name: 'Instagram', icon: 'instagram'},
+    dribbble: {name: 'Dribbble', icon: 'dribbble'},
+    behance: {name: 'Behance', icon: 'behance'},
+    github: {name: 'GitHub', icon: 'github-circle'},
+    linkedin: {name: 'LinkedIn', icon: 'linkedin'},
+    vk: {name: 'VK', icon: 'vk'},
+    rss: {name: 'RSS', icon: 'rss'},
+  };
+  var links = themeOptions.social_links;
+  var output = '';
+
+  for (var key in links) {
+		if (links[key] != '') {
+			output += '<a class="footer-social-item" href="' + links[key] + '" target="_blank"><i class="icon icon-' + data[key]['icon'] + '"></i></a>';
+		}
+  }
+  
+  $('.footer-social').html(output);
+}
+
+function copyright() {
+  'use strict';
+  if (themeOptions.copyright != '') {
+    $('.copyright').html(themeOptions.copyright);
+  }
+}
