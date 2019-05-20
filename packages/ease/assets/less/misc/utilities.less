@@ -64,6 +64,18 @@
   }
 }
 
+.u-hover-item {
+  transition: opacity .2s @animation-base;
+}
+
+.u-hover-wrapper:hover .u-hover-item {
+  opacity: .5;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
 .u-text-format {
   h1, h2, h3, h4, h5, h6 {
     font-weight: 800;
