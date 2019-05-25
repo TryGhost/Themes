@@ -145,47 +145,4 @@
       width: 100%;
     }
   }
-
-  ul, ol {
-    list-style-type: none;
-    padding-left: 35px;
-    position: relative;
-
-    li {
-      line-height: 1.5;
-      margin: 15px 0;
-    }
-
-    li:before {
-      background-color: var(--primary-color);
-      left: 0;
-      position: absolute;
-    }
-  }
-
-  ul li:before {
-    border-radius: 50%;
-    content: "";
-    height: 6px;
-    left: 13px;
-    margin-top: 8px;
-    width: 6px;
-  }
-
-  ol {
-    counter-reset: numbered-list;
-
-    li:before {
-      border-radius: 50%;
-      color: @white-color;
-      content: counter(numbered-list);
-      counter-increment: numbered-list;
-      font-size: 13px;
-      font-weight: 700;
-      height: 24px;
-      line-height: 24px;
-      text-align: center;
-      width: 24px;
-    }
-  }
 }

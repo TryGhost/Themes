@@ -3,7 +3,7 @@
     {{#foreach authors}}
       {{#if profile_image}}
         <a class="post-author-link" href="{{url}}">
-          <img class="post-author-image" src="{{img_url profile_image size="xs"}}" alt="{{name}}">
+          <img class="post-author-image lazyload" data-src="{{img_url profile_image size="xs"}}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-sizes="auto" alt="{{name}}">
         </a>
       {{/if}}
     {{/foreach}}

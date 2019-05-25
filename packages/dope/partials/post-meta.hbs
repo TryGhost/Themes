@@ -12,5 +12,8 @@
     <span class="post-meta-item post-meta-length">
       {{reading_time minute=(t '1 min read') minutes=(t '% min read')}}
     </span>
+    {{#if featured}}
+      <span class="post-meta-featured"><i class="icon icon-star"></i></span>
+    {{/if}}
   </div>
 {{/is}}
