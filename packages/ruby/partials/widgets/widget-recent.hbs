@@ -1,13 +1,10 @@
-<div class="widget widget-recent">
+<div class="widget widget-recent u-shadow">
   <h4 class="widget-title">Recent Posts</h4>
   {{#get "posts" limit="3" include="tags" as |recents|}}
     {{#if recents}}
       <div class="recent-posts">
         {{#foreach recents}}
           <article class="recent">
-            <div class="recent-image-placeholder u-placeholder">
-              <img class="recent-image lazyload u-object-fit" data-src={{img_url feature_image size="xs"}} src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="{{title}}">
-            </div>
             {{> post-header tag="h5" hide_tag=true show_date=true}}
           </article>
         {{/foreach}}
