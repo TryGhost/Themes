@@ -10,10 +10,10 @@
 }
 
 .off-canvas {
-  background-color: @white-color;
+  background-color: @light-gray-color;
   height: 100vh;
   overflow-y: scroll;
-  padding: 60px 0 30px;
+  padding: 60px 0;
   position: fixed;
   right: 0;
   top: 0;
@@ -30,13 +30,23 @@
     top: 15px;
   }
 
+  .related-posts {
+    margin: 45px 0 30px;
+    padding: 0 20px;
+  }
+
   .widget-area {
     padding: 0 20px;
   }
 
-  .related-posts {
-    margin: 45px 0 30px;
-    padding: 0 20px;
+  .widget {
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+
+    & + .widget {
+      margin-top: 45px;
+    }
   }
 }
 
@@ -54,14 +64,14 @@ body:not(.canvas-visible) .off-canvas {
 }
 
 .mobile-menu {
-  margin: 0 20px 30px;
+  margin: 0 20px 45px;
 
   .nav-list {
     display: block;
   }
 
   .menu-item {
-    margin: 18px 0;
+    margin: 20px 0;
     letter-spacing: 0;
   }
 }

@@ -1,51 +1,5 @@
 {{!< default}}
 
 <div class="container">
-  {{#is "tag"}}
-    <div class="term-tags">
-      {{#tag}}
-        <a class="tag tag-current" href="{{url}}">
-          <span class="tag-name">{{name}}</span>
-        </a>
-      {{/tag}}
-      {{#get "tags" limit="all" filter="id:-{{tag.id}}"}}
-        {{#foreach tags}}
-          <a class="tag" href="{{url}}">
-            <span class="tag-name">{{name}}</span>
-          </a>
-        {{/foreach}}
-      {{/get}}
-    </div>
-  {{/is}}
-  {{#is "author"}}
-    {{#primary_author}}
-      <div class="term-author">
-        <div class="author-image-placeholder u-placeholder">
-          <img class="author-image lazyload u-object-fit" data-src="{{img_url profile_image size="xs"}}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="{{name}}">
-        </div>
-        <h1 class="author-name">{{name}}</h1>
-      </div>
-    {{/primary_author}}
-  {{/is}}
-  <div class="row">
-    <div class="content-column col-xl-9 col-lg-8">
-      <div class="content-area">
-        <main class="site-main">
-          <div class="post-feed">
-            <div class="row">
-              {{#foreach posts}}
-                <div class="post-column col-xl-4 col-md-6">
-                  {{> "loop"}}
-                </div>
-              {{/foreach}}
-            </div>
-          </div>
-          {{pagination}}
-        </main>
-      </div>
-    </div>
-    <div class="sidebar-column col-xl-3 col-lg-4 hidden-xs hidden-sm hidden-md">
-      {{> widgets/widgets}}
-    </div>
-  </div>
+  {{> content}}
 </div>

@@ -100,7 +100,7 @@ function loadInstagram() {
         url: 'https://api.instagram.com/v1/users/self/media/recent/',
         dataType: 'jsonp',
         type: 'GET',
-        data: {access_token: themeOptions.instagram_token, count: 9},
+        data: {access_token: themeOptions.instagram_token, count: 6},
         success: function (result) {
           photos = result.data;
 		    	var cache = {
@@ -124,10 +124,16 @@ function outputInstagram(photos, feed) {
 
 	for (var index in photos) {
 		photo = photos[index];
-    output += '<a class="instagram-feed-item" href="' + photo.link + '" target="_blank">' + '<img class="u-object-fit" src="' + photo.images.thumbnail.url + '">' + '</a>';
+    output += '<a class="instagram-feed-item" href="' + photo.link + '" target="_blank">' +
+      '<img class="u-object-fit" src="' + photo.images.thumbnail.url + '">' +
+      '<i class="instagram-feed-item-icon icon icon-instagram"></i>' +
+    '</a>';
 	}
 
-	feed.html(output);
+  feed.each(function(i, v) {
+    $(v).html(output);
+    $(v).css('height', Math.round($(v).height()) + 'px');
+  });
 }
 
 function gallery() {

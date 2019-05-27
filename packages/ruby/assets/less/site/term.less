@@ -1,15 +1,14 @@
 .term-tags {
   align-items: center;
   display: flex;
-  margin-bottom: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
 
   .tag {
     color: @secondary-text-color;
     font-weight: 700;
-
-    & + .tag {
-      margin-left: 20px;
-    }
+    margin-bottom: 10px;
+    margin-right: 20px;
   }
 
   .tag-current {
@@ -17,6 +16,18 @@
     border-radius: 15px;
     color: @white-color;
     padding: 2px 10px 3px;
+  }
+}
+
+@media (max-width: 767px) {
+  .term-tags {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+
+    .tag {
+      white-space: nowrap;
+    }
   }
 }
 
