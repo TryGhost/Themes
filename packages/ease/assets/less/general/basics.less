@@ -56,12 +56,12 @@ img {
 blockquote {
   color: @dark-gray-color;
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.45;
   margin: 45px 60px;
 
   strong {
-    font-weight: 800;
+    font-weight: 700;
   }
 }
 
@@ -119,5 +119,12 @@ hr {
 
   &:after {
     left: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  blockquote {
+    margin-left: 0;
+    margin-right: 0;
   }
 }

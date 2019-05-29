@@ -1,7 +1,10 @@
-<article class="{{post_class}} u-hover-item">
+<article class="{{post_class}}{{#unless feature_image}} no-image{{/unless}} u-hover-item">
   <a class="post-link u-permalink" href="{{url}}"></a>
-  {{> post-header tag="h2"}}
-  <div class="post-excerpt">
-    {{excerpt words="30"}}
+  {{> post-media small_image=true same_height=true ratio="rectangle"}}
+  <div class="post-wrapper">
+    {{> post-header tag=tag}}
+    <div class="post-excerpt">
+      {{excerpt words="30"}}
+    </div>
   </div>
 </article>

@@ -5,8 +5,9 @@
     {{> term}}
     <div class="post-feed kg-width-normal u-hover-wrapper">
       {{#foreach posts}}
-        {{> loop}}
+        {{> loop tag="h2"}}
       {{/foreach}}
     </div>
+    {{pagination}}
   </main>
 </div>

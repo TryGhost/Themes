@@ -1,16 +1,16 @@
 .subscribe {
-  margin-top: 30px;
+  margin: 30px auto 0;
+  max-width: 400px;
+  min-width: 400px;
 }
 
 .subscribe-form {
-  display: inline-block;
   position: relative;
 }
 
-input.subscribe-email {
-  border: 0;
-  padding-right: 55px;
-  width: 400px;
+.subscribe-email {
+  border: 0 !important;
+  padding-right: 55px !important;
 }
 
 .subscribe-button {
@@ -45,4 +45,10 @@ input.subscribe-email {
   font-size: 14px;
   margin-top: 10px;
   text-align: left;
+}
+
+@media (max-width: 767px) {
+  .subscribe {
+    min-width: auto;
+  }
 }

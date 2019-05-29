@@ -1,5 +1,6 @@
 .post-feed {
   .post {
+    display: flex;
     padding: 35px 0 33px;
     position: relative;
 
@@ -12,8 +13,17 @@
     color: var(--primary-color);
   }
 
-  .post-title {
-    font-size: 20px;
+  .post-media {
+    flex-shrink: 0;
     margin-bottom: 0;
+    width: 200px;
+  }
+
+  .post-wrapper {
+    margin-left: 30px;
+  }
+
+  .post.no-image .post-wrapper {
+    margin-left: 0;
   }
 }

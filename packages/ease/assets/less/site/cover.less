@@ -1,11 +1,12 @@
 .site-cover {
   display: flex;
-  height: 500px;
+  min-height: 500px;
 }
 
 .cover-content {
   color: @white-color;
   margin: auto;
+  padding: 30px;
   position: relative;
   text-align: center;
   z-index: 20;
@@ -14,5 +15,17 @@
 .cover-description {
   font-size: 30px;
   font-weight: 500;
+  line-height: 1.4;
   margin-top: 45px;
+  max-width: 750px;
+}
+
+@media (max-width: 767px) {
+  .site-cover {
+    min-height: 400px;
+  }
+
+  .cover-description {
+    font-size: 24px;
+  }
 }
