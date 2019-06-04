@@ -2,11 +2,19 @@
 
 <div class="content-area">
   <main class="site-main">
-    {{> term}}
+    <div class="term">
+      {{#author}}
+        <h1 class="term-name">{{name}}</h1>
+        {{#if bio}}
+          <div class="term-description">{{bio}}</div>
+        {{/if}}
+      {{/author}}
+    </div>
     <div class="post-feed kg-width-normal u-hover-wrapper">
       {{#foreach posts}}
-      {{> loop tag="h2"}}
+        {{> loop tag="h2"}}
       {{/foreach}}
     </div>
+    {{pagination}}
   </main>
 </div>

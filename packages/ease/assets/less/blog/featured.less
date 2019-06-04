@@ -1,5 +1,13 @@
-.featured-posts {
+.featured-wrapper {
   margin: 30px 0 90px;
+
+  .owl-item {
+    &:extend(.u-hover-item);
+  }
+
+  .owl-stage:hover .owl-item {
+    &:extend(.u-hover-wrapper:hover .u-hover-item all);
+  }
 
   .post-media {
     margin-bottom: 30px;
@@ -23,16 +31,17 @@
 }
 
 @media (max-width: 767px) {
-  .featured-posts {
+  .featured-wrapper {
     margin-bottom: 30px;
     margin-top: 0;
 
-    .post {
-      margin-bottom: 30px;
-    }
-
     .post-header {
       margin-bottom: 15px;
+    }
+
+    .owl .owl-prev,
+    .owl .owl-next {
+      top: -71px;
     }
   }
 

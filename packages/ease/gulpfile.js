@@ -7,11 +7,11 @@ const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 const exec = require('child_process').exec;
 
-const theme = 'base';
+const theme = 'ease';
 const current = '0.9.0';
 const next = '1.0.0';
 const root = '/Users/sodbileg/Developer/ghost-themes';
-const final = '/Users/sodbileg/Dropbox/IVEEL/Base';
+const final = '/Users/sodbileg/Dropbox/IVEEL/Ease';
 
 function css() {
   return src('assets/less/screen.less')
