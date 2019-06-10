@@ -29,7 +29,6 @@ function tagFeed() {
   'use strict';
   $('.tag-feed').owlCarousel({
     dots: false,
-    margin: 40,
     nav: true,
     navText: ['', ''],
     responsive: {
@@ -38,11 +37,6 @@ function tagFeed() {
       },
       768: {
         items: 2,
-        margin: 20,
-      },
-      992: {
-        items: 2,
-        margin: 40,
       },
       1200: {
         items: 3,
@@ -113,11 +107,6 @@ function offCanvas() {
   'use strict';
   var burger = jQuery('.burger');
   var canvasClose = jQuery('.canvas-close');
-
-  jQuery('.nav-list').slicknav({
-    label: '',
-    prependTo: '.mobile-menu',
-  });
 
   burger.on('click', function() {
     html.toggleClass('canvas-opened');

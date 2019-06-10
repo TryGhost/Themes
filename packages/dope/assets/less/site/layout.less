@@ -4,29 +4,23 @@
   min-height: 100vh;
 }
 
+.site-content {
+  flex-grow: 1;
+  padding-top: 100px;
+}
+
 .home-template {
+  .site-content {
+    height: 100vh;
+    padding-top: 0;
+  }
+
+  .content-area,
+  .site-main,
+  .tag-feed,
   .owl .owl-stage-outer,
   .owl .owl-stage,
   .owl .owl-item {
     height: 100%;
-  }
-}
-
-.site-content {
-  flex-basis: 0;
-  flex-grow: 1;
-}
-
-@media (min-width: 1025px) {
-  .home-template {
-    .site {
-      height: 100vh;
-    }
-
-    .content-area,
-    .site-main,
-    .tag-feed {
-      height: 100%;
-    }
   }
 }

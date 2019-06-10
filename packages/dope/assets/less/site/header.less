@@ -1,28 +1,17 @@
 .site-header {
   backface-visibility: hidden;
-  padding: 0 60px;
+  left: 0;
+  padding: 0 45px;
+  position: absolute;
+  right: 0;
   z-index: 80;
 }
 
 .navbar {
   align-items: center;
   display: flex;
-  height: 120px;
-}
-
-.navbar-left,
-.navbar-right {
-  flex: 2;
-}
-
-.navbar-left {
-  align-items: center;
-  display: flex;
-}
-
-.navbar-right {
-  display: flex;
-  justify-content: flex-end;
+  height: 100px;
+  justify-content: space-between;
 }
 
 .logo {
@@ -35,34 +24,9 @@
   max-height: 40px;
 }
 
-.logo-image.white {
-  left: 0;
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  transition: opacity .3s @animation-base;
-}
-
 .logo-text {
   font-size: 24px;
   font-weight: 800;
-}
-
-.nav-list {
-  display: flex;
-}
-
-.menu-item {
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: .5px;
-  margin: 0 25px;
-}
-
-@media (max-width: 767px) {
-  .navbar {
-    height: 100px;
-  }
 }
 
 @media (max-width: 991px) {

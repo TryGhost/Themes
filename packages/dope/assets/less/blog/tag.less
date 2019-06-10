@@ -1,9 +1,4 @@
-.tag-feed {
-  padding: 0 60px;
-}
-
 .tag {
-  border-radius: 8px;
   height: 100%;
   overflow: hidden;
   z-index: 10;
@@ -34,7 +29,7 @@
 .tag-content {
   bottom: 0;
   left: 0;
-  padding: 30px;
+  padding: 45px 45px 60px 45px;
   position: absolute;
   right: 0;
   z-index: 10;
@@ -56,7 +51,7 @@
   align-items: center;
   color: @white-color;
   display: flex;
-  font-weight: 800;
+  font-size: 35px;
   margin-bottom: 0;
 
   &:before {
@@ -74,35 +69,16 @@
   color: @white-color;
   font-weight: 500;
   line-height: 1.4;
-  margin-top: 8px;
+  margin-top: 10px;
   opacity: .7;
 }
 
-.tag-count {
-  background-color: var(--primary-color);
-  border-radius: 20px;
-  color: @white-color;
-  display: inline-block;
-  font-size: 14px;
-  font-weight: 700;
-  margin-top: 20px;
-  padding: 3px 15px;
-}
-
-@media (max-width: 991px) {
-  .tag-feed {
-    padding: 0 30px;
-  }
-}
-
 @media (max-width: 767px) {
-  .tag-feed {
-    height: 500px;
+  .tag-content {
+    padding: 30px 30px 45px 30px;
   }
-}
 
-@media (min-width: 768px) and (max-width: 1024px) {
-  .tag-feed {
-    height: 600px;
+  .tag-name {
+    font-size: 30px;
   }
 }

@@ -13,7 +13,7 @@
 
 <div class="content-area">
   <main class="site-main kg-width-full">
-    {{#get "tags" limit="all" include="count.posts"}}
+    {{#get "tags" limit="all"}}
       <div class="tag-feed owl">
         {{#foreach tags}}
           <div class="tag u-placeholder">
@@ -26,8 +26,7 @@
             {{/if}}
             <div class="tag-content">
               <h2 class="tag-name">{{name}}</h2>
-              <div class="tag-description">{{description}}</div>
-              <div class="tag-count">{{plural count.posts empty=(t 'No posts') singular=(t '1 post') plural=(t '% posts')}}</div>
+              {{#if description}}<div class="tag-description">{{description}}</div>{{/if}}
             </div>
             <a class="u-permalink" href="{{url}}"></a>
           </div>
