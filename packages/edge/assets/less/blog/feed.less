@@ -1,0 +1,38 @@
+.post-feed {
+  margin: -15px;
+  opacity: 0;
+  transition: opacity .3s @animation-base;
+
+  &.initialized {
+    opacity: 1;
+  }
+
+  .grid-item {
+    width: 330px;
+  }
+
+  .post {
+    margin: 15px;
+    position: relative;
+  }
+}
+
+@media (max-width: 1019px) {
+  .post-feed {
+    margin: -5px;
+
+    .grid-item {
+      width: calc(100% / 3);
+    }
+    
+    .post {
+      margin: 5px;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .post-feed .grid-item {
+    width: calc(100% / 2);
+  }
+}

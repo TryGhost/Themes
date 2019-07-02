@@ -1,0 +1,36 @@
+<header class="site-header kg-width-full">
+  <div class="navbar">
+    <div class="navbar-left">
+      <div class="burger hidden-lg hidden-xl">
+        <div class="burger-bar"></div>
+        <div class="burger-bar"></div>
+      </div>
+      <div class="mobile-menu hidden-lg hidden-xl">
+        <div class="container">
+          {{#if @site.navigation}}
+            <nav class="mobile-nav">
+              {{navigation}}
+            </nav>
+          {{/if}}
+        </div>
+      </div>
+      <a class="logo" href="{{@site.url}}">
+        {{#if @site.logo}}
+          <img class="logo-image" src="{{@site.logo}}" alt="{{@site.title}}">
+        {{else}}
+          <span class="logo-text">{{@site.title}}</span>
+        {{/if}}
+      </a>
+    </div>
+    {{#if @site.navigation}}
+      <nav class="main-nav hidden-xs hidden-sm hidden-md">
+        {{navigation}}
+      </nav>
+    {{/if}}
+    <div class="navbar-right">
+      <div class="social"></div>
+      {{!-- {{> burger}}
+      {{> mobile-menu}} --}}
+    </div>
+  </div>
+</header>

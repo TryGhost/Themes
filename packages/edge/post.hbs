@@ -1,0 +1,17 @@
+{{!< default}}
+
+<div class="content-area">
+  <main class="site-main kg-width-normal">
+    {{#post}}
+      <article class="{{post_class}} single">
+        {{> post-header}}
+        {{#if excerpt}}<div class="post-excerpt">{{excerpt}}</div>{{/if}}
+        {{> post-media}}
+        <div class="post-content u-text-format">
+          {{content}}
+        </div>
+      </article>
+    {{/post}}
+    {{> related}}
+  </main>
+</div>

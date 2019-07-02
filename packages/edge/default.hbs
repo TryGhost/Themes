@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="{{@site.lang}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{meta_title}}</title>
+  <link rel="stylesheet" href="{{asset "css/screen.css"}}">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:400,500,700&amp;subset=latin-ext">
+
+  {{> config}}
+
+  {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+  <div class="container">
+    <div class="site">
+      {{> header}}
+      {{#is "home"}}
+        {{> cover}}
+      {{/is}}
+      <div class="site-content">
+        {{{body}}}
+      </div>
+      {{> footer}}
+    </div>
+  </div>
+
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous">
+  </script>
+  <script src="{{asset "js/main.min.js"}}"></script>
+
+  {{{block "scripts"}}}
+
+  {{ghost_foot}}
+</body>
+</html>
