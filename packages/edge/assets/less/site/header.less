@@ -52,10 +52,11 @@
   border-radius: 5px;
   padding: 5px 10px;
   transition: background-color .2s @animation-base;
+}
 
-  &:hover {
-    background-color: @light-gray-color;
-  }
+.menu-item-current .menu-item-link,
+.menu-item-link:hover {
+  background-color: @light-gray-color;
 }
 
 @media (max-width: 767px) {

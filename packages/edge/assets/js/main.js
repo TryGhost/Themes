@@ -1,11 +1,25 @@
 $(function () {
   'use strict';
+  gallery();
   social();
   copyright();
   mobileMenu();
   feed();
   lightbox();
 });
+
+function gallery() {
+  'use strict';
+  var images = document.querySelectorAll('.kg-gallery-image img');
+
+  images.forEach(function (image) {
+    var container = image.closest('.kg-gallery-image');
+    var width = image.attributes.width.value;
+    var height = image.attributes.height.value;
+    var ratio = width / height;
+    container.style.flex = ratio + ' 1 0%';
+  });
+}
 
 function social() {
   'use strict';
@@ -50,7 +64,7 @@ function feed() {
   var grid = $('.post-feed').masonry({
     columnWidth: '.grid-sizer',
     itemSelector: 'none',
-    hiddenStyle: {transform: 'translateY(100px)', opacity: 0},
+    hiddenStyle: {transform: 'translateY(50px)', opacity: 0},
     visibleStyle: {transform: 'translateY(0)', opacity: 1},
   });
   var msnry = grid.data('masonry');

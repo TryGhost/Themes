@@ -5,7 +5,7 @@
     {{#post}}
       <article class="{{post_class}} single">
         {{> post-header}}
-        {{#if excerpt}}<div class="post-excerpt">{{excerpt}}</div>{{/if}}
+        {{#if custom_excerpt}}<div class="post-excerpt">{{custom_excerpt}}</div>{{/if}}
         {{> post-media}}
         <div class="post-content u-text-format">
           {{content}}
