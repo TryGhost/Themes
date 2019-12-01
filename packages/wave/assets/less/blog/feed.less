@@ -1,0 +1,27 @@
+.post-feed {
+  .post {
+    display: flex;
+
+    & + .post {
+      margin-top: 45px;
+    }
+  }
+
+  .post-excerpt {
+    margin-top: 15px;
+  }
+
+  .post-footer {
+    align-items: center;
+    display: flex;
+    margin-top: 15px;
+
+    .button-text + .button-text {
+      margin-left: 10px;
+    }
+  }
+  
+  .post-footer-play {
+    color: var(--brand-color);
+  }
+}

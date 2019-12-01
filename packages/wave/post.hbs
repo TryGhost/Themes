@@ -1,0 +1,24 @@
+{{!< default}}
+
+<div class="content-area">
+  <main class="site-main kg-width-normal">
+    {{#post}}
+      <article class="{{post_class}} single">
+        {{#if og_description}}
+          {{> player}}
+        {{else}}
+          <div class="single-header">
+            {{#if feature_image}}
+              {{> post-media ratio="square"}}
+            {{/if}}
+            {{> post-header single=true}}
+          </div>
+        {{/if}}
+        <div class="post-content u-text-format">
+          {{content}}
+        </div>
+        {{> author}}
+      </article>
+    {{/post}}
+  </main>
+</div>

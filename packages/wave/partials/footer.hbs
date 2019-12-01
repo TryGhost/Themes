@@ -1,0 +1,8 @@
+<footer class="site-footer kg-width-normal">
+  {{> customize/subscribe}}
+  {{> customize/copyright}}
+</footer>
+
+{{^is "post"}}
+  {{> player is_external=true}}
+{{/is}}

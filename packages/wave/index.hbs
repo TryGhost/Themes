@@ -1,0 +1,14 @@
+{{!< default}}
+
+<div class="content-area">
+  <main class="site-main">
+    <div class="post-feed kg-width-normal">
+      {{#get "posts" filter="tags:-[blog]" include="tags" page=pagination.page limit=@config.posts_per_page}}
+        {{#foreach posts}}
+          {{> "loop"}}
+        {{/foreach}}
+      {{/get}}
+    </div>
+    {{pagination}}
+  </main>
+</div>

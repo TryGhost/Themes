@@ -1,0 +1,79 @@
+.site-header {
+  align-items: center;
+  display: flex;
+  height: var(--navbar-height);
+  justify-content: space-between;
+}
+
+.header-right {
+  display: flex;
+}
+
+.logo-text {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.main-nav {
+  align-items: center;
+  display: flex;
+}
+
+.menu-item {
+  font-size: 14px;
+  opacity: .7;
+
+  & + & {
+    margin-left: 20px;
+  }
+}
+
+.menu-item-current {
+  font-weight: 500;
+  opacity: 1;
+}
+
+.header-subscribe {
+  position: relative;
+
+  .subscribe {
+    align-items: flex-end;
+    background: var(--white-color);
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(0,0,0,.2);
+    flex-direction: column;
+    margin-top: 15px;
+    opacity: 0;
+    padding: 10px 20px;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    transform: translateY(10px);
+    transition-duration: .2s;
+    transition-property: opacity, transform;
+    transition-timing-function: var(--animation-base);
+    width: 150px;
+    z-index: 90;
+  }
+
+  .subscribe-link + .subscribe-link {
+    margin-left: 0;
+  }
+}
+
+.subscribe-opened .header-subscribe .subscribe {
+  opacity: 1;
+  pointer-events: unset;
+  transform: translateY(0);
+}
+
+.header-button {
+  height: 30px;
+  margin-left: 30px;
+  min-width: 101px;
+
+  .icon {
+    font-size: 18px;
+  }
+}

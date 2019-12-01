@@ -1,0 +1,21 @@
+<div class="player kg-width-{{#if is_external}}full player-external{{else}}wide{{/if}}">
+  <audio class="player-audio"{{#unless is_external}} src="{{og_description}}"{{/unless}}></audio>
+  {{> post-media ratio="square" is_placeholder=is_external}}
+  <div class="player-wrapper">
+    {{> post-header is_placeholder=is_external}}
+    <div class="player-track">
+      <div class="player-progress"></div>
+    </div>
+    <div class="player-controls">
+      <div class="player-buttons">
+        <button class="button button-small button-secondary player-button-backward"><i class="icon icon-rewind-10"></i></button>
+        <button class="button button-small button-secondary player-button-speed">1x</button>
+        <button class="button button-small button-secondary player-button-forward"><i class="icon icon-fast-forward-30"></i></button>
+      </div>
+      <div class="player-time">
+        <span class="player-time-current">00:00:00</span>
+        <span class="player-time-duration">00:00:00</span>
+      </div>
+    </div>
+  </div>
+</div>
