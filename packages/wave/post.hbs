@@ -4,15 +4,13 @@
   <main class="site-main kg-width-normal">
     {{#post}}
       <article class="{{post_class}} single">
+        <div class="single-media{{#if og_description}} hidden-md hidden-lg hidden-xl{{/if}}">
+          {{> post-media ratio="square"}}
+        </div>
         {{#if og_description}}
           {{> player}}
         {{else}}
-          <div class="single-header">
-            {{#if feature_image}}
-              {{> post-media ratio="square"}}
-            {{/if}}
-            {{> post-header single=true}}
-          </div>
+          {{> post-header single=true}}
         {{/if}}
         <div class="post-content u-text-format">
           {{content}}

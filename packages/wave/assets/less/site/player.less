@@ -44,8 +44,8 @@
   align-items: center;
   display: flex;
 
-  .button + .button {
-    margin-left: 5px;
+  .button {
+    margin-right: 5px;
   }
 }
 
@@ -70,6 +70,7 @@
   background-color: rgba(255,255,255,.8);
   border: 0;
   bottom: 0;
+  height: 80px;
   left: 0;
   max-width: 920px;
   position: fixed;
@@ -82,6 +83,13 @@
     border-radius: 0;
     margin: 0;
     width: 80px;
+
+    .button-play {
+      height: 34px;
+      margin-left: -17px;
+      margin-top: -17px;
+      width: 34px;
+    }
   }
 
   .player-wrapper {
@@ -117,4 +125,36 @@
 
 .player-opened .player-external {
   transform: translateY(0);
+}
+
+@media (max-width: 767px) {
+  .player {
+    .post-media {
+      display: none;
+    }
+  }
+
+  .player-external {
+    .player-wrapper {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .post-header {
+      max-width: calc(100vw - 40px);
+    }
+
+    .post-title {
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+
+    .post-meta {
+      display: none;
+    }
+
+    .player-controls {
+      margin-top: 10px;
+    }
+  }
 }

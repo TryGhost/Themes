@@ -25,3 +25,31 @@
     color: var(--brand-color);
   }
 }
+
+@media (max-width: 767px) {
+  .post-feed {
+    .post + .post {
+      margin-top: 35px;
+    }
+
+    .post-media {
+      margin-right: 20px;
+      width: 80px;
+
+      .button-play {
+        height: 34px;
+        margin-left: -17px;
+        margin-top: -17px;
+        width: 34px;
+      }
+
+      .letter {
+        display: none;
+      }
+    }
+
+    .post-excerpt {
+      display: none;
+    }
+  }
+}

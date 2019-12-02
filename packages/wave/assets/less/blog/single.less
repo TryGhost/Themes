@@ -2,26 +2,27 @@
   .player {
     margin-bottom: 45px;
   }
+
+  .single-media .post-media {
+    margin: 0 auto 30px;
+  }
+
+  & > .post-header {
+    margin-bottom: 30px;
+    text-align: center;
+
+    .post-title {
+      font-size: 24px;
+    }
+  
+    .post-meta {
+      margin-top: 8px;
+    }
+  }
 }
 
-.single-header {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 30px;
-  text-align: center;
-
-  .post-media {
-    cursor: auto;
+@media (max-width: 767px) {
+  .single .player {
     margin-bottom: 30px;
-    margin-right: 0;
-  }
-
-  .post-title {
-    font-size: 24px;
-  }
-
-  .post-meta {
-    margin-top: 8px;
   }
 }

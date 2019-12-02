@@ -28,6 +28,7 @@ function player() {
   var playerProgress = jQuery('.player-progress');
   var playerSpeed = 1;
   var buttonEpisode;
+  var buttonPlay = jQuery('.player-button-play');
   var buttonBackward = jQuery('.player-button-backward');
   var buttonForward = jQuery('.player-button-forward');
   var buttonSpeed = jQuery('.player-button-speed');
@@ -60,6 +61,7 @@ function player() {
 
       // Change player media id attribute
       playerMedia.attr('data-id', id);
+      buttonPlay.attr('data-id', id);
 
       // Select current episode button
       buttonEpisode = jQuery('[data-id="' + id + '"]').find('.icon-play');

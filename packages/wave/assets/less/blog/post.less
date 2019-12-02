@@ -21,6 +21,20 @@
   &:active .button-play {
     transform: scale(.9);
   }
+
+  .letter {
+    color: var(--mid-gray-color);
+    font-size: 150px;
+    line-height: 150px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    visibility: hidden;
+
+    &:first-letter {
+      visibility: visible;
+    }
+  }
 }
 
 .post-title {
@@ -46,5 +60,11 @@
     & + .post-tag:before {
       content: ", ";
     }
+  }
+}
+
+@media (max-width: 767px) {
+  .post-title {
+    font-size: 17px;
   }
 }
