@@ -1,0 +1,26 @@
+.popup {
+  align-items: flex-end;
+  background: var(--white-color);
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgba(0,0,0,.2);
+  flex-direction: column;
+  margin-top: 15px;
+  opacity: 0;
+  padding: 10px 20px;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  transform: translateY(10px);
+  transition-duration: .2s;
+  transition-property: opacity, transform;
+  transition-timing-function: var(--animation-base);
+  width: 150px;
+  z-index: 90;
+}
+
+.popup-opened .popup {
+  opacity: 1;
+  pointer-events: unset;
+  transform: translateY(0);
+}
