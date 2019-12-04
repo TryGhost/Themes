@@ -3,7 +3,7 @@
     <h1 class="post-title">{{title}}</h1>
   {{else}}
     <h2 class="post-title">
-      <a class="post-title-link" href="{{url}}">{{#unless is_placeholder}}{{title}}{{/unless}}</a>
+      <a class="post-title-link" href="{{url}}">{{#unless is_placeholder}}{{title}}{{else}}...{{/unless}}</a>
     </h2>
   {{/if}}
   {{^is "page"}}
