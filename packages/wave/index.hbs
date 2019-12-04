@@ -2,12 +2,11 @@
 
 <div class="content-area">
   <main class="site-main">
+    {{> term}}
     <div class="post-feed kg-width-normal">
-      {{#get "posts" filter="tags:-[blog]" include="tags" page=pagination.page limit=@config.posts_per_page}}
-        {{#foreach posts}}
-          {{> "loop"}}
-        {{/foreach}}
-      {{/get}}
+      {{#foreach posts}}
+        {{> "loop"}}
+      {{/foreach}}
     </div>
     {{pagination}}
   </main>
