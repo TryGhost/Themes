@@ -52,10 +52,13 @@ function player() {
   var timeDuration = jQuery('.player-time-duration');
 
   jQuery('.site').on('click', '.js-play', function () {
-    body.addClass('player-opened');
     var clicked = jQuery(this);
     var url = clicked.attr('data-url');
     var id = clicked.attr('data-id');
+
+    if (jQuery('.player-external').length) {
+      body.addClass('player-opened');
+    }
 
     if (id !== playerMedia.attr('data-id')) {
       // Change audio player url
