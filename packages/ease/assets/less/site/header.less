@@ -6,7 +6,7 @@
   align-items: center;
   box-shadow: 0 1px 0 @mid-gray-color;
   display: flex;
-  height: 70px;
+  height: @navbar-height;
   justify-content: space-between;
 }
 
@@ -36,7 +36,8 @@
   font-weight: 800;
 }
 
-.nav-list {
+.main-nav {
+  align-items: center;
   display: flex;
 }
 
@@ -45,5 +46,24 @@
   font-weight: 500;
   letter-spacing: .5px;
   line-height: 1;
-  margin-left: 45px;
+  margin-left: 25px;
+}
+
+.menu-item-login,
+.menu-item-account {
+  margin-left: 0;
+}
+
+.menu-item-subscribe {
+  color: var(--primary-color);
+  font-weight: 700;
+  margin-left: 20px;
+  text-decoration: underline;
+}
+
+.menu-item-sep {
+  background-color: @mid-gray-color;
+  height: 30px;
+  margin: 0 20px;
+  width: 1px;
 }

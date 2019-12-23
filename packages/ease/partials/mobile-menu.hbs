@@ -3,6 +3,15 @@
     {{#if @site.navigation}}
       <nav class="mobile-nav">
         {{navigation}}
+        {{#if @member}}
+          <a class="menu-item menu-item-account" href="/account/">{{t 'Account'}}</a>
+          {{#unless @member.paid}}
+            <a class="menu-item menu-item-subscribe" href="/signup/">{{t 'Upgrade'}}</a>
+          {{/unless}}
+        {{else}}
+          <a class="menu-item menu-item-login" href="/signin/">{{t 'Login'}}</a>
+          <a class="menu-item menu-item-subscribe" href="/signup/">{{t 'Subscribe'}}</a>
+        {{/if}}
       </nav>
     {{/if}}
   </div>
