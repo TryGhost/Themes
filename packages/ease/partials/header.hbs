@@ -10,14 +10,14 @@
             {{navigation}}
             {{#if @member}}
               <span class="menu-item-sep"></span>
-              <a class="menu-item menu-item-account" href="/account/">{{t 'Account'}}</a>
+              <a class="menu-item menu-item-account" href="{{@site.url}}/account/">{{t 'Account'}}</a>
               {{#unless @member.paid}}
-                <a class="menu-item menu-item-subscribe" href="/signup/">{{t 'Upgrade'}}</a>
+                <a class="menu-item menu-item-subscribe" href="{{@site.url}}/signup/">{{t 'Upgrade'}}</a>
               {{/unless}}
             {{else}}
               <span class="menu-item-sep"></span>
-              <a class="menu-item menu-item-login" href="/signin/">{{t 'Login'}}</a>
-              <a class="menu-item menu-item-subscribe" href="/signup/">{{t 'Subscribe'}}</a>
+              <a class="menu-item menu-item-login" href="{{@site.url}}/signin/">{{t 'Login'}}</a>
+              <a class="menu-item menu-item-subscribe" href="{{@site.url}}/signup/">{{t 'Subscribe'}}</a>
             {{/if}}
           </nav>
         {{/if}}

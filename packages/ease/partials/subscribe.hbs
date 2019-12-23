@@ -1,9 +1,9 @@
 {{#if @labs.members}}
   {{#unless @member}}
     <div class="subscribe">
-      {{#unless cover}}<div class="container">{{/unless}}
+      {{#unless is_cover}}<div class="container">{{/unless}}
         <div class="subscribe-wrapper">
-          {{#unless cover}}
+          {{#unless is_cover}}
             {{#unless login}}
               <h3 class="subscribe-title">{{t 'Subscribe to {site}' site=@site.title}}</h3>
               <h4 class="subscribe-subtitle">{{t 'Stay up to date! Get all the latest & greatest posts delivered straight to your inbox.'}}</h4>
@@ -26,24 +26,24 @@
               <button class="button-icon notification-close"><i class="icon icon-window-close"></i></button>
             </div>
           </form>
-          {{#if cover}}
+          {{#if is_cover}}
             <div class="subscribe-description">{{t 'Get the latest news delivered right to your inbox.'}}</div>
           {{/if}}
           {{#if footer}}
             {{#unless login}}
-              <a class="subscribe-message" href="/signin">
+              <a class="subscribe-message" href="{{@site.url}}/signin/">
                 {{t 'Already have an account?'}}
                 <span class="subscribe-message-link">{{t 'Sign in'}}</span>
               </a>
             {{else}}
-              <a class="subscribe-message" href="/signup">
+              <a class="subscribe-message" href="{{@site.url}}/signup/">
                 {{t "Don't have an account yet?"}}
                 <span class="subscribe-message-link">{{t 'Sign up'}}</span>
               </a>
             {{/unless}}
           {{/if}}
         </div>
-      {{#unless cover}}</div>{{/unless}}
+      {{#unless is_cover}}</div>{{/unless}}
     </div>
   {{/unless}}
 {{/if}}
