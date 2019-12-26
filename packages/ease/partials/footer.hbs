@@ -1,4 +1,9 @@
 <footer class="site-footer">
+  {{#if @site.secondary_navigation}}
+    <nav class="footer-nav">
+      {{navigation type="secondary"}}
+    </nav>
+  {{/if}}
   <div class="footer-social"></div>
   <div class="copyright"></div>
 </footer>

@@ -3,6 +3,16 @@
   text-align: center;
 }
 
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+
+  .menu-item {
+    margin: 0 12px;
+  }
+}
+
 .footer-social-item {
   margin: 0 5px;
 }
@@ -15,5 +25,15 @@
   a {
     color: @secondary-text-color;
     text-decoration: underline;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-nav {
+    flex-direction: column;
+
+    .menu-item {
+      margin: 8px 0;
+    }
   }
 }
