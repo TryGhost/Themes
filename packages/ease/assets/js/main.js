@@ -2,6 +2,7 @@ var body = $('body');
 
 $(function () {
   'use strict';
+  search();
   featured();
   gallery();
   notification();
@@ -22,6 +23,56 @@ document.addEventListener('lazyloaded', function (e) {
     $(e.target).parent().jarallax(options).addClass('initialized');
   }
 });
+
+function search() {
+  'use strict';
+  var searchField = $('.search-field');
+  var searchButton = $('.search-button');
+  var searchResult = $('.search-result');
+  var posts = [];
+
+  if (themeOptions.search_key == '') {
+    return;
+  }
+
+  searchField.one('focus', function () {
+    $.get(window.location.origin + '/ghost/api/v3/content/posts/?key=' + themeOptions.search_key + '&limit=all&fields=title,url', function (data) {
+      posts = data.posts
+    });
+  })
+
+  searchField.on('keyup', function (e) {
+    var output = '';
+
+    if (e.target.value.length > 2) {
+      var result = fuzzysort.go(e.target.value, posts, {key: 'title'});
+      result.forEach(function (item) {
+        output += '<div class="search-result-row">' +
+          '<a class="search-result-row-link" href="' + item.obj.url + '">' + item.obj.title + '</a>' +
+        '</div>';
+      });
+      searchResult.html(output);
+    }
+
+    if (e.target.value.length > 0) {
+      searchButton.addClass('search-button-clear');
+    } else {
+      searchButton.removeClass('search-button-clear');
+    }
+
+    searchResult.html(output);
+  });
+
+  $('.search-form').on('submit', function (e) {
+    e.preventDefault();
+  });
+
+  searchButton.on('click', function () {
+    if ($(this).hasClass('search-button-clear')) {
+      searchField.val('').focus().keyup();
+    }
+  });
+}
 
 function featured() {
   'use strict';

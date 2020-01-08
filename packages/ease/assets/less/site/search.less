@@ -1,0 +1,45 @@
+.search {
+  position: relative;
+  text-align: left;
+}
+
+.search-button:after {
+  content: "\e901";
+}
+
+.search-button-clear {
+  font-size: 18px;
+  
+  &:after {
+    content: "\e92f";
+  }
+}
+
+.search-result {
+  background-color: @white-color;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,.15);
+  color: @dark-gray-color;
+  font-size: 15px;
+  margin-top: 5px;
+  overflow: hidden;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+}
+
+.search-result-row {
+  & + & {
+    border-top: 1px solid @mid-gray-color;
+  }
+}
+
+.search-result-row-link {
+  display: block;
+  padding: 10px 15px 8px;
+
+  &:hover {
+    background-color: @light-gray-color;
+    color: @dark-gray-color;
+  }
+}

@@ -15,7 +15,13 @@
     max-width: none;
   }
 
-  .subscribe-email {
+  .search {
+    margin-top: 30px;
+    width: 400px;
+  }
+
+  .subscribe-email,
+  .search-field {
     border: 0;
   }
 }
@@ -37,8 +43,11 @@
 }
 
 @media (max-width: 460px) {
-  .site-cover .subscribe {
-    width: 100%;
+  .site-cover {
+    .subscribe,
+    .search {
+      width: 100%;
+    }
   }
 }
 
