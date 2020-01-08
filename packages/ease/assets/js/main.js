@@ -36,7 +36,8 @@ function search() {
   }
 
   searchField.one('focus', function () {
-    $.get(window.location.origin + '/ghost/api/v3/content/posts/?key=' + themeOptions.search_key + '&limit=all&fields=title,url', function (data) {
+    var base = window.location.protocol + "//" + window.location.host + "/" + window.location.pathname.split('/')[1];
+    $.get(base + '/ghost/api/v3/content/posts/?key=' + themeOptions.search_key + '&limit=all&fields=title,url', function (data) {
       posts = data.posts
     });
   })
