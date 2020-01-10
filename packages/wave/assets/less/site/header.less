@@ -44,13 +44,22 @@
   height: 30px;
 
   .icon {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
 .header-button-subscribe {
   margin-left: 30px;
-  min-width: 101px;
+  width: 30px;
+
+  .icon {
+    transform: rotate(45deg);
+    transition: transform .1s var(--animation-base);
+  }
+}
+
+.popup-opened .header-button-subscribe .icon {
+  transform: rotate(0);
 }
 
 .header-button-menu {

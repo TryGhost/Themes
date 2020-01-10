@@ -16,7 +16,6 @@ $(function () {
   player();
   pagination();
   popup();
-  subscribe();
 });
 
 function gallery() {
@@ -159,20 +158,5 @@ function popup() {
   'use strict';
   jQuery('.js-popup').on('click', function () {
     jQuery(this).parent().toggleClass('popup-opened');
-  });
-}
-
-function subscribe() {
-  'use strict';
-  var subscribeButton = jQuery('.header-button-subscribe');
-  var currentText = subscribeButton.text();
-  var closeIcon = '<i class="icon icon-window-close"></i>';
-
-  subscribeButton.on('click', function () {
-    if (subscribeButton.parent().hasClass('popup-opened')) {
-      subscribeButton.html(closeIcon);
-    } else {
-      subscribeButton.html(currentText);
-    }
   });
 }
