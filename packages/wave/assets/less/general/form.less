@@ -14,3 +14,35 @@ input[type="email"] {
     border-color: var(--brand-color);
   }
 }
+
+.form-wrapper {
+  position: relative;
+}
+
+.form-button {
+  align-items: center;
+  background-color: var(--brand-color);
+  border: 0;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  display: flex;
+  font-size: 20px;
+  height: 40px;
+  justify-content: center;
+  outline: none;
+  padding: 0;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 40px;
+
+  &:after {
+    color: var(--white-color);
+    content: "\e92c";
+    font-family: IVEEL;
+  }
+
+  svg {
+    display: none;
+  }
+}

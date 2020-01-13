@@ -20,12 +20,12 @@
       {{> header}}
       {{#is "home"}}
         {{> cover}}
-        {{!-- {{> customize/subscribe}} --}}
       {{/is}}
       <div class="site-content">
         {{{body}}}
       </div>
       {{> footer}}
+      {{> members/notifications}}
     </div>
   </div>
 
@@ -35,6 +35,29 @@
     crossorigin="anonymous">
   </script>
   <script src="{{asset "js/main.min.js"}}"></script>
+
+  <script>
+    $(function () {
+      var action = getParameterByName('action');
+      var stripe = getParameterByName('stripe');
+
+      if (action === 'subscribe') {
+        body.addClass('notification-opened subscribe-success');
+      }
+      if (action === 'signup') {
+        window.location = '{{@site.url}}/signup/?action=checkout';
+      }
+      if (action === 'checkout') {
+        body.addClass('notification-opened signup-success');
+      }
+      if (action === 'signin') {
+        body.addClass('notification-opened signin-success');
+      }
+      if (stripe === 'success') {
+        body.addClass('notification-opened checkout-success');
+      }
+    });
+  </script>
 
   {{{block "scripts"}}}
 

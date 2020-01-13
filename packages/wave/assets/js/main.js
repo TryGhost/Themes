@@ -16,6 +16,7 @@ $(function () {
   player();
   pagination();
   popup();
+  notification();
 });
 
 function gallery() {
@@ -159,4 +160,33 @@ function popup() {
   jQuery('.js-popup').on('click', function () {
     jQuery(this).parent().toggleClass('popup-opened');
   });
+}
+
+function notification() {
+  'use strict';
+  $('.notification-close').on('click', function (e) {
+    e.preventDefault();
+
+    body.removeClass('notification-opened');
+    var uri = window.location.toString();
+    if (uri.indexOf('?') > 0) {
+      var clean_uri = uri.substring(0, uri.indexOf('?'));
+      window.history.replaceState({}, document.title, clean_uri);
+    }
+
+    if ($(this).closest('.subscribe-form').length) {
+      $(this).closest('.subscribe-form').removeClass('success error');
+    }
+  });
+}
+
+function getParameterByName(name, url) {
+  'use strict';
+  if (!url) url = window.location.href;
+  name = name.replace(/[\[\]]/g, "\\$&");
+  var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)");
+  var results = regex.exec(url);
+  if (!results) return null;
+  if (!results[2]) return '';
+  return decodeURIComponent(results[2].replace(/\+/g, " "));
 }

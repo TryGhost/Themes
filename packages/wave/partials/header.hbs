@@ -10,9 +10,22 @@
         {{navigation}}
       </nav>
     {{/if}}
-    <div class="header-subscribe">
-      <button class="button button-secondary header-button header-button-subscribe js-popup"><i class="icon icon-window-close"></i></button>
-      {{> customize/subscribe is_popup=true}}
+    {{#if @labs.members}}
+      <div class="header-member">
+        {{#if @member}}
+          <a class="menu-item menu-item-account" href="{{@site.url}}/account/">{{t "Account"}}</a>
+          {{#unless @member.paid}}
+            <a class="button header-button" href="{{@site.url}}/signup/">{{t "Upgrade"}}</a>
+          {{/unless}}
+        {{else}}
+          <a class="menu-item menu-item-login" href="{{@site.url}}/signin/">{{t "Login"}}</a>
+          <a class="button header-button" href="{{@site.url}}/signup/">{{t "Subscribe"}}</a>
+        {{/if}}
+      </div>
+    {{/if}}
+    <div class="header-platform">
+      <button class="button button-secondary header-button header-button-platform js-popup"><i class="icon icon-window-close"></i></button>
+      {{> customize/platform is_popup=true}}
     </div>
     {{#if @site.navigation}}
       <div class="header-menu hidden-lg hidden-xl">

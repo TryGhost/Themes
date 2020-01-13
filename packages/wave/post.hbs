@@ -13,15 +13,29 @@
           {{> post-header single=true}}
         {{/if}}
         <div class="post-content u-text-format">
-          {{content}}
+          {{#if access}}
+            {{content}}
+          {{else}}
+            <p>{{t "You don't have access to this post at the moment, but if you upgrade your account you'll be able to see the whole thing, as well as all the other posts in the archive! Subscribing only takes a few seconds and will give you immediate access."}}</p>
+            <section class="post-cta">
+              {{#if @member}}
+                <h2 class="post-cta-title">{{t "This post is for paying subscribers only"}}</h2>
+              {{else}}
+                <h2 class="post-cta-title">{{t "This post is for subscribers only"}}</h2>
+              {{/if}}
+              <a class="button post-cta-button" href="/signup/">{{t "Subscribe now"}}</a>
+              <br>
+              <a class="post-cta-message" href="/signin/">{{t "Already have an account? Sign in"}}</a>
+            </section>
+          {{/if}}
         </div>
         {{> share}}
         <div class="author-list">
           <h3 class="author-list-title">
             {{#if og_description}}
-              {{t 'Hosted by:'}}
+              {{t "Hosted by:"}}
             {{else}}
-              {{t 'Written by:'}}
+              {{t "Written by:"}}
             {{/if}}
           </h3>
           {{#foreach authors}}
