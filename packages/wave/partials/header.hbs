@@ -11,7 +11,7 @@
       </nav>
     {{/if}}
     {{#if @labs.members}}
-      <div class="header-member">
+      <div class="header-member hidden-xs hidden-sm hidden-md">
         {{#if @member}}
           <a class="menu-item menu-item-account" href="{{@site.url}}/account/">{{t "Account"}}</a>
           {{#unless @member.paid}}
@@ -35,6 +35,15 @@
         <div class="popup">
           <div class="mobile-menu">
             {{> navigation}}
+            {{#if @member}}
+              <a class="menu-item menu-item-account" href="{{@site.url}}/account/">{{t "Account"}}</a>
+              {{#unless @member.paid}}
+                <a class="menu-item menu-item-upgrade" href="{{@site.url}}/signup/">{{t "Upgrade"}}</a>
+              {{/unless}}
+            {{else}}
+              <a class="menu-item menu-item-login" href="{{@site.url}}/signin/">{{t "Login"}}</a>
+              <a class="menu-item menu-item-subscribe" href="{{@site.url}}/signup/">{{t "Subscribe"}}</a>
+            {{/if}}
           </div>
         </div>
       </div>
