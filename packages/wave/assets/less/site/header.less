@@ -19,7 +19,6 @@
 .main-nav {
   align-items: center;
   display: flex;
-  margin-right: 30px;
 }
 
 .menu-item {
@@ -36,34 +35,26 @@
   opacity: 1;
 }
 
-.header-platform,
+.header-subscribe,
 .header-menu {
   position: relative;
 }
 
 .header-button {
   height: 30px;
-  margin-left: 10px;
 
   .icon {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
-.header-button-platform {
-  width: 30px;
-
-  .icon {
-    transform: rotate(45deg);
-    transition: transform .1s var(--animation-base);
-  }
-}
-
-.popup-opened .header-button-platform .icon {
-  transform: rotate(0);
+.header-button-subscribe {
+  margin-left: 30px;
+  min-width: 101px;
 }
 
 .header-button-menu {
+  margin-left: 10px;
   padding: 0 10px;
 }
 

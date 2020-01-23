@@ -9,9 +9,6 @@ html {
   --dark-gray-color: #a8aab1;
   --darker-gray-color: #1a1a1a;
   --black-color: #000;
-  --red-color: #dc3545;
-  --orange-color: #ffc107;
-  --green-color: #28a745;
   --animation-base: ease-in-out;
   --font-base: Ubuntu, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
   --navbar-height: 80px;
@@ -39,6 +36,10 @@ a {
   color: var(--darker-gray-color);
   text-decoration: none;
   transition: color .1s var(--animation-base);
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 h1,
