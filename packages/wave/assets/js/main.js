@@ -16,7 +16,7 @@ $(function () {
   player();
   pagination();
   popup();
-  notification();
+  subscribe();
 });
 
 function gallery() {
@@ -162,31 +162,17 @@ function popup() {
   });
 }
 
-function notification() {
+function subscribe() {
   'use strict';
-  $('.notification-close').on('click', function (e) {
-    e.preventDefault();
+  var subscribeButton = jQuery('.header-button-subscribe');
+  var currentText = subscribeButton.text();
+  var closeIcon = '<i class="icon icon-window-close"></i>';
 
-    body.removeClass('notification-opened');
-    var uri = window.location.toString();
-    if (uri.indexOf('?') > 0) {
-      var clean_uri = uri.substring(0, uri.indexOf('?'));
-      window.history.replaceState({}, document.title, clean_uri);
-    }
-
-    if ($(this).closest('.subscribe-form').length) {
-      $(this).closest('.subscribe-form').removeClass('success error');
+  subscribeButton.on('click', function () {
+    if (subscribeButton.parent().hasClass('popup-opened')) {
+      subscribeButton.html(closeIcon);
+    } else {
+      subscribeButton.html(currentText);
     }
   });
-}
-
-function getParameterByName(name, url) {
-  'use strict';
-  if (!url) url = window.location.href;
-  name = name.replace(/[\[\]]/g, "\\$&");
-  var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)");
-  var results = regex.exec(url);
-  if (!results) return null;
-  if (!results[2]) return '';
-  return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
