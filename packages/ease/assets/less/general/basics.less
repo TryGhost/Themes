@@ -65,6 +65,48 @@ blockquote {
   }
 }
 
+table {
+  border-collapse: collapse;
+  font-size: 15px;
+  margin: 30px 0;
+  width: 100%;
+  word-break: normal;
+}
+
+thead {
+  background-color: @lighter-gray-color;
+  border-bottom: 1px solid @mid-gray-color;
+}
+
+tr {
+  & + & {
+    border-top: 1px solid @mid-gray-color;
+  }
+
+  &:hover td {
+    background-color: @lighter-gray-color;
+  }
+}
+
+th, td {
+  line-height: 1.5;
+  padding: 10px 15px;
+}
+
+th {
+  color: @secondary-text-color;
+  font-weight: 500;
+  text-align: left;
+}
+
+tfoot {
+  border-top: 1px solid @mid-gray-color;
+
+  td {
+    font-weight: 700;
+  }
+}
+
 ul, ol {
   margin: 30px 0;
   padding-left: 20px;
@@ -130,5 +172,31 @@ hr {
   blockquote {
     margin-left: 0;
     margin-right: 0;
+  }
+
+  .table {
+    thead {
+      display: none;
+    }
+
+    tr {
+      display: block;
+      padding: 12px 0;
+    }
+
+    td {
+      display: flex;
+      justify-content: space-between;
+      padding: 7px 0;
+      text-align: right;
+      width: 100%;
+
+      &:before {
+        color: @secondary-text-color;
+        content: attr(data-label);
+        margin-right: 10px;
+        white-space: nowrap;
+      }
+    }
   }
 }
