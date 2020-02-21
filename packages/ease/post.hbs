@@ -7,7 +7,20 @@
         {{> post-header tag="h1" show_meta=true single=true}}
         {{> post-media same_height=true ratio="horizontal"}}
         <div class="post-content u-text-format">
-          {{content}}
+          {{#if access}}
+            {{content}}
+          {{else}}
+            <section class="post-cta">
+              {{#if @member}}
+                <h2 class="post-cta-title">{{t "This post is for paying subscribers only"}}</h2>
+              {{else}}
+                <h2 class="post-cta-title">{{t "This post is for subscribers only"}}</h2>
+              {{/if}}
+              <a class="button post-cta-button" href="{{@site.url}}/signup/">{{t "Subscribe now"}}</a>
+              <br>
+              <a class="post-cta-message" href="{{@site.url}}/signin/">{{t "Already have an account? Sign in"}}</a>
+            </section>
+          {{/if}}
         </div>
         {{> post-tags}}
       </article>
