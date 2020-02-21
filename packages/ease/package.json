@@ -1,7 +1,7 @@
 {
   "name": "ease",
   "description": "A Premium Ghost Theme",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "engines": {
     "ghost": ">=3.0.0",
     "ghost-api": "v3"

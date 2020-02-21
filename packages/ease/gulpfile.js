@@ -8,8 +8,8 @@ const concat = require('gulp-concat');
 const exec = require('child_process').exec;
 
 const theme = 'ease';
-const current = '2.1.1';
-const next = '2.1.2';
+const current = '2.1.2';
+const next = '2.1.3';
 const root = '/Users/sodbileg/Developer/ghost-themes';
 const final = '/Users/sodbileg/Dropbox/IVEEL/Ease';
 
