@@ -1,7 +1,9 @@
 <div class="grid-item">
   <figure class="{{post_class}}">
     <a class="post-link" href="{{url}}">
-      <img class="post-image"
+      <img class="post-image lazyload"
+        data-srcset="{{> srcset}}"
+        data-sizes="auto"
         src="{{img_url feature_image size="s"}}"
         alt="{{title}}"
       >

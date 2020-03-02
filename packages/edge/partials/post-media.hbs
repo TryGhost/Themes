@@ -1,7 +1,9 @@
 {{#if feature_image}}
   <div class="post-media kg-width-wide">
-    <img class="post-image"
-      srcset="{{img_url feature_image size="s"}} 400w, {{img_url feature_image size="m"}} 750w, {{img_url feature_image size="l"}} 960w"
+    <img class="post-image lazyload"
+      data-srcset="{{> srcset}}"
+      data-sizes="auto"
+      src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
       alt="{{title}}"
     >
   </div>
