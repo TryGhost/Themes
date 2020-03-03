@@ -1,7 +1,7 @@
 {
   "name": "edge",
   "description": "A Premium Ghost Theme",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "engines": {
     "ghost": ">=2.0.0",
     "ghost-api": "v2"
