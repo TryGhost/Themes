@@ -9,7 +9,7 @@ const exec = require('child_process').exec;
 
 const theme = 'edge';
 const current = '1.0.0';
-const next = '1.0.1';
+const next = '1.1.0';
 const root = '/Users/sodbileg/Developer/ghost-themes';
 const final = '/Users/sodbileg/Dropbox/IVEEL/Edge';
 
