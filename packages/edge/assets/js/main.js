@@ -155,7 +155,6 @@ function lightbox() {
         img.onload = function() { // will get size after load
           item.w = this.width; // set image width
           item.h = this.height; // set image height
-          gallery.invalidateCurrItems(); // reinit Items
           gallery.updateSize(true); // reinit Items
         }
         img.src = item.src; // let's download image
