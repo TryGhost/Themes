@@ -5,7 +5,6 @@ $(function () {
   copyright();
   mobileMenu();
   feed();
-  lightbox();
 });
 
 function gallery() {
@@ -20,7 +19,7 @@ function gallery() {
     container.style.flex = ratio + ' 1 0%';
   });
 
-  pswp('.kg-gallery-container', '.kg-gallery-image', '.kg-gallery-image', true);
+  pswp('.kg-gallery-container', '.kg-gallery-image', '.kg-gallery-image', false, true);
 }
 
 function social() {
@@ -88,13 +87,11 @@ function feed() {
       status: '.infinite-scroll-status',
     });
   }
+
+  pswp('.post-feed', '.grid-item:not(.grid-sizer)', '.post-lightbox', '.post-caption', false);
 }
 
-function lightbox() {
-  pswp('.post-feed', '.grid-item:not(.grid-sizer)', '.post-lightbox', false);
-}
-
-function pswp(container, element, trigger, gallery) {
+function pswp(container, element, trigger, caption, isGallery) {
   var parseThumbnailElements = function (el) {
     var items = [],
       gridEl,
@@ -106,13 +103,13 @@ function pswp(container, element, trigger, gallery) {
       linkEl = gridEl.find(trigger);
 
       item = {
-        src: gallery ? gridEl.find('img').attr('src') : linkEl.attr('href'),
+        src: isGallery ? gridEl.find('img').attr('src') : linkEl.attr('href'),
         w: 0,
         h: 0,
       };
 
-      if (gridEl.find('.post-caption').length) {
-        item.title = gridEl.find('.post-caption').html();
+      if (caption && gridEl.find(caption).length) {
+        item.title = gridEl.find(caption).html();
       }
 
       items.push(item);
@@ -156,7 +153,7 @@ function pswp(container, element, trigger, gallery) {
   var onThumbnailsClick = function(e) {
     e.preventDefault();
 
-    var index = $(element).index($(e.target).closest(element))
+    var index = $(e.target).closest(container).find(element).index($(e.target).closest(element))
     var clickedGallery = $(e.target).closest(container);
 
     openPhotoSwipe(index, clickedGallery[0]);
