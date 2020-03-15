@@ -19,6 +19,8 @@ function gallery() {
     var ratio = width / height;
     container.style.flex = ratio + ' 1 0%';
   });
+
+  pswp('.kg-gallery-container', '.kg-gallery-image', '.kg-gallery-image', true);
 }
 
 function social() {
@@ -89,20 +91,22 @@ function feed() {
 }
 
 function lightbox() {
-  'use strict';
-  // parse slide data (url, title, size ...) from DOM elements 
+  pswp('.post-feed', '.grid-item:not(.grid-sizer)', '.post-lightbox', false);
+}
+
+function pswp(container, element, trigger, gallery) {
   var parseThumbnailElements = function (el) {
     var items = [],
       gridEl,
       linkEl,
       item;
 
-    $(el).children().not('.grid-sizer').each(function (i, v) {
+    $(el).find(element).each(function (i, v) {
       gridEl = $(v);
-      linkEl = gridEl.find('.post-lightbox');
+      linkEl = gridEl.find(trigger);
 
       item = {
-        src: linkEl.attr('href'),
+        src: gallery ? gridEl.find('img').attr('src') : linkEl.attr('href'),
         w: 0,
         h: 0,
       };
@@ -117,18 +121,6 @@ function lightbox() {
     return items;
   };
 
-  // triggers when user clicks on thumbnail
-  var onThumbnailsClick = function(e) {
-    e.preventDefault();
-
-    var index = $(e.target).closest('.grid-item').index('.grid-item:not(.grid-sizer)');
-    var clickedGallery = $(e.target).closest('.post-feed');
-
-    openPhotoSwipe(index, clickedGallery[0]);
-
-    return false;
-  };
-
   var openPhotoSwipe = function(index, galleryElement) {
     var pswpElement = document.querySelectorAll('.pswp')[0],
         gallery,
@@ -137,7 +129,6 @@ function lightbox() {
 
     items = parseThumbnailElements(galleryElement);
 
-    // define options (if needed)
     options = {
       closeOnScroll: false,
       history: false,
@@ -147,7 +138,6 @@ function lightbox() {
 			showHideOpacity: true,
     };
 
-    // Pass data to PhotoSwipe and initialize it
     gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
     gallery.listen('gettingData', function (index, item) {
       if (item.w < 1 || item.h < 1) { // unknown size
@@ -163,8 +153,18 @@ function lightbox() {
     gallery.init();
   };
 
-  // bind events to lightbox buttons
-  $('.post-feed').on('click', '.post-lightbox', function (e) {
+  var onThumbnailsClick = function(e) {
+    e.preventDefault();
+
+    var index = $(element).index($(e.target).closest(element))
+    var clickedGallery = $(e.target).closest(container);
+
+    openPhotoSwipe(index, clickedGallery[0]);
+
+    return false;
+  };
+
+  $(container).on('click', trigger, function (e) {
     onThumbnailsClick(e);
   });
-};
+}
