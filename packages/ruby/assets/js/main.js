@@ -9,6 +9,7 @@ $(function () {
   author();
   stickySidebar();
   pagination();
+  facebook();
   loadInstagram();
   gallery();
   copyright();
@@ -86,34 +87,43 @@ function pagination() {
   }
 }
 
+function facebook() {
+  'use strict';
+  var widget = $('.widget-facebook');
+
+  if (widget.find('.fb-page').attr('data-href') == '__YOUR_FACEBOOK_PAGE_URL__') {
+    widget.remove();
+  }
+}
+
 function loadInstagram() {
   'use strict';
   var photos;
   var feed = $('.instagram-feed');
+  var storageKey = 'ruby_instagram';
 
   if (themeOptions.instagram_token != '') {
-    if ( localStorage.getItem('instagram') !== null && (Math.floor(Date.now() / 1000) - JSON.parse(localStorage.getItem('instagram')).timestamp) < 300) {
-			photos = JSON.parse(localStorage.getItem('instagram')).photos;
+    if ( localStorage.getItem(storageKey) !== null && (Math.floor(Date.now() / 1000) - JSON.parse(localStorage.getItem(storageKey)).timestamp) < 300) {
+			photos = JSON.parse(localStorage.getItem(storageKey)).photos;
 			outputInstagram(photos, feed);
 		} else {
       $.ajax({
-        url: 'https://api.instagram.com/v1/users/self/media/recent/',
-        dataType: 'jsonp',
+        url: 'https://graph.instagram.com/me/media/',
         type: 'GET',
-        data: {access_token: themeOptions.instagram_token, count: 6},
+        data: {access_token: themeOptions.instagram_token, limit: 6, fields: 'media_url, permalink'},
         success: function (result) {
           photos = result.data;
 		    	var cache = {
 		    		photos: photos,
 		    		timestamp: Math.floor(Date.now() / 1000)
 		    	};
-		    	localStorage.setItem('instagram', JSON.stringify(cache));
+		    	localStorage.setItem(storageKey, JSON.stringify(cache));
 		    	outputInstagram(photos, feed);
         }
       } );
 		}
   } else {
-    feed.remove();
+    feed.parent('.widget-instagram').remove();
   }
 }
 
@@ -124,8 +134,8 @@ function outputInstagram(photos, feed) {
 
 	for (var index in photos) {
 		photo = photos[index];
-    output += '<a class="instagram-feed-item" href="' + photo.link + '" target="_blank">' +
-      '<img class="u-object-fit" src="' + photo.images.thumbnail.url + '">' +
+    output += '<a class="instagram-feed-item" href="' + photo.permalink + '" target="_blank" rel="noopener noreferrer">' +
+      '<img class="u-object-fit" src="' + photo.media_url + '">' +
       '<i class="instagram-feed-item-icon icon icon-instagram"></i>' +
     '</a>';
 	}
