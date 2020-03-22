@@ -8,8 +8,8 @@ const concat = require('gulp-concat');
 const exec = require('child_process').exec;
 
 const theme = 'ruby';
-const current = '1.1.1';
-const next = '1.1.2';
+const current = '1.1.2';
+const next = '1.2.0';
 const root = '/Users/sodbileg/Developer/ghost-themes';
 const final = '/Users/sodbileg/Dropbox/IVEEL/Ruby';
 
