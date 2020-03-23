@@ -158,6 +158,7 @@ function gallery() {
   });
 
   pswp('.kg-gallery-container', '.kg-gallery-image', '.kg-gallery-image', false, true);
+  pswp('.kg-image-card', '.kg-image', '.kg-image', false, false);
 }
 
 function copyright() {
@@ -201,7 +202,7 @@ function pswp(container, element, trigger, caption, isGallery) {
       linkEl = gridEl.find(trigger);
 
       item = {
-        src: isGallery ? gridEl.find('img').attr('src') : linkEl.attr('href'),
+        src: isGallery ? gridEl.find('img').attr('src') : gridEl.attr('src'),
         w: 0,
         h: 0,
       };
