@@ -4,6 +4,7 @@ $(function () {
   'use strict';
   search();
   featured();
+  video();
   gallery();
   table();
   notification();
@@ -129,6 +130,11 @@ function featured() {
       },
     },
   });
+}
+
+function video() {
+  'use strict';
+  $('.post-content').fitVids();
 }
 
 function gallery() {
