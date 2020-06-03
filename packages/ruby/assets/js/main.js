@@ -110,7 +110,7 @@ function loadInstagram() {
       $.ajax({
         url: 'https://graph.instagram.com/me/media/',
         type: 'GET',
-        data: {access_token: themeOptions.instagram_token, limit: 6, fields: 'media_url, permalink'},
+        data: {access_token: themeOptions.instagram_token, limit: 6, fields: 'media_url, permalink, thumbnail_url, media_type'},
         success: function (result) {
           photos = result.data;
 		    	var cache = {
@@ -133,9 +133,10 @@ function outputInstagram(photos, feed) {
 	var output = '';
 
 	for (var index in photos) {
-		photo = photos[index];
+    photo = photos[index];
+    var url = photo.media_type == 'IMAGE' ? photo.media_url : photo.thumbnail_url;
     output += '<a class="instagram-feed-item" href="' + photo.permalink + '" target="_blank" rel="noopener noreferrer">' +
-      '<img class="u-object-fit" src="' + photo.media_url + '">' +
+      '<img class="u-object-fit" src="' + url + '">' +
       '<i class="instagram-feed-item-icon icon icon-instagram"></i>' +
     '</a>';
 	}
