@@ -134,7 +134,7 @@ function outputInstagram(photos, feed) {
 
 	for (var index in photos) {
     photo = photos[index];
-    var url = photo.media_type == 'IMAGE' ? photo.media_url : photo.thumbnail_url;
+    var url = photo.media_type != 'VIDEO' ? photo.media_url : photo.thumbnail_url;
     output += '<a class="instagram-feed-item" href="' + photo.permalink + '" target="_blank" rel="noopener noreferrer">' +
       '<img class="u-object-fit" src="' + url + '">' +
       '<i class="instagram-feed-item-icon icon icon-instagram"></i>' +
