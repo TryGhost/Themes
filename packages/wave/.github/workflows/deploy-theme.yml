@@ -8,6 +8,10 @@ jobs:
     runs-on: ubuntu-16.04
     steps:
       - uses: actions/checkout@master
+      - name: Build theme
+        env:
+          NODE_ENV: production
+        run: npx gulp
       - name: Deploy Ghost Theme
         uses: TryGhost/action-deploy-theme@v1.4.0
         with:
