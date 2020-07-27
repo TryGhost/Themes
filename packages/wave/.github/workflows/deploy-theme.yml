@@ -8,6 +8,11 @@ jobs:
     runs-on: ubuntu-16.04
     steps:
       - uses: actions/checkout@master
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.17.0
+      - run: npm install
       - name: Build theme
         env:
           NODE_ENV: production
