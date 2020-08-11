@@ -1,11 +1,17 @@
 $(function () {
   'use strict';
+  video();
   gallery();
   social();
   copyright();
   mobileMenu();
   feed();
 });
+
+function video() {
+  'use strict';
+  $('.post-content').fitVids();
+}
 
 function gallery() {
   'use strict';
