@@ -29,6 +29,10 @@
   {{>off-canvas}}
 
   <script>
+    document.getElementsByClassName('tag-feed')[0].style.height = window.innerHeight + 'px';
+  </script>
+
+  <script>
     var body = document.querySelector('body');
     if (window.innerWidth > body.clientWidth + 5) {
       document.documentElement.style.setProperty('--scrollbar', (window.innerWidth - body.clientWidth) + 'px');
