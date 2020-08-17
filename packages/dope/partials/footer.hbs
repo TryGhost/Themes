@@ -1,5 +1,16 @@
 <footer class="site-footer kg-width-full">
   <div class="copyright"></div>
   {{> logo}}
-  <div class="footer-social"></div>
+  <div class="footer-social">
+    {{#if @site.facebook}}
+      <a class="footer-social-item" href="{{facebook_url @site.facebook}}" target="_blank" rel="noopener noreferrer">
+        <i class="icon icon-facebook"></i>
+      </a>
+    {{/if}}
+    {{#if @site.twitter}}
+      <a class="footer-social-item" href="{{twitter_url @site.twitter}}" target="_blank" rel="noopener noreferrer">
+        <i class="icon icon-twitter"></i>
+      </a>
+    {{/if}}
+  </div>
 </footer>
