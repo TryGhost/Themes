@@ -29,7 +29,9 @@
   {{>off-canvas}}
 
   <script>
-    document.getElementsByClassName('tag-feed')[0].style.height = window.innerHeight + 'px';
+    if (document.getElementsByClassName('tag-feed').length) {
+      document.getElementsByClassName('tag-feed')[0].style.height = window.innerHeight + 'px';
+    }
   </script>
 
   <script>
