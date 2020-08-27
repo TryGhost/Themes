@@ -4,6 +4,7 @@ $(function () {
   'use strict';
   tagFeed();
   loadMore();
+  video();
   gallery();
   comment();
   author();
@@ -75,6 +76,11 @@ function loadMore() {
       }
     });
   });
+}
+
+function video() {
+  'use strict';
+  $('.post-content').fitVids();
 }
 
 function gallery() {
