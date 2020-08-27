@@ -9,6 +9,7 @@ $(function () {
   comment();
   author();
   offCanvas();
+  facebook();
   copyright();
   social();
 });
@@ -140,6 +141,13 @@ function offCanvas() {
       dimmer('close', 'medium');
     }
   });
+}
+
+function facebook() {
+  'use strict';
+  if ($('.fb-page').attr('data-href') == '') {
+    $('.widget-facebook').remove();
+  }
 }
 
 function copyright() {
