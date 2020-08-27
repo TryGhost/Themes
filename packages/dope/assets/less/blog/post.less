@@ -17,10 +17,10 @@
   letter-spacing: .5px;
 }
 
-.post-meta-item + .post-meta-item:before {
+.post-meta-item + .post-meta-item:not(:empty):before {
   content: "\02022";
   font-family: serif;
-  padding: 0 4px;
+  padding: 0 8px 0 4px;
 }
 
 .post-meta-featured {
