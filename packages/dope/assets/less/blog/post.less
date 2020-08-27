@@ -59,12 +59,12 @@
 .read-more {
   color: var(--primary-color);
   font-weight: 700;
+  margin-left: -2px;
 }
 
 .post-author {
   align-items: center;
   display: flex;
-  margin-right: 20px;
 }
 
 .post-author-link {
@@ -93,9 +93,16 @@
   &:nth-child(5) {
     z-index: 6;
   }
+
+  &:last-child {
+    margin-right: 20px;
+  }
 }
 
 .post-author-image {
   border: 2px solid @white-color;
   border-radius: 50%;
+  height: 100%;
+  object-fit: cover;
+  transition: none !important;
 }
