@@ -33,6 +33,9 @@ function tagFeed() {
     dots: false,
     nav: true,
     navText: ['', ''],
+    onInitialized: function () {
+      fixHorizontalScroll();
+    },
     responsive: {
       0: {
         items: 1,
