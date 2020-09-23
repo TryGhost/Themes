@@ -1,36 +1,44 @@
 .post {
   margin-bottom: 75px;
 }
+
 .post-wrapper {
   margin-top: 20px;
 }
+
 .post-header {
   margin-bottom: 20px;
 }
+
 .post-meta {
   color: var(--secondary-text-color);
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.5px;
 }
-.post-meta-item + .post-meta-item:not(:empty):before {
+
+.post-meta-item + .post-meta-item:not(:empty)::before {
   content: "\02022";
   font-family: serif;
   padding: 0 8px 0 4px;
 }
+
 .post-meta-featured {
   color: var(--yellow-color);
   padding-left: 5px;
   position: relative;
   top: 1px;
 }
+
 .post-title {
   font-size: 18px;
   margin-bottom: 10px;
 }
+
 .post-tags {
   margin-bottom: 10px;
 }
+
 .post-tag {
   background-color: var(--primary-color);
   border-radius: 2px;
@@ -41,20 +49,24 @@
   margin-right: 5px;
   padding: 4px 7px;
 }
+
 .post-footer {
   align-items: center;
   display: flex;
   margin: 20px 0 0 2px;
 }
+
 .read-more {
   color: var(--primary-color);
   font-weight: 700;
   margin-left: -2px;
 }
+
 .post-author {
   align-items: center;
   display: flex;
 }
+
 .post-author-link {
   display: block;
   height: 30px;
@@ -62,24 +74,31 @@
   position: relative;
   width: 30px;
 }
+
 .post-author-link:first-child {
   z-index: 10;
 }
+
 .post-author-link:nth-child(2) {
   z-index: 9;
 }
+
 .post-author-link:nth-child(3) {
   z-index: 8;
 }
+
 .post-author-link:nth-child(4) {
   z-index: 7;
 }
+
 .post-author-link:nth-child(5) {
   z-index: 6;
 }
+
 .post-author-link:last-child {
   margin-right: 20px;
 }
+
 .post-author-image {
   border: 2px solid var(--white-color);
   border-radius: 50%;

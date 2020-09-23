@@ -2,46 +2,57 @@
   align-items: flex-start;
   display: flex;
 }
+
 .post-feed .post-media {
   flex-shrink: 0;
   margin-right: 40px;
   width: 500px;
 }
+
 .post-feed .post-meta {
   margin-bottom: 10px;
 }
+
 .post-feed .post-title {
   font-size: 28px;
   letter-spacing: -0.5px;
 }
+
 @media (max-width: 767px) {
   .post-feed .post {
     display: block;
   }
+
   .post-feed .post-media {
     margin-bottom: 30px;
     margin-right: 0 !important;
     width: auto;
   }
+
   .post-feed .post-header {
     margin-bottom: 10px;
   }
+
   .post-feed .post-title {
     font-size: 20px;
     letter-spacing: 0;
   }
+
   .post-feed .post-footer {
     margin-top: 15px;
   }
 }
+
 @media (min-width: 768px) and (max-width: 991px) {
   .post-feed .post-media {
     margin-right: 30px;
     width: 250px;
   }
+
   .post-feed .post-wrapper {
     margin-top: 0;
   }
+
   .post-feed .post-title {
     font-size: 24px;
     letter-spacing: 0;

@@ -1,14 +1,17 @@
 .widget + .widget {
   margin-top: 60px;
 }
+
 .widget li {
   font-size: 15px;
   font-weight: 700;
   line-height: 1;
 }
+
 .widget li + li {
   margin-top: 20px;
 }
+
 .widget-title {
   color: var(--secondary-text-color);
   font-size: 11px;
@@ -16,13 +19,16 @@
   margin-bottom: 30px;
   text-transform: uppercase;
 }
+
 .widget-recent .recent-posts {
   counter-reset: recent;
 }
+
 .widget-recent .recent {
   display: flex;
 }
-.widget-recent .recent:before {
+
+.widget-recent .recent::before {
   color: var(--primary-color);
   content: counter(recent);
   counter-increment: recent;
@@ -33,18 +39,23 @@
   margin-top: -10px;
   opacity: 0.5;
 }
+
 .widget-recent .recent + .recent {
   margin-top: 25px;
 }
+
 .widget-recent .post-header {
   margin-bottom: 0;
 }
+
 .widget-recent .post-meta {
   margin-bottom: 5px;
 }
+
 .widget-recent .post-meta-length {
   display: none;
 }
+
 .widget-recent .post-title {
   font-size: 16px;
   line-height: 1.3;

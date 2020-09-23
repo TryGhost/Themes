@@ -12,12 +12,14 @@
   outline: none;
   width: 120px;
 }
+
 .load-more {
   color: var(--dark-gray-color);
   font-size: 15px;
   font-weight: 700;
   margin: 10px 0 6px;
 }
+
 .page-number {
   color: var(--secondary-text-color);
   font-size: 12px;

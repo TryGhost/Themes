@@ -1,6 +1,7 @@
 .off-canvas {
   background-color: var(--white-color);
   height: 100vh;
+  -webkit-overflow-scrolling: touch;
   overflow-y: scroll;
   padding: 70px 30px 30px;
   position: fixed;
@@ -10,8 +11,8 @@
   transition: transform 0.4s var(--animation-base);
   width: 350px;
   z-index: 90;
-  -webkit-overflow-scrolling: touch;
 }
+
 .canvas-close {
   color: var(--dark-gray-color);
   cursor: pointer;
@@ -25,12 +26,15 @@
   transition: color 0.4s var(--animation-base);
   width: 30px;
 }
+
 .canvas-close:hover {
   color: var(--secondary-text-color);
 }
+
 html:not(.canvas-visible) .off-canvas {
   visibility: hidden;
 }
+
 .canvas-opened .off-canvas {
   transform: translateX(0) !important;
   visibility: visible;

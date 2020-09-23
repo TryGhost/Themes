@@ -1,16 +1,19 @@
-.u-clearfix:before,
-.u-clearfix:after {
+.u-clearfix::before,
+.u-clearfix::after {
   content: " ";
   display: table;
 }
-.u-clearfix:after {
+
+.u-clearfix::after {
   clear: both;
 }
+
 .u-plain-list {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
+
 .u-permalink {
   bottom: 0;
   left: 0;
@@ -20,18 +23,21 @@
   top: 0;
   z-index: 50;
 }
+
 .u-object-fit {
   height: 100%;
   object-fit: cover;
   position: absolute;
   width: 100%;
 }
+
 .u-underline {
   line-height: 1;
   position: relative;
 }
-.u-underline:before,
-.u-underline:after {
+
+.u-underline::before,
+.u-underline::after {
   bottom: -5px;
   content: "";
   height: 1px;
@@ -39,44 +45,55 @@
   transition: width 0.5s var(--animation-base);
   width: 0;
 }
-.u-underline:before {
+
+.u-underline::before {
   left: 0;
   transition: 0.5s var(--animation-base);
   transition-property: background-color, width;
   visibility: hidden;
 }
-.u-underline:after {
+
+.u-underline::after {
   background-color: var(--dark-gray-color);
   right: 0;
 }
+
 .u-underline:hover {
   opacity: 1;
 }
-.u-underline:hover:before {
+
+.u-underline:hover::before {
   background-color: var(--dark-gray-color);
   visibility: visible;
   width: 100%;
 }
-.u-underline:hover:after {
+
+.u-underline:hover::after {
   background-color: transparent !important;
   width: 100%;
 }
+
 .u-placeholder {
   background-color: var(--light-gray-color);
   position: relative;
 }
+
 .u-placeholder.same-height {
   height: 0;
 }
+
 .u-placeholder.horizontal {
   padding-bottom: 50%;
 }
+
 .u-placeholder.rectangle {
   padding-bottom: 62.5%;
 }
+
 .u-placeholder.square {
   padding-bottom: 100%;
 }
+
 .u-text-format h1,
 .u-text-format h2,
 .u-text-format h3,
@@ -85,34 +102,43 @@
 .u-text-format h6 {
   margin-top: 40px;
 }
+
 .u-text-format h1 {
   font-size: 26px;
 }
+
 .u-text-format h2 {
   font-size: 23px;
 }
+
 .u-text-format h3 {
   font-size: 20px;
 }
+
 .u-text-format h4 {
   font-size: 17px;
 }
+
 .u-text-format h5 {
   font-size: 15px;
 }
+
 .u-text-format h6 {
   font-size: 13px;
   text-transform: uppercase;
 }
+
 .u-text-format strong {
   color: var(--dark-gray-color);
 }
+
 .u-text-format a {
   color: var(--primary-color);
   font-weight: 700;
   position: relative;
 }
-.u-text-format a:after {
+
+.u-text-format a::after {
   background-color: var(--primary-color);
   bottom: -1px;
   content: "";

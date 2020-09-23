@@ -4,6 +4,7 @@
   line-height: 1;
   margin-top: 30px;
 }
+
 .share-item {
   align-items: center;
   background-color: var(--light-gray-color);
@@ -16,16 +17,20 @@
   transition: 0.3s var(--animation-base);
   transition-property: background-color, color;
 }
+
 .share-item + .share-item {
   margin-left: 15px;
 }
+
 .share-item:hover {
   background-color: var(--primary-color);
   color: var(--white-color);
 }
+
 .share-label {
   margin-left: 5px;
 }
+
 @media (max-width: 767px) {
   .share-item + .share-item {
     margin-left: 10px;

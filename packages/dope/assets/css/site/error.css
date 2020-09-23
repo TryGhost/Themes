@@ -1,6 +1,7 @@
 .error {
   text-align: center;
 }
+
 .error-code {
   color: var(--dark-gray-color);
   font-size: 46px;
@@ -8,10 +9,12 @@
   letter-spacing: 2px;
   margin: 90px 0 -5px;
 }
+
 .error-posts {
   margin: 60px 0;
   text-align: left;
 }
+
 .error-link {
   color: var(--primary-color) !important;
   display: inline-block;
