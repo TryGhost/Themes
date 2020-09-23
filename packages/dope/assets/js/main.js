@@ -11,7 +11,6 @@ $(function () {
     offCanvas();
     facebook();
     copyright();
-    social();
 });
 
 document.addEventListener("lazyloaded", function (e) {
@@ -158,34 +157,6 @@ function copyright() {
     if (themeOptions.copyright != "") {
         $(".copyright").html(themeOptions.copyright);
     }
-}
-
-function social() {
-    "use strict";
-    var data = {
-        instagram: { name: "Instagram", icon: "instagram" },
-        dribbble: { name: "Dribbble", icon: "dribbble" },
-        behance: { name: "Behance", icon: "behance" },
-        github: { name: "GitHub", icon: "github-circle" },
-        linkedin: { name: "LinkedIn", icon: "linkedin" },
-        vk: { name: "VK", icon: "vk" },
-        rss: { name: "RSS", icon: "rss" },
-    };
-    var links = themeOptions.social_links;
-    var output = "";
-
-    for (var key in links) {
-        if (links[key] != "") {
-            output +=
-                '<a class="footer-social-item" href="' +
-                links[key] +
-                '" target="_blank" rel="noopener noreferrer"><i class="icon icon-' +
-                data[key]["icon"] +
-                '"></i></a>';
-        }
-    }
-
-    $(".footer-social").append(output);
 }
 
 function dimmer(action, speed) {
