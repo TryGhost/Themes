@@ -11,7 +11,7 @@
               <section class="topic">
                 <header class="topic-header">
                   <h2 class="topic-name">{{name}}</h2>
-                  <div class="topic-count">{{plural count.posts empty=(t 'No articles') singular=(t '1 article') plural=(t '% articles')}}</div>
+                  <div class="topic-count">{{plural count.posts empty="No articles" singular="1 article" plural="% articles"}}</div>
                 </header>
                 {{#get "posts" order="published_at asc" filter="tag:{{slug}}" limit="5" as |featured|}}
                   <ul class="topic-article-feed u-plain-list">
@@ -22,7 +22,7 @@
                     {{/foreach}}
                   </ul>
                 {{/get}}
-                <a class="topic-more button-arrow button-arrow-right" href="{{url}}">{{t 'View All'}}</a>
+                <a class="topic-more button-arrow button-arrow-right" href="{{url}}">View All</a>
               </section>
             </div>
           {{/foreach}}
