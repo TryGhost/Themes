@@ -11,7 +11,7 @@
   --font-base: raleway, sans-serif;
   --animation-base: ease;
   --shadow-base: 0 0 10px rgba(0, 0, 0, 0.2);
-  --scrollbar: 0;
+  --scrollbar: 0px; /* stylelint-disable-line length-zero-no-unit */
 }
 
 html {
