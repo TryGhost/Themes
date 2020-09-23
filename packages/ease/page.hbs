@@ -1,15 +1,15 @@
 {{!< default}}
 
 <div class="content-area">
-  <main class="site-main kg-width-normal">
-    {{#post}}
-      <article class="{{post_class}} single">
-        {{> post-header tag="h1" hide_meta=true single=true}}
-        {{> post-media same_height=true ratio="horizontal"}}
-        <div class="post-content u-text-format">
-          {{content}}
-        </div>
-      </article>
-    {{/post}}
-  </main>
+    <main class="site-main kg-width-normal">
+        {{#post}}
+            <article class="{{post_class}} single">
+                {{> post-header tag="h1" hide_meta=true single=true}}
+                {{> post-media same_height=true ratio="horizontal"}}
+                <div class="post-content u-text-format">
+                    {{content}}
+                </div>
+            </article>
+        {{/post}}
+    </main>
 </div>

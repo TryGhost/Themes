@@ -1,13 +1,16 @@
 <nav class="pagination kg-width-normal">
-  <div class="pagination-left">
-    {{#if prev}}
-      <a class="newer-posts button-arrow button-arrow-left" href="{{page_url prev}}">Newer Posts</a>
-    {{/if}}
-  </div>
-  <span class="page-number hidden-xs hidden-sm">Page {{page}} of {{pages}}</span>
-  <div class="pagination-right">
-    {{#if next}}
-      <a class="older-posts button-arrow button-arrow-right" href="{{page_url next}}">Older Posts</a>
-    {{/if}}
-  </div>
+    <div class="pagination-left">
+        {{#if prev}}
+            <a class="newer-posts button-arrow button-arrow-left"
+                href="{{page_url prev}}">Newer Posts</a>
+        {{/if}}
+    </div>
+    <span class="page-number hidden-xs hidden-sm">Page {{page}} of
+        {{pages}}</span>
+    <div class="pagination-right">
+        {{#if next}}
+            <a class="older-posts button-arrow button-arrow-right"
+                href="{{page_url next}}">Older Posts</a>
+        {{/if}}
+    </div>
 </nav>
