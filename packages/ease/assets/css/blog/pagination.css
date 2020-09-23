@@ -1,0 +1,22 @@
+.pagination {
+  align-items: center;
+  display: flex;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+.pagination-left,
+.pagination-right {
+  flex: 2;
+}
+.pagination-right .button-arrow-right {
+  justify-content: flex-end;
+}
+.page-number {
+  border: 1px solid var(--mid-gray-color);
+  border-radius: 30px;
+  color: var(--secondary-text-color);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 0;
+  padding: 16px 16px;
+}

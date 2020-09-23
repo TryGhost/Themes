@@ -1,0 +1,51 @@
+.notification {
+  align-items: center;
+  background-color: var(--green-color);
+  color: var(--white-color);
+  display: flex;
+  font-size: 16px;
+  font-weight: 500;
+  height: var(--navbar-height);
+  justify-content: center;
+  left: 0;
+  padding: 0 60px 0 20px;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transform: translateY(calc(var(--navbar-height) * -1));
+  transition: transform 0.3s var(--animation-base);
+  z-index: 90;
+}
+.error .notification {
+  background-color: var(--red-color);
+}
+.subscribe-success.notification-opened .notification-subscribe {
+  pointer-events: unset;
+  transform: translateY(0);
+}
+.signup-success.notification-opened .notification-signup {
+  pointer-events: unset;
+  transform: translateY(0);
+}
+.signin-success.notification-opened .notification-signin {
+  pointer-events: unset;
+  transform: translateY(0);
+}
+.checkout-success.notification-opened .notification-checkout {
+  pointer-events: unset;
+  transform: translateY(0);
+}
+.success .notification-success {
+  pointer-events: unset;
+  transform: translateY(0);
+}
+.error .notification-error {
+  pointer-events: unset;
+  transform: translateY(0);
+}
+.notification-close {
+  color: var(--white-color);
+  position: absolute;
+  right: 15px;
+}
