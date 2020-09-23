@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{meta_title}}</title>
-  <link rel="stylesheet" href="{{asset "css/screen.css"}}">
+  <link rel="stylesheet" href="{{asset "built/screen.css"}}">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,400i,500,700,700i,800&amp;subset=latin-ext">
 
   {{{block "styles"}}}
 
   {{> config}}
-    
+
   {{ghost_head}}
 </head>
 <body class="{{body_class}}">
@@ -49,7 +49,7 @@
     integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
     crossorigin="anonymous">
   </script>
-  <script src="{{asset "js/main.min.js"}}"></script>
+  <script src="{{asset "built/main.min.js"}}"></script>
 
   {{> facebook}}
 
