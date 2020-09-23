@@ -6,11 +6,9 @@ $(function () {
     loadMore();
     video();
     gallery();
-    comment();
     author();
     offCanvas();
     facebook();
-    copyright();
 });
 
 document.addEventListener("lazyloaded", function (e) {
@@ -98,13 +96,6 @@ function gallery() {
     });
 }
 
-function comment() {
-    "use strict";
-    if (themeOptions.disqus_shortname == "") {
-        $(".comment-container").remove();
-    }
-}
-
 function author() {
     "use strict";
     $(".author-name").on("click", function () {
@@ -149,13 +140,6 @@ function facebook() {
     "use strict";
     if ($(".fb-page").attr("data-href") == "") {
         $(".widget-facebook").remove();
-    }
-}
-
-function copyright() {
-    "use strict";
-    if (themeOptions.copyright != "") {
-        $(".copyright").html(themeOptions.copyright);
     }
 }
 
