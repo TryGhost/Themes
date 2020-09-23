@@ -8,7 +8,6 @@ $(function () {
     gallery();
     table();
     social();
-    copyright();
     mobileMenu();
 });
 
@@ -234,13 +233,6 @@ function social() {
     }
 
     $(".footer-social").html(output);
-}
-
-function copyright() {
-    "use strict";
-    if (themeOptions.copyright != "") {
-        $(".copyright").html(themeOptions.copyright);
-    }
 }
 
 function mobileMenu() {
