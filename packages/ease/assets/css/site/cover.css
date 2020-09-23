@@ -4,24 +4,11 @@
   z-index: unset !important;
 }
 
-.site-cover .subscribe {
-  background-color: transparent;
-  margin: 0 auto;
-  padding: 0;
-  text-align: left;
-  width: 400px;
-}
-
-.site-cover .subscribe-wrapper {
-  max-width: none;
-}
-
 .site-cover .search {
   margin: 30px auto 0;
   width: 400px;
 }
 
-.site-cover .subscribe-email,
 .site-cover .search-field {
   border: 0;
 }
@@ -44,7 +31,6 @@
 }
 
 @media (max-width: 460px) {
-  .site-cover .subscribe,
   .site-cover .search {
     width: 100%;
   }
