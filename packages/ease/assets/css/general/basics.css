@@ -14,6 +14,7 @@
   --font-base: roboto, sans-serif;
   --animation-base: ease-in-out;
   --navbar-height: 70px;
+  --scrollbar: 0px; /* stylelint-disable-line length-zero-no-unit */
 }
 
 html {
