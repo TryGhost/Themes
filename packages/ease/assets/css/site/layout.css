@@ -3,11 +3,13 @@
   flex-direction: column;
   min-height: 100vh;
 }
+
 .site-content {
   flex-grow: 1;
   padding-bottom: 30px;
   padding-top: 60px;
 }
+
 @media (max-width: 767px) {
   .site-content {
     padding-bottom: 0;

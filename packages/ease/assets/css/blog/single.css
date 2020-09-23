@@ -1,12 +1,15 @@
 .single .post-header {
   margin-bottom: 30px;
 }
+
 .single .post-title {
   font-size: 30px;
 }
+
 .single .post-media {
   margin-bottom: 45px;
 }
+
 @media (max-width: 767px) {
   .single .post-title {
     font-size: 24px;

@@ -3,6 +3,7 @@
   min-height: 500px;
   z-index: unset !important;
 }
+
 .site-cover .subscribe {
   background-color: transparent;
   margin: 0 auto;
@@ -10,17 +11,21 @@
   text-align: left;
   width: 400px;
 }
+
 .site-cover .subscribe-wrapper {
   max-width: none;
 }
+
 .site-cover .search {
   margin: 30px auto 0;
   width: 400px;
 }
+
 .site-cover .subscribe-email,
 .site-cover .search-field {
   border: 0;
 }
+
 .cover-content {
   color: var(--white-color);
   margin: auto;
@@ -29,6 +34,7 @@
   text-align: center;
   z-index: 20;
 }
+
 .cover-description {
   font-size: 30px;
   font-weight: 500;
@@ -36,16 +42,19 @@
   margin: 0 auto;
   max-width: 750px;
 }
+
 @media (max-width: 460px) {
   .site-cover .subscribe,
   .site-cover .search {
     width: 100%;
   }
 }
+
 @media (max-width: 767px) {
   .site-cover {
     min-height: 400px;
   }
+
   .cover-description {
     font-size: 24px;
   }

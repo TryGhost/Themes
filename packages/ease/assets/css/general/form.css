@@ -11,15 +11,18 @@ input[type="search"] {
   padding: 0 15px;
   width: 100%;
 }
+
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="email"]:focus,
 input[type="search"]:focus {
   border-color: var(--primary-color);
 }
+
 .form-wrapper {
   position: relative;
 }
+
 .form-button {
   align-items: center;
   background-color: var(--primary-color);
@@ -37,11 +40,13 @@ input[type="search"]:focus {
   top: 5px;
   width: 40px;
 }
-.form-button:after {
+
+.form-button::after {
   color: var(--white-color);
   content: "\e92c";
-  font-family: IVEEL;
+  font-family: IVEEL, sans-serif;
 }
+
 .form-button svg {
   display: none;
 }

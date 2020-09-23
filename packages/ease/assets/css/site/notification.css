@@ -17,33 +17,41 @@
   transition: transform 0.3s var(--animation-base);
   z-index: 90;
 }
+
 .error .notification {
   background-color: var(--red-color);
 }
+
 .subscribe-success.notification-opened .notification-subscribe {
   pointer-events: unset;
   transform: translateY(0);
 }
+
 .signup-success.notification-opened .notification-signup {
   pointer-events: unset;
   transform: translateY(0);
 }
+
 .signin-success.notification-opened .notification-signin {
   pointer-events: unset;
   transform: translateY(0);
 }
+
 .checkout-success.notification-opened .notification-checkout {
   pointer-events: unset;
   transform: translateY(0);
 }
+
 .success .notification-success {
   pointer-events: unset;
   transform: translateY(0);
 }
+
 .error .notification-error {
   pointer-events: unset;
   transform: translateY(0);
 }
+
 .notification-close {
   color: var(--white-color);
   position: absolute;

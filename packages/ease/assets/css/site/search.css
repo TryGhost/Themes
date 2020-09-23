@@ -2,15 +2,19 @@
   position: relative;
   text-align: left;
 }
-.search-button:after {
+
+.search-button::after {
   content: "\e901";
 }
+
 .search-button-clear {
   font-size: 18px;
 }
-.search-button-clear:after {
+
+.search-button-clear::after {
   content: "\e92f";
 }
+
 .search-result {
   background-color: var(--white-color);
   border-radius: 5px;
@@ -20,26 +24,31 @@
   margin-top: 5px;
   max-height: 50vh;
   overflow: hidden;
+  -webkit-overflow-scrolling: touch;
   overflow-y: scroll;
   position: absolute;
   top: 100%;
   width: 100%;
-  -webkit-overflow-scrolling: touch;
 }
+
 .search-result-row + .search-result-row {
   border-top: 1px solid var(--mid-gray-color);
 }
+
 .search-result-row-link {
   display: block;
   padding: 13px 15px 8px;
 }
+
 .search-result-row-link:hover {
   background-color: var(--light-gray-color);
   color: var(--dark-gray-color);
 }
+
 .search-result-row-title {
   line-height: 1.3;
 }
+
 .search-result-row-excerpt {
   color: var(--secondary-text-color);
   display: block;
