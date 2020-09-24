@@ -3,7 +3,6 @@ $(function () {
     video();
     gallery();
     social();
-    copyright();
     mobileMenu();
     feed();
 });
@@ -65,13 +64,6 @@ function social() {
     }
 
     $(".social").html(output);
-}
-
-function copyright() {
-    "use strict";
-    if (themeOptions.copyright != "") {
-        $(".copyright").html(themeOptions.copyright);
-    }
 }
 
 function mobileMenu() {
