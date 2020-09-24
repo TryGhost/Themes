@@ -8,6 +8,7 @@
   position: relative;
   width: 150px;
 }
+
 .post-media .button-play {
   left: 50%;
   margin-left: -20px;
@@ -17,9 +18,11 @@
   transition: transform 0.1s var(--animation-base);
   z-index: 20;
 }
+
 .post-media:active .button-play {
   transform: scale(0.9);
 }
+
 .post-media .letter {
   color: var(--mid-gray-color);
   font-size: 100px;
@@ -32,10 +35,12 @@
   top: 0;
   white-space: nowrap;
 }
+
 .post-title {
   font-size: 20px;
   margin-bottom: 0;
 }
+
 .post-meta {
   color: var(--secondary-text-color);
   font-size: 11px;
@@ -43,15 +48,19 @@
   margin-top: 5px;
   text-transform: uppercase;
 }
+
 .post-meta-tags {
   margin-left: 5px;
 }
+
 .post-meta-tags .post-tag {
   color: var(--brand-color);
 }
-.post-meta-tags .post-tag + .post-tag:before {
+
+.post-meta-tags .post-tag + .post-tag::before {
   content: ", ";
 }
+
 @media (max-width: 767px) {
   .post-title {
     font-size: 17px;

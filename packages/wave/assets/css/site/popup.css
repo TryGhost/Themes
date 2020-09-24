@@ -18,6 +18,7 @@
   width: 150px;
   z-index: 90;
 }
+
 .popup-opened .popup {
   opacity: 1;
   pointer-events: unset;

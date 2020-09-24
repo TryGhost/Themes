@@ -4,6 +4,7 @@
   margin-top: 30px;
   overflow: hidden;
 }
+
 .share-item {
   align-items: center;
   color: var(--white-color);
@@ -15,15 +16,19 @@
   justify-content: center;
   text-transform: uppercase;
 }
+
 .share-item .icon {
   font-size: 18px;
 }
+
 .share-download {
   background-color: var(--brand-color);
 }
+
 .share-facebook {
   background-color: #3b5998;
 }
+
 .share-twitter {
   background-color: #1da1f2;
 }

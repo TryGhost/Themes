@@ -3,6 +3,7 @@
 body:not(.paged-next) .infinite-scroll-button {
   display: none;
 }
+
 .infinite-scroll-request {
   animation: scaleOut 1s infinite ease-in-out;
   background-color: var(--darker-gray-color);
@@ -11,14 +12,17 @@ body:not(.paged-next) .infinite-scroll-button {
   margin: 30px auto 0;
   width: 40px;
 }
+
 .infinite-scroll-action {
   display: flex;
   justify-content: center;
 }
+
 .infinite-scroll-button {
   margin-top: 45px;
   width: 100%;
 }
+
 .infinite-scroll-button .icon {
   font-size: 18px;
   transform: rotate(90deg);

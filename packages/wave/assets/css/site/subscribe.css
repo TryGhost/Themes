@@ -2,44 +2,56 @@
   display: flex;
   flex-wrap: wrap;
 }
+
 .subscribe-link {
   align-items: center;
   display: flex;
   font-size: 16px;
   font-weight: 500;
 }
+
 .subscribe-link .icon {
   font-size: 20px;
   position: relative;
 }
+
 .subscribe-link .icon-apple {
   color: #999;
 }
+
 .subscribe-link .icon-google {
   color: #4285f4;
 }
+
 .subscribe-link .icon-spotify {
   color: #1ed760;
 }
+
 .subscribe-link .icon-overcast {
   color: #fc7e0f;
 }
+
 .subscribe-link .icon-stitcher {
   color: #000;
   top: 1px;
 }
+
 .subscribe-link .icon-rss {
   color: #ffa500;
 }
+
 .subscribe-text {
   margin-left: 6px;
 }
+
 .icon-apple + .subscribe-text {
   margin-left: 4px;
 }
+
 .icon-stitcher + .subscribe-text {
   margin-left: 8px;
 }
+
 .icon-rss + .subscribe-text {
   margin-left: 2px;
 }

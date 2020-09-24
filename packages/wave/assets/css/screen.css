@@ -4,7 +4,6 @@
 @import "general/button.css";
 @import "general/form.css";
 @import "general/icons.css";
-
 @import "site/layout.css";
 @import "site/header.css";
 @import "site/cover.css";
@@ -13,16 +12,13 @@
 @import "site/footer.css";
 @import "site/player.css";
 @import "site/popup.css";
-
 @import "blog/post.css";
 @import "blog/feed.css";
 @import "blog/single.css";
 @import "blog/pagination.css";
 @import "blog/author.css";
 @import "blog/share.css";
-
 @import "vendor/lazyload.css";
-
 @import "misc/kg.css";
 @import "misc/utilities.css";
 @import "misc/animations.css";

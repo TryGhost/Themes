@@ -4,6 +4,7 @@
   padding: 30px;
   position: relative;
 }
+
 .cover-content {
   color: var(--white-color);
   margin: auto;
@@ -12,10 +13,12 @@
   text-align: center;
   z-index: 10;
 }
+
 .cover-logo {
   margin: 0 auto;
   max-height: 100px;
 }
+
 .cover-description {
   font-size: 16px;
   margin-top: 20px;

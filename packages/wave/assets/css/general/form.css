@@ -10,6 +10,7 @@ input[type="email"] {
   padding: 0 15px;
   width: 100%;
 }
+
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="email"]:focus {
