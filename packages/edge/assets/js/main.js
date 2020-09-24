@@ -2,7 +2,6 @@ $(function () {
     "use strict";
     video();
     gallery();
-    social();
     mobileMenu();
     feed();
 });
@@ -31,39 +30,6 @@ function gallery() {
         false,
         true
     );
-}
-
-function social() {
-    "use strict";
-    var data = {
-        facebook: { name: "Facebook", icon: "facebook", text: "FB" },
-        twitter: { name: "Twitter", icon: "twitter", text: "TW" },
-        instagram: { name: "Instagram", icon: "instagram", text: "IG" },
-        dribbble: { name: "Dribbble", icon: "dribbble", text: "DR" },
-        behance: { name: "Behance", icon: "behance", text: "BE" },
-        github: { name: "GitHub", icon: "github-circle", text: "GH" },
-        linkedin: { name: "LinkedIn", icon: "linkedin", text: "LI" },
-        vk: { name: "VK", icon: "vk", text: "VK" },
-    };
-    var links = themeOptions.social_links;
-    var output = "";
-
-    for (var key in links) {
-        if (links[key] != "") {
-            output +=
-                '<a class="social-item social-item-' +
-                data[key]["name"].toLowerCase() +
-                '" href="' +
-                links[key] +
-                '" title="' +
-                data[key]["name"] +
-                '" target="_blank">' +
-                data[key]["text"] +
-                "</a>";
-        }
-    }
-
-    $(".social").html(output);
 }
 
 function mobileMenu() {
