@@ -9,7 +9,6 @@ $(function () {
     stickySidebar();
     pagination();
     facebook();
-    loadInstagram();
     gallery();
     offCanvas();
 });
@@ -70,72 +69,6 @@ function facebook() {
     ) {
         widget.remove();
     }
-}
-
-function loadInstagram() {
-    "use strict";
-    var photos;
-    var feed = $(".instagram-feed");
-    var storageKey = "ruby_instagram";
-
-    if (themeOptions.instagram_token != "") {
-        if (
-            localStorage.getItem(storageKey) !== null &&
-            Math.floor(Date.now() / 1000) -
-                JSON.parse(localStorage.getItem(storageKey)).timestamp <
-                300
-        ) {
-            photos = JSON.parse(localStorage.getItem(storageKey)).photos;
-            outputInstagram(photos, feed);
-        } else {
-            $.ajax({
-                url: "https://graph.instagram.com/me/media/",
-                type: "GET",
-                data: {
-                    access_token: themeOptions.instagram_token,
-                    limit: 6,
-                    fields: "media_url, permalink, thumbnail_url, media_type",
-                },
-                success: function (result) {
-                    photos = result.data;
-                    var cache = {
-                        photos: photos,
-                        timestamp: Math.floor(Date.now() / 1000),
-                    };
-                    localStorage.setItem(storageKey, JSON.stringify(cache));
-                    outputInstagram(photos, feed);
-                },
-            });
-        }
-    } else {
-        feed.parent(".widget-instagram").remove();
-    }
-}
-
-function outputInstagram(photos, feed) {
-    "use strict";
-    var photo;
-    var output = "";
-
-    for (var index in photos) {
-        photo = photos[index];
-        var url =
-            photo.media_type != "VIDEO" ? photo.media_url : photo.thumbnail_url;
-        output +=
-            '<a class="instagram-feed-item" href="' +
-            photo.permalink +
-            '" target="_blank" rel="noopener noreferrer">' +
-            '<img class="u-object-fit" src="' +
-            url +
-            '">' +
-            '<i class="instagram-feed-item-icon icon icon-instagram"></i>' +
-            "</a>";
-    }
-
-    feed.each(function (i, v) {
-        $(v).html(output);
-        $(v).css("height", Math.round($(v).height()) + "px");
-    });
 }
 
 function gallery() {
