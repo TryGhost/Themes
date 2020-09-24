@@ -1,19 +1,23 @@
 .post-column {
   margin-bottom: 30px;
 }
+
 .post {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
+
 .post-image {
   width: 100%;
 }
+
 .post-wrapper {
   background-color: var(--white-color);
   flex-grow: 1;
   padding: 20px;
 }
+
 .post-tag {
   background-color: var(--primary-color);
   border-radius: 15px;
@@ -25,13 +29,16 @@
   margin-bottom: 8px;
   padding: 4px 8px;
 }
+
 .post-header {
   margin-bottom: 10px;
 }
+
 .post-title {
   font-size: 18px;
   margin-bottom: 0;
 }
+
 .post-meta {
   background-color: var(--white-color);
   border-top: 1px solid var(--light-gray-color);
@@ -41,11 +48,13 @@
   font-weight: 700;
   padding: 10px 30px;
 }
-.post-meta-length:before {
+
+.post-meta-length::before {
   content: "\02022";
   font-family: serif;
   padding: 0 8px;
 }
+
 .post-date {
   color: var(--secondary-text-color);
   display: block;
@@ -53,26 +62,33 @@
   font-weight: 700;
   text-transform: uppercase;
 }
+
 .post-excerpt {
   color: var(--secondary-text-color);
   font-size: 14px;
 }
+
 .post-content {
   font-size: 15px;
   line-height: 1.8;
 }
+
 .post-tags {
   margin-top: 15px;
 }
+
 .post-tags .tag {
   font-weight: 700;
 }
+
 .post-tags .tag + .tag {
   margin-left: 10px;
 }
-.post-tags .tag:before {
+
+.post-tags .tag::before {
   content: "#";
 }
+
 .post-footer {
   align-items: center;
   background-color: var(--white-color);
@@ -82,6 +98,7 @@
   justify-content: space-between;
   padding: 0 20px;
 }
+
 .post-link {
   font-size: 11px;
   font-weight: 700;
@@ -89,10 +106,12 @@
   line-height: 1;
   text-transform: uppercase;
 }
+
 .post-author {
   display: flex;
   margin-right: 2px;
 }
+
 .post-author-link {
   display: block;
   height: 28px;
@@ -100,21 +119,27 @@
   position: relative;
   width: 28px;
 }
+
 .post-author-link:first-child {
   z-index: 10;
 }
+
 .post-author-link:nth-child(2) {
   z-index: 9;
 }
+
 .post-author-link:nth-child(3) {
   z-index: 8;
 }
+
 .post-author-link:nth-child(4) {
   z-index: 7;
 }
+
 .post-author-link:nth-child(5) {
   z-index: 6;
 }
+
 .post-author-image {
   border: 2px solid var(--white-color);
   border-radius: 50%;
