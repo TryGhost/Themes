@@ -6,10 +6,12 @@
   margin: 60px auto 0;
   width: 40px;
 }
+
 @keyframes scaleOut {
   0% {
     transform: scale(0);
   }
+
   100% {
     opacity: 0;
     transform: scale(1);

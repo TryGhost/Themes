@@ -1,29 +1,35 @@
 .site-header {
   padding: 0 40px;
 }
+
 .navbar {
   align-items: center;
   display: flex;
   height: 90px;
   justify-content: space-between;
 }
+
 .navbar-left,
 .navbar-right {
   flex: 2;
 }
+
 .navbar-left {
   align-items: center;
   display: flex;
 }
+
 .logo {
   display: inline-block;
   margin-right: 30px;
   position: relative;
   vertical-align: middle;
 }
+
 .logo-image {
   max-height: 30px;
 }
+
 .logo-text {
   font-size: 20px;
   font-weight: 500;
@@ -31,30 +37,36 @@
   text-transform: uppercase;
   white-space: nowrap;
 }
+
 .nav-list {
   display: flex;
   flex-wrap: wrap;
 }
+
 .menu-item {
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.2px;
   margin: 0 10px;
 }
+
 .menu-item-link {
   border-radius: 5px;
   padding: 5px 10px;
   transition: background-color 0.2s var(--animation-base);
 }
+
 .menu-item-current .menu-item-link,
 .menu-item-link:hover {
   background-color: var(--light-gray-color);
 }
+
 @media (max-width: 767px) {
   .navbar {
     height: 70px;
   }
 }
+
 @media (max-width: 1019px) {
   .site-header {
     padding: 0 15px;

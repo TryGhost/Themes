@@ -9,17 +9,21 @@
   width: 100%;
   z-index: 90;
 }
+
 .mobile-menu .menu-item {
   font-size: 17px;
   font-weight: 500;
   margin: 0;
 }
+
 .mobile-menu .menu-item + .menu-item {
   margin-top: 15px;
 }
+
 .mobile-menu .nav-list {
   flex-direction: column;
 }
+
 .menu-opened .mobile-menu {
   display: block;
 }

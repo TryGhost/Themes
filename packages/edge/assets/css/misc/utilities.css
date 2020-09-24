@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
 }
+
 .u-text-format h1,
 .u-text-format h2,
 .u-text-format h3,
@@ -12,31 +13,39 @@
   font-weight: 500;
   margin-top: 60px;
 }
+
 .u-text-format h1 {
   font-size: 26px;
 }
+
 .u-text-format h2 {
   font-size: 23px;
 }
+
 .u-text-format h3 {
   font-size: 20px;
 }
+
 .u-text-format h4 {
   font-size: 17px;
   font-weight: 700;
 }
+
 .u-text-format h5 {
   font-size: 15px;
   font-weight: 700;
 }
+
 .u-text-format h6 {
   font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
 }
+
 .u-text-format strong {
   color: var(--dark-gray-color);
 }
+
 .u-text-format a:hover {
   text-decoration: underline;
 }

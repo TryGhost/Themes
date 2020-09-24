@@ -3,30 +3,38 @@
   opacity: 0;
   transition: opacity 0.3s var(--animation-base);
 }
+
 .post-feed.initialized {
   opacity: 1;
 }
+
 .post-feed .grid-item {
   width: 330px;
 }
+
 .post-feed .post {
   margin: 15px;
   position: relative;
 }
+
 .post-feed .post-image {
   width: 100%;
 }
+
 @media (max-width: 1019px) {
   .post-feed {
     margin: -5px;
   }
+
   .post-feed .grid-item {
     width: calc(100% / 3);
   }
+
   .post-feed .post {
     margin: 5px;
   }
 }
+
 @media (max-width: 640px) {
   .post-feed .grid-item {
     width: calc(100% / 2);

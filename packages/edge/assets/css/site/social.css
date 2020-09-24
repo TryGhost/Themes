@@ -3,6 +3,7 @@
   text-align: right;
   white-space: nowrap;
 }
+
 .social-item {
   border-radius: 5px;
   color: var(--secondary-text-color);
@@ -11,30 +12,39 @@
   padding: 5px 8px;
   transition: background-color 0.2s var(--animation-base);
 }
+
 .social-item:hover {
   background-color: var(--light-gray-color);
 }
+
 .social-item-facebook {
   color: #3b5998;
 }
+
 .social-item-twitter {
   color: #1da1f2;
 }
+
 .social-item-instagram {
   color: #e1306c;
 }
+
 .social-item-dribbble {
   color: #ea4c89;
 }
+
 .social-item-behance {
   color: #1769ff;
 }
+
 .social-item-github {
   color: #4078c0;
 }
+
 .social-item-linkedin {
   color: #0077b5;
 }
+
 .social-item-vk {
   color: #45668e;
 }

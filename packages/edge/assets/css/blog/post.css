@@ -2,28 +2,35 @@
   margin-top: 60px;
   text-align: center;
 }
+
 .post-title {
   font-size: 40px;
 }
+
 .post-excerpt {
   color: var(--secondary-text-color);
   font-size: 20px;
   line-height: 1.5;
   text-align: center;
 }
+
 .post-media {
   margin-top: 60px;
 }
+
 .post-content {
   line-height: 1.9;
   margin-top: 60px;
 }
+
 .post-caption {
   display: none;
 }
+
 .post-link {
   display: block;
 }
+
 .post-lightbox {
   background-color: var(--white-color);
   border-radius: 50%;
@@ -39,18 +46,22 @@
   transition: opacity 0.2s var(--animation-base), transform 0.2s var(--animation-base);
   width: 30px;
 }
+
 .post-link:hover + .post-lightbox,
 .post-lightbox:hover {
   opacity: 1;
   transform: scale(1);
 }
+
 @media (max-width: 767px) {
   .post-title {
     font-size: 32px;
   }
+
   .post-excerpt {
     font-size: 18px;
   }
+
   .post-media,
   .post-content {
     margin-top: 40px;

@@ -1,6 +1,7 @@
 .related-posts {
   margin-top: 90px;
 }
+
 .related-title {
   color: var(--secondary-text-color);
   font-size: 20px;
@@ -9,6 +10,7 @@
   margin-bottom: 45px;
   text-transform: uppercase;
 }
+
 @media (max-width: 767px) {
   .related-posts {
     margin-top: 60px;
