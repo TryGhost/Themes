@@ -5,21 +5,21 @@
     xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/" xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0">
 
 <channel>
-<title>{{@blog.title}}</title>
-<link>{{@blog.url}}</link>
-<description>{{@blog.description}}</description>
-<language>{{lang}}</language>
-<copyright>{{@blog.title}} Copyright {{date format="YYYY"}}</copyright>
-<atom:link href="{{@blog.url}}/podcast/rss/" rel="self" type="application/rss+xml" />
+<title>{{@site.title}}</title>
+<link>{{@site.url}}</link>
+<description>{{@site.description}}</description>
+<language>{{@site.lang}}</language>
+<copyright>{{@site.title}} Copyright {{date format="YYYY"}}</copyright>
+<atom:link href="{{@site.url}}/podcast/rss/" rel="self" type="application/rss+xml" />
 <lastBuildDate>{{date format="ddd, DD MMM YYYY HH:mm:ss ZZ"}}</lastBuildDate>
-<itunes:author>{{@blog.title}}</itunes:author>
-<itunes:summary>{{@blog.description}}</itunes:summary>
+<itunes:author>{{@site.title}}</itunes:author>
+<itunes:summary>{{@site.description}}</itunes:summary>
 <itunes:owner>
   <itunes:name>Your Name</itunes:name>
   <itunes:email>youremail@example.com</itunes:email>
 </itunes:owner>
 <itunes:explicit>clean</itunes:explicit>
-<itunes:image href="{{img_url @blog.icon absolute="true"}}"/>
+<itunes:image href="{{img_url @site.icon absolute="true"}}"/>
 <itunes:category text="Technology"></itunes:category>
 
 {{#get "posts" filter="tag:-blog" include="tags,authors" as |episode|}}
@@ -28,7 +28,7 @@
     <title>{{title}}</title>
     <link>{{url absolute="true"}}</link>
     <pubDate>{{date format="ddd, DD MMM YYYY HH:mm:ss ZZ"}}</pubDate>
-    <guid isPermaLink="false">{{id}}</guid>
+    <guid isPermaLink="false">{{comment_id}}</guid>
     <category><![CDATA[ {{primary_tag.name}} ]]></category>
     <description>{{custom_excerpt}}</description>
     <content:encoded><![CDATA[ {{content}} ]]></content:encoded>
