@@ -11,7 +11,6 @@ $(function () {
     facebook();
     loadInstagram();
     gallery();
-    copyright();
     offCanvas();
 });
 
@@ -158,13 +157,6 @@ function gallery() {
         true
     );
     pswp(".kg-image-card", ".kg-image", ".kg-image", false, false);
-}
-
-function copyright() {
-    "use strict";
-    if (themeOptions.copyright != "") {
-        $(".copyright").html(themeOptions.copyright);
-    }
 }
 
 function offCanvas() {
