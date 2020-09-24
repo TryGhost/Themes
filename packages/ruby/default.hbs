@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{meta_title}}</title>
-  <link rel="stylesheet" href="{{asset "css/screen.css"}}">
+  <link rel="stylesheet" href="{{asset "built/screen.css"}}">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i%7CDosis:600,700&amp;subset=latin-ext">
 
   {{> config}}
-  
+
   {{ghost_head}}
 </head>
 <body class="{{body_class}}{{{block "body_class"}}}">
@@ -28,7 +28,7 @@
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous">
   </script>
-  <script src="{{asset "js/main.min.js"}}"></script>
+  <script src="{{asset "built/main.min.js"}}"></script>
 
   {{> facebook}}
 
