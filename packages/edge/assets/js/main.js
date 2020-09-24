@@ -54,6 +54,7 @@ function feed() {
         grid.masonry("option", { itemSelector: ".grid-item" });
         var items = grid.find(".grid-item");
         grid.masonry("appended", items);
+        fixHorizontalScroll();
     });
 
     if ($(".pagination .older-posts").length) {

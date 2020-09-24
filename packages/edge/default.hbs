@@ -24,10 +24,13 @@
     </div>
 
     <script>
-        var body = document.querySelector('body');
-        if (window.innerWidth > body.clientWidth + 5) {
-            document.documentElement.style.setProperty('--scrollbar', (window.innerWidth - body.clientWidth) + 'px');
+        function fixHorizontalScroll() {
+            var body = document.querySelector('body');
+            if (window.innerWidth > body.clientWidth + 5) {
+                document.documentElement.style.setProperty('--scrollbar', (window.innerWidth - body.clientWidth) + 'px');
+            }
         }
+        fixHorizontalScroll();
     </script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
