@@ -1,69 +1,69 @@
 .post-header {
-  margin-top: 60px;
-  text-align: center;
+    margin-top: 60px;
+    text-align: center;
 }
 
 .post-title {
-  font-size: 40px;
+    font-size: 40px;
 }
 
 .post-excerpt {
-  color: var(--secondary-text-color);
-  font-size: 20px;
-  line-height: 1.5;
-  text-align: center;
+    color: var(--secondary-text-color);
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
 }
 
 .post-media {
-  margin-top: 60px;
+    margin-top: 60px;
 }
 
 .post-content {
-  line-height: 1.9;
-  margin-top: 60px;
+    line-height: 1.9;
+    margin-top: 60px;
 }
 
 .post-caption {
-  display: none;
+    display: none;
 }
 
 .post-link {
-  display: block;
+    display: block;
 }
 
 .post-lightbox {
-  background-color: var(--white-color);
-  border-radius: 50%;
-  bottom: 15px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  height: 30px;
-  line-height: 30px;
-  opacity: 0;
-  position: absolute;
-  right: 15px;
-  text-align: center;
-  transform: scale(0.8);
-  transition: opacity 0.2s var(--animation-base), transform 0.2s var(--animation-base);
-  width: 30px;
+    background-color: var(--white-color);
+    border-radius: 50%;
+    bottom: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    height: 30px;
+    line-height: 30px;
+    opacity: 0;
+    position: absolute;
+    right: 15px;
+    text-align: center;
+    transform: scale(0.8);
+    transition: opacity 0.2s var(--animation-base), transform 0.2s var(--animation-base);
+    width: 30px;
 }
 
 .post-link:hover + .post-lightbox,
 .post-lightbox:hover {
-  opacity: 1;
-  transform: scale(1);
+    opacity: 1;
+    transform: scale(1);
 }
 
 @media (max-width: 767px) {
-  .post-title {
-    font-size: 32px;
-  }
+    .post-title {
+        font-size: 32px;
+    }
 
-  .post-excerpt {
-    font-size: 18px;
-  }
+    .post-excerpt {
+        font-size: 18px;
+    }
 
-  .post-media,
-  .post-content {
-    margin-top: 40px;
-  }
+    .post-media,
+    .post-content {
+        margin-top: 40px;
+    }
 }
