@@ -1,5 +1,5 @@
 $(function () {
-    "use strict";
+    'use strict';
     video();
     gallery();
     mobileMenu();
@@ -7,72 +7,72 @@ $(function () {
 });
 
 function video() {
-    "use strict";
-    $(".post-content").fitVids();
+    'use strict';
+    $('.post-content').fitVids();
 }
 
 function gallery() {
-    "use strict";
-    var images = document.querySelectorAll(".kg-gallery-image img");
+    'use strict';
+    var images = document.querySelectorAll('.kg-gallery-image img');
 
     images.forEach(function (image) {
-        var container = image.closest(".kg-gallery-image");
+        var container = image.closest('.kg-gallery-image');
         var width = image.attributes.width.value;
         var height = image.attributes.height.value;
         var ratio = width / height;
-        container.style.flex = ratio + " 1 0%";
+        container.style.flex = ratio + ' 1 0%';
     });
 
     pswp(
-        ".kg-gallery-container",
-        ".kg-gallery-image",
-        ".kg-gallery-image",
+        '.kg-gallery-container',
+        '.kg-gallery-image',
+        '.kg-gallery-image',
         false,
         true
     );
 }
 
 function mobileMenu() {
-    "use strict";
-    $(".burger").on("click", function () {
-        $("body").toggleClass("menu-opened");
+    'use strict';
+    $('.burger').on('click', function () {
+        $('body').toggleClass('menu-opened');
     });
 }
 
 function feed() {
-    "use strict";
-    var grid = $(".post-feed").masonry({
-        columnWidth: ".grid-sizer",
-        itemSelector: "none",
-        hiddenStyle: { transform: "translateY(50px)", opacity: 0 },
-        visibleStyle: { transform: "translateY(0)", opacity: 1 },
+    'use strict';
+    var grid = $('.post-feed').masonry({
+        columnWidth: '.grid-sizer',
+        itemSelector: 'none',
+        hiddenStyle: { transform: 'translateY(50px)', opacity: 0 },
+        visibleStyle: { transform: 'translateY(0)', opacity: 1 },
     });
-    var msnry = grid.data("masonry");
+    var msnry = grid.data('masonry');
 
     grid.imagesLoaded(function () {
-        grid.addClass("initialized");
-        grid.masonry("option", { itemSelector: ".grid-item" });
-        var items = grid.find(".grid-item");
-        grid.masonry("appended", items);
+        grid.addClass('initialized');
+        grid.masonry('option', { itemSelector: '.grid-item' });
+        var items = grid.find('.grid-item');
+        grid.masonry('appended', items);
         fixHorizontalScroll();
     });
 
-    if ($(".pagination .older-posts").length) {
+    if ($('.pagination .older-posts').length) {
         grid.infiniteScroll({
-            append: ".grid-item",
+            append: '.grid-item',
             history: false,
             outlayer: msnry,
-            path: ".pagination .older-posts",
+            path: '.pagination .older-posts',
             prefill: true,
-            status: ".infinite-scroll-status",
+            status: '.infinite-scroll-status',
         });
     }
 
     pswp(
-        ".post-feed",
-        ".grid-item:not(.grid-sizer)",
-        ".post-lightbox",
-        ".post-caption",
+        '.post-feed',
+        '.grid-item:not(.grid-sizer)',
+        '.post-lightbox',
+        '.post-caption',
         false
     );
 }
@@ -92,8 +92,8 @@ function pswp(container, element, trigger, caption, isGallery) {
 
                 item = {
                     src: isGallery
-                        ? gridEl.find("img").attr("src")
-                        : linkEl.attr("href"),
+                        ? gridEl.find('img').attr('src')
+                        : linkEl.attr('href'),
                     w: 0,
                     h: 0,
                 };
@@ -109,7 +109,7 @@ function pswp(container, element, trigger, caption, isGallery) {
     };
 
     var openPhotoSwipe = function (index, galleryElement) {
-        var pswpElement = document.querySelectorAll(".pswp")[0],
+        var pswpElement = document.querySelectorAll('.pswp')[0],
             gallery,
             options,
             items;
@@ -131,7 +131,7 @@ function pswp(container, element, trigger, caption, isGallery) {
             items,
             options
         );
-        gallery.listen("gettingData", function (index, item) {
+        gallery.listen('gettingData', function (index, item) {
             if (item.w < 1 || item.h < 1) {
                 // unknown size
                 var img = new Image();
@@ -161,7 +161,7 @@ function pswp(container, element, trigger, caption, isGallery) {
         return false;
     };
 
-    $(container).on("click", trigger, function (e) {
+    $(container).on('click', trigger, function (e) {
         onThumbnailsClick(e);
     });
 }
