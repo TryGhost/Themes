@@ -1,10 +1,10 @@
 .page-template .single .post-header {
-  border-bottom: 1px solid var(--light-gray-color);
-  padding: 25px 30px;
+    border-bottom: 1px solid var(--light-gray-color);
+    padding: 25px 30px;
 }
 
 @media (min-width: 992px) {
-  .page-template .content-column {
-    margin-left: 16.666667%;
-  }
+    .page-template .content-column {
+        margin-left: 16.666667%;
+    }
 }

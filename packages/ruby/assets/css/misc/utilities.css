@@ -1,63 +1,63 @@
 .u-shadow {
-  border-radius: 5px;
-  box-shadow: var(--shadow-base);
-  overflow: hidden;
-  transition: box-shadow 0.3s var(--animation-base);
+    border-radius: 5px;
+    box-shadow: var(--shadow-base);
+    overflow: hidden;
+    transition: box-shadow 0.3s var(--animation-base);
 }
 
 .u-shadow:hover {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
 }
 
 .u-plain-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 .u-placeholder {
-  background-color: var(--light-gray-color);
-  position: relative;
-  z-index: 10;
+    background-color: var(--light-gray-color);
+    position: relative;
+    z-index: 10;
 }
 
 .u-placeholder.same-height {
-  height: 0;
+    height: 0;
 }
 
 .u-placeholder.rectangle {
-  padding-bottom: 56.25%;
+    padding-bottom: 56.25%;
 }
 
 .u-object-fit {
-  height: 100%;
-  left: 0;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  width: 100%;
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
 
 .u-permalink {
-  bottom: 0;
-  left: 0;
-  outline: none;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 10;
+    bottom: 0;
+    left: 0;
+    outline: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 10;
 }
 
 .u-hover-item {
-  transition: opacity 0.3s var(--animation-base);
+    transition: opacity 0.3s var(--animation-base);
 }
 
 .u-hover-wrapper:hover .u-hover-item {
-  opacity: 0.5;
+    opacity: 0.5;
 }
 
 .u-hover-wrapper:hover .u-hover-item:hover {
-  opacity: 1;
+    opacity: 1;
 }
 
 .u-text-format h1,
@@ -66,52 +66,52 @@
 .u-text-format h4,
 .u-text-format h5,
 .u-text-format h6 {
-  font-weight: 800;
-  margin-top: 40px;
+    font-weight: 800;
+    margin-top: 40px;
 }
 
 .u-text-format h1 {
-  font-size: 26px;
+    font-size: 26px;
 }
 
 .u-text-format h2 {
-  font-size: 23px;
+    font-size: 23px;
 }
 
 .u-text-format h3 {
-  font-size: 20px;
+    font-size: 20px;
 }
 
 .u-text-format h4 {
-  font-size: 17px;
-  font-weight: 700;
+    font-size: 17px;
+    font-weight: 700;
 }
 
 .u-text-format h5 {
-  font-size: 15px;
-  font-weight: 700;
+    font-size: 15px;
+    font-weight: 700;
 }
 
 .u-text-format h6 {
-  font-size: 13px;
-  font-weight: 700;
-  text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .u-text-format strong {
-  color: var(--dark-gray-color);
+    color: var(--dark-gray-color);
 }
 
 .u-text-format a {
-  color: var(--primary-color);
+    color: var(--primary-color);
 }
 
 .u-text-format > *:first-child,
 .u-text-format > *:first-child > *:first-child {
-  margin-top: 0 !important;
+    margin-top: 0 !important;
 }
 
 .u-text-format > *:last-child,
 .u-text-format > *:last-child > *:last-child {
-  margin-bottom: 0 !important;
+    margin-bottom: 0 !important;
 }

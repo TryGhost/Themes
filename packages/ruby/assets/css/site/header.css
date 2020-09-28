@@ -1,55 +1,55 @@
 .site-header {
-  background-color: var(--white-color);
-  box-shadow: var(--shadow-base);
-  padding: 0 30px;
-  z-index: 80;
+    background-color: var(--white-color);
+    box-shadow: var(--shadow-base);
+    padding: 0 30px;
+    z-index: 80;
 }
 
 .navbar {
-  align-items: center;
-  display: flex;
-  height: 70px;
-  justify-content: space-between;
+    align-items: center;
+    display: flex;
+    height: 70px;
+    justify-content: space-between;
 }
 
 .navbar-left,
 .navbar-right {
-  flex: 2;
+    flex: 2;
 }
 
 .navbar-right {
-  display: flex;
-  justify-content: flex-end;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .logo {
-  display: inline-block;
-  margin-right: 15px;
-  position: relative;
-  vertical-align: middle;
+    display: inline-block;
+    margin-right: 15px;
+    position: relative;
+    vertical-align: middle;
 }
 
 .logo-image {
-  max-height: 40px;
+    max-height: 40px;
 }
 
 .logo-text {
-  font-family: var(--font-alt);
-  font-size: 25px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  line-height: 1;
+    font-family: var(--font-alt);
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 1;
 }
 
 .nav-list {
-  display: flex;
+    display: flex;
 }
 
 .menu-item {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  line-height: 1;
-  margin: 0 20px;
-  text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 1;
+    margin: 0 20px;
+    text-transform: uppercase;
 }

@@ -1,85 +1,85 @@
 .widget {
-  background-color: var(--white-color);
-  padding: 20px;
+    background-color: var(--white-color);
+    padding: 20px;
 }
 
 .widget + .widget {
-  margin-top: 30px;
+    margin-top: 30px;
 }
 
 .widget-no-title {
-  padding: 5px;
+    padding: 5px;
 }
 
 .widget-title {
-  border-bottom: 1px solid var(--light-gray-color);
-  color: var(--secondary-text-color);
-  font-family: var(--font-base);
-  font-size: 11px;
-  letter-spacing: 0.5px;
-  margin: -20px -20px 20px;
-  padding: 15px 20px;
-  text-transform: uppercase;
+    border-bottom: 1px solid var(--light-gray-color);
+    color: var(--secondary-text-color);
+    font-family: var(--font-base);
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    margin: -20px -20px 20px;
+    padding: 15px 20px;
+    text-transform: uppercase;
 }
 
 .widget-tags .tag + .tag {
-  margin-top: 5px;
+    margin-top: 5px;
 }
 
 .widget-tags .tag-link {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
 }
 
 .widget-tags .tag-name {
-  font-family: var(--font-alt);
-  font-size: 16px;
-  font-weight: 600;
+    font-family: var(--font-alt);
+    font-size: 16px;
+    font-weight: 600;
 }
 
 .widget-tags .tag-count {
-  align-items: center;
-  background-color: var(--primary-color);
-  border-radius: 50%;
-  color: var(--white-color);
-  display: flex;
-  font-size: 12px;
-  font-weight: 700;
-  height: 24px;
-  justify-content: center;
-  min-width: 24px;
+    align-items: center;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    color: var(--white-color);
+    display: flex;
+    font-size: 12px;
+    font-weight: 700;
+    height: 24px;
+    justify-content: center;
+    min-width: 24px;
 }
 
 .widget-recent .recent {
-  align-items: center;
-  display: flex;
+    align-items: center;
+    display: flex;
 }
 
 .widget-recent .recent + .recent {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 
 .widget-recent .post-header {
-  margin-bottom: 0;
-  overflow: hidden;
+    margin-bottom: 0;
+    overflow: hidden;
 }
 
 .widget-recent .post-title {
-  font-size: 16px;
-  font-weight: 600;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+    font-size: 16px;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .widget-recent .post-date {
-  margin-top: 3px;
+    margin-top: 3px;
 }
 
 @media (max-width: 767px) {
-  .widget-title {
-    margin-bottom: 0;
-    margin-top: 0;
-  }
+    .widget-title {
+        margin-bottom: 0;
+        margin-top: 0;
+    }
 }

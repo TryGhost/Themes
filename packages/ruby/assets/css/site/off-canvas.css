@@ -1,77 +1,77 @@
 .dimmer {
-  background: rgba(0, 0, 0, 0.7);
-  bottom: 0;
-  display: none;
-  left: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 90;
+    background: rgba(0, 0, 0, 0.7);
+    bottom: 0;
+    display: none;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 90;
 }
 
 .off-canvas {
-  background-color: var(--light-gray-color);
-  height: 100vh;
-  -webkit-overflow-scrolling: touch;
-  overflow-y: scroll;
-  padding: 60px 0;
-  position: fixed;
-  right: 0;
-  top: 0;
-  transform: translateX(320px);
-  transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
-  width: 320px;
-  z-index: 90;
+    background-color: var(--light-gray-color);
+    height: 100vh;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: scroll;
+    padding: 60px 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transform: translateX(320px);
+    transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+    width: 320px;
+    z-index: 90;
 }
 
 .off-canvas .burger {
-  margin: 0;
-  position: absolute;
-  right: 12px;
-  top: 15px;
+    margin: 0;
+    position: absolute;
+    right: 12px;
+    top: 15px;
 }
 
 .off-canvas .related-posts {
-  margin: 45px 0 30px;
-  padding: 0 20px;
+    margin: 45px 0 30px;
+    padding: 0 20px;
 }
 
 .off-canvas .widget-area {
-  padding: 0 20px;
+    padding: 0 20px;
 }
 
 .off-canvas .widget {
-  background-color: transparent;
-  box-shadow: none;
-  padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
 }
 
 .off-canvas .widget + .widget {
-  margin-top: 45px;
+    margin-top: 45px;
 }
 
 body:not(.canvas-visible) .off-canvas {
-  visibility: hidden;
+    visibility: hidden;
 }
 
 .canvas-opened {
-  overflow-y: hidden;
+    overflow-y: hidden;
 }
 
 .canvas-opened .off-canvas {
-  transform: translateX(0);
-  visibility: visible;
+    transform: translateX(0);
+    visibility: visible;
 }
 
 .mobile-menu {
-  margin: 0 20px 45px;
+    margin: 0 20px 45px;
 }
 
 .mobile-menu .nav-list {
-  display: block;
+    display: block;
 }
 
 .mobile-menu .menu-item {
-  letter-spacing: 0;
-  margin: 20px 0;
+    letter-spacing: 0;
+    margin: 20px 0;
 }
