@@ -1,34 +1,34 @@
 .share {
-  border-radius: 3px;
-  display: flex;
-  margin-top: 30px;
-  overflow: hidden;
+    border-radius: 3px;
+    display: flex;
+    margin-top: 30px;
+    overflow: hidden;
 }
 
 .share-item {
-  align-items: center;
-  color: var(--white-color);
-  display: flex;
-  flex: 1;
-  font-size: 13px;
-  font-weight: 700;
-  height: 40px;
-  justify-content: center;
-  text-transform: uppercase;
+    align-items: center;
+    color: var(--white-color);
+    display: flex;
+    flex: 1;
+    font-size: 13px;
+    font-weight: 700;
+    height: 40px;
+    justify-content: center;
+    text-transform: uppercase;
 }
 
 .share-item .icon {
-  font-size: 18px;
+    font-size: 18px;
 }
 
 .share-download {
-  background-color: var(--brand-color);
+    background-color: var(--brand-color);
 }
 
 .share-facebook {
-  background-color: #3b5998;
+    background-color: #3b5998;
 }
 
 .share-twitter {
-  background-color: #1da1f2;
+    background-color: #1da1f2;
 }

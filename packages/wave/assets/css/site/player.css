@@ -1,154 +1,154 @@
 .player {
-  background-color: var(--white-color);
-  border: 1px solid var(--mid-gray-color);
-  border-radius: 3px;
-  display: flex;
+    background-color: var(--white-color);
+    border: 1px solid var(--mid-gray-color);
+    border-radius: 3px;
+    display: flex;
 }
 
 .player .post-media {
-  border-radius: 3px 0 0 3px;
-  margin: -1px 0 -1px -1px;
+    border-radius: 3px 0 0 3px;
+    margin: -1px 0 -1px -1px;
 }
 
 .player .post-title {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .player-wrapper {
-  flex-grow: 1;
-  overflow: hidden;
-  padding: 20px;
+    flex-grow: 1;
+    overflow: hidden;
+    padding: 20px;
 }
 
 .player-track {
-  background-color: var(--mid-gray-color);
-  height: 5px;
-  margin-top: 20px;
+    background-color: var(--mid-gray-color);
+    height: 5px;
+    margin-top: 20px;
 }
 
 .player-progress {
-  background-color: var(--dark-gray-color);
-  height: 100%;
-  width: 0;
+    background-color: var(--dark-gray-color);
+    height: 100%;
+    width: 0;
 }
 
 .player-controls {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
 }
 
 .player-buttons {
-  align-items: center;
-  display: flex;
+    align-items: center;
+    display: flex;
 }
 
 .player-buttons .button {
-  margin-right: 5px;
+    margin-right: 5px;
 }
 
 .player-time {
-  display: flex;
-  font-size: 13px;
+    display: flex;
+    font-size: 13px;
 }
 
 .player-time-current {
-  min-width: 55px;
+    min-width: 55px;
 }
 
 .player-time-duration::before {
-  content: "|";
-  padding-right: 5px;
+    content: "|";
+    padding-right: 5px;
 }
 
 .player-external {
-  backdrop-filter: blur(8px);
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 0;
-  bottom: 0;
-  height: 80px;
-  left: 0;
-  max-width: 920px;
-  position: fixed;
-  right: 0;
-  transform: translateY(80px);
-  transition: transform 0.5s var(--animation-base);
-  z-index: 90;
+    backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 0;
+    bottom: 0;
+    height: 80px;
+    left: 0;
+    max-width: 920px;
+    position: fixed;
+    right: 0;
+    transform: translateY(80px);
+    transition: transform 0.5s var(--animation-base);
+    z-index: 90;
 }
 
 .player-external .post-media {
-  border-radius: 0;
-  margin: 0;
-  width: 80px;
+    border-radius: 0;
+    margin: 0;
+    width: 80px;
 }
 
 .player-external .post-media .button-play {
-  height: 34px;
-  margin-left: -17px;
-  margin-top: -17px;
-  width: 34px;
+    height: 34px;
+    margin-left: -17px;
+    margin-top: -17px;
+    width: 34px;
 }
 
 .player-external .player-wrapper {
-  align-items: center;
-  border-top: 1px solid var(--mid-gray-color);
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 20px;
+    align-items: center;
+    border-top: 1px solid var(--mid-gray-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
 }
 
 .player-external .post-header {
-  max-width: 400px;
-  overflow: hidden;
+    max-width: 400px;
+    overflow: hidden;
 }
 
 .player-external .post-title {
-  font-size: 16px;
+    font-size: 16px;
 }
 
 .player-external .player-track {
-  flex-grow: 1;
-  margin: 0 30px;
+    flex-grow: 1;
+    margin: 0 30px;
 }
 
 .player-external .player-controls {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 .player-external .player-buttons {
-  margin-right: 15px;
+    margin-right: 15px;
 }
 
 .player-opened .player-external {
-  transform: translateY(0);
+    transform: translateY(0);
 }
 
 @media (max-width: 767px) {
-  .player .post-media {
-    display: none;
-  }
+    .player .post-media {
+        display: none;
+    }
 
-  .player-external .player-wrapper {
-    align-items: flex-start;
-    flex-direction: column;
-  }
+    .player-external .player-wrapper {
+        align-items: flex-start;
+        flex-direction: column;
+    }
 
-  .player-external .post-header {
-    max-width: calc(100vw - 40px);
-  }
+    .player-external .post-header {
+        max-width: calc(100vw - 40px);
+    }
 
-  .player-external .post-title {
-    font-size: 13px;
-    text-transform: uppercase;
-  }
+    .player-external .post-title {
+        font-size: 13px;
+        text-transform: uppercase;
+    }
 
-  .player-external .post-meta {
-    display: none;
-  }
+    .player-external .post-meta {
+        display: none;
+    }
 
-  .player-external .player-controls {
-    margin-top: 10px;
-  }
+    .player-external .player-controls {
+        margin-top: 10px;
+    }
 }

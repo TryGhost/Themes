@@ -1,124 +1,124 @@
 @font-face {
-  font-family: IVEEL;
-  font-style: normal;
-  font-weight: normal;
-  src: url('../fonts/IVEEL.ttf') format('truetype'), url('../fonts/IVEEL.woff') format('woff'), url('../fonts/IVEEL.svg') format('svg');
+    font-family: IVEEL;
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/IVEEL.ttf') format('truetype'), url('../fonts/IVEEL.woff') format('woff'), url('../fonts/IVEEL.svg') format('svg');
 }
 
 .icon::before {
-  display: inline-block;
-  font: normal normal normal 24px/1 IVEEL, sans-serif;
-  font-size: inherit;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  line-height: inherit;
-  text-rendering: auto;
+    display: inline-block;
+    font: normal normal normal 24px/1 IVEEL, sans-serif;
+    font-size: inherit;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: inherit;
+    text-rendering: auto;
 }
 
 .icon-chevron-left::before {
-  content: "\e929";
+    content: "\e929";
 }
 
 .icon-chevron-right::before {
-  content: "\e92a";
+    content: "\e92a";
 }
 
 .icon-arrow-left::before {
-  content: "\e92b";
+    content: "\e92b";
 }
 
 .icon-arrow-right::before {
-  content: "\e92c";
+    content: "\e92c";
 }
 
 .icon-menu-down::before {
-  content: "\e92e";
+    content: "\e92e";
 }
 
 .icon-menu-up::before {
-  content: "\e900";
+    content: "\e900";
 }
 
 .icon-window-close::before {
-  content: "\e92f";
+    content: "\e92f";
 }
 
 .icon-white-balance-sunny::before {
-  content: "\e930";
+    content: "\e930";
 }
 
 .icon-brightness-2::before {
-  content: "\e931";
+    content: "\e931";
 }
 
 .icon-bookmark::before {
-  content: "\e933";
+    content: "\e933";
 }
 
 .icon-star::before {
-  content: "\e901";
+    content: "\e901";
 }
 
 .icon-map-marker::before {
-  content: "\e92d";
+    content: "\e92d";
 }
 
 .icon-web::before {
-  content: "\e91c";
+    content: "\e91c";
 }
 
 .icon-facebook::before {
-  content: "\e936";
+    content: "\e936";
 }
 
 .icon-twitter::before {
-  content: "\e940";
+    content: "\e940";
 }
 
 .icon-apple::before {
-  content: "\e934";
+    content: "\e934";
 }
 
 .icon-google::before {
-  content: "\e914";
+    content: "\e914";
 }
 
 .icon-overcast::before {
-  content: "\e935";
+    content: "\e935";
 }
 
 .icon-spotify::before {
-  content: "\e937";
+    content: "\e937";
 }
 
 .icon-stitcher::before {
-  content: "\e938";
+    content: "\e938";
 }
 
 .icon-rss::before {
-  content: "\e939";
+    content: "\e939";
 }
 
 .icon-play::before {
-  content: "\e932";
+    content: "\e932";
 }
 
 .icon-pause::before {
-  content: "\e902";
+    content: "\e902";
 }
 
 .icon-rewind-10::before {
-  content: "\e903";
+    content: "\e903";
 }
 
 .icon-fast-forward-30::before {
-  content: "\e904";
+    content: "\e904";
 }
 
 .icon-download::before {
-  content: "\e905";
+    content: "\e905";
 }
 
 .icon-menu::before {
-  content: "\e906";
+    content: "\e906";
 }
