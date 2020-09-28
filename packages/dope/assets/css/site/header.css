@@ -1,37 +1,37 @@
 .site-header {
-  backface-visibility: hidden;
-  left: 0;
-  padding: 0 45px;
-  position: absolute;
-  right: 0;
-  z-index: 80;
+    backface-visibility: hidden;
+    left: 0;
+    padding: 0 45px;
+    position: absolute;
+    right: 0;
+    z-index: 80;
 }
 
 .navbar {
-  align-items: center;
-  display: flex;
-  height: 100px;
-  justify-content: space-between;
+    align-items: center;
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
 }
 
 .logo {
-  display: inline-block;
-  position: relative;
-  vertical-align: middle;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
 }
 
 .logo-image {
-  max-height: 40px;
+    max-height: 40px;
 }
 
 .logo-text {
-  font-size: 24px;
-  font-weight: 800;
-  line-height: 1;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1;
 }
 
 @media (max-width: 991px) {
-  .site-header {
-    padding: 0 30px;
-  }
+    .site-header {
+        padding: 0 30px;
+    }
 }

@@ -1,45 +1,45 @@
 .related-posts {
-  margin: 60px 0;
+    margin: 60px 0;
 }
 
 .related-posts .post {
-  margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .related-posts .post.featured {
-  min-height: auto;
+    min-height: auto;
 }
 
 .related-posts .post-media {
-  margin-right: 30px;
-  width: 300px;
+    margin-right: 30px;
+    width: 300px;
 }
 
 .related-posts .post-meta {
-  margin-bottom: 5px;
+    margin-bottom: 5px;
 }
 
 .related-posts .post-title {
-  font-size: 20px;
-  letter-spacing: 0;
+    font-size: 20px;
+    letter-spacing: 0;
 }
 
 .related-posts .post-author {
-  display: none;
+    display: none;
 }
 
 .related-title {
-  color: var(--primary-color);
-  font-size: 20px;
-  margin-bottom: 40px;
+    color: var(--primary-color);
+    font-size: 20px;
+    margin-bottom: 40px;
 }
 
 @media (max-width: 767px) {
-  .related-posts .post {
-    margin-bottom: 45px;
-  }
+    .related-posts .post {
+        margin-bottom: 45px;
+    }
 
-  .related-posts .post-media {
-    width: auto;
-  }
+    .related-posts .post-media {
+        width: auto;
+    }
 }

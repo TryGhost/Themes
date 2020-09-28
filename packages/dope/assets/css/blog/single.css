@@ -1,83 +1,83 @@
 .single-post {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
 }
 
 .single-post .u-placeholder {
-  display: flex;
-  min-height: 450px;
+    display: flex;
+    min-height: 450px;
 }
 
 .single-post .u-placeholder::before {
-  background-color: #000;
-  bottom: 0;
-  content: "";
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  transition: background-color 1s var(--animation-base);
-  z-index: 10;
+    background-color: #000;
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: background-color 1s var(--animation-base);
+    z-index: 10;
 }
 
 .single-post .u-placeholder.initialized::before {
-  background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .single-post .post-header {
-  margin: 30px 0 45px;
-  text-align: center;
+    margin: 30px 0 45px;
+    text-align: center;
 }
 
 .single-post .post-title {
-  font-size: 30px;
+    font-size: 30px;
 }
 
 .single-post .post-media {
-  border-radius: 0;
-  margin-bottom: 45px;
+    border-radius: 0;
+    margin-bottom: 45px;
 }
 
 .single-post .post-media .post-header {
-  margin: auto;
-  max-width: 550px;
-  padding: 30px;
-  position: relative;
-  z-index: 20;
+    margin: auto;
+    max-width: 550px;
+    padding: 30px;
+    position: relative;
+    z-index: 20;
 }
 
 .single-post .post-media .post-title,
 .single-post .post-media .post-meta {
-  color: var(--white-color);
+    color: var(--white-color);
 }
 
 .single-post .post-media .post-title {
-  font-size: 36px;
+    font-size: 36px;
 }
 
 .single-post .post-media .post-meta {
-  margin-bottom: -20px;
-  margin-top: 20px;
-  opacity: 0.7;
+    margin-bottom: -20px;
+    margin-top: 20px;
+    opacity: 0.7;
 }
 
 .single-post .post-content {
-  line-height: 1.9;
+    line-height: 1.9;
 }
 
 @media (max-width: 767px) {
-  .single-post .u-placeholder {
-    min-height: 300px;
-  }
+    .single-post .u-placeholder {
+        min-height: 300px;
+    }
 
-  .single-post .post-header {
-    margin-bottom: 30px;
-  }
+    .single-post .post-header {
+        margin-bottom: 30px;
+    }
 
-  .single-post .post-title {
-    font-size: 26px !important;
-  }
+    .single-post .post-title {
+        font-size: 26px !important;
+    }
 
-  .single-post .post-media {
-    margin-bottom: 30px;
-  }
+    .single-post .post-media {
+        margin-bottom: 30px;
+    }
 }

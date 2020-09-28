@@ -1,41 +1,41 @@
 .off-canvas {
-  background-color: var(--white-color);
-  height: 100vh;
-  -webkit-overflow-scrolling: touch;
-  overflow-y: scroll;
-  padding: 70px 30px 30px;
-  position: fixed;
-  right: 0;
-  top: 0;
-  transform: translateX(350px);
-  transition: transform 0.4s var(--animation-base);
-  width: 350px;
-  z-index: 90;
+    background-color: var(--white-color);
+    height: 100vh;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: scroll;
+    padding: 70px 30px 30px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transform: translateX(350px);
+    transition: transform 0.4s var(--animation-base);
+    width: 350px;
+    z-index: 90;
 }
 
 .canvas-close {
-  color: var(--dark-gray-color);
-  cursor: pointer;
-  font-size: 23px;
-  height: 30px;
-  line-height: 30px;
-  position: absolute;
-  right: 15px;
-  text-align: center;
-  top: 15px;
-  transition: color 0.4s var(--animation-base);
-  width: 30px;
+    color: var(--dark-gray-color);
+    cursor: pointer;
+    font-size: 23px;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    right: 15px;
+    text-align: center;
+    top: 15px;
+    transition: color 0.4s var(--animation-base);
+    width: 30px;
 }
 
 .canvas-close:hover {
-  color: var(--secondary-text-color);
+    color: var(--secondary-text-color);
 }
 
 html:not(.canvas-visible) .off-canvas {
-  visibility: hidden;
+    visibility: hidden;
 }
 
 .canvas-opened .off-canvas {
-  transform: translateX(0) !important;
-  visibility: visible;
+    transform: translateX(0) !important;
+    visibility: visible;
 }
