@@ -1,59 +1,59 @@
 .search {
-  position: relative;
-  text-align: left;
+    position: relative;
+    text-align: left;
 }
 
 .search-button::after {
-  content: "\e901";
+    content: "\e901";
 }
 
 .search-button-clear {
-  font-size: 18px;
+    font-size: 18px;
 }
 
 .search-button-clear::after {
-  content: "\e92f";
+    content: "\e92f";
 }
 
 .search-result {
-  background-color: var(--white-color);
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-  color: var(--dark-gray-color);
-  font-size: 15px;
-  margin-top: 5px;
-  max-height: 50vh;
-  overflow: hidden;
-  -webkit-overflow-scrolling: touch;
-  overflow-y: scroll;
-  position: absolute;
-  top: 100%;
-  width: 100%;
+    background-color: var(--white-color);
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    color: var(--dark-gray-color);
+    font-size: 15px;
+    margin-top: 5px;
+    max-height: 50vh;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: scroll;
+    position: absolute;
+    top: 100%;
+    width: 100%;
 }
 
 .search-result-row + .search-result-row {
-  border-top: 1px solid var(--mid-gray-color);
+    border-top: 1px solid var(--mid-gray-color);
 }
 
 .search-result-row-link {
-  display: block;
-  padding: 13px 15px 8px;
+    display: block;
+    padding: 13px 15px 8px;
 }
 
 .search-result-row-link:hover {
-  background-color: var(--light-gray-color);
-  color: var(--dark-gray-color);
+    background-color: var(--light-gray-color);
+    color: var(--dark-gray-color);
 }
 
 .search-result-row-title {
-  line-height: 1.3;
+    line-height: 1.3;
 }
 
 .search-result-row-excerpt {
-  color: var(--secondary-text-color);
-  display: block;
-  font-size: 14px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+    color: var(--secondary-text-color);
+    display: block;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
