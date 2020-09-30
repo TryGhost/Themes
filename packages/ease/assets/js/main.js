@@ -25,14 +25,21 @@ document.addEventListener('lazyloaded', function (e) {
 
 function search() {
     'use strict';
+    if (
+        typeof gh_search_key == 'undefined' ||
+        gh_search_key == '' ||
+        typeof gh_search_migration == 'undefined'
+    )
+        return;
+
     var searchInput = $('.search-field');
     var searchButton = $('.search-button');
     var searchResult = $('.search-result');
 
     var url =
         siteUrl +
-        '/ghost/api/v2/content/posts/?key=' +
-        themeOptions.search_key +
+        '/ghost/api/v3/content/posts/?key=' +
+        gh_search_key +
         '&limit=all&fields=id,title,excerpt,url,updated_at,visibility&order=updated_at%20desc&formats=plaintext';
     var indexDump = JSON.parse(localStorage.getItem('ease_search_index'));
     var index;
@@ -53,8 +60,7 @@ function search() {
 
     if (
         !indexDump ||
-        themeOptions.search_migration !=
-            localStorage.getItem('ease_search_migration')
+        gh_search_migration != localStorage.getItem('ease_search_migration')
     ) {
         $.get(url, function (data) {
             if (data.posts.length > 0) {
@@ -65,12 +71,11 @@ function search() {
                 });
 
                 update(data);
-                if (typeof themeOptions.search_migration != 'undefined') {
-                    localStorage.setItem(
-                        'ease_search_migration',
-                        themeOptions.search_migration
-                    );
-                }
+
+                localStorage.setItem(
+                    'ease_search_migration',
+                    gh_search_migration
+                );
             }
         });
     } else {
