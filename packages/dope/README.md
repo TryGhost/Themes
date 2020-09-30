@@ -1,6 +1,6 @@
 # Dope
 
-A clean, minimalist theme featuring a light and dark mode. Launch your online publications with flair. Completely free and fully responsive, released under the MIT license.
+A unique tag-based theme to arrange your publications into collections. Keep organized and let your readers explore your publications with ease. Completely free and fully responsive, released under the MIT license.
 
 **Demo: https://dope.ghost.io**
 
