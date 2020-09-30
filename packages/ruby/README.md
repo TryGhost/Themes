@@ -1,6 +1,6 @@
 # Ruby
 
-A clean, minimalist theme featuring a light and dark mode. Launch your online publications with flair. Completely free and fully responsive, released under the MIT license.
+A multi-column theme with a unique card layout. Share your posts with contemporary style. Completely free and fully responsive, released under the MIT license.
 
 **Demo: https://ruby.ghost.io**
 

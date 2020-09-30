@@ -1,6 +1,6 @@
 {
     "name": "ruby",
-    "description": "Premium Ghost Theme",
+    "description": "A Ghost theme",
     "version": "1.2.1",
     "engines": {
         "ghost": ">=3.0.0",
