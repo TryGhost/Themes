@@ -1,6 +1,6 @@
 # Wave
 
-A clean, minimalist theme featuring a light and dark mode. Launch your online publications with flair. Completely free and fully responsive, released under the MIT license.
+A theme dedicated to podcasters and bloggers. Embrace your creativity with ease. Completely free and fully responsive, released under the MIT license.
 
 **Demo: https://wave.ghost.io**
 
@@ -10,6 +10,16 @@ A clean, minimalist theme featuring a light and dark mode. Launch your online pu
 
 1. [Download this theme](https://github.com/TryGhost/Wave/archive/master.zip)
 2. Log into Ghost, and go to the `Design` settings area to upload the zip file
+
+# Adding Episodes
+
+1. Add a regular post in `Posts > New post` and give it a title and some description in the editor.
+2. Enter the episode audio URL in `Post settings > Facebook card > Facebook description` field.
+
+# Creating a Separate Blog Page
+
+1. Upload the routes file (routes.yaml in the theme folder) in `Beta features > Routes`.
+2. Add `Blog` tag to your posts and the blog page can be accessed in `example.com/blog`.
 
 # Development
 
