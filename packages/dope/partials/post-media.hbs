@@ -1,14 +1,15 @@
 {{#if feature_image}}
-  <div class="post-media{{#if big_image}} kg-width-full{{/if}}">
-    <div class="u-placeholder{{#if same_height}} same-height {{ratio}}{{/if}}">
-      {{#unless single}}
-        <a class="post-image-link" href="{{url}}">
-          {{> post-image}}
-        </a>
-      {{else}}
-        {{> post-image}}
-        {{> post-header single=true number_date=true show_tags=true}}
-      {{/unless}}
+    <div class="post-media{{#if big_image}} kg-width-full{{/if}}">
+        <div
+            class="u-placeholder{{#if same_height}} same-height {{ratio}}{{/if}}">
+            {{#unless single}}
+                <a class="post-image-link" href="{{url}}">
+                    {{> post-image}}
+                </a>
+            {{else}}
+                {{> post-image}}
+                {{> post-header single=true number_date=true show_tags=true}}
+            {{/unless}}
+        </div>
     </div>
-  </div>
 {{/if}}
