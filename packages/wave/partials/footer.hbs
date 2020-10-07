@@ -1,8 +1,10 @@
 <footer class="site-footer kg-width-normal">
-  {{> customize/subscribe}}
-  {{> customize/copyright}}
+    {{> customize/subscribe}}
+    <div class="copyright">
+        Powered by <a href="https://ghost.org/" target="_blank">Ghost</a>
+    </div>
 </footer>
 
 {{^is "post"}}
-  {{> player is_external=true}}
+    {{> player is_external=true}}
 {{/is}}

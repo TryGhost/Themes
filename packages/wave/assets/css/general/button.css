@@ -1,0 +1,71 @@
+.button {
+    align-items: center;
+    background-color: var(--brand-color);
+    border: 0;
+    border-radius: 3px;
+    color: var(--white-color);
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 13px;
+    font-weight: 700;
+    height: 36px;
+    justify-content: center;
+    outline: none;
+    padding: 0 15px;
+    text-transform: uppercase;
+}
+
+.button-secondary {
+    background-color: var(--dark-gray-color);
+}
+
+.button-small {
+    font-size: 10px;
+    height: 20px;
+    padding: 0;
+    width: 30px;
+}
+
+.button-small .icon {
+    font-size: 15px;
+}
+
+.button-play {
+    border-radius: 50%;
+    font-size: 21px;
+    height: 40px;
+    padding: 0;
+    width: 40px;
+}
+
+.button-text {
+    align-items: center;
+    background-color: transparent;
+    border: 0;
+    color: var(--primary-text-color);
+    cursor: pointer;
+    display: flex;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.button-text .icon-play {
+    font-size: 13px;
+    margin-left: -3px;
+    margin-right: 2px;
+}
+
+.button-text .icon-download {
+    font-size: 12px;
+    margin-left: -2px;
+    margin-right: 3px;
+}
+
+.button-text .icon-chevron-right {
+    font-size: 15px;
+    margin-left: -5px;
+    margin-right: 0;
+}
