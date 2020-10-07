@@ -1,0 +1,12 @@
+.social {
+    display: flex;
+}
+
+.social-item {
+    font-size: 17px;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 2px;
+    text-align: center;
+    width: 30px;
+}

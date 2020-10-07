@@ -1,19 +1,19 @@
 {{!< default}}
 
 <div class="container">
-  <div class="term-tags">
-    {{#tag}}
-      <a class="tag tag-current" href="{{url}}">
-        <span class="tag-name">{{name}}</span>
-      </a>
-    {{/tag}}
-    {{#get "tags" limit="all" filter="id:-{{tag.id}}"}}
-      {{#foreach tags}}
-        <a class="tag" href="{{url}}">
-          <span class="tag-name">{{name}}</span>
-        </a>
-      {{/foreach}}
-    {{/get}}
-  </div>
-  {{> content}}
+    <div class="term-tags">
+        {{#tag}}
+            <a class="tag tag-current" href="{{url}}">
+                <span class="tag-name">{{name}}</span>
+            </a>
+        {{/tag}}
+        {{#get "tags" limit="all" filter="id:-{{tag.id}}"}}
+            {{#foreach tags}}
+                <a class="tag" href="{{url}}">
+                    <span class="tag-name">{{name}}</span>
+                </a>
+            {{/foreach}}
+        {{/get}}
+    </div>
+    {{> content}}
 </div>
