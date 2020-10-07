@@ -1,0 +1,22 @@
+.error {
+    text-align: center;
+}
+
+.error-code {
+    font-size: 40px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    line-height: 1;
+    margin: 45px 0 10px;
+}
+
+.error-message {
+    color: var(--secondary-text-color);
+    margin-bottom: 45px;
+}
+
+.error-link {
+    color: var(--primary-color);
+    font-weight: 700;
+    justify-content: center;
+}

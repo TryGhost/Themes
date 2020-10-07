@@ -1,0 +1,43 @@
+.topic {
+    margin-bottom: 60px;
+}
+
+.topic-header {
+    border-bottom: 1px solid var(--mid-gray-color);
+    display: flex;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.topic-name {
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+.topic-count {
+    color: var(--secondary-text-color);
+    margin-left: 15px;
+}
+
+.topic-article-title {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+.topic-article-link {
+    display: flex;
+    padding: 7px 0;
+}
+
+.topic-article-icon {
+    font-size: 17px;
+    margin: -2px 5px 0 -5px;
+}
+
+.topic-more {
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-top: 20px;
+}

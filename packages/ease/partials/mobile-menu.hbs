@@ -1,20 +1,9 @@
 <div class="mobile-menu hidden-lg hidden-xl">
-  <div class="container">
-    {{#if @site.navigation}}
-      <nav class="mobile-nav">
-        {{navigation}}
-        {{#if @labs.members}}
-          {{#if @member}}
-            <a class="menu-item menu-item-account" href="/account/">{{t 'Account'}}</a>
-            {{#unless @member.paid}}
-              <a class="menu-item menu-item-subscribe" href="/signup/">{{t 'Upgrade'}}</a>
-            {{/unless}}
-          {{else}}
-            <a class="menu-item menu-item-login" href="/signin/">{{t 'Login'}}</a>
-            <a class="menu-item menu-item-subscribe" href="/signup/">{{t 'Subscribe'}}</a>
-          {{/if}}
+    <div class="container">
+        {{#if @site.navigation}}
+            <nav class="mobile-nav">
+                {{navigation}}
+            </nav>
         {{/if}}
-      </nav>
-    {{/if}}
-  </div>
+    </div>
 </div>

@@ -1,0 +1,41 @@
+.term {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.term-name {
+    color: var(--primary-color);
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+.term-name a {
+    color: var(--primary-color);
+}
+
+.term-description {
+    color: var(--secondary-text-color);
+    line-height: 1.5;
+    margin: 15px auto 0;
+    max-width: 500px;
+}
+
+.term-social {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.term-social-link {
+    font-size: 17px;
+    line-height: 1;
+    padding: 4px;
+}
+
+@media (max-width: 767px) {
+    .term {
+        margin: 0;
+    }
+}
