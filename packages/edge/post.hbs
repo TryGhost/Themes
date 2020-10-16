@@ -4,12 +4,21 @@
     <main class="site-main kg-width-normal">
         {{#post}}
             <article class="{{post_class}} single">
-                {{> post-header}}
+                <header class="post-header container large">
+                    <h1 class="post-title">{{title}}</h1>
+                </header>
                 {{#if custom_excerpt}}
-                    <div class="post-excerpt">{{custom_excerpt}}</div>
+                    <div class="post-excerpt container medium">{{custom_excerpt}}</div>
                 {{/if}}
-                {{> post-media}}
-                <div class="post-content u-text-format">
+                {{#if feature_image}}
+                    <div class="post-media container large">
+                        <img class="post-image" srcset="{{> srcset}}"
+                            sizes="(min-width: 1170px) 1140px, (min-width: 780px) 750px, calc(100vw - 30px)"
+                            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                            alt="{{title}}">
+                    </div>
+                {{/if}}
+                <div class="post-content kg-canvas u-text-format">
                     {{content}}
                 </div>
             </article>

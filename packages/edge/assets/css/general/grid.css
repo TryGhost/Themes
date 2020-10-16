@@ -23,6 +23,18 @@
     }
 }
 
+.container.large {
+    max-width: 1170px;
+}
+
+.container.medium {
+    max-width: 780px;
+}
+
+.container.small {
+    max-width: 670px;
+}
+
 .row {
     display: flex;
     flex-wrap: wrap;

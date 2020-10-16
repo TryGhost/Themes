@@ -4,6 +4,24 @@
     padding: 0;
 }
 
+.u-text-format > * {
+    margin-bottom: 0;
+}
+
+.u-text-format > * + * {
+    margin-top: 30px;
+}
+
+.u-text-format > *:first-child {
+    margin-top: 0 !important;
+}
+
+.u-text-format > * + p,
+.u-text-format > * + ul,
+.u-text-format > * + ol {
+    margin-top: 20px;
+}
+
 .u-text-format h1,
 .u-text-format h2,
 .u-text-format h3,
@@ -12,6 +30,15 @@
 .u-text-format h6 {
     font-weight: 500;
     margin-top: 60px;
+}
+
+.u-text-format h1 + p,
+.u-text-format h2 + p,
+.u-text-format h3 + p,
+.u-text-format h4 + p,
+.u-text-format h5 + p,
+.u-text-format h6 + p {
+    margin-top: 15px;
 }
 
 .u-text-format h1 {
@@ -48,4 +75,19 @@
 
 .u-text-format a:hover {
     text-decoration: underline;
+}
+
+.u-text-format > .kg-card,
+.u-text-format > .kg-card + * {
+    margin-top: 45px;
+}
+
+.u-text-format hr,
+.u-text-format hr + * {
+    margin-top: 40px;
+}
+
+.u-text-format blockquote,
+.u-text-format blockquote + * {
+    margin-top: 30px;
 }

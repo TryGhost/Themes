@@ -1,7 +1,6 @@
-{{#get "posts" limit="all" filter="tags:[{{post.tags}}]+id:-{{post.id}}" as
-    |related|}}
+{{#get "posts" limit="all" filter="tags:[{{post.tags}}]+id:-{{post.id}}" as |related|}}
     {{#if related}}
-        <section class="related-posts kg-width-full">
+        <section class="related-posts">
             <div class="container">
                 <h3 class="related-title">You Might Also Like...</h3>
                 <div class="post-feed">
