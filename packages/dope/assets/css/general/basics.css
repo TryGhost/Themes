@@ -11,7 +11,6 @@
     --font-base: raleway, sans-serif;
     --animation-base: ease;
     --shadow-base: 0 0 10px rgba(0, 0, 0, 0.2);
-    --scrollbar: 0px; /* stylelint-disable-line length-zero-no-unit */
 }
 
 html {
@@ -69,7 +68,8 @@ blockquote {
     font-size: 22px;
     font-weight: 800;
     line-height: 1.4;
-    margin: 30px auto;
+    margin-left: auto;
+    margin-right: auto;
     max-width: 550px;
     text-align: center;
 }
@@ -94,7 +94,8 @@ embed {
 }
 
 figure {
-    margin: 45px 0;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 figcaption {
@@ -114,7 +115,8 @@ hr {
     border: 0;
     border-radius: 50%;
     height: 5px;
-    margin: 45px auto;
+    margin-left: auto;
+    margin-right: auto;
     position: relative;
     width: 5px;
 }

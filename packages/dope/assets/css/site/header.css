@@ -30,8 +30,8 @@
     line-height: 1;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1124px) {
     .site-header {
-        padding: 0 30px;
+        padding: 0 4vw;
     }
 }
