@@ -1,5 +1,6 @@
 .pagination {
     align-items: center;
+    background-color: var(--white-color);
     border: 2px solid var(--primary-color);
     border-radius: 50%;
     cursor: pointer;
