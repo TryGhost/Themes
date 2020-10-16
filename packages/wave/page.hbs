@@ -1,16 +1,16 @@
 {{!< default}}
 
 <div class="content-area">
-    <main class="site-main kg-width-normal">
+    <main class="site-main">
         {{#post}}
             <article class="{{post_class}} single">
                 {{#if feature_image}}
-                    <div class="single-media">
+                    <div class="single-media container medium">
                         {{> post-media ratio="square"}}
                     </div>
                 {{/if}}
                 {{> post-header single=true}}
-                <div class="post-content u-text-format">
+                <div class="post-content kg-canvas u-text-format">
                     {{content}}
                 </div>
             </article>

@@ -1,13 +1,13 @@
 {{!< default}}
 
 <div class="content-area">
-    <main class="site-main">
+    <main class="site-main container medium">
         {{#author}}
-            <div class="term-author kg-width-normal">
+            <div class="term-author">
                 {{> author}}
             </div>
         {{/author}}
-        <div class="post-feed kg-width-normal">
+        <div class="post-feed">
             {{#foreach posts}}
                 {{> "loop"}}
             {{/foreach}}

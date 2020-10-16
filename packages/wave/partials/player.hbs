@@ -1,7 +1,5 @@
-<div
-    class="player kg-width-{{#if is_external}}full player-external{{else}}wide{{#unless feature_image}} no-thumbnail{{/unless}}{{/if}}">
-    <audio class="player-audio" {{#unless is_external}} src="{{og_description}}"
-        {{/unless}}></audio>
+<div class="player{{#if is_external}} player-external{{else}} container large{{#unless feature_image}} no-thumbnail{{/unless}}{{/if}}">
+    <audio class="player-audio"{{#unless is_external}} src="{{og_description}}"{{/unless}}></audio>
     {{> post-media ratio="square" is_placeholder=is_external}}
     <div class="player-wrapper">
         {{> post-header is_placeholder=is_external}}
@@ -10,18 +8,14 @@
         </div>
         <div class="player-controls">
             <div class="player-buttons">
-                <button
-                    class="button button-small player-button-play{{^if is_external}} hidden-xs hidden-sm{{/if}} hidden-md hidden-lg hidden-xl js-play">
+                <button class="button button-small player-button-play{{^if is_external}} hidden-xs hidden-sm{{/if}} hidden-md hidden-lg hidden-xl js-play">
                     <i class="icon icon-play"></i>
                 </button>
-                <button
-                    class="button button-small button-secondary player-button-backward">
+                <button class="button button-small button-secondary player-button-backward">
                     <i class="icon icon-rewind-10"></i>
                 </button>
-                <button
-                    class="button button-small button-secondary player-button-speed">1x</button>
-                <button
-                    class="button button-small button-secondary player-button-forward">
+                <button class="button button-small button-secondary player-button-speed">1x</button>
+                <button class="button button-small button-secondary player-button-forward">
                     <i class="icon icon-fast-forward-30"></i>
                 </button>
             </div>
