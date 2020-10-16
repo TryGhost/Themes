@@ -1,7 +1,8 @@
-<header class="post-header">
+<header class="post-header{{#if single}} container medium{{/if}}">
     <{{tag}} class="post-title">
-        {{#unless single}}<a class="post-title-link"
-                href="{{url}}">{{/unless}}{{title}}{{#unless single}}</a>{{/unless}}
+        {{#unless single}}<a class="post-title-link" href="{{url}}">{{/unless}}
+        {{title}}
+        {{#unless single}}</a>{{/unless}}
     </{{tag}}>
     {{#if show_meta}}
         {{> post-meta}}

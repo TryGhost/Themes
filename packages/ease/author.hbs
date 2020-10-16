@@ -2,12 +2,11 @@
 
 <div class="content-area">
     <main class="site-main">
-        <div class="term">
+        <div class="term container">
             {{#author}}
                 <h1 class="term-name">
                     {{#if website}}
-                        <a href="{{website}}" target="_blank"
-                            rel="noopener noreferrer">{{name}}</a>
+                        <a href="{{website}}" target="_blank" rel="noopener noreferrer">{{name}}</a>
                     {{else}}
                         {{name}}
                     {{/if}}
@@ -33,7 +32,7 @@
                 </div>
             {{/author}}
         </div>
-        <div class="post-feed kg-width-normal u-hover-wrapper">
+        <div class="post-feed container medium u-hover-wrapper">
             {{#foreach posts}}
                 {{> loop tag="h2"}}
             {{/foreach}}

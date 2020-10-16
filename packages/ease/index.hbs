@@ -1,7 +1,7 @@
 {{!< default}}
 
 <div class="content-area">
-    <main class="site-main">
+    <main class="site-main container">
         {{> featured}}
         {{#get "tags" limit="all" include="count.posts"}}
             <div class="topic-feed">
@@ -21,16 +21,15 @@
                                         {{#foreach featured}}
                                             <li class="topic-article">
                                                 <h3 class="topic-article-title">
-                                                    <a class="topic-article-link"
-                                                        href="{{url}}"><i
-                                                            class="topic-article-icon icon icon-chevron-right"></i>{{title}}</a>
+                                                    <a class="topic-article-link" href="{{url}}">
+                                                        <i class="topic-article-icon icon icon-chevron-right"></i>{{title}}
+                                                    </a>
                                                 </h3>
                                             </li>
                                         {{/foreach}}
                                     </ul>
                                 {{/get}}
-                                <a class="topic-more button-arrow button-arrow-right"
-                                    href="{{url}}">View All</a>
+                                <a class="topic-more button-arrow button-arrow-right" href="{{url}}">View All</a>
                             </section>
                         </div>
                     {{/foreach}}
