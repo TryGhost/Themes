@@ -36,8 +36,8 @@
 
 @media (max-width: 767px) {
     .featured-wrapper {
-        margin-bottom: 30px;
         margin-top: 0;
+        margin-bottom: 30px;
     }
 
     .featured-wrapper .post-header {

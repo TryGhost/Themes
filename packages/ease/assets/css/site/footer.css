@@ -1,6 +1,6 @@
 .site-footer {
-    padding-bottom: 45px;
     padding-top: 45px;
+    padding-bottom: 45px;
     text-align: center;
 }
 
@@ -19,9 +19,9 @@
 }
 
 .copyright {
+    margin-top: 5px;
     color: var(--secondary-text-color);
     font-size: 14px;
-    margin-top: 5px;
 }
 
 .copyright a {

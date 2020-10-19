@@ -1,14 +1,14 @@
 .term {
-    margin-bottom: 30px;
     margin-top: 30px;
+    margin-bottom: 30px;
     text-align: center;
 }
 
 .term-name {
+    margin-bottom: 0;
     color: var(--primary-color);
     font-size: 20px;
     letter-spacing: 2px;
-    margin-bottom: 0;
     text-transform: uppercase;
 }
 
@@ -17,10 +17,10 @@
 }
 
 .term-description {
-    color: var(--secondary-text-color);
-    line-height: 1.5;
     margin: 15px auto 0;
     max-width: 500px;
+    color: var(--secondary-text-color);
+    line-height: 1.5;
 }
 
 .term-social {
@@ -30,9 +30,9 @@
 }
 
 .term-social-link {
+    padding: 4px;
     font-size: 17px;
     line-height: 1;
-    padding: 4px;
 }
 
 @media (max-width: 767px) {

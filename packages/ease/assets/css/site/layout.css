@@ -6,8 +6,8 @@
 
 .site-content {
     flex-grow: 1;
-    padding-bottom: 30px;
     padding-top: 60px;
+    padding-bottom: 30px;
 }
 
 @media (max-width: 767px) {

@@ -3,11 +3,11 @@
 }
 
 .navbar {
-    align-items: center;
-    box-shadow: 0 1px 0 var(--mid-gray-color);
     display: flex;
-    height: var(--navbar-height);
     justify-content: space-between;
+    align-items: center;
+    height: var(--navbar-height);
+    box-shadow: 0 1px 0 var(--mid-gray-color);
 }
 
 .home-template .navbar {
@@ -16,14 +16,14 @@
 
 .navbar-left,
 .navbar-right {
-    align-items: center;
     display: flex;
+    align-items: center;
 }
 
 .logo {
+    position: relative;
     display: inline-block;
     margin-right: 30px;
-    position: relative;
     vertical-align: middle;
 }
 
@@ -37,21 +37,21 @@
 }
 
 .main-nav {
-    align-items: center;
     display: flex;
+    align-items: center;
 }
 
 .menu-item {
+    margin-left: 25px;
     font-size: 15px;
+    line-height: 1;
     font-weight: 500;
     letter-spacing: 0.5px;
-    line-height: 1;
-    margin-left: 25px;
 }
 
 .menu-item-sep {
-    background-color: var(--mid-gray-color);
-    height: 30px;
     margin: 0 20px;
     width: 1px;
+    height: 30px;
+    background-color: var(--mid-gray-color);
 }

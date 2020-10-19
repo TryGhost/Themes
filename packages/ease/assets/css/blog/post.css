@@ -1,7 +1,7 @@
 .post-title {
+    margin-bottom: 10px;
     font-size: 18px;
     font-weight: 500;
-    margin-bottom: 10px;
 }
 
 .post-title-link {
@@ -9,30 +9,30 @@
 }
 
 .post-meta {
-    align-items: center;
-    color: var(--secondary-text-color);
     display: flex;
+    align-items: center;
+    margin-top: 15px;
+    color: var(--secondary-text-color);
     font-size: 13px;
     line-height: 1;
-    margin-top: 15px;
 }
 
 .post-author {
-    align-items: center;
-    display: flex;
-    margin: 0 12px 0 4px;
     position: relative;
     z-index: 60;
+    display: flex;
+    align-items: center;
+    margin: 0 12px 0 4px;
 }
 
 .post-author-image-link {
-    border-radius: 50%;
-    display: block;
-    height: 36px;
-    margin: 0 -6px;
-    overflow: hidden;
     position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0 -6px;
     width: 36px;
+    height: 36px;
+    border-radius: 50%;
 }
 
 .post-author-image-link:first-child {
@@ -56,9 +56,9 @@
 }
 
 .post-author-image {
+    height: 100%;
     border: 2px solid var(--white-color);
     border-radius: 50%;
-    height: 100%;
     object-fit: cover;
 }
 
@@ -76,8 +76,8 @@
 
 .post-length::before {
     content: "\02022";
-    font-family: serif;
     padding: 0 6px;
+    font-family: serif;
 }
 
 .post-excerpt {
@@ -91,10 +91,10 @@
 }
 
 .post-cta {
-    border-bottom: 1px solid var(--mid-gray-color);
-    border-top: 1px solid var(--mid-gray-color);
     margin-top: 30px;
     padding: 30px;
+    border-top: 1px solid var(--mid-gray-color);
+    border-bottom: 1px solid var(--mid-gray-color);
     text-align: center;
 }
 
@@ -107,17 +107,17 @@
 }
 
 .post-cta .post-cta-button {
+    margin-top: 10px;
     color: var(--white-color);
     line-height: 1.6;
-    margin-top: 10px;
 }
 
 .post-cta .post-cta-message {
-    color: var(--secondary-text-color);
     display: inline-block;
+    margin-top: 10px;
+    color: var(--secondary-text-color);
     font-size: 13px;
     font-weight: 500;
-    margin-top: 10px;
     vertical-align: middle;
 }
 
@@ -128,13 +128,13 @@
 }
 
 .post-tag {
-    background-color: var(--white-color);
-    border: 1px solid var(--mid-gray-color);
-    border-radius: 15px;
     display: inline-block;
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 1;
     margin: 0 8px 8px 0;
     padding: 6px 15px;
+    border: 1px solid var(--mid-gray-color);
+    font-size: 13px;
+    line-height: 1;
+    font-weight: 500;
+    background-color: var(--white-color);
+    border-radius: 15px;
 }

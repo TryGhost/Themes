@@ -1,7 +1,7 @@
 .post-feed .post {
+    position: relative;
     display: flex;
     padding: 35px 0 33px;
-    position: relative;
 }
 
 .post-feed .post + .post {

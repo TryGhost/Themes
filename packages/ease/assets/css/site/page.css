@@ -1,13 +1,13 @@
 .page-heading {
-    font-size: 30px;
     margin-bottom: 10px;
+    font-size: 30px;
 }
 
 .page-subheading {
     color: var(--secondary-text-color);
     font-size: 18px;
-    font-weight: 400;
     line-height: 1.5;
+    font-weight: 400;
 }
 
 .page-header {
