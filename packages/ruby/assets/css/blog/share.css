@@ -1,19 +1,19 @@
 .share {
-    align-items: center;
     display: flex;
     justify-content: center;
-    line-height: 1;
+    align-items: center;
     margin-top: 30px;
+    line-height: 1;
 }
 
 .share-item {
-    border-radius: 50%;
+    width: 28px;
+    height: 28px;
     color: var(--white-color);
     font-size: 16px;
-    height: 28px;
     line-height: 28px;
     text-align: center;
-    width: 28px;
+    border-radius: 50%;
 }
 
 .share-item + .share-item {

@@ -13,21 +13,21 @@
 }
 
 .post-wrapper {
-    background-color: var(--white-color);
     flex-grow: 1;
     padding: 20px;
+    background-color: var(--white-color);
 }
 
 .post-tag {
-    background-color: var(--primary-color);
-    border-radius: 15px;
-    color: var(--white-color);
     display: inline-block;
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 1;
     margin-bottom: 8px;
     padding: 4px 8px;
+    color: var(--white-color);
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 700;
+    background-color: var(--primary-color);
+    border-radius: 15px;
 }
 
 .post-header {
@@ -35,29 +35,29 @@
 }
 
 .post-title {
-    font-size: 18px;
     margin-bottom: 0;
+    font-size: 18px;
 }
 
 .post-meta {
-    background-color: var(--white-color);
+    display: flex;
+    padding: 10px 30px;
     border-top: 1px solid var(--light-gray-color);
     color: var(--secondary-text-color);
-    display: flex;
     font-size: 13px;
     font-weight: 700;
-    padding: 10px 30px;
+    background-color: var(--white-color);
 }
 
 .post-meta-length::before {
     content: "\02022";
-    font-family: serif;
     padding: 0 8px;
+    font-family: serif;
 }
 
 .post-date {
-    color: var(--secondary-text-color);
     display: block;
+    color: var(--secondary-text-color);
     font-size: 11px;
     font-weight: 700;
     text-transform: uppercase;
@@ -90,20 +90,20 @@
 }
 
 .post-footer {
-    align-items: center;
-    background-color: var(--white-color);
-    border-top: 1px solid var(--light-gray-color);
     display: flex;
-    height: 42px;
     justify-content: space-between;
+    align-items: center;
     padding: 0 20px;
+    height: 42px;
+    border-top: 1px solid var(--light-gray-color);
+    background-color: var(--white-color);
 }
 
 .post-link {
     font-size: 11px;
+    line-height: 1;
     font-weight: 700;
     letter-spacing: 0.5px;
-    line-height: 1;
     text-transform: uppercase;
 }
 
@@ -113,11 +113,11 @@
 }
 
 .post-author-link {
-    display: block;
-    height: 28px;
-    margin: 0 -4px;
     position: relative;
+    display: block;
+    margin: 0 -4px;
     width: 28px;
+    height: 28px;
 }
 
 .post-author-link:first-child {
@@ -141,9 +141,9 @@
 }
 
 .post-author-image {
+    width: 100%;
+    height: 100%;
     border: 2px solid var(--white-color);
     border-radius: 50%;
-    height: 100%;
     object-fit: cover;
-    width: 100%;
 }

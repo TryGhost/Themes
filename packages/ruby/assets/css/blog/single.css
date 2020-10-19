@@ -1,7 +1,7 @@
 .single .post-header {
-    background-color: var(--white-color);
     margin-bottom: 0;
     padding: 25px 30px 15px;
+    background-color: var(--white-color);
 }
 
 .single .post-title {
@@ -20,13 +20,13 @@
 @media (max-width: 767px) {
     .post-template .site-content > .container,
     .post-template .site-content > .container .content-column {
-        padding-left: 0;
         padding-right: 0;
+        padding-left: 0;
     }
 
     .post-template .site-content > .container > .row {
-        margin-left: 0;
         margin-right: 0;
+        margin-left: 0;
     }
 
     .post-template .site-content > .container .post,

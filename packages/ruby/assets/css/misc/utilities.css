@@ -1,7 +1,7 @@
 .u-shadow {
+    overflow: hidden;
     border-radius: 5px;
     box-shadow: var(--shadow-base);
-    overflow: hidden;
     transition: box-shadow 0.3s var(--animation-base);
 }
 
@@ -10,15 +10,15 @@
 }
 
 .u-plain-list {
-    list-style-type: none;
     margin: 0;
     padding: 0;
+    list-style-type: none;
 }
 
 .u-placeholder {
-    background-color: var(--light-gray-color);
     position: relative;
     z-index: 10;
+    background-color: var(--light-gray-color);
 }
 
 .u-placeholder.same-height {
@@ -30,22 +30,22 @@
 }
 
 .u-object-fit {
-    height: 100%;
-    left: 0;
-    object-fit: cover;
     position: absolute;
     top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .u-permalink {
+    position: absolute;
+    top: 0;
+    right: 0;
     bottom: 0;
     left: 0;
-    outline: none;
-    position: absolute;
-    right: 0;
-    top: 0;
     z-index: 10;
+    outline: none;
 }
 
 .u-hover-item {
@@ -66,8 +66,8 @@
 .u-text-format h4,
 .u-text-format h5,
 .u-text-format h6 {
-    font-weight: 800;
     margin-top: 40px;
+    font-weight: 800;
 }
 
 .u-text-format h1 {

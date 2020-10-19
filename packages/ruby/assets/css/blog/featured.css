@@ -1,16 +1,16 @@
 .post-feed .featured {
-    min-height: 350px;
     position: relative;
+    min-height: 350px;
 }
 
 .post-feed .featured::before {
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
-    bottom: 0;
     content: "";
-    left: 0;
     position: absolute;
-    right: 0;
     top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
 }
 
 .post-feed .featured > .post-image {
@@ -24,13 +24,13 @@
 .post-feed .featured .u-placeholder,
 .post-feed .featured .post-wrapper,
 .post-feed .featured .post-footer {
-    background-color: transparent;
     position: relative;
+    background-color: transparent;
 }
 
 .post-feed .featured .post-wrapper {
-    align-items: flex-end;
     display: flex;
+    align-items: flex-end;
 }
 
 .post-feed .featured .post-header {

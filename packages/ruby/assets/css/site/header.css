@@ -1,15 +1,15 @@
 .site-header {
+    z-index: 80;
+    padding: 0 30px;
     background-color: var(--white-color);
     box-shadow: var(--shadow-base);
-    padding: 0 30px;
-    z-index: 80;
 }
 
 .navbar {
-    align-items: center;
     display: flex;
-    height: 70px;
     justify-content: space-between;
+    align-items: center;
+    height: 70px;
 }
 
 .navbar-left,
@@ -23,9 +23,9 @@
 }
 
 .logo {
+    position: relative;
     display: inline-block;
     margin-right: 15px;
-    position: relative;
     vertical-align: middle;
 }
 
@@ -36,9 +36,9 @@
 .logo-text {
     font-family: var(--font-alt);
     font-size: 25px;
+    line-height: 1;
     font-weight: 700;
     letter-spacing: 0.5px;
-    line-height: 1;
 }
 
 .nav-list {
@@ -46,10 +46,10 @@
 }
 
 .menu-item {
+    margin: 0 20px;
     font-size: 12px;
+    line-height: 1;
     font-weight: 700;
     letter-spacing: 0.5px;
-    line-height: 1;
-    margin: 0 20px;
     text-transform: uppercase;
 }
