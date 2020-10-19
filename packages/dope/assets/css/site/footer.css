@@ -1,9 +1,9 @@
 .site-footer {
-    align-items: center;
     display: flex;
     justify-content: space-between;
-    line-height: 1;
+    align-items: center;
     padding: 45px 60px;
+    line-height: 1;
 }
 
 .site-footer .logo-image {
@@ -31,14 +31,14 @@
 }
 
 .footer-social-item {
+    margin: 0 2px;
+    width: 30px;
+    height: 30px;
     color: var(--secondary-text-color);
     font-size: 20px;
-    height: 30px;
     line-height: 28px;
-    margin: 0 2px;
     text-align: center;
     transition: color 0.2s var(--animation-base);
-    width: 30px;
 }
 
 .footer-social-item:hover {
@@ -56,14 +56,14 @@
     }
 
     .copyright {
-        margin-top: 15px;
         order: 3;
+        margin-top: 15px;
     }
 
     .footer-social {
-        margin-right: 0;
-        margin-top: 20px;
         order: 2;
+        margin-top: 20px;
+        margin-right: 0;
     }
 }
 

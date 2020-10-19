@@ -1,6 +1,6 @@
 .related-posts {
-    margin-bottom: 60px;
     margin-top: 60px;
+    margin-bottom: 60px;
 }
 
 .related-posts .post {
@@ -30,9 +30,9 @@
 }
 
 .related-title {
+    margin-bottom: 40px;
     color: var(--primary-color);
     font-size: 20px;
-    margin-bottom: 40px;
 }
 
 @media (max-width: 767px) {

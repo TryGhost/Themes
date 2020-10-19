@@ -1,6 +1,6 @@
 .post-feed .post {
-    align-items: flex-start;
     display: flex;
+    align-items: flex-start;
 }
 
 .post-feed .post-media {
@@ -24,8 +24,8 @@
     }
 
     .post-feed .post-media {
-        margin-bottom: 30px;
         margin-right: 0 !important;
+        margin-bottom: 30px;
         width: auto;
     }
 

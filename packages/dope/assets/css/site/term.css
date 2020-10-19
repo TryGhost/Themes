@@ -1,30 +1,30 @@
 .term {
-    margin-bottom: 45px;
     margin-top: 30px;
+    margin-bottom: 45px;
     max-width: 500px;
 }
 
 .term-name {
-    align-items: center;
-    color: var(--primary-color);
     display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    color: var(--primary-color);
     font-size: 30px;
     font-weight: 800;
-    margin-bottom: 5px;
 }
 
 .term-name::before {
-    background-color: var(--primary-color);
     content: "";
-    height: 3px;
     margin-right: 10px;
     width: 30px;
+    height: 3px;
+    background-color: var(--primary-color);
 }
 
 @media (max-width: 767px) {
     .term {
-        margin-bottom: 30px;
         margin-top: 15px;
+        margin-bottom: 30px;
     }
 
     .term-name {

@@ -19,20 +19,20 @@
 
 .post-meta-item + .post-meta-item:not(:empty)::before {
     content: "\02022";
-    font-family: serif;
     padding: 0 8px 0 4px;
+    font-family: serif;
 }
 
 .post-meta-featured {
-    color: var(--yellow-color);
-    padding-left: 5px;
     position: relative;
     top: 1px;
+    padding-left: 5px;
+    color: var(--yellow-color);
 }
 
 .post-title {
-    font-size: 18px;
     margin-bottom: 10px;
+    font-size: 18px;
 }
 
 .post-tags {
@@ -40,39 +40,39 @@
 }
 
 .post-tag {
-    background-color: var(--primary-color);
-    border-radius: 2px;
+    margin-right: 5px;
+    padding: 4px 7px;
     color: var(--white-color);
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.5px;
-    margin-right: 5px;
-    padding: 4px 7px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
 }
 
 .post-footer {
-    align-items: center;
     display: flex;
+    align-items: center;
     margin: 20px 0 0 2px;
 }
 
 .read-more {
+    margin-left: -2px;
     color: var(--primary-color);
     font-weight: 700;
-    margin-left: -2px;
 }
 
 .post-author {
-    align-items: center;
     display: flex;
+    align-items: center;
 }
 
 .post-author-link {
-    display: block;
-    height: 30px;
-    margin: 0 -4px;
     position: relative;
+    display: block;
+    margin: 0 -4px;
     width: 30px;
+    height: 30px;
 }
 
 .post-author-link:first-child {
@@ -100,9 +100,9 @@
 }
 
 .post-author-image {
+    height: 100%;
     border: 2px solid var(--white-color);
     border-radius: 50%;
-    height: 100%;
-    object-fit: cover;
     transition: none !important;
+    object-fit: cover;
 }

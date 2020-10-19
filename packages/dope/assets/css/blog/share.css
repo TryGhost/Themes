@@ -1,19 +1,19 @@
 .share {
-    align-items: center;
     display: flex;
-    line-height: 1;
+    align-items: center;
     margin-top: 30px;
+    line-height: 1;
 }
 
 .share-item {
-    align-items: center;
-    background-color: var(--light-gray-color);
-    display: flex;
     flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
     font-size: 15px;
     font-weight: 700;
-    height: 40px;
-    justify-content: center;
+    background-color: var(--light-gray-color);
     transition: 0.3s var(--animation-base);
     transition-property: background-color, color;
 }
@@ -23,8 +23,8 @@
 }
 
 .share-item:hover {
-    background-color: var(--primary-color);
     color: var(--white-color);
+    background-color: var(--primary-color);
 }
 
 .share-label {

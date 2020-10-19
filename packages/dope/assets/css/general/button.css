@@ -1,8 +1,8 @@
 .button-arrow-icon {
     display: inline-block;
     line-height: 1;
-    transition: transform 0.2s var(--animation-base);
     vertical-align: middle;
+    transition: transform 0.2s var(--animation-base);
 }
 
 .button-arrow-right:hover .button-arrow-icon {

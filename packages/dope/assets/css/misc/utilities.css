@@ -9,53 +9,53 @@
 }
 
 .u-plain-list {
-    list-style-type: none;
     margin: 0;
     padding: 0;
+    list-style-type: none;
 }
 
 .u-permalink {
+    position: absolute;
+    top: 0;
+    right: 0;
     bottom: 0;
     left: 0;
-    outline: none;
-    position: absolute;
-    right: 0;
-    top: 0;
     z-index: 50;
+    outline: none;
 }
 
 .u-object-fit {
-    height: 100%;
-    object-fit: cover;
     position: absolute;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .u-underline {
-    line-height: 1;
     position: relative;
+    line-height: 1;
 }
 
 .u-underline::before,
 .u-underline::after {
-    bottom: -5px;
     content: "";
-    height: 1px;
     position: absolute;
-    transition: width 0.5s var(--animation-base);
+    bottom: -5px;
     width: 0;
+    height: 1px;
+    transition: width 0.5s var(--animation-base);
 }
 
 .u-underline::before {
+    visibility: hidden;
     left: 0;
     transition: 0.5s var(--animation-base);
     transition-property: background-color, width;
-    visibility: hidden;
 }
 
 .u-underline::after {
-    background-color: var(--dark-gray-color);
     right: 0;
+    background-color: var(--dark-gray-color);
 }
 
 .u-underline:hover {
@@ -63,19 +63,19 @@
 }
 
 .u-underline:hover::before {
-    background-color: var(--dark-gray-color);
     visibility: visible;
     width: 100%;
+    background-color: var(--dark-gray-color);
 }
 
 .u-underline:hover::after {
-    background-color: transparent !important;
     width: 100%;
+    background-color: transparent !important;
 }
 
 .u-placeholder {
-    background-color: var(--light-gray-color);
     position: relative;
+    background-color: var(--light-gray-color);
 }
 
 .u-placeholder.same-height {
@@ -160,19 +160,19 @@
 }
 
 .u-text-format a {
+    position: relative;
     color: var(--primary-color);
     font-weight: 700;
-    position: relative;
 }
 
 .u-text-format a::after {
-    background-color: var(--primary-color);
-    bottom: -1px;
     content: "";
-    height: 1px;
-    left: 0;
     position: absolute;
+    bottom: -1px;
+    left: 0;
     width: 100%;
+    height: 1px;
+    background-color: var(--primary-color);
 }
 
 .u-text-format > .kg-card,

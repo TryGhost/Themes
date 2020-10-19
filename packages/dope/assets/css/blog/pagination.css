@@ -1,24 +1,24 @@
 .pagination {
-    align-items: center;
-    background-color: var(--white-color);
-    border: 2px solid var(--primary-color);
-    border-radius: 50%;
-    cursor: pointer;
     display: flex;
     flex-direction: column;
-    height: 120px;
     justify-content: center;
-    line-height: 1;
+    align-items: center;
     margin: 60px auto 30px;
-    outline: none;
     width: 120px;
+    height: 120px;
+    outline: none;
+    border: 2px solid var(--primary-color);
+    line-height: 1;
+    background-color: var(--white-color);
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 .load-more {
+    margin: 10px 0 6px;
     color: var(--dark-gray-color);
     font-size: 15px;
     font-weight: 700;
-    margin: 10px 0 6px;
 }
 
 .page-number {
