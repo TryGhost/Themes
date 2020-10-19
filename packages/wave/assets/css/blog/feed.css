@@ -11,14 +11,14 @@
 }
 
 .post-feed .post-footer {
-    align-items: center;
     display: flex;
+    align-items: center;
     margin-top: 15px;
 }
 
 .post-feed .post-footer-download {
-    margin-left: 12px;
     margin-top: -1px;
+    margin-left: 12px;
 }
 
 @media (max-width: 767px) {
@@ -32,10 +32,10 @@
     }
 
     .post-feed .post-media .button-play {
-        height: 34px;
-        margin-left: -17px;
         margin-top: -17px;
+        margin-left: -17px;
         width: 34px;
+        height: 34px;
     }
 
     .post-feed .post-media .letter {

@@ -4,15 +4,15 @@
 }
 
 .subscribe-link {
-    align-items: center;
     display: flex;
+    align-items: center;
     font-size: 16px;
     font-weight: 500;
 }
 
 .subscribe-link .icon {
-    font-size: 20px;
     position: relative;
+    font-size: 20px;
 }
 
 .subscribe-link .icon-apple {
@@ -32,8 +32,8 @@
 }
 
 .subscribe-link .icon-stitcher {
-    color: #000;
     top: 1px;
+    color: #000;
 }
 
 .subscribe-link .icon-rss {

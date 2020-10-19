@@ -1,19 +1,19 @@
 .share {
-    border-radius: 3px;
     display: flex;
-    margin-top: 30px;
     overflow: hidden;
+    margin-top: 30px;
+    border-radius: 3px;
 }
 
 .share-item {
-    align-items: center;
-    color: var(--white-color);
-    display: flex;
     flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    color: var(--white-color);
     font-size: 13px;
     font-weight: 700;
-    height: 40px;
-    justify-content: center;
     text-transform: uppercase;
 }
 

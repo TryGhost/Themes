@@ -1,8 +1,8 @@
 .site-header {
-    align-items: center;
     display: flex;
-    height: var(--navbar-height);
     justify-content: space-between;
+    align-items: center;
+    height: var(--navbar-height);
 }
 
 .header-right {
@@ -17,8 +17,8 @@
 }
 
 .main-nav {
-    align-items: center;
     display: flex;
+    align-items: center;
 }
 
 .menu-item {
@@ -64,9 +64,9 @@
 }
 
 .mobile-menu .menu-item {
+    padding: 2px 0;
     font-size: 16px;
     font-weight: 500;
-    padding: 2px 0;
 }
 
 .mobile-menu .menu-item + .menu-item {

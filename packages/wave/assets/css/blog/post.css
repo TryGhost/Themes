@@ -1,22 +1,22 @@
 .post-media {
+    position: relative;
+    flex-shrink: 0;
+    overflow: hidden;
+    margin-right: 25px;
+    width: 150px;
+    height: 100%;
     border-radius: 3px;
     cursor: pointer;
-    flex-shrink: 0;
-    height: 100%;
-    margin-right: 25px;
-    overflow: hidden;
-    position: relative;
-    width: 150px;
 }
 
 .post-media .button-play {
-    left: 50%;
-    margin-left: -20px;
-    margin-top: -20px;
     position: absolute;
     top: 50%;
-    transition: transform 0.1s var(--animation-base);
+    left: 50%;
     z-index: 20;
+    margin-top: -20px;
+    margin-left: -20px;
+    transition: transform 0.1s var(--animation-base);
 }
 
 .post-media:active .button-play {
@@ -24,28 +24,28 @@
 }
 
 .post-media .letter {
+    position: absolute;
+    top: 0;
+    left: 20px;
     color: var(--mid-gray-color);
     font-size: 100px;
-    font-weight: 500;
-    left: 20px;
-    letter-spacing: -3px;
     line-height: 150px;
-    position: absolute;
+    font-weight: 500;
+    letter-spacing: -3px;
     text-align: center;
-    top: 0;
     white-space: nowrap;
 }
 
 .post-title {
-    font-size: 20px;
     margin-bottom: 0;
+    font-size: 20px;
 }
 
 .post-meta {
+    margin-top: 5px;
     color: var(--secondary-text-color);
     font-size: 11px;
     font-weight: 700;
-    margin-top: 5px;
     text-transform: uppercase;
 }
 

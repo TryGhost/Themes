@@ -1,13 +1,13 @@
 .site-footer {
-    padding-bottom: 45px;
     padding-top: 30px;
+    padding-bottom: 45px;
     text-align: center;
 }
 
 .site-footer .subscribe {
-    border-bottom: 1px solid var(--mid-gray-color);
     justify-content: center;
     padding-bottom: 15px;
+    border-bottom: 1px solid var(--mid-gray-color);
 }
 
 .site-footer .subscribe-link {
