@@ -1,10 +1,10 @@
 .infinite-scroll-request {
-    animation: scaleOut 1s infinite ease-in-out;
-    background-color: var(--dark-gray-color);
-    border-radius: 50%;
-    height: 40px;
     margin: 60px auto 0;
     width: 40px;
+    height: 40px;
+    background-color: var(--dark-gray-color);
+    border-radius: 50%;
+    animation: scaleOut 1s infinite ease-in-out;
 }
 
 @keyframes scaleOut {

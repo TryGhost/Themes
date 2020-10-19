@@ -3,11 +3,11 @@
 }
 
 .related-title {
+    margin-bottom: 45px;
     color: var(--secondary-text-color);
     font-size: 20px;
     font-weight: 500;
     letter-spacing: 1px;
-    margin-bottom: 45px;
     text-transform: uppercase;
 }
 

@@ -21,15 +21,15 @@ html {
 }
 
 body {
-    background-color: var(--white-color);
     color: var(--primary-text-color);
     font-family: var(--font-base);
     font-size: 16px;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     line-height: 1.7;
     text-rendering: optimizeLegibility;
     word-break: break-word;
+    background-color: var(--white-color);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -44,10 +44,10 @@ h3,
 h4,
 h5,
 h6 {
-    color: var(--dark-gray-color);
-    font-weight: 700;
-    line-height: 1.2;
     margin: 0 0 20px;
+    color: var(--dark-gray-color);
+    line-height: 1.2;
+    font-weight: 700;
 }
 
 p {
@@ -56,17 +56,17 @@ p {
 
 img {
     display: block;
-    height: auto;
     max-width: 100%;
+    height: auto;
 }
 
 blockquote {
+    margin-right: 60px;
+    margin-left: 60px;
     color: var(--secondary-text-color);
     font-size: 22px;
-    font-weight: 500;
     line-height: 1.45;
-    margin-left: 60px;
-    margin-right: 60px;
+    font-weight: 500;
 }
 
 blockquote strong {
@@ -80,21 +80,21 @@ ol {
 
 iframe,
 embed {
-    border: 0;
     display: block;
     overflow: hidden;
     width: 100%;
+    border: 0;
 }
 
 figure {
-    margin-left: 0;
     margin-right: 0;
+    margin-left: 0;
 }
 
 figcaption {
+    margin-top: 15px;
     color: var(--dark-gray-color);
     font-size: 14px;
-    margin-top: 15px;
     text-align: center;
 }
 
@@ -107,24 +107,24 @@ code {
 }
 
 hr {
-    background-color: var(--secondary-text-color);
-    border: 0;
-    border-radius: 50%;
-    height: 5px;
-    margin-left: auto;
-    margin-right: auto;
     position: relative;
+    margin-right: auto;
+    margin-left: auto;
     width: 5px;
+    height: 5px;
+    border: 0;
+    background-color: var(--secondary-text-color);
+    border-radius: 50%;
 }
 
 hr::before,
 hr::after {
-    background-color: var(--secondary-text-color);
-    border-radius: 50%;
     content: "";
-    height: 5px;
     position: absolute;
     width: 5px;
+    height: 5px;
+    background-color: var(--secondary-text-color);
+    border-radius: 50%;
 }
 
 hr::before {
@@ -137,7 +137,7 @@ hr::after {
 
 @media (max-width: 767px) {
     blockquote {
-        margin-left: 0;
         margin-right: 0;
+        margin-left: 0;
     }
 }

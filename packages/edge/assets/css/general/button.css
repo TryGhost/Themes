@@ -1,6 +1,6 @@
 .button-arrow {
-    align-items: center;
     display: flex;
+    align-items: center;
     font-size: 12px;
     font-weight: 500;
     letter-spacing: 1px;
@@ -9,8 +9,8 @@
 
 .button-arrow::before,
 .button-arrow::after {
-    color: var(--secondary-text-color);
     display: inline-block;
+    color: var(--secondary-text-color);
     font-family: IVEEL, sans-serif;
     font-size: 13px;
     font-weight: 400;
@@ -19,14 +19,14 @@
 
 .button-arrow-left::before {
     content: "\e92b";
-    margin-left: -2px;
     margin-right: 5px;
+    margin-left: -2px;
 }
 
 .button-arrow-right::after {
     content: "\e92c";
-    margin-left: 5px;
     margin-right: -2px;
+    margin-left: 5px;
 }
 
 .button-arrow-left:hover::before {

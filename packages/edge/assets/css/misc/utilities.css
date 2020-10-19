@@ -1,7 +1,7 @@
 .u-plain-list {
-    list-style-type: none;
     margin: 0;
     padding: 0;
+    list-style-type: none;
 }
 
 .u-text-format > * {
@@ -28,8 +28,8 @@
 .u-text-format h4,
 .u-text-format h5,
 .u-text-format h6 {
-    font-weight: 500;
     margin-top: 60px;
+    font-weight: 500;
 }
 
 .u-text-format h1 + p,
