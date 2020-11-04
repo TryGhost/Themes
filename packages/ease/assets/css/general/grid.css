@@ -12,7 +12,7 @@
 }
 
 .container.medium {
-    max-width: calc(750px + 8vw);
+    max-width: calc(720px + 8vw);
 }
 
 .container.small {

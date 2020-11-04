@@ -116,11 +116,11 @@
         [full-start]
         minmax(4vw, auto)
         [wide-start]
-        minmax(auto, 105px)
+        minmax(auto, 120px)
         [main-start]
-        min(750px, calc(100% - 8vw))
+        min(720px, calc(100% - 8vw))
         [main-end]
-        minmax(auto, 105px)
+        minmax(auto, 120px)
         [wide-end]
         minmax(4vw, auto)
         [full-end];
