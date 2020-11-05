@@ -10,6 +10,10 @@
     margin-bottom: 45px;
 }
 
+.single .post-image {
+    width: 100%;
+}
+
 @media (max-width: 767px) {
     .single .post-title {
         font-size: 24px;
