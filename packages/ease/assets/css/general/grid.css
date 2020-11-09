@@ -22,8 +22,8 @@
 .row {
     display: flex;
     flex-wrap: wrap;
-    margin-right: -20px;
-    margin-left: -20px;
+    margin-right: max(-20px, -4vw);
+    margin-left: max(-20px, -4vw);
 }
 
 div[class^="col-"] {
