@@ -9,6 +9,7 @@ var progress = $('.sticky-progress');
 
 $(function () {
     'use strict';
+    fullCTA();
     subMenu();
     whiteLogo();
     whiteIcon();
@@ -70,6 +71,13 @@ function sticky() {
     );
 
     lastSt = st;
+}
+
+function fullCTA() {
+    'use strict';
+    $('.full-cta-read').on('click', function () {
+        body.addClass('hidden-full-cta');
+    });
 }
 
 function subMenu() {

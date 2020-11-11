@@ -34,13 +34,20 @@
 
     <div class="site">
         {{> header}}
+
         {{#is "home"}}
             {{> cover}}
             {{> featured}}
+
+            {{#unless @member}}
+                {{> full-cta}}
+            {{/unless}}
         {{/is}}
+
         <div class="site-content">
             {{{body}}}
         </div>
+
         {{> footer}}
         {{> modal}}
         {{> pswp}}

@@ -51,15 +51,23 @@ textarea {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0;
-    width: 40px;
+    padding: 0 15px;
     height: 40px;
     outline: none;
     border: 0;
     color: var(--white-color);
+    font-size: 1.3rem;
+    font-weight: 800;
+    text-transform: uppercase;
     background-color: var(--brand-color);
-    border-radius: 0 4px 4px 0;
+    border-radius: 4px;
     cursor: pointer;
+}
+
+.form-button.with-icon {
+    padding: 0;
+    width: 40px;
+    border-radius: 0 4px 4px 0;
 }
 
 .form-button .icon-loading {
