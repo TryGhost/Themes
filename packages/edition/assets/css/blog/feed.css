@@ -85,3 +85,14 @@
     transition: transform 0.2s var(--animation-base);
     transform: translateX(2rem);
 }
+
+.feed-month {
+    margin-bottom: 1rem;
+    color: var(--darker-gray-color);
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.feed + .feed-month {
+    margin-top: 4.5rem;
+}

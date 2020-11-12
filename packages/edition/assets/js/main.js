@@ -1,5 +1,6 @@
 var html = $('html');
 var body = $('body');
+var lastGroup;
 var timeout;
 var st = 0;
 var lastSt = 0;
@@ -15,6 +16,7 @@ $(function () {
     whiteIcon();
     featured();
     pagination();
+    archive();
     video();
     gallery();
     table();
@@ -181,6 +183,19 @@ function pagination() {
     ) {
         $(items[0]).addClass('feed-paged');
     });
+}
+
+function archive() {
+    'use strict';
+    if (body.hasClass('page-archive')) {
+        $('.feed').each(function (_i, v) {
+            var current = $(v).attr('data-month');
+            if (current != lastGroup) {
+                $(v).before('<div class="feed-month">' + current + '</div>')
+                lastGroup = current;
+            }
+        });
+    }
 }
 
 function video() {
