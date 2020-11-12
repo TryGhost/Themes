@@ -1,0 +1,36 @@
+{{!< default}}
+
+<div class="content-area">
+    <main class="site-main">
+        {{#post}}
+            {{> content width="wide"}}
+        {{/post}}
+        <div class="container">
+            <div class="tag-feed">
+                {{#get "tags" limit="all" include="count.posts" as |tags|}}
+                    {{#foreach tags}}
+                        <article class="tag-feed-item">
+                            <a class="tag-feed-inner" href="{{url}}">
+                                <div class="tag-feed-wrapper">
+                                    {{#if feature_image}}
+                                        <div class="tag-feed-image u-placeholder square">
+                                            <img class="u-object-fit" srcset="{{> srcset}}" src="{{img_url feature_image size="s"}}" alt="{{name}}">
+                                        </div>
+                                    {{/if}}
+
+                                    <h2 class="tag-feed-title">{{name}}</h2>
+
+                                    {{#if description}}
+                                        <div class="tag-feed-description">{{description}}</div>
+                                    {{/if}}
+                                </div>
+
+                                <span class="tag-feed-more">See all {{plural count.posts empty="" singular="% issue" plural="% issues"}}</span>
+                            </a>
+                        </article>
+                    {{/foreach}}
+                {{/get}}
+            </div>
+        </div>
+    </main>
+</div>
