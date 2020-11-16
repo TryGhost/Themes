@@ -3,10 +3,14 @@
     text-align: center;
 }
 
+.tag-media {
+    margin: 0 auto 3rem;
+    width: 90px;
+}
+
 .tag-name {
     margin-bottom: 0;
-    color: var(--brand-color);
-    font-size: 2.4rem;
+    font-size: 2.6rem;
 }
 
 .tag-name::before {
@@ -14,42 +18,14 @@
 }
 
 .tag-description {
-    margin: 1rem auto 0;
+    margin: 1.2rem auto 0;
     max-width: 500px;
-}
-
-.tag-list {
-    margin-top: 2rem;
-    font-weight: 700;
-}
-
-.tag-list-label {
-    margin-right: 0.5rem;
     color: var(--secondary-text-color);
-}
-
-.tag-list-item::before {
-    content: "#";
-}
-
-.tag-list-item + .tag-list-item {
-    margin-left: 0.3rem;
-}
-
-.tag-media {
-    margin-top: 4.5rem;
-}
-
-.tag-media::before {
-    padding-bottom: 35% !important;
+    font-size: 1.6rem;
 }
 
 @media (max-width: 767px) {
     .tag {
         margin-bottom: 2.5rem;
-    }
-
-    .tag-media {
-        margin-top: 3rem;
     }
 }
