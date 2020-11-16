@@ -86,13 +86,21 @@
     transform: translateX(2rem);
 }
 
+.feed-group::after {
+    content: "";
+    display: block;
+    height: 45px;
+}
+
 .feed-month {
-    margin-bottom: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 1rem 0;
+    width: inherit;
     color: var(--darker-gray-color);
     font-size: 1.7rem;
     font-weight: 700;
-}
-
-.feed + .feed-month {
-    margin-top: 4.5rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(3px);
 }

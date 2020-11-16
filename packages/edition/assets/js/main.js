@@ -44,14 +44,13 @@ $(window).on('load', function () {
 
         var content = $('.single-content');
         var contentHeight = content.height();
-        contentOffset =
-            content.offset().top + contentHeight - $(window).height() / 2;
+        contentOffset = content.offset().top + contentHeight - $(window).height() / 2;
     }
 });
 
 function sticky() {
     'use strict';
-    st = jQuery(window).scrollTop();
+    st = $(window).scrollTop();
 
     if (titleOffset > 0 && contentOffset > 0) {
         if (st > lastSt) {
@@ -193,6 +192,24 @@ function archive() {
             if (current != lastGroup) {
                 $(v).before('<div class="feed-month">' + current + '</div>')
                 lastGroup = current;
+            }
+        });
+
+        $('.feed-month').each(function () {
+            var head = $(this);
+
+            if (!head.parent().hasClass('feed-group')) {
+                head.before('<div class="feed-group"></div>');
+
+                var wrap = head.prev();
+                var curr = head;
+
+                do {
+                    var currEl = curr;
+                    curr = curr.next();
+
+                    currEl.appendTo(wrap);
+                } while (curr.length > 0 && !curr.hasClass('feed-month'));
             }
         });
     }
