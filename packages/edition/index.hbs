@@ -10,3 +10,5 @@
         {{pagination}}
     </main>
 </div>
+
+{{#contentFor "body_class"}}{{#if next}} paged-next{{/if}}{{#if @site.cover_image}} with-full-cover{{/if}}{{/contentFor}}

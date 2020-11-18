@@ -1,6 +1,9 @@
 .site-header {
+    position: relative;
+    z-index: 90;
     display: flex;
     align-items: center;
+    padding: 0 4rem;
     height: var(--navbar-height);
 }
 
@@ -33,6 +36,10 @@
     font-weight: 800;
 }
 
+.with-full-cover .logo-text {
+    color: #fff;
+}
+
 .logo-image {
     max-height: 50px;
 }
@@ -54,6 +61,10 @@
     font-weight: 700;
 }
 
+.with-full-cover .menu-item {
+    color: #fff;
+}
+
 .menu-item[href*="..."],
 .menu-item[href*="..."] ~ .menu-item {
     display: none;
@@ -61,6 +72,10 @@
 
 .menu-item-button {
     margin: 0 0.7rem;
+}
+
+.with-full-cover .menu-item-button {
+    color: #fff;
 }
 
 .menu-item-more {
