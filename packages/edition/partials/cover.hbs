@@ -1,5 +1,7 @@
 <div class="cover">
-    <img class="cover-image u-object-fit" src="{{@site.cover_image}}" alt="{{@site.title}}">
+    {{#if @site.cover_image}}
+        <img class="cover-image u-object-fit" src="{{@site.cover_image}}" alt="{{@site.title}}">
+    {{/if}}
 
     <div class="cover-content container">
         {{#if @site.description}}
