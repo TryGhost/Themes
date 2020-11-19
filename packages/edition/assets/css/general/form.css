@@ -70,16 +70,29 @@ textarea {
     border-radius: 0 4px 4px 0;
 }
 
-.form-button .icon-loading {
+.form-wrapper .loader,
+.form-wrapper .success {
     display: none;
 }
 
-.loading .form-button .icon {
+.form-wrapper .loader {
+    width: 28px;
+    height: 28px;
+}
+
+.form-wrapper.loading .default,
+.form-wrapper.success .default,
+.form-wrapper.success .loader {
     display: none;
 }
 
-.loading .form-button .icon-loading {
+.form-wrapper.loading .loader {
     display: block;
+}
+
+.form-wrapper.success .success {
+    display: flex;
+    align-items: center;
 }
 
 .contact-form {

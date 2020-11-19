@@ -91,6 +91,10 @@
     width: 100%;
 }
 
+.cover-form .form-button {
+    min-width: 110px;
+}
+
 .cover-arrow {
     position: absolute;
     bottom: 40px;
