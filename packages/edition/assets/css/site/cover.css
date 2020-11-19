@@ -20,6 +20,19 @@
     z-index: 10;
     background-color: #000;
     opacity: 0.3;
+    transition: opacity 1.5s ease;
+}
+
+.cover.image-loading::before {
+    opacity: 1;
+}
+
+.cover-image {
+    transition: transform 2s ease;
+}
+
+.cover.image-loading .cover-image {
+    transform: scale(1.02);
 }
 
 .cover-content {

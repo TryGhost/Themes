@@ -10,7 +10,7 @@ var progress = $('.sticky-progress');
 
 $(function () {
     'use strict';
-    scroll();
+    cover();
     subMenu();
     whiteLogo();
     whiteIcon();
@@ -74,8 +74,14 @@ function sticky() {
     lastSt = st;
 }
 
-function scroll() {
+function cover() {
     'use strict';
+    var cover = $('.cover');
+
+    cover.imagesLoaded(function () {
+        cover.removeClass('image-loading');
+    });
+
     $('.cover-arrow').on('click', function () {
         // $('html, body').animate({scrollTop: $(window).height()}, 1000);
         var element = $('.cover').next();

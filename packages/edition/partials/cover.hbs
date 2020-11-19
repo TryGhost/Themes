@@ -1,4 +1,4 @@
-<div class="cover">
+<div class="cover{{#if @site.cover_image}} image-loading{{/if}}">
     {{#if @site.cover_image}}
         <img class="cover-image u-object-fit" src="{{@site.cover_image}}" alt="{{@site.title}}">
     {{/if}}
