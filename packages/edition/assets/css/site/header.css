@@ -64,7 +64,8 @@
     font-weight: 700;
 }
 
-.with-full-cover .main-nav .menu-item {
+.with-full-cover .main-nav .menu-item,
+.with-full-cover .header-right .menu-item {
     color: #fff;
 }
 
