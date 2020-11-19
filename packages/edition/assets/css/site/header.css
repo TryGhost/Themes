@@ -1,7 +1,7 @@
 .site-header {
     display: flex;
     align-items: center;
-    padding: 0 4rem;
+    padding: 0 min(4rem, 4vw);
     height: var(--navbar-height);
 }
 
@@ -77,7 +77,7 @@
     margin: 0 0.7rem;
 }
 
-.with-full-cover .menu-item-button {
+.with-full-cover .button-icon {
     color: #fff;
 }
 

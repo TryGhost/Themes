@@ -29,7 +29,7 @@
     flex-direction: column;
     align-items: center;
     margin: auto;
-    max-width: 720px;
+    max-width: calc(720px + 8vw);
     text-align: center;
 }
 
@@ -93,4 +93,10 @@
     height: 40px;
     color: #fff;
     transform: rotate(90deg);
+}
+
+@media (max-width: 767px) {
+    .cover-description {
+        font-size: 2.7rem;
+    }
 }
