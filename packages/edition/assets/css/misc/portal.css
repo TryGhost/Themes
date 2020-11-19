@@ -1,0 +1,3 @@
+.home-template.with-full-cover:not(.portal-visible) .gh-portal-triggerbtn-iframe {
+    opacity: 0;
+}

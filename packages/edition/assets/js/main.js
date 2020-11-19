@@ -35,6 +35,13 @@ $(window).on('scroll', function () {
         }
         timeout = window.requestAnimationFrame(sticky);
     }
+
+    if (body.hasClass('home-template') && body.hasClass('with-full-cover')) {
+        if (timeout) {
+            window.cancelAnimationFrame(timeout);
+        }
+        timeout = window.requestAnimationFrame(portalButton);
+    }
 });
 
 $(window).on('load', function () {
@@ -72,6 +79,17 @@ function sticky() {
     );
 
     lastSt = st;
+}
+
+function portalButton() {
+    'use strict';
+    st = $(window).scrollTop();
+
+    if (st > 300) {
+        body.addClass('portal-visible');
+    } else {
+        body.removeClass('portal-visible');
+    }
 }
 
 function cover() {

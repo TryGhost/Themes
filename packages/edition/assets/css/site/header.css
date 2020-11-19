@@ -7,7 +7,7 @@
 
 .with-full-cover .site-header {
     position: relative;
-    z-index: 4000000;
+    z-index: 90;
 }
 
 .header-left,
