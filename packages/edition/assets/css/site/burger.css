@@ -1,5 +1,6 @@
 .burger {
     position: relative;
+    display: none;
     margin-right: -7px;
     margin-left: 5px;
     width: 30px;
@@ -26,7 +27,7 @@
     transition: transform 0.1596s cubic-bezier(0.52, 0.16, 0.52, 0.84) 0.1008s;
 }
 
-.with-full-cover .burger-bar::before {
+.with-full-cover:not(.menu-opened) .burger-bar::before {
     background-color: #fff;
 }
 
@@ -55,4 +56,10 @@
 .menu-opened .burger .burger-bar::before {
     transition: transform 0.1806s cubic-bezier(0.04, 0.04, 0.12, 0.96);
     transform: none;
+}
+
+@media (max-width: 991px) {
+    .burger {
+        display: block;
+    }
 }

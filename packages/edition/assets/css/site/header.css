@@ -1,8 +1,5 @@
 .site-header {
-    display: flex;
-    align-items: center;
     padding: 0 min(4rem, 4vw);
-    height: var(--navbar-height);
 }
 
 .with-full-cover .site-header {
@@ -10,23 +7,21 @@
     z-index: 90;
 }
 
-.header-left,
-.header-right {
-    flex: 2;
+.header-inner {
+    display: grid;
+    height: var(--navbar-height);
+    grid-template-columns: 1fr auto 1fr;
+    grid-auto-flow: row dense;
+    column-gap: 4rem;
+}
+
+/* Brand
+/* ---------------------------------------------------------- */
+
+.header-brand {
     display: flex;
     align-items: center;
-}
-
-.header-right {
-    justify-content: flex-end;
-}
-
-.header-right .menu-item {
-    margin: 0;
-}
-
-.header-right .menu-item + .menu-item {
-    margin-left: 2rem;
+    white-space: nowrap;
 }
 
 .logo {
@@ -39,7 +34,7 @@
     font-weight: 800;
 }
 
-.with-full-cover .logo-text {
+.with-full-cover:not(.menu-opened) .logo-text {
     color: #fff;
 }
 
@@ -54,8 +49,12 @@
     opacity: 0;
 }
 
-.main-nav {
+/* Nav
+/* ---------------------------------------------------------- */
+
+.header-nav {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
 }
 
@@ -64,102 +63,86 @@
     font-weight: 700;
 }
 
-.with-full-cover .main-nav .menu-item,
-.with-full-cover .header-right .menu-item {
+.with-full-cover:not(.menu-opened) .header-nav .menu-item,
+.with-full-cover:not(.menu-opened) .header-actions .menu-item {
     color: #fff;
 }
 
-.menu-item[href*="..."],
-.menu-item[href*="..."] ~ .menu-item {
-    display: none;
+/* Actions
+/* ---------------------------------------------------------- */
+
+.header-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    white-space: nowrap;
 }
 
-.menu-item-button {
-    margin: 0 0.7rem;
+.header-actions .menu-item {
+    margin: 0;
 }
 
-.with-full-cover .button-icon {
-    color: #fff;
-}
-
-.menu-item-more {
-    position: relative;
-}
-
-.menu-item-more .icon {
-    width: 24px;
-    height: 24px;
+.header-actions .menu-item + .menu-item {
+    margin-left: 2rem;
 }
 
 .menu-item-cta {
     color: var(--brand-color);
 }
 
-.sub-menu {
-    position: absolute;
-    top: 100%;
-    right: -13px;
-    z-index: 90;
-    display: none;
-    margin-top: 2rem;
-    padding: 1rem 0;
-    width: 170px;
-    text-align: left;
-    background-color: var(--darker-gray-color);
-    border-radius: 5px;
-}
+/* Variants
+/* ---------------------------------------------------------- */
 
-.sub-menu::before {
-    content: "";
-    position: absolute;
-    top: -6px;
-    right: 21px;
-    width: 0;
-    height: 0;
-    border-right: 7px solid transparent;
-    border-bottom: 7px solid var(--darker-gray-color);
-    border-left: 7px solid transparent;
-}
+/* Mobile menu
+/* ---------------------------------------------------------- */
 
-.sub-menu .menu-item {
-    display: block;
-    margin: 0;
-    padding: 0.7rem 1.5rem;
-    color: var(--white-color);
-    font-size: 1.3rem;
-}
+@media (max-width: 991px) {
+    .header-inner {
+        height: 100%;
+        grid-template-columns: 1fr;
+    }
 
-.mobile-menu {
-    position: absolute;
-    top: var(--navbar-height);
-    left: 0;
-    z-index: 90;
-    display: none;
-    padding-top: 3rem;
-    width: 100%;
-    height: calc(100vh - var(--navbar-height));
-    background-color: var(--white-color);
-}
+    .header-brand {
+        justify-content: space-between;
+        height: var(--navbar-height);
+    }
 
-.mobile-menu .menu-item {
-    margin: 0;
-    font-size: 1.8rem;
-    text-align: right;
-}
+    .header-nav,
+    .header-actions {
+        display: none;
+    }
 
-.mobile-menu .menu-item + .menu-item {
-    margin-top: 1.5rem;
-}
+    .header-nav {
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 10vh;
+    }
 
-.mobile-menu .menu-item[href*="..."] ~ .menu-item {
-    display: inline;
-}
+    .site-header .menu-item {
+        margin: 0.6rem 0 !important;
+        font-size: 2.5rem;
+    }
 
-.mobile-nav {
-    display: flex;
-    flex-direction: column;
-}
+    .header-actions {
+        flex-direction: column;
+        margin-bottom: 4vh;
+    }
 
-.menu-opened .mobile-menu {
-    display: block;
+    .menu-opened .site-header {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: var(--white-color);
+    }
+
+    .menu-opened .header-inner {
+        grid-template-rows: auto 1fr auto;
+    }
+
+    .menu-opened .header-nav,
+    .menu-opened .header-actions {
+        display: flex;
+    }
 }

@@ -1,56 +1,27 @@
 <header class="site-header">
-    <div class="header-left">
-        <a class="logo" href="{{@site.url}}">
-            {{#if @site.logo}}
-                <img class="logo-image" src="{{@site.logo}}" alt="{{@site.title}}">
-            {{else}}
-                <span class="logo-text">{{@site.title}}</span>
-            {{/if}}
-        </a>
-    </div>
-    {{#if @site.navigation}}
-        <nav class="main-nav hidden-xs hidden-sm hidden-md">
-            {{navigation}}
-            {{#if @labs.members}}
-                <button class="button-icon menu-item-button js-modal" data-modal="search" aria-label="Search">
-                    <svg class="icon">
-                        <use xlink:href="#magnify"></use>
-                    </svg>
-                </button>
-            {{/if}}
-        </nav>
+    <div class="header-inner">
+        <div class="header-brand">
+            <a class="logo" href="{{@site.url}}">
+                {{#if @site.logo}}
+                    <img class="logo-image" src="{{@site.logo}}" alt="{{@site.title}}">
+                {{else}}
+                    <span class="logo-text">{{@site.title}}</span>
+                {{/if}}
+            </a>
 
-        <button class="button-icon hidden-lg hidden-xl js-modal" data-modal="search" aria-label="Search">
-            <svg class="icon">
-                <use xlink:href="#magnify"></use>
-            </svg>
-        </button>
-        <div class="burger hidden-lg hidden-xl">
-            <div class="burger-bar"></div>
-            <div class="burger-bar"></div>
-        </div>
-
-        <div class="mobile-menu hidden-lg hidden-xl">
-            <div class="container">
-                <nav class="mobile-nav">
-                    {{navigation}}
-                    {{#if @labs.members}}
-                        {{#if @member}}
-                            <button class="button-text menu-item members-account" data-portal="account">Account</button>
-                            {{#unless @member.paid}}
-                                <button class="button-text menu-item menu-item-cta members-upgrade" data-portal="account/plans">Upgrade</button>
-                            {{/unless}}
-                        {{else}}
-                            <button class="button-text menu-item members-login" data-portal="signin">Login</button>
-                            <button class="button-text menu-item menu-item-cta members-subscribe" data-portal="signup">Subscribe</button>
-                        {{/if}}
-                    {{/if}}
-                </nav>
+            <div class="burger">
+                <div class="burger-bar"></div>
+                <div class="burger-bar"></div>
             </div>
         </div>
-    {{/if}}
-    <div class="header-right hidden-xs hidden-sm hidden-md">
-        {{#if @labs.members}}
+
+        {{#if @site.navigation}}
+            <nav class="header-nav">
+                {{navigation}}
+            </nav>
+        {{/if}}
+
+        <div class="header-actions">
             {{#if @member}}
                 <button class="button-text menu-item members-account" data-portal="account">Account</button>
                 {{#unless @member.paid}}
@@ -60,13 +31,7 @@
                 <button class="button-text menu-item members-login" data-portal="signin">Login</button>
                 <button class="button-text menu-item menu-item-cta members-subscribe" data-portal="signup">Subscribe</button>
             {{/if}}
-        {{else}}
-            <button class="button-icon js-modal" data-modal="search" aria-label="Search">
-                <svg class="icon">
-                    <use xlink:href="#magnify"></use>
-                </svg>
-            </button>
-        {{/if}}
+        </div>
     </div>
 </header>
 
