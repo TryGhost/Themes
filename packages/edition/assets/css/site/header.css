@@ -105,16 +105,16 @@
     column-gap: 0;
 }
 
-.site-header.brandnavactions .header-inner {
-    grid-template-columns: max-content max-content auto;
-}
-
 .site-header.brandnav .header-actions {
     margin-left: 3rem;
 }
 
 .site-header.brandnav .header-actions .menu-item + .menu-item {
     margin-left: inherit;
+}
+
+.site-header.brandnavactions .header-inner {
+    grid-template-columns: max-content max-content auto;
 }
 
 /* Mobile menu
