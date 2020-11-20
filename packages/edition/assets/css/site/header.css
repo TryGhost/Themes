@@ -224,4 +224,35 @@
     .menu-opened #site-header .header-actions {
         display: flex;
     }
+
+    #site-header .menu-item-more {
+        margin-left: 0;
+        width: auto;
+        height: auto;
+        line-height: inherit;
+    }
+
+    #site-header .menu-item-more .icon {
+        display: none;
+    }
+
+    #site-header .sub-menu {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        width: auto;
+        text-align: center;
+        background-color: transparent;
+    }
+
+    #site-header .sub-menu::before {
+        display: none;
+    }
+
+    #site-header .sub-menu .menu-item {
+        padding: 0;
+        color: inherit;
+    }
 }
