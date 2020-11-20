@@ -58,9 +58,12 @@
     align-items: center;
 }
 
-.menu-item {
-    margin: 0 1.5rem;
+.site-header .menu-item {
     font-weight: 700;
+}
+
+.site-header .menu-item + .menu-item {
+    margin-left: 3rem;
 }
 
 .with-full-cover:not(.menu-opened) .header-nav .menu-item,
@@ -78,10 +81,6 @@
     white-space: nowrap;
 }
 
-.header-actions .menu-item {
-    margin: 0;
-}
-
 .header-actions .menu-item + .menu-item {
     margin-left: 2rem;
 }
@@ -93,42 +92,68 @@
 /* Variants
 /* ---------------------------------------------------------- */
 
+.site-header.navbrandactions .header-brand {
+    grid-column-start: 2;
+}
+
+.site-header.navbrandactions .header-nav {
+    grid-column-start: 1;
+}
+
+.site-header.brandnav .header-inner {
+    grid-template-columns: auto max-content max-content;
+    column-gap: 0;
+}
+
+.site-header.brandnavactions .header-inner {
+    grid-template-columns: max-content max-content auto;
+}
+
+.site-header.brandnav .header-actions {
+    margin-left: 3rem;
+}
+
+.site-header.brandnav .header-actions .menu-item + .menu-item {
+    margin-left: inherit;
+}
+
 /* Mobile menu
 /* ---------------------------------------------------------- */
 
 @media (max-width: 991px) {
-    .header-inner {
+    #site-header .header-inner {
         height: 100%;
         grid-template-columns: 1fr;
     }
 
-    .header-brand {
+    #site-header .header-brand {
         justify-content: space-between;
         height: var(--navbar-height);
+        grid-column-start: auto;
     }
 
-    .header-nav,
-    .header-actions {
+    #site-header .header-nav,
+    #site-header .header-actions {
         display: none;
     }
 
-    .header-nav {
+    #site-header .header-nav {
         flex-direction: column;
         justify-content: center;
         margin-bottom: 10vh;
     }
 
-    .site-header .menu-item {
-        margin: 0.6rem 0 !important;
+    #site-header .menu-item {
+        margin: 0.6rem 0;
         font-size: 2.5rem;
     }
 
-    .header-actions {
+    #site-header .header-actions {
         flex-direction: column;
         margin-bottom: 4vh;
     }
 
-    .menu-opened .site-header {
+    .menu-opened #site-header {
         position: fixed;
         top: 0;
         right: 0;
@@ -137,12 +162,12 @@
         background-color: var(--white-color);
     }
 
-    .menu-opened .header-inner {
+    .menu-opened #site-header .header-inner {
         grid-template-rows: auto 1fr auto;
     }
 
-    .menu-opened .header-nav,
-    .menu-opened .header-actions {
+    .menu-opened #site-header .header-nav,
+    .menu-opened #site-header .header-actions {
         display: flex;
     }
 }
