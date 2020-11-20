@@ -1,8 +1,12 @@
 .site-footer {
+    padding-top: 3rem;
+    padding-bottom: 4.5rem;
+}
+
+.footer-inner {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 3rem 0 4.5rem;
 }
 
 .social {
