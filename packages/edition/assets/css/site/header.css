@@ -71,6 +71,60 @@
     color: #fff;
 }
 
+/* Dropdown
+/* ---------------------------------------------------------- */
+
+.menu-item-more {
+    position: relative;
+    margin-left: 2rem;
+}
+
+.with-full-cover:not(.menu-opened) .menu-item-more {
+    color: #fff;
+}
+
+.menu-item-more .icon {
+    width: 24px;
+    height: 24px;
+}
+
+.sub-menu {
+    position: absolute;
+    top: 100%;
+    right: -13px;
+    z-index: 90;
+    display: none;
+    margin-top: 2rem;
+    padding: 1rem 0;
+    width: 170px;
+    text-align: left;
+    background-color: var(--darker-gray-color);
+    border-radius: 5px;
+}
+
+.sub-menu::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    right: 21px;
+    width: 0;
+    height: 0;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid var(--darker-gray-color);
+    border-left: 7px solid transparent;
+}
+
+.sub-menu .menu-item {
+    display: block;
+    padding: 0.7rem 1.5rem;
+    color: var(--white-color);
+    font-size: 1.3rem;
+}
+
+.sub-menu .menu-item + .menu-item {
+    margin-left: 0;
+}
+
 /* Actions
 /* ---------------------------------------------------------- */
 

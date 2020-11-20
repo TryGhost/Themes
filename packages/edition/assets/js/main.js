@@ -109,16 +109,16 @@ function cover() {
 
 function subMenu() {
     'use strict';
-    var mainNav = $('.main-nav');
-    var separator = mainNav.find('.menu-item[href*="..."]');
+    var nav = $('.header-nav');
+    var items = nav.find('.menu-item');
 
-    if (separator.length) {
+    if (items.length > 5) {
+        var separator = $(items[4]);
+
         separator.nextAll('.menu-item').wrapAll('<div class="sub-menu" />');
-        separator.replaceWith(
-            '<button class="button-icon menu-item-button menu-item-more" aria-label="More"><svg class="icon"><use xlink:href="#dots-horizontal"></use></svg></button>'
-        );
+        $('<button class="button-icon menu-item-button menu-item-more" aria-label="More"><svg class="icon"><use xlink:href="#dots-horizontal"></use></svg></button>').insertAfter(separator);
 
-        var toggle = mainNav.find('.menu-item-more');
+        var toggle = nav.find('.menu-item-more');
         var subMenu = $('.sub-menu');
         toggle.append(subMenu);
 
