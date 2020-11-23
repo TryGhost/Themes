@@ -4,7 +4,7 @@
             <div class="container">
                 <h3 class="related-title">You Might Also Like...</h3>
                 <div class="post-feed">
-                    {{#foreach posts}}
+                    {{#foreach posts visibility="all"}}
                         <div class="grid-item grid-sizer"></div>
                         {{> "loop"}}
                     {{/foreach}}
