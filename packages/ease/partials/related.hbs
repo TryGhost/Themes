@@ -2,7 +2,7 @@
     <section class="related-posts container medium">
         <h3 class="related-title">You Might Also Like...</h3>
         <div class="post-feed u-hover-wrapper">
-            {{#foreach related}}
+            {{#foreach related visibility="all"}}
                 {{> loop tag="h4"}}
             {{/foreach}}
         </div>

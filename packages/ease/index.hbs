@@ -18,7 +18,7 @@
                                 {{#get "posts" order="published_at asc" filter="tag:{{slug}}"
                                     limit="5" as |featured|}}
                                     <ul class="topic-article-feed u-plain-list">
-                                        {{#foreach featured}}
+                                        {{#foreach featured visibility="all"}}
                                             <li class="topic-article">
                                                 <h3 class="topic-article-title">
                                                     <a class="topic-article-link" href="{{url}}">
