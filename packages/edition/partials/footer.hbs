@@ -1,25 +1,9 @@
 <footer class="site-footer container">
     <div class="footer-inner">
         <div class="footer-left">
-            <div class="social">
-                {{#if @site.facebook}}
-                    <a class="social-item social-item-facebook"
-                        href="{{facebook_url @site.facebook}}" target="_blank"
-                        rel="noopener noreferrer" aria-label="Facebook">
-                        {{> icons/facebook}}
-                    </a>
-                {{/if}}
-                {{#if @site.twitter}}
-                    <a class="social-item social-item-twitter"
-                        href="{{twitter_url @site.twitter}}" target="_blank"
-                        rel="noopener noreferrer" aria-label="Twitter">
-                        {{> icons/twitter}}
-                    </a>
-                {{/if}}
-                <a class="social-item social-item-rss"
-                    href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/"
-                    target="_blank" rel="noopener noreferrer" aria-label="RSS">
-                    {{> icons/rss}}
+            <div class="gh-powered">
+                <a href="https://ghost.org" target="_blank" rel="noopener noreferrer">
+                    {{> icons/ghost}} <span>Publish with Ghost</span>
                 </a>
             </div>
         </div>
@@ -46,9 +30,25 @@
         </nav>
 
         <div class="footer-right">
-            <div class="gh-powered">
-                <a href="https://ghost.org" target="_blank" rel="noopener noreferrer">
-                    {{> icons/ghost}} <span>Publish with Ghost</span>
+            <div class="social">
+                {{#if @site.facebook}}
+                    <a class="social-item social-item-facebook"
+                        href="{{facebook_url @site.facebook}}" target="_blank"
+                        rel="noopener noreferrer" aria-label="Facebook">
+                        {{> icons/facebook}}
+                    </a>
+                {{/if}}
+                {{#if @site.twitter}}
+                    <a class="social-item social-item-twitter"
+                        href="{{twitter_url @site.twitter}}" target="_blank"
+                        rel="noopener noreferrer" aria-label="Twitter">
+                        {{> icons/twitter}}
+                    </a>
+                {{/if}}
+                <a class="social-item social-item-rss"
+                    href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/"
+                    target="_blank" rel="noopener noreferrer" aria-label="RSS">
+                    {{> icons/rss}}
                 </a>
             </div>
         </div>
