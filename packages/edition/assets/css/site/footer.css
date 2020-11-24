@@ -127,3 +127,29 @@
     justify-content: flex-end;
     align-items: center;
 }
+
+@media (max-width: 767px) {
+    .footer-inner {
+        grid-template-columns: 1fr;
+        padding-top: 3rem;
+    }
+
+    .footer-left,
+    .footer-right {
+        justify-content: center;
+    }
+
+    .footer-left {
+        order: 3;
+        margin-top: 3rem;
+    }
+
+    .footer-nav {
+        order: 2;
+        margin-top: 1.5rem;
+    }
+
+    .footer-right {
+        order: 1;
+    }
+}
