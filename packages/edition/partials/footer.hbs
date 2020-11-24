@@ -1,40 +1,36 @@
-<footer class="site-footer">
-    <div class="footer-inner container">
-        <div class="social">
-            {{#if @site.facebook}}
-                <a class="social-item social-item-facebook"
-                    href="{{facebook_url @site.facebook}}" target="_blank"
-                    rel="noopener noreferrer" aria-label="Facebook">
-                    <svg class="icon">
-                        <use xlink:href="#facebook-box"></use>
-                    </svg>
+<footer class="site-footer container">
+    <div class="footer-inner">
+        <div class="footer-left">
+            <div class="social">
+                {{#if @site.facebook}}
+                    <a class="social-item social-item-facebook"
+                        href="{{facebook_url @site.facebook}}" target="_blank"
+                        rel="noopener noreferrer" aria-label="Facebook">
+                        {{> icons/facebook}}
+                    </a>
+                {{/if}}
+                {{#if @site.twitter}}
+                    <a class="social-item social-item-twitter"
+                        href="{{twitter_url @site.twitter}}" target="_blank"
+                        rel="noopener noreferrer" aria-label="Twitter">
+                        {{> icons/twitter}}
+                    </a>
+                {{/if}}
+                <a class="social-item social-item-rss"
+                    href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/"
+                    target="_blank" rel="noopener noreferrer" aria-label="RSS">
+                    {{> icons/rss}}
                 </a>
-            {{/if}}
-            {{#if @site.twitter}}
-                <a class="social-item social-item-twitter"
-                    href="{{twitter_url @site.twitter}}" target="_blank"
-                    rel="noopener noreferrer" aria-label="Twitter">
-                    <svg class="icon">
-                        <use xlink:href="#twitter-box"></use>
-                    </svg>
-                </a>
-            {{/if}}
-            <a class="social-item social-item-rss"
-                href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/"
-                target="_blank" rel="noopener noreferrer" aria-label="RSS">
-                <svg class="icon">
-                    <use xlink:href="#rss-box"></use>
-                </svg>
-            </a>
-        </div>
-
-        <div class="copyright">
-            Powered by <a href="https://ghost.org/" target="_blank"
-                rel="noopener noreferrer">Ghost</a>
+            </div>
         </div>
 
         <nav class="footer-nav">
+            <span class="menu-item copyright">
+                Powered by <a href="https://ghost.org/" target="_blank" rel="noopener noreferrer">Ghost</a>
+            </span>
+
             {{navigation type="secondary"}}
+
             <a class="menu-item js-theme" href="#" data-system="System theme" data-dark="Dark theme" data-light="Light theme">
                 <svg class="icon theme-icon theme-icon-system">
                     <use xlink:href="#circle-half-full"></use>
@@ -48,5 +44,13 @@
                 <span class="theme-text">System theme</span>
             </a>
         </nav>
+
+        <div class="footer-right">
+            <div class="gh-powered">
+                <a href="https://ghost.org" target="_blank" rel="noopener noreferrer">
+                    {{> icons/ghost}} <span>Publish with Ghost</span>
+                </a>
+            </div>
+        </div>
     </div>
 </footer>

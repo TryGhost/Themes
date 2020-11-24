@@ -1,0 +1,33 @@
+.gh-powered {
+    transition: opacity 0.2s ease;
+}
+
+.gh-members-popup-open .gh-powered {
+    opacity: 0;
+}
+
+.gh-powered a {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 9px 6px 6px;
+    outline: none;
+    border: none;
+    color: #383838;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 600;
+    letter-spacing: -0.3px;
+    text-decoration: none;
+    background-color: var(--white-color);
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transform-origin: top right;
+}
+
+.gh-powered svg {
+    margin: 0 6px 0 0;
+    width: 16px;
+    height: 16px;
+}

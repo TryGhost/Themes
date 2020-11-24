@@ -3,7 +3,9 @@
 }
 
 .with-full-cover .cover {
+    position: relative;
     display: flex;
+    overflow: hidden;
     margin-top: calc(var(--navbar-height) * -1);
     height: 100vh;
 }
