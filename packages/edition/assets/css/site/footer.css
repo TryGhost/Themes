@@ -26,11 +26,11 @@
 }
 
 .social-item + .social-item {
-    margin-left: 10px;
+    margin-left: 11px;
 }
 
 .social-item + .social-item-rss {
-    margin-left: 9px;
+    margin-left: 10px;
 }
 
 .social-item .icon {
