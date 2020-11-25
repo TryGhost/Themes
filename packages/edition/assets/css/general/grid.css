@@ -12,7 +12,7 @@
 }
 
 .container.small {
-    max-width: calc(640px + 8vw);
+    max-width: calc(720px + 8vw);
 }
 
 .row {
