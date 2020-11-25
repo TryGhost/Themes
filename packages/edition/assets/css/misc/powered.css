@@ -2,7 +2,7 @@
     transition: opacity 0.2s ease;
 }
 
-.gh-members-popup-open .gh-powered {
+.gh-members-popup-open ~ .site-footer .gh-powered {
     opacity: 0;
 }
 
