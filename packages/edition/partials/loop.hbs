@@ -8,11 +8,13 @@
         </div>
     </div>
     <div class="feed-image u-placeholder rectangle">
-        <img class="lazyload u-object-fit"
-            data-srcset="{{> srcset}}" data-sizes="auto"
-            src="{{img_url feature_image size="m"}}"
-            srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-            alt="{{title}}">
+        {{#if feature_image}}
+            <img class="lazyload u-object-fit"
+                data-srcset="{{> srcset}}" data-sizes="auto"
+                src="{{img_url feature_image size="m"}}"
+                srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                alt="{{title}}">
+        {{/if}}
     </div>
     <div class="feed-wrapper">
         <h2 class="feed-title">{{title}}</h2>
@@ -26,9 +28,11 @@
                     <use xlink:href="#star"></use>
                 </svg>
             {{/if}}
-            <div class="feed-length">
-                {{reading_time}}
-            </div>
+            {{#if reading_time}}
+                <div class="feed-length">
+                    {{reading_time}}
+                </div>
+            {{/if}}
             <svg class="icon feed-icon">
                 <use xlink:href="#chevron-right"></use>
             </svg>
