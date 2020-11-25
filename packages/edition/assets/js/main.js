@@ -512,19 +512,22 @@ function theme() {
     function system() {
         html.removeClass(['theme-dark', 'theme-light']);
         localStorage.removeItem('dawn_theme');
-        toggleText.text(toggle.attr('data-system'));
+        // toggleText.text(toggle.attr('data-system'));
+        toggle.attr('title', toggle.attr('data-system'));
     }
 
     function dark() {
         html.removeClass('theme-light').addClass('theme-dark');
         localStorage.setItem('dawn_theme', 'dark');
-        toggleText.text(toggle.attr('data-dark'));
+        // toggleText.text(toggle.attr('data-dark'));
+        toggle.attr('title', toggle.attr('data-dark'));
     }
 
     function light() {
         html.removeClass('theme-dark').addClass('theme-light');
         localStorage.setItem('dawn_theme', 'light');
-        toggleText.text(toggle.attr('data-light'));
+        // toggleText.text(toggle.attr('data-light'));
+        toggle.attr('title', toggle.attr('data-light'));
     }
 
     switch (localStorage.getItem('dawn_theme')) {

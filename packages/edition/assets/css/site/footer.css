@@ -26,7 +26,7 @@
 }
 
 .social-item + .social-item {
-    margin-left: 11px;
+    margin-left: 13px;
 }
 
 .social-item + .social-item-rss {
@@ -34,8 +34,8 @@
 }
 
 .social-item .icon {
-    width: 14px;
-    height: 14px;
+    width: 16px;
+    height: 16px;
     fill: currentColor;
 }
 
@@ -90,9 +90,15 @@
     display: inline;
 }
 
-.theme-icon {
-    width: 1.1rem;
-    height: 1.1rem;
+.theme-switcher {
+    margin-top: 1px;
+    margin-right: -1px;
+    margin-left: 12px !important;
+}
+
+.theme-switcher .theme-icon {
+    width: 17px;
+    height: 17px;
 }
 
 .theme-text {
