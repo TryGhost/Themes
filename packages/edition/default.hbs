@@ -58,6 +58,20 @@
         }
     </script>
 
+    <script>
+        var feed = document.getElementsByClassName('post-feed');
+        if (feed.length) {
+            var feedLayout = localStorage.getItem('dawn_layout');
+            switch (feedLayout) {
+                case 'expanded':
+                    feed[0].classList.add('expanded');
+                    break;
+                default:
+                    break;
+            }
+        }
+    </script>
+
     <script
         src="https://code.jquery.com/jquery-3.5.1.min.js"
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="

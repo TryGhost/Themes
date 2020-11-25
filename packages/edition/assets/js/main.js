@@ -15,6 +15,7 @@ $(function () {
     whiteLogo();
     whiteIcon();
     featured();
+    feedLayout();
     pagination();
     archive();
     video();
@@ -180,6 +181,21 @@ function featured() {
                 items: 3,
             },
         },
+    });
+}
+
+function feedLayout() {
+    'use strict';
+    var feed = $('.post-feed');
+
+    $('.feed-layout-headline').on('click', function () {
+        feed.removeClass('expanded');
+        localStorage.removeItem('dawn_layout');
+    });
+
+    $('.feed-layout-expanded').on('click', function () {
+        feed.addClass('expanded');
+        localStorage.setItem('dawn_layout', 'expanded');
     });
 }
 
