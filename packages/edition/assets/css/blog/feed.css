@@ -204,3 +204,14 @@
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(3px);
 }
+
+@media (max-width: 575px) {
+    .post-feed.expanded .feed {
+        flex-direction: column;
+    }
+
+    .post-feed.expanded .feed-image {
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+}
