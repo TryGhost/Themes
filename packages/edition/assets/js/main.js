@@ -12,8 +12,6 @@ $(function () {
     'use strict';
     cover();
     subMenu();
-    whiteLogo();
-    whiteIcon();
     featured();
     feedLayout();
     pagination();
@@ -139,24 +137,6 @@ function subMenu() {
                 subMenu.hide();
             }
         });
-    }
-}
-
-function whiteLogo() {
-    'use strict';
-    if (typeof gh_white_logo != 'undefined') {
-        var whiteImage =
-            '<img class="logo-image white" src="' + gh_white_logo + '">';
-        $('.logo').prepend(whiteImage);
-    }
-}
-
-function whiteIcon() {
-    'use strict';
-    if (typeof gh_white_icon != 'undefined') {
-        var whiteImage =
-            '<img class="cover-icon-image white" src="' + gh_white_icon + '">';
-        $('.cover-icon').prepend(whiteImage);
     }
 }
 
