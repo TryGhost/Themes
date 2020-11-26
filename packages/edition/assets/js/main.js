@@ -239,7 +239,7 @@ function archive() {
 
 function video() {
     'use strict';
-    $('.single-content').fitVids();
+    reframe(document.querySelectorAll('.single-content iframe[src*="youtube.com"], .single-content iframe[src*="vimeo.com"]'));
 }
 
 function gallery() {
