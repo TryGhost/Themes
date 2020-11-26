@@ -60,7 +60,7 @@
 
     <script>
         var feed = document.getElementsByClassName('post-feed');
-        if (feed.length) {
+        if (feed.length && !feed[0].classList.contains('related-feed')) {
             var feedLayout = localStorage.getItem('dawn_layout');
             switch (feedLayout) {
                 case 'expanded':
