@@ -91,7 +91,7 @@
     width: 100%;
 }
 
-.cover-form input {
+.with-full-cover .cover-form input {
     border-color: #e6e6e6;
     background-color: #fff;
 }
