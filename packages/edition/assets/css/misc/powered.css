@@ -19,7 +19,7 @@
     font-weight: 600;
     letter-spacing: -0.3px;
     text-decoration: none;
-    background-color: var(--white-color);
+    background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.08);
     cursor: pointer;

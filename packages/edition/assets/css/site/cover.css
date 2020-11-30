@@ -91,6 +91,11 @@
     width: 100%;
 }
 
+.cover-form input {
+    border: 0;
+    background-color: #fff;
+}
+
 .cover-form .form-button {
     min-width: 110px;
 }
