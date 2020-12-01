@@ -22,3 +22,11 @@
     letter-spacing: 0.05rem;
     text-transform: uppercase;
 }
+
+.featured-feed {
+    opacity: 0;
+}
+
+.featured-feed.tns-slider {
+    opacity: 1;
+}

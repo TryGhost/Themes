@@ -142,14 +142,15 @@ function subMenu() {
 
 function featured() {
     'use strict';
-    $('.featured-feed').owlCarousel({
-        dots: false,
-        margin: 30,
-        nav: true,
-        navText: [
+    tns({
+        container: '.featured-feed',
+        controlsText: [
             '<svg class="icon"><use xlink:href="#chevron-left"></use></svg>',
             '<svg class="icon"><use xlink:href="#chevron-right"></use></svg>',
         ],
+        gutter: 30,
+        loop: false,
+        nav: false,
         responsive: {
             0: {
                 items: 1,
