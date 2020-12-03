@@ -7,6 +7,7 @@ const gulpStylelint = require('gulp-stylelint');
 const postcss = require('gulp-postcss');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
+const zip = require('gulp-zip');
 const beeper = require('beeper');
 
 // postcss plugins
