@@ -10,7 +10,7 @@
     display: flex;
     padding: 3px;
     background-color: var(--lighter-gray-color);
-    border-radius: 10px;
+    border-radius: 9px;
 }
 
 .feed-layout-wrapper::before {
