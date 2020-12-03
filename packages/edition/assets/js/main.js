@@ -187,12 +187,16 @@ function feedLayout() {
     var feed = document.querySelector('.post-feed');
     if (!feed || feed.classList.contains('related-feed')) return;
 
+    var wrapper = document.querySelector('.feed-layout-wrapper');
+
     document.querySelector('.feed-layout-headline').addEventListener('click', function () {
+        wrapper.classList.remove('expanded');
         feed.classList.remove('expanded');
         localStorage.removeItem('dawn_layout');
     });
 
     document.querySelector('.feed-layout-expanded').addEventListener('click', function () {
+        wrapper.classList.add('expanded');
         feed.classList.add('expanded');
         localStorage.setItem('dawn_layout', 'expanded');
     });

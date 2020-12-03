@@ -3,8 +3,10 @@
 <div class="content-area">
     <main class="site-main">
         <div class="feed-layout container medium">
-            <button class="button-icon feed-layout-headline">{{> icons/list-headline}}</button>
-            <button class="button-icon feed-layout-expanded">{{> icons/list-bullet}}</button>
+            <div class="feed-layout-wrapper">
+                <button class="button-icon feed-layout-headline">{{> icons/list-headline}}</button>
+                <button class="button-icon feed-layout-expanded">{{> icons/list-bullet}}</button>
+            </div>
         </div>
         <div class="post-feed container medium">
             {{#foreach posts visibility="all"}}
