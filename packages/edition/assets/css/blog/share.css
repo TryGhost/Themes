@@ -10,7 +10,7 @@
     height: 2.6rem;
     color: var(--white-color);
     font-size: 1.1rem;
-    line-height: 1;
+    line-height: 0;
     font-weight: 800;
     letter-spacing: 0.04rem;
     text-transform: uppercase;
