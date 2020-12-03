@@ -1,5 +1,5 @@
 .cover {
-    margin-top: 6rem;
+    margin-top: 9vmin;
 }
 
 .with-full-cover .cover {
@@ -50,20 +50,9 @@
     transform: translateY(-6vmin);
 }
 
-.cover-icon {
-    position: relative;
-    margin-bottom: 2rem;
-}
-
-.cover-icon-image {
-    width: 150px;
-}
-
-.cover-icon-image.white {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
+.cover-logo {
+    margin-bottom: 4vmin;
+    max-height: 50px;
 }
 
 .cover-description {

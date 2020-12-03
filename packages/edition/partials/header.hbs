@@ -3,7 +3,11 @@
         <div class="header-brand">
             <a class="logo" href="{{@site.url}}">
                 {{#if @site.logo}}
-                    <img class="logo-image" src="{{@site.logo}}" alt="{{@site.title}}">
+                    {{^is "home"}}
+                        <img class="logo-image" src="{{@site.logo}}" alt="{{@site.title}}">
+                    {{else}}
+                        <span class="logo-text">{{@site.title}}</span>
+                    {{/is}}
                 {{else}}
                     <span class="logo-text">{{@site.title}}</span>
                 {{/if}}
