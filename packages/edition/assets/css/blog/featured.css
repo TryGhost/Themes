@@ -3,6 +3,10 @@
     padding-top: 6rem;
 }
 
+.featured-wrapper .post {
+    position: relative;
+}
+
 .featured-wrapper .u-placeholder {
     margin-bottom: 3rem;
 }
