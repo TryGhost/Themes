@@ -43,22 +43,22 @@
     right: 20px;
     display: flex;
     flex-direction: column;
-    padding: 1rem 0;
+    padding: 1.2rem 0;
     width: 250px;
     text-align: left;
     background-color: var(--lighter-gray-color);
+    border-radius: 7px;
     opacity: 0;
-    transition-timing-function: var(--animation-base);
-    transition-duration: 0.2s;
-    transition-property: opacity transform;
+    transition-timing-function: cubic-bezier(0.22, 0.68, 0, 1.71);
+    transition-duration: 0.3s;
+    transition-property: opacity, transform;
     transform: translateY(-10px);
 }
 
 .sticky-toc-link {
     padding: 0.6rem 1.7rem;
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     font-weight: 700;
-    text-transform: uppercase;
 }
 
 .sticky-toc-link-indented::before {
