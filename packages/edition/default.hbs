@@ -45,12 +45,14 @@
     </script>
 
     <script>
-        var feed = document.getElementsByClassName('post-feed');
-        if (feed.length && !feed[0].classList.contains('related-feed')) {
+        var feed = document.querySelector('.post-feed');
+        if (feed && !feed.classList.contains('related-feed')) {
+            var wrapper = document.querySelector('.feed-layout-wrapper');
             var feedLayout = localStorage.getItem('dawn_layout');
             switch (feedLayout) {
                 case 'expanded':
-                    feed[0].classList.add('expanded');
+                    wrapper.classList.add('expanded');
+                    feed.classList.add('expanded');
                     break;
                 default:
                     break;
