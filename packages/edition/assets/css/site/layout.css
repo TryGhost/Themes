@@ -10,5 +10,5 @@
 }
 
 .with-alt-header .site-content {
-    padding-top: 8vmin;
+    padding-top: max(8vmin, 5rem);
 }

@@ -129,15 +129,15 @@
     display: grid;
     grid-template-columns:
         [full-start]
-        minmax(4vw, auto)
+        minmax(5vw, auto)
         [wide-start]
         minmax(auto, 100px)
         [main-start]
-        min(720px, calc(100% - 8vw))
+        min(720px, calc(100% - 10vw))
         [main-end]
         minmax(auto, 100px)
         [wide-end]
-        minmax(4vw, auto)
+        minmax(5vw, auto)
         [full-end];
 }
 
