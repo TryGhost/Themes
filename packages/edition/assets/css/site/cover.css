@@ -50,11 +50,6 @@
     transform: translateY(-6vmin);
 }
 
-.cover-logo {
-    margin-bottom: 4vmin;
-    max-height: 50px;
-}
-
 .cover-description {
     font-size: 3.5rem;
     line-height: 1.3;
