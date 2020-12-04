@@ -27,7 +27,8 @@
     transition: transform 0.1596s cubic-bezier(0.52, 0.16, 0.52, 0.84) 0.1008s;
 }
 
-.with-full-cover:not(.menu-opened) .burger-bar::before {
+.with-full-cover .burger-bar::before,
+.with-alt-header .burger-bar::before {
     background-color: #fff;
 }
 

@@ -224,7 +224,7 @@
 
     #site-header .header-actions {
         flex-direction: column;
-        margin-bottom: 4vh;
+        margin-bottom: 6vh;
     }
 
     .menu-opened #site-header {
@@ -233,6 +233,10 @@
         right: 0;
         bottom: 0;
         left: 0;
+        z-index: 90;
+    }
+
+    .menu-opened:not(.with-full-cover):not(.with-alt-header) #site-header {
         background-color: var(--white-color);
     }
 
@@ -243,6 +247,11 @@
     .menu-opened #site-header .header-nav,
     .menu-opened #site-header .header-actions {
         display: flex;
+    }
+
+    .with-full-cover #site-header .menu-item,
+    .with-alt-header #site-header .menu-item {
+        color: #fff;
     }
 
     #site-header .menu-item-more {
@@ -274,5 +283,28 @@
     #site-header .sub-menu .menu-item {
         padding: 0;
         color: inherit;
+    }
+
+    .with-full-cover #site-header .sub-menu .menu-item,
+    .with-alt-header #site-header .sub-menu .menu-item {
+        color: #fff;
+    }
+
+    #site-header .social {
+        margin-bottom: 1rem;
+    }
+
+    #site-header .social-item {
+        margin: 0 1.2rem;
+    }
+
+    .with-full-cover #site-header .social-item,
+    .with-alt-header #site-header .social-item {
+        color: #fff;
+    }
+
+    #site-header .social-item .icon {
+        width: 24px;
+        height: 24px;
     }
 }
