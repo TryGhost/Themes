@@ -8,23 +8,19 @@ var titleOffset = 0;
 var contentOffset = 0;
 var progress = document.querySelector('.sticky-progress');
 
-// $(function () {
-//     'use strict';
-    cover();
-    subMenu();
-    featured();
-    feedLayout();
-    pagination();
-    // archive();
-    video();
-    gallery();
-    table();
-    toc();
-    // modal();
-    // search();
-    burger();
-    theme();
-// });
+cover();
+subMenu();
+featured();
+feedLayout();
+pagination();
+// archive();
+video();
+gallery();
+table();
+toc();
+// modal();
+// search();
+burger();
 
 window.addEventListener('scroll', function () {
     'use strict';
