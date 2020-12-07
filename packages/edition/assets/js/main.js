@@ -222,33 +222,41 @@ function pagination() {
 
 function archive() {
     'use strict';
-    if (body.classList.contains('page-archive')) {
-        document.querySelectorAll('.feed').each(function (_i, v) {
-            var current = $(v).attr('data-month');
-            if (current != lastGroup) {
-                $(v).before('<div class="feed-month">' + current + '</div>')
-                lastGroup = current;
-            }
-        });
+    if (!body.classList.contains('page-archive')) return;
 
-        $('.feed-month').each(function () {
-            var head = $(this);
+    var feed = document.querySelector('.post-feed');
 
-            if (!head.parent().hasClass('feed-group')) {
-                head.before('<div class="feed-group"></div>');
+    document.querySelectorAll('.feed').forEach(function (post) {
+        var current = post.getAttribute('data-month');
+        if (current != lastGroup) {
+            var month = document.createElement('div');
 
-                var wrap = head.prev();
-                var curr = head;
+            month.className = 'feed-month';
+            month.innerText = current;
 
-                do {
-                    var currEl = curr;
-                    curr = curr.next();
+            feed.insertBefore(month, post);
+            lastGroup = current;
+        }
+    });
 
-                    currEl.appendTo(wrap);
-                } while (curr.length > 0 && !curr.hasClass('feed-month'));
-            }
-        });
-    }
+    document.querySelectorAll('.feed-month').forEach(function (head) {
+        if (!head.parentElement.classList.contains('feed-group')) {
+            var group = document.createElement('div');
+            group.className = 'feed-group';
+
+            head.parentNode.insertBefore(group, head);
+
+            var wrap = head.previousSibling;
+            var curr = head;
+
+            do {
+                var currEl = curr;
+                curr = curr.nextElementSibling;
+
+                wrap.appendChild(currEl);
+            } while (!curr.classList.contains('feed-month'));
+        }
+    });
 }
 
 function video() {
