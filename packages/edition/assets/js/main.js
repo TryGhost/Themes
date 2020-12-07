@@ -13,7 +13,7 @@ subMenu();
 featured();
 feedLayout();
 pagination();
-// archive();
+archive();
 video();
 gallery();
 table();
@@ -180,10 +180,10 @@ function featured() {
 
 function feedLayout() {
     'use strict';
-    var feed = document.querySelector('.post-feed');
-    if (!feed || feed.classList.contains('related-feed')) return;
-
     var wrapper = document.querySelector('.feed-layout-wrapper');
+    if (!wrapper) return;
+
+    var feed = document.querySelector('.post-feed');
 
     document.querySelector('.feed-layout-headline').addEventListener('click', function () {
         wrapper.classList.remove('expanded');
