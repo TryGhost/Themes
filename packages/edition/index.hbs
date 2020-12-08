@@ -2,12 +2,16 @@
 
 <div class="content-area">
     <main class="site-main">
-        <div class="feed-layout container medium">
-            <div class="feed-layout-wrapper">
-                <button class="button-icon feed-layout-headline">{{> icons/list-headline}}</button>
-                <button class="button-icon feed-layout-expanded">{{> icons/list-bullet}}</button>
+        <header class="feed-header container medium">
+            <div class="feed-header-wrapper">
+                <h2 class="feed-header-title">Latest</h2>
+                <div class="feed-layout">
+                    <button class="button-icon feed-layout-headline">{{> icons/list-headline}}</button>
+                    <button class="button-icon feed-layout-expanded">{{> icons/list-bullet}}</button>
+                </div>
             </div>
-        </div>
+        </header>
+
         <div class="post-feed container medium">
             {{^unless @member}}
                 {{#foreach posts visibility="all"}}
@@ -19,6 +23,7 @@
                 {{/foreach}}
             {{/unless}}
         </div>
+
         {{pagination}}
     </main>
 </div>
