@@ -224,7 +224,7 @@ function pagination() {
 
 function archive(data) {
     'use strict';
-    // if (!body.classList.contains('page-archive')) return;
+    if (!body.classList.contains('logged-in')) return;
 
     var posts = data || document.querySelectorAll('.feed');
 
