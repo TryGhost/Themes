@@ -181,7 +181,7 @@ function featured() {
 
 function feedLayout() {
     'use strict';
-    var wrapper = document.querySelector('.feed-layout-wrapper');
+    var wrapper = document.querySelector('.feed-layout');
     if (!wrapper) return;
 
     var feed = document.querySelector('.post-feed');
