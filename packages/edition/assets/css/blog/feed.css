@@ -234,7 +234,7 @@
 .feed-month {
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 30;
     margin: 0 -1.5rem;
     padding: 1rem 1.5rem;
     width: inherit;
