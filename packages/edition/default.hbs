@@ -24,7 +24,9 @@
         {{> header}}
 
         {{#is "home"}}
-            {{> cover}}
+            {{#unless @member}}
+                {{> cover}}
+            {{/unless}}
             {{> featured}}
         {{/is}}
 
