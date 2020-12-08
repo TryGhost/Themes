@@ -245,7 +245,7 @@
     backdrop-filter: blur(3px);
 }
 
-.feed-month:first-child {
+.feed-group:first-child .feed-month {
     display: none;
 }
 
