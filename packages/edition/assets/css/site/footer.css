@@ -15,6 +15,38 @@
     align-items: center;
 }
 
+.copyright {
+    font-size: 1.2rem;
+}
+
+.footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-nav .menu-item {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    color: var(--secondary-text-color);
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.footer-nav .sep {
+    padding: 0 0.7rem;
+    color: var(--secondary-text-color);
+    font-size: 1rem;
+}
+
+.footer-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
 .social {
     display: flex;
     align-items: center;
@@ -42,96 +74,6 @@
 .social-item-rss .icon {
     width: 15px;
     height: 15px;
-}
-
-.copyright {
-    color: var(--secondary-text-color);
-    font-size: 1.2rem;
-    letter-spacing: -0.02rem;
-}
-
-.copyright a {
-    color: var(--secondary-text-color);
-}
-
-.copyright a:hover {
-    text-decoration: underline;
-    opacity: 1;
-}
-
-.footer-nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.footer-nav .menu-item {
-    display: flex;
-    align-items: center;
-    margin: 0;
-    color: var(--secondary-text-color);
-    font-size: 1.2rem;
-    font-weight: 400;
-}
-
-.footer-nav .menu-item + .menu-item::before {
-    content: "\02022";
-    padding: 0 0.7rem;
-    font-size: 1rem;
-    line-height: 1;
-}
-
-.footer-nav .menu-item:hover {
-    opacity: 1;
-}
-
-.footer-nav .menu-item.copyright {
-    display: inline;
-}
-
-.theme-switcher {
-    margin-top: 1px;
-    margin-right: -1px;
-    margin-left: 12px !important;
-}
-
-.theme-switcher .theme-icon {
-    width: 17px;
-    height: 17px;
-}
-
-.theme-text {
-    margin-left: 0.3rem;
-}
-
-.theme-icon-dark,
-.theme-icon-light {
-    display: none;
-}
-
-.theme-dark .theme-icon-system,
-.theme-dark .theme-icon-light {
-    display: none;
-}
-
-.theme-dark .theme-icon-dark {
-    display: block;
-}
-
-.theme-light .theme-icon-system,
-.theme-light .theme-icon-dark {
-    display: none;
-}
-
-.theme-light .theme-icon-light {
-    display: block;
-}
-
-.footer-right {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
 }
 
 @media (max-width: 767px) {

@@ -1,19 +1,14 @@
 <footer class="site-footer container">
     <div class="footer-inner">
         <div class="footer-left">
-            <div class="gh-powered">
-                <a href="https://ghost.org" target="_blank" rel="noopener noreferrer">
-                    {{> icons/ghost}} <span>Publish with Ghost</span>
-                </a>
+            <div class="copyright">
+                {{@site.title}} © {{date format="YYYY"}}
             </div>
         </div>
 
         <nav class="footer-nav">
-            <span class="menu-item copyright">
-                Powered by <a href="https://ghost.org/" target="_blank" rel="noopener noreferrer">Ghost</a>
-            </span>
-
             {{navigation type="secondary"}}
+            <a class="menu-item badge" href="https://ghost.org/" target="_blank" rel="noopener noreferrer">Published with Ghost</a>
         </nav>
 
         <div class="footer-right">
