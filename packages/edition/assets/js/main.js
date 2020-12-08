@@ -1,5 +1,6 @@
 var html = document.documentElement;
 var body = document.body;
+var lastMonth;
 var lastGroup;
 var timeout;
 var st = 0;
@@ -216,45 +217,36 @@ function pagination() {
 
         infScroll.on('append', function (_response, _path, items) {
             items[0].classList.add('feed-paged');
+            archive(items);
         });
     }
 }
 
-function archive() {
+function archive(data) {
     'use strict';
-    if (!body.classList.contains('page-archive')) return;
+    // if (!body.classList.contains('page-archive')) return;
 
-    var feed = document.querySelector('.post-feed');
+    var posts = data || document.querySelectorAll('.feed');
 
-    document.querySelectorAll('.feed').forEach(function (post) {
+    posts.forEach(function (post) {
         var current = post.getAttribute('data-month');
-        if (current != lastGroup) {
+        if (current != lastMonth) {
             var month = document.createElement('div');
-
             month.className = 'feed-month';
             month.innerText = current;
 
-            feed.insertBefore(month, post);
-            lastGroup = current;
-        }
-    });
-
-    document.querySelectorAll('.feed-month').forEach(function (head) {
-        if (!head.parentElement.classList.contains('feed-group')) {
             var group = document.createElement('div');
             group.className = 'feed-group';
+            group.appendChild(month);
 
-            head.parentNode.insertBefore(group, head);
+            feed.insertBefore(group, post);
 
-            var wrap = head.previousSibling;
-            var curr = head;
+            group.appendChild(post);
 
-            do {
-                var currEl = curr;
-                curr = curr.nextElementSibling;
-
-                wrap.appendChild(currEl);
-            } while (!curr.classList.contains('feed-month'));
+            lastMonth = current;
+            lastGroup = group;
+        } else {
+            lastGroup.appendChild(post);
         }
     });
 }

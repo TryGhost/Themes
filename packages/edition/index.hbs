@@ -9,9 +9,15 @@
             </div>
         </div>
         <div class="post-feed container medium">
-            {{#foreach posts visibility="all"}}
-                {{> "loop"}}
-            {{/foreach}}
+            {{^unless @member}}
+                {{#foreach posts visibility="all"}}
+                    {{> "loop"}}
+                {{/foreach}}
+            {{else}}
+                {{#foreach posts visibility="all"}}
+                    {{> "loop"}}
+                {{/foreach}}
+            {{/unless}}
         </div>
         {{pagination}}
     </main>

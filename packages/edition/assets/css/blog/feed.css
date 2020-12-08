@@ -70,7 +70,7 @@
     border-top: 1px solid var(--light-gray-color);
 }
 
-.feed + .feed.feed-paged {
+.post-feed > .feed + .feed.feed-paged {
     margin-top: 3rem;
     border-top: 0;
 }
