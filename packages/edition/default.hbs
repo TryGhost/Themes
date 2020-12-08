@@ -12,6 +12,14 @@
         var siteUrl = '{{@site.url}}';
     </script>
 
+    {{#if @site.accent_color}}
+        <style>
+            :root {
+                --brand-color: {{@site.accent_color}};
+            }
+        </style>
+    {{/if}}
+
     {{ghost_head}}
 </head>
 
