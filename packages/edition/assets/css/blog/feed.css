@@ -95,7 +95,8 @@
 
 .post-feed.expanded .feed {
     align-items: flex-start;
-    padding: 3rem 0;
+    padding: 2.5rem 0;
+    border-top: 0;
 }
 
 .feed-group:first-child .feed-month + .feed {
