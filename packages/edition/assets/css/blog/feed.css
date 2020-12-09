@@ -1,6 +1,6 @@
 .feed-header {
     margin-top: 3vmin;
-    margin-bottom: 4.5vmin;
+    margin-bottom: 3rem;
 }
 
 .feed-header-wrapper {
@@ -98,7 +98,7 @@
     padding: 3rem 0;
 }
 
-.post-feed.expanded .feed:first-child {
+.feed-group:first-child .feed-month + .feed {
     padding-top: 1.5rem;
 }
 
