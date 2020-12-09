@@ -18,7 +18,7 @@
 @import "blog/navigation.css";
 @import "blog/related.css";
 @import "blog/comment.css";
-@import "blog/tag.css";
+@import "blog/taxonomy.css";
 @import "vendor/tiny-slider.css";
 @import "vendor/pswp.css";
 @import "misc/lazyload.css";
