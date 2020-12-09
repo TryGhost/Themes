@@ -263,4 +263,8 @@
         margin-bottom: 3rem;
         width: 100%;
     }
+
+    .post-feed.expanded .feed-title {
+        font-size: 1.8rem;
+    }
 }

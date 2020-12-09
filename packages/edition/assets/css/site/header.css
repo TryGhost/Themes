@@ -195,6 +195,12 @@
 /* ---------------------------------------------------------- */
 
 @media (max-width: 991px) {
+    .menu-opened {
+        position: fixed;
+        overflow: hidden;
+        height: 100vh;
+    }
+
     #site-header .header-inner {
         height: 100%;
         grid-template-columns: 1fr;
@@ -224,7 +230,7 @@
 
     #site-header .header-actions {
         flex-direction: column;
-        margin-bottom: 6vh;
+        padding-bottom: 6vh;
     }
 
     .menu-opened #site-header {
@@ -234,6 +240,8 @@
         bottom: 0;
         left: 0;
         z-index: 90;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
     .menu-opened:not(.with-full-cover):not(.with-alt-header) #site-header {
