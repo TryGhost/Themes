@@ -1,6 +1,6 @@
 .feed-header {
-    margin-top: 3rem;
-    margin-bottom: 4.5rem;
+    margin-top: 3vmin;
+    margin-bottom: 4.5vmin;
 }
 
 .feed-header-wrapper {
@@ -87,6 +87,10 @@
 .post-feed > .feed + .feed.feed-paged {
     margin-top: 3rem;
     border-top: 0;
+}
+
+.feed-month + .feed {
+    padding-top: 2rem;
 }
 
 .post-feed.expanded .feed {
@@ -228,7 +232,7 @@
 .feed-group::after {
     content: "";
     display: block;
-    height: 45px;
+    height: 4.5vmin;
 }
 
 .feed-month {
@@ -256,6 +260,7 @@
 
     .post-feed.expanded .feed-image {
         margin-right: 0;
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
+        width: 100%;
     }
 }
