@@ -17,9 +17,12 @@
 }
 
 .author-list .author-image-placeholder {
+    flex-shrink: 0;
+    overflow: hidden;
     margin: 0 -4px;
     width: 54px;
     border: 2px solid var(--white-color);
+    border-radius: 50%;
 }
 
 .author-list .author-image-placeholder:first-child {
