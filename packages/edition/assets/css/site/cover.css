@@ -76,6 +76,7 @@
 }
 
 .with-full-cover .cover-form input {
+    height: 50px;
     border-color: #e6e6e6;
     background-color: #fff;
 }
