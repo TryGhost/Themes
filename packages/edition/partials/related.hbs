@@ -1,9 +1,9 @@
 {{#get "posts" limit="5" filter="tags:[{{post.tags}}]+id:-{{post.id}}" as |related|}}
     {{#if related}}
         <section class="related-wrapper">
-            <div class="container medium">
+            <div class="container small">
                 <h3 class="related-title">You might also like...</h3>
-                <div class="related-feed">
+                <div class="post-feed related-feed">
                     {{#foreach posts visibility="all"}}
                         {{> "loop"}}
                     {{/foreach}}

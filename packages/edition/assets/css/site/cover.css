@@ -1,34 +1,63 @@
 .cover {
-    margin-top: 4.5rem;
+    margin-top: 9vmin;
+}
+
+.with-full-cover .cover {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    margin-top: calc(var(--navbar-height) * -1);
+    height: 100vh;
+}
+
+.with-full-cover .cover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    background-color: #000;
+    opacity: 0.3;
+    transition: opacity 1.5s ease;
+}
+
+.cover.image-loading::before {
+    opacity: 1;
+}
+
+.cover-image {
+    transition: transform 2s ease;
+}
+
+.cover.image-loading .cover-image {
+    transform: scale(1.02);
 }
 
 .cover-content {
+    position: relative;
+    z-index: 10;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 auto;
-    max-width: 500px;
+    margin: auto;
+    max-width: calc(720px + 8vw);
     text-align: center;
 }
 
-.cover-icon {
-    position: relative;
-    margin-bottom: 2rem;
-}
-
-.cover-icon-image {
-    width: 150px;
-}
-
-.cover-icon-image.white {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
+.with-full-cover .cover-content {
+    transform: translateY(-6vmin);
 }
 
 .cover-description {
-    font-size: 1.7rem;
+    font-size: 3.5rem;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.with-full-cover .cover-description {
+    color: #fff;
 }
 
 .cover-cta {
@@ -38,4 +67,49 @@
 
 .cover-cta .button {
     margin: 0 0.5rem;
+}
+
+.cover-form {
+    margin-top: 4.5rem;
+    max-width: 500px;
+    width: 100%;
+}
+
+.with-full-cover .cover-form input {
+    height: 50px;
+    border-color: #e6e6e6;
+    background-color: #fff;
+}
+
+.cover-form .form-button {
+    min-width: 110px;
+}
+
+.cover-arrow {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    z-index: 10;
+    margin-left: -20px;
+    width: 40px;
+    height: 40px;
+}
+
+.cover-arrow .icon {
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    transform: rotate(90deg);
+}
+
+@media (max-width: 767px) {
+    .cover-description {
+        font-size: 2.7rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .menu-opened .cover {
+        margin-top: 0;
+    }
 }

@@ -1,22 +1,29 @@
-<div class="cover container">
-    <div class="cover-content">
-        {{#if @site.icon}}
-            <div class="cover-icon">
-                <img class="cover-icon-image" src="{{@site.icon}}" alt="{{@site.title}}">
-            </div>
-        {{/if}}
+<div class="cover{{#if @site.cover_image}} image-loading{{/if}}">
+    {{#if @site.cover_image}}
+        <img class="cover-image u-object-fit" src="{{@site.cover_image}}" alt="{{@site.title}}">
+    {{/if}}
 
+    <div class="cover-content container">
         {{#if @site.description}}
             <div class="cover-description">{{@site.description}}</div>
         {{/if}}
 
         {{#if @labs.members}}
             {{#unless @member}}
-                <div class="cover-cta">
-                    <button class="button members-subscribe" data-portal="signup">Subscribe now</button>
-                    <button class="button button-secondary members-login" data-portal="signin">Login</button>
-                </div>
+                <form class="form-wrapper cover-form" data-members-form>
+                    <input class="auth-email" type="email" data-members-email placeholder="Your email address" required="true" autocomplete="false">
+
+                    <button class="form-button" type="submit" aria-label="Submit">
+                        <span class="default">Subscribe</span>
+                        <svg class="icon loader"><use xlink:href="#loader"></use></svg>
+                        <span class="success">Email sent</span>
+                    </button>
+                </form>
             {{/unless}}
         {{/if}}
     </div>
+
+    <button class="button-icon cover-arrow">
+        <svg class="icon"><use xlink:href="#chevron-right"></use></svg>
+    </button>
 </div>

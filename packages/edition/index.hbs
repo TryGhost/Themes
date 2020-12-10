@@ -2,11 +2,30 @@
 
 <div class="content-area">
     <main class="site-main">
+        <header class="feed-header container medium">
+            <div class="feed-header-wrapper">
+                <h2 class="feed-header-title">Latest</h2>
+                <div class="feed-layout">
+                    <button class="button-icon feed-layout-headline">{{> icons/list-headline}}</button>
+                    <button class="button-icon feed-layout-expanded">{{> icons/list-bullet}}</button>
+                </div>
+            </div>
+        </header>
+
         <div class="post-feed container medium">
-            {{#foreach posts visibility="all"}}
-                {{> "loop"}}
-            {{/foreach}}
+            {{^unless @member}}
+                {{#foreach posts visibility="all"}}
+                    {{> "loop"}}
+                {{/foreach}}
+            {{else}}
+                {{#foreach posts visibility="all"}}
+                    {{> "loop"}}
+                {{/foreach}}
+            {{/unless}}
         </div>
+
         {{pagination}}
     </main>
 </div>
+
+{{#contentFor "body_class"}}{{#if next}} paged-next{{/if}}{{#if @site.cover_image}}{{#if @member}} with-alt-header{{else}} with-full-cover{{/if}}{{/if}}{{#if @member}} logged-in{{/if}}{{/contentFor}}

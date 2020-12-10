@@ -1,5 +1,10 @@
 .featured-wrapper {
-    margin-top: 6rem;
+    margin-top: 3rem;
+    padding-top: 6vmin;
+}
+
+.featured-wrapper .post {
+    position: relative;
 }
 
 .featured-wrapper .u-placeholder {
@@ -16,8 +21,15 @@
     margin-bottom: 4.5rem;
     padding-bottom: 1rem;
     border-bottom: 1px solid var(--light-gray-color);
-    color: var(--brand-color);
     font-size: 1.5rem;
     letter-spacing: 0.05rem;
     text-transform: uppercase;
+}
+
+.featured-feed {
+    opacity: 0;
+}
+
+.featured-feed.tns-slider {
+    opacity: 1;
 }

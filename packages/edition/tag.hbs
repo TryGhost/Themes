@@ -3,37 +3,31 @@
 <div class="content-area">
     <main class="site-main">
         {{#tag}}
-            <section class="tag">
-                <div class="container medium">
-                    <h1 class="tag-name">{{name}}</h1>
-                    {{#if description}}
-                        <div class="tag-description">{{description}}</div>
-                    {{/if}}
-                    {{#get "tags" limit="all" filter="id:-{{id}}+visibility:public" as |tags|}}
-                        {{#if tags}}
-                            <div class="tag-list">
-                                <span class="tag-list-label">More:</span>
-                                {{#foreach tags}}
-                                    <a class="tag-list-item" href="{{url}}">{{name}}</a>
-                                {{/foreach}}
-                            </div>
-                        {{/if}}
-                    {{/get}}
-                </div>
+            <section class="taxonomy">
                 {{#if feature_image}}
-                    <div class="container">
-                        <div class="tag-media u-placeholder horizontal">
-                            <img class="u-object-fit" srcset="{{> srcset}}" src="{{img_url feature_image size="l"}}" alt="{{name}}">
-                        </div>
+                    <div class="taxonomy-media u-placeholder square">
+                        <img class="u-object-fit" src="{{img_url feature_image size="s"}}" alt="{{name}}">
                     </div>
                 {{/if}}
+
+                <header class="single-header kg-canvas">
+                    <h1 class="single-title">{{name}}</h1>
+
+                    {{#if description}}
+                        <div class="single-excerpt">{{description}}</div>
+                    {{/if}}
+                </header>
             </section>
         {{/tag}}
+
         <div class="post-feed container medium">
             {{#foreach posts visibility="all"}}
                 {{> "loop"}}
             {{/foreach}}
         </div>
+
         {{pagination}}
     </main>
 </div>
+
+{{#contentFor "body_class"}}{{#if @site.logo}}{{#if @site.cover_image}} with-alt-header{{/if}}{{/if}}{{/contentFor}}

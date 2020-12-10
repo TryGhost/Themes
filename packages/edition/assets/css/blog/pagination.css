@@ -19,7 +19,7 @@ body:not(.paged-next) .infinite-scroll-button {
 }
 
 .infinite-scroll-button {
-    margin-top: 4.5rem;
+    margin-top: 3rem;
 }
 
 @keyframes scaleOut {

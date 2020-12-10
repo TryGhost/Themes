@@ -1,3 +1,60 @@
+.feed-header {
+    margin-top: 3vmin;
+    margin-bottom: 3rem;
+}
+
+.feed-header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--light-gray-color);
+}
+
+.feed-header-title {
+    margin-bottom: 0;
+    font-size: 1.5rem;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+}
+
+.feed-layout {
+    position: relative;
+    display: flex;
+    padding: 3px;
+    height: 100%;
+    background-color: var(--lighter-gray-color);
+    border-radius: 5px;
+}
+
+.feed-layout::before {
+    content: "";
+    position: absolute;
+    left: 3px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--white-color);
+    border-radius: 3px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s cubic-bezier(0.25, 0.75, 0.5, 1.25);
+}
+
+.feed-layout.expanded::before {
+    transform: translateX(30px);
+}
+
+.feed-layout .button-icon:hover .icon {
+    opacity: 1;
+}
+
+.feed-layout .icon {
+    position: relative;
+    z-index: 10;
+    width: 24px;
+    height: 24px;
+    color: var(--secondary-text-color);
+}
+
 .feed {
     position: relative;
     display: flex;
@@ -15,6 +72,10 @@
     margin-right: 1.6rem;
 }
 
+.post-feed.expanded .feed:hover .feed-right {
+    margin-right: 0;
+}
+
 .feed:hover .feed-icon {
     transform: translateX(0.4rem);
 }
@@ -23,9 +84,23 @@
     border-top: 1px solid var(--light-gray-color);
 }
 
-.feed + .feed.feed-paged {
+.post-feed > .feed + .feed.feed-paged {
     margin-top: 3rem;
     border-top: 0;
+}
+
+.feed-month + .feed {
+    padding-top: 2rem;
+}
+
+.post-feed.expanded .feed {
+    align-items: flex-start;
+    padding: 2.5rem 0;
+    border-top: 0;
+}
+
+.feed-group:first-child .feed-month + .feed {
+    padding-top: 1.5rem;
 }
 
 .feed-calendar {
@@ -37,9 +112,33 @@
     white-space: nowrap;
 }
 
+.post-feed.expanded .feed-calendar {
+    display: none;
+}
+
 .feed-calendar-month {
     margin-right: 0.4rem;
     text-transform: uppercase;
+}
+
+.feed-image {
+    flex-shrink: 0;
+    margin-right: 2.5rem;
+    width: 160px;
+}
+
+.post-feed:not(.expanded) .feed-image {
+    display: none;
+}
+
+.feed-wrapper {
+    flex-grow: 1;
+    display: flex;
+    overflow: hidden;
+}
+
+.post-feed.expanded .feed-wrapper {
+    flex-direction: column;
 }
 
 .feed-title {
@@ -53,10 +152,36 @@
     white-space: nowrap;
 }
 
+.post-feed.expanded .feed-title {
+    font-size: 1.7rem;
+    line-height: 1.2;
+    font-weight: 700;
+    white-space: normal;
+}
+
+.feed-excerpt {
+    margin-top: 0.8rem;
+    line-height: 1.4;
+}
+
+.post-feed:not(.expanded) .feed-excerpt {
+    display: none;
+}
+
 .feed-right {
     display: flex;
     align-items: center;
-    transition: margin 0.2s var(--animation-base);
+    color: var(--secondary-text-color);
+    font-size: 1.4rem;
+    transition: margin-right 0.2s var(--animation-base);
+}
+
+.post-feed.expanded .feed-right {
+    margin-top: 1.5rem;
+}
+
+.post-feed:not(.expanded) .feed-date {
+    display: none;
 }
 
 .feed-visibility {
@@ -66,14 +191,29 @@
     color: var(--orange-color);
 }
 
+.post-feed.expanded .feed-visibility {
+    order: 1;
+    margin-left: 1rem;
+}
+
 .feed-visibility-public {
     display: none;
 }
 
 .feed-length {
-    color: var(--secondary-text-color);
-    font-size: 1.4rem;
     white-space: nowrap;
+}
+
+.post-feed.expanded .feed-length {
+    display: flex;
+    align-items: center;
+}
+
+.post-feed.expanded .feed-length::before {
+    content: "\02022";
+    padding: 0 0.7rem;
+    font-size: 1rem;
+    line-height: 1;
 }
 
 .feed-icon {
@@ -84,4 +224,48 @@
     color: var(--secondary-text-color);
     transition: transform 0.2s var(--animation-base);
     transform: translateX(2rem);
+}
+
+.post-feed.expanded .feed-icon {
+    display: none;
+}
+
+.feed-group::after {
+    content: "";
+    display: block;
+    height: 4.5vmin;
+}
+
+.feed-month {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    margin: 0 -1.5rem;
+    padding: 1rem 1.5rem;
+    width: inherit;
+    color: var(--darker-gray-color);
+    font-size: 1.7rem;
+    font-weight: 700;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(3px);
+}
+
+.feed-group:first-child .feed-month {
+    display: none;
+}
+
+@media (max-width: 575px) {
+    .post-feed.expanded .feed {
+        flex-direction: column;
+    }
+
+    .post-feed.expanded .feed-image {
+        margin-right: 0;
+        margin-bottom: 3rem;
+        width: 100%;
+    }
+
+    .post-feed.expanded .feed-title {
+        font-size: 1.8rem;
+    }
 }

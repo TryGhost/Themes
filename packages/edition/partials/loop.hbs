@@ -1,4 +1,4 @@
-<article class="feed {{post_class}}">
+<article class="feed {{post_class}}" data-month="{{date format="MMMM YYYY"}}">
     <div class="feed-calendar">
         <div class="feed-calendar-month">
             {{date published_at format="MMM"}}
@@ -7,19 +7,38 @@
             {{date published_at format="DD"}}
         </div>
     </div>
-    <h2 class="feed-title">{{title}}</h2>
-    <div class="feed-right">
-        {{#if @labs.members}}
-            <svg class="icon feed-visibility feed-visibility-{{visibility}}">
-                <use xlink:href="#star"></use>
-            </svg>
+    <div class="feed-image u-placeholder rectangle">
+        {{#if feature_image}}
+            <img class="lazyload u-object-fit"
+                data-srcset="{{> srcset}}" data-sizes="auto"
+                src="{{img_url feature_image size="m"}}"
+                srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                alt="{{title}}">
         {{/if}}
-        <div class="feed-length">
-            {{reading_time}}
+    </div>
+    <div class="feed-wrapper">
+        <h2 class="feed-title">{{title}}</h2>
+        {{#if excerpt}}
+            <div class="feed-excerpt">{{excerpt words="20"}}</div>
+        {{/if}}
+        <div class="feed-right">
+            <time class="feed-date" datetime="{{date format="YYYY-MM-DD"}}">
+                {{date published_at}}
+            </time>
+            {{#if @labs.members}}
+                <svg class="icon feed-visibility feed-visibility-{{visibility}}">
+                    <use xlink:href="#star"></use>
+                </svg>
+            {{/if}}
+            {{#if reading_time}}
+                <div class="feed-length">
+                    {{reading_time}}
+                </div>
+            {{/if}}
+            <svg class="icon feed-icon">
+                <use xlink:href="#chevron-right"></use>
+            </svg>
         </div>
     </div>
-    <svg class="icon feed-icon">
-        <use xlink:href="#chevron-right"></use>
-    </svg>
     <a class="u-permalink" href="{{url}}" aria-label="{{title}}"></a>
 </article>
