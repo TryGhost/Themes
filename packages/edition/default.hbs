@@ -54,7 +54,7 @@
         var feed = document.querySelector('.post-feed');
         if (feed && !feed.classList.contains('related-feed')) {
             var wrapper = document.querySelector('.feed-layout');
-            var feedLayout = localStorage.getItem('dawn_layout');
+            var feedLayout = localStorage.getItem('edition_layout');
             switch (feedLayout) {
                 case 'compact':
                     wrapper.classList.remove('expanded');

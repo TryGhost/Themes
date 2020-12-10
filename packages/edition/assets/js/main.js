@@ -143,13 +143,13 @@ function feedLayout() {
     document.querySelector('.feed-layout-headline').addEventListener('click', function () {
         wrapper.classList.remove('expanded');
         feed.classList.remove('expanded');
-        localStorage.setItem('dawn_layout', 'compact');
+        localStorage.setItem('edition_layout', 'compact');
     });
 
     document.querySelector('.feed-layout-expanded').addEventListener('click', function () {
         wrapper.classList.add('expanded');
         feed.classList.add('expanded');
-        localStorage.removeItem('dawn_layout');
+        localStorage.removeItem('edition_layout');
     });
 }
 
