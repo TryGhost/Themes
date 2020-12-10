@@ -56,9 +56,9 @@
             var wrapper = document.querySelector('.feed-layout');
             var feedLayout = localStorage.getItem('dawn_layout');
             switch (feedLayout) {
-                case 'expanded':
-                    wrapper.classList.add('expanded');
-                    feed.classList.add('expanded');
+                case 'compact':
+                    wrapper.classList.remove('expanded');
+                    feed.classList.remove('expanded');
                     break;
                 default:
                     break;
