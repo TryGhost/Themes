@@ -242,9 +242,10 @@
         z-index: 90;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
+        background-color: var(--brand-color);
     }
 
-    .menu-opened:not(.with-alt-header) #site-header {
+    .menu-opened:not(.with-full-cover):not(.with-alt-header) #site-header {
         background-color: var(--white-color);
     }
 
@@ -257,6 +258,7 @@
         display: flex;
     }
 
+    .with-full-cover #site-header .menu-item,
     .with-alt-header #site-header .menu-item {
         color: #fff;
     }
@@ -292,6 +294,7 @@
         color: inherit;
     }
 
+    .with-full-cover #site-header .sub-menu .menu-item,
     .with-alt-header #site-header .sub-menu .menu-item {
         color: #fff;
     }
@@ -304,6 +307,7 @@
         margin: 0 1.2rem;
     }
 
+    .with-full-cover #site-header .social-item,
     .with-alt-header #site-header .social-item {
         color: #fff;
     }
