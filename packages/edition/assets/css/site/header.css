@@ -38,7 +38,7 @@
     font-weight: 800;
 }
 
-.with-full-cover:not(.menu-opened) .logo-text {
+.with-full-cover .logo-text {
     color: #fff;
 }
 
