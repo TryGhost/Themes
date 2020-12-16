@@ -244,7 +244,7 @@
         -webkit-overflow-scrolling: touch;
     }
 
-    .menu-opened:not(.with-full-cover):not(.with-alt-header) #site-header {
+    .menu-opened:not(.with-alt-header) #site-header {
         background-color: var(--white-color);
     }
 
