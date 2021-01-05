@@ -1,6 +1,5 @@
 const {series, parallel, watch, src, dest} = require('gulp');
 const pump = require('pump');
-const zip = require('gulp-zip');
 
 // gulp plugins and utils
 const livereload = require('gulp-livereload');
@@ -9,6 +8,7 @@ const postcss = require('gulp-postcss');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const beeper = require('beeper');
+const zip = require('gulp-zip');
 
 // postcss plugins
 const easyimport = require('postcss-easy-import');
