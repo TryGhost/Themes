@@ -1,5 +1,6 @@
 const {series, parallel, watch, src, dest} = require('gulp');
 const pump = require('pump');
+const zip = require('gulp-zip');
 
 // gulp plugins and utils
 const livereload = require('gulp-livereload');
