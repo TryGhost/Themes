@@ -12,12 +12,18 @@ document.addEventListener('lazyloaded', function (e) {
 
 $(function () {
     'use strict';
+    video();
     gallery();
     player();
     pagination();
     popup();
     subscribe();
 });
+
+function video() {
+    'use strict';
+    $('.post-content').fitVids();
+}
 
 function gallery() {
     'use strict';
