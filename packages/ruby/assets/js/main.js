@@ -9,6 +9,7 @@ $(function () {
     stickySidebar();
     pagination();
     facebook();
+    video();
     gallery();
     offCanvas();
 });
@@ -69,6 +70,11 @@ function facebook() {
     ) {
         widget.remove();
     }
+}
+
+function video() {
+    'use strict';
+    $('.post-content').fitVids();
 }
 
 function gallery() {
