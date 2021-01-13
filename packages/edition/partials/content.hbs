@@ -7,24 +7,27 @@
                         {{date published_at}}
                     </time>
                 </span>
+
                 <span class="single-meta-item single-meta-length">
                     {{reading_time}}
                 </span>
+
                 {{#primary_tag}}
                     <span class="single-meta-item single-meta-tag">
-                        <a class="post-tag post-tag-{{slug}}" href="{{url}}">
-                            {{name}}
-                        </a>
+                        <a class="post-tag post-tag-{{slug}}" href="{{url}}">{{name}}</a>
                     </span>
                 {{/primary_tag}}
             </div>
         {{/is}}
+
         <h1 class="single-title">{{title}}</h1>
+
         {{#if custom_excerpt}}
             <div class="single-excerpt">
                 {{custom_excerpt}}
             </div>
         {{/if}}
+
         {{#if feature_image}}
             {{#unless no_image}}
                 <div class="single-media kg-width-{{width}} u-placeholder horizontal">
@@ -36,6 +39,7 @@
             {{/unless}}
         {{/if}}
     </header>
+
     <div class="single-content kg-canvas u-text-format">
         {{#if @labs.members}}
             {{#if access}}
@@ -58,6 +62,7 @@
                     but if you upgrade your account you'll be able to see the whole thing,
                     as well as all the other posts in the archive! Subscribing will give you immediate access.
                 </p>
+
                 <section class="single-cta">
                     {{#has visibility="paid"}}
                         <h2 class="single-cta-title">This post is for paying subscribers only</h2>
@@ -73,13 +78,13 @@
             {{content}}
         {{/if}}
     </div>
+
     {{#is "post"}}
         <footer class="single-footer container small">
             <div class="single-footer-left">
                 {{#prev_post}}
                     <div class="navigation navigation-previous">
-                        <a class="navigation-link" href="{{url}}"
-                            aria-label="Previous post">
+                        <a class="navigation-link" href="{{url}}" aria-label="Previous post">
                             <svg class="icon navigation-icon">
                                 <use xlink:href="#arrow-left"></use>
                             </svg>
@@ -87,6 +92,7 @@
                     </div>
                 {{/prev_post}}
             </div>
+
             <div class="single-footer-middle">
                 <div class="single-footer-top">
                     <h3 class="single-footer-title">Published by:</h3>
@@ -105,6 +111,7 @@
                         {{/foreach}}
                     </div>
                 </div>
+
                 <div class="single-footer-bottom">
                     <div class="share">
                         <a class="share-link share-link-facebook"
@@ -122,11 +129,11 @@
                     </div>
                 </div>
             </div>
+
             <div class="single-footer-right">
                 {{#next_post}}
                     <div class="navigation navigation-next">
-                        <a class="navigation-link" href="{{url}}"
-                            aria-label="Next post">
+                        <a class="navigation-link" href="{{url}}" aria-label="Next post">
                             <svg class="icon navigation-icon">
                                 <use xlink:href="#arrow-right"></use>
                             </svg>
