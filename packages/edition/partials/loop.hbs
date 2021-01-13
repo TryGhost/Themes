@@ -9,11 +9,11 @@
     </div>
     <div class="feed-image u-placeholder rectangle">
         {{#if feature_image}}
-            <img class="lazyload u-object-fit"
-                data-srcset="{{> srcset}}" data-sizes="auto"
+            <img class="u-object-fit"
+                srcset="{{> srcset}}"
+                sizes="(min-width: 576px) 160px, 90vw"
                 src="{{img_url feature_image size="m"}}"
-                srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                alt="{{title}}">
+                alt="{{title}}" loading="lazy">
         {{/if}}
     </div>
     <div class="feed-wrapper">
