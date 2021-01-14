@@ -1,16 +1,6 @@
 .pagination,
-.infinite-scroll-status,
 body:not(.paged-next) .infinite-scroll-button {
     display: none;
-}
-
-.infinite-scroll-request {
-    margin: 3rem auto 0;
-    width: 40px;
-    height: 40px;
-    background-color: var(--darker-gray-color);
-    border-radius: 50%;
-    animation: scaleOut 1s infinite ease-in-out;
 }
 
 .infinite-scroll-action {
@@ -20,15 +10,18 @@ body:not(.paged-next) .infinite-scroll-button {
 
 .infinite-scroll-button {
     margin-top: 3rem;
+    min-width: 110px;
 }
 
-@keyframes scaleOut {
-    0% {
-        transform: scale(0);
-    }
+.infinite-scroll-button .loader {
+    display: none;
+    line-height: 0;
+}
 
-    100% {
-        opacity: 0;
-        transform: scale(1);
-    }
+.infinite-scroll-button.loading .label {
+    display: none;
+}
+
+.infinite-scroll-button.loading .loader {
+    display: inline;
 }

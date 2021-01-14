@@ -21,18 +21,6 @@
     opacity: 1;
 }
 
-.button .icon-loading {
-    display: none;
-}
-
-.button.loading {
-    text-indent: -9999px;
-}
-
-.button.loading .icon-loading {
-    display: block;
-}
-
 .button-secondary {
     color: var(--darker-gray-color);
 }

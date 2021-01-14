@@ -3,9 +3,9 @@
         <a class="older-posts" href="{{page_url next}}"></a>
     {{/if}}
 </nav>
-<div class="infinite-scroll-status">
-    <div class="infinite-scroll-request"></div>
-</div>
 <div class="infinite-scroll-action">
-    <button class="button button-secondary infinite-scroll-button">Load more</button>
+    <button class="button button-secondary infinite-scroll-button">
+        <span class="label">Load more</span>
+        <span class="loader">{{> icons/loader}}</span>
+    </button>
 </div>

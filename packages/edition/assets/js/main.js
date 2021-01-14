@@ -166,11 +166,17 @@ function pagination() {
             history: false,
             path: '.pagination .older-posts',
             scrollThreshold: false,
-            status: '.infinite-scroll-status',
+        });
+
+        var button = document.querySelector('.infinite-scroll-button');
+
+        infScroll.on('request', function (_path, _fetchPromise) {
+            button.classList.add('loading');
         });
 
         infScroll.on('append', function (_response, _path, items) {
             items[0].classList.add('feed-paged');
+            button.classList.remove('loading');
             archive(items);
         });
     }
