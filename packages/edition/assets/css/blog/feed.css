@@ -186,9 +186,8 @@
 
 .feed-visibility {
     margin-right: 1rem;
-    width: 16px;
-    height: 16px;
     color: var(--orange-color);
+    line-height: 0;
 }
 
 .post-feed.expanded .feed-visibility {
@@ -198,6 +197,11 @@
 
 .feed-visibility-public {
     display: none;
+}
+
+.feed-visibility .icon {
+    width: 16px;
+    height: 16px;
 }
 
 .feed-length {
@@ -219,15 +223,19 @@
 .feed-icon {
     position: absolute;
     right: 0;
-    width: 16px;
-    height: 16px;
     color: var(--secondary-text-color);
+    line-height: 0;
     transition: transform 0.2s var(--animation-base);
     transform: translateX(2rem);
 }
 
 .post-feed.expanded .feed-icon {
     display: none;
+}
+
+.feed-icon .icon {
+    width: 16px;
+    height: 16px;
 }
 
 .feed-group::after {

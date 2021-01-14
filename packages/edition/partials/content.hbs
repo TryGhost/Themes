@@ -82,9 +82,7 @@
                 {{#prev_post}}
                     <div class="navigation navigation-previous">
                         <a class="navigation-link" href="{{url}}" aria-label="Previous post">
-                            <svg class="icon navigation-icon">
-                                <use xlink:href="#arrow-left"></use>
-                            </svg>
+                            <span class="navigation-icon">{{> icons/arrow-left}}</span>
                         </a>
                     </div>
                 {{/prev_post}}
@@ -126,9 +124,7 @@
                 {{#next_post}}
                     <div class="navigation navigation-next">
                         <a class="navigation-link" href="{{url}}" aria-label="Next post">
-                            <svg class="icon navigation-icon">
-                                <use xlink:href="#arrow-right"></use>
-                            </svg>
+                            <span class="navigation-icon">{{> icons/arrow-right}}</span>
                         </a>
                     </div>
                 {{/next_post}}

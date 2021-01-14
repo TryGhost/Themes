@@ -73,7 +73,7 @@ function subMenu() {
         var toggle = document.createElement('button');
         toggle.setAttribute('class', 'button-icon menu-item-button menu-item-more');
         toggle.setAttribute('aria-label', 'More');
-        toggle.innerHTML = '<svg class="icon"><use xlink:href="#dots-horizontal"></use></svg>';
+        toggle.innerHTML = '<svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M21.333 16c0-1.473 1.194-2.667 2.667-2.667v0c1.473 0 2.667 1.194 2.667 2.667v0c0 1.473-1.194 2.667-2.667 2.667v0c-1.473 0-2.667-1.194-2.667-2.667v0zM13.333 16c0-1.473 1.194-2.667 2.667-2.667v0c1.473 0 2.667 1.194 2.667 2.667v0c0 1.473-1.194 2.667-2.667 2.667v0c-1.473 0-2.667-1.194-2.667-2.667v0zM5.333 16c0-1.473 1.194-2.667 2.667-2.667v0c1.473 0 2.667 1.194 2.667 2.667v0c0 1.473-1.194 2.667-2.667 2.667v0c-1.473 0-2.667-1.194-2.667-2.667v0z"></path></svg>';
 
         var wrapper = document.createElement('div');
         wrapper.setAttribute('class', 'sub-menu');
@@ -113,8 +113,8 @@ function featured() {
     tns({
         container: feed,
         controlsText: [
-            '<svg class="icon"><use xlink:href="#chevron-left"></use></svg>',
-            '<svg class="icon"><use xlink:href="#chevron-right"></use></svg>',
+            '<svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M20.547 22.107L14.44 16l6.107-6.12L18.667 8l-8 8 8 8 1.88-1.893z"></path></svg>',
+            '<svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M11.453 22.107L17.56 16l-6.107-6.12L13.333 8l8 8-8 8-1.88-1.893z"></path></svg>',
         ],
         gutter: 30,
         loop: false,

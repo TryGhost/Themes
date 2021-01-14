@@ -26,18 +26,18 @@
                 {{date published_at}}
             </time>
             {{#if @labs.members}}
-                <svg class="icon feed-visibility feed-visibility-{{visibility}}">
-                    <use xlink:href="#star"></use>
-                </svg>
+                <div class="feed-visibility feed-visibility-{{visibility}}">
+                    {{> icons/star}}
+                </div>
             {{/if}}
             {{#if reading_time}}
                 <div class="feed-length">
                     {{reading_time}}
                 </div>
             {{/if}}
-            <svg class="icon feed-icon">
-                <use xlink:href="#chevron-right"></use>
-            </svg>
+            <div class="feed-icon">
+                {{> icons/chevron-right}}
+            </div>
         </div>
     </div>
     <a class="u-permalink" href="{{url}}" aria-label="{{title}}"></a>

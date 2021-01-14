@@ -75,7 +75,7 @@ textarea {
     display: none;
 }
 
-.form-wrapper .loader {
+.form-wrapper .loader .icon {
     width: 28px;
     height: 28px;
 }
