@@ -34,6 +34,10 @@
     margin-top: 4.5rem;
 }
 
+.single-media img {
+    width: 100%;
+}
+
 .single-cta {
     margin-top: 4rem !important;
     padding: 3rem;
