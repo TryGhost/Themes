@@ -75,6 +75,8 @@
 
 .post-tags {
     margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .post-tags .tag {
