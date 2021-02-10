@@ -75,14 +75,13 @@
 
 .post-tags {
     margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .post-tags .tag {
     font-weight: 700;
-}
-
-.post-tags .tag + .tag {
-    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .post-tags .tag::before {
