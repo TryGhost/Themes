@@ -3,7 +3,7 @@
         <section class="related-posts container medium">
             <h3 class="related-title">You might also like...</h3>
             <div class="post-feed">
-                {{#foreach related visibility="all"}}
+                {{#foreach related}}
                     <article class="post-list {{post_class}}{{#unless feature_image}} no-image{{/unless}}">
                         {{> post-media same_height=true ratio="rectangle"}}
                         <div class="post-wrapper">
