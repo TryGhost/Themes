@@ -25,11 +25,9 @@
             <time class="feed-date" datetime="{{date format="YYYY-MM-DD"}}">
                 {{date published_at}}
             </time>
-            {{#if @labs.members}}
-                <div class="feed-visibility feed-visibility-{{visibility}}">
-                    {{> icons/star}}
-                </div>
-            {{/if}}
+            <div class="feed-visibility feed-visibility-{{visibility}}">
+                {{> icons/star}}
+            </div>
             {{#if reading_time}}
                 <div class="feed-length">
                     {{reading_time}}
