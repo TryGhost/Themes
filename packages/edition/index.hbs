@@ -14,11 +14,11 @@
 
         <div class="post-feed expanded container medium">
             {{^unless @member}}
-                {{#foreach posts visibility="all"}}
+                {{#foreach posts}}
                     {{> "loop"}}
                 {{/foreach}}
             {{else}}
-                {{#foreach posts visibility="all"}}
+                {{#foreach posts}}
                     {{> "loop"}}
                 {{/foreach}}
             {{/unless}}
