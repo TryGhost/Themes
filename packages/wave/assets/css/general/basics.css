@@ -1,5 +1,5 @@
 :root {
-    --brand-color: #fc7e0f;
+    --brand-color: var(--ghost-accent-color, #fc7e0f);
     --primary-text-color: #5a656b;
     --secondary-text-color: #aaa;
     --white-color: #fff;
