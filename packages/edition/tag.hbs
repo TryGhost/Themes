@@ -30,4 +30,4 @@
     </main>
 </div>
 
-{{#contentFor "body_class"}}{{#if @site.logo}}{{#if @site.cover_image}} with-alt-header{{/if}}{{/if}}{{/contentFor}}
+{{#contentFor "body_class"}}{{#if next}} paged-next{{/if}}{{#if @site.logo}}{{#if @site.cover_image}} with-alt-header{{/if}}{{/if}}{{/contentFor}}
