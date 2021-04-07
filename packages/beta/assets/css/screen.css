@@ -1,0 +1,6 @@
+@import "shared/reset.css";
+@import "shared/kg.css";
+
+body {
+    background-color: tomato;
+}
