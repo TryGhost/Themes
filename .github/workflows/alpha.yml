@@ -1,0 +1,30 @@
+name: Alpha
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+      - 'renovate/*'
+    paths:
+      - 'packages/alpha/**'
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' || (github.event_name == 'pull_request' && !startsWith(github.head_ref, 'renovate/'))
+    steps:
+      - uses: actions/checkout@v2
+      - run: yarn
+      - run: yarn test:ci
+  deploy:
+  name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Deploy Ghost Theme
+        uses: TryGhost/action-deploy-theme@v1.4.1
+        with:
+          api-url: ${{ secrets.ALPHA_GHOST_ADMIN_API_URL }}
+          api-key: ${{ secrets.ALPHA_GHOST_ADMIN_API_KEY }}
