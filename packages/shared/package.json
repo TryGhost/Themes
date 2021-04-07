@@ -1,0 +1,14 @@
+{
+    "name": "shared",
+    "description": "Shared components",
+    "version": "1.0.0",
+    "license": "MIT",
+    "author": {
+        "name": "Ghost Foundation",
+        "email": "hello@ghost.org",
+        "url": "https://ghost.org"
+    },
+    "scripts": {
+        "dev": "gulp"
+    }
+}

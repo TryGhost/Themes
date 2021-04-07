@@ -1,0 +1,36 @@
+{
+    "private": true,
+    "name": "root",
+    "workspaces": [
+        "packages/*"
+    ],
+    "scripts": {
+        "alpha": "ln -sfn ~/Developer/monorepo-test/packages/alpha ~/Developer/ghost-monorepo-test/content/themes && yarn workspace alpha dev",
+        "beta": "ln -sfn ~/Developer/monorepo-test/packages/beta ~/Developer/ghost-monorepo-test/content/themes && yarn workspace beta dev",
+        "build": "concurrently --kill-others \"yarn workspace alpha build\" \"yarn workspace beta build\"",
+        "test": "concurrently --kill-others \"yarn workspace alpha test\" \"yarn workspace beta test\""
+    },
+    "devDependencies": {
+        "autoprefixer": "10.2.5",
+        "beeper": "2.1.0",
+        "concurrently": "6.0.0",
+        "cssnano": "4.1.10",
+        "gscan": "4.0.1",
+        "gulp": "4.0.2",
+        "gulp-concat": "2.6.1",
+        "gulp-livereload": "4.0.2",
+        "gulp-postcss": "9.0.0",
+        "gulp-stylelint": "13.0.0",
+        "gulp-uglify": "3.0.2",
+        "gulp-zip": "5.1.0",
+        "postcss": "8.2.8",
+        "postcss-easy-import": "3.0.0",
+        "pump": "3.0.0",
+        "stylelint": "13.12.0",
+        "stylelint-config-standard": "21.0.0",
+        "stylelint-order": "4.1.0"
+    },
+    "browserslist": [
+        "defaults"
+    ]
+}
