@@ -28,3 +28,4 @@ jobs:
         with:
           api-url: ${{ secrets.ALPHA_GHOST_ADMIN_API_URL }}
           api-key: ${{ secrets.ALPHA_GHOST_ADMIN_API_KEY }}
+          theme-dir: packages/alpha
