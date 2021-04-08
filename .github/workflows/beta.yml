@@ -6,8 +6,8 @@ on:
     branches:
       - master
       - 'renovate/*'
-    paths:
-      - 'packages/beta/**'
+    # paths:
+    #   - 'packages/beta/**'
 
 jobs:
   test:
@@ -28,3 +28,4 @@ jobs:
         with:
           api-url: ${{ secrets.BETA_GHOST_ADMIN_API_URL }}
           api-key: ${{ secrets.BETA_GHOST_ADMIN_API_KEY }}
+          theme-dir: packages/beta
