@@ -47,8 +47,5 @@
         "build": "gulp build",
         "lint": "gulp lint",
         "zip": "gulp zip"
-    },
-    "dependencies": {
-        "shared": "1.0.0"
     }
 }
