@@ -1,0 +1,12 @@
+:root {
+    --color-white: #fff;
+    --color-lighter-gray: #f6f6f6;
+    --color-light-gray: #e6e6e6;
+    --color-mid-gray: #ccc;
+    --color-dark-gray: #444;
+    --color-darker-gray: #15171a;
+    --color-black: #000;
+    --font-sans: -apple-system, blinkmacsystemfont, segoe ui, helvetica, arial, sans-serif;
+    --font-serif: georgia, serif;
+    --font-mono: menlo, consolas, monaco, liberation mono, lucida console, monospace;
+}

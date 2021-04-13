@@ -1,6 +1,5 @@
 @import "shared/reset.css";
+@import "shared/vars.css";
+@import "shared/global.css";
+@import "shared/content.css";
 @import "shared/kg.css";
-
-body {
-    background-color: cornflowerblue;
-}
