@@ -38,11 +38,6 @@ use it for applying any other styles. */
 created within the Ghost editor. The main content handles
 headings, text, images and lists. We deal with cards lower down. */
 
-.gh-content {
-    font-family: var(--font-serif);
-    font-size: 2rem;
-}
-
 /* Default vertical spacing */
 .gh-content > * + * {
     margin-top: 3.2rem;
@@ -82,6 +77,15 @@ is the very first element in the post content */
 .gh-content a {
     color: var(--ghost-accent-color);
     word-break: break-word;
+}
+
+.gh-content > blockquote,
+.gh-content > ol,
+.gh-content > ul,
+.gh-content > dl,
+.gh-content > p {
+    font-family: var(--font-serif);
+    font-size: 2rem;
 }
 
 .gh-content > ul,
