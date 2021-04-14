@@ -1,6 +1,25 @@
-const {src, dest} = require('gulp');
+const {series, parallel, watch, src, dest} = require('gulp');
 const pump = require('pump');
+const glob = require('glob');
+
+// gulp plugins and utils
+const livereload = require('gulp-livereload');
 const gulpStylelint = require('gulp-stylelint');
+const postcss = require('gulp-postcss');
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
+const beeper = require('beeper');
+const zip = require('gulp-zip');
+
+// postcss plugins
+const easyimport = require('postcss-easy-import');
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
+
+function serve(done) {
+    livereload.listen();
+    done();
+}
 
 function handleError(done) {
     return function (err) {
@@ -8,6 +27,68 @@ function handleError(done) {
         return done(err);
     };
 };
+
+function main(done) {
+    const tasks = glob.sync('packages/*').map(path => {
+        const packageName = path.replace('packages/', '');
+
+        function package(taskDone) {
+            function hbs(done) {
+                pump([
+                    src([`${path}/*.hbs`, `${path}/partials/**/*.hbs`]),
+                    livereload()
+                ], handleError(done));
+            }
+            hbs.displayName = `hbs_${packageName}`;
+
+            function css(done) {
+                pump([
+                    src(`${path}/assets/css/screen.css`, {sourcemaps: true}),
+                    postcss([
+                        easyimport,
+                        autoprefixer(),
+                        cssnano()
+                    ]),
+                    dest(`${path}/assets/built/`, {sourcemaps: '.'}),
+                    livereload()
+                ], handleError(done));
+            }
+            css.displayName = `css_${packageName}`;
+
+            function js(done) {
+                pump([
+                    src([
+                        `${path}/assets/js/lib/*.js`,
+                        `${path}/assets/js/main.js`
+                    ], {sourcemaps: true}),
+                    concat('main.min.js'),
+                    uglify(),
+                    dest(`${path}/assets/built/`, {sourcemaps: '.'}),
+                    livereload()
+                ], handleError(done));
+            }
+            js.displayName = `js_${packageName}`;
+
+
+            const hbsWatcher = () => watch([`${path}/*.hbs`, `${path}/partials/**/*.hbs`], hbs);
+            const cssWatcher = () => watch(`${path}/assets/css/**/*.css`, css);
+            const jsWatcher = () => watch(`${path}/assets/js/**/*.js`, js);
+            const watcher = parallel(hbsWatcher, cssWatcher, jsWatcher);
+            const build = series(css, js);
+
+            series(build, serve, watcher)();
+            taskDone();
+        }
+
+        package.displayName = packageName;
+        return package;
+    });
+
+    return parallel(...tasks, parallelDone => {
+        parallelDone();
+        done();
+    })();
+}
 
 function lint(done) {
     pump([
@@ -23,3 +104,4 @@ function lint(done) {
 }
 
 exports.lint = lint;
+exports.default = main;

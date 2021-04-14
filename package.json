@@ -5,10 +5,11 @@
         "packages/*"
     ],
     "scripts": {
+        "dev": "gulp",
         "alpha": "ln -sfn ~/Developer/Themes/packages/alpha ~/Developer/ghost-monorepo-test/content/themes && yarn workspace alpha dev",
         "beta": "ln -sfn ~/Developer/Themes/packages/beta ~/Developer/ghost-monorepo-test/content/themes && yarn workspace beta dev",
-        "build": "concurrently --kill-others \"yarn workspace alpha build\" \"yarn workspace beta build\"",
         "test": "concurrently --kill-others \"yarn workspace alpha test\" \"yarn workspace beta test\"",
+        "build": "gulp build",
         "lint": "gulp lint"
     },
     "devDependencies": {

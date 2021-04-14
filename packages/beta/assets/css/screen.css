@@ -1,6 +1,1 @@
-@import "shared/reset.css";
-@import "shared/kg.css";
-
-body {
-    background-color: tomato;
-}
+@import "shared/assets/built/screen.css";

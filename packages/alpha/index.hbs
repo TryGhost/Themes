@@ -1,3 +1,9 @@
 {{!< default}}
 
 <h1>Alpha</h1>
+
+{{#foreach posts}}
+    <article>
+        <a href="{{url}}">{{title}}</a>
+    </article>
+{{/foreach}}
