@@ -8,6 +8,7 @@ const gulpStylelint = require('gulp-stylelint');
 const postcss = require('gulp-postcss');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
+const rename = require('gulp-rename');
 const beeper = require('beeper');
 const zip = require('gulp-zip');
 
@@ -69,9 +70,24 @@ function main(done) {
             }
             js.displayName = `js_${packageName}`;
 
+            function allCSS(done) {
+                pump([
+                    src(`packages/*/assets/css/screen.css`, {sourcemaps: true}),
+                    postcss([
+                        easyimport,
+                        autoprefixer(),
+                        cssnano()
+                    ]),
+                    rename(function (path) {
+                        path.dirname = path.dirname.replace('css', 'built');
+                    }),
+                    dest('packages/', {sourcemaps: '.'}),
+                    livereload()
+                ], handleError(done));
+            }
 
             const hbsWatcher = () => watch([`${path}/*.hbs`, `${path}/partials/**/*.hbs`], hbs);
-            const cssWatcher = () => watch(`${path}/assets/css/**/*.css`, css);
+            const cssWatcher = () => watch(`${path}/assets/css/**/*.css`, packageName === '_shared' ? allCSS : css);
             const jsWatcher = () => watch(`${path}/assets/js/**/*.js`, js);
             const watcher = parallel(hbsWatcher, cssWatcher, jsWatcher);
             const build = series(css, js);
