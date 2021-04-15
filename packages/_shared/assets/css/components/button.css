@@ -1,0 +1,12 @@
+.button,
+.gh-head .nav li[class*="subscribe"] a {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.8rem 1.6rem;
+    height: 40px;
+    color: var(--color-white);
+    line-height: 1;
+    font-weight: 600;
+    background-color: var(--color-darker-gray);
+    border-radius: 100px;
+}

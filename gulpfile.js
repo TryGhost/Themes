@@ -100,7 +100,7 @@ function main(done) {
         return package;
     });
 
-    return parallel(...tasks, parallelDone => {
+    return series(...tasks, parallelDone => {
         parallelDone();
         done();
     })();

@@ -10,7 +10,37 @@
     {{ghost_head}}
 </head>
 
-<body class="{{body_class}}">
+{{!--
+b--n--a
+b-n--a
+n--b--a
+b--a_n
+b_n
+--}}
+
+<body class="{{body_class}} header-b_n">
+    <header class="gh-head outer">
+        <div class="gh-head-inner inner">
+            <div class="gh-head-brand">
+                <a class="gh-head-logo" href="{{@site.url}}">
+                    {{#if @site.logo}}
+                        <img src="{{@site.logo}}" alt="{{@site.title}}">
+                    {{else}}
+                        {{@site.title}}
+                    {{/if}}
+                </a>
+            </div>
+
+            <div class="gh-head-menu">
+                {{navigation}}
+            </div>
+
+            <div class="gh-head-actions">
+                {{navigation type="secondary"}}
+            </div>
+        </div>
+    </header>
+
     {{{body}}}
 
     {{ghost_foot}}

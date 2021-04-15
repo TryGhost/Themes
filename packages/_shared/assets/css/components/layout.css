@@ -1,0 +1,8 @@
+.outer {
+    padding: 0 4vmin;
+}
+
+.inner {
+    margin: 0 auto;
+    max-width: 1200px;
+}

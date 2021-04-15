@@ -76,6 +76,7 @@ is the very first element in the post content */
 /* Now the content typography styles */
 .gh-content a {
     color: var(--ghost-accent-color);
+    text-decoration: underline;
     word-break: break-word;
 }
 
