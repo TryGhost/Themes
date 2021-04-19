@@ -144,8 +144,9 @@ function symlink(done) {
 function test(done) {
     glob.sync('packages/*').forEach(path => {
         if (path !== 'packages/_shared') {
-            exec(`gscan ${path} --colors`, (_error, stdout, _stderr) => {
+            exec(`gscan ${path} --colors`, (error, stdout, _stderr) => {
                 console.log(stdout);
+                if (error) process.exit(1);
             });
         }
     });
@@ -158,10 +159,8 @@ function testCI(done) {
     }
 
     exec(`gscan --fatal --verbose packages/${argv.theme} --colors`, (error, stdout, _stderr) => {
-        if (error) {
-            console.log(stdout);
-            process.exit(1);
-        }
+        console.log(stdout);
+        if (error) process.exit(1);
     });
     done();
 }
