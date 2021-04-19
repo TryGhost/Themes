@@ -160,7 +160,7 @@ function testCI(done) {
     exec(`gscan --fatal --verbose packages/${argv.theme} --colors`, (error, stdout, _stderr) => {
         if (error) {
             console.log(stdout);
-            // process.exit(1);
+            process.exit(1);
         }
     });
     done();
