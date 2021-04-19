@@ -1,6 +1,8 @@
 const {series, parallel, watch, src, dest} = require('gulp');
 const pump = require('pump');
 const glob = require('glob');
+const argv = require('yargs').argv;
+const exec = require('child_process').exec;
 
 // gulp plugins and utils
 const livereload = require('gulp-livereload');
@@ -130,5 +132,37 @@ function lint(done) {
     ], handleError(done));
 }
 
+function symlink(done) {
+    if (!argv.theme || !argv.site) {
+        handleError(done('Required parameters [--theme, --site] missing!'));
+    }
+
+    exec(`ln -sfn ~/Developer/Themes/packages/${argv.theme} ${argv.site}/content/themes`);
+    done();
+}
+
+function test(done) {
+    glob.sync('packages/*').forEach(path => {
+        if (path !== 'packages/_shared') {
+            exec(`gscan ${path} --colors`, (_error, stdout, _stderr) => {
+                console.log(stdout);
+            });
+        }
+    });
+    done();
+}
+
+function testCI(done) {
+    if (!argv.theme) {
+        handleError(done('Required parameter [--theme] missing!'));
+    }
+
+    exec(`gscan --fatal --verbose ${argv.theme}`);
+    done();
+}
+
 exports.lint = lint;
+exports.symlink = symlink;
+exports.test = test;
+exports.testCI = testCI;
 exports.default = main;

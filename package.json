@@ -6,11 +6,11 @@
     ],
     "scripts": {
         "dev": "gulp",
-        "alpha": "ln -sfn ~/Developer/Themes/packages/alpha ~/Developer/ghost-monorepo-test/content/themes && yarn workspace alpha dev",
-        "beta": "ln -sfn ~/Developer/Themes/packages/beta ~/Developer/ghost-monorepo-test/content/themes && yarn workspace beta dev",
-        "test": "concurrently --kill-others \"yarn workspace alpha test\" \"yarn workspace beta test\"",
+        "test": "gulp test",
+        "test:ci": "gulp testCI",
         "build": "gulp build",
-        "lint": "gulp lint"
+        "lint": "gulp lint",
+        "symlink": "gulp symlink"
     },
     "devDependencies": {
         "autoprefixer": "10.2.5",
@@ -22,7 +22,7 @@
         "gulp-concat": "2.6.1",
         "gulp-livereload": "4.0.2",
         "gulp-postcss": "9.0.0",
-        "gulp-rename": "^2.0.0",
+        "gulp-rename": "2.0.0",
         "gulp-stylelint": "13.0.0",
         "gulp-uglify": "3.0.2",
         "gulp-zip": "5.1.0",
@@ -31,7 +31,8 @@
         "pump": "3.0.0",
         "stylelint": "13.12.0",
         "stylelint-config-standard": "21.0.0",
-        "stylelint-order": "4.1.0"
+        "stylelint-order": "4.1.0",
+        "yargs": "16.2.0"
     },
     "browserslist": [
         "defaults"

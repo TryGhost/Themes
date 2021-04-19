@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: yarn
-      - run: yarn workspace beta test:ci
+      - run: yarn test:ci beta
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
