@@ -157,7 +157,12 @@ function testCI(done) {
         handleError(done('Required parameter [--theme] missing!'));
     }
 
-    exec(`gscan --fatal --verbose packages/${argv.theme}`);
+    exec(`gscan --fatal --verbose packages/${argv.theme} --colors`, (error, stdout, _stderr) => {
+        if (error) {
+            console.log(stdout);
+            // process.exit(1);
+        }
+    });
     done();
 }
 
