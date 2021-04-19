@@ -165,8 +165,38 @@ function testCI(done) {
     done();
 }
 
+function css(done) {
+    doCSS(`./packages/${argv.theme}`, done);
+}
+
+function js(done) {
+    doJS(`./packages/${argv.theme}`, done);
+}
+
+const build = series(css, js);
+
+function zipper(done) {
+    if (!argv.theme) {
+        handleError(done('Required parameter [--theme] missing!'));
+    }
+
+    const filename = require(`./packages/${argv.theme}/package.json`).name + '.zip';
+
+    pump([
+        src([
+            '**',
+            '!node_modules', '!node_modules/**',
+            '!dist', '!dist/**',
+            '!yarn-error.log'
+        ]),
+        zip(filename),
+        dest(`packages/${argv.theme}/dist/`)
+    ], handleError(done));
+}
+
 exports.lint = lint;
 exports.symlink = symlink;
 exports.test = test;
 exports.testCI = testCI;
+exports.zip = series(build, zipper);
 exports.default = main;
