@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: yarn
-      - run: yarn test:ci alpha
+      - run: yarn test:ci --theme alpha
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
