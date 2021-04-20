@@ -21,6 +21,7 @@ jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     steps:
       - uses: actions/checkout@v2
       - name: Deploy theme
