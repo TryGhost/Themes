@@ -29,7 +29,14 @@ function handleError(done) {
         if (err) beeper();
         return done(err);
     };
-};
+}
+
+function doHBS(path, done) {
+    pump([
+        src([`${path}/*.hbs`, `${path}/partials/**/*.hbs`]),
+        livereload()
+    ], handleError(done));
+}
 
 function doCSS(path, done) {
     pump([
@@ -62,27 +69,24 @@ function main(done) {
         const packageName = path.replace('packages/', '');
 
         function package(taskDone) {
-            function hbs(done) {
-                pump([
-                    src([`${path}/*.hbs`, `${path}/partials/**/*.hbs`]),
-                    livereload()
-                ], handleError(done));
-            }
+            const hbs = (done) => doHBS(path, done);
             hbs.displayName = `hbs_${packageName}`;
 
-            function css(done) {
-                doCSS(path, done);
-            }
+            const css = (done) => doCSS(path, done);
             css.displayName = `css_${packageName}`;
 
-            function js(done) {
-                doJS(path, done);
-            }
+            const js = (done) => doJS(path, done);
             js.displayName = `js_${packageName}`;
 
             const hbsWatcher = () => watch([`${path}/*.hbs`, `${path}/partials/**/*.hbs`], hbs);
+            hbsWatcher.displayName = `hbsWatcher_${packageName}`;
+
             const cssWatcher = () => watch(`${path}/assets/css/**/*.css`, css);
+            cssWatcher.displayName = `cssWatcher_${packageName}`;
+
             const jsWatcher = () => watch(`${path}/assets/js/**/*.js`, js);
+            jsWatcher.displayName = `jsWatcher_${packageName}`;
+
             const watcher = parallel(hbsWatcher, cssWatcher, jsWatcher);
             const build = series(css, js);
 
@@ -113,8 +117,8 @@ function main(done) {
     const sharedCSSWatcher = () => watch('packages/_shared/assets/css/**/*.css', sharedCSS);
     const sharedWatcher = parallel(sharedCSSWatcher);
 
-    return parallel(...tasks, sharedWatcher, parallelDone => {
-        parallelDone();
+    return series(parallel(...tasks), sharedWatcher, tasksDone => {
+        tasksDone();
         done();
     })();
 }
