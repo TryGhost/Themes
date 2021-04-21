@@ -123,17 +123,27 @@ function main(done) {
     })();
 }
 
-function lint(done) {
+function doLint(theme, fix, done) {
+    let source = ['packages/*/assets/css/**/*.css'];
+
+    if (theme) {
+        source = [`packages/${theme}/assets/css/**/*.css`, 'packages/_shared/assets/css/**/*.css'];
+    }
+
     pump([
-        src(['packages/**/*.css', '!packages/*/assets/built/*.css']),
+        src([...source, '!packages/*/assets/built/*.css'], {base: '.'}),
         gulpStylelint({
-            fix: true,
+            fix: fix,
             reporters: [
                 {formatter: 'string', console: true}
             ]
         }),
-        dest('packages/')
+        dest('./')
     ], handleError(done));
+}
+
+function lint(done) {
+    doLint(false, true, done);
 }
 
 function symlink(done) {
@@ -146,15 +156,24 @@ function symlink(done) {
 }
 
 function test(done) {
-    glob.sync('packages/*').forEach(path => {
-        if (path !== 'packages/_shared') {
-            exec(`gscan ${path} --colors`, (error, stdout, _stderr) => {
-                console.log(stdout);
-                if (error) process.exit(1);
-            });
-        }
-    });
-    done();
+    const testLint = lintDone => {
+        doLint(false, false, done)
+        lintDone();
+    };
+
+    const testGScan = gscanDone => {
+        glob.sync('packages/*').forEach(path => {
+            if (path !== 'packages/_shared') {
+                exec(`gscan ${path} --colors`, (error, stdout, _stderr) => {
+                    console.log(stdout);
+                    if (error) process.exit(1);
+                });
+            }
+        });
+        gscanDone();
+    }
+
+    return series(testLint, testGScan)();
 }
 
 function testCI(done) {
@@ -162,11 +181,20 @@ function testCI(done) {
         handleError(done('Required parameter [--theme] missing!'));
     }
 
-    exec(`gscan --fatal --verbose packages/${argv.theme} --colors`, (error, stdout, _stderr) => {
-        console.log(stdout);
-        if (error) process.exit(1);
-    });
-    done();
+    const testLint = lintDone => {
+        doLint(argv.theme, false, done)
+        lintDone();
+    };
+
+    const testGScan = gscanDone => {
+        exec(`gscan --fatal --verbose packages/${argv.theme} --colors`, (error, stdout, _stderr) => {
+            console.log(stdout);
+            if (error) process.exit(1);
+        });
+        gscanDone();
+    }
+
+    return series(testLint, testGScan)();
 }
 
 function css(done) {
