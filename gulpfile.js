@@ -54,8 +54,9 @@ function doCSS(path, done) {
 function doJS(path, done) {
     pump([
         src([
+            ...path.includes('_shared') ? [] : ['packages/_shared/assets/built/main.min.js'],
             `${path}/assets/js/lib/*.js`,
-            `${path}/assets/js/main.js`
+            `${path}/assets/js/main.js`,
         ], {sourcemaps: true}),
         concat('main.min.js'),
         uglify(),

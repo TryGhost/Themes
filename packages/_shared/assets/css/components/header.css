@@ -1,8 +1,13 @@
+.gh-head {
+    z-index: 3999999;
+    background-color: var(--color-white);
+}
+
 .gh-head-inner {
     display: grid;
     grid-template-columns: 1fr auto auto;
     align-items: center;
-    height: 80px;
+    height: var(--header-height);
     column-gap: 2.4rem;
     grid-auto-flow: row dense;
 }
@@ -27,6 +32,8 @@
 .gh-head-actions {
     text-align: right;
 }
+
+/* Header variants */
 
 .header-b--n--a .gh-head-inner {
     grid-template-columns: 1fr auto 1fr;
@@ -66,4 +73,99 @@
 
 .header-b_n .gh-head-actions {
     display: none;
+}
+
+/* Mobile menu */
+
+.gh-burger {
+    position: relative;
+    display: none;
+    margin-right: -3px;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    border: 0;
+    background-color: transparent;
+    appearance: none;
+}
+
+.gh-burger::before,
+.gh-burger::after {
+    content: "";
+    position: absolute;
+    left: 3px;
+    width: 24px;
+    height: 1px;
+    background-color: var(--color-darker-gray);
+    transition: all 0.2s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+}
+
+.gh-burger::before {
+    top: 11px;
+}
+
+.gh-burger::after {
+    bottom: 11px;
+}
+
+.gh-head-opened .gh-burger::before {
+    top: 15px;
+    transform: rotate(45deg);
+}
+
+.gh-head-opened .gh-burger::after {
+    bottom: 14px;
+    transform: rotate(-45deg);
+}
+
+@media (max-width: 991px) {
+    .gh-head-inner {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
+        height: 100%;
+    }
+
+    .gh-head-brand {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: var(--header-height);
+    }
+
+    .gh-burger {
+        display: block;
+    }
+
+    .gh-head-menu,
+    .gh-head-actions {
+        display: none;
+    }
+
+    .gh-head .nav {
+        font-size: 3rem;
+    }
+
+    .gh-head .nav li + li {
+        margin-top: 1rem;
+        margin-left: 0;
+    }
+
+    .gh-head-opened .gh-head {
+        position: fixed;
+        overflow-y: scroll;
+        padding: 0 4vmin 8vmin;
+        width: 100%;
+        height: 100%;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .gh-head-opened .gh-head-menu,
+    .gh-head-opened .gh-head-actions {
+        display: block;
+    }
+
+    .gh-head-opened .nav {
+        display: flex;
+        flex-direction: column;
+    }
 }
