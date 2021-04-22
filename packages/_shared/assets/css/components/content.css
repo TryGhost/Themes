@@ -40,7 +40,7 @@ headings, text, images and lists. We deal with cards lower down. */
 
 /* Default vertical spacing */
 .gh-content > * + * {
-    margin-top: 3.2rem;
+    margin-top: max(4vmin, 2.4rem);
     margin-bottom: 0;
 }
 
@@ -53,7 +53,7 @@ headings, text, images and lists. We deal with cards lower down. */
 /* Add back a top margin to all headings, unless a heading
 is the very first element in the post content */
 .gh-content > [id]:not(:first-child) {
-    margin-top: 5.6rem;
+    margin-top: max(6vmin, 4rem);
 }
 
 /* Add a small margin between a heading and anything after it */
@@ -65,12 +65,12 @@ is the very first element in the post content */
 .gh-content > hr,
 .gh-content > blockquote {
     position: relative;
-    margin-top: 5.6rem;
+    margin-top: max(6vmin, 4rem);
 }
 
 .gh-content > hr + *,
 .gh-content > blockquote + * {
-    margin-top: 5.6rem;
+    margin-top: max(6vmin, 4rem);
 }
 
 /* Now the content typography styles */

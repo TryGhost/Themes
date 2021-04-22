@@ -1,6 +1,6 @@
 {
-    "name": "alpha",
-    "description": "A Ghost theme",
+    "name": "starter",
+    "description": "A starter theme for Ghost theme development",
     "version": "1.0.0",
     "engines": {
         "ghost": ">=4.0.0",
@@ -39,13 +39,5 @@
                 "width": 1920
             }
         }
-    },
-    "scripts": {
-        "dev": "gulp",
-        "test": "gscan .",
-        "test:ci": "gscan --fatal --verbose .",
-        "build": "gulp build",
-        "lint": "gulp lint",
-        "zip": "gulp zip"
     }
 }
