@@ -52,6 +52,7 @@ function doCSS(path, done) {
 }
 
 function doJS(path, done) {
+    console.log(`js - ${path}`)
     pump([
         src([
             ...path.includes('_shared') ? [] : ['packages/_shared/assets/built/main.min.js'],
@@ -114,9 +115,28 @@ function main(done) {
             livereload()
         ], handleError(done));
     }
-
     const sharedCSSWatcher = () => watch('packages/_shared/assets/css/**/*.css', sharedCSS);
-    const sharedWatcher = parallel(sharedCSSWatcher);
+
+    function sharedJS(done) {
+        glob.sync('packages/*').map(path => {
+            if (!path.includes('_shared')) {
+                pump([
+                    src([
+                        'packages/_shared/assets/built/main.min.js',
+                        `${path}/assets/js/lib/*.js`,
+                        `${path}/assets/js/main.js`,
+                    ], {sourcemaps: true}),
+                    concat('main.min.js'),
+                    uglify(),
+                    dest(`${path}/assets/built/`, {sourcemaps: '.'}),
+                    livereload()
+                ], handleError(done));
+            }
+        });
+    }
+    const sharedJSWatcher = () => watch('packages/_shared/assets/js/**/*.js', {delay: 250}, sharedJS);
+
+    const sharedWatcher = parallel(sharedCSSWatcher, sharedJSWatcher);
 
     return series(parallel(...tasks), sharedWatcher, tasksDone => {
         tasksDone();
