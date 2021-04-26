@@ -22,3 +22,7 @@
         container.style.flex = ratio + ' 1 0%';
     });
 })();
+
+(function () {
+    reframe(document.querySelectorAll('.gh-content iframe[src*="youtube.com"], .gh-content iframe[src*="vimeo.com"]'));
+})();

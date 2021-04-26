@@ -89,3 +89,10 @@ code {
     background-color: var(--color-lighter-gray);
     border-radius: 3px;
 }
+
+iframe {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    border: 0;
+}
