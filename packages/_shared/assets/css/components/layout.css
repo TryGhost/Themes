@@ -6,3 +6,39 @@
     margin: 0 auto;
     max-width: 1200px;
 }
+
+/* Canvas creates a multi-column, centered grid which the post
+is laid out on top of. Canvas just defines the grid, we don't
+use it for applying any other styles. */
+
+.gh-canvas {
+    display: grid;
+    grid-template-columns:
+        [full-start]
+        minmax(4vmin, auto)
+        [wide-start]
+        minmax(auto, 240px)
+        [main-start]
+        min(720px, calc(100% - 8vmin))
+        [main-end]
+        minmax(auto, 240px)
+        [wide-end]
+        minmax(4vmin, auto)
+        [full-end];
+}
+
+.gh-canvas > * {
+    grid-column: main-start/main-end;
+}
+
+.kg-width-wide {
+    grid-column: wide-start/wide-end;
+}
+
+.kg-width-full {
+    grid-column: full-start/full-end;
+}
+
+.kg-width-full img {
+    width: 100%;
+}

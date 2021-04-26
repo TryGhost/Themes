@@ -3,6 +3,7 @@ html {
 }
 
 body {
+    color: var(--color-primary-text);
     font-family: var(--font-sans);
     font-size: 1.6rem;
     line-height: 1.6;
@@ -25,11 +26,13 @@ h3,
 h4,
 h5,
 h6 {
+    color: var(--color-darker-gray);
+    line-height: 1.1;
     letter-spacing: -0.01em;
 }
 
 h1 {
-    font-size: 4.8rem;
+    font-size: clamp(3.2rem, 6vmin, 4.8rem);
 }
 
 h2 {
