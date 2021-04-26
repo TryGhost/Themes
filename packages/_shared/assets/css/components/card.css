@@ -1,3 +1,156 @@
-body {
-    background-color: #fff;
+/* Add extra margin before/after any cards,
+except for when immediately preceeded by a heading */
+
+.gh-content :not(.kg-card):not([id]) + .kg-card {
+    margin-top: max(6vmin, 3rem);
+}
+
+.gh-content .kg-card + :not(.kg-card) {
+    margin-top: max(6vmin, 3rem);
+}
+
+/* Galleries
+/* ---------------------------------------------------------- */
+
+/* When there galleries are mixed with images, reduce margin
+between them, so it looks like 1 big gallery */
+
+.kg-image-card + .kg-gallery-card,
+.kg-gallery-card + .kg-image-card,
+.kg-gallery-card + .kg-gallery-card {
+    margin-top: 1rem;
+}
+
+.kg-gallery-container {
+    position: relative;
+}
+
+.kg-gallery-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.kg-gallery-image {
+    cursor: pointer;
+}
+
+.kg-gallery-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.kg-gallery-row:not(:first-of-type) {
+    margin: 1rem 0 0 0;
+}
+
+.kg-gallery-image:not(:first-of-type) {
+    margin: 0 0 0 1rem;
+}
+
+/* Bookmark Cards
+/* ---------------------------------------------------------- */
+
+/* These are styled links with structured data, similar to a
+Twitter card. These styles roughly match what you see in the
+Ghost editor. */
+
+.kg-bookmark-card {
+    position: relative;
+}
+
+.kg-bookmark-container {
+    display: flex;
+    overflow: hidden;
+    border: 1px solid var(--color-light-gray);
+    text-decoration: none !important;
+    border-radius: 4px;
+}
+
+.kg-bookmark-content {
+    flex-grow: 1;
+    overflow: hidden;
+    padding: 2.4rem;
+}
+
+.kg-bookmark-title {
+    color: var(--color-darker-gray);
+    font-size: 1.8rem;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.kg-bookmark-description {
+    display: -webkit-box;
+    overflow: hidden;
+    margin-top: 0.8rem;
+    color: var(--color-secondary-text);
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.kg-bookmark-metadata {
+    display: flex;
+    align-items: center;
+    margin-top: 2.4rem;
+    font-size: 1.4rem;
+    line-height: 1;
+    font-weight: 600;
+}
+
+.kg-bookmark-icon {
+    margin-right: 0.6rem;
+    width: 20px;
+    height: 20px;
+}
+
+.kg-bookmark-author,
+.kg-bookmark-publisher {
+    color: var(--color-darker-gray);
+}
+
+.kg-bookmark-author + .kg-bookmark-publisher::before {
+    content: "•";
+    padding: 0 0.6rem;
+    font-family: serif;
+}
+
+.kg-bookmark-thumbnail {
+    position: relative;
+    flex-shrink: 0;
+    margin-left: 2rem;
+    width: 220px;
+}
+
+.kg-bookmark-thumbnail img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 767px) {
+    .kg-bookmark-container {
+        flex-direction: column-reverse;
+    }
+
+    .kg-bookmark-thumbnail {
+        margin-left: 0;
+        width: 100%;
+        height: 200px;
+    }
+}
+
+/* Card Caption
+/* ---------------------------------------------------------- */
+
+.kg-card figcaption {
+    margin-top: 1.6rem;
+    color: var(--color-secondary-text);
+    font-size: 1.4rem;
+    line-height: 1.4;
+    text-align: center;
 }

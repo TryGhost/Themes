@@ -53,7 +53,7 @@ headings, text, images and lists. We deal with cards lower down. */
 /* Add back a top margin to all headings, unless a heading
 is the very first element in the post content */
 .gh-content > [id]:not(:first-child) {
-    margin-top: max(6vmin, 4rem);
+    margin-top: max(6vmin, 3rem);
 }
 
 /* Add a small margin between a heading and anything after it */
@@ -65,12 +65,12 @@ is the very first element in the post content */
 .gh-content > hr,
 .gh-content > blockquote {
     position: relative;
-    margin-top: max(6vmin, 4rem);
+    margin-top: max(6vmin, 3rem);
 }
 
 .gh-content > hr + *,
 .gh-content > blockquote + * {
-    margin-top: max(6vmin, 4rem);
+    margin-top: max(6vmin, 3rem);
 }
 
 /* Now the content typography styles */
