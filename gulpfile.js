@@ -52,7 +52,6 @@ function doCSS(path, done) {
 }
 
 function doJS(path, done) {
-    console.log(`js - ${path}`)
     pump([
         src([
             ...path.includes('_shared') ? [] : ['packages/_shared/assets/built/main.min.js'],
