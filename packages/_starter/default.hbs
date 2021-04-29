@@ -46,6 +46,22 @@ header-b_n
         <div class="site-content">
             {{{body}}}
         </div>
+
+        <footer class="site-footer outer">
+            <div class="site-footer-inner inner">
+                <div class="copyright">
+                    {{@site.title}} © {{date format="YYYY"}}
+                </div>
+
+                <nav class="footer-nav">
+                    {{navigation}}
+                </nav>
+
+                <div class="powered-by">
+                    <a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a>
+                </div>
+            </div>
+        </footer>
     </div>
 
     {{#is "post, page"}}
