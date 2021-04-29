@@ -48,7 +48,7 @@ between them, so it looks like 1 big gallery */
     margin: 0 0 0 1rem;
 }
 
-/* Bookmark Cards
+/* Bookmark cards
 /* ---------------------------------------------------------- */
 
 /* These are styled links with structured data, similar to a
@@ -144,7 +144,7 @@ Ghost editor. */
     }
 }
 
-/* Card Caption
+/* Card caption
 /* ---------------------------------------------------------- */
 
 .kg-card figcaption {

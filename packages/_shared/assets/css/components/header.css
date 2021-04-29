@@ -41,15 +41,34 @@
     text-align: right;
 }
 
-/* Header variants */
+/* Header variants
+/* ---------------------------------------------------------- */
+
+/*
+======================================================================
+LOGO        Home About Collection Author Portal        Login Subscribe
+======================================================================
+*/
 
 .header-b--n--a .gh-head-inner {
     grid-template-columns: 1fr auto 1fr;
 }
 
+/*
+======================================================================
+LOGO  Home About Collection Author Portal              Login Subscribe
+======================================================================
+*/
+
 .header-b-n--a .gh-head-inner {
     grid-template-columns: auto auto 1fr;
 }
+
+/*
+======================================================================
+Home About Collection            LOGO                  Login Subscribe
+======================================================================
+*/
 
 .header-n--b--a .gh-head-inner {
     grid-template-columns: 1fr auto 1fr;
@@ -58,6 +77,13 @@
 .header-n--b--a .gh-head-brand {
     grid-column-start: 2;
 }
+
+/*
+======================================================================
+LOGO                                                   Login Subscribe
+Home About Collection Author Portal
+======================================================================
+*/
 
 .header-b--a_n .gh-head-inner {
     padding: 2.4rem 0;
@@ -69,6 +95,13 @@
 .header-b--a_n .gh-head-menu {
     grid-row-start: 2;
 }
+
+/*
+======================================================================
+                                LOGO
+                 Home About Collection Author Portal
+======================================================================
+*/
 
 .header-b_n .gh-head-inner {
     justify-content: center;
@@ -87,7 +120,8 @@
     display: none;
 }
 
-/* Mobile menu */
+/* Mobile menu
+/* ---------------------------------------------------------- */
 
 .gh-burger {
     position: relative;
