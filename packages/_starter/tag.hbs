@@ -1,0 +1,29 @@
+{{!< default}}
+
+<main class="site-main">
+    {{#tag}}
+        <section class="taxonomy">
+            {{#if feature_image}}
+                <div class="taxonomy-image">
+                    <img src="{{img_url feature_image size="s"}}" alt="{{name}}">
+                </div>
+            {{/if}}
+
+            <header class="taxonomy-header">
+                <h1 class="taxonomy-name">{{name}}</h1>
+
+                {{#if description}}
+                    <div class="taxonomy-description">{{description}}</div>
+                {{/if}}
+            </header>
+        </section>
+    {{/tag}}
+
+    <div class="post-feed">
+        {{#foreach posts}}
+            {{> loop}}
+        {{/foreach}}
+    </div>
+
+    {{pagination}}
+</main>

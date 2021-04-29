@@ -1,0 +1,42 @@
+{{!< default}}
+
+<main class="site-main">
+    {{#author}}
+        <section class="taxonomy">
+            {{#if profile_image}}
+                <img src="{{profile_image}}" alt="{{name}}">
+            {{else}}
+                <span>{{> "icons/avatar"}}</span>
+            {{/if}}
+
+            <header class="taxonomy-header">
+                <h1 class="taxonomy-name">{{name}}</h1>
+
+                {{#if bio}}
+                    <div class="taxonomy-description">{{bio}}</div>
+                {{/if}}
+
+                {{#if location}}
+                    <div>📍 {{location}}</div>
+                {{/if}}
+                {{#if website}}
+                    <a href="{{website}}" target="_blank" rel="noopener">{{website}}</a>
+                {{/if}}
+                {{#if twitter}}
+                    <a href="{{twitter_url}}" target="_blank" rel="noopener">{{twitter_url}}</a>
+                {{/if}}
+                {{#if facebook}}
+                    <a href="{{facebook_url}}" target="_blank" rel="noopener">{{facebook_url}}</a>
+                {{/if}}
+            </header>
+        </section>
+    {{/author}}
+
+    <div class="post-feed">
+        {{#foreach posts}}
+            {{> loop}}
+        {{/foreach}}
+    </div>
+
+    {{pagination}}
+</main>

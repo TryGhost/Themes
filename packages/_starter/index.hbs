@@ -1,7 +1,11 @@
 {{!< default}}
 
-{{#foreach posts}}
-    <article>
-        <a href="{{url}}">{{title}}</a>
-    </article>
-{{/foreach}}
+<main class="site-main">
+    <div class="post-feed">
+        {{#foreach posts}}
+            {{> loop}}
+        {{/foreach}}
+    </div>
+
+    {{pagination}}
+</main>
