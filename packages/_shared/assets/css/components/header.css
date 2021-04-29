@@ -12,9 +12,17 @@
     grid-auto-flow: row dense;
 }
 
+.gh-head-brand {
+    line-height: 1;
+}
+
 .gh-head-logo {
     font-size: 2.4rem;
     font-weight: 800;
+}
+
+.gh-head-logo img {
+    max-height: 30px;
 }
 
 .nav {
@@ -64,11 +72,15 @@
 
 .header-b_n .gh-head-inner {
     justify-content: center;
-    padding: 2.4rem 0;
+    padding: 5.6rem 0 0;
     height: auto;
     text-align: center;
     grid-template-columns: auto;
-    row-gap: 1.6rem;
+    row-gap: 2.4rem;
+}
+
+.header-b_n .gh-head-logo img {
+    margin: 0 auto;
 }
 
 .header-b_n .gh-head-actions {
