@@ -213,7 +213,16 @@ function archive(data) {
 
 function video() {
     'use strict';
-    reframe(document.querySelectorAll('.single-content iframe[src*="youtube.com"], .single-content iframe[src*="vimeo.com"]'));
+    const sources = [
+        '.single-content iframe[src*="youtube.com"]',
+        '.single-content iframe[src*="youtube-nocookie.com"]',
+        '.single-content iframe[src*="player.vimeo.com"]',
+        '.single-content iframe[src*="kickstarter.com"][src*="video.html"]',
+        'object',
+        'embed',
+    ];
+
+    reframe(document.querySelectorAll(sources.join(',')));
 }
 
 function gallery() {
