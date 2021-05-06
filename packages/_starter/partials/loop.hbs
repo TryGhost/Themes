@@ -1,7 +1,7 @@
-<article class="feed {{post_class}}">
+<article class="gh-card {{post_class}}">
     {{#if feature_image}}
-        <a class="feed-image-link" href="{{url}}">
-            <img class="feed-image"
+        <a class="gh-card-image-link" href="{{url}}">
+            <img class="gh-card-image"
                 srcset="{{img_url feature_image size="s"}} 300w,
                         {{img_url feature_image size="m"}} 720w,
                         {{img_url feature_image size="l"}} 960w,
@@ -15,17 +15,17 @@
         </a>
     {{/if}}
 
-    <header class="feed-header">
+    <header class="gh-card-header">
         {{#if primary_tag}}
             {{#primary_tag}}
-                <a class="feed-tag" href="{{url}}">{{name}}</a>
+                <a class="gh-card-tag" href="{{url}}">{{name}}</a>
             {{/primary_tag}}
         {{/if}}
 
-        <h2 class="feed-title">
+        <h2 class="gh-card-title">
             <a href="{{url}}">{{title}}</a>
         </h2>
     </header>
 
-    <div class="feed-excerpt">{{excerpt}}</div>
+    <div class="gh-card-excerpt">{{excerpt}}</div>
 </article>

@@ -1,12 +1,12 @@
-.article {
+.gh-article {
     padding: 8vmin 0;
 }
 
-.article-header {
+.gh-article-header {
     margin-bottom: max(6vmin, 3rem);
 }
 
-.article-tag {
+.gh-article-tag {
     margin-bottom: 0.8rem;
     color: var(--ghost-accent-color);
     font-size: 1.3rem;
@@ -14,14 +14,14 @@
     text-transform: uppercase;
 }
 
-.article-excerpt {
+.gh-article-excerpt {
     margin-top: 2.4rem;
     color: var(--color-secondary-text);
     font-size: 2rem;
     line-height: 1.4;
 }
 
-.article-image {
+.gh-article-image {
     grid-column: wide-start/wide-end;
     margin-top: max(6vmin, 3rem);
 }

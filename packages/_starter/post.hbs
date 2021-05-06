@@ -2,20 +2,20 @@
 
 {{#post}}
 
-<article class="article {{post_class}}">
-    <header class="article-header gh-canvas">
+<article class="gh-article {{post_class}}">
+    <header class="gh-article-header gh-canvas">
         {{#if primary_tag}}
-            <a class="article-tag" href="{{primary_tag.url}}">{{primary_tag.name}}</a>
+            <a class="gh-article-tag" href="{{primary_tag.url}}">{{primary_tag.name}}</a>
         {{/if}}
 
-        <h1 class="article-title">{{title}}</h1>
+        <h1 class="gh-article-title">{{title}}</h1>
 
         {{#if custom_excerpt}}
-            <p class="article-excerpt">{{custom_excerpt}}</p>
+            <p class="gh-article-excerpt">{{custom_excerpt}}</p>
         {{/if}}
 
         {{#if feature_image}}
-            <figure class="article-image">
+            <figure class="gh-article-image">
                 <img
                     srcset="{{img_url feature_image size="s"}} 300w,
                             {{img_url feature_image size="m"}} 720w,

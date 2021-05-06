@@ -1,8 +1,8 @@
-.outer {
+.gh-outer {
     padding: 0 4vmin;
 }
 
-.inner {
+.gh-inner {
     margin: 0 auto;
     max-width: 1200px;
 }

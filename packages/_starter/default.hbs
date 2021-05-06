@@ -10,18 +10,10 @@
     {{ghost_head}}
 </head>
 
-{{!--
-header-b--n--a
-header-b-n--a
-header-n--b--a
-header-b--a_n
-header-b_n
---}}
-
-<body class="{{body_class}} header-b--n--a">
-    <div class="site">
-        <header class="gh-head outer">
-            <div class="gh-head-inner inner">
+<body class="{{body_class}}">
+    <div class="gh-site">
+        <header class="gh-head gh-outer">
+            <div class="gh-head-inner gh-inner">
                 <div class="gh-head-brand">
                     <a class="gh-head-logo" href="{{@site.url}}">
                         {{#if @site.logo}}
@@ -33,9 +25,9 @@ header-b_n
                     <button class="gh-burger"></button>
                 </div>
 
-                <div class="gh-head-menu">
+                <nav class="gh-head-menu">
                     {{navigation}}
-                </div>
+                </nav>
 
                 <div class="gh-head-actions">
                     {{navigation type="secondary"}}
@@ -43,21 +35,23 @@ header-b_n
             </div>
         </header>
 
-        <div class="site-content">
-            {{{body}}}
-        </div>
+        <main class="gh-main gh-outer">
+            <div class="gh-inner">
+                {{{body}}}
+            </div>
+        </main>
 
-        <footer class="site-footer outer">
-            <div class="site-footer-inner inner">
-                <div class="copyright">
+        <footer class="gh-foot gh-outer">
+            <div class="gh-foot-inner gh-inner">
+                <div class="gh-copyright">
                     {{@site.title}} © {{date format="YYYY"}}
                 </div>
 
-                <nav class="footer-nav">
+                <nav class="gh-foot-menu">
                     {{navigation}}
                 </nav>
 
-                <div class="powered-by">
+                <div class="gh-powered-by">
                     <a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a>
                 </div>
             </div>

@@ -1,29 +1,25 @@
 {{!< default}}
 
-<main class="site-main">
-    {{#tag}}
-        <section class="taxonomy">
-            {{#if feature_image}}
-                <div class="taxonomy-image">
-                    <img src="{{img_url feature_image size="s"}}" alt="{{name}}">
-                </div>
+{{#tag}}
+    <section class="gh-pagehead">
+        {{#if feature_image}}
+            <img class="gh-pagehead-image" src="{{img_url feature_image size="s"}}" alt="{{name}}">
+        {{/if}}
+
+        <header class="gh-pagehead-content">
+            <h1 class="gh-tag-name gh-pagehead-title">{{name}}</h1>
+
+            {{#if description}}
+                <div class="gh-tag-description gh-pagehead-description">{{description}}</div>
             {{/if}}
+        </header>
+    </section>
+{{/tag}}
 
-            <header class="taxonomy-header">
-                <h1 class="taxonomy-name">{{name}}</h1>
+<div class="gh-feed">
+    {{#foreach posts}}
+        {{> loop}}
+    {{/foreach}}
+</div>
 
-                {{#if description}}
-                    <div class="taxonomy-description">{{description}}</div>
-                {{/if}}
-            </header>
-        </section>
-    {{/tag}}
-
-    <div class="post-feed">
-        {{#foreach posts}}
-            {{> loop}}
-        {{/foreach}}
-    </div>
-
-    {{pagination}}
-</main>
+{{pagination}}

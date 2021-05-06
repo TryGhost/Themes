@@ -1,11 +1,9 @@
 {{!< default}}
 
-<main class="site-main">
-    <div class="post-feed">
-        {{#foreach posts}}
-            {{> loop}}
-        {{/foreach}}
-    </div>
+<div class="gh-feed">
+    {{#foreach posts}}
+        {{> loop}}
+    {{/foreach}}
+</div>
 
-    {{pagination}}
-</main>
+{{pagination}}
