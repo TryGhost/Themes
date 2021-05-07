@@ -88,8 +88,8 @@ function main(done) {
             const jsWatcher = () => watch(`${path}/assets/js/**/*.js`, js);
             jsWatcher.displayName = `jsWatcher_${packageName}`;
 
-            const watcher = parallel(hbsWatcher, cssWatcher, jsWatcher);
-            const build = series(css, js);
+            const watcher = packageName !== '_shared' ? parallel(hbsWatcher, cssWatcher, jsWatcher) : parallel(hbsWatcher, jsWatcher);
+            const build = packageName !== '_shared' ? series(css, js) : js;
 
             series(build, serve, watcher)();
             taskDone();
@@ -101,7 +101,7 @@ function main(done) {
 
     function sharedCSS(done) {
         pump([
-            src(`packages/*/assets/css/screen.css`, {sourcemaps: true}),
+            src(['packages/*/assets/css/screen.css', '!packages/_shared/assets/css/screen.css'], {sourcemaps: true}),
             postcss([
                 easyimport,
                 autoprefixer(),
@@ -114,7 +114,7 @@ function main(done) {
             livereload()
         ], handleError(done));
     }
-    const sharedCSSWatcher = () => watch('packages/_shared/assets/css/**/*.css', sharedCSS);
+    const sharedCSSWatcher = () => watch('packages/_shared/assets/css/**/*.css', {delay: 250}, sharedCSS);
 
     function sharedJS(done) {
         glob.sync('packages/*').map(path => {
