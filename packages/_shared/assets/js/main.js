@@ -1,10 +1,10 @@
 // Mobile menu burger toggle
 (function () {
     document.querySelector('.gh-burger').addEventListener('click', function () {
-        if (!document.body.classList.contains('gh-head-opened')) {
-            document.body.classList.add('gh-head-opened');
+        if (!document.body.classList.contains('is-head-open')) {
+            document.body.classList.add('is-head-open');
         } else {
-            document.body.classList.remove('gh-head-opened');
+            document.body.classList.remove('is-head-open');
         }
     });
 })();
@@ -35,6 +35,7 @@
     reframe(document.querySelectorAll('.gh-content iframe[src*="youtube.com"], .gh-content iframe[src*="vimeo.com"]'));
 })();
 
+// Uses PhotoSwipe for gallery images
 function pswp(container, element, trigger, caption, isGallery) {
     var parseThumbnailElements = function (el) {
         var items = [],

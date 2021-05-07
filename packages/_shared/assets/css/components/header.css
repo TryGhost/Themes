@@ -50,7 +50,7 @@ LOGO        Home About Collection Author Portal        Login Subscribe
 ======================================================================
 */
 
-.header-b--n--a .gh-head-inner {
+.is-head-b--n--a .gh-head-inner {
     grid-template-columns: 1fr auto 1fr;
 }
 
@@ -60,7 +60,7 @@ LOGO  Home About Collection Author Portal              Login Subscribe
 ======================================================================
 */
 
-.header-b-n--a .gh-head-inner {
+.is-head-b-n--a .gh-head-inner {
     grid-template-columns: auto auto 1fr;
 }
 
@@ -70,11 +70,11 @@ Home About Collection            LOGO                  Login Subscribe
 ======================================================================
 */
 
-.header-n--b--a .gh-head-inner {
+.is-head-n--b--a .gh-head-inner {
     grid-template-columns: 1fr auto 1fr;
 }
 
-.header-n--b--a .gh-head-brand {
+.is-head-n--b--a .gh-head-brand {
     grid-column-start: 2;
 }
 
@@ -85,14 +85,14 @@ Home About Collection Author Portal
 ======================================================================
 */
 
-.header-b--a_n .gh-head-inner {
+.is-head-b--a_n .gh-head-inner {
     padding: 2.4rem 0;
     height: auto;
     grid-template-columns: auto 1fr;
     row-gap: 1.6rem;
 }
 
-.header-b--a_n .gh-head-menu {
+.is-head-b--a_n .gh-head-menu {
     grid-row-start: 2;
 }
 
@@ -103,7 +103,7 @@ Home About Collection Author Portal
 ======================================================================
 */
 
-.header-b_n .gh-head-inner {
+.is-head-b_n .gh-head-inner {
     justify-content: center;
     padding: 5.6rem 0 0;
     height: auto;
@@ -112,11 +112,11 @@ Home About Collection Author Portal
     row-gap: 2.4rem;
 }
 
-.header-b_n .gh-head-logo img {
+.is-head-b_n .gh-head-logo img {
     margin: 0 auto;
 }
 
-.header-b_n .gh-head-actions {
+.is-head-b_n .gh-head-actions {
     display: none;
 }
 
@@ -154,12 +154,12 @@ Home About Collection Author Portal
     bottom: 11px;
 }
 
-.gh-head-opened .gh-burger::before {
+.is-head-open .gh-burger::before {
     top: 15px;
     transform: rotate(45deg);
 }
 
-.gh-head-opened .gh-burger::after {
+.is-head-open .gh-burger::after {
     bottom: 14px;
     transform: rotate(-45deg);
 }
@@ -196,7 +196,7 @@ Home About Collection Author Portal
         margin-left: 0;
     }
 
-    .gh-head-opened .gh-head {
+    .is-head-open .gh-head {
         position: fixed;
         overflow-y: scroll;
         padding: 0 4vmin 8vmin;
@@ -205,17 +205,17 @@ Home About Collection Author Portal
         -webkit-overflow-scrolling: touch;
     }
 
-    .gh-head-opened .gh-head .gh-head-inner {
+    .is-head-open .gh-head .gh-head-inner {
         height: 100%;
         grid-template-rows: auto 1fr auto;
     }
 
-    .gh-head-opened .gh-head .gh-head-menu,
-    .gh-head-opened .gh-head .gh-head-actions {
+    .is-head-open .gh-head .gh-head-menu,
+    .is-head-open .gh-head .gh-head-actions {
         display: block;
     }
 
-    .gh-head-opened .gh-head .nav {
+    .is-head-open .gh-head .nav {
         display: flex;
         flex-direction: column;
     }
