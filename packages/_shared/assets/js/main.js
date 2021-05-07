@@ -32,7 +32,15 @@
 
 // Responsive video in post content
 (function () {
-    reframe(document.querySelectorAll('.gh-content iframe[src*="youtube.com"], .gh-content iframe[src*="vimeo.com"]'));
+    const sources = [
+        '.gh-content iframe[src*="youtube.com"]',
+        '.gh-content iframe[src*="youtube-nocookie.com"]',
+        '.gh-content iframe[src*="player.vimeo.com"]',
+        '.gh-content iframe[src*="kickstarter.com"][src*="video.html"]',
+        '.gh-content object',
+        '.gh-content embed',
+    ];
+    reframe(document.querySelectorAll(sources.join(',')));
 })();
 
 // Uses PhotoSwipe for gallery images
@@ -118,9 +126,6 @@ function pswp(container, element, trigger, caption, isGallery) {
 
         return false;
     };
-
-    // container = document.querySelector(container);
-    // if (!container) return;
 
     var triggers = document.querySelectorAll(trigger);
     triggers.forEach(function (trig) {
