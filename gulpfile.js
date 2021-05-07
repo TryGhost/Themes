@@ -40,7 +40,7 @@ function doHBS(path, done) {
 
 function doCSS(path, done) {
     pump([
-        src(`${path}/assets/css/screen.css`, {sourcemaps: true}),
+        src(`${path}/assets/css/screen.css`, {sourcemaps: path.includes('_shared') ? false : true}),
         postcss([
             easyimport,
             autoprefixer(),
@@ -57,7 +57,7 @@ function doJS(path, done) {
             ...path.includes('_shared') ? [] : ['packages/_shared/assets/built/main.min.js'],
             `${path}/assets/js/lib/*.js`,
             `${path}/assets/js/main.js`,
-        ], {sourcemaps: true}),
+        ], {sourcemaps: path.includes('_shared') ? false : true}),
         concat('main.min.js'),
         uglify(),
         dest(`${path}/assets/built/`, {sourcemaps: '.'}),
