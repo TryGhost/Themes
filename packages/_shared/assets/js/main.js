@@ -1,4 +1,4 @@
-// Mobile menu burger toggle
+/* Mobile menu burger toggle */
 (function () {
     document.querySelector('.gh-burger').addEventListener('click', function () {
         if (!document.body.classList.contains('is-head-open')) {
@@ -10,7 +10,7 @@
 })();
 
 /* Detects when a gallery card has been used and applies sizing
- * to make sure the display matches what is seen in the editor. */
+to make sure the display matches what is seen in the editor. */
 (function () {
     var images = document.querySelectorAll('.kg-gallery-image img');
     images.forEach(function (image) {
@@ -30,7 +30,7 @@
     );
 })();
 
-// Responsive video in post content
+/* Responsive video in post content */
 (function () {
     const sources = [
         '.gh-content iframe[src*="youtube.com"]',
@@ -43,7 +43,7 @@
     reframe(document.querySelectorAll(sources.join(',')));
 })();
 
-// Uses PhotoSwipe for gallery images
+/* Uses PhotoSwipe for gallery images */
 function pswp(container, element, trigger, caption, isGallery) {
     var parseThumbnailElements = function (el) {
         var items = [],
@@ -51,26 +51,24 @@ function pswp(container, element, trigger, caption, isGallery) {
             linkEl,
             item;
 
-        el
-            .querySelectorAll(element)
-            .forEach(function (v) {
-                gridEl = v;
-                linkEl = gridEl.querySelector(trigger);
+        el.querySelectorAll(element).forEach(function (v) {
+            gridEl = v;
+            linkEl = gridEl.querySelector(trigger);
 
-                item = {
-                    src: isGallery
-                        ? gridEl.querySelector('img').getAttribute('src')
-                        : linkEl.getAttribute('href'),
-                    w: 0,
-                    h: 0,
-                };
+            item = {
+                src: isGallery
+                    ? gridEl.querySelector('img').getAttribute('src')
+                    : linkEl.getAttribute('href'),
+                w: 0,
+                h: 0,
+            };
 
-                if (caption && gridEl.querySelector(caption)) {
-                    item.title = gridEl.querySelector(caption).innerHTML;
-                }
+            if (caption && gridEl.querySelector(caption)) {
+                item.title = gridEl.querySelector(caption).innerHTML;
+            }
 
-                items.push(item);
-            });
+            items.push(item);
+        });
 
         return items;
     };
