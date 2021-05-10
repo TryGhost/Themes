@@ -101,19 +101,18 @@ function main(done) {
     });
 
     function sharedCSS(done) {
-        pump([
-            src(['packages/*/assets/css/screen.css', '!packages/_shared/assets/css/screen.css'], {sourcemaps: true}),
-            postcss([
-                easyimport,
-                autoprefixer(),
-                cssnano()
-            ]),
-            rename(function (path) {
-                path.dirname = path.dirname.replace('css', 'built');
-            }),
-            dest('packages/', {sourcemaps: '.'}),
-            livereload()
-        ], handleError(done));
+        glob.sync('packages/*', {ignore: 'packages/_shared'}).map(path => {
+            pump([
+                src(`${path}/assets/css/screen.css`, {sourcemaps: true}),
+                postcss([
+                    easyimport,
+                    autoprefixer(),
+                    cssnano()
+                ]),
+                dest(`${path}/assets/built/`, {sourcemaps: '.'}),
+                livereload()
+            ], handleError(done));
+        });
     }
     const sharedCSSWatcher = () => watch('packages/_shared/assets/css/**/*.css', sharedCSS);
 
