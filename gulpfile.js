@@ -10,7 +10,6 @@ const gulpStylelint = require('gulp-stylelint');
 const postcss = require('gulp-postcss');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
-const rename = require('gulp-rename');
 const beeper = require('beeper');
 const zip = require('gulp-zip');
 
