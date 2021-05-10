@@ -2,12 +2,12 @@
 .gh-head .nav li[class*="subscribe"] a {
     display: inline-flex;
     align-items: center;
-    padding: 0.8rem 1.6rem;
     height: 40px;
-    color: var(--color-white);
+    padding: 0.8rem 1.6rem;
     font-size: 1.6rem;
-    line-height: 1;
     font-weight: 600;
+    line-height: 1;
+    color: var(--color-white);
     background-color: var(--color-darker-gray);
     border-radius: 100px;
 }

@@ -6,10 +6,10 @@
 .gh-head-inner {
     display: grid;
     grid-template-columns: 1fr auto auto;
+    grid-auto-flow: row dense;
+    column-gap: 2.4rem;
     align-items: center;
     height: var(--header-height);
-    column-gap: 2.4rem;
-    grid-auto-flow: row dense;
 }
 
 .gh-head-brand {
@@ -28,8 +28,8 @@
 .nav {
     display: inline-flex;
     align-items: center;
-    margin: 0;
     padding: 0;
+    margin: 0;
     list-style: none;
 }
 
@@ -86,10 +86,10 @@ Home About Collection Author Portal
 */
 
 .is-head-b--a_n .gh-head-inner {
-    padding: 2.4rem 0;
-    height: auto;
     grid-template-columns: auto 1fr;
     row-gap: 1.6rem;
+    height: auto;
+    padding: 2.4rem 0;
 }
 
 .is-head-b--a_n .gh-head-menu {
@@ -104,12 +104,12 @@ Home About Collection Author Portal
 */
 
 .is-head-b_n .gh-head-inner {
-    justify-content: center;
-    padding: 5.6rem 0 0;
-    height: auto;
-    text-align: center;
     grid-template-columns: auto;
     row-gap: 2.4rem;
+    justify-content: center;
+    height: auto;
+    padding: 5.6rem 0 0;
+    text-align: center;
 }
 
 .is-head-b_n .gh-head-logo img {
@@ -126,22 +126,22 @@ Home About Collection Author Portal
 .gh-burger {
     position: relative;
     display: none;
-    margin-right: -3px;
-    padding: 0;
     width: 30px;
     height: 30px;
-    border: 0;
+    padding: 0;
+    margin-right: -3px;
     background-color: transparent;
+    border: 0;
     appearance: none;
 }
 
 .gh-burger::before,
 .gh-burger::after {
-    content: "";
     position: absolute;
     left: 3px;
     width: 24px;
     height: 1px;
+    content: "";
     background-color: var(--color-darker-gray);
     transition: all 0.2s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
 }
@@ -172,9 +172,9 @@ Home About Collection Author Portal
 
     .gh-head .gh-head-brand {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
         grid-column-start: 1;
+        align-items: center;
+        justify-content: space-between;
         height: var(--header-height);
     }
 
@@ -198,16 +198,16 @@ Home About Collection Author Portal
 
     .is-head-open .gh-head {
         position: fixed;
-        overflow-y: scroll;
-        padding: 0 4vmin 8vmin;
         width: 100%;
         height: 100%;
+        padding: 0 4vmin 8vmin;
+        overflow-y: scroll;
         -webkit-overflow-scrolling: touch;
     }
 
     .is-head-open .gh-head .gh-head-inner {
-        height: 100%;
         grid-template-rows: auto 1fr auto;
+        height: 100%;
     }
 
     .is-head-open .gh-head .gh-head-menu,

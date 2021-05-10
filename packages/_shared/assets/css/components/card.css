@@ -62,31 +62,31 @@ Ghost editor. */
 .kg-bookmark-container {
     display: flex;
     overflow: hidden;
-    border: 1px solid var(--color-light-gray);
     text-decoration: none !important;
+    border: 1px solid var(--color-light-gray);
     border-radius: 4px;
 }
 
 .kg-bookmark-content {
     flex-grow: 1;
-    overflow: hidden;
     padding: 2.4rem;
+    overflow: hidden;
 }
 
 .kg-bookmark-title {
-    color: var(--color-darker-gray);
     font-size: 1.8rem;
-    line-height: 1.3;
     font-weight: 700;
+    line-height: 1.3;
+    color: var(--color-darker-gray);
 }
 
 .kg-bookmark-description {
     display: -webkit-box;
-    overflow: hidden;
     margin-top: 0.8rem;
-    color: var(--color-secondary-text);
+    overflow: hidden;
     font-size: 1.4rem;
     font-weight: 400;
+    color: var(--color-secondary-text);
     text-overflow: ellipsis;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -97,14 +97,14 @@ Ghost editor. */
     align-items: center;
     margin-top: 2.4rem;
     font-size: 1.4rem;
-    line-height: 1;
     font-weight: 600;
+    line-height: 1;
 }
 
 .kg-bookmark-icon {
-    margin-right: 0.6rem;
     width: 20px;
     height: 20px;
+    margin-right: 0.6rem;
 }
 
 .kg-bookmark-author,
@@ -113,16 +113,16 @@ Ghost editor. */
 }
 
 .kg-bookmark-author + .kg-bookmark-publisher::before {
-    content: "•";
     padding: 0 0.6rem;
     font-family: serif;
+    content: "•";
 }
 
 .kg-bookmark-thumbnail {
     position: relative;
     flex-shrink: 0;
-    margin-left: 2rem;
     width: 220px;
+    margin-left: 2rem;
 }
 
 .kg-bookmark-thumbnail img {
@@ -138,9 +138,9 @@ Ghost editor. */
     }
 
     .kg-bookmark-thumbnail {
-        margin-left: 0;
         width: 100%;
         height: 200px;
+        margin-left: 0;
     }
 }
 
@@ -149,8 +149,8 @@ Ghost editor. */
 
 .kg-card figcaption {
     margin-top: 1.6rem;
-    color: var(--color-secondary-text);
     font-size: 1.4rem;
     line-height: 1.4;
+    color: var(--color-secondary-text);
     text-align: center;
 }

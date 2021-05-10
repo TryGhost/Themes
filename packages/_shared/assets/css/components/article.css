@@ -8,17 +8,17 @@
 
 .gh-article-tag {
     margin-bottom: 0.8rem;
-    color: var(--ghost-accent-color);
     font-size: 1.3rem;
     font-weight: 600;
+    color: var(--ghost-accent-color);
     text-transform: uppercase;
 }
 
 .gh-article-excerpt {
     margin-top: 2.4rem;
-    color: var(--color-secondary-text);
     font-size: 2rem;
     line-height: 1.4;
+    color: var(--color-secondary-text);
 }
 
 .gh-article-image {

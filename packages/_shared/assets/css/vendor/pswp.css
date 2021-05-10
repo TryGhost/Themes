@@ -4,13 +4,13 @@
     left: 0;
     z-index: 1500;
     display: none;
-    overflow: hidden;
     width: 100%;
     height: 100%;
-    outline: none;
-    backface-visibility: hidden;
+    overflow: hidden;
     -ms-touch-action: none;
     touch-action: none;
+    outline: none;
+    backface-visibility: hidden;
     -webkit-text-size-adjust: 100%;
 }
 
@@ -58,9 +58,9 @@
     position: absolute;
     top: 0;
     left: 0;
-    overflow: hidden;
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
 .pswp__container,
@@ -129,11 +129,11 @@
     position: absolute;
     top: 50%;
     left: 0;
-    margin-top: -8px;
     width: 100%;
-    color: var(--color-secondary-text);
+    margin-top: -8px;
     font-size: 14px;
     line-height: 16px;
+    color: var(--color-secondary-text);
     text-align: center;
 }
 
@@ -146,15 +146,15 @@
     position: relative;
     display: block;
     float: right;
-    overflow: visible;
-    margin: 0;
-    padding: 0;
     width: 44px;
     height: 44px;
-    border: 0;
-    background: none;
-    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
     cursor: pointer;
+    background: none;
+    border: 0;
+    box-shadow: none;
     transition: opacity 0.2s;
     appearance: none;
 }
@@ -242,9 +242,9 @@
 .pswp__button--arrow--right {
     position: absolute;
     top: 50%;
-    margin-top: -50px;
     width: 70px;
     height: 100px;
+    margin-top: -50px;
     background: none;
 }
 
@@ -258,11 +258,11 @@
 
 .pswp__button--arrow--left::before,
 .pswp__button--arrow--right::before {
-    content: "";
     position: absolute;
     top: 35px;
     width: 32px;
     height: 30px;
+    content: "";
 }
 
 .pswp__button--arrow--left::before {
@@ -279,12 +279,12 @@
     position: absolute;
     top: 0;
     left: 0;
-    padding: 0 15px;
     height: 44px;
-    color: var(--color-white);
+    padding: 0 15px;
     font-size: 11px;
-    line-height: 44px;
     font-weight: 700;
+    line-height: 44px;
+    color: var(--color-white);
     user-select: none;
 }
 
@@ -292,17 +292,17 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    min-height: 44px;
     width: 100%;
+    min-height: 44px;
 }
 
 .pswp__caption__center {
-    margin: 0 auto;
-    padding: 25px 15px 30px;
     max-width: 420px;
-    color: var(--color-white);
+    padding: 25px 15px 30px;
+    margin: 0 auto;
     font-size: 11px;
     line-height: 1.6;
+    color: var(--color-white);
     text-align: center;
 }
 
@@ -314,8 +314,8 @@
 }
 
 .pswp__caption__center .post-caption-meta-item + .post-caption-meta-item::before {
-    content: "\02022";
     padding: 0 4px;
+    content: "\02022";
 }
 
 .pswp__caption--empty {
@@ -330,9 +330,9 @@
     position: absolute;
     top: 0;
     left: 50%;
-    margin-left: -22px;
     width: 44px;
     height: 44px;
+    margin-left: -22px;
     opacity: 0;
     transition: opacity 0.25s ease-out;
     direction: ltr;
@@ -340,9 +340,9 @@
 }
 
 .pswp__preloader__icn {
-    margin: 12px;
     width: 20px;
     height: 20px;
+    margin: 12px;
 }
 
 .pswp__preloader--active {
@@ -369,18 +369,18 @@
     position: absolute;
     top: 15px;
     left: 15px;
-    margin: 0;
     width: 14px;
     height: 14px;
+    margin: 0;
     background: none;
     opacity: 0.75;
 }
 
 .pswp--css_animation .pswp__preloader__cut {
     position: relative;
-    overflow: hidden;
     width: 7px;
     height: 14px;
+    overflow: hidden;
 }
 
 .pswp--css_animation .pswp__preloader__donut {
@@ -388,13 +388,13 @@
     top: 0;
     left: 0;
     box-sizing: border-box;
-    margin: 0;
     width: 14px;
     height: 14px;
+    margin: 0;
+    background: none;
     border: 2px solid var(--color-white);
     border-bottom-color: transparent;
     border-left-color: transparent;
-    background: none;
     border-radius: 50%;
 }
 
@@ -433,8 +433,8 @@
 }
 
 .pswp__ui {
-    visibility: visible;
     z-index: 1550;
+    visibility: visible;
     opacity: 1;
     -webkit-font-smoothing: auto;
 }

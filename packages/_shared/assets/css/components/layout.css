@@ -3,8 +3,8 @@
 }
 
 .gh-inner {
-    margin: 0 auto;
     max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* Canvas creates a multi-column, centered grid which the post

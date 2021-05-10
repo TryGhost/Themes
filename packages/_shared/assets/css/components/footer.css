@@ -10,8 +10,8 @@
 }
 
 .gh-foot-menu .nav li + li::before {
-    content: "•";
     padding: 0 0.8rem;
+    content: "•";
 }
 
 .gh-powered-by {
