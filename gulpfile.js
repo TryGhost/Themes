@@ -40,7 +40,7 @@ function doHBS(path, done) {
 
 function doCSS(path, done) {
     pump([
-        src(`${path}/assets/css/screen.css`, {sourcemaps: path.includes('_shared') ? false : true}),
+        src(`${path}/assets/css/screen.css`, {sourcemaps: true}),
         postcss([
             easyimport,
             autoprefixer(),
@@ -54,10 +54,11 @@ function doCSS(path, done) {
 function doJS(path, done) {
     pump([
         src([
-            ...path.includes('_shared') ? [] : ['packages/_shared/assets/built/main.min.js'],
+            'packages/_shared/assets/js/lib/*.js',
+            'packages/_shared/assets/js/main.js',
             `${path}/assets/js/lib/*.js`,
             `${path}/assets/js/main.js`,
-        ], {sourcemaps: path.includes('_shared') ? false : true}),
+        ], {sourcemaps: true}),
         concat('main.min.js'),
         uglify(),
         dest(`${path}/assets/built/`, {sourcemaps: '.'}),
@@ -66,7 +67,7 @@ function doJS(path, done) {
 }
 
 function main(done) {
-    const tasks = glob.sync('packages/*').map(path => {
+    const tasks = glob.sync('packages/*', {ignore: 'packages/_shared'}).map(path => {
         const packageName = path.replace('packages/', '');
 
         function package(taskDone) {
@@ -88,8 +89,8 @@ function main(done) {
             const jsWatcher = () => watch(`${path}/assets/js/**/*.js`, js);
             jsWatcher.displayName = `jsWatcher_${packageName}`;
 
-            const watcher = packageName !== '_shared' ? parallel(hbsWatcher, cssWatcher, jsWatcher) : parallel(hbsWatcher, jsWatcher);
-            const build = packageName !== '_shared' ? series(css, js) : js;
+            const watcher = parallel(hbsWatcher, cssWatcher, jsWatcher);
+            const build = series(css, js);
 
             series(build, serve, watcher)();
             taskDone();
@@ -114,26 +115,25 @@ function main(done) {
             livereload()
         ], handleError(done));
     }
-    const sharedCSSWatcher = () => watch('packages/_shared/assets/css/**/*.css', {delay: 250}, sharedCSS);
+    const sharedCSSWatcher = () => watch('packages/_shared/assets/css/**/*.css', sharedCSS);
 
     function sharedJS(done) {
-        glob.sync('packages/*').map(path => {
-            if (!path.includes('_shared')) {
-                pump([
-                    src([
-                        'packages/_shared/assets/built/main.min.js',
-                        `${path}/assets/js/lib/*.js`,
-                        `${path}/assets/js/main.js`,
-                    ], {sourcemaps: true}),
-                    concat('main.min.js'),
-                    uglify(),
-                    dest(`${path}/assets/built/`, {sourcemaps: '.'}),
-                    livereload()
-                ], handleError(done));
-            }
+        glob.sync('packages/*', {ignore: 'packages/_shared'}).map(path => {
+            pump([
+                src([
+                    'packages/_shared/assets/js/lib/*.js',
+                    'packages/_shared/assets/js/main.js',
+                    `${path}/assets/js/lib/*.js`,
+                    `${path}/assets/js/main.js`,
+                ], {sourcemaps: true}),
+                concat('main.min.js'),
+                uglify(),
+                dest(`${path}/assets/built/`, {sourcemaps: '.'}),
+                livereload()
+            ], handleError(done));
         });
     }
-    const sharedJSWatcher = () => watch('packages/_shared/assets/js/**/*.js', {delay: 250}, sharedJS);
+    const sharedJSWatcher = () => watch('packages/_shared/assets/js/**/*.js', sharedJS);
 
     const sharedWatcher = parallel(sharedCSSWatcher, sharedJSWatcher);
 
