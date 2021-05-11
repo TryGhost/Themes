@@ -1,7 +1,7 @@
 @import "shared/assets/css/screen.css";
 
 .gh-article-title {
-    text-transform: uppercase;
-    font-weight: 800;
     font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
 }
