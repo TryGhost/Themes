@@ -67,7 +67,7 @@ function doJS(path, done) {
 
 function main(done) {
     const tasks = glob.sync('packages/*', {ignore: 'packages/_shared'}).map(path => {
-        const packageName = path.replace('packages/', '');
+        const packageName = require(`./${path}/package.json`).name;
 
         function package(taskDone) {
             const hbs = (done) => doHBS(path, done);
@@ -180,13 +180,11 @@ function test(done) {
     };
 
     const testGScan = gscanDone => {
-        glob.sync('packages/*').forEach(path => {
-            if (path !== 'packages/_shared') {
-                exec(`gscan ${path} --colors`, (error, stdout, _stderr) => {
-                    console.log(stdout);
-                    if (error) process.exit(1);
-                });
-            }
+        glob.sync('packages/*', {ignore: 'packages/_shared'}).forEach(path => {
+            exec(`gscan ${path} --colors`, (error, stdout, _stderr) => {
+                console.log(stdout);
+                if (error) process.exit(1);
+            });
         });
         gscanDone();
     }
