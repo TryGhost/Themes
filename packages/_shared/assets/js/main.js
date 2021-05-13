@@ -82,12 +82,17 @@ function pswp(container, element, trigger, caption, isGallery) {
         items = parseThumbnailElements(galleryElement);
 
         options = {
+            arrowEl: false,
+            bgOpacity: 0.9,
+            closeEl: false,
             closeOnScroll: false,
+            fullscreenEl: false,
             history: false,
             index: index,
             shareEl: false,
             showAnimationDuration: 0,
             showHideOpacity: true,
+            zoomEl: false,
         };
 
         gallery = new PhotoSwipe(
