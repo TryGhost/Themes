@@ -1,0 +1,11 @@
+.gh-cover {
+    position: relative;
+    min-height: 50vh;
+}
+
+.gh-cover-image {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}

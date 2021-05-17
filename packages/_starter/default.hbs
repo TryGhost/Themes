@@ -10,9 +10,9 @@
     {{ghost_head}}
 </head>
 
-<body class="{{body_class}}">
+<body class="{{body_class}}{{{block "body_class"}}}">
     <div class="gh-site">
-        <header class="gh-head gh-outer">
+        <header id="gh-head" class="gh-head gh-outer">
             <div class="gh-head-inner gh-inner">
                 <div class="gh-head-brand">
                     <a class="gh-head-logo" href="{{@site.url}}">
@@ -35,11 +35,7 @@
             </div>
         </header>
 
-        <main class="gh-main gh-outer">
-            <div class="gh-inner">
-                {{{body}}}
-            </div>
-        </main>
+        {{{body}}}
 
         <footer class="gh-foot gh-outer">
             <div class="gh-foot-inner gh-inner">

@@ -130,6 +130,7 @@ Home About Collection Author Portal
     height: 30px;
     padding: 0;
     margin-right: -3px;
+    cursor: pointer;
     background-color: transparent;
     border: 0;
     appearance: none;
@@ -165,12 +166,12 @@ Home About Collection Author Portal
 }
 
 @media (max-width: 991px) {
-    .gh-head .gh-head-inner {
+    #gh-head .gh-head-inner {
         grid-template-columns: 1fr;
         padding: 0;
     }
 
-    .gh-head .gh-head-brand {
+    #gh-head .gh-head-brand {
         display: flex;
         grid-column-start: 1;
         align-items: center;
@@ -182,41 +183,72 @@ Home About Collection Author Portal
         display: block;
     }
 
-    .gh-head .gh-head-menu,
-    .gh-head .gh-head-actions {
+    #gh-head .gh-head-menu,
+    #gh-head .gh-head-actions {
         display: none;
     }
 
-    .gh-head .nav {
+    #gh-head .nav {
         font-size: 3rem;
     }
 
-    .gh-head .nav li + li {
+    #gh-head .nav li + li {
         margin-top: 1rem;
         margin-left: 0;
     }
 
-    .is-head-open .gh-head {
+    .is-head-open #gh-head {
         position: fixed;
         width: 100%;
         height: 100%;
         padding: 0 4vmin 8vmin;
         overflow-y: scroll;
+        background-color: var(--color-white);
         -webkit-overflow-scrolling: touch;
     }
 
-    .is-head-open .gh-head .gh-head-inner {
+    .is-head-open #gh-head .gh-head-inner {
         grid-template-rows: auto 1fr auto;
         height: 100%;
     }
 
-    .is-head-open .gh-head .gh-head-menu,
-    .is-head-open .gh-head .gh-head-actions {
+    .is-head-open #gh-head .gh-head-menu,
+    .is-head-open #gh-head .gh-head-actions {
         display: block;
     }
 
-    .is-head-open .gh-head .nav {
+    .is-head-open #gh-head .nav {
         display: flex;
         flex-direction: column;
+    }
+}
+
+/* Transparent header
+/* ---------------------------------------------------------- */
+
+.has-cover .gh-head {
+    position: absolute;
+    right: 0;
+    left: 0;
+    background-color: transparent;
+}
+
+.has-cover:not(.is-head-open) .gh-head-logo {
+    color: var(--color-white);
+}
+
+.has-cover:not(.is-head-open) .gh-burger::before,
+.has-cover:not(.is-head-open) .gh-burger::after {
+    background-color: var(--color-white);
+}
+
+@media (min-width: 992px) {
+    .has-cover .gh-head .nav a {
+        color: var(--color-white);
+    }
+
+    .has-cover .gh-head .nav li[class*=subscribe] a {
+        color: var(--color-darker-gray);
+        background-color: var(--color-white);
     }
 }
