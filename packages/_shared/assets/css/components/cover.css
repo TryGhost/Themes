@@ -1,6 +1,6 @@
 .gh-cover {
     position: relative;
-    min-height: 50vh;
+    min-height: var(--cover-height, 50vh);
 }
 
 .gh-cover-image {

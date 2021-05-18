@@ -8,7 +8,7 @@
     grid-auto-flow: row dense;
     column-gap: 2.4rem;
     align-items: center;
-    height: var(--header-height);
+    height: var(--head-height);
 }
 
 .gh-head-brand {
@@ -205,7 +205,7 @@ Home About Collection Author Portal
         grid-column-start: 1;
         align-items: center;
         justify-content: space-between;
-        height: var(--header-height);
+        height: var(--head-height);
     }
 
     .gh-burger {
