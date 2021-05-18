@@ -1,5 +1,4 @@
 .gh-head {
-    z-index: 3999999;
     background-color: var(--color-white);
 }
 
@@ -120,6 +119,36 @@ Home About Collection Author Portal
     display: none;
 }
 
+/* Transparent header
+/* ---------------------------------------------------------- */
+
+.is-head-transparent.home-template .gh-head {
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    background-color: transparent;
+}
+
+.is-head-transparent:not(.home-template) .gh-head {
+    background-color: var(--ghost-accent-color);
+}
+
+.is-head-transparent .gh-head-logo,
+.is-head-transparent .gh-head .nav a {
+    color: var(--color-white);
+}
+
+.is-head-transparent .gh-burger::before,
+.is-head-transparent .gh-burger::after {
+    background-color: var(--color-white);
+}
+
+.is-head-transparent .gh-head .nav li[class*=subscribe] a {
+    color: var(--color-darker-gray);
+    background-color: var(--color-white);
+}
+
 /* Mobile menu
 /* ---------------------------------------------------------- */
 
@@ -199,6 +228,7 @@ Home About Collection Author Portal
 
     .is-head-open #gh-head {
         position: fixed;
+        z-index: 3999999;
         width: 100%;
         height: 100%;
         padding: 0 4vmin 8vmin;
@@ -221,34 +251,8 @@ Home About Collection Author Portal
         display: flex;
         flex-direction: column;
     }
-}
 
-/* Transparent header
-/* ---------------------------------------------------------- */
-
-.has-cover .gh-head {
-    position: absolute;
-    right: 0;
-    left: 0;
-    background-color: transparent;
-}
-
-.has-cover:not(.is-head-open) .gh-head-logo {
-    color: var(--color-white);
-}
-
-.has-cover:not(.is-head-open) .gh-burger::before,
-.has-cover:not(.is-head-open) .gh-burger::after {
-    background-color: var(--color-white);
-}
-
-@media (min-width: 992px) {
-    .has-cover .gh-head .nav a {
-        color: var(--color-white);
-    }
-
-    .has-cover .gh-head .nav li[class*=subscribe] a {
-        color: var(--color-darker-gray);
-        background-color: var(--color-white);
+    .is-head-open.is-head-transparent #gh-head {
+        background-color: var(--ghost-accent-color);
     }
 }
