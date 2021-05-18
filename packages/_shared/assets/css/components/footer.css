@@ -1,6 +1,7 @@
 .gh-foot {
     padding-top: 8rem;
     padding-bottom: 8rem;
+    color: var(--color-secondary-text);
 }
 
 .gh-foot-inner {
@@ -16,6 +17,14 @@
 
 .gh-powered-by {
     text-align: right;
+}
+
+.gh-foot a {
+    color: var(--color-secondary-text);
+}
+
+.gh-foot a:hover {
+    color: var(--color-darker-gray);
 }
 
 @media (max-width: 767px) {
