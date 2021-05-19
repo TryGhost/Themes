@@ -6,7 +6,7 @@
     display: grid;
     grid-template-columns: 1fr auto auto;
     grid-auto-flow: row dense;
-    column-gap: 2.4rem;
+    column-gap: var(--head-nav-gap);
     align-items: center;
     height: var(--head-height);
 }
@@ -37,7 +37,8 @@
 }
 
 .gh-head-actions {
-    text-align: right;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .gh-head-btn {
@@ -111,7 +112,7 @@ Home About Collection Author Portal
     row-gap: 2.4rem;
     justify-content: center;
     height: auto;
-    padding: 5.6rem 0 0;
+    padding: 3.2rem 0;
     text-align: center;
 }
 
