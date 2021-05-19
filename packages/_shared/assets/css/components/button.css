@@ -1,5 +1,4 @@
-.button,
-.gh-head .nav li[class*="subscribe"] a {
+.gh-btn {
     display: inline-flex;
     align-items: center;
     height: 40px;

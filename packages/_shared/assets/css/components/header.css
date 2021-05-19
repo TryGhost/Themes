@@ -33,11 +33,15 @@
 }
 
 .gh-head .nav li + li {
-    margin-left: 2.4rem;
+    margin-left: var(--head-nav-gap);
 }
 
 .gh-head-actions {
     text-align: right;
+}
+
+.gh-head-btn {
+    margin-left: var(--head-nav-gap);
 }
 
 /* Header variants
@@ -144,7 +148,7 @@ Home About Collection Author Portal
     background-color: var(--color-white);
 }
 
-.is-head-transparent .gh-head .nav li[class*=subscribe] a {
+.is-head-transparent .gh-head-btn {
     color: var(--color-darker-gray);
     background-color: var(--color-white);
 }
@@ -218,11 +222,20 @@ Home About Collection Author Portal
     }
 
     #gh-head .nav {
-        font-size: 3rem;
+        font-size: 2.4rem;
     }
 
     #gh-head .nav li + li {
-        margin-top: 1rem;
+        margin-top: 0.8rem;
+        margin-left: 0;
+    }
+
+    #gh-head .gh-head-actions {
+        text-align: center;
+    }
+
+    #gh-head .gh-head-btn {
+        margin-top: 3.2rem;
         margin-left: 0;
     }
 
