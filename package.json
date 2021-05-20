@@ -45,5 +45,10 @@
             "indentation": 4,
             "no-descending-specificity": null
         }
+    },
+    "renovate": {
+        "extends": [
+            "@tryghost:theme"
+        ]
     }
 }
