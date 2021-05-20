@@ -53,9 +53,9 @@ function doCSS(path, done) {
 function doJS(path, done) {
     pump([
         src([
-            'packages/_shared/assets/js/lib/*.js',
+            'packages/_shared/assets/js/lib/**/*.js',
             'packages/_shared/assets/js/main.js',
-            `${path}/assets/js/lib/*.js`,
+            `${path}/assets/js/lib/**/*.js`,
             `${path}/assets/js/main.js`,
         ], {sourcemaps: true}),
         concat('main.min.js'),
@@ -119,9 +119,9 @@ function main(done) {
         glob.sync('packages/*', {ignore: 'packages/_shared'}).map(path => {
             pump([
                 src([
-                    'packages/_shared/assets/js/lib/*.js',
+                    'packages/_shared/assets/js/lib/**/*.js',
                     'packages/_shared/assets/js/main.js',
-                    `${path}/assets/js/lib/*.js`,
+                    `${path}/assets/js/lib/**/*.js`,
                     `${path}/assets/js/main.js`,
                 ], {sourcemaps: true}),
                 concat('main.min.js'),
