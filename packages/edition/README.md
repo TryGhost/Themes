@@ -1,6 +1,6 @@
 # Edition
 
-The newsletter theme for [Ghost](http://github.com/tryghost/ghost/). This is the latest development version of Edition! If you're just looking to download the latest release, head over to the [releases](https://github.com/TryGhost/Edition/releases) page.
+The newsletter theme for [Ghost](http://github.com/tryghost/ghost/). This is the latest development version of Edition! If you're just looking to download the latest release, download the theme [here](https://github.com/TryGhost/Edition/archive/refs/heads/master.zip).
 
 &nbsp;
 
