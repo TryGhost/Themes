@@ -1,6 +1,7 @@
 .kg-gallery-container {
     display: flex;
     flex-direction: column;
+    text-decoration: none !important;
 }
 
 .kg-gallery-row {
