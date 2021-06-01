@@ -160,7 +160,6 @@
 }
 
 .u-text-format a {
-    position: relative;
     color: var(--primary-color);
     font-weight: 700;
     text-decoration: underline;
