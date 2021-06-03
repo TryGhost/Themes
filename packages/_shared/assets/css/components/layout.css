@@ -1,3 +1,13 @@
+.gh-site {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.gh-main {
+    flex-grow: 1;
+}
+
 .gh-outer {
     padding: 0 4vmin;
 }

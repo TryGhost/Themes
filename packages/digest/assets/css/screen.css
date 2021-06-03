@@ -1,0 +1,221 @@
+@import "shared/assets/css/screen.css";
+
+:root {
+    --font-name-content: var(--font-sans);
+    --font-size-content: 1.9rem;
+}
+
+.home-template .gh-main {
+    padding-top: 8vmin;
+}
+
+.gh-head {
+    font-size: 1.7rem;
+}
+
+.gh-section + .gh-section {
+    margin-top: 6.4rem;
+}
+
+.gh-section-title {
+    margin-bottom: 2.4rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--ghost-accent-color);
+    text-transform: uppercase;
+}
+
+.gh-card + .gh-card {
+    margin-top: 4rem;
+}
+
+.gh-card-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.2rem;
+}
+
+.gh-card-title {
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+
+.gh-card-date {
+    padding-top: 0.5rem;
+    margin-left: 2.4rem;
+    font-size: 1.3rem;
+    color: var(--color-secondary-text);
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.gh-card-excerpt {
+    font-size: 1.8rem;
+    line-height: 1.4;
+    color: var(--color-secondary-text);
+}
+
+.gh-featured .gh-card {
+    margin: 0 -3.2rem;
+    background-color: var(--color-lighter-gray);
+    border-radius: 8px;
+}
+
+.gh-featured .gh-card + .gh-card {
+    margin-top: 1.6rem;
+}
+
+.gh-featured .gh-card-link {
+    display: block;
+    padding: 3.2rem 3.2rem 2.8rem;
+}
+
+.gh-subscribe {
+    margin-top: 12vmin;
+    margin-bottom: 4vmin;
+}
+
+.gh-subscribe-box {
+    padding: 4rem 3.2rem;
+    margin: 0 -3.2rem;
+    color: var(--color-white);
+    background-color: var(--ghost-accent-color);
+    border-radius: 8px;
+}
+
+.gh-subscribe-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--color-white);
+}
+
+.gh-subscribe-description {
+    margin-top: 0.8rem;
+    font-size: 1.8rem;
+    line-height: 1.4;
+    opacity: 0.9;
+}
+
+.gh-subscribe-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2.4rem;
+    margin-top: 3.2rem;
+}
+
+.gh-subscribe-form-label {
+    margin-bottom: 1.2rem;
+    line-height: 1;
+    opacity: 0.9;
+}
+
+.gh-subscribe-form-input {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 0 1.2rem;
+    color: var(--color-secondary-text);
+    background-color: var(--color-white);
+    border-radius: 4px;
+}
+
+.gh-subscribe-footer {
+    margin-top: 2.4rem;
+}
+
+.gh-subscribe-btn {
+    color: var(--color-darker-gray);
+    background-color: var(--color-white);
+}
+
+.post-template .gh-head,
+.post-template .gh-article-header,
+.page-template .gh-head,
+.page-template .gh-article-header {
+    background-color: var(--color-lighter-gray);
+}
+
+.gh-article {
+    padding: 0;
+}
+
+.gh-article-header {
+    padding: 8vmin 0 calc(8vmin + 4rem);
+    margin-bottom: 0;
+}
+
+.no-image .gh-article-header {
+    padding-bottom: max(6vmin, 3rem);
+}
+
+.gh-article-date {
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+    color: var(--color-secondary-text);
+    text-transform: uppercase;
+}
+
+.gh-article-image {
+    margin-top: -8vmin;
+}
+
+.gh-article-image img {
+    border-radius: 4px;
+}
+
+.gh-article-footer {
+    margin-top: 6.4rem;
+}
+
+.gh-article-navigation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 1.9rem;
+    font-weight: 700;
+}
+
+.gh-article-navigation-next {
+    text-align: right;
+}
+
+.gh-pagehead {
+    display: flex;
+    margin-top: 8vmin;
+    margin-bottom: 6.4rem;
+}
+
+.gh-pagehead-title {
+    font-size: 4.2rem;
+}
+
+.gh-pagehead-description {
+    margin-top: 0.8rem;
+    font-size: 1.8rem;
+    color: var(--color-secondary-text);
+}
+
+.gh-author-image {
+    width: 128px;
+    height: 128px;
+    margin-right: 3.2rem;
+    border-radius: 50%;
+}
+
+.gh-author-meta {
+    display: flex;
+    align-items: center;
+    margin-top: 0.8rem;
+}
+
+.gh-author-meta > * + * {
+    margin-left: 2rem;
+}
+
+.gh-author-twitter,
+.gh-author-facebook {
+    line-height: 0;
+}
+
+.gh-author-facebook {
+    margin-left: 1.2rem;
+}
