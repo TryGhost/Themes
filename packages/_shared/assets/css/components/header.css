@@ -70,7 +70,7 @@
 }
 
 .gh-head-btn:not(.gh-btn) {
-    font-weight: 600;
+    font-weight: 700;
     color: var(--ghost-accent-color);
 }
 

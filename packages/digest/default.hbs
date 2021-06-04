@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{meta_title}}</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{asset "built/screen.css"}}">
 
     {{ghost_head}}
@@ -48,29 +50,19 @@
         {{{body}}}
 
         <div class="gh-subscribe gh-canvas">
-            <a class="gh-subscribe-link" href="#/portal/signup">
-                <section class="gh-subscribe-box">
-                        <h3 class="gh-subscribe-title">Subscribe to {{@site.title}}</h3>
-                        {{#get "posts" filter="visibility:paid"}}
-                            <div class="gh-subscribe-description">Sign up now to get access to the library of {{plural meta.pagination.total empty='0 members-only issues' singular='% members-only issue' plural='% members-only issues'}}.</div>
-                        {{/get}}
+            <h3 class="gh-subscribe-title">Subscribe to {{@site.title}}</h3>
+            {{#get "posts" filter="visibility:paid"}}
+                <div class="gh-subscribe-description">Sign up now to get access to the library of {{plural meta.pagination.total empty='0 members-only issues' singular='% members-only issue' plural='% members-only issues'}}.</div>
+            {{/get}}
 
-                        <div class="gh-subscribe-form">
-                            <div class="gh-subscribe-form-row">
-                                <div class="gh-subscribe-form-label">Name</div>
-                                <div class="gh-subscribe-form-input">Jamie Larson</div>
-                            </div>
-                            <div class="gh-subscribe-form-row">
-                                <div class="gh-subscribe-form-label">Email</div>
-                                <div class="gh-subscribe-form-input">jamie@example.com</div>
-                            </div>
-                        </div>
-
-                        <footer class="gh-subscribe-footer">
-                            <span class="gh-subscribe-btn gh-btn">Subscribe</span>
-                        </footer>
-                </section>
+            <a class="gh-subscribe-form-input" href="#/portal/signup">
+                Jamie Larson
+                <span class="gh-subscribe-btn">Subscribe</span>
             </a>
+
+            <footer class="gh-subscribe-footer">
+                <a href="#">View recent issues</a>
+            </footer>
         </div>
 
         <footer class="gh-foot gh-outer">

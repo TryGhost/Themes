@@ -1,6 +1,7 @@
 @import "shared/assets/css/screen.css";
 
 :root {
+    --font-sans: Lato;
     --font-name-content: var(--font-sans);
     --font-size-content: 1.9rem;
 }
@@ -13,45 +14,52 @@
     font-size: 1.7rem;
 }
 
+.gh-head-logo {
+    font-weight: 900;
+}
+
 .gh-section + .gh-section {
     margin-top: 6.4rem;
 }
 
 .gh-section-title {
-    margin-bottom: 2.4rem;
+    margin-bottom: 3.2rem;
     font-size: 1.5rem;
-    font-weight: 600;
     color: var(--ghost-accent-color);
     text-transform: uppercase;
+    letter-spacing: 0.02em;
 }
 
-.gh-card + .gh-card {
+.gh-feed .gh-card + .gh-card {
+    padding-top: 4rem;
     margin-top: 4rem;
+    border-top: 1px solid var(--color-light-gray);
 }
 
 .gh-card-header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.6rem;
 }
 
 .gh-card-title {
     font-size: 2.4rem;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .gh-card-date {
     padding-top: 0.5rem;
     margin-left: 2.4rem;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    font-weight: 700;
     color: var(--color-secondary-text);
     text-transform: uppercase;
     white-space: nowrap;
 }
 
 .gh-card-excerpt {
-    font-size: 1.8rem;
-    line-height: 1.4;
+    font-size: 1.7rem;
+    line-height: 1.5;
     color: var(--color-secondary-text);
 }
 
@@ -62,70 +70,69 @@
 }
 
 .gh-featured .gh-card + .gh-card {
-    margin-top: 1.6rem;
+    margin-top: 2.4rem;
 }
 
 .gh-featured .gh-card-link {
     display: block;
-    padding: 3.2rem 3.2rem 2.8rem;
+    padding: 3.2rem;
 }
 
 .gh-subscribe {
+    padding: 7.2rem 0 6.4rem;
     margin-top: 12vmin;
     margin-bottom: 4vmin;
-}
-
-.gh-subscribe-box {
-    padding: 4rem 3.2rem;
-    margin: 0 -3.2rem;
-    color: var(--color-white);
-    background-color: var(--ghost-accent-color);
-    border-radius: 8px;
+    text-align: center;
+    background-color: var(--color-lighter-gray);
 }
 
 .gh-subscribe-title {
-    font-size: 2.8rem;
-    font-weight: 700;
-    color: var(--color-white);
+    font-size: 3.4rem;
+    font-weight: 900;
 }
 
 .gh-subscribe-description {
-    margin-top: 0.8rem;
+    margin-top: 1.6rem;
     font-size: 1.8rem;
     line-height: 1.4;
-    opacity: 0.9;
-}
-
-.gh-subscribe-form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 2.4rem;
-    margin-top: 3.2rem;
-}
-
-.gh-subscribe-form-label {
-    margin-bottom: 1.2rem;
-    line-height: 1;
-    opacity: 0.9;
+    color: var(--color-secondary-text);
 }
 
 .gh-subscribe-form-input {
     display: flex;
     align-items: center;
-    height: 40px;
-    padding: 0 1.2rem;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 560px;
+    height: 56px;
+    padding: 0 6px 0 1.6rem;
+    margin: 3.2rem auto 0;
+    font-size: 1.8rem;
     color: var(--color-secondary-text);
     background-color: var(--color-white);
     border-radius: 4px;
 }
 
-.gh-subscribe-footer {
-    margin-top: 2.4rem;
+.gh-subscribe-btn {
+    display: flex;
+    align-items: center;
+    height: calc(100% - 12px);
+    padding: 0 1.6rem;
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: var(--color-white);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    background-color: var(--ghost-accent-color);
+    border-radius: 4px;
 }
 
-.gh-subscribe-btn {
-    color: var(--color-darker-gray);
-    background-color: var(--color-white);
+.gh-subscribe-footer {
+    margin-top: 3.2rem;
+}
+
+.gh-subscribe-footer a {
+    text-decoration: underline;
 }
 
 .post-template .gh-head,

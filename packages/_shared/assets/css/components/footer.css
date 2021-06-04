@@ -10,8 +10,15 @@
     font-size: 1.3rem;
 }
 
+.gh-foot-menu .nav li {
+    display: flex;
+    align-items: center;
+}
+
 .gh-foot-menu .nav li + li::before {
-    padding: 0 0.8rem;
+    padding: 0 1.2rem;
+    font-size: 0.7rem;
+    line-height: 0;
     content: "•";
 }
 
