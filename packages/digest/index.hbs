@@ -32,9 +32,11 @@
         <h3 class="gh-section-title">Latest</h3>
 
         <div class="gh-feed">
-            {{#foreach posts}}
-                {{> loop}}
-            {{/foreach}}
+            {{#get "posts" limit="all"}}
+                {{#foreach posts}}
+                    {{> loop}}
+                {{/foreach}}
+            {{/get}}
         </div>
     </section>
 

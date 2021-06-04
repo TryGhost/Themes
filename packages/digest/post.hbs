@@ -6,7 +6,9 @@
     <article class="gh-article {{post_class}}">
         <header class="gh-article-header gh-canvas">
             {{#is "post"}}
-                <time class="gh-article-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
+                <div class="gh-article-meta">
+                    <time class="gh-article-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
+                </div>
             {{/is}}
 
             <h1 class="gh-article-title">{{title}}</h1>

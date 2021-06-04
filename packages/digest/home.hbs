@@ -1,0 +1,61 @@
+{{!< default}}
+
+<main class="gh-main">
+    {{#get "posts" limit="1"}}
+        {{#foreach posts}}
+            <article class="gh-article {{post_class}}">
+                <header class="gh-article-header gh-canvas">
+                    <div class="gh-article-header-wrapper">
+                        <div class="gh-article-header-content">
+                            <div class="gh-article-meta">
+                                <span class="gh-article-label">Latest issue</span>
+                                <time class="gh-article-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
+                            </div>
+
+                            <h1 class="gh-article-title">{{title}}</h1>
+
+                            {{#if custom_excerpt}}
+                                <p class="gh-article-excerpt">{{custom_excerpt}}</p>
+                            {{/if}}
+                        </div>
+
+                        {{#if feature_image}}
+                            <figure class="gh-article-image">
+                                <img
+                                    srcset="{{img_url feature_image size="s"}} 300w,
+                                            {{img_url feature_image size="m"}} 720w,
+                                            {{img_url feature_image size="l"}} 960w,
+                                            {{img_url feature_image size="xl"}} 1200w,
+                                            {{img_url feature_image size="xxl"}} 2000w"
+                                    sizes="(max-width: 1200px) 100vw, 1200px"
+                                    src="{{img_url feature_image size="xl"}}"
+                                    alt="{{title}}"
+                                >
+                            </figure>
+                        {{/if}}
+                    </div>
+                </header>
+
+                <section class="gh-content gh-canvas">
+                    {{content}}
+                </section>
+
+                <footer class="gh-article-footer gh-canvas">
+                    <nav class="gh-article-navigation">
+                        <div class="gh-article-navigation-previous">
+                            {{#prev_post}}
+                                <a href="{{url}}" aria-label="Previous issue">← Previous issue</a>
+                            {{/prev_post}}
+                        </div>
+
+                        <div class="gh-article-navigation-next">
+                            {{#next_post}}
+                                <a href="{{url}}" aria-label="Next issue">Next issue →</a>
+                            {{/next_post}}
+                        </div>
+                    </nav>
+                </footer>
+            </article>
+        {{/foreach}}
+    {{/get}}
+</main>
