@@ -16,6 +16,20 @@
 {{/if}} --}}
 
 <main class="gh-main gh-canvas">
+    <section class="gh-pagehead">
+        <header class="gh-pagehead-content">
+            <h1 class="gh-tag-name gh-pagehead-title">Archive</h1>
+
+            <div class="gh-tag-description gh-pagehead-description">
+                {{#if description}}
+                    {{description}}
+                {{else}}
+                    A collection of {{plural pagination.total empty='zero issues' singular='% issue' plural='% issues'}}
+                {{/if}}
+            </div>
+        </header>
+    </section>
+
     {{#get "posts" filter="featured:true" limit="all" as |featured|}}
         <section class="gh-section">
             <h3 class="gh-section-title">Featured</h3>
