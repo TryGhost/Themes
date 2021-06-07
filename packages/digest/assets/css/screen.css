@@ -41,6 +41,10 @@
     border-top: 1px solid var(--color-light-gray);
 }
 
+.gh-card-link:hover .gh-card-title {
+    color: var(--ghost-accent-color);
+}
+
 .gh-card-header {
     display: flex;
     justify-content: space-between;
@@ -50,6 +54,7 @@
 .gh-card-title {
     font-size: 2.4rem;
     font-weight: 900;
+    transition: color 0.1s ease-in-out;
 }
 
 .gh-card-date {
