@@ -44,13 +44,16 @@
                     <nav class="gh-article-navigation">
                         <div class="gh-article-navigation-previous">
                             {{#prev_post}}
-                                <a href="{{url}}" aria-label="Previous issue">← Previous issue</a>
+                                <a href="{{url}}">← Previous issue</a>
+                                <span class="gh-article-navigation-sep">/</span>
                             {{/prev_post}}
+
+                            <a class="gh-article-navigation-all" href="/page/2">All issues</a>
                         </div>
 
                         <div class="gh-article-navigation-next">
                             {{#next_post}}
-                                <a href="{{url}}" aria-label="Next issue">Next issue →</a>
+                                <a href="{{url}}">Next issue →</a>
                             {{/next_post}}
                         </div>
                     </nav>

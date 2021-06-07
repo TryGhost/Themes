@@ -18,6 +18,11 @@
     font-weight: 900;
 }
 
+.gh-head-btn {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+
 .gh-section + .gh-section {
     margin-top: 6.4rem;
 }
@@ -44,7 +49,7 @@
 
 .gh-card-title {
     font-size: 2.4rem;
-    font-weight: 700;
+    font-weight: 900;
 }
 
 .gh-card-date {
@@ -182,6 +187,10 @@
     border-radius: 4px;
 }
 
+.gh-article-title {
+    font-weight: 900;
+}
+
 .gh-article-image {
     grid-column: auto;
     margin-top: -8vmin;
@@ -204,6 +213,18 @@
     grid-template-columns: 1fr 1fr;
     font-size: 1.9rem;
     font-weight: 700;
+}
+
+.gh-article-navigation-previous {
+    display: flex;
+}
+
+.gh-article-navigation-sep {
+    padding: 0 1.2rem;
+}
+
+.gh-article-navigation-all {
+    color: var(--ghost-accent-color);
 }
 
 .gh-article-navigation-next {
