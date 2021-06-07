@@ -233,12 +233,12 @@
 
 .gh-pagehead {
     display: flex;
-    margin-top: 8vmin;
-    margin-bottom: 6.4rem;
+    margin: 8vmin 0;
 }
 
 .gh-pagehead-title {
     font-size: 4.2rem;
+    font-weight: 900;
 }
 
 .gh-pagehead-description {
