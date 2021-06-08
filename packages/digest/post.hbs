@@ -41,7 +41,11 @@
             <nav class="gh-article-navigation">
                 <div class="gh-article-navigation-previous">
                     {{#prev_post}}
-                        <a href="{{url}}" aria-label="Previous issue">← Previous issue</a>
+                        <a class="u-hover reverse" href="{{url}}">
+                            <span>{{> icons/chevron-left}}</span>
+                            <span>{{> icons/chevron-left}}</span>
+                            Previous issue
+                        </a>
                     {{/prev_post}}
                 </div>
 
@@ -49,7 +53,11 @@
 
                 <div class="gh-article-navigation-next">
                     {{#next_post}}
-                        <a href="{{url}}" aria-label="Next issue">Next issue →</a>
+                        <a class="u-hover" href="{{url}}">
+                            Next issue
+                            <span>{{> icons/chevron-right}}</span>
+                            <span>{{> icons/chevron-right}}</span>
+                        </a>
                     {{/next_post}}
                 </div>
             </nav>
