@@ -156,8 +156,7 @@
 }
 
 .gh-featured .gh-card-link {
-    display: block;
-    padding: 3.2rem;
+    padding: 3.6rem 3.2rem;
 }
 
 .gh-subscribe {
@@ -194,6 +193,11 @@
     color: var(--color-secondary-text);
     background-color: var(--color-white);
     border-radius: 28px;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.gh-subscribe-form-input:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
 }
 
 .gh-subscribe-btn {
@@ -256,7 +260,7 @@
 
 .gh-article-label {
     padding: 0.5rem 0.6rem;
-    margin-right: 1.2rem;
+    margin-right: 1.6rem;
     color: var(--color-white);
     background-color: var(--ghost-accent-color);
     border-radius: 4px;
@@ -318,6 +322,15 @@
     margin: 8vmin 0;
 }
 
+.author-template .gh-pagehead {
+    position: relative;
+    padding: 8rem 3.2rem 3.2rem;
+    margin-right: -3.2rem;
+    margin-left: -3.2rem;
+    background: linear-gradient(135deg, #efefef, #f6f6f6);
+    border-radius: 8px;
+}
+
 .gh-pagehead-title {
     font-size: clamp(3.2rem, 6vmin, 4.8rem);
     font-weight: 900;
@@ -330,9 +343,12 @@
 }
 
 .gh-author-image {
+    position: absolute;
+    top: -64px;
     width: 128px;
     height: 128px;
     margin-right: 3.2rem;
+    border: 6px solid var(--color-white);
     border-radius: 50%;
 }
 
