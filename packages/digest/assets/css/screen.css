@@ -324,10 +324,10 @@
 
 .author-template .gh-pagehead {
     position: relative;
-    padding: 8rem 3.2rem 3.2rem;
+    padding: 8rem 3.2rem 4rem;
     margin-right: -3.2rem;
     margin-left: -3.2rem;
-    background: linear-gradient(135deg, #efefef, #f6f6f6);
+    background: linear-gradient(135deg, #efefef, #fafafa);
     border-radius: 8px;
 }
 
