@@ -47,21 +47,19 @@
 
         {{{body}}}
 
-        <div class="gh-subscribe gh-canvas">
-            <h3 class="gh-subscribe-title">Subscribe to {{@site.title}}</h3>
+        <div class="gh-subscribe-wrapper gh-canvas">
+            <section class="gh-subscribe">
+                <h3 class="gh-subscribe-title">Subscribe to {{@site.title}}</h3>
 
-            {{#get "posts" filter="visibility:paid"}}
-                <div class="gh-subscribe-description">Sign up now to get access to the library of {{plural meta.pagination.total empty='0 members-only issues' singular='% members-only issue' plural='% members-only issues'}}.</div>
-            {{/get}}
+                {{#get "posts" filter="visibility:paid"}}
+                    <div class="gh-subscribe-description">Sign up now to get access to the library of {{plural meta.pagination.total empty='0 members-only issues' singular='% members-only issue' plural='% members-only issues'}}.</div>
+                {{/get}}
 
-            <a class="gh-subscribe-form-input" href="#/portal/signup">
-                Jamie Larson
-                <span class="gh-subscribe-btn">Subscribe</span>
-            </a>
-
-            <footer class="gh-subscribe-footer">
-                <a href="/page/2">View recent issues</a>
-            </footer>
+                <a class="gh-subscribe-form-input" href="#/portal/signup">
+                    Jamie Larson
+                    <span class="gh-subscribe-btn">Subscribe →</span>
+                </a>
+            </section>
         </div>
 
         <footer class="gh-foot gh-outer">

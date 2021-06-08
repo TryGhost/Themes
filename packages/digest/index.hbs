@@ -32,7 +32,7 @@
 
     {{#get "posts" filter="featured:true" limit="all" as |featured|}}
         <section class="gh-section">
-            <h3 class="gh-section-title">Featured</h3>
+            <h3 class="gh-section-title"><span>Featured</span></h3>
 
             <div class="gh-featured">
                 {{#foreach featured}}
@@ -43,7 +43,7 @@
     {{/get}}
 
     <section class="gh-section">
-        <h3 class="gh-section-title">Latest</h3>
+        <h3 class="gh-section-title"><span>Latest</span></h3>
 
         <div class="gh-feed">
             {{#get "posts" limit="all"}}

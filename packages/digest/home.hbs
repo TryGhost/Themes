@@ -5,36 +5,32 @@
         {{#foreach posts}}
             <article class="gh-article {{post_class}}">
                 <header class="gh-article-header gh-canvas">
-                    <div class="gh-article-header-wrapper">
-                        <div class="gh-article-header-content">
-                            <div class="gh-article-meta">
-                                <span class="gh-article-label">Latest issue</span>
-                                <time class="gh-article-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
-                            </div>
-
-                            <h1 class="gh-article-title">{{title}}</h1>
-
-                            {{#if custom_excerpt}}
-                                <p class="gh-article-excerpt">{{custom_excerpt}}</p>
-                            {{/if}}
-                        </div>
-
-                        {{#if feature_image}}
-                            <figure class="gh-article-image">
-                                <img
-                                    srcset="{{img_url feature_image size="s"}} 300w,
-                                            {{img_url feature_image size="m"}} 720w,
-                                            {{img_url feature_image size="l"}} 960w,
-                                            {{img_url feature_image size="xl"}} 1200w,
-                                            {{img_url feature_image size="xxl"}} 2000w"
-                                    sizes="(max-width: 1200px) 100vw, 1200px"
-                                    src="{{img_url feature_image size="xl"}}"
-                                    alt="{{title}}"
-                                >
-                            </figure>
-                        {{/if}}
+                    <div class="gh-article-meta">
+                        <span class="gh-article-label">Latest issue</span>
+                        <time class="gh-article-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
                     </div>
+
+                    <h1 class="gh-article-title">{{title}}</h1>
+
+                    {{#if custom_excerpt}}
+                        <p class="gh-article-excerpt">{{custom_excerpt}}</p>
+                    {{/if}}
                 </header>
+
+                {{#if feature_image}}
+                    <figure class="gh-article-image gh-canvas">
+                        <img
+                            srcset="{{img_url feature_image size="s"}} 300w,
+                                    {{img_url feature_image size="m"}} 720w,
+                                    {{img_url feature_image size="l"}} 960w,
+                                    {{img_url feature_image size="xl"}} 1200w,
+                                    {{img_url feature_image size="xxl"}} 2000w"
+                            sizes="(max-width: 1200px) 100vw, 1200px"
+                            src="{{img_url feature_image size="xl"}}"
+                            alt="{{title}}"
+                        >
+                    </figure>
+                {{/if}}
 
                 <section class="gh-content gh-canvas">
                     {{content}}
@@ -45,11 +41,10 @@
                         <div class="gh-article-navigation-previous">
                             {{#prev_post}}
                                 <a href="{{url}}">← Previous issue</a>
-                                <span class="gh-article-navigation-sep">/</span>
                             {{/prev_post}}
-
-                            <a class="gh-article-navigation-all" href="/page/2">All issues</a>
                         </div>
+
+                        <a class="gh-article-navigation-all" href="/page/2">Browse all issues</a>
 
                         <div class="gh-article-navigation-next">
                             {{#next_post}}
