@@ -12,12 +12,18 @@
 
 .gh-article-excerpt {
     margin-top: 2.4rem;
-    font-size: 2.1rem;
-    line-height: 1.4;
+    font-size: 2.3rem;
+    line-height: 1.45;
     color: var(--color-secondary-text);
 }
 
 .gh-article-image {
     grid-column: wide-start/wide-end;
     margin-top: max(6vmin, 3rem);
+}
+
+@media (max-width: 767px) {
+    .gh-article-excerpt {
+        font-size: var(--content-font-size, 2rem);
+    }
 }

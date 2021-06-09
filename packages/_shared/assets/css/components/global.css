@@ -32,7 +32,7 @@ h6 {
 }
 
 h1 {
-    font-size: clamp(3.2rem, 6vmin, 4.8rem);
+    font-size: var(--h1-size);
 }
 
 h2 {

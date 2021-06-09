@@ -13,10 +13,12 @@
     --font-mono: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace; /* stylelint-disable-line value-keyword-case */
     --head-height: 96px;
     --head-nav-gap: 2.4rem;
+    --h1-size: 4.8rem;
 }
 
 @media (max-width: 767px) {
     :root {
         --head-height: 64px;
+        --h1-size: var(--h1-size-s, 3rem);
     }
 }

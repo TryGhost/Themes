@@ -56,8 +56,8 @@ is the very first element in the post content */
 .gh-content > ul,
 .gh-content > dl,
 .gh-content > p {
-    font-family: var(--font-name-content, var(--font-serif));
-    font-size: var(--font-size-content, 2rem);
+    font-family: var(--content-font-name, var(--font-serif));
+    font-size: var(--content-font-size, 2rem);
 }
 
 .gh-content > ul,
