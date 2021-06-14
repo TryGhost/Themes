@@ -51,8 +51,31 @@
     font-size: 1.7rem;
 }
 
+.gh-head-brand-wrapper {
+    display: flex;
+    align-items: center;
+}
+
 .gh-head-logo {
     font-weight: 900;
+}
+
+.gh-head-description {
+    position: relative;
+    padding-left: 2.4rem;
+    margin-left: 2.4rem;
+    color: var(--color-secondary-text);
+}
+
+.gh-head-description::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 1px;
+    height: 40px;
+    margin-top: -20px;
+    content: "";
+    background-color: var(--color-light-gray);
 }
 
 .gh-head-menu,
@@ -409,6 +432,16 @@
 }
 
 @media (max-width: 767px) {
+    .gh-head-description {
+        padding-left: 1.6rem;
+        margin-left: 1.6rem;
+    }
+
+    .gh-head-description::before {
+        height: 32px;
+        margin-top: -16px;
+    }
+
     .gh-section-featured {
         grid-column: full-start / full-end;
     }

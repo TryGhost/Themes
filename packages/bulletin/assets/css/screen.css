@@ -1,0 +1,205 @@
+@import "shared/assets/css/screen.css";
+
+.home-template .gh-portal-triggerbtn-iframe {
+    display: none;
+}
+
+.gh-home {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    height: 100vh;
+}
+
+.gh-home-cta {
+    display: flex;
+    flex-direction: column;
+    padding: 5.6rem;
+    background-color: var(--color-darker-gray);
+}
+
+.gh-home-logo {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--color-white);
+    letter-spacing: -0.01em;
+}
+
+.gh-home-description {
+    margin-top: 1.2rem;
+    font-size: 1.8rem;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.gh-home-subscribe {
+    flex-grow: 1;
+    margin-top: 20vmin;
+}
+
+.gh-home-subscribe-title {
+    font-size: 4rem;
+    font-weight: 600;
+    color: var(--color-white);
+}
+
+.gh-home-subscribe-description {
+    margin-top: 1.6rem;
+    font-size: 1.8rem;
+    color: var(--color-white);
+}
+
+.gh-home-subscribe-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    margin-top: 4rem;
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.7);
+    border-bottom: 4px solid rgba(255, 255, 255, 0.4);
+}
+
+.gh-home-subscribe-input span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    line-height: 0;
+    color: var(--color-white);
+    background-color: var(--ghost-accent-color);
+    border-radius: 50%;
+}
+
+.gh-home-copyright {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.gh-home-latest {
+    position: relative;
+    padding: 5.6rem;
+    overflow: hidden;
+}
+
+.gh-home-latest-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4.8rem;
+}
+
+.gh-home-latest-icon {
+    width: 72px;
+    height: 72px;
+    margin-bottom: 1.6rem;
+}
+
+.gh-home-latest-title {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.gh-home-latest .gh-article {
+    max-width: 720px;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.gh-home-latest .gh-article-header {
+    text-align: center;
+}
+
+.gh-home-latest .gh-article-title {
+    margin-bottom: 1.6rem;
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+.gh-home-latest .gh-article-meta {
+    font-size: 1.5rem;
+    color: var(--color-secondary-text);
+    text-transform: uppercase;
+}
+
+.gh-home-latest .gh-article-image,
+.gh-home-latest .gh-content {
+    margin-top: 4rem;
+}
+
+.gh-home-latest-footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 12rem 0 8rem;
+    text-align: center;
+    background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.7), #fff);
+}
+
+.gh-home-latest-footer .gh-btn {
+    height: 56px;
+    padding: 0.8rem 2.4rem;
+    font-size: 2.2rem;
+    letter-spacing: -0.01em;
+    background-color: var(--ghost-accent-color);
+    box-shadow: 0 27px 80px rgba(0, 0, 0, 0.07), 0 11.28px 33.4221px rgba(0, 0, 0, 0.0503198), 0 6.0308px 17.869px rgba(0, 0, 0, 0.0417275), 0 3.38082px 10.0172px rgba(0, 0, 0, 0.035), 0 1.79553px 5.32008px rgba(0, 0, 0, 0.0282725), 0 0.747159px 2.21381px rgba(0, 0, 0, 0.0196802);
+}
+
+.gh-home-latest-label {
+    position: absolute;
+    top: 3.2rem;
+    right: 3.2rem;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0.9rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1;
+    color: var(--color-darker-gray);
+    border: 1px solid var(--color-light-gray);
+    border-radius: 32px;
+}
+
+.gh-home-latest-indicator {
+    width: 8px;
+    height: 8px;
+    margin-right: 0.8rem;
+    background-color: var(--ghost-accent-color);
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(255, 26, 117, 1);
+    transform: scale(1);
+    animation: pulse-black 2s infinite;
+}
+
+@keyframes pulse-black {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 26, 117, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 4px rgba(255, 26, 117, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 26, 117, 0);
+    }
+}
+
+@media (max-width: 991px) {
+    .gh-home {
+        grid-template-columns: 1fr;
+    }
+
+    .gh-home-subscribe {
+        margin-top: 9.6rem;
+    }
+
+    .gh-home-copyright {
+        display: none;
+    }
+
+    .gh-home-latest {
+        height: 100vh;
+    }
+}
