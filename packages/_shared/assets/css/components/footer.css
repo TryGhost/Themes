@@ -17,7 +17,7 @@
 
 .gh-foot-menu .nav li + li::before {
     padding: 0 1.2rem;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     line-height: 0;
     content: "•";
 }

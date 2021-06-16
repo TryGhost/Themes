@@ -7,6 +7,7 @@
     font-weight: 600;
     line-height: 1;
     color: var(--color-white);
+    letter-spacing: inherit;
     cursor: pointer;
     background-color: var(--color-darker-gray);
     border: 0;

@@ -32,12 +32,12 @@ is the very first element in the post content */
 .gh-content > hr,
 .gh-content > blockquote {
     position: relative;
-    margin-top: max(6vmin, 3rem);
+    margin-top: max(4.8vmin, 3rem);
 }
 
 .gh-content > hr + *,
 .gh-content > blockquote + * {
-    margin-top: max(6vmin, 3rem);
+    margin-top: max(4.8vmin, 3rem);
 }
 
 /* Now the content typography styles */
@@ -57,7 +57,8 @@ is the very first element in the post content */
 .gh-content > dl,
 .gh-content > p {
     font-family: var(--content-font-name, var(--font-serif));
-    font-size: var(--content-font-size, 2rem);
+    font-size: var(--content-font-size, 2.1rem);
+    letter-spacing: var(--content-letter-spacing, 0);
 }
 
 .gh-content > ul,

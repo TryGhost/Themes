@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{meta_title}}</title>
+    <link rel="preload" href="/assets/fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossOrigin="anonymous">
     <link rel="stylesheet" href="{{asset "built/screen.css"}}">
 
     {{ghost_head}}
@@ -31,13 +32,7 @@
                     </nav>
 
                     <div class="gh-head-actions">
-                        {{navigation type="secondary"}}
-
-                        {{#unless @member}}
-                            <a class="gh-head-btn gh-btn" href="#/portal/signup">Subscribe</a>
-                        {{else}}
-                            <a class="gh-head-btn gh-btn" href="#/portal/account">Account</a>
-                        {{/unless}}
+                        <button class="gh-head-btn gh-btn">Archive</button>
                     </div>
                 </div>
             </header>
@@ -53,7 +48,7 @@
                     </div>
 
                     <nav class="gh-foot-menu">
-                        {{navigation}}
+                        {{navigation type="secondary"}}
                     </nav>
 
                     <div class="gh-powered-by">
