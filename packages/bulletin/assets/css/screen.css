@@ -1,6 +1,16 @@
 @import "shared/assets/css/screen.css";
 
+@font-face {
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: optional;
+    src: url("/fonts/mulish-var.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 :root {
+    --font-sans: Mulish; /* stylelint-disable-line value-keyword-case */
     --head-height: 72px;
 }
 
@@ -43,7 +53,6 @@
 
 .gh-home-subscribe-title {
     font-size: 4rem;
-    font-weight: 600;
     color: var(--color-white);
 }
 
@@ -54,6 +63,7 @@
 }
 
 .gh-home-subscribe-input {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -62,6 +72,20 @@
     font-size: 2rem;
     color: rgba(255, 255, 255, 0.7);
     border-bottom: 4px solid rgba(255, 255, 255, 0.4);
+}
+
+.gh-home-subscribe-input::after {
+    position: absolute;
+    bottom: -4px;
+    width: 0;
+    height: 4px;
+    content: "";
+    background-color: #fff;
+    transition: width 0.7s cubic-bezier(0.26, 0.86, 0.6, 0.99);
+}
+
+.gh-home-subscribe-input:hover::after {
+    width: 100%;
 }
 
 .gh-home-subscribe-input span {
@@ -86,30 +110,16 @@
     overflow: hidden;
 }
 
-.gh-home-latest-brand {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 4.8rem;
-}
-
 .gh-home-latest-icon {
     width: 72px;
     height: 72px;
-    margin-bottom: 1.6rem;
-}
-
-.gh-home-latest-title {
-    font-size: 2rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0;
+    margin: 0 auto;
 }
 
 .gh-home-latest .gh-article {
     max-width: 720px;
     padding: 0;
-    margin: 0 auto;
+    margin: 4.8rem auto 0;
 }
 
 .gh-home-latest .gh-article-header {
@@ -122,9 +132,11 @@
 }
 
 .gh-home-latest .gh-article-meta {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    font-weight: 500;
     color: var(--color-secondary-text);
     text-transform: uppercase;
+    letter-spacing: -0.01em;
 }
 
 .gh-home-latest .gh-article-image,
@@ -159,7 +171,7 @@
     align-items: center;
     padding: 0.5rem 0.9rem;
     font-size: 1.4rem;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1;
     color: var(--color-darker-gray);
     border: 1px solid var(--color-light-gray);
@@ -174,7 +186,7 @@
     border-radius: 50%;
     box-shadow: 0 0 0 0 rgba(255, 26, 117, 1);
     transform: scale(1);
-    animation: pulse-black 2s infinite;
+    animation: pulse 2s infinite;
 }
 
 .gh-head {
@@ -186,31 +198,137 @@
     color: var(--color-white);
 }
 
+.gh-head-menu a {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
 .gh-head-btn {
-    height: 36px;
+    height: 32px;
+    padding-right: 1.4rem;
+    padding-left: 1.4rem;
+    font-size: 1.5rem;
     background-color: var(--ghost-accent-color);
 }
 
-.gh-article-tag {
-    font-size: 1.5rem;
-}
-
 .gh-article-meta {
-    margin-top: 1.6rem;
+    margin-top: 2rem;
     font-size: 1.4rem;
+    font-weight: 500;
     color: var(--color-secondary-text);
     text-transform: uppercase;
 }
 
 .gh-article-meta a {
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .gh-article-image {
     grid-column: main-start / main-end;
 }
 
-@keyframes pulse-black {
+.gh-article-footer {
+    padding-top: 3.2rem;
+    margin-top: 8rem;
+    border-top: 1px solid var(--color-light-gray);
+}
+
+.gh-navigation {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+.gh-modal-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 90;
+    display: none;
+    pointer-events: none;
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.gh-modal {
+    width: 600px;
+    padding: 2.8rem 2.4rem;
+    margin: 12rem auto 0;
+    background-color: var(--color-white);
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out;
+    transform: translateY(-12px);
+}
+
+.gh-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2.4rem;
+}
+
+.gh-modal-title {
+    font-weight: 800;
+}
+
+.gh-modal-description {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--color-secondary-text);
+}
+
+.gh-modal-item {
+    padding-top: 2.4rem;
+    margin-top: 2.4rem;
+    border-top: 1px solid var(--color-light-gray);
+}
+
+.gh-modal-item-link {
+    display: block;
+}
+
+.gh-modal-item-meta {
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+    line-height: 1.15;
+    color: var(--color-secondary-text);
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+}
+
+.gh-modal-item-current {
+    margin-left: 0.4rem;
+    font-weight: 600;
+    color: var(--ghost-accent-color);
+}
+
+.gh-modal-item-title {
+    font-size: 1.8rem;
+    letter-spacing: -0.01em;
+}
+
+.gh-modal-close {
+    position: absolute;
+    top: 2.4rem;
+    right: 2.4rem;
+    background-color: var(--color-white);
+    border-radius: 50%;
+}
+
+.is-modal-open .gh-modal-overlay {
+    pointer-events: unset;
+    opacity: 1;
+}
+
+.is-modal-open .gh-modal {
+    transform: translateY(0);
+}
+
+@keyframes pulse {
     0% {
         box-shadow: 0 0 0 0 rgba(255, 26, 117, 0.7);
     }

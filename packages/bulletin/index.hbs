@@ -29,10 +29,9 @@
         </div>
 
         <section class="gh-home-latest">
-            <header class="gh-home-latest-brand">
+            {{#if @site.icon}}
                 <img class="gh-home-latest-icon" src="{{@site.icon}}" alt="{{@site.title}}">
-                <h1 class="gh-home-latest-title">{{@site.title}}</h1>
-            </header>
+            {{/if}}
 
             {{#get "posts" limit="1" include="authors"}}
                 {{#foreach posts}}

@@ -5,6 +5,10 @@
 <main class="gh-main">
     <article class="gh-article {{post_class}}">
         <header class="gh-article-header gh-canvas">
+            {{#if primary_tag}}
+                <a class="gh-article-tag" href="{{primary_tag.url}}">{{primary_tag.name}}</a>
+            {{/if}}
+
             <h1 class="gh-article-title">{{title}}</h1>
 
             <span class="gh-article-meta">
@@ -32,10 +36,63 @@
             {{/if}}
         </header>
 
-        <section class="gh-content gh-canvas">
+        <div class="gh-content gh-canvas">
             {{content}}
-        </section>
+        </div>
+
+        <footer class="gh-article-footer gh-canvas">
+            <nav class="gh-navigation">
+                <div class="gh-navigation-previous">
+                    {{#prev_post}}
+                        <a href="{{url}}">
+                            ← Previous issue
+                        </a>
+                    {{/prev_post}}
+                </div>
+
+                <div class="gh-navigation-middle">
+                    <button class="gh-btn js-archive">Browse archive</button>
+                </div>
+
+                <div class="gh-navigation-next">
+                    {{#next_post}}
+                        <a href="{{url}}">
+                            Next issue →
+                        </a>
+                    {{/next_post}}
+                </div>
+            </nav>
+        </footer>
     </article>
 </main>
+
+<div class="gh-modal-overlay">
+    <section class="gh-modal">
+        {{#get "posts" limit="all"}}
+            <header class="gh-modal-header">
+                <h2 class="gh-modal-title">Archive</h2>
+                <span class="gh-modal-description">
+                    {{plural pagination.total empty='0 issues' singular='% issue' plural='% issues'}}
+                </span>
+            </header>
+
+            {{#foreach posts}}
+                <article class="gh-modal-item">
+                    <a class="gh-modal-item-link" href="{{url}}">
+                        <div class="gh-modal-item-meta">
+                            <time datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
+                            {{#has id=../../id}}<span class="gh-modal-item-current">Current issue</span>{{/has}}
+                        </div>
+                        <h3 class="gh-modal-item-title">{{title}}</h3>
+                    </a>
+                </article>
+            {{/foreach}}
+        {{/get}}
+    </section>
+
+    <button class="gh-modal-close gh-icon-btn">
+        {{> icons/close}}
+    </button>
+</div>
 
 {{/post}}

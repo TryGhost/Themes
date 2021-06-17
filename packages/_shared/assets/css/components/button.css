@@ -4,7 +4,7 @@
     height: 40px;
     padding: 0.8rem 1.6rem;
     font-size: 1.6rem;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 1;
     color: var(--color-white);
     letter-spacing: inherit;
@@ -12,4 +12,23 @@
     background-color: var(--color-darker-gray);
     border: 0;
     border-radius: 100px;
+}
+
+.gh-icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    color: var(--darker-gray-color);
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+}
+
+.gh-icon-btn svg {
+    width: 20px;
+    height: 20px;
 }
