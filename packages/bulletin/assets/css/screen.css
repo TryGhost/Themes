@@ -195,6 +195,7 @@
 }
 
 .gh-head {
+    padding: 0 min(3.2rem, 4vmin);
     background-color: var(--color-darker-gray);
 }
 

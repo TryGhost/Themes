@@ -1,7 +1,6 @@
 @import "shared/assets/css/screen.css";
 
 :root {
-    --head-nav-gap: 2.8rem;
     --content-font-name: var(--font-sans);
     --content-font-size: 1.9rem;
     --content-letter-spacing: -0.01em;

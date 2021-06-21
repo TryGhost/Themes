@@ -15,7 +15,7 @@
     <div class="gh-site">
         {{^is "home"}}
             <header id="gh-head" class="gh-head gh-outer">
-                <div class="gh-head-inner gh-inner">
+                <div class="gh-head-inner">
                     <div class="gh-head-brand">
                         <a class="gh-head-logo" href="{{@site.url}}">
                             {{#if @site.logo}}
@@ -32,7 +32,11 @@
                     </nav>
 
                     <div class="gh-head-actions">
-                        <button class="gh-head-btn gh-btn js-archive">Archive</button>
+                        {{#unless @member}}
+                            <a class="gh-head-btn gh-btn" href="#/portal/signup">Subscribe</a>
+                        {{else}}
+                            <a class="gh-head-btn gh-btn" href="#/portal/account">Account</a>
+                        {{/unless}}
                     </div>
                 </div>
             </header>
