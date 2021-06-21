@@ -131,10 +131,6 @@
     margin: 4rem auto 0;
 }
 
-.gh-home-latest .gh-article-header {
-    text-align: center;
-}
-
 .gh-home-latest .gh-article-title {
     margin-bottom: 2rem;
     font-size: 4.4rem;
@@ -217,8 +213,12 @@
     background-color: var(--ghost-accent-color);
 }
 
+.gh-article-header {
+    text-align: center;
+}
+
 .gh-article-meta {
-    margin-top: 2rem;
+    margin-top: 2.4rem;
     font-size: 1.4rem;
     font-weight: 500;
     color: var(--color-secondary-text);
@@ -233,6 +233,10 @@
     grid-column: main-start / main-end;
 }
 
+.gh-article-excerpt {
+    text-align: left;
+}
+
 .gh-article-footer {
     padding-top: 3.2rem;
     margin-top: 8rem;
@@ -243,95 +247,6 @@
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: -0.01em;
-}
-
-.gh-modal-overlay {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 90;
-    display: none;
-    pointer-events: none;
-    backdrop-filter: blur(8px);
-    background-color: rgba(0, 0, 0, 0.6);
-    opacity: 0;
-    transition: opacity 0.2s ease-in-out;
-}
-
-.gh-modal {
-    width: 600px;
-    padding: 2.8rem 2.4rem;
-    margin: 12rem auto 0;
-    background-color: var(--color-white);
-    border-radius: 8px;
-    transition: transform 0.2s ease-in-out;
-    transform: translateY(-12px);
-}
-
-.gh-modal-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 2.4rem;
-}
-
-.gh-modal-title {
-    font-weight: 800;
-}
-
-.gh-modal-description {
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: var(--color-secondary-text);
-}
-
-.gh-modal-item {
-    padding-top: 2.4rem;
-    margin-top: 2.4rem;
-    border-top: 1px solid var(--color-light-gray);
-}
-
-.gh-modal-item-link {
-    display: block;
-}
-
-.gh-modal-item-meta {
-    margin-bottom: 0.8rem;
-    font-size: 1.2rem;
-    line-height: 1.15;
-    color: var(--color-secondary-text);
-    text-transform: uppercase;
-    letter-spacing: -0.01em;
-}
-
-.gh-modal-item-current {
-    margin-left: 0.4rem;
-    font-weight: 600;
-    color: var(--ghost-accent-color);
-}
-
-.gh-modal-item-title {
-    font-size: 1.8rem;
-    letter-spacing: -0.01em;
-}
-
-.gh-modal-close {
-    position: absolute;
-    top: 2.4rem;
-    right: 2.4rem;
-    background-color: var(--color-white);
-    border-radius: 50%;
-}
-
-.is-modal-open .gh-modal-overlay {
-    pointer-events: unset;
-    opacity: 1;
-}
-
-.is-modal-open .gh-modal {
-    transform: translateY(0);
 }
 
 @keyframes pulse {
