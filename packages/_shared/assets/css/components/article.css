@@ -19,7 +19,7 @@
 
 .gh-article-image {
     grid-column: wide-start/wide-end;
-    margin-top: max(6vmin, 3rem);
+    margin-top: max(4.8vmin, 3rem);
 }
 
 @media (max-width: 767px) {

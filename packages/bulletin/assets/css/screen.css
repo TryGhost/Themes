@@ -107,19 +107,28 @@
 .gh-home-latest {
     position: relative;
     padding: 5.6rem;
+    padding-bottom: 0;
     overflow: hidden;
+    background: linear-gradient(315deg, #efefef, #fff);
+}
+
+.gh-home-latest-wrapper {
+    width: 125%;
+    height: 125%;
+    transform: scale(0.8);
+    transform-origin: 0 0;
 }
 
 .gh-home-latest-icon {
-    width: 72px;
-    height: 72px;
+    width: 80px;
+    height: 80px;
     margin: 0 auto;
 }
 
 .gh-home-latest .gh-article {
-    max-width: 720px;
+    max-width: 60%;
     padding: 0;
-    margin: 4.8rem auto 0;
+    margin: 4rem auto 0;
 }
 
 .gh-home-latest .gh-article-header {
@@ -127,21 +136,16 @@
 }
 
 .gh-home-latest .gh-article-title {
-    margin-bottom: 1.6rem;
-    font-size: 4rem;
+    margin-bottom: 2rem;
+    font-size: 4.4rem;
 }
 
 .gh-home-latest .gh-article-meta {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 500;
     color: var(--color-secondary-text);
     text-transform: uppercase;
     letter-spacing: -0.01em;
-}
-
-.gh-home-latest .gh-article-image,
-.gh-home-latest .gh-content {
-    margin-top: 4rem;
 }
 
 .gh-home-latest-footer {
@@ -149,18 +153,19 @@
     right: 0;
     bottom: 0;
     left: 0;
-    padding: 12rem 0 8rem;
+    padding: 12rem 0;
     text-align: center;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.7), #fff);
 }
 
 .gh-home-latest-footer .gh-btn {
-    height: 56px;
-    padding: 0.8rem 2.4rem;
-    font-size: 2.2rem;
+    height: 48px;
+    padding: 0.8rem 2rem;
+    font-size: 2rem;
     letter-spacing: -0.03em;
     background-color: var(--ghost-accent-color);
     box-shadow: 0 27px 80px rgba(0, 0, 0, 0.07), 0 11.28px 33.4221px rgba(0, 0, 0, 0.0503198), 0 6.0308px 17.869px rgba(0, 0, 0, 0.0417275), 0 3.38082px 10.0172px rgba(0, 0, 0, 0.035), 0 1.79553px 5.32008px rgba(0, 0, 0, 0.0282725), 0 0.747159px 2.21381px rgba(0, 0, 0, 0.0196802);
+    transform: scale(1.25);
 }
 
 .gh-home-latest-label {

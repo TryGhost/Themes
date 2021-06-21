@@ -3,7 +3,7 @@ created within the Ghost editor. The main content handles
 headings, text, images and lists. We deal with cards lower down. */
 
 .gh-content {
-    margin-top: max(6vmin, 3rem);
+    margin-top: max(4.8vmin, 3rem);
 }
 
 /* Default vertical spacing */
@@ -20,7 +20,7 @@ headings, text, images and lists. We deal with cards lower down. */
 /* Add back a top margin to all headings, unless a heading
 is the very first element in the post content */
 .gh-content > [id]:not(:first-child) {
-    margin-top: max(6vmin, 3rem);
+    margin-top: max(4.8vmin, 3rem);
 }
 
 /* Add a small margin between a heading and anything after it */
