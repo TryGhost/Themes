@@ -264,8 +264,7 @@
     content: "";
     background-color: var(--color-darker-gray);
     opacity: 0;
-    /* transition: width 0.7s cubic-bezier(0.26, 0.86, 0.6, 0.99); */
-    transition: opacity 0.4s ease;
+    transition: opacity 0.2s ease;
 }
 
 .gh-card-link:hover::before {
@@ -274,7 +273,7 @@
 }
 
 .gh-feed:hover .gh-card-link {
-    opacity: 0.3;
+    opacity: 0.4;
 }
 
 .gh-feed:hover .gh-card-link:hover {
