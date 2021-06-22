@@ -128,13 +128,14 @@
 .gh-home-latest-icon {
     width: 80px;
     height: 80px;
-    margin: 0 auto 4rem;
+    margin: 0 auto;
 }
 
 .gh-home-latest .gh-article {
     position: relative;
     max-width: 750px;
     padding: 0;
+    padding-top: 4rem;
     margin: 0 auto;
 }
 
