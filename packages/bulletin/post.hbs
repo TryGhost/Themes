@@ -7,15 +7,17 @@
         <header class="gh-article-header gh-canvas">
             <h1 class="gh-article-title">{{title}}</h1>
 
-            <span class="gh-article-meta">
-                {{#primary_author}}By <a href="{{url}}">{{name}}</a>{{/primary_author}}
-                {{#if primary_tag}}
-                    in
-                    <a class="gh-article-tag" href="{{primary_tag.url}}">{{primary_tag.name}}</a>
-                {{/if}}
-                —
-                <time datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
-            </span>
+            {{#is "post"}}
+                <span class="gh-article-meta">
+                    {{#primary_author}}By <a href="{{url}}">{{name}}</a>{{/primary_author}}
+                    {{#if primary_tag}}
+                        in
+                        <a class="gh-article-tag" href="{{primary_tag.url}}">{{primary_tag.name}}</a>
+                    {{/if}}
+                    —
+                    <time datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
+                </span>
+            {{/is}}
 
             {{#if custom_excerpt}}
                 <p class="gh-article-excerpt">{{custom_excerpt}}</p>
@@ -41,29 +43,31 @@
             {{content}}
         </div>
 
-        <footer class="gh-article-footer gh-canvas">
-            <nav class="gh-navigation">
-                <div class="gh-navigation-previous">
-                    {{#prev_post}}
-                        <a class="gh-navigation-link" href="{{url}}">
-                            {{> icons/arrow-left}} Previous issue
-                        </a>
-                    {{/prev_post}}
-                </div>
+        {{#is "post"}}
+            <footer class="gh-article-footer gh-canvas">
+                <nav class="gh-navigation">
+                    <div class="gh-navigation-previous">
+                        {{#prev_post}}
+                            <a class="gh-navigation-link" href="{{url}}">
+                                {{> icons/arrow-left}} Previous issue
+                            </a>
+                        {{/prev_post}}
+                    </div>
 
-                <div class="gh-navigation-middle">
-                    <a class="gh-navigation-link" href="/page/2">Browse archive</a>
-                </div>
+                    <div class="gh-navigation-middle">
+                        <a class="gh-navigation-link" href="/page/2">Browse archive</a>
+                    </div>
 
-                <div class="gh-navigation-next">
-                    {{#next_post}}
-                        <a class="gh-navigation-link" href="{{url}}">
-                            Next issue {{> icons/arrow-right}}
-                        </a>
-                    {{/next_post}}
-                </div>
-            </nav>
-        </footer>
+                    <div class="gh-navigation-next">
+                        {{#next_post}}
+                            <a class="gh-navigation-link" href="{{url}}">
+                                Next issue {{> icons/arrow-right}}
+                            </a>
+                        {{/next_post}}
+                    </div>
+                </nav>
+            </footer>
+        {{/is}}
     </article>
 </main>
 

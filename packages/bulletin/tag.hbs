@@ -1,29 +1,27 @@
 {{!< default}}
 
-<main class="gh-main gh-outer">
-    <div class="gh-inner">
-        {{#tag}}
-            <section class="gh-pagehead">
-                {{#if feature_image}}
-                    <img class="gh-pagehead-image" src="{{img_url feature_image size="s"}}" alt="{{name}}">
-                {{/if}}
+<main class="gh-main gh-inner">
+    {{#tag}}
+        <section class="gh-pagehead">
+            <header class="gh-pagehead-content">
+                <h1 class="gh-tag-name gh-pagehead-title">{{name}}</h1>
 
-                <header class="gh-pagehead-content">
-                    <h1 class="gh-tag-name gh-pagehead-title">{{name}}</h1>
-
+                <div class="gh-tag-description gh-pagehead-description">
                     {{#if description}}
-                        <div class="gh-tag-description gh-pagehead-description">{{description}}</div>
+                        {{description}}
+                    {{else}}
+                        A collection of {{plural ../pagination.total empty='zero issues' singular='% issue' plural='% issues'}}
                     {{/if}}
-                </header>
-            </section>
-        {{/tag}}
+                </div>
+            </header>
+        </section>
+    {{/tag}}
 
-        <div class="gh-feed">
+    <div class="gh-feed">
+        {{#get "posts" limit="all"}}
             {{#foreach posts}}
                 {{> loop}}
             {{/foreach}}
-        </div>
-
-        {{pagination}}
+        {{/get}}
     </div>
 </main>

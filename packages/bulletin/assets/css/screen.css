@@ -19,7 +19,7 @@
     display: none;
 }
 
-.paged .gh-main {
+body:not(.home-template) .gh-main {
     padding: 8vmin 0;
 }
 
@@ -260,6 +260,41 @@
     color: var(--color-secondary-text);
 }
 
+.gh-author {
+    display: flex;
+}
+
+.gh-author-image {
+    width: 96px;
+    height: 96px;
+    margin-right: 2.4rem;
+    border-radius: 50%;
+}
+
+.gh-author-bio {
+    margin-top: 0.8rem;
+}
+
+.gh-author-meta {
+    display: flex;
+    align-items: center;
+    margin-top: 2.4rem;
+    color: var(--color-darker-gray);
+}
+
+.gh-author-meta > * + * {
+    margin-left: 2rem;
+}
+
+.gh-author-twitter,
+.gh-author-facebook {
+    line-height: 0;
+}
+
+.gh-author-facebook {
+    margin-left: 1.2rem;
+}
+
 .gh-card-link {
     position: relative;
     display: flex;
@@ -313,6 +348,10 @@
 .gh-card-excerpt::before {
     padding: 0 0.4rem;
     content: "—";
+}
+
+.gh-article {
+    padding: 0;
 }
 
 .gh-article-header {
