@@ -7,3 +7,21 @@
 .gh-navigation-next {
     text-align: right;
 }
+
+.gh-navigation-link {
+    display: inline-flex;
+    align-items: center;
+}
+
+.gh-navigation-link svg {
+    width: 20px;
+    height: 20px;
+}
+
+.gh-navigation-previous svg {
+    margin-right: 0.4rem;
+}
+
+.gh-navigation-next svg {
+    margin-left: 0.4rem;
+}

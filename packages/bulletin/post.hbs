@@ -45,8 +45,8 @@
             <nav class="gh-navigation">
                 <div class="gh-navigation-previous">
                     {{#prev_post}}
-                        <a href="{{url}}">
-                            ← Previous issue
+                        <a class="gh-navigation-link" href="{{url}}">
+                            {{> icons/arrow-left}} Previous issue
                         </a>
                     {{/prev_post}}
                 </div>
@@ -57,8 +57,8 @@
 
                 <div class="gh-navigation-next">
                     {{#next_post}}
-                        <a href="{{url}}">
-                            Next issue →
+                        <a class="gh-navigation-link" href="{{url}}">
+                            Next issue {{> icons/arrow-right}}
                         </a>
                     {{/next_post}}
                 </div>
