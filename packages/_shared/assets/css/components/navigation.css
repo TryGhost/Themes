@@ -4,8 +4,13 @@
     align-items: center;
 }
 
+.gh-navigation > div {
+    display: flex;
+    align-items: center;
+}
+
 .gh-navigation-next {
-    text-align: right;
+    justify-content: flex-end;
 }
 
 .gh-navigation-link {
@@ -14,8 +19,8 @@
 }
 
 .gh-navigation-link svg {
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
 }
 
 .gh-navigation-previous svg {
