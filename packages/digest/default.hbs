@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{meta_title}}</title>
-    <link rel="preload" href="{{asset "fonts/inter-var-latin.woff2"}}" as="font" type="font/woff2" crossOrigin="anonymous">
+    <link rel="preload" href="/fonts/mulish-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous">
     <link rel="stylesheet" href="{{asset "built/screen.css"}}">
 
     {{ghost_head}}
@@ -29,8 +29,6 @@
                     </div>
                     <button class="gh-burger"></button>
                 </div>
-
-                {{!-- <span class="gh-head-menu">{{@site.description}}</span> --}}
 
                 <nav class="gh-head-menu">
                     {{navigation}}
@@ -56,9 +54,7 @@
             <section class="gh-subscribe">
                 <h3 class="gh-subscribe-title">Subscribe to {{@site.title}}</h3>
 
-                {{#get "posts" filter="visibility:paid"}}
-                    <div class="gh-subscribe-description">Sign up now to get access to the library of {{plural meta.pagination.total empty='0 members-only issues' singular='% members-only issue' plural='% members-only issues'}}.</div>
-                {{/get}}
+                <div class="gh-subscribe-description">Sign up now to get access to the library of members-only issues.</div>
 
                 <a class="gh-subscribe-form-input u-hover" href="#/portal/signup">
                     Jamie Larson
@@ -80,7 +76,7 @@
                 </div>
 
                 <nav class="gh-foot-menu">
-                    {{navigation}}
+                    {{navigation type="secondary"}}
                 </nav>
 
                 <div class="gh-powered-by">

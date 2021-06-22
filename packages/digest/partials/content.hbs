@@ -2,7 +2,10 @@
     {{#is "post, home"}}
         <div class="gh-article-meta">
             {{#is "home"}}
-                <span class="gh-article-label">Latest issue</span>
+                <span class="gh-article-label">
+                    <span class="gh-article-label-indicator"></span>
+                    Latest issue
+                </span>
             {{/is}}
             <time class="gh-article-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
         </div>
