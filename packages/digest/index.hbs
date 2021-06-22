@@ -1,26 +1,11 @@
 {{!< default}}
 
-{{!-- {{#if @site.cover_image}}
-    <div class="gh-cover">
-        <img class="gh-cover-image"
-            srcset="{{img_url @site.cover_image size="s"}} 300w,
-                    {{img_url @site.cover_image size="m"}} 720w,
-                    {{img_url @site.cover_image size="l"}} 960w,
-                    {{img_url @site.cover_image size="xl"}} 1200w,
-                    {{img_url @site.cover_image size="xxl"}} 2000w"
-            sizes="100vw"
-            src="{{img_url @site.cover_image size="xxl"}}"
-            alt="{{title}}"
-        >
-    </div>
-{{/if}} --}}
-
 <main class="gh-main gh-canvas">
     <section class="gh-pagehead">
         <header class="gh-pagehead-content">
-            <h1 class="gh-tag-name gh-pagehead-title">Archive</h1>
+            <h1 class="gh-pagehead-title">Archive</h1>
 
-            <div class="gh-tag-description gh-pagehead-description">
+            <div class="gh-pagehead-description">
                 {{#if description}}
                     {{description}}
                 {{else}}
