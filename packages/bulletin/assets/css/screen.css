@@ -37,7 +37,7 @@
 }
 
 .gh-home-logo {
-    font-size: 4rem;
+    font-size: 3.6rem;
     font-weight: 800;
     line-height: 1;
     color: var(--color-white);
@@ -46,7 +46,7 @@
 
 .gh-home-description {
     margin-top: 1.2rem;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     line-height: 1.4;
     color: rgba(255, 255, 255, 0.7);
 }
@@ -57,13 +57,13 @@
 }
 
 .gh-home-subscribe-title {
-    font-size: 4rem;
+    font-size: 3.6rem;
     color: var(--color-white);
 }
 
 .gh-home-subscribe-description {
     margin-top: 1.6rem;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     color: var(--color-white);
 }
 
@@ -74,8 +74,8 @@
     justify-content: space-between;
     height: 64px;
     margin-top: 4rem;
-    font-size: 2rem;
-    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.9rem;
+    color: var(--color-white);
     border-bottom: 4px solid rgba(255, 255, 255, 0.4);
 }
 
@@ -106,7 +106,9 @@
 }
 
 .gh-home-copyright {
+    font-size: 1.4rem;
     color: rgba(255, 255, 255, 0.7);
+    letter-spacing: -0.01em;
 }
 
 .gh-home-latest {
@@ -114,7 +116,6 @@
     padding: 5.6rem;
     padding-bottom: 0;
     overflow: hidden;
-    background: linear-gradient(315deg, #efefef, #fff);
 }
 
 .gh-home-latest-wrapper {
@@ -127,13 +128,23 @@
 .gh-home-latest-icon {
     width: 80px;
     height: 80px;
-    margin: 0 auto;
+    margin: 0 auto 4rem;
 }
 
 .gh-home-latest .gh-article {
-    max-width: 60%;
+    position: relative;
+    max-width: 750px;
     padding: 0;
-    margin: 4rem auto 0;
+    margin: 0 auto;
+}
+
+.gh-home-latest .gh-article-link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
 }
 
 .gh-home-latest .gh-article-title {
@@ -328,10 +339,6 @@
 
 .gh-article-image {
     grid-column: main-start / main-end;
-}
-
-.gh-article-excerpt {
-    text-align: left;
 }
 
 .gh-article-footer {
