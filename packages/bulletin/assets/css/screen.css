@@ -11,7 +11,6 @@
 
 :root {
     --font-sans: Mulish, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif; /* stylelint-disable-line value-keyword-case */
-    --head-height: 80px;
     --h1-size: 4.2rem;
 }
 
@@ -210,29 +209,20 @@ body:not(.home-template) .gh-main {
 
 .gh-head {
     padding: 0 min(3.2rem, 4vmin);
-    background-color: var(--color-darker-gray);
+    background-color: var(--color-darker-gray) !important;
+}
+
+.gh-head-inner {
+    padding: max(2.8vmin, 1.6rem) 0;
 }
 
 .gh-head-logo {
     font-weight: 800;
 }
 
-.gh-head-logo,
-.gh-head-menu a {
-    color: var(--color-white);
-}
-
 .gh-head-menu a {
     font-size: 1.5rem;
     font-weight: 700;
-}
-
-.gh-head-btn {
-    height: 32px;
-    padding-right: 1.4rem;
-    padding-left: 1.4rem;
-    font-size: 1.5rem;
-    background-color: var(--ghost-accent-color);
 }
 
 .gh-pagehead {

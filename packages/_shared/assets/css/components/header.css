@@ -8,7 +8,7 @@
     grid-auto-flow: row dense;
     column-gap: var(--head-nav-gap);
     align-items: center;
-    height: var(--head-height);
+    padding: 4vmin 0;
 }
 
 .gh-head-brand {
@@ -45,6 +45,11 @@
 .gh-head-actions {
     display: flex;
     justify-content: flex-end;
+}
+
+.gh-head-btn.gh-btn {
+    padding: 0.9rem 1.4rem;
+    font-size: 1.5rem;
 }
 
 .gh-head-btn:not(.gh-btn) {
@@ -208,7 +213,6 @@ Home About Collection Author Portal
 @media (max-width: 991px) {
     #gh-head .gh-head-inner {
         grid-template-columns: 1fr;
-        padding: 0;
     }
 
     #gh-head .gh-head-brand {
@@ -216,7 +220,6 @@ Home About Collection Author Portal
         grid-column-start: 1;
         align-items: center;
         justify-content: space-between;
-        height: var(--head-height);
     }
 
     .gh-burger {
@@ -228,12 +231,12 @@ Home About Collection Author Portal
         display: none;
     }
 
-    #gh-head .nav {
+    #gh-head .nav a {
         font-size: 2.4rem;
     }
 
     #gh-head .nav li + li {
-        margin-top: 0.8rem;
+        margin-top: 1.2rem;
         margin-left: 0;
     }
 
@@ -255,7 +258,6 @@ Home About Collection Author Portal
         z-index: 3999999;
         padding: 0 4vmin 8vmin;
         overflow-y: scroll;
-        background-color: var(--color-white);
         -webkit-overflow-scrolling: touch;
     }
 
