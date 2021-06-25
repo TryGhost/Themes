@@ -1,0 +1,43 @@
+{
+    "name": "journal",
+    "description": "A Ghost theme",
+    "version": "1.0.0",
+    "engines": {
+        "ghost": ">=4.0.0",
+        "ghost-api": "v4"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Ghost Foundation",
+        "email": "hello@ghost.org",
+        "url": "https://ghost.org"
+    },
+    "keywords": [
+        "ghost",
+        "theme",
+        "ghost-theme"
+    ],
+    "config": {
+        "posts_per_page": 1,
+        "image_sizes": {
+            "xs": {
+                "width": 150
+            },
+            "s": {
+                "width": 300
+            },
+            "m": {
+                "width": 720
+            },
+            "l": {
+                "width": 960
+            },
+            "xl": {
+                "width": 1200
+            },
+            "xxl": {
+                "width": 2000
+            }
+        }
+    }
+}

@@ -1,0 +1,66 @@
+<header class="gh-article-header gh-canvas">
+    {{#is "post, home"}}
+        <div class="gh-article-meta">
+            {{#is "home"}}
+                <span class="gh-article-label">
+                    <span class="gh-article-label-indicator"></span>
+                    Latest issue
+                </span>
+            {{/is}}
+            <time class="gh-article-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
+        </div>
+    {{/is}}
+
+    <h1 class="gh-article-title">{{title}}</h1>
+
+    {{#if custom_excerpt}}
+        <p class="gh-article-excerpt">{{custom_excerpt}}</p>
+    {{/if}}
+</header>
+
+{{#if feature_image}}
+    <figure class="gh-article-image gh-canvas">
+        <img
+            srcset="{{img_url feature_image size="s"}} 300w,
+                    {{img_url feature_image size="m"}} 720w,
+                    {{img_url feature_image size="l"}} 960w,
+                    {{img_url feature_image size="xl"}} 1200w,
+                    {{img_url feature_image size="xxl"}} 2000w"
+            sizes="(max-width: 1200px) 100vw, 1200px"
+            src="{{img_url feature_image size="xl"}}"
+            alt="{{title}}"
+        >
+    </figure>
+{{/if}}
+
+<section class="gh-content gh-canvas">
+    {{content}}
+</section>
+
+{{#is "post, home"}}
+    <footer class="gh-article-footer gh-canvas">
+        <nav class="gh-article-navigation">
+            <div class="gh-article-navigation-previous">
+                {{#prev_post}}
+                    <a class="u-hover reverse" href="{{url}}">
+                        <span>{{> icons/chevron-left}}</span>
+                        <span>{{> icons/chevron-left}}</span>
+                        Previous issue
+                    </a>
+                {{/prev_post}}
+            </div>
+
+            <a class="gh-article-navigation-all" href="/page/2"><span>Browse</span> all issues</a>
+
+            <div class="gh-article-navigation-next">
+                {{#next_post}}
+                    <a class="u-hover" href="{{url}}">
+                        Next issue
+                        <span>{{> icons/chevron-right}}</span>
+                        <span>{{> icons/chevron-right}}</span>
+                    </a>
+                {{/next_post}}
+            </div>
+        </nav>
+    </footer>
+{{/is}}
