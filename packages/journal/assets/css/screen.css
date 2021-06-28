@@ -37,7 +37,7 @@
 
 .gh-latest .gh-card-meta {
     flex-direction: column;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     white-space: nowrap;
 }
 
@@ -84,7 +84,6 @@
     font-size: 1.5rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: -0.01em;
 }
 
 .gh-latest .gh-card-more svg {
@@ -111,7 +110,7 @@
     font-size: 1.5rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0;
+    letter-spacing: 0.01em;
 }
 
 .gh-section-title::after {
@@ -132,7 +131,7 @@
 }
 
 .gh-card-excerpt {
-    margin-top: 0.8rem;
+    margin-top: 1.2rem;
     font-size: 1.8rem;
 }
 
@@ -186,14 +185,20 @@
 
 .gh-about-title {
     font-size: 2.2rem;
+    letter-spacing: -0.02em;
 }
 
 .gh-about-description {
-    margin-top: 0.4rem;
+    margin-top: 0.8rem;
+    line-height: 1.55;
 }
 
 .gh-signup {
     margin-top: 3.2rem;
+}
+
+.gh-signup-description {
+    line-height: 1.55;
 }
 
 .gh-signup .gh-subscribe-input {
@@ -207,6 +212,7 @@
 
 .gh-featured .gh-card-excerpt {
     font-size: inherit;
+    line-height: 1.55;
 }
 
 .gh-topic-item {
@@ -221,6 +227,7 @@
 
 .gh-topic-name {
     font-size: 1.8rem;
+    letter-spacing: -0.02em;
 }
 
 .gh-topic-count {
