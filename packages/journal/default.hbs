@@ -14,7 +14,7 @@
 <body class="{{body_class}} is-head-b--a_n">
     <div class="gh-site">
         <header id="gh-head" class="gh-head gh-outer">
-            <div class="gh-head-inner">
+            <div class="gh-head-inner gh-inner">
                 <div class="gh-head-brand">
                     <div class="gh-head-brand-wrapper">
                         <a class="gh-head-logo" href="{{@site.url}}">
@@ -24,8 +24,6 @@
                                 {{@site.title}}
                             {{/if}}
                         </a>
-
-                        <span class="gh-head-description">{{@site.description}}</span>
                     </div>
                     <button class="gh-burger"></button>
                 </div>
@@ -36,10 +34,9 @@
 
                 <div class="gh-head-actions">
                     {{#unless @member}}
-                        <a class="gh-head-btn u-hover" href="#/portal/signup">
+                        <a class="gh-head-btn" href="#/portal/signup">
+                            {{> icons/email}}
                             Subscribe
-                            <span>{{> icons/chevron-right}}</span>
-                            <span>{{> icons/chevron-right}}</span>
                         </a>
                     {{else}}
                         <a class="gh-head-btn" href="#/portal/account">Account</a>
@@ -50,21 +47,18 @@
 
         {{{body}}}
 
-        <div class="gh-subscribe-wrapper gh-canvas">
-            <section class="gh-subscribe">
+        <div class="gh-subscribe">
+            <section class="gh-subscribe-inner">
                 <h3 class="gh-subscribe-title">Subscribe to {{@site.title}}</h3>
 
-                <div class="gh-subscribe-description">Sign up now to get access to the library of members-only issues.</div>
+                <div class="gh-subscribe-description">Don’t miss out on the latest issues. Sign up now to get access to the library of members-only issues.</div>
 
-                <a class="gh-subscribe-form-input u-hover" href="#/portal/signup">
-                    Jamie Larson
-                    <div class="gh-subscribe-btn">
-                        <div class="u-hover-inner">
-                            Subscribe
-                            <span>{{> icons/chevron-right}}</span>
-                            <span>{{> icons/chevron-right}}</span>
-                        </div>
+                <a class="gh-subscribe-input u-hover" href="#/portal/signup">
+                    <div class="gh-subscribe-input-text">
+                        {{> icons/email}}
+                        jamie@example.com
                     </div>
+                    <div class="gh-subscribe-btn">Subscribe</div>
                 </a>
             </section>
         </div>

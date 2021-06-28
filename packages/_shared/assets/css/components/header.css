@@ -53,7 +53,13 @@
 }
 
 .gh-head-btn:not(.gh-btn) {
+    display: flex;
+    align-items: center;
     color: var(--ghost-accent-color);
+}
+
+.gh-head-btn svg {
+    margin-right: 0.8rem;
 }
 
 /* Header variants
