@@ -11,19 +11,14 @@
 }
 
 .gh-article-excerpt {
-    margin-top: 2.4rem;
-    font-size: 1.9rem;
+    margin-top: 2rem;
+    font-size: 2.1rem;
     line-height: 1.55;
     color: var(--color-secondary-text);
+    letter-spacing: -0.01em;
 }
 
 .gh-article-image {
     grid-column: wide-start/wide-end;
     margin-top: max(4.8vmin, 3rem);
-}
-
-@media (max-width: 767px) {
-    .gh-article-excerpt {
-        font-size: var(--content-font-size, 2rem);
-    }
 }

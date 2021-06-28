@@ -20,6 +20,10 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    opacity: 0.8;
+}
+
 h1,
 h2,
 h3,

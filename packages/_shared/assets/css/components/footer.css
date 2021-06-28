@@ -32,6 +32,7 @@
 
 .gh-foot a:hover {
     color: var(--color-darker-gray);
+    opacity: 1;
 }
 
 @media (max-width: 767px) {
