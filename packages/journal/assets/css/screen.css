@@ -219,7 +219,8 @@
 }
 
 .gh-signup .gh-subscribe-input {
-    margin-top: 1.6rem;
+    height: 52px;
+    margin-top: 2rem;
 }
 
 .gh-featured .gh-card-title {
@@ -258,7 +259,7 @@
 .gh-subscribe {
     padding: 7.2vmin 0 8vmin;
     margin: 12vmin 0 8vmin;
-    background-color: var(--color-lighter-gray);
+    background: linear-gradient(315deg, #efefef, #fafafa);
 }
 
 .gh-subscribe-inner {
@@ -268,7 +269,7 @@
 }
 
 .gh-subscribe-title {
-    font-size: 3.2rem;
+    font-size: 3.6rem;
     font-weight: 800;
 }
 
@@ -426,9 +427,9 @@
 }
 
 .gh-tag-label {
-    margin-bottom: 0.8rem;
+    margin-bottom: 1.2rem;
     font-size: 1.3rem;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--ghost-accent-color);
     text-transform: uppercase;
 }
