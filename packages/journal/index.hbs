@@ -12,22 +12,6 @@
 
                     <div class="gh-card-wrapper">
                         <header class="gh-card-header">
-                            {{#if feature_image}}
-                                <a class="gh-card-image-link" href="{{url}}">
-                                    <img class="gh-card-image"
-                                        srcset="{{img_url feature_image size="s"}} 300w,
-                                                {{img_url feature_image size="m"}} 720w,
-                                                {{img_url feature_image size="l"}} 960w,
-                                                {{img_url feature_image size="xl"}} 1200w,
-                                                {{img_url feature_image size="xxl"}} 2000w"
-                                        sizes="calc((1200px - 2.4rem) / 4 * 3)"
-                                        src="{{img_url feature_image size="m"}}"
-                                        alt="{{title}}"
-                                        loading="lazy"
-                                    >
-                                </a>
-                            {{/if}}
-
                             <h2 class="gh-card-title"><a href="{{url}}">{{title}}</a></h2>
                         </header>
 
