@@ -1,6 +1,7 @@
 .gh-navigation {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
+    column-gap: 2.4rem;
     align-items: center;
 }
 

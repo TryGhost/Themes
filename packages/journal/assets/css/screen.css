@@ -13,7 +13,6 @@
     --font-sans: Mulish, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif; /* stylelint-disable-line value-keyword-case */
     --content-font-name: var(--font-sans);
     --content-font-size: 1.9rem;
-    --content-letter-spacing: -0.01em;
 }
 
 .gh-head-logo {
@@ -239,8 +238,8 @@
 }
 
 .gh-subscribe {
-    padding: 8vmin 0;
-    margin-top: 12vmin;
+    padding: 7.2vmin 0 8vmin;
+    margin: 12vmin 0 8vmin;
     background-color: var(--color-lighter-gray);
 }
 
@@ -303,29 +302,73 @@
     text-transform: uppercase;
 }
 
-.gh-article-navigation {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    padding-top: 2rem;
-    font-size: 1.3rem;
-    font-weight: 700;
+.gh-article-meta {
+    margin-top: 2.4rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--color-secondary-text);
     text-transform: uppercase;
-    letter-spacing: 0.01em;
-    border-top: 2px solid var(--color-darker-gray);
 }
 
-.gh-article-navigation-previous {
-    display: flex;
-    margin-left: -5px;
+.gh-article-meta a {
+    font-weight: 700;
 }
 
-.gh-article-navigation-all {
-    color: var(--ghost-accent-color);
+.gh-article-title {
+    font-weight: 800;
 }
 
-.gh-article-navigation-next {
-    margin-right: -5px;
+.gh-article-footer {
+    padding-top: 3.2rem;
+    margin-top: 8rem;
+    border-top: 1px solid var(--color-light-gray);
+}
+
+.gh-navigation {
+    grid-column: wide-start / wide-end;
+}
+
+.gh-navigation > div {
+    align-items: flex-start;
+    height: 100%;
+}
+
+.gh-navigation-link {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.gh-navigation-next .gh-navigation-link {
+    align-items: flex-end;
     text-align: right;
+}
+
+.gh-navigation-link svg {
+    width: 20px;
+    height: 20px;
+}
+
+.gh-navigation-previous svg {
+    margin-left: -2px;
+}
+
+.gh-navigation-next svg {
+    margin-right: -2px;
+}
+
+.gh-navigation-label {
+    display: flex;
+    align-items: center;
+    font-size: 2.4rem;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+}
+
+.gh-navigation-title {
+    margin-top: 0.4rem;
+    font-size: 1.7rem;
+    font-weight: 400;
+    letter-spacing: 0;
 }
 
 .gh-pagehead {
