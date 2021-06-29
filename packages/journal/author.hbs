@@ -23,12 +23,14 @@
                     {{#if website}}
                         <a class="gh-author-website" href="{{website}}" target="_blank" rel="noopener">{{website}}</a>
                     {{/if}}
-                    {{#if twitter}}
-                        <a class="gh-author-twitter" href="{{twitter_url}}" target="_blank" rel="noopener">{{> icons/twitter}}</a>
-                    {{/if}}
-                    {{#if facebook}}
-                        <a class="gh-author-facebook" href="{{facebook_url}}" target="_blank" rel="noopener">{{> icons/facebook}}</a>
-                    {{/if}}
+                    <div class="gh-author-social">
+                        {{#if twitter}}
+                            <a class="gh-author-twitter" href="{{twitter_url}}" target="_blank" rel="noopener">{{> icons/twitter}}</a>
+                        {{/if}}
+                        {{#if facebook}}
+                            <a class="gh-author-facebook" href="{{facebook_url}}" target="_blank" rel="noopener">{{> icons/facebook}}</a>
+                        {{/if}}
+                    </div>
                 </div>
             </header>
         </section>

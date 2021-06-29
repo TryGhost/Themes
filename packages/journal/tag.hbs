@@ -4,6 +4,8 @@
     {{#tag}}
         <section class="gh-pagehead">
             <header class="gh-pagehead-content">
+                <div class="gh-tag-label">Tagged</div>
+
                 <h1 class="gh-tag-name gh-pagehead-title">{{name}}</h1>
 
                 <div class="gh-tag-description gh-pagehead-description">
@@ -15,13 +17,11 @@
                 </div>
             </header>
         </section>
-
-        <div class="gh-feed">
-            {{#get "posts" filter="primary_tag:{{slug}}" limit="all"}}
-                {{#foreach posts}}
-                    {{> loop}}
-                {{/foreach}}
-            {{/get}}
-        </div>
     {{/tag}}
+
+    <div class="gh-feed">
+        {{#foreach posts}}
+            {{> loop}}
+        {{/foreach}}
+    </div>
 </main>
