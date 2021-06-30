@@ -9,7 +9,10 @@
                         <span class="gh-card-date">Latest — <time datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time></span>
                         <span class="gh-card-meta-wrapper">
                             <span class="gh-card-duration">{{reading_time}}</span>
-                            {{> icons/star}}
+
+                            {{^has visibility="public"}}
+                                {{> icons/star}}
+                            {{/has}}
                         </span>
                     </aside>
 
