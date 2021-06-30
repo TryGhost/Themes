@@ -1,6 +1,8 @@
 @import "shared/assets/css/screen.css";
 
 :root {
+    --color-primary-text: var(--color-black);
+    --color-darker-gray: var(--color-black);
     --content-font-name: var(--font-sans);
     --content-font-size: 1.9rem;
     --h1-size: 7.4rem;
@@ -14,7 +16,7 @@
 .gh-head-menu,
 .gh-head-actions {
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.01em;
 }
@@ -204,6 +206,7 @@
 .gh-signup .gh-subscribe-input {
     height: 52px;
     margin-top: 2rem;
+    font-size: 1.5rem;
 }
 
 .gh-featured .gh-card + .gh-card {
@@ -292,7 +295,7 @@
     height: 56px;
     padding: 0 1.6rem;
     margin: 4.8rem auto 0;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: var(--color-secondary-text);
     background-color: var(--color-white);
     border: 1px solid var(--color-light-gray);
