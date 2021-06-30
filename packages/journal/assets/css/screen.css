@@ -1,11 +1,21 @@
 @import "shared/assets/css/screen.css";
 
+@font-face {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: optional;
+    src: url("/fonts/inter-var-latin.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 :root {
+    --font-sans: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif; /* stylelint-disable-line value-keyword-case */
     --color-primary-text: var(--color-black);
     --color-darker-gray: var(--color-black);
     --content-font-name: var(--font-sans);
     --content-font-size: 1.9rem;
-    --h1-size: 7.4rem;
+    --content-letter-spacing: -0.01em;
 }
 
 .tag-template .gh-main,
@@ -66,7 +76,7 @@
 }
 
 .gh-latest .gh-card-title {
-    font-size: var(--h1-size);
+    font-size: 7.4rem;
     font-weight: 600;
     line-height: 1;
 }
@@ -87,6 +97,7 @@
     font-size: 1.2rem;
     font-weight: 600;
     text-transform: uppercase;
+    letter-spacing: 0.01em;
 }
 
 .gh-latest .gh-card-more svg {
@@ -147,8 +158,9 @@
 
 .gh-card-excerpt {
     margin-top: 1.2rem;
-    font-size: 1.9rem;
+    font-size: 1.8rem;
     line-height: 1.5;
+    letter-spacing: -0.01em;
 }
 
 .gh-card-meta {
@@ -157,7 +169,6 @@
     line-height: 1;
     color: var(--color-secondary-text);
     text-transform: uppercase;
-    letter-spacing: -0.01em;
 }
 
 .gh-feed .gh-card-meta {
@@ -185,7 +196,7 @@
 }
 
 .gh-sidebar .gh-section + .gh-section {
-    margin-top: 5.6rem;
+    margin-top: 7.2rem;
 }
 
 .gh-about {
@@ -199,7 +210,6 @@
 }
 
 .gh-about-title {
-    margin-top: 0.8rem;
     font-size: 2.2rem;
     font-weight: 600;
     letter-spacing: -0.02em;
@@ -211,7 +221,7 @@
 }
 
 .gh-signup {
-    margin-top: 3.2rem;
+    margin-top: 2.8rem;
 }
 
 .gh-signup-description {
@@ -219,20 +229,21 @@
 }
 
 .gh-signup .gh-subscribe-input {
-    height: 52px;
-    margin-top: 2rem;
+    height: 48px;
+    padding-left: 1.2rem;
+    margin-top: 1.6rem;
     font-size: 1.5rem;
 }
 
 .gh-featured .gh-card + .gh-card {
-    margin-top: 4rem;
+    margin-top: 2.8rem;
 }
 
 .gh-featured .gh-card-title {
     font-size: 1.8rem;
     font-weight: 600;
     line-height: 1.25;
-    letter-spacing: 0;
+    letter-spacing: -0.01em;
 }
 
 .gh-featured .gh-card-excerpt {
@@ -240,6 +251,11 @@
     font-size: inherit;
     line-height: 1.55;
     color: var(--color-secondary-text);
+    letter-spacing: 0;
+}
+
+.gh-featured .gh-card-meta {
+    margin-top: 1.6rem;
 }
 
 .gh-topic-item {
@@ -269,7 +285,7 @@
 .gh-subscribe {
     padding: 7.2vmin 0 8vmin;
     margin: 12vmin 0 8vmin;
-    background: linear-gradient(315deg, #efefef, #fafafa);
+    background-color: var(--ghost-accent-color);
 }
 
 .gh-subscribe-inner {
@@ -279,26 +295,16 @@
 }
 
 .gh-subscribe-title {
-    font-size: var(--h1-size);
-    font-weight: 600;
+    font-size: 3.6rem;
+    font-weight: 700;
+    color: #fff;
 }
 
 .gh-subscribe-description {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 1.6rem;
+    margin-top: 2rem;
     font-size: 1.9rem;
     line-height: 1.4;
-}
-
-.gh-subscribe-description::before {
-    width: 64px;
-    height: 1px;
-    margin-top: 1.2rem;
-    margin-bottom: 2.4rem;
-    content: "";
-    background-color: var(--color-darker-gray);
+    color: #fff;
 }
 
 .gh-subscribe-input {
@@ -306,7 +312,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    max-width: 560px;
+    max-width: 440px;
     height: 56px;
     padding: 0 1.6rem;
     margin: 4.8rem auto 0;
@@ -316,6 +322,10 @@
     border: 1px solid var(--color-light-gray);
     border-radius: 6px;
     transition: border-color 0.2s ease-in-out;
+}
+
+.gh-subscribe .gh-subscribe-input {
+    border: 0;
 }
 
 .gh-subscribe-input:hover {
@@ -339,10 +349,7 @@
     font-weight: 600;
     color: var(--ghost-accent-color);
     text-transform: uppercase;
-}
-
-.gh-article:not(.no-image) .gh-article-header > * {
-    grid-column: wide-start / wide-end;
+    letter-spacing: 0.01em;
 }
 
 .gh-article-meta {
@@ -359,13 +366,6 @@
 
 .gh-article-title {
     font-weight: 600;
-    line-height: 1;
-}
-
-.gh-article-excerpt {
-    margin-top: 2.4rem;
-    font-size: 2.8rem;
-    line-height: 1.4;
 }
 
 .gh-article-footer {
@@ -441,7 +441,7 @@
 
 .gh-tag-label {
     margin-bottom: 1.2rem;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 500;
     color: var(--ghost-accent-color);
     text-transform: uppercase;
