@@ -3,7 +3,7 @@
 :root {
     --content-font-name: var(--font-sans);
     --content-font-size: 1.9rem;
-    --h1-size: 6.8rem;
+    --h1-size: 7.4rem;
 }
 
 .tag-template .gh-main,
@@ -13,10 +13,15 @@
 
 .gh-head-menu,
 .gh-head-actions {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.01em;
+}
+
+.gh-head-btn svg {
+    width: 16px;
+    height: 16px;
 }
 
 .gh-latest {
@@ -27,18 +32,14 @@
 }
 
 .gh-latest .gh-card-meta {
+    display: flex;
     flex-direction: column;
-    margin-top: 1.2rem;
-    font-size: 1.4rem;
+    margin-top: 1.6rem;
     white-space: nowrap;
 }
 
 .gh-latest .gh-card-date {
     margin-bottom: 1.6rem;
-}
-
-.gh-latest .gh-card-duration::before {
-    display: none;
 }
 
 .gh-latest .gh-card-image-link {
@@ -66,7 +67,8 @@
 
 .gh-latest .gh-card-excerpt {
     margin-top: 2.4rem;
-    font-size: 2.2rem;
+    font-size: 2.8rem;
+    line-height: 1.4;
 }
 
 .gh-latest .gh-card-footer {
@@ -76,14 +78,14 @@
 .gh-latest .gh-card-more {
     display: flex;
     align-items: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 600;
     text-transform: uppercase;
 }
 
 .gh-latest .gh-card-more svg {
-    width: 16px;
-    height: 16px;
+    width: 12px;
+    height: 12px;
     margin-left: 0.4rem;
 }
 
@@ -101,8 +103,8 @@
 .gh-section-title {
     display: flex;
     align-items: center;
-    margin-bottom: 4.8rem;
-    font-size: 1.5rem;
+    margin-bottom: 3.2rem;
+    font-size: 1.2rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.01em;
@@ -140,11 +142,11 @@
 .gh-card-excerpt {
     margin-top: 1.2rem;
     font-size: 1.9rem;
+    line-height: 1.5;
 }
 
 .gh-card-meta {
-    display: flex;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 500;
     line-height: 1;
     color: var(--color-secondary-text);
@@ -160,21 +162,9 @@
     color: var(--ghost-accent-color);
 }
 
-.gh-card-duration {
-    display: flex;
-    align-items: center;
-}
-
-.gh-card-duration::before {
-    padding: 0 0.8rem;
-    font-size: 1rem;
-    line-height: 0;
-    content: "•";
-}
-
 .gh-sidebar {
-    padding-left: 1.6rem;
-    font-size: 1.6rem;
+    padding-left: 4rem;
+    font-size: 1.4rem;
 }
 
 .gh-sidebar .gh-section + .gh-section {
@@ -192,13 +182,14 @@
 }
 
 .gh-about-title {
+    margin-top: 0.8rem;
     font-size: 2.2rem;
     font-weight: 600;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
 }
 
 .gh-about-description {
-    margin-top: 0.8rem;
+    margin-top: 0.4rem;
     line-height: 1.55;
 }
 
@@ -244,14 +235,14 @@
 }
 
 .gh-topic-name {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     font-weight: 600;
     letter-spacing: 0;
 }
 
 .gh-topic-count {
     padding: 0.4rem 0.8rem;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     line-height: 1;
     border: 1px solid var(--color-light-gray);
     border-radius: 32px;
@@ -270,7 +261,7 @@
 }
 
 .gh-subscribe-title {
-    font-size: 4rem;
+    font-size: var(--h1-size);
     font-weight: 600;
 }
 
@@ -279,7 +270,7 @@
     flex-direction: column;
     align-items: center;
     margin-top: 1.6rem;
-    font-size: 1.8rem;
+    font-size: 1.9rem;
     line-height: 1.4;
 }
 
@@ -301,7 +292,7 @@
     height: 56px;
     padding: 0 1.6rem;
     margin: 4.8rem auto 0;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     color: var(--color-secondary-text);
     background-color: var(--color-white);
     border: 1px solid var(--color-light-gray);
@@ -326,15 +317,19 @@
 }
 
 .gh-subscribe-btn {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 600;
     color: var(--ghost-accent-color);
     text-transform: uppercase;
 }
 
+.gh-article-header > * {
+    grid-column: wide-start / wide-end;
+}
+
 .gh-article-meta {
-    margin-bottom: 1.2rem;
-    font-size: 1.4rem;
+    margin-bottom: 1.6rem;
+    font-size: 1.2rem;
     font-weight: 500;
     color: var(--color-secondary-text);
     text-transform: uppercase;
@@ -350,7 +345,9 @@
 }
 
 .gh-article-excerpt {
-    margin-top: 3.2rem;
+    margin-top: 2.4rem;
+    font-size: 2.8rem;
+    line-height: 1.4;
 }
 
 .gh-article-footer {
@@ -378,25 +375,18 @@
     text-align: right;
 }
 
-.gh-navigation-link svg {
-    width: 20px;
-    height: 20px;
-}
-
 .gh-navigation-previous svg {
-    margin-right: 0.8rem;
     margin-left: -2px;
 }
 
 .gh-navigation-next svg {
     margin-right: -2px;
-    margin-left: 0.8rem;
 }
 
 .gh-navigation-label {
     display: flex;
     align-items: center;
-    font-size: 2.1rem;
+    font-size: 1.6rem;
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -507,7 +497,11 @@
 }
 
 @supports (-moz-appearance: none) {
-    .gh-head-btn svg {
+    .gh-topic-count {
+        padding-bottom: 0.5rem;
+    }
+
+    .gh-subscribe-btn {
         position: relative;
         top: 1px;
     }

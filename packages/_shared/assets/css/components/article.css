@@ -3,11 +3,7 @@
 }
 
 .gh-article-tag {
-    margin-bottom: 0.8rem;
-    font-size: 1.4rem;
-    font-weight: 700;
     color: var(--ghost-accent-color);
-    text-transform: uppercase;
 }
 
 .gh-article-excerpt {
