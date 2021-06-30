@@ -16,9 +16,13 @@
 .gh-head-menu,
 .gh-head-actions {
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.01em;
+}
+
+.gh-head-btn {
+    font-weight: 600;
 }
 
 .gh-head-btn svg {
@@ -162,6 +166,17 @@
 
 .gh-card-date {
     color: var(--ghost-accent-color);
+}
+
+.gh-card-meta-wrapper {
+    display: inline-flex;
+    align-items: center;
+}
+
+.gh-card-meta-wrapper svg {
+    position: relative;
+    top: -1px;
+    margin-left: 0.6rem;
 }
 
 .gh-sidebar {
@@ -326,7 +341,7 @@
     text-transform: uppercase;
 }
 
-.gh-article-header > * {
+.gh-article:not(.no-image) .gh-article-header > * {
     grid-column: wide-start / wide-end;
 }
 

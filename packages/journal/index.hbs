@@ -7,7 +7,10 @@
                 <article class="gh-latest gh-card {{post_class}}">
                     <aside class="gh-card-meta">
                         <span class="gh-card-date">Latest — <time datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time></span>
-                        <span class="gh-card-duration">{{reading_time}}</span>
+                        <span class="gh-card-meta-wrapper">
+                            <span class="gh-card-duration">{{reading_time}}</span>
+                            {{> icons/star}}
+                        </span>
                     </aside>
 
                     <div class="gh-card-wrapper">
