@@ -169,7 +169,7 @@ function symlink(done) {
         handleError(done('Required parameters [--theme, --site] missing!'));
     }
 
-    exec(`ln -sfn ~/Developer/Themes/packages/${argv.theme} ${argv.site}/content/themes`);
+    exec(`ln -sfn ${__dirname}/packages/${argv.theme} ${argv.site}/content/themes`);
     done();
 }
 
