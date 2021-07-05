@@ -235,6 +235,11 @@ body:not(.home-template) .gh-main {
     font-weight: 700;
 }
 
+.gh-head-btn {
+    color: #fff !important;
+    background-color: var(--ghost-accent-color) !important;
+}
+
 .gh-pagehead {
     margin-bottom: 4.8rem;
 }
@@ -368,7 +373,7 @@ body:not(.home-template) .gh-main {
 
 .gh-navigation {
     font-size: 1.8rem;
-    font-weight: 700;
+    font-weight: 800;
 }
 
 .gh-navigation-middle .gh-navigation-link {
