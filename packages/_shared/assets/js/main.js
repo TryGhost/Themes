@@ -1,6 +1,9 @@
 /* Mobile menu burger toggle */
 (function () {
-    document.querySelector('.gh-burger').addEventListener('click', function () {
+    var burger = document.querySelector('.gh-burger');
+    if (!burger) return;
+
+    burger.addEventListener('click', function () {
         if (!document.body.classList.contains('is-head-open')) {
             document.body.classList.add('is-head-open');
         } else {
