@@ -365,9 +365,10 @@
 .gh-navigation-label {
     display: flex;
     align-items: center;
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     font-weight: 700;
     text-transform: uppercase;
+    letter-spacing: 0.01em;
 }
 
 .gh-navigation-title {
