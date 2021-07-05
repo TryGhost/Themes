@@ -5,28 +5,28 @@
         {{#get "posts" limit="1"}}
             {{#foreach posts}}
                 <article class="gh-latest gh-card {{post_class}}">
-                    <aside class="gh-card-meta">
-                        <span class="gh-card-date">Latest — <time datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time></span>
-                        <span class="gh-card-meta-wrapper">
-                            <span class="gh-card-duration">{{reading_time}}</span>
-
-                            {{^has visibility="public"}}
-                                {{> icons/star}}
-                            {{/has}}
-                        </span>
-                    </aside>
-
-                    <div class="gh-card-wrapper">
+                    <a class="gh-card-link" href="{{url}}">
                         <header class="gh-card-header">
-                            <h2 class="gh-card-title"><a href="{{url}}">{{title}}</a></h2>
+                            <div class="gh-card-meta">
+                                <span class="gh-card-date">Latest — <time datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time></span>
+                            </div>
+
+                            <h2 class="gh-card-title">{{title}}</h2>
                         </header>
 
                         <p class="gh-card-excerpt">{{excerpt}}</p>
 
-                        <footer class="gh-card-footer">
-                            <a class="gh-card-more" href="{{url}}">Read more {{> icons/arrow-right}}</a>
+                        <footer class="gh-card-meta">
+                            {{!-- <a class="gh-card-more" href="{{url}}">Read more {{> icons/arrow-right}}</a> --}}
+                            <span class="gh-card-meta-wrapper">
+                                <span class="gh-card-duration">{{reading_time}}</span>
+
+                                {{^has visibility="public"}}
+                                    {{> icons/star}}
+                                {{/has}}
+                            </span>
                         </footer>
-                    </div>
+                    </a>
                 </article>
             {{/foreach}}
         {{/get}}

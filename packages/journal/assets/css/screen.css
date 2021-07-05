@@ -41,38 +41,12 @@
 }
 
 .gh-latest {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    column-gap: 2.4rem;
     margin-top: 6.4rem;
 }
 
-.gh-latest .gh-card-meta {
-    display: flex;
-    flex-direction: column;
-    margin-top: 1.6rem;
-    white-space: nowrap;
-}
-
-.gh-latest .gh-card-date {
-    margin-bottom: 1.6rem;
-}
-
-.gh-latest .gh-card-image-link {
-    position: relative;
-    display: block;
-    padding-bottom: 30%;
-    margin-bottom: 4rem;
-    transition: opacity 0.3s ease-in-out;
-    backface-visibility: hidden;
-}
-
-.gh-latest .gh-card-image {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 6px;
+.gh-latest .gh-card-header .gh-card-meta {
+    margin-top: 0;
+    margin-bottom: 2rem;
 }
 
 .gh-latest .gh-card-title {
@@ -82,9 +56,14 @@
 }
 
 .gh-latest .gh-card-excerpt {
-    margin-top: 2.4rem;
+    max-width: 920px;
+    margin-top: 1.6rem;
     font-size: 2.8rem;
-    line-height: 1.4;
+    line-height: 1.35;
+}
+
+.gh-latest .gh-card-link > .gh-card-meta {
+    margin-top: 2.4rem;
 }
 
 .gh-latest .gh-card-footer {
@@ -136,7 +115,7 @@
 }
 
 .gh-card + .gh-card {
-    margin-top: 6.4rem;
+    margin-top: 8rem;
 }
 
 .gh-card-link {
@@ -164,15 +143,12 @@
 }
 
 .gh-card-meta {
+    margin-top: 2rem;
     font-size: 1.2rem;
     font-weight: 500;
     line-height: 1;
     color: var(--color-secondary-text);
     text-transform: uppercase;
-}
-
-.gh-feed .gh-card-meta {
-    margin-top: 2rem;
 }
 
 .gh-card-date {
@@ -191,12 +167,15 @@
 }
 
 .gh-sidebar {
+    position: sticky;
+    top: 4.8rem;
+    height: max-content;
     padding-left: 4rem;
     font-size: 1.4rem;
 }
 
 .gh-sidebar .gh-section + .gh-section {
-    margin-top: 7.2rem;
+    margin-top: 8rem;
 }
 
 .gh-about {
