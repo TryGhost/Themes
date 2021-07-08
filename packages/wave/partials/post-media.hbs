@@ -1,5 +1,4 @@
-<div class="post-media{{#if og_description}} js-play{{/if}}{{#if is_placeholder}} js-play{{/if}}"
-    data-url="{{og_description}}" data-id="{{comment_id}}">
+<div class="post-media{{#if og_description}} js-play{{/if}}{{#if is_placeholder}} js-play{{/if}}" data-url="{{og_description}}" data-id="{{comment_id}}">
     {{#if is_placeholder}}
         <div class="button button-play"><i class="icon icon-play"></i></div>
     {{else}}
@@ -15,6 +14,6 @@
             data-srcset="{{img_url feature_image size="1x"}} 1x, {{img_url feature_image size="2x"}} 2x, {{img_url feature_image size="3x"}} 3x"
             {{/if}}
             src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-            data-sizes="auto" alt="{{title}}">
+            data-sizes="auto" alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}">
     </div>
 </div>
