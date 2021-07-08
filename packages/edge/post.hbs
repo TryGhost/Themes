@@ -11,12 +11,16 @@
                     <div class="post-excerpt container medium">{{custom_excerpt}}</div>
                 {{/if}}
                 {{#if feature_image}}
-                    <div class="post-media container large">
+                    <figure class="post-media container large">
                         <img class="post-image" srcset="{{> srcset}}"
                             sizes="(min-width: 1170px) 1140px, (min-width: 780px) 750px, calc(100vw - 30px)"
                             src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                            alt="{{title}}">
-                    </div>
+                            alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}">
+
+                        {{#if feature_image_caption}}
+                            <figcaption>{{feature_image_caption}}</figcaption>
+                        {{/if}}
+                    </figure>
                 {{/if}}
                 <div class="post-content kg-canvas u-text-format">
                     {{content}}
