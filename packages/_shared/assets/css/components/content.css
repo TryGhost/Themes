@@ -3,12 +3,12 @@ created within the Ghost editor. The main content handles
 headings, text, images and lists. We deal with cards lower down. */
 
 .gh-content {
-    margin-top: max(4.8vmin, 3rem);
+    margin-top: 4rem;
 }
 
 /* Default vertical spacing */
 .gh-content > * + * {
-    margin-top: max(3.2vmin, 2.4rem);
+    margin-top: 2.8rem;
     margin-bottom: 0;
 }
 
@@ -20,24 +20,24 @@ headings, text, images and lists. We deal with cards lower down. */
 /* Add back a top margin to all headings, unless a heading
 is the very first element in the post content */
 .gh-content > [id]:not(:first-child) {
-    margin-top: max(4.8vmin, 3rem);
+    margin-top: 4.8rem;
 }
 
 /* Add a small margin between a heading and anything after it */
 .gh-content > [id] + * {
-    margin-top: 2rem;
+    margin-top: 1.6rem;
 }
 
 /* A larger margin before/after HRs and blockquotes */
 .gh-content > hr,
 .gh-content > blockquote {
     position: relative;
-    margin-top: max(4.8vmin, 3rem);
+    margin-top: 4rem;
 }
 
 .gh-content > hr + *,
 .gh-content > blockquote + * {
-    margin-top: max(4.8vmin, 3rem);
+    margin-top: 4rem;
 }
 
 /* Now the content typography styles */
@@ -56,9 +56,17 @@ is the very first element in the post content */
 .gh-content > ul,
 .gh-content > dl,
 .gh-content > p {
-    font-family: var(--content-font-name, var(--font-serif));
-    font-size: var(--content-font-size, 2.1rem);
+    font-size: 1.9rem;
     letter-spacing: var(--content-letter-spacing, 0);
+}
+
+.is-serif-content .gh-content > blockquote,
+.is-serif-content .gh-content > ol,
+.is-serif-content .gh-content > ul,
+.is-serif-content .gh-content > dl,
+.is-serif-content .gh-content > p {
+    font-family: var(--font-serif);
+    font-size: 2.1rem;
 }
 
 .gh-content > ul,
@@ -69,4 +77,26 @@ is the very first element in the post content */
 
 .gh-content li + li {
     margin-top: 0.8rem;
+}
+
+@media (max-width: 767px) {
+    .gh-content {
+        margin-top: 2.4rem;
+    }
+
+    .gh-content > * + * {
+        margin-top: 2rem;
+    }
+
+    .gh-content > [id]:not(:first-child) {
+        margin-top: 3.2rem;
+    }
+
+    .gh-content > blockquote,
+    .gh-content > ol,
+    .gh-content > ul,
+    .gh-content > dl,
+    .gh-content > p {
+        font-size: 1.7rem;
+    }
 }

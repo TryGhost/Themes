@@ -31,3 +31,9 @@
 .gh-navigation-next svg {
     margin-left: 0.4rem;
 }
+
+@media (max-width: 767px) {
+    .gh-navigation-hide {
+        display: none;
+    }
+}

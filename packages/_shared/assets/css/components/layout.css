@@ -6,10 +6,11 @@
 
 .gh-main {
     flex-grow: 1;
+    padding: 8rem 0;
 }
 
 .gh-outer {
-    padding: 0 4vmin;
+    padding: 0 var(--gap);
 }
 
 .gh-inner {
@@ -25,15 +26,15 @@ use it for applying any other styles. */
     display: grid;
     grid-template-columns:
         [full-start]
-        minmax(4vmin, auto)
+        minmax(var(--gap), auto)
         [wide-start]
         minmax(auto, 240px)
         [main-start]
-        min(720px, calc(100% - 8vmin))
+        min(720px, calc(100% - calc(var(--gap) * 2)))
         [main-end]
         minmax(auto, 240px)
         [wide-end]
-        minmax(4vmin, auto)
+        minmax(var(--gap), auto)
         [full-end];
 }
 
@@ -51,4 +52,10 @@ use it for applying any other styles. */
 
 .kg-width-full img {
     width: 100%;
+}
+
+@media (max-width: 767px) {
+    #gh-main {
+        padding: 4.8rem 0;
+    }
 }

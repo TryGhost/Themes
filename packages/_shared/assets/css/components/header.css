@@ -8,7 +8,7 @@
     grid-auto-flow: row dense;
     column-gap: var(--head-nav-gap);
     align-items: center;
-    padding: 3.6vmin 0;
+    padding: 3.2rem 0;
 }
 
 .gh-head-brand {
@@ -210,6 +210,12 @@ Home About Collection Author Portal
     transform: rotate(-45deg);
 }
 
+@media (max-width: 767px) {
+    #gh-head .gh-head-inner {
+        padding: 2rem 0;
+    }
+}
+
 @media (max-width: 991px) {
     #gh-head .gh-head-inner {
         grid-template-columns: 1fr;
@@ -256,7 +262,7 @@ Home About Collection Author Portal
         bottom: 0;
         left: 0;
         z-index: 3999999;
-        padding: 0 4vmin 8vmin;
+        padding: 0 var(--gap) 2.4rem;
         overflow-y: scroll;
         -webkit-overflow-scrolling: touch;
     }

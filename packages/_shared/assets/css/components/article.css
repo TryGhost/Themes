@@ -1,7 +1,3 @@
-.gh-article {
-    padding: 8vmin 0;
-}
-
 .gh-article-tag {
     color: var(--ghost-accent-color);
 }
@@ -16,5 +12,15 @@
 
 .gh-article-image {
     grid-column: wide-start/wide-end;
-    margin-top: max(4.8vmin, 3rem);
+    margin-top: 4rem;
+}
+
+@media (max-width: 767px) {
+    .gh-article-excerpt {
+        font-size: 1.9rem;
+    }
+
+    .gh-article-image {
+        margin-top: 2.4rem;
+    }
 }

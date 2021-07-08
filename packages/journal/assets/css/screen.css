@@ -13,8 +13,6 @@
     --font-sans: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif; /* stylelint-disable-line value-keyword-case */
     --color-primary-text: var(--color-black);
     --color-darker-gray: var(--color-black);
-    --content-font-name: var(--font-sans);
-    --content-font-size: 1.9rem;
     --content-letter-spacing: -0.01em;
 }
 

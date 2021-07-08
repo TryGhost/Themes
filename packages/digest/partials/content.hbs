@@ -36,25 +36,25 @@
 
 {{#is "post, home"}}
     <footer class="gh-article-footer gh-canvas">
-        <nav class="gh-article-navigation">
-            <div class="gh-article-navigation-previous">
+        <nav class="gh-navigation">
+            <div class="gh-navigation-previous">
                 {{#prev_post}}
-                    <a class="u-hover reverse" href="{{url}}">
-                        <span>{{> icons/chevron-left}}</span>
-                        <span>{{> icons/chevron-left}}</span>
-                        Previous issue
+                    <a class="gh-navigation-link u-hover reverse" href="{{url}}">
+                        <span class="u-hover-arrow">{{> icons/chevron-left}}</span>
+                        <span class="u-hover-arrow">{{> icons/chevron-left}}</span>
+                        Previous<span class="gh-navigation-hide">&nbsp;issue</span>
                     </a>
                 {{/prev_post}}
             </div>
 
-            <a class="gh-article-navigation-all" href="/page/2"><span>Browse</span> all issues</a>
+            <a class="gh-navigation-middle" href="/page/2"><span>Browse</span> all issues</a>
 
-            <div class="gh-article-navigation-next">
+            <div class="gh-navigation-next">
                 {{#next_post}}
-                    <a class="u-hover" href="{{url}}">
-                        Next issue
-                        <span>{{> icons/chevron-right}}</span>
-                        <span>{{> icons/chevron-right}}</span>
+                    <a class="gh-navigation-link u-hover" href="{{url}}">
+                        Next<span class="gh-navigation-hide">&nbsp;issue</span>
+                        <span class="u-hover-arrow">{{> icons/chevron-right}}</span>
+                        <span class="u-hover-arrow">{{> icons/chevron-right}}</span>
                     </a>
                 {{/next_post}}
             </div>
