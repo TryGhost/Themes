@@ -81,7 +81,7 @@ is the very first element in the post content */
 
 @media (max-width: 767px) {
     .gh-content {
-        margin-top: 2.4rem;
+        margin-top: 3.2rem;
     }
 
     .gh-content > * + * {
@@ -98,5 +98,11 @@ is the very first element in the post content */
     .gh-content > dl,
     .gh-content > p {
         font-size: 1.7rem;
+    }
+
+    .gh-content > dl,
+    .gh-content > ol,
+    .gh-content > ul {
+        padding-left: 2.8rem;
     }
 }

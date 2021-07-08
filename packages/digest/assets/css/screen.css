@@ -20,7 +20,7 @@ body {
 
 .post-template .gh-main,
 .page-template .gh-main {
-    padding-top: 0;
+    padding-top: 0 !important;
 }
 
 .gh-head {
@@ -436,6 +436,15 @@ body:not(.home-template) .gh-article-image {
     .gh-featured .gh-card-link {
         padding-right: var(--gap);
         padding-left: var(--gap);
+    }
+
+    body:not(.home-template) .gh-article-header {
+        padding-top: 4rem;
+        padding-bottom: 7.2rem;
+    }
+
+    body:not(.home-template) .gh-article-image {
+        margin-top: -4.8rem;
     }
 
     .gh-article-footer {
