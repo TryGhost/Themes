@@ -36,13 +36,30 @@
 }
 
 @media (max-width: 767px) {
+    .gh-foot {
+        padding-top: 6.4rem;
+        padding-bottom: 12rem;
+    }
+
     .gh-foot-inner {
         grid-template-columns: 1fr;
         text-align: center;
     }
 
     .gh-foot-menu {
-        margin-top: 0.8rem;
+        margin-top: 3.2rem;
+    }
+
+    .gh-foot-menu .nav {
+        flex-direction: column;
+    }
+
+    .gh-foot-menu .nav li + li {
+        margin-top: 0.4rem;
+    }
+
+    .gh-foot-menu .nav li + li::before {
+        display: none;
     }
 
     .gh-powered-by {
