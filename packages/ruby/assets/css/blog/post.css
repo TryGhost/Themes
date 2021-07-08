@@ -8,6 +8,11 @@
     height: 100%;
 }
 
+.post-media {
+    margin: 0;
+    background-color: var(--white-color);
+}
+
 .post-image {
     width: 100%;
 }
@@ -74,14 +79,14 @@
 }
 
 .post-tags {
-    margin-top: 15px;
     display: flex;
     flex-wrap: wrap;
+    margin-top: 15px;
 }
 
 .post-tags .tag {
-    font-weight: 700;
     margin-right: 10px;
+    font-weight: 700;
 }
 
 .post-tags .tag::before {
