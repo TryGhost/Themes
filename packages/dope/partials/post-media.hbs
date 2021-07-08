@@ -1,7 +1,6 @@
 {{#if feature_image}}
-    <div class="post-media">
-        <div
-            class="u-placeholder{{#if same_height}} same-height {{ratio}}{{/if}}">
+    <figure class="post-media">
+        <div class="u-placeholder{{#if same_height}} same-height {{ratio}}{{/if}}">
             {{#unless single}}
                 <a class="post-image-link" href="{{url}}">
                     {{> post-image}}
@@ -11,5 +10,11 @@
                 {{> post-header single=true number_date=true show_tags=true}}
             {{/unless}}
         </div>
-    </div>
+
+        {{#is "post, page"}}
+            {{#if feature_image_caption}}
+                <figcaption>{{feature_image_caption}}</figcaption>
+            {{/if}}
+        {{/is}}
+    </figure>
 {{/if}}
