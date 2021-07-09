@@ -2,7 +2,7 @@
 
 {{#post}}
 
-<main class="gh-main">
+<main id="gh-main" class="gh-main">
     <article class="gh-article {{post_class}}">
         <header class="gh-article-header gh-canvas">
             <h1 class="gh-article-title">{{title}}</h1>
@@ -49,7 +49,7 @@
                     <div class="gh-navigation-previous">
                         {{#prev_post}}
                             <a class="gh-navigation-link" href="{{url}}">
-                                {{> icons/arrow-left}} Previous issue
+                                {{> icons/arrow-left}} <span class="gh-navigation-hide">Previous issue</span>
                             </a>
                         {{/prev_post}}
                     </div>
@@ -61,7 +61,7 @@
                     <div class="gh-navigation-next">
                         {{#next_post}}
                             <a class="gh-navigation-link" href="{{url}}">
-                                Next issue {{> icons/arrow-right}}
+                                <span class="gh-navigation-hide">Next issue</span> {{> icons/arrow-right}}
                             </a>
                         {{/next_post}}
                     </div>

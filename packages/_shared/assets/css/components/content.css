@@ -100,6 +100,14 @@ is the very first element in the post content */
         font-size: 1.7rem;
     }
 
+    .is-serif-content .gh-content > blockquote,
+    .is-serif-content .gh-content > ol,
+    .is-serif-content .gh-content > ul,
+    .is-serif-content .gh-content > dl,
+    .is-serif-content .gh-content > p {
+        font-size: 1.9rem;
+    }
+
     .gh-content > dl,
     .gh-content > ol,
     .gh-content > ul {

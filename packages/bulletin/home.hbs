@@ -25,7 +25,18 @@
                 </a>
             </section>
 
-            <p class="gh-home-copyright">{{@site.title}} © {{date format="YYYY"}}</p>
+            <footer class="gh-home-footer">
+                <p class="gh-home-copyright">{{@site.title}} © {{date format="YYYY"}}</p>
+
+                <div class="gh-home-latest-label-wrapper">
+                    <div class="gh-home-latest-label">
+                        <span class="gh-home-latest-indicator"></span>
+                        Latest issue
+                    </div>
+
+                    {{> icons/chevron-down}}
+                </div>
+            </footer>
         </div>
 
         <div class="gh-home-latest">

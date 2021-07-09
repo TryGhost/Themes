@@ -17,8 +17,8 @@
     display: none;
 }
 
-body:not(.home-template) .gh-main {
-    padding: 8vmin 0;
+.home-template .gh-main {
+    padding: 0;
 }
 
 .gh-home {
@@ -28,8 +28,8 @@ body:not(.home-template) .gh-main {
 }
 
 .gh-home-cta {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 1fr 2fr auto;
     padding: 5.6rem;
     background-color: var(--color-darker-gray);
 }
@@ -43,15 +43,10 @@ body:not(.home-template) .gh-main {
 }
 
 .gh-home-description {
-    margin-top: 0.8rem;
-    font-size: 1.7rem;
+    margin-top: 0.4rem;
+    font-size: 1.6rem;
     line-height: 1.4;
     color: rgba(255, 255, 255, 0.7);
-}
-
-.gh-home-subscribe {
-    flex-grow: 1;
-    margin-top: 20vmin;
 }
 
 .gh-home-subscribe-title {
@@ -165,6 +160,10 @@ body:not(.home-template) .gh-main {
     text-transform: uppercase;
 }
 
+.gh-home-latest .gh-article-image img {
+    width: 100%;
+}
+
 .gh-home-latest-footer {
     position: absolute;
     right: 0;
@@ -194,9 +193,9 @@ body:not(.home-template) .gh-main {
     position: absolute;
     top: 3.2rem;
     right: 3.2rem;
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    padding: 0.6rem 1rem 0.5rem 0.9rem;
+    padding: 0.6rem 1.1rem 0.5rem 0.9rem;
     font-size: 1.3rem;
     font-weight: 700;
     line-height: 1;
@@ -218,12 +217,11 @@ body:not(.home-template) .gh-main {
 }
 
 .gh-head {
-    padding: 0 min(3.2rem, 4vmin);
     background-color: var(--color-darker-gray) !important;
 }
 
 .gh-head-inner {
-    padding: max(2.4vmin, 1.6rem) 0;
+    padding: 2.4rem 0;
 }
 
 .gh-head-logo {
@@ -245,13 +243,13 @@ body:not(.home-template) .gh-main {
 }
 
 .gh-pagehead-title {
-    font-size: 3.6rem;
     font-weight: 800;
 }
 
 .gh-pagehead-description {
     margin-top: 1.6rem;
     font-size: 1.8rem;
+    line-height: 1.5;
     color: var(--color-secondary-text);
 }
 
@@ -380,21 +378,118 @@ body:not(.home-template) .gh-main {
     color: var(--ghost-accent-color);
 }
 
+@media (max-width: 767px) {
+    .gh-home-cta {
+        padding: 3.2rem var(--gap);
+    }
+
+    .gh-home-subscribe-input {
+        font-size: 1.7rem;
+    }
+
+    .gh-home-latest {
+        padding: 4.8rem var(--gap) 0;
+    }
+
+    .gh-home-latest .gh-article {
+        padding-top: 3.2rem;
+    }
+
+    .gh-home-latest .gh-article-title {
+        font-size: 3.8rem;
+    }
+
+    .gh-home-latest .gh-article-meta {
+        font-size: 1.6rem;
+    }
+
+    .gh-home-latest-footer {
+        padding: 8rem 0;
+    }
+
+    .gh-article-footer {
+        margin-top: 6.4rem;
+    }
+
+    .gh-navigation-link svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .gh-pagehead {
+        margin-bottom: 3.6rem;
+    }
+
+    .gh-pagehead-description {
+        margin-top: 0.8rem;
+        font-size: 1.7rem;
+    }
+
+    .gh-author {
+        flex-direction: column;
+    }
+
+    .gh-author-image {
+        margin-bottom: 1.6rem;
+    }
+}
+
 @media (max-width: 991px) {
     .gh-home {
         grid-template-columns: 1fr;
     }
 
-    .gh-home-subscribe {
-        margin-top: 9.6rem;
+    .gh-home-cta,
+    .gh-home-latest {
+        height: 100vh;
+    }
+
+    .gh-home-footer {
+        text-align: center;
     }
 
     .gh-home-copyright {
         display: none;
     }
 
-    .gh-home-latest {
-        height: 100vh;
+    .gh-home-cta .gh-home-latest-label-wrapper {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        color: #fff;
+    }
+
+    .gh-home-cta .gh-home-latest-label {
+        position: static;
+        margin-bottom: 1.6rem;
+        color: #fff;
+        border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .gh-home-latest .gh-home-latest-label {
+        display: none;
+    }
+
+    .gh-card-link {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2.4rem 0;
+        white-space: normal;
+    }
+
+    .gh-card-title {
+        margin-top: 0.4rem;
+        margin-left: 0;
+    }
+
+    .gh-card-excerpt {
+        display: none;
+    }
+}
+
+@media (min-width: 992px) {
+    .gh-home-cta .gh-home-latest-label {
+        display: none;
     }
 }
 

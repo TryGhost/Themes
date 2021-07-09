@@ -1,27 +1,29 @@
 {{!< default}}
 
-<main class="gh-main gh-inner">
-    {{#tag}}
-        <section class="gh-pagehead">
-            <header class="gh-pagehead-content">
-                <h1 class="gh-tag-name gh-pagehead-title">{{name}}</h1>
+<main id="gh-main" class="gh-main gh-outer">
+    <div class="gh-inner">
+        {{#tag}}
+            <section class="gh-pagehead">
+                <header class="gh-pagehead-content">
+                    <h1 class="gh-tag-name gh-pagehead-title">{{name}}</h1>
 
-                <div class="gh-tag-description gh-pagehead-description">
-                    {{#if description}}
-                        {{description}}
-                    {{else}}
-                        A collection of {{plural ../pagination.total empty="0 issues" singular="% issue" plural="% issues"}}
-                    {{/if}}
-                </div>
-            </header>
-        </section>
-    {{/tag}}
+                    <div class="gh-tag-description gh-pagehead-description">
+                        {{#if description}}
+                            {{description}}
+                        {{else}}
+                            A collection of {{plural ../pagination.total empty="0 issues" singular="% issue" plural="% issues"}}
+                        {{/if}}
+                    </div>
+                </header>
+            </section>
+        {{/tag}}
 
-    <div class="gh-feed">
-        {{#get "posts" limit="all"}}
-            {{#foreach posts}}
-                {{> loop}}
-            {{/foreach}}
-        {{/get}}
+        <div class="gh-feed">
+            {{#get "posts" limit="all"}}
+                {{#foreach posts}}
+                    {{> loop}}
+                {{/foreach}}
+            {{/get}}
+        </div>
     </div>
 </main>
