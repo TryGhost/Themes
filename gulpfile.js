@@ -236,7 +236,7 @@ function zipper(done) {
             '!node_modules', '!node_modules/**',
             '!dist', '!dist/**',
             '!yarn-error.log'
-        ]),
+        ], {cwd: `./packages/${argv.theme}`}),
         zip(filename),
         dest(`packages/${argv.theme}/dist/`)
     ], handleError(done));
