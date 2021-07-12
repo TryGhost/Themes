@@ -1,7 +1,10 @@
 function pagination(isInfinite) {
+    var buttonElement = document.querySelector('.gh-loadmore');
+
     // next link element
     var nextElement = document.querySelector('link[rel=next]');
     if (!nextElement) {
+        buttonElement.remove();
         return;
     }
 
@@ -19,8 +22,6 @@ function pagination(isInfinite) {
     var lastScrollY = window.scrollY;
     var lastWindowHeight = window.innerHeight;
     var lastDocumentHeight = document.documentElement.scrollHeight;
-
-    var buttonElement = document.querySelector('.gh-loadmore');
 
     function onPageLoad() {
         if (this.status === 404) {
