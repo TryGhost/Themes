@@ -42,6 +42,7 @@
 
 .gh-latest {
     margin-top: 4rem;
+    margin-bottom: 12rem;
 }
 
 .gh-latest .gh-card-meta {
@@ -52,7 +53,6 @@
     display: grid;
     grid-template-columns: 4fr 2fr;
     column-gap: 2.4rem;
-    margin-top: 12rem;
 }
 
 .gh-wrapper > .gh-section {
@@ -464,9 +464,12 @@
 }
 
 @media (max-width: 767px) {
+    .gh-latest {
+        margin-bottom: 8rem;
+    }
+
     .gh-wrapper {
         grid-template-columns: 1fr;
-        margin-top: 8rem;
     }
 
     .gh-card + .gh-card {
