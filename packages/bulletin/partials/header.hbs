@@ -1,0 +1,26 @@
+<header id="gh-head" class="gh-head gh-outer">
+    <div class="gh-head-inner">
+        <div class="gh-head-brand">
+            <a class="gh-head-logo" href="{{@site.url}}">
+                {{#if @site.logo}}
+                    <img src="{{@site.logo}}" alt="{{@site.title}}">
+                {{else}}
+                    {{@site.title}}
+                {{/if}}
+            </a>
+            <button class="gh-burger"></button>
+        </div>
+
+        <nav class="gh-head-menu">
+            {{navigation}}
+        </nav>
+
+        <div class="gh-head-actions">
+            {{#unless @member}}
+                <a class="gh-head-btn gh-btn" href="#/portal/signup">Subscribe</a>
+            {{else}}
+                <a class="gh-head-btn gh-btn" href="#/portal/account">Account</a>
+            {{/unless}}
+        </div>
+    </div>
+</header>

@@ -11,56 +11,25 @@
     {{ghost_head}}
 </head>
 
-<body class="{{body_class}} is-head-transparent is-serif-content">
+<body class="{{body_class}} is-head-transparent is-serif-content{{^if @member.paid}}{{#is "home"}} is-home-cta{{/is}}{{/if}}">
     <div class="gh-site">
-        {{^is "home"}}
-            <header id="gh-head" class="gh-head gh-outer">
-                <div class="gh-head-inner">
-                    <div class="gh-head-brand">
-                        <a class="gh-head-logo" href="{{@site.url}}">
-                            {{#if @site.logo}}
-                                <img src="{{@site.logo}}" alt="{{@site.title}}">
-                            {{else}}
-                                {{@site.title}}
-                            {{/if}}
-                        </a>
-                        <button class="gh-burger"></button>
-                    </div>
-
-                    <nav class="gh-head-menu">
-                        {{navigation}}
-                    </nav>
-
-                    <div class="gh-head-actions">
-                        {{#unless @member}}
-                            <a class="gh-head-btn gh-btn" href="#/portal/signup">Subscribe</a>
-                        {{else}}
-                            <a class="gh-head-btn gh-btn" href="#/portal/account">Account</a>
-                        {{/unless}}
-                    </div>
-                </div>
-            </header>
-        {{/is}}
+        {{^if @member.paid}}
+            {{^is "home"}}
+                {{> header}}
+            {{/is}}
+        {{else}}
+            {{> header}}
+        {{/if}}
 
         {{{body}}}
 
-        {{^is "home"}}
-            <footer class="gh-foot gh-outer">
-                <div class="gh-foot-inner gh-inner">
-                    <div class="gh-copyright">
-                        {{@site.title}} © {{date format="YYYY"}}
-                    </div>
-
-                    <nav class="gh-foot-menu">
-                        {{navigation type="secondary"}}
-                    </nav>
-
-                    <div class="gh-powered-by">
-                        <a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a>
-                    </div>
-                </div>
-            </footer>
-        {{/is}}
+        {{^if @member.paid}}
+            {{^is "home"}}
+                {{> footer}}
+            {{/is}}
+        {{else}}
+            {{> footer}}
+        {{/if}}
     </div>
 
     {{#is "post, page"}}
