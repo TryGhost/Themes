@@ -162,7 +162,7 @@ body {
 }
 
 .gh-subscribe {
-    padding: 6rem 2.4rem 7.2rem;
+    padding: 6rem 2.4rem;
     margin-top: 8rem;
     margin-bottom: 4rem;
     text-align: center;
@@ -182,7 +182,7 @@ body {
     color: var(--color-secondary-text);
 }
 
-.gh-subscribe-form-input {
+.gh-subscribe-input {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -190,7 +190,7 @@ body {
     max-width: 560px;
     height: 56px;
     padding: 0 8px 0 2.4rem;
-    margin: 4.8rem auto 0;
+    margin: 4.8rem auto 1.2rem;
     font-size: 1.8rem;
     color: var(--color-secondary-text);
     background-color: var(--color-white);
@@ -198,11 +198,11 @@ body {
     transition: box-shadow 0.2s ease-in-out;
 }
 
-.gh-subscribe-form-input:hover {
+.gh-subscribe-input:hover {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
 }
 
-.gh-subscribe-btn {
+.gh-subscribe-input-btn {
     display: flex;
     align-items: center;
     height: calc(100% - 16px);
@@ -217,9 +217,13 @@ body {
     border-radius: 28px;
 }
 
-.gh-subscribe .gh-subscribe-btn svg {
+.gh-subscribe-input-btn svg {
     width: 19px;
     height: 19px;
+}
+
+.gh-subscribe-btn {
+    margin-top: 3.2rem;
 }
 
 .post-template .gh-head,
@@ -471,11 +475,12 @@ body:not(.home-template) .gh-article-image {
 
     .gh-subscribe {
         padding-top: 4.8rem;
-        padding-bottom: 5.6rem;
+        padding-bottom: 4.8rem;
         margin-top: 4rem;
     }
 
-    .gh-subscribe-form-input {
+    .gh-subscribe-input {
+        margin-bottom: 0.4rem;
         font-size: 1.6rem;
     }
 }

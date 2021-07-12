@@ -24,3 +24,9 @@
     grid-template-columns: 1fr 1fr;
     column-gap: 1.6rem;
 }
+
+@media (max-width: 767px) {
+    .gh-cta-actions {
+        column-gap: 0.8rem;
+    }
+}
