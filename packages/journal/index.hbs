@@ -2,33 +2,35 @@
 
 <main id="gh-main" class="gh-main gh-outer">
     <div class="gh-inner">
-        {{#get "posts" limit="1"}}
-            {{#foreach posts}}
-                <article class="gh-latest gh-card {{post_class}}">
-                    <a class="gh-card-link" href="{{url}}">
-                        <header class="gh-card-header">
-                            <div class="gh-article-meta">
-                                <span class="gh-card-date">Latest — <time datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time></span>
-                            </div>
+        {{^is "paged"}}
+            {{#get "posts" limit="1"}}
+                {{#foreach posts}}
+                    <article class="gh-latest gh-card {{post_class}}">
+                        <a class="gh-card-link" href="{{url}}">
+                            <header class="gh-card-header">
+                                <div class="gh-article-meta">
+                                    <span class="gh-card-date">Latest — <time datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time></span>
+                                </div>
 
-                            <h2 class="gh-article-title gh-card-title">{{title}}</h2>
-                        </header>
+                                <h2 class="gh-article-title gh-card-title">{{title}}</h2>
+                            </header>
 
-                        <p class="gh-article-excerpt">{{excerpt}}</p>
+                            <p class="gh-article-excerpt">{{excerpt}}</p>
 
-                        <footer class="gh-card-meta">
-                            <span class="gh-card-meta-wrapper">
-                                <span class="gh-card-duration">{{reading_time}}</span>
+                            <footer class="gh-card-meta">
+                                <span class="gh-card-meta-wrapper">
+                                    <span class="gh-card-duration">{{reading_time}}</span>
 
-                                {{^has visibility="public"}}
-                                    {{> icons/star}}
-                                {{/has}}
-                            </span>
-                        </footer>
-                    </a>
-                </article>
-            {{/foreach}}
-        {{/get}}
+                                    {{^has visibility="public"}}
+                                        {{> icons/star}}
+                                    {{/has}}
+                                </span>
+                            </footer>
+                        </a>
+                    </article>
+                {{/foreach}}
+            {{/get}}
+        {{/is}}
 
         <div class="gh-wrapper">
             <section class="gh-section">
@@ -36,11 +38,17 @@
 
                 <div class="gh-feed">
                     {{#foreach posts}}
-                        {{^has index="0"}}
+                        {{^is "paged"}}
+                            {{^has index="0"}}
+                                {{> loop}}
+                            {{/has}}
+                        {{else}}
                             {{> loop}}
-                        {{/has}}
+                        {{/is}}
                     {{/foreach}}
                 </div>
+
+                <button class="gh-loadmore gh-btn">Load more issues</button>
             </section>
 
             <aside class="gh-sidebar">

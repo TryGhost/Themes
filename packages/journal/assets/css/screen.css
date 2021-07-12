@@ -129,6 +129,23 @@
     margin-left: 0.6rem;
 }
 
+.gh-loadmore {
+    width: 100%;
+    padding-top: 1.4rem;
+    padding-bottom: 1.4rem;
+    margin-top: 8rem;
+    font-weight: 600;
+    color: var(--color-darker-gray);
+    letter-spacing: -0.02em;
+    background-color: transparent;
+    border: 1px solid var(--color-light-gray);
+    border-radius: 6px;
+}
+
+.gh-loadmore:hover {
+    border-color: var(--color-mid-gray);
+}
+
 .gh-sidebar {
     position: sticky;
     top: 4.8rem;
@@ -453,6 +470,10 @@
     }
 
     .gh-card + .gh-card {
+        margin-top: 6.4rem;
+    }
+
+    .gh-loadmore {
         margin-top: 6.4rem;
     }
 

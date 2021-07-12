@@ -6,7 +6,7 @@ function pagination(isInfinite) {
     }
 
     // post feed element
-    var feedElement = document.querySelector('.gh-feed');
+    var feedElement = document.querySelector('.gh-feed:not(.gh-featured):not(.gh-related)');
     if (!feedElement) {
         return;
     }
@@ -31,7 +31,7 @@ function pagination(isInfinite) {
         }
 
         // append contents
-        var postElements = this.response.querySelectorAll('article.gh-card');
+        var postElements = this.response.querySelectorAll('.gh-feed:not(.gh-featured):not(.gh-related) .gh-card');
         postElements.forEach(function (item) {
             // document.importNode is important, without it the item's owner
             // document will be different which can break resizing of
