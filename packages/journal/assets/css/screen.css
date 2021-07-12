@@ -14,6 +14,7 @@
     --color-primary-text: var(--color-black);
     --color-darker-gray: var(--color-black);
     --content-letter-spacing: -0.01em;
+    --head-nav-gap: 3.2rem;
 }
 
 .tag-template .gh-main,
@@ -30,17 +31,17 @@
 }
 
 .gh-head-btn {
-    margin-right: 0.8rem;
     font-weight: 600;
 }
 
 .gh-head-btn svg {
     width: 16px;
     height: 16px;
+    margin-right: 0.4rem;
 }
 
 .gh-latest {
-    margin-top: 6.4rem;
+    margin-top: 4rem;
 }
 
 .gh-latest .gh-card-meta {
@@ -51,7 +52,7 @@
     display: grid;
     grid-template-columns: 4fr 2fr;
     column-gap: 2.4rem;
-    margin-top: 12vmin;
+    margin-top: 12rem;
 }
 
 .gh-wrapper > .gh-section {
@@ -61,7 +62,7 @@
 .gh-section-title {
     display: flex;
     align-items: center;
-    margin-bottom: 3.2rem;
+    margin-bottom: 2.4rem;
     font-size: 1.2rem;
     font-weight: 500;
     text-transform: uppercase;
@@ -150,8 +151,14 @@
     margin-right: 2rem;
 }
 
+.gh-about-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .gh-about-title {
-    font-size: 2.2rem;
+    font-size: 2.1rem;
     font-weight: 600;
     letter-spacing: -0.02em;
 }
@@ -181,7 +188,7 @@
 }
 
 .gh-featured .gh-card-title {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
     font-weight: 600;
     line-height: 1.25;
     letter-spacing: -0.01em;
@@ -224,8 +231,8 @@
 }
 
 .gh-subscribe {
-    padding: 7.2vmin 0 8vmin;
-    margin: 12vmin 0 8vmin;
+    padding: 7.2rem 0 8rem;
+    margin: 12rem 0 8rem;
     background-color: var(--ghost-accent-color);
 }
 
@@ -291,10 +298,6 @@
     color: var(--ghost-accent-color);
     text-transform: uppercase;
     letter-spacing: 0.01em;
-}
-
-.gh-article {
-    padding: 6.4rem 0 0;
 }
 
 .gh-article:not(.no-image) .gh-article-header > * {
@@ -441,6 +444,78 @@
 
 .gh-author-facebook {
     margin-left: 0.8rem;
+}
+
+@media (max-width: 767px) {
+    .gh-wrapper {
+        grid-template-columns: 1fr;
+        margin-top: 8rem;
+    }
+
+    .gh-card + .gh-card {
+        margin-top: 6.4rem;
+    }
+
+    .gh-sidebar {
+        padding-left: 0;
+        margin-top: 8rem;
+    }
+
+    .gh-article-title {
+        font-size: 4.2rem;
+    }
+
+    .gh-article-excerpt {
+        font-size: 2.2rem;
+    }
+
+    .gh-navigation {
+        grid-template-columns: 1fr;
+        row-gap: 1.6rem;
+    }
+
+    .gh-subscribe {
+        padding: 5.6rem 0;
+        margin-top: 8rem;
+    }
+
+    .gh-pagehead {
+        margin-bottom: 4.8rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .gh-sidebar {
+        padding-left: 1.6rem;
+    }
+
+    .gh-pagehead {
+        margin-bottom: 8rem;
+    }
+
+    .gh-author-meta {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .gh-author-website,
+    .gh-author-social {
+        margin-top: 0;
+        margin-left: 1.6rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .gh-latest {
+        margin-top: 0;
+    }
+
+    .gh-pagehead {
+        position: static;
+        grid-column: main-start / main-end;
+        max-width: 480px;
+        padding-top: 0;
+    }
 }
 
 @media (min-width: 992px) {
