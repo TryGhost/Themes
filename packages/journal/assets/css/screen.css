@@ -17,6 +17,11 @@
     --head-nav-gap: 3.2rem;
 }
 
+.gh-btn {
+    font-weight: 600;
+    border-radius: 6px;
+}
+
 .tag-template .gh-main,
 .author-template .gh-main {
     padding-top: 8vmin;
@@ -139,7 +144,6 @@
     letter-spacing: -0.02em;
     background-color: transparent;
     border: 1px solid var(--color-light-gray);
-    border-radius: 6px;
 }
 
 .gh-loadmore:hover {
