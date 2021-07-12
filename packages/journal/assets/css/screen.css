@@ -286,7 +286,6 @@
     background-color: var(--color-white);
     border: 1px solid var(--color-light-gray);
     border-radius: 6px;
-    transition: border-color 0.2s ease-in-out;
 }
 
 .gh-subscribe .gh-subscribe-input {
@@ -294,7 +293,7 @@
 }
 
 .gh-subscribe-input:hover {
-    border-color: var(--ghost-accent-color);
+    border-color: var(--color-mid-gray);
     opacity: 1;
 }
 
