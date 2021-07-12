@@ -165,6 +165,28 @@ Home About Collection Author Portal
     background-color: var(--color-white);
 }
 
+/* Dark header
+/* ---------------------------------------------------------- */
+
+.is-head-dark .gh-head {
+    background-color: var(--color-darker-gray);
+}
+
+.is-head-dark .gh-head-logo,
+.is-head-dark .gh-head .nav a {
+    color: var(--color-white);
+}
+
+.is-head-dark .gh-burger::before,
+.is-head-dark .gh-burger::after {
+    background-color: var(--color-white);
+}
+
+.is-head-dark .gh-head-btn {
+    color: #fff;
+    background-color: var(--ghost-accent-color);
+}
+
 /* Mobile menu
 /* ---------------------------------------------------------- */
 

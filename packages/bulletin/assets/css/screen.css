@@ -238,11 +238,6 @@
     font-weight: 700;
 }
 
-.gh-head-btn {
-    color: #fff !important;
-    background-color: var(--ghost-accent-color) !important;
-}
-
 .gh-pagehead {
     margin-bottom: 4.8rem;
 }
