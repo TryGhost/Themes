@@ -272,7 +272,7 @@ body:not(.home-template) .gh-article-image {
     border-radius: 4px;
 }
 
-.gh-content a {
+.gh-content a:not(.gh-btn) {
     font-weight: 500;
 }
 

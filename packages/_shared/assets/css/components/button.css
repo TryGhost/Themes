@@ -14,6 +14,22 @@
     border-radius: 100px;
 }
 
+.gh-primary-btn {
+    background-color: var(--ghost-accent-color);
+}
+
+.gh-outline-btn {
+    color: var(--color-darker-gray);
+    text-decoration: none;
+    background-color: transparent;
+    border: 1px solid var(--color-light-gray);
+}
+
+.gh-outline-btn:hover {
+    border-color: var(--color-mid-gray);
+    opacity: 1;
+}
+
 .gh-icon-btn {
     display: inline-flex;
     align-items: center;

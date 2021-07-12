@@ -45,7 +45,7 @@ is the very first element in the post content */
     font-weight: 500;
 }
 
-.gh-content a {
+.gh-content a:not(.gh-btn) {
     color: var(--ghost-accent-color);
     text-decoration: underline;
     word-break: break-word;
