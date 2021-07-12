@@ -18,7 +18,7 @@
         "ghost-theme"
     ],
     "config": {
-        "posts_per_page": 3,
+        "posts_per_page": 10,
         "image_sizes": {
             "xs": {
                 "width": 150
