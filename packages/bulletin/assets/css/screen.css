@@ -389,7 +389,12 @@
     }
 
     .gh-home-latest {
-        padding: 4.8rem var(--gap) 0;
+        padding: 3.2rem var(--gap) 0;
+    }
+
+    .gh-home-latest-icon {
+        width: 72px;
+        height: 72px;
     }
 
     .gh-home-latest .gh-article {
@@ -397,7 +402,7 @@
     }
 
     .gh-home-latest .gh-article-title {
-        font-size: 3.8rem;
+        font-size: 3.6rem;
     }
 
     .gh-home-latest .gh-article-meta {
