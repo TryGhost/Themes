@@ -438,11 +438,16 @@
 @media (max-width: 991px) {
     .gh-home {
         grid-template-columns: 1fr;
+        height: auto;
     }
 
     .gh-home-cta,
     .gh-home-latest {
         height: 100vh;
+    }
+
+    .gh-home-cta {
+        height: var(--inner-height);
     }
 
     .gh-home-footer {
