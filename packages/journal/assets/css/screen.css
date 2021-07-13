@@ -18,7 +18,10 @@
 }
 
 .gh-btn {
+    padding-right: 1.6rem;
+    padding-left: 1.6rem;
     font-weight: 600;
+    letter-spacing: -0.02em;
     border-radius: 6px;
 }
 
@@ -201,7 +204,12 @@
     height: 48px;
     padding-left: 1.2rem;
     margin-top: 1.6rem;
+    margin-bottom: 0;
     font-size: 1.5rem;
+}
+
+.gh-signup-btn {
+    margin-top: 1.6rem;
 }
 
 .gh-featured .gh-card + .gh-card {
@@ -252,7 +260,7 @@
 }
 
 .gh-subscribe {
-    padding: 7.2rem 0 8rem;
+    padding: 7.2rem 0;
     margin: 12rem 0 8rem;
     background-color: var(--ghost-accent-color);
 }
@@ -284,7 +292,7 @@
     max-width: 440px;
     height: 56px;
     padding: 0 1.6rem;
-    margin: 4.8rem auto 0;
+    margin: 4.8rem auto 0.8rem;
     font-size: 1.6rem;
     color: var(--color-secondary-text);
     background-color: var(--color-white);
@@ -312,12 +320,18 @@
     margin-right: 0.8rem;
 }
 
-.gh-subscribe-btn {
+.gh-subscribe-input-btn {
     font-size: 1.2rem;
     font-weight: 600;
     color: var(--ghost-accent-color);
     text-transform: uppercase;
     letter-spacing: 0.01em;
+}
+
+.gh-subscribe-btn {
+    margin-top: 3.2rem;
+    color: var(--ghost-accent-color);
+    background-color: #fff;
 }
 
 .gh-article:not(.no-image) .gh-article-header > * {
@@ -582,7 +596,7 @@
         padding-bottom: 0.5rem;
     }
 
-    .gh-subscribe-btn {
+    .gh-subscribe-input-btn {
         position: relative;
         top: 1px;
     }
