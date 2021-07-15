@@ -73,6 +73,14 @@ blockquote {
     border-left: 4px solid var(--ghost-accent-color);
 }
 
+figcaption {
+    margin-top: 1.6rem;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    color: var(--color-secondary-text);
+    text-align: center;
+}
+
 pre {
     padding: 1.6rem 2.4rem;
     overflow-x: scroll;

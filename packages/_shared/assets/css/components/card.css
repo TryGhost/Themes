@@ -143,14 +143,3 @@ Ghost editor. */
         margin-left: 0;
     }
 }
-
-/* Card caption
-/* ---------------------------------------------------------- */
-
-.kg-card figcaption {
-    margin-top: 1.6rem;
-    font-size: 1.4rem;
-    line-height: 1.4;
-    color: var(--color-secondary-text);
-    text-align: center;
-}
