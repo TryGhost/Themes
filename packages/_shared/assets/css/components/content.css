@@ -42,7 +42,7 @@ is the very first element in the post content */
 
 /* Now the content typography styles */
 .gh-content h3 {
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .gh-content a:not(.gh-btn) {
