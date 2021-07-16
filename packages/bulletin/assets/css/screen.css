@@ -59,6 +59,7 @@
     max-width: 480px;
     margin-top: 1.6rem;
     font-size: 1.7rem;
+    line-height: 1.5;
     color: #fff;
 }
 
@@ -385,6 +386,10 @@
         padding: 3.2rem var(--gap);
     }
 
+    .gh-home-subscribe-title {
+        font-size: 2.8rem;
+    }
+
     .gh-home-subscribe-input {
         font-size: 1.7rem;
     }
@@ -447,35 +452,12 @@
         height: auto;
     }
 
-    .gh-home-cta,
     .gh-home-latest {
         height: 100vh;
     }
 
-    .gh-home-cta {
-        height: var(--inner-height);
-    }
-
     .gh-home-footer {
-        text-align: center;
-    }
-
-    .gh-home-copyright {
         display: none;
-    }
-
-    .gh-home-cta .gh-home-latest-label-wrapper {
-        display: inline-flex;
-        flex-direction: column;
-        align-items: center;
-        color: #fff;
-    }
-
-    .gh-home-cta .gh-home-latest-label {
-        position: static;
-        margin-bottom: 1.6rem;
-        color: #fff;
-        border-color: rgba(255, 255, 255, 0.5);
     }
 
     .gh-home-latest .gh-home-latest-label {
@@ -495,12 +477,6 @@
     }
 
     .gh-card-excerpt {
-        display: none;
-    }
-}
-
-@media (min-width: 992px) {
-    .gh-home-cta .gh-home-latest-label-wrapper {
         display: none;
     }
 }
