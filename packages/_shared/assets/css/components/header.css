@@ -55,6 +55,7 @@
 .gh-head-btn:not(.gh-btn) {
     display: inline-flex;
     align-items: center;
+    font-size: 2rem;
     color: var(--ghost-accent-color);
 }
 
