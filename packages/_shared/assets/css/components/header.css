@@ -55,7 +55,6 @@
 .gh-head-btn:not(.gh-btn) {
     display: inline-flex;
     align-items: center;
-    font-size: 2rem;
     color: var(--ghost-accent-color);
 }
 
@@ -276,6 +275,10 @@ Home About Collection Author Portal
     #gh-head .gh-head-btn {
         margin-top: 3.2rem;
         margin-left: 0;
+    }
+
+    #gh-head .gh-head-btn:not(.gh-btn) {
+        font-size: 2rem;
     }
 
     .is-head-open #gh-head {
