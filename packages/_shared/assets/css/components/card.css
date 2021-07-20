@@ -2,11 +2,11 @@
 except for when immediately preceeded by a heading */
 
 .gh-content :not(.kg-card):not([id]) + .kg-card {
-    margin-top: max(6vmin, 3rem);
+    margin-top: 4rem;
 }
 
 .gh-content .kg-card + :not(.kg-card) {
-    margin-top: max(6vmin, 3rem);
+    margin-top: 4rem;
 }
 
 /* Galleries
