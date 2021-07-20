@@ -27,29 +27,6 @@ body {
     font-size: 1.7rem;
 }
 
-.gh-head-brand-wrapper {
-    display: flex;
-    align-items: center;
-}
-
-.gh-head-description {
-    position: relative;
-    padding-left: 2.4rem;
-    margin-left: 2.4rem;
-    color: var(--color-secondary-text);
-}
-
-.gh-head-description::before {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 1px;
-    height: 40px;
-    margin-top: -20px;
-    content: "";
-    background-color: var(--color-light-gray);
-}
-
 .gh-head-menu,
 .gh-head-actions {
     font-size: 1.3rem;
@@ -419,10 +396,6 @@ body:not(.home-template) .gh-article-image {
 }
 
 @media (max-width: 767px) {
-    .gh-head-description {
-        display: none;
-    }
-
     .gh-section-featured {
         grid-column: full-start / full-end;
     }

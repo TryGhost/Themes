@@ -1,13 +1,17 @@
 <header id="gh-head" class="gh-head gh-outer">
     <div class="gh-head-inner">
         <div class="gh-head-brand">
-            <a class="gh-head-logo" href="{{@site.url}}">
-                {{#if @site.logo}}
-                    <img src="{{@site.logo}}" alt="{{@site.title}}">
-                {{else}}
-                    {{@site.title}}
-                {{/if}}
-            </a>
+            <div class="gh-head-brand-wrapper">
+                <a class="gh-head-logo" href="{{@site.url}}">
+                    {{#if @site.logo}}
+                        <img src="{{@site.logo}}" alt="{{@site.title}}">
+                    {{else}}
+                        {{@site.title}}
+                    {{/if}}
+                </a>
+
+                <span class="gh-head-description">{{@site.description}}</span>
+            </div>
             <button class="gh-burger"></button>
         </div>
 

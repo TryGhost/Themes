@@ -234,6 +234,10 @@
     font-weight: 800;
 }
 
+.gh-head-description {
+    letter-spacing: -0.01em;
+}
+
 .gh-head-menu a {
     font-size: 1.5rem;
     font-weight: 700;
