@@ -13,6 +13,15 @@
     --font-sans: Mulish, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif; /* stylelint-disable-line value-keyword-case */
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 800;
+}
+
 .is-home-cta .gh-portal-triggerbtn-iframe {
     display: none;
 }
@@ -51,7 +60,6 @@
 
 .gh-home-subscribe-title {
     font-size: 3.2rem;
-    font-weight: 800;
     color: #fff;
 }
 
@@ -245,7 +253,6 @@
 
 .gh-pagehead-title {
     font-size: 3.2rem;
-    font-weight: 800;
 }
 
 .gh-pagehead-description {
@@ -312,6 +319,7 @@
 .gh-card-title {
     margin-top: 0.4rem;
     font-size: 2.1rem;
+    font-weight: 700;
 }
 
 .gh-card-link:hover .gh-card-title {
@@ -331,10 +339,6 @@
 
 .gh-article-header {
     text-align: center;
-}
-
-.gh-article-title {
-    font-weight: 800;
 }
 
 .gh-article-meta {
