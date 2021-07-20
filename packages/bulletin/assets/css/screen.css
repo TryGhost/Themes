@@ -234,17 +234,13 @@
     font-weight: 800;
 }
 
-.gh-head-description {
-    letter-spacing: -0.01em;
-}
-
 .gh-head-menu a {
     font-size: 1.5rem;
     font-weight: 700;
 }
 
 .gh-pagehead {
-    margin-bottom: 4.8rem;
+    margin-bottom: 4rem;
 }
 
 .gh-pagehead-title {
@@ -292,10 +288,8 @@
 
 .gh-card-link {
     position: relative;
-    display: flex;
-    align-items: center;
-    padding: 4rem 0;
-    white-space: nowrap;
+    display: block;
+    padding: 3.2rem 0;
     border-top: 1px solid var(--color-light-gray);
 }
 
@@ -307,11 +301,6 @@
     font-size: 1.3rem;
     font-weight: 700;
     letter-spacing: -0.01em;
-    transition: margin-left 0.3s;
-}
-
-.gh-card-link:hover .gh-card-date {
-    margin-left: 1.6rem;
 }
 
 .gh-card-month {
@@ -321,20 +310,19 @@
 }
 
 .gh-card-title {
-    margin-left: 1.6rem;
-    font-size: 1.9rem;
+    margin-top: 0.4rem;
+    font-size: 2.1rem;
+}
+
+.gh-card-link:hover .gh-card-title {
+    opacity: 0.8;
 }
 
 .gh-card-excerpt {
-    overflow: hidden;
+    margin-top: 0.8rem;
     font-size: 1.7rem;
+    line-height: 1.5;
     color: var(--color-secondary-text);
-    text-overflow: ellipsis;
-}
-
-.gh-card-excerpt::before {
-    padding: 0 0.4rem;
-    content: "—";
 }
 
 .gh-article {
@@ -457,22 +445,6 @@
     }
 
     .gh-home-latest .gh-home-latest-label {
-        display: none;
-    }
-
-    .gh-card-link {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 2.4rem 0;
-        white-space: normal;
-    }
-
-    .gh-card-title {
-        margin-top: 0.4rem;
-        margin-left: 0;
-    }
-
-    .gh-card-excerpt {
         display: none;
     }
 }
