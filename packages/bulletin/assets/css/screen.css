@@ -244,12 +244,13 @@
 }
 
 .gh-pagehead-title {
+    font-size: 3.2rem;
     font-weight: 800;
 }
 
 .gh-pagehead-description {
-    margin-top: 1.6rem;
-    font-size: 1.8rem;
+    margin-top: 0.8rem;
+    font-size: 1.7rem;
     line-height: 1.5;
     color: var(--color-secondary-text);
 }
@@ -259,25 +260,21 @@
 }
 
 .gh-author-image {
-    width: 96px;
-    height: 96px;
-    margin-right: 2.4rem;
+    width: 80px;
+    height: 80px;
+    margin-right: 2rem;
     border-radius: 50%;
-}
-
-.gh-author-bio {
-    margin-top: 0.8rem;
 }
 
 .gh-author-meta {
     display: flex;
     align-items: center;
-    margin-top: 2.4rem;
+    margin-top: 1.6rem;
     color: var(--color-darker-gray);
 }
 
 .gh-author-meta > * + * {
-    margin-left: 2rem;
+    margin-left: 1.6rem;
 }
 
 .gh-author-twitter,
@@ -430,11 +427,6 @@
 
     .gh-pagehead {
         margin-bottom: 3.6rem;
-    }
-
-    .gh-pagehead-description {
-        margin-top: 0.8rem;
-        font-size: 1.7rem;
     }
 
     .gh-author {
