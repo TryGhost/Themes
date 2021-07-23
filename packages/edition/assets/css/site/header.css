@@ -70,6 +70,10 @@
     margin-left: 3rem;
 }
 
+.site-header .menu-item:nth-child(n+6) {
+    display: none;
+}
+
 .with-full-cover:not(.menu-opened) .header-nav .menu-item,
 .with-full-cover:not(.menu-opened) .header-actions .menu-item,
 .with-alt-header:not(.menu-opened) .header-nav .menu-item,
