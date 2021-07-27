@@ -20,9 +20,20 @@
 }
 
 .gh-cta-actions {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gh-cta-link {
+    margin-top: 0.8rem;
+    font-size: 1.4rem;
+    color: var(--color-secondary-text);
+    text-decoration: none;
+}
+
+.gh-cta-link:hover {
+    color: var(--color-darker-gray);
 }
 
 @media (max-width: 767px) {
