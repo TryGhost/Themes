@@ -67,6 +67,11 @@ Ghost editor. */
     border-radius: 4px;
 }
 
+.kg-bookmark-container:hover {
+    border-color: var(--color-mid-gray);
+    opacity: 1;
+}
+
 .kg-bookmark-content {
     flex-grow: 1;
     padding: 2.4rem;
@@ -82,9 +87,9 @@ Ghost editor. */
 
 .kg-bookmark-description {
     display: -webkit-box;
-    margin-top: 0.8rem;
+    margin-top: 0.4rem;
     overflow: hidden;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 400;
     color: var(--color-secondary-text);
     text-overflow: ellipsis;
