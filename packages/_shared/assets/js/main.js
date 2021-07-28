@@ -31,6 +31,14 @@ to make sure the display matches what is seen in the editor. */
         false,
         true
     );
+
+    lightbox(
+        '.kg-image-card',
+        '.kg-image',
+        '.kg-image',
+        false,
+        false
+    );
 })();
 
 /* Responsive video in post content */

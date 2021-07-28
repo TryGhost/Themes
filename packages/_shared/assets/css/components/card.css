@@ -31,6 +31,7 @@ between them, so it looks like 1 big gallery */
     justify-content: center;
 }
 
+.kg-image,
 .kg-gallery-image {
     cursor: pointer;
 }

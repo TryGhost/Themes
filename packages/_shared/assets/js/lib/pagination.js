@@ -3,7 +3,7 @@ function pagination(isInfinite) {
 
     // next link element
     var nextElement = document.querySelector('link[rel=next]');
-    if (!nextElement) {
+    if (!nextElement && buttonElement) {
         buttonElement.remove();
         return;
     }

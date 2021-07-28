@@ -12,7 +12,7 @@ function lightbox(container, element, trigger, caption, isGallery) {
             item = {
                 src: isGallery
                     ? gridEl.querySelector('img').getAttribute('src')
-                    : linkEl.getAttribute('href'),
+                    : gridEl.getAttribute('src'),
                 w: 0,
                 h: 0,
             };
