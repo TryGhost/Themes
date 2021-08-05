@@ -33,7 +33,7 @@
 
     {{!-- Fixes 100vh issue on mobile browsers with toolbar on the bottom --}}
     <script>
-        if (document.body.classList.contains('with-full-cover')) {
+        if (document.body.classList.contains('with-full-cover') && (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.platform))) {
             document.getElementsByClassName('cover')[0].style.height = window.innerHeight + 'px';
         }
     </script>
