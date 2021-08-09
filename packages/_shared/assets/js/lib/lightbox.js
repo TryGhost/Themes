@@ -1,41 +1,69 @@
-function lightbox(container, element, trigger, caption, isGallery) {
-    var parseThumbnailElements = function (el) {
-        var items = [],
-            gridEl,
-            linkEl,
-            item;
+function lightbox(trigger) {
+    var onThumbnailsClick = function (e) {
+        e.preventDefault();
 
-        el.querySelectorAll(element).forEach(function (v) {
-            gridEl = v;
-            linkEl = gridEl.querySelector(trigger);
+        var items = [];
+        var index = 0;
 
-            item = {
-                src: isGallery
-                    ? gridEl.querySelector('img').getAttribute('src')
-                    : gridEl.getAttribute('src'),
-                w: 0,
-                h: 0,
-            };
+        var prevSibling = e.target.closest('.kg-card').previousSibling;
 
-            if (caption && gridEl.querySelector(caption)) {
-                item.title = gridEl.querySelector(caption).innerHTML;
-            }
+        while (prevSibling.classList.contains('kg-image-card') || prevSibling.classList.contains('kg-gallery-card')) {
+            var prevItems = [];
 
-            items.push(item);
-        });
+            prevSibling.querySelectorAll('img').forEach(function (item) {
+                prevItems.push({
+                    src: item.getAttribute('src'),
+                    w: item.getAttribute('width'),
+                    h: item.getAttribute('height'),
+                })
 
-        return items;
-    };
+                index += 1;
+            });
+            prevSibling = prevSibling.previousSibling;
 
-    var openPhotoSwipe = function (index, galleryElement) {
-        var pswpElement = document.querySelectorAll('.pswp')[0],
-            gallery,
-            options,
-            items;
+            items = prevItems.concat(items);
+        }
 
-        items = parseThumbnailElements(galleryElement);
+        if (e.target.classList.contains('kg-image')) {
+            items.push({
+                src: e.target.getAttribute('src'),
+                w: e.target.getAttribute('width'),
+                h: e.target.getAttribute('height'),
+            });
+        } else {
+            var reachedCurrentItem = false;
 
-        options = {
+            e.target.closest('.kg-gallery-card').querySelectorAll('img').forEach(function (item) {
+                items.push({
+                    src: item.getAttribute('src'),
+                    w: item.getAttribute('width'),
+                    h: item.getAttribute('height'),
+                });
+
+                if (!reachedCurrentItem && item !== e.target) {
+                    index += 1;
+                } else {
+                    reachedCurrentItem = true;
+                }
+            });
+        }
+
+        var nextSibling = e.target.closest('.kg-card').nextSibling;
+
+        while (nextSibling.classList.contains('kg-image-card') || nextSibling.classList.contains('kg-gallery-card')) {
+            nextSibling.querySelectorAll('img').forEach(function (item) {
+                items.push({
+                    src: item.getAttribute('src'),
+                    w: item.getAttribute('width'),
+                    h: item.getAttribute('height'),
+                })
+            });
+            nextSibling = nextSibling.nextSibling;
+        }
+
+        var pswpElement = document.querySelectorAll('.pswp')[0];
+
+        var options = {
             arrowEl: false,
             bgOpacity: 0.9,
             closeEl: false,
@@ -47,39 +75,10 @@ function lightbox(container, element, trigger, caption, isGallery) {
             showAnimationDuration: 0,
             showHideOpacity: true,
             zoomEl: false,
-        };
+        }
 
-        gallery = new PhotoSwipe(
-            pswpElement,
-            PhotoSwipeUI_Default,
-            items,
-            options
-        );
-        gallery.listen('gettingData', function (index, item) {
-            if (item.w < 1 || item.h < 1) {
-                // unknown size
-                var img = new Image();
-                img.onload = function () {
-                    // will get size after load
-                    item.w = this.width; // set image width
-                    item.h = this.height; // set image height
-                    gallery.updateSize(true); // reinit Items
-                };
-                img.src = item.src; // let's download image
-            }
-        });
+        var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
         gallery.init();
-    };
-
-    var onThumbnailsClick = function (e) {
-        e.preventDefault();
-
-        var siblings = e.target.closest(container).querySelectorAll(element);
-        var nodes = Array.prototype.slice.call(siblings);
-        var index = nodes.indexOf(e.target.closest(element));
-        var clickedGallery = e.target.closest(container);
-
-        openPhotoSwipe(index, clickedGallery);
 
         return false;
     };

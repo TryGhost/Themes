@@ -24,21 +24,7 @@ to make sure the display matches what is seen in the editor. */
         container.style.flex = ratio + ' 1 0%';
     });
 
-    lightbox(
-        '.kg-gallery-container',
-        '.kg-gallery-image',
-        '.kg-gallery-image',
-        false,
-        true
-    );
-
-    lightbox(
-        '.kg-image-card',
-        '.kg-image',
-        '.kg-image',
-        false,
-        false
-    );
+    lightbox('.kg-image, .kg-gallery-image img');
 })();
 
 /* Responsive video in post content */

@@ -15,6 +15,7 @@ except for when immediately preceeded by a heading */
 /* When there galleries are mixed with images, reduce margin
 between them, so it looks like 1 big gallery */
 
+.kg-image-card + .kg-image-card,
 .kg-image-card + .kg-gallery-card,
 .kg-gallery-card + .kg-image-card,
 .kg-gallery-card + .kg-gallery-card {
