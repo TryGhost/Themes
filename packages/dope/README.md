@@ -8,7 +8,7 @@ A unique tag-based theme to arrange your publications into collections. Keep org
 
 # Instructions
 
-1. [Download this theme](https://github.com/TryGhost/Dope/archive/master.zip)
+1. [Download this theme](https://github.com/TryGhost/Dope/archive/main.zip)
 2. Log into Ghost, and go to the `Design` settings area to upload the zip file
 
 # Development
