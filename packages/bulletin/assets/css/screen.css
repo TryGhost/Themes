@@ -235,10 +235,6 @@ h6 {
     box-shadow: 0 0 0 0 rgba(var(--ghost-accent-color-rgb), 1);
 }
 
-.gh-head {
-    background-color: var(--color-darker-gray) !important;
-}
-
 .gh-head-inner {
     padding: 2.4rem 0;
 }

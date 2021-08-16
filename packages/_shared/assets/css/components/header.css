@@ -222,6 +222,40 @@ Home About Collection Author Portal
     background-color: var(--ghost-accent-color);
 }
 
+/* Brand header
+/* ---------------------------------------------------------- */
+
+.is-head-brand .gh-head {
+    background-color: var(--ghost-accent-color);
+}
+
+.is-head-brand .gh-head-logo,
+.is-head-brand .gh-head .nav a {
+    color: var(--color-white);
+}
+
+.is-head-brand .gh-head-description {
+    padding-left: 2rem;
+    margin-left: 2rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.is-head-brand .gh-head-description::before {
+    height: 32px;
+    margin-top: -16px;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.is-head-brand .gh-burger::before,
+.is-head-brand .gh-burger::after {
+    background-color: var(--color-white);
+}
+
+.is-head-brand .gh-head-btn {
+    color: var(--color-darker-gray);
+    background-color: #fff;
+}
+
 /* Mobile menu
 /* ---------------------------------------------------------- */
 
