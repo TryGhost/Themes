@@ -8,7 +8,7 @@ A versatile theme suitable for documentation. Publish your posts or business inf
 
 # Instructions
 
-1. [Download this theme](https://github.com/TryGhost/Ease/archive/master.zip)
+1. [Download this theme](https://github.com/TryGhost/Ease/archive/main.zip)
 2. Log into Ghost, and go to the `Design` settings area to upload the zip file
 
 # Search
