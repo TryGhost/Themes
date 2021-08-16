@@ -5482,10 +5482,10 @@ stylehacks@^5.0.1:
     browserslist "^4.16.0"
     postcss-selector-parser "^6.0.4"
 
-stylelint-config-recess-order@2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/stylelint-config-recess-order/-/stylelint-config-recess-order-2.4.0.tgz#7336da98d9e11cfd17388f4c15fada615b49c301"
-  integrity sha512-+X+cb7WgmfCt5yoG+Ewg+fpn79hosjj7ESQ7ODTtwaZQGzQT+jD6AWLAhULMqDb9v2GVDTO5fu1rY/BR9EaZJA==
+stylelint-config-recess-order@2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/stylelint-config-recess-order/-/stylelint-config-recess-order-2.5.0.tgz#a64f2d95eb27c0737054b13efc51553fc9ca30c0"
+  integrity sha512-FqhPRGQlHnTS/ZPegq5ORelHsk9X5S+l0uQu1N97e+SSLD+6XYDewdkXy6e2yx8fpZLvwpP3TnPoNTHGw52DzA==
   dependencies:
     stylelint-order "4.1.x"
 
