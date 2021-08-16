@@ -51,6 +51,11 @@ h6 {
     letter-spacing: -0.03em;
 }
 
+.gh-home-logo img {
+    max-height: 48px;
+    margin-bottom: 1.2rem;
+}
+
 .gh-home-description {
     margin-top: 0.4rem;
     font-size: 1.6rem;
