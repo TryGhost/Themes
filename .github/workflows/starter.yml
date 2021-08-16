@@ -30,4 +30,4 @@ jobs:
   #       with:
   #         api-url: ${{ secrets.STARTER_GHOST_ADMIN_API_URL }}
   #         api-key: ${{ secrets.STARTER_GHOST_ADMIN_API_KEY }}
-  #         theme-dir: packages/starter
+  #         working-directory: packages/starter

@@ -30,7 +30,7 @@ jobs:
         with:
           api-url: ${{ secrets.DIGEST_GHOST_ADMIN_API_URL }}
           api-key: ${{ secrets.DIGEST_GHOST_ADMIN_API_KEY }}
-          theme-dir: packages/digest
+          working-directory: packages/digest
   subtree:
     name: Subtree
     runs-on: ubuntu-latest

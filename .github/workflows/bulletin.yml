@@ -30,7 +30,7 @@ jobs:
         with:
           api-url: ${{ secrets.BULLETIN_GHOST_ADMIN_API_URL }}
           api-key: ${{ secrets.BULLETIN_GHOST_ADMIN_API_KEY }}
-          theme-dir: packages/bulletin
+          working-directory: packages/bulletin
   subtree:
     name: Subtree
     runs-on: ubuntu-latest
