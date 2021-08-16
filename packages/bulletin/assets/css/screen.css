@@ -232,6 +232,7 @@ h6 {
     background-color: var(--ghost-accent-color);
     border-radius: 50%;
     box-shadow: 0 0 0 0 rgba(var(--ghost-accent-color-rgb), 1);
+    animation: 1.2s blink ease infinite;
 }
 
 .gh-head-inner {
@@ -489,16 +490,13 @@ h6 {
     }
 }
 
-@keyframes pulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(var(--ghost-accent-color-rgb), 0.7);
+@keyframes blink {
+    from,
+    to {
+        opacity: 0;
     }
 
-    70% {
-        box-shadow: 0 0 0 4px rgba(var(--ghost-accent-color-rgb), 0);
-    }
-
-    100% {
-        box-shadow: 0 0 0 0 rgba(var(--ghost-accent-color-rgb), 0);
+    50% {
+        opacity: 1;
     }
 }
