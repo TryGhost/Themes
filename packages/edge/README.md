@@ -8,7 +8,7 @@ A visually aesthetic theme designed for creative professionals. Showcase your wo
 
 # Instructions
 
-1. [Download this theme](https://github.com/TryGhost/Edge/archive/master.zip)
+1. [Download this theme](https://github.com/TryGhost/Edge/archive/main.zip)
 2. Log into Ghost, and go to the `Design` settings area to upload the zip file
 
 # Development
