@@ -8,7 +8,7 @@ A multi-column theme with a unique card layout. Share your posts with contempora
 
 # Instructions
 
-1. [Download this theme](https://github.com/TryGhost/Ruby/archive/master.zip)
+1. [Download this theme](https://github.com/TryGhost/Ruby/archive/main.zip)
 2. Log into Ghost, and go to the `Design` settings area to upload the zip file
 
 # Development
