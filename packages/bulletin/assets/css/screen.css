@@ -309,6 +309,15 @@ h6 {
     opacity: 1;
 }
 
+.gh-card:first-child .gh-card-link {
+    padding-top: 0;
+    border-top: 0;
+}
+
+.gh-card-image {
+    margin-bottom: 2.4rem;
+}
+
 .gh-card-date {
     font-size: 1.3rem;
     font-weight: 700;
@@ -325,6 +334,11 @@ h6 {
     margin-top: 0.4rem;
     font-size: 2.1rem;
     font-weight: 700;
+}
+
+.gh-card:first-child .gh-card-title {
+    font-size: 2.7rem;
+    font-weight: 800;
 }
 
 .gh-card-link:hover .gh-card-title {
