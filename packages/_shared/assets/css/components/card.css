@@ -19,7 +19,7 @@ between them, so it looks like 1 big gallery */
 .kg-image-card + .kg-gallery-card,
 .kg-gallery-card + .kg-image-card,
 .kg-gallery-card + .kg-gallery-card {
-    margin-top: 1rem;
+    margin-top: 0.8rem;
 }
 
 .kg-gallery-container {
@@ -43,11 +43,11 @@ between them, so it looks like 1 big gallery */
 }
 
 .kg-gallery-row:not(:first-of-type) {
-    margin: 1rem 0 0 0;
+    margin: 0.8rem 0 0 0;
 }
 
 .kg-gallery-image:not(:first-of-type) {
-    margin: 0 0 0 1rem;
+    margin: 0 0 0 0.8rem;
 }
 
 /* Bookmark cards
