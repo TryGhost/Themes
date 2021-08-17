@@ -68,7 +68,7 @@ hr {
 }
 
 blockquote {
-    padding-left: 2.4rem;
+    padding-left: 2rem;
     font-style: italic;
     border-left: 4px solid var(--ghost-accent-color);
 }
