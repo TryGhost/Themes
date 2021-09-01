@@ -73,6 +73,10 @@
     color: var(--dark-gray-color);
 }
 
+.u-text-format a {
+    text-decoration: underline;
+}
+
 .u-text-format a:hover {
     text-decoration: underline;
 }
