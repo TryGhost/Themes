@@ -38,7 +38,8 @@
     font-weight: 800;
 }
 
-.with-full-cover .logo-text {
+.with-full-cover .logo-text,
+.with-alt-header .logo-text {
     color: #fff;
 }
 
