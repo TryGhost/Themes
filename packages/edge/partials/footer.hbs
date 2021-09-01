@@ -1,6 +1,13 @@
 <footer class="site-footer">
-    <div class="copyright">
-        Powered by <a href="https://ghost.org/" target="_blank">Ghost</a>
+    <div class="container">
+        {{#if navigation type="secondary"}}
+            <nav class="footer-nav">
+                {{navigation type="secondary"}}
+            </nav>
+        {{/if}}
+        <div class="copyright">
+            Powered by <a href="https://ghost.org/" target="_blank">Ghost</a>
+        </div>
     </div>
 </footer>
 

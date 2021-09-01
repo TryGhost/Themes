@@ -4,3 +4,23 @@
     font-size: 13px;
     text-align: center;
 }
+
+.footer-nav {
+    margin-bottom: 10px;
+}
+
+.footer-nav .nav-list {
+    justify-content: center;
+}
+
+.footer-nav .menu-item {
+    margin: 0 10px;
+}
+
+.footer-nav .menu-item-link {
+    color: var(--secondary-text-color);
+}
+
+.footer-nav .menu-item-link:hover {
+    color: var(--dark-gray-color);
+}
