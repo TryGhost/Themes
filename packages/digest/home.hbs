@@ -1,11 +1,11 @@
 {{!< default}}
 
 <main id="gh-main" class="gh-main">
-    {{#get "posts" limit="1"}}
-        {{#foreach posts}}
+    {{#foreach posts}}
+        {{#if @first}}
             <article class="gh-article {{post_class}}">
                 {{> content}}
             </article>
-        {{/foreach}}
-    {{/get}}
+        {{/if}}
+    {{/foreach}}
 </main>
