@@ -15,7 +15,7 @@
     "devDependencies": {
         "autoprefixer": "10.3.6",
         "beeper": "2.1.0",
-        "concurrently": "6.2.1",
+        "concurrently": "6.2.2",
         "cssnano": "5.0.8",
         "gscan": "4.3.1",
         "gulp": "4.0.2",
