@@ -43,7 +43,15 @@
         ],
         "rules": {
             "indentation": 4,
-            "no-descending-specificity": null
+            "no-descending-specificity": null,
+            "alpha-value-notation": null,
+            "selector-class-pattern": null,
+            "max-line-length": null,
+            "value-no-vendor-prefix": null,
+            "color-function-notation": null,
+            "property-no-vendor-prefix": null,
+            "media-feature-name-no-vendor-prefix": null,
+            "number-max-precision": null
         }
     },
     "renovate": {

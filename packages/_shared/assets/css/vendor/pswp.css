@@ -183,7 +183,7 @@
 .pswp__button--arrow--right::before {
     width: 44px;
     height: 44px;
-    background: url(../images/default-skin.png) 0 0 no-repeat;
+    background: url("../images/default-skin.png") 0 0 no-repeat;
     background-size: 264px 88px;
 }
 
@@ -191,7 +191,7 @@
     .pswp--svg .pswp__button,
     .pswp--svg .pswp__button--arrow--left::before,
     .pswp--svg .pswp__button--arrow--right::before {
-        background-image: url(../images/default-skin.svg);
+        background-image: url("../images/default-skin.svg");
     }
 
     .pswp--svg .pswp__button--arrow--left,
@@ -350,7 +350,7 @@
 }
 
 .pswp__preloader--active .pswp__preloader__icn {
-    background: url(../images/preloader.gif) 0 0 no-repeat;
+    background: url("../images/preloader.gif") 0 0 no-repeat;
 }
 
 .pswp--css_animation .pswp__preloader--active {

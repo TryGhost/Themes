@@ -43,7 +43,7 @@ between them, so it looks like 1 big gallery */
 }
 
 .kg-gallery-row:not(:first-of-type) {
-    margin: 0.8rem 0 0 0;
+    margin: 0.8rem 0 0;
 }
 
 .kg-gallery-image:not(:first-of-type) {
