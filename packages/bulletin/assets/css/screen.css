@@ -59,6 +59,10 @@ h6 {
     color: #fff;
 }
 
+.has-serif-title .gh-home-subscribe-title {
+    font-family: var(--font-serif);
+}
+
 .gh-home-subscribe-description {
     max-width: 480px;
     margin-top: 1.6rem;

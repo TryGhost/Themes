@@ -1,0 +1,7 @@
+.has-serif-title .gh-card-title {
+    font-family: var(--font-serif);
+}
+
+.has-serif-body .gh-card-excerpt {
+    font-family: var(--font-serif);
+}
