@@ -5,7 +5,6 @@
     --font-serif: Lora, Times, serif; /* stylelint-disable-line value-keyword-case */
     --color-primary-text: var(--color-black);
     --color-darker-gray: var(--color-black);
-    --content-letter-spacing: -0.01em;
     --head-nav-gap: 3.2rem;
 }
 
@@ -217,6 +216,7 @@
 
 .gh-featured .gh-card-excerpt {
     margin-top: 0.8rem;
+    font-family: var(--font-sans);
     font-size: inherit;
     line-height: 1.55;
     color: var(--color-secondary-text);
@@ -275,6 +275,7 @@
 
 .has-serif-title .gh-subscribe-title {
     font-family: var(--font-serif);
+    letter-spacing: -0.01em;
 }
 
 .gh-subscribe-description {
@@ -282,10 +283,6 @@
     font-size: 1.9rem;
     line-height: 1.4;
     color: #fff;
-}
-
-.has-serif-body .gh-subscribe-description {
-    font-family: var(--font-serif);
 }
 
 .gh-subscribe-input {
@@ -407,13 +404,14 @@
     align-items: center;
     font-size: 1.7rem;
     font-weight: 700;
+    line-height: 1.8;
     text-transform: uppercase;
     letter-spacing: 0.01em;
 }
 
 .gh-navigation-title {
     margin-top: 0.8rem;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     font-weight: 400;
     letter-spacing: 0;
 }

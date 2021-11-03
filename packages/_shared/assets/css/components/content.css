@@ -19,6 +19,7 @@ headings, text, images and lists. We deal with cards lower down. */
 
 .has-serif-title .gh-content > [id] {
     font-family: var(--font-serif);
+    letter-spacing: -0.01em;
 }
 
 /* Add back a top margin to all headings, unless a heading
@@ -60,7 +61,7 @@ is the very first element in the post content */
 .gh-content > ul,
 .gh-content > dl,
 .gh-content > p {
-    font-size: 1.9rem;
+    font-size: var(--content-font-size, 1.9rem);
     letter-spacing: var(--content-letter-spacing, 0);
 }
 
@@ -70,7 +71,6 @@ is the very first element in the post content */
 .has-serif-body .gh-content > dl,
 .has-serif-body .gh-content > p {
     font-family: var(--font-serif);
-    font-size: 2.1rem;
 }
 
 .gh-content > ul,

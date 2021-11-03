@@ -33,7 +33,7 @@ h5,
 h6 {
     line-height: 1.15;
     color: var(--color-darker-gray);
-    letter-spacing: -0.03em;
+    letter-spacing: -0.02em;
 }
 
 h1 {
