@@ -41,6 +41,11 @@
     font-size: 20px;
 }
 
+.has-serif-title .post-title {
+    font-family: var(--font-serif);
+    font-weight: 700;
+}
+
 .post-meta {
     margin-top: 5px;
     color: var(--secondary-text-color);
@@ -59,6 +64,10 @@
 
 .post-meta-tags .post-tag + .post-tag::before {
     content: ", ";
+}
+
+.has-serif-body .post-excerpt {
+    font-family: var(--font-serif);
 }
 
 @media (max-width: 767px) {
