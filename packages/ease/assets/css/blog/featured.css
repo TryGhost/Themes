@@ -34,6 +34,10 @@
     color: var(--primary-color);
 }
 
+.has-serif-title .featured-title {
+    font-family: var(--font-serif);
+}
+
 @media (max-width: 767px) {
     .featured-wrapper {
         margin-top: 0;

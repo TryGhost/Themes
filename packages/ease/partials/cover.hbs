@@ -8,7 +8,9 @@
             {{#if @site.description}}
                 <div class="cover-description">{{@site.description}}</div>
             {{/if}}
-            {{> search}}
+            {{#if @custom.content_api_key_for_search}}
+                {{> search}}
+            {{/if}}
         </div>
     </div>
 {{/if}}

@@ -30,6 +30,11 @@
     font-weight: 500;
 }
 
+.has-serif-title .cover-description {
+    font-family: var(--font-serif);
+    font-weight: 700;
+}
+
 @media (max-width: 460px) {
     .site-cover .search {
         width: 100%;

@@ -2,7 +2,9 @@
 
 <div class="content-area">
     <main class="site-main container">
-        {{> featured}}
+        {{#if @custom.show_featured_posts}}
+            {{> featured}}
+        {{/if}}
         {{#get "tags" limit="all" include="count.posts"}}
             <div class="topic-feed">
                 <div class="row">

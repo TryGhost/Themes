@@ -14,6 +14,10 @@
     font-size: 20px;
 }
 
+.has-serif-title .topic-name {
+    font-family: var(--font-serif);
+}
+
 .topic-count {
     margin-left: 15px;
     color: var(--secondary-text-color);

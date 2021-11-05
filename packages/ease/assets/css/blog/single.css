@@ -4,6 +4,11 @@
 
 .single .post-title {
     font-size: 30px;
+    font-weight: 700;
+}
+
+.has-serif-title .single .post-title {
+    font-family: var(--font-serif);
 }
 
 .single .post-media {
