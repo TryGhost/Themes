@@ -32,6 +32,16 @@
     font-weight: 500;
 }
 
+.has-serif-title .u-text-format h1,
+.has-serif-title .u-text-format h2,
+.has-serif-title .u-text-format h3,
+.has-serif-title .u-text-format h4,
+.has-serif-title .u-text-format h5,
+.has-serif-title .u-text-format h6 {
+    font-family: var(--font-serif);
+    font-weight: 700;
+}
+
 .u-text-format h1 + p,
 .u-text-format h2 + p,
 .u-text-format h3 + p,
@@ -94,4 +104,17 @@
 .u-text-format blockquote,
 .u-text-format blockquote + * {
     margin-top: 30px;
+}
+
+.u-text-format ul li:not(:first-child),
+.u-text-format ol li:not(:first-child) {
+    margin-top: 10px;
+}
+
+.has-serif-body .u-text-format > blockquote,
+.has-serif-body .u-text-format > ol,
+.has-serif-body .u-text-format > ul,
+.has-serif-body .u-text-format > dl,
+.has-serif-body .u-text-format > p {
+    font-family: var(--font-serif);
 }

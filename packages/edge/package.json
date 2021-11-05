@@ -35,6 +35,28 @@
             "xl": {
                 "width": 1920
             }
+        },
+        "custom": {
+            "title_font": {
+                "type": "select",
+                "options": ["Modern sans-serif", "Elegant serif"],
+                "default": "Modern sans-serif"
+            },
+            "body_font": {
+                "type": "select",
+                "options": ["Modern sans-serif", "Elegant serif"],
+                "default": "Modern sans-serif"
+            },
+            "show_related_posts": {
+                "type": "boolean",
+                "default": true,
+                "group": "post"
+            },
+            "related_posts_title": {
+                "type": "text",
+                "default": "You might also like...",
+                "group": "post"
+            }
         }
     },
     "scripts": {

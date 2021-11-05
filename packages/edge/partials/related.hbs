@@ -2,7 +2,9 @@
     {{#if related}}
         <section class="related-posts">
             <div class="container">
-                <h3 class="related-title">You Might Also Like...</h3>
+                {{#if @custom.related_posts_title}}
+                    <h3 class="related-title">{{@custom.related_posts_title}}</h3>
+                {{/if}}
                 <div class="post-feed">
                     {{#foreach posts}}
                         <div class="grid-item grid-sizer"></div>

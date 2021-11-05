@@ -27,6 +27,8 @@
                 </div>
             </article>
         {{/post}}
-        {{> related}}
+        {{#if @custom.show_related_posts}}
+            {{> related}}
+        {{/if}}
     </main>
 </div>

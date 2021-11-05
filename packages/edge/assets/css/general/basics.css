@@ -6,7 +6,8 @@
     --mid-gray-color: #e9e9e9;
     --dark-gray-color: #1a1a1a;
     --black-color: #000;
-    --font-base: rubik, sans-serif;
+    --font-base: Rubik, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+    --font-serif: Lora, Times, serif;
     --animation-base: ease-in-out;
 }
 
