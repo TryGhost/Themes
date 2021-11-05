@@ -7,7 +7,7 @@
     width: 120px;
     height: 120px;
     outline: none;
-    border: 2px solid var(--primary-color);
+    border: 2px solid var(--mid-gray-color);
     line-height: 1;
     background-color: var(--white-color);
     border-radius: 50%;

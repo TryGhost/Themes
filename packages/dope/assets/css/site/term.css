@@ -8,7 +8,6 @@
     display: flex;
     align-items: center;
     margin-bottom: 5px;
-    color: var(--primary-color);
     font-size: 30px;
     font-weight: 800;
 }
@@ -18,7 +17,11 @@
     margin-right: 10px;
     width: 30px;
     height: 3px;
-    background-color: var(--primary-color);
+    background-color: var(--dark-gray-color);
+}
+
+.has-serif-title .term-name {
+    font-family: var(--font-serif);
 }
 
 @media (max-width: 767px) {

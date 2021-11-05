@@ -35,6 +35,10 @@
     font-size: 18px;
 }
 
+.has-serif-title .post-title {
+    font-family: var(--font-serif);
+}
+
 .post-tags {
     margin-bottom: 10px;
 }
@@ -48,6 +52,14 @@
     letter-spacing: 0.5px;
     background-color: var(--primary-color);
     border-radius: 2px;
+}
+
+.post-excerpt {
+    line-height: 1.6;
+}
+
+.has-serif-body .post-excerpt {
+    font-family: var(--font-serif);
 }
 
 .post-footer {

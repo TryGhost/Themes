@@ -65,6 +65,10 @@
     transition-property: margin-right, width;
 }
 
+.has-serif-title .tag-name {
+    font-family: var(--font-serif);
+}
+
 .tag-description {
     margin-top: 10px;
     color: var(--white-color);

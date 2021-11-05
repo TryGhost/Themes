@@ -12,11 +12,17 @@
                 <div class="post-content kg-canvas u-text-format">
                     {{content}}
                 </div>
-                {{> share}}
+                {{#if @custom.show_share_links}}
+                    {{> share}}
+                {{/if}}
             </article>
-            {{> author}}
+            {{#if @custom.show_author}}
+                {{> author}}
+            {{/if}}
         {{/post}}
-        {{> related}}
+        {{#if @custom.show_related_posts}}
+            {{> related}}
+        {{/if}}
         {{> comment}}
     </main>
 </div>
