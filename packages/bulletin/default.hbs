@@ -7,7 +7,7 @@
     <title>{{meta_title}}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,500;0,700;0,800;1,400;1,700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,700&family=Mulish:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,700&display=swap">
     <link rel="stylesheet" href="{{asset "built/screen.css"}}">
 
     <script>
@@ -17,7 +17,7 @@
     {{ghost_head}}
 </head>
 
-<body class="{{body_class}} is-head-brand is-serif-content{{^if @member.paid}}{{#is "home"}} is-home-cta{{/is}}{{/if}}">
+<body class="{{body_class}} is-head-brand{{^if @member.paid}}{{#is "home"}} is-home-cta{{/is}}{{/if}}{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Elegant serif"}} has-serif-body{{/match}}">
     <div class="gh-site">
         {{^if @member.paid}}
             {{^is "home"}}

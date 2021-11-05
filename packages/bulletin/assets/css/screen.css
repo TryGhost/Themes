@@ -2,6 +2,7 @@
 
 :root {
     --font-sans: Mulish, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif; /* stylelint-disable-line value-keyword-case */
+    --font-serif: Lora, Times, serif; /* stylelint-disable-line value-keyword-case */
 }
 
 h1,
@@ -59,10 +60,15 @@ h6 {
     color: #fff;
 }
 
+.has-serif-title .gh-home-subscribe-title {
+    font-family: var(--font-serif);
+    letter-spacing: -0.01em;
+}
+
 .gh-home-subscribe-description {
     max-width: 480px;
     margin-top: 1.6rem;
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     line-height: 1.5;
     color: #fff;
 }
@@ -174,6 +180,10 @@ h6 {
     width: 100%;
 }
 
+.gh-home-latest .gh-content {
+    --content-font-size: 2.1rem;
+}
+
 .gh-home-latest-footer {
     position: absolute;
     right: 0;
@@ -187,7 +197,7 @@ h6 {
 .gh-home-latest-footer .gh-btn {
     padding: 1.4rem 2.8rem;
     font-size: 2rem;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.01em;
     box-shadow: 0 27px 80px rgba(0, 0, 0, 0.07), 0 11.28px 33.4221px rgba(0, 0, 0, 0.0503198), 0 6.0308px 17.869px rgba(0, 0, 0, 0.0417275), 0 3.38082px 10.0172px rgba(0, 0, 0, 0.035), 0 1.79553px 5.32008px rgba(0, 0, 0, 0.0282725), 0 0.747159px 2.21381px rgba(0, 0, 0, 0.0196802);
     transition: transform 0.3s cubic-bezier(0.25, 0.75, 0.5, 1.25);
     transform: scale(1.25);
@@ -211,6 +221,7 @@ h6 {
     line-height: 1;
     color: var(--color-darker-gray);
     text-transform: uppercase;
+    letter-spacing: 0.01em;
     border: 1px solid var(--color-light-gray);
     border-radius: 32px;
 }
@@ -244,7 +255,12 @@ h6 {
 }
 
 .gh-pagehead-title {
-    font-size: 3.2rem;
+    font-size: 3.6rem;
+}
+
+.has-serif-title .gh-pagehead-title {
+    font-family: var(--font-serif);
+    letter-spacing: -0.01em;
 }
 
 .gh-pagehead-description {
@@ -319,12 +335,7 @@ h6 {
 
 .gh-card-title {
     margin-top: 0.4rem;
-    font-size: 2.1rem;
-    font-weight: 700;
-}
-
-.gh-card:first-child .gh-card-title {
-    font-size: 2.7rem;
+    font-size: 2.4rem;
     font-weight: 800;
 }
 
@@ -333,7 +344,7 @@ h6 {
 }
 
 .gh-card-excerpt {
-    margin-top: 0.8rem;
+    margin-top: 1.2rem;
     font-size: 1.7rem;
     line-height: 1.5;
     color: var(--color-secondary-text);
@@ -361,6 +372,18 @@ h6 {
 
 .gh-article-image {
     grid-column: main-start / main-end;
+}
+
+.image-wide .gh-article-image {
+    grid-column: wide-start / wide-end;
+}
+
+.image-full .gh-article-image {
+    grid-column: full-start / full-end;
+}
+
+.image-full .gh-article-image img {
+    width: 100%;
 }
 
 .gh-article-footer {

@@ -17,6 +17,11 @@ headings, text, images and lists. We deal with cards lower down. */
     margin: 0;
 }
 
+.has-serif-title .gh-content > [id] {
+    font-family: var(--font-serif);
+    letter-spacing: -0.01em;
+}
+
 /* Add back a top margin to all headings, unless a heading
 is the very first element in the post content */
 .gh-content > [id]:not(:first-child) {
@@ -56,17 +61,16 @@ is the very first element in the post content */
 .gh-content > ul,
 .gh-content > dl,
 .gh-content > p {
-    font-size: 1.9rem;
+    font-size: var(--content-font-size, 1.9rem);
     letter-spacing: var(--content-letter-spacing, 0);
 }
 
-.is-serif-content .gh-content > blockquote,
-.is-serif-content .gh-content > ol,
-.is-serif-content .gh-content > ul,
-.is-serif-content .gh-content > dl,
-.is-serif-content .gh-content > p {
+.has-serif-body .gh-content > blockquote,
+.has-serif-body .gh-content > ol,
+.has-serif-body .gh-content > ul,
+.has-serif-body .gh-content > dl,
+.has-serif-body .gh-content > p {
     font-family: var(--font-serif);
-    font-size: 2.1rem;
 }
 
 .gh-content > ul,
@@ -100,11 +104,11 @@ is the very first element in the post content */
         font-size: 1.7rem;
     }
 
-    .is-serif-content .gh-content > blockquote,
-    .is-serif-content .gh-content > ol,
-    .is-serif-content .gh-content > ul,
-    .is-serif-content .gh-content > dl,
-    .is-serif-content .gh-content > p {
+    .has-serif-body .gh-content > blockquote,
+    .has-serif-body .gh-content > ol,
+    .has-serif-body .gh-content > ul,
+    .has-serif-body .gh-content > dl,
+    .has-serif-body .gh-content > p {
         font-size: 1.9rem;
     }
 
