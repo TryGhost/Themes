@@ -5,22 +5,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{meta_title}}</title>
-    <link rel="stylesheet" href="{{asset "built/screen.css"}}">
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;0,800;1,400;1,700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;0,800;1,400;1,700&family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap">
+
+    <link rel="stylesheet" href="{{asset "built/screen.css"}}">
 
     {{ghost_head}}
 </head>
 
-<body class="{{body_class}}{{{block "body_class"}}}">
+<body class="{{body_class}}{{{block "body_class"}}}{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Elegant serif"}} has-serif-body{{/match}}">
     <div class="site">
         {{> header}}
 
         {{#is "home"}}
-            {{#unless @member}}
-                {{> cover}}
-            {{/unless}}
-            {{> featured}}
+            {{> cover}}
+            {{#if @custom.show_featured_posts}}
+                {{> featured}}
+            {{/if}}
         {{/is}}
 
         <div class="site-content">
@@ -35,22 +37,6 @@
     <script>
         if (document.body.classList.contains('with-full-cover') && (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.platform))) {
             document.getElementsByClassName('cover')[0].style.height = window.innerHeight + 'px';
-        }
-    </script>
-
-    <script>
-        var feed = document.querySelector('.post-feed');
-        if (feed && !feed.classList.contains('related-feed')) {
-            var wrapper = document.querySelector('.feed-layout');
-            var feedLayout = localStorage.getItem('edition_layout');
-            switch (feedLayout) {
-                case 'compact':
-                    wrapper.classList.remove('expanded');
-                    feed.classList.remove('expanded');
-                    break;
-                default:
-                    break;
-            }
         }
     </script>
 

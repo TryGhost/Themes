@@ -10,7 +10,7 @@ subMenu();
 featured();
 feedLayout();
 pagination();
-archive();
+// archive();
 video();
 gallery();
 table();
@@ -186,6 +186,7 @@ function archive(data) {
     'use strict';
     if (!body.classList.contains('logged-in')) return;
 
+    var feed = document.querySelector('.post-feed');
     var posts = data || document.querySelectorAll('.feed');
 
     posts.forEach(function (post) {

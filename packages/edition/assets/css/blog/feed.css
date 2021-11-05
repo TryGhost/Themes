@@ -1,6 +1,6 @@
 .feed-header {
     margin-top: 3vmin;
-    margin-bottom: 3rem;
+    margin-bottom: 4.5rem;
 }
 
 .feed-header-wrapper {
@@ -18,41 +18,16 @@
     text-transform: uppercase;
 }
 
-.feed-layout {
-    position: relative;
-    display: flex;
-    padding: 3px;
-    height: 100%;
-    background-color: var(--lighter-gray-color);
-    border-radius: 5px;
+.post-feed {
+    margin-top: -1.5rem;
 }
 
-.feed-layout::before {
-    content: "";
-    position: absolute;
-    left: 3px;
-    width: 30px;
-    height: 30px;
-    background-color: var(--white-color);
-    border-radius: 3px;
-    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s cubic-bezier(0.25, 0.75, 0.5, 1.25);
+.post-feed.expanded {
+    margin-top: -2.5rem;
 }
 
-.feed-layout.expanded::before {
-    transform: translateX(30px);
-}
-
-.feed-layout .button-icon:hover .icon {
-    opacity: 1;
-}
-
-.feed-layout .icon {
-    position: relative;
-    z-index: 10;
-    width: 24px;
-    height: 24px;
-    color: var(--secondary-text-color);
+.post-feed.text-only {
+    margin-top: -3rem;
 }
 
 .feed {
@@ -89,18 +64,18 @@
     border-top: 0;
 }
 
-.feed-month + .feed {
-    padding-top: 2rem;
-}
-
 .post-feed.expanded .feed {
     align-items: flex-start;
+    padding: 3rem 0;
+}
+
+.post-feed.expanded:not(.text-only) .feed {
     padding: 2.5rem 0;
     border-top: 0;
 }
 
-.feed-group:first-child .feed-month + .feed {
-    padding-top: 1.5rem;
+.post-feed.right-thumbnail .feed {
+    flex-direction: row-reverse;
 }
 
 .feed-calendar {
@@ -108,6 +83,7 @@
     margin-right: 1.5rem;
     color: var(--brand-color);
     font-size: 1.1rem;
+    line-height: 1.5;
     font-weight: 800;
     white-space: nowrap;
 }
@@ -127,6 +103,11 @@
     width: 160px;
 }
 
+.post-feed.right-thumbnail .feed-image {
+    margin-right: 0;
+    margin-left: 2.5rem;
+}
+
 .post-feed:not(.expanded) .feed-image {
     display: none;
 }
@@ -139,6 +120,10 @@
 
 .post-feed.expanded .feed-wrapper {
     flex-direction: column;
+}
+
+.post-feed.expanded:not(.text-only) .feed-wrapper {
+    margin-top: -2px;
 }
 
 .feed-title {
@@ -159,9 +144,17 @@
     white-space: normal;
 }
 
+.has-serif-title .feed-title {
+    font-family: var(--font-serif);
+}
+
 .feed-excerpt {
     margin-top: 0.8rem;
     line-height: 1.4;
+}
+
+.has-serif-body .feed-excerpt {
+    font-family: var(--font-serif);
 }
 
 .post-feed:not(.expanded) .feed-excerpt {
@@ -252,8 +245,10 @@
     padding: 1rem 1.5rem;
     width: inherit;
     color: var(--darker-gray-color);
-    font-size: 1.7rem;
-    font-weight: 700;
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(3px);
 }

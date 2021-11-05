@@ -10,6 +10,10 @@
     height: 100vh;
 }
 
+.with-full-cover .cover.half {
+    height: 60vh;
+}
+
 .with-full-cover .cover::before {
     content: "";
     position: absolute;
@@ -46,7 +50,7 @@
     text-align: center;
 }
 
-.with-full-cover .cover-content {
+.with-full-cover .cover:not(.half) .cover-content {
     transform: translateY(-6vmin);
 }
 
@@ -54,6 +58,10 @@
     font-size: 3.5rem;
     line-height: 1.3;
     font-weight: 700;
+}
+
+.has-serif-title .cover-description {
+    font-family: var(--font-serif);
 }
 
 .with-full-cover .cover-description {
@@ -71,7 +79,7 @@
 
 .cover-form {
     margin-top: 4.5rem;
-    max-width: 500px;
+    max-width: 480px;
     width: 100%;
 }
 
@@ -96,6 +104,10 @@
     margin-left: -20px;
     width: 40px;
     height: 40px;
+}
+
+.cover.half .cover-arrow {
+    display: none;
 }
 
 .cover-arrow .icon {

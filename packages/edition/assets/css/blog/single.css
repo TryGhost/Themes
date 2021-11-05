@@ -7,7 +7,7 @@
     margin-bottom: 1rem;
     color: var(--secondary-text-color);
     font-size: 1.2rem;
-    font-weight: 800;
+    font-weight: 700;
     text-transform: uppercase;
 }
 
@@ -24,10 +24,17 @@
     letter-spacing: -0.1rem;
 }
 
+.has-serif-title .single-title {
+    font-family: var(--font-serif);
+}
+
 .single-excerpt {
     margin-top: 2rem;
     font-size: 1.8rem;
-    font-style: italic;
+}
+
+.has-serif-body .single-excerpt {
+    font-family: var(--font-serif);
 }
 
 .single-media {
@@ -37,6 +44,15 @@
 
 .single-media img {
     width: 100%;
+}
+
+.has-serif-body .single-content {
+    font-family: var(--font-serif);
+}
+
+.has-serif-title .single-content h2,
+.has-serif-title .single-content h3 {
+    font-family: var(--font-serif);
 }
 
 .single-cta {
@@ -94,7 +110,7 @@
     font-size: 1.8rem;
 }
 
-.single-footer-bottom {
+.single-footer-top + .single-footer-bottom {
     margin-top: 2rem;
 }
 

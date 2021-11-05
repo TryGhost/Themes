@@ -8,13 +8,17 @@
 }
 
 .featured-wrapper .u-placeholder {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .featured-wrapper .post-title {
     margin-bottom: 0;
     font-size: 1.8rem;
     font-weight: 700;
+}
+
+.has-serif-title .featured-wrapper .post-title {
+    font-family: var(--font-serif);
 }
 
 .featured-title {

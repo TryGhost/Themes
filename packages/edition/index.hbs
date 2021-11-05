@@ -3,16 +3,14 @@
 <div class="content-area">
     <main class="site-main">
         <header class="feed-header container medium">
-            <div class="feed-header-wrapper">
-                <h2 class="feed-header-title">Latest</h2>
-                <div class="feed-layout expanded">
-                    <button class="button-icon feed-layout-headline">{{> icons/list-headline}}</button>
-                    <button class="button-icon feed-layout-expanded">{{> icons/list-bullet}}</button>
+            {{#if @custom.feed_title}}
+                <div class="feed-header-wrapper">
+                    <h2 class="feed-header-title">{{@custom.feed_title}}</h2>
                 </div>
-            </div>
+            {{/if}}
         </header>
 
-        <div class="post-feed expanded container medium">
+        <div class="post-feed{{#match @custom.feed_layout "!=" "Minimal"}} expanded{{/match}}{{#match @custom.feed_layout "Right thumbnail"}} right-thumbnail{{/match}}{{#match @custom.feed_layout "Text-only"}} text-only{{/match}} container medium">
             {{^unless @member}}
                 {{#foreach posts}}
                     {{> "loop"}}
@@ -28,4 +26,4 @@
     </main>
 </div>
 
-{{#contentFor "body_class"}}{{#if next}} paged-next{{/if}}{{#if @site.cover_image}}{{#if @member}} with-alt-header{{else}} with-full-cover{{/if}}{{/if}}{{#if @member}} logged-in{{/if}}{{/contentFor}}
+{{#contentFor "body_class"}}{{#if next}} paged-next{{/if}}{{#if @site.cover_image}} with-full-cover{{/if}}{{#if @member}} logged-in{{/if}}{{/contentFor}}

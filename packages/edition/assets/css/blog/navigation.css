@@ -1,23 +1,21 @@
 .navigation-link {
     display: flex;
     align-items: center;
-    width: 30px;
-    height: 30px;
-}
-
-.navigation-next .navigation-link {
-    justify-content: flex-end;
 }
 
 .navigation-icon {
     display: flex;
     align-items: center;
-}
-
-.navigation-previous .navigation-icon {
-    margin-left: -2px;
+    margin: 0 -2px;
+    width: 30px;
+    height: 30px;
 }
 
 .navigation-next .navigation-icon {
-    margin-right: -2px;
+    justify-content: flex-end;
+}
+
+.navigation-icon .icon {
+    width: 30px;
+    height: 30px;
 }

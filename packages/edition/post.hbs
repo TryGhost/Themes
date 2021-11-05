@@ -6,10 +6,12 @@
             {{> content width="wide"}}
         {{/post}}
         {{#is "post"}}
-            {{> related}}
+            {{#if @custom.show_related_posts}}
+                {{> related}}
+            {{/if}}
             {{> comment}}
         {{/is}}
     </main>
 </div>
 
-{{#contentFor "body_class"}}{{#if @site.logo}}{{#if @site.cover_image}} with-alt-header{{/if}}{{/if}}{{/contentFor}}
+{{#contentFor "body_class"}}{{#if @site.cover_image}} with-alt-header{{/if}}{{/contentFor}}
