@@ -250,6 +250,16 @@ body:not(.home-template) .gh-article-image {
     border-radius: 4px;
 }
 
+.gh-article-image.image-wide img {
+    grid-column: wide-start / wide-end;
+}
+
+.gh-article-image.image-full img {
+    grid-column: full-start / full-end;
+    width: 100%;
+    border-radius: 0;
+}
+
 .gh-content a:not(.gh-btn) {
     font-weight: 500;
 }

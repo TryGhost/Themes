@@ -1,5 +1,5 @@
 <article class="gh-article {{post_class}}">
-    <header class="gh-article-header gh-canvas">
+    <header class="gh-article-header gh-canvas{{#match @custom.feature_image_width "Full"}} image-full{{else match @custom.feature_image_width "=" "Wide"}} image-wide{{/match}}">
         <h1 class="gh-article-title">{{title}}</h1>
 
         {{#is "post"}}

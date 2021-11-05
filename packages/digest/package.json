@@ -49,6 +49,12 @@
                 "type": "select",
                 "options": ["Modern sans-serif", "Elegant serif"],
                 "default": "Modern sans-serif"
+            },
+            "feature_image_width": {
+                "type": "select",
+                "options": ["Full", "Wide", "Small"],
+                "default": "Small",
+                "group": "homepage"
             }
         }
     }

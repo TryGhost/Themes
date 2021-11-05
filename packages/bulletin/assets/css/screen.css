@@ -374,6 +374,18 @@ h6 {
     grid-column: main-start / main-end;
 }
 
+.image-wide .gh-article-image {
+    grid-column: wide-start / wide-end;
+}
+
+.image-full .gh-article-image {
+    grid-column: full-start / full-end;
+}
+
+.image-full .gh-article-image img {
+    width: 100%;
+}
+
 .gh-article-footer {
     padding-top: 3.2rem;
     margin-top: 8rem;
