@@ -2,9 +2,3 @@
     padding: 25px 30px;
     border-bottom: 1px solid var(--light-gray-color);
 }
-
-@media (min-width: 992px) {
-    .page-template .content-column {
-        margin-left: 16.666667%;
-    }
-}

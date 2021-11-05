@@ -7,8 +7,9 @@
     --mid-gray-color: #e9e9e9;
     --dark-gray-color: #1a1a1a;
     --black-color: #000;
-    --font-base: "Open Sans", sans-serif;
-    --font-alt: dosis, sans-serif;
+    --font-base: "Open Sans", -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+    --font-serif: Lora, Times, serif;
+    --font-alt: Dosis, sans-serif;
     --animation-base: ease-in-out;
     --shadow-base: 0 0 10px rgba(0, 0, 0, 0.02);
 }
@@ -51,7 +52,7 @@ h6 {
     margin: 0 0 15px;
     color: var(--dark-gray-color);
     font-family: var(--font-alt);
-    line-height: 1.3;
+    line-height: 1.25;
     font-weight: 700;
 }
 

@@ -35,7 +35,11 @@
 .widget-tags .tag-name {
     font-family: var(--font-alt);
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
+}
+
+.has-serif-title .widget-tags .tag-name {
+    font-family: var(--font-serif);
 }
 
 .widget-tags .tag-count {
@@ -68,7 +72,6 @@
 .widget-recent .post-title {
     overflow: hidden;
     font-size: 16px;
-    font-weight: 600;
     text-overflow: ellipsis;
     white-space: nowrap;
 }

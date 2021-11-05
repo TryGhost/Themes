@@ -44,6 +44,10 @@
     font-size: 18px;
 }
 
+.has-serif-title .post-title {
+    font-family: var(--font-serif);
+}
+
 .post-meta {
     display: flex;
     padding: 10px 30px;
@@ -71,6 +75,11 @@
 .post-excerpt {
     color: var(--secondary-text-color);
     font-size: 14px;
+    line-height: 1.6;
+}
+
+.has-serif-body .post-excerpt {
+    font-family: var(--font-serif);
 }
 
 .post-content {

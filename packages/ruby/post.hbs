@@ -2,7 +2,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="content-column col-lg-6">
+        <div class="content-column col-lg-8{{#if @custom.show_sidebar_on_post}}{{#if @custom.show_related_posts}} col-lg-6{{/if}}{{/if}}{{#unless @custom.show_sidebar_on_post}}{{#unless @custom.show_related_posts}} shift{{/unless}}{{/unless}}">
             <div class="content-area">
                 <main class="site-main">
                     {{#post}}
@@ -23,21 +23,29 @@
                                     {{content}}
                                 </div>
                                 {{> tags}}
-                                {{> share}}
+                                {{#if @custom.show_share_links}}
+                                    {{> share}}
+                                {{/if}}
                             </div>
                         </article>
-                        {{> author}}
+                        {{#if @custom.show_author}}
+                            {{> author}}
+                        {{/if}}
                         {{> post-navigation}}
                         {{> comment}}
                     {{/post}}
                 </main>
             </div>
         </div>
-        <div class="related-column col-lg-3 hidden-xs hidden-sm hidden-md">
-            {{> related}}
-        </div>
-        <div class="sidebar-column col-lg-3 hidden-xs hidden-sm hidden-md">
-            {{> widgets/widgets}}
-        </div>
+        {{#if @custom.show_related_posts}}
+            <div class="related-column {{#unless @custom.show_sidebar_on_post}}col-lg-4{{else}}col-lg-3{{/unless}} hidden-xs hidden-sm hidden-md">
+                {{> related}}
+            </div>
+        {{/if}}
+        {{#if @custom.show_sidebar_on_post}}
+            <div class="sidebar-column {{#unless @custom.show_related_posts}}col-lg-4{{else}}col-lg-3{{/unless}} hidden-xs hidden-sm hidden-md">
+                {{> widgets/widgets}}
+            </div>
+        {{/if}}
     </div>
 </div>

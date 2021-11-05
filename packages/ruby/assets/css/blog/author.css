@@ -33,7 +33,6 @@
     align-items: center;
     margin-bottom: 0;
     font-size: 18px;
-    font-weight: 800;
     cursor: pointer;
 }
 
@@ -105,7 +104,7 @@
     margin-left: -2px;
     color: var(--secondary-text-color);
     font-size: 11px;
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: 0.5px;
     text-transform: uppercase;
 }

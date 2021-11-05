@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="content-column col-xl-9 col-lg-8">
+    <div class="content-column {{#if @custom.show_sidebar_on_homepage}}col-xl-9 col-lg-8{{/if}}">
         <div class="content-area">
             <main class="site-main">
                 <div class="post-feed">
@@ -15,7 +15,9 @@
             </main>
         </div>
     </div>
-    <div class="sidebar-column col-xl-3 col-lg-4 hidden-xs hidden-sm hidden-md">
-        {{> widgets/widgets}}
-    </div>
+    {{#if @custom.show_sidebar_on_homepage}}
+        <div class="sidebar-column col-xl-3 col-lg-4 hidden-xs hidden-sm hidden-md">
+            {{> widgets/widgets}}
+        </div>
+    {{/if}}
 </div>

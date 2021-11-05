@@ -38,6 +38,43 @@
             "xxl": {
                 "width": 1920
             }
+        },
+        "custom": {
+            "title_font": {
+                "type": "select",
+                "options": ["Modern sans-serif", "Elegant serif"],
+                "default": "Modern sans-serif"
+            },
+            "body_font": {
+                "type": "select",
+                "options": ["Modern sans-serif", "Elegant serif"],
+                "default": "Modern sans-serif"
+            },
+            "show_sidebar_on_homepage": {
+                "type": "boolean",
+                "default": true,
+                "group": "homepage"
+            },
+            "show_related_posts": {
+                "type": "boolean",
+                "default": true,
+                "group": "post"
+            },
+            "show_sidebar_on_post": {
+                "type": "boolean",
+                "default": true,
+                "group": "post"
+            },
+            "show_share_links": {
+                "type": "boolean",
+                "default": true,
+                "group": "post"
+            },
+            "show_author": {
+                "type": "boolean",
+                "default": true,
+                "group": "post"
+            }
         }
     },
     "scripts": {
