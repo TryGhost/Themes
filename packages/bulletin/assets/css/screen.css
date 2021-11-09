@@ -392,6 +392,10 @@ h6 {
     border-top: 1px solid var(--color-light-gray);
 }
 
+.gh-article-footer:not(.has-prev):not(.has-next) {
+    display: none;
+}
+
 .gh-navigation {
     font-size: 1.5rem;
     font-weight: 800;

@@ -268,6 +268,10 @@ body:not(.home-template) .gh-article-image {
     margin-top: 6.4rem;
 }
 
+.no-pagination .gh-article-footer {
+    display: none;
+}
+
 .gh-navigation {
     padding-top: 2rem;
     font-size: 1.3rem;
