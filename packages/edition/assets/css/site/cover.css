@@ -50,10 +50,6 @@
     text-align: center;
 }
 
-.with-full-cover .cover:not(.half) .cover-content {
-    transform: translateY(-6vmin);
-}
-
 .cover-description {
     font-size: 3.5rem;
     line-height: 1.3;
