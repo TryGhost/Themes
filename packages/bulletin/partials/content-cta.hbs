@@ -7,6 +7,9 @@
     {{#has visibility="members"}}
         <h4 class="gh-cta-title">This post is for subscribers only</h4>
     {{/has}}
+    {{#has visibility="filter"}}
+        <h4 class="gh-cta-title">This post is for subscribers on the {{products}} only</h4>
+    {{/has}}
 
     <div class="gh-cta-actions">
         {{#if @member}}
