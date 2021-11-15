@@ -263,8 +263,7 @@
     }
 
     .post-feed.expanded .feed-image {
-        margin-right: 0;
-        margin-bottom: 3rem;
+        margin: 0 0 3rem;
         width: 100%;
     }
 
