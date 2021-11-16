@@ -18,13 +18,17 @@ burger();
 
 window.addEventListener('scroll', function () {
     'use strict';
-    if (body.classList.contains('home-template') && body.classList.contains('with-full-cover')) {
+    if (body.classList.contains('home-template') && body.classList.contains('with-full-cover') && !document.querySelector('.cover').classList.contains('half')) {
         if (timeout) {
             window.cancelAnimationFrame(timeout);
         }
         timeout = window.requestAnimationFrame(portalButton);
     }
 });
+
+if (document.querySelector('.cover').classList.contains('half')) {
+    body.classList.add('portal-visible');
+}
 
 function portalButton() {
     'use strict';
