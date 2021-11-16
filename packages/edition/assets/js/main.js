@@ -26,7 +26,7 @@ window.addEventListener('scroll', function () {
     }
 });
 
-if (document.querySelector('.cover').classList.contains('half')) {
+if (document.querySelector('.cover') && document.querySelector('.cover').classList.contains('half')) {
     body.classList.add('portal-visible');
 }
 
