@@ -39,7 +39,6 @@
                 "width": 1920
             }
         },
-        "card_assets": true,
         "custom": {
             "title_font": {
                 "type": "select",
