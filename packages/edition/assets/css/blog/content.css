@@ -28,6 +28,10 @@ is the very first element in the post content */
     margin-top: 1.6rem;
 }
 
+.gh-content > [id] + .kg-card {
+    margin-top: 2.8rem;
+}
+
 /* A larger margin before/after HRs and blockquotes */
 .gh-content > hr,
 .gh-content > blockquote {
@@ -65,7 +69,6 @@ is the very first element in the post content */
     word-break: break-word;
 }
 
-.gh-content > blockquote,
 .gh-content > ol,
 .gh-content > ul,
 .gh-content > dl,
