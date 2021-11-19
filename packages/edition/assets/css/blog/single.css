@@ -46,15 +46,6 @@
     width: 100%;
 }
 
-.has-serif-body .single-content {
-    font-family: var(--font-serif);
-}
-
-.has-serif-title .single-content h2,
-.has-serif-title .single-content h3 {
-    font-family: var(--font-serif);
-}
-
 .single-cta {
     margin-top: 4rem !important;
     padding: 3rem;

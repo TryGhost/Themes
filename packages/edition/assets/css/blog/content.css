@@ -15,7 +15,6 @@ headings, text, images and lists. We deal with cards lower down. */
 
 .has-serif-title .gh-content > [id] {
     font-family: var(--font-serif);
-    letter-spacing: -0.01em;
 }
 
 /* Add back a top margin to all headings, unless a heading
