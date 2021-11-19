@@ -72,7 +72,8 @@ is the very first element in the post content */
 .gh-content > ol,
 .gh-content > ul,
 .gh-content > dl,
-.gh-content > p {
+.gh-content > p,
+.kg-callout-text {
     font-size: 1.7rem;
 }
 
@@ -80,7 +81,8 @@ is the very first element in the post content */
 .has-serif-body .gh-content > ol,
 .has-serif-body .gh-content > ul,
 .has-serif-body .gh-content > dl,
-.has-serif-body .gh-content > p {
+.has-serif-body .gh-content > p,
+.has-serif-body .kg-callout-text {
     font-family: var(--font-serif);
 }
 
