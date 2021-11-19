@@ -34,7 +34,7 @@
             <span class="subscribe-text">Stitcher</span>
         </a>
     {{/if}}
-    <a href="{{@site.url}}/rss" class="subscribe-link" target="_blank"
+    <a href="{{#if @custom.rss_link}}{{@custom.rss_link}}{{else}}{{@site.url}}/rss{{/if}}" class="subscribe-link" target="_blank"
         rel="noopener noreferrer">
         <i class="icon icon-rss"></i>
         <span class="subscribe-text">RSS</span>

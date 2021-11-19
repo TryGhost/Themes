@@ -63,6 +63,9 @@
             "stitcher_link": {
                 "type": "text",
                 "default": "https://www.stitcher.com/"
+            },
+            "rss_link": {
+                "type": "text"
             }
         }
     },
