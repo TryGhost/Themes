@@ -22,6 +22,7 @@
 @import "blog/feed.css";
 @import "blog/pagination.css";
 @import "blog/single.css";
+@import "blog/content.css";
 @import "blog/featured.css";
 @import "blog/related.css";
 @import "blog/comment.css";
