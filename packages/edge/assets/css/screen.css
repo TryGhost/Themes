@@ -11,6 +11,7 @@
 @import "site/footer.css";
 @import "blog/feed.css";
 @import "blog/post.css";
+@import "blog/content.css";
 @import "blog/pagination.css";
 @import "blog/related.css";
 @import "vendor/mdi.css";
