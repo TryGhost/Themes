@@ -260,10 +260,6 @@ body:not(.home-template) .gh-article-image {
     border-radius: 0;
 }
 
-.gh-content a:not(.gh-btn) {
-    font-weight: 500;
-}
-
 .gh-article-footer {
     margin-top: 6.4rem;
 }
