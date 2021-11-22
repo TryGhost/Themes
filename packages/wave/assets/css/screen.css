@@ -13,6 +13,7 @@
 @import "site/player.css";
 @import "site/popup.css";
 @import "blog/post.css";
+@import "blog/content.css";
 @import "blog/feed.css";
 @import "blog/single.css";
 @import "blog/pagination.css";
