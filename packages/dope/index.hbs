@@ -15,7 +15,7 @@
 <div class="content-area">
     <main class="site-main">
         {{#get "tags" limit="all"}}
-            <div class="tag-feed owl">
+            <div class="tag-feed owl" data-count="{{pagination.total}}">
                 {{#foreach tags}}
                     <div class="tag u-placeholder">
                         {{#if feature_image}}

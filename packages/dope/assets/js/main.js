@@ -26,6 +26,8 @@ document.addEventListener('lazyloaded', function (e) {
 
 function tagFeed() {
     'use strict';
+    var count = $('.tag-feed').attr('data-count');
+
     $('.tag-feed').owlCarousel({
         dots: false,
         nav: true,
@@ -35,18 +37,18 @@ function tagFeed() {
                 items: 1,
             },
             768: {
-                items: 2,
+                items: count > 1 ? 2 : count,
             },
             1200: {
-                items: 3,
+                items: count > 2 ? 3 : count,
             },
             1920: {
-                items: 4,
+                items: count > 3 ? 4 : count,
             },
             2560: {
-                items: 5,
+                items: count > 4 ? 5 : count,
             },
-        },
+        }
     });
 }
 
