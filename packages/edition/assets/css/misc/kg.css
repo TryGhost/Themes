@@ -7,6 +7,19 @@
     margin-left: auto;
 }
 
+.kg-toggle-card h4 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.has-serif-title .kg-toggle-card h4 {
+    font-family: var(--font-serif);
+}
+
+.kg-toggle-content > * + * {
+    margin: 2.4rem 0 0;
+}
+
 .kg-canvas {
     display: grid;
     grid-template-columns:
