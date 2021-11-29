@@ -1,3 +1,17 @@
+.kg-toggle-heading-text {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.has-serif-title .kg-toggle-heading-text {
+    font-family: var(--font-serif);
+    font-weight: 700;
+}
+
+.kg-toggle-content > * + * {
+    margin: 2.4rem 0 0;
+}
+
 .kg-gallery-container {
     display: flex;
     flex-direction: column;
