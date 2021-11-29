@@ -60,11 +60,6 @@
     opacity: 0.7;
 }
 
-.single-post .post-content {
-    font-size: 18px;
-    line-height: 1.7;
-}
-
 @media (max-width: 767px) {
     .single-post .u-placeholder {
         min-height: 300px;
