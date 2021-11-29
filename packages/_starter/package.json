@@ -38,6 +38,7 @@
             "xxl": {
                 "width": 2000
             }
-        }
+        },
+        "card_assets": true
     }
 }
