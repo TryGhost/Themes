@@ -7,12 +7,12 @@
     margin-left: auto;
 }
 
-.kg-toggle-card h4 {
+.kg-toggle-heading-text {
     font-size: 1.8rem;
     font-weight: 700;
 }
 
-.has-serif-title .kg-toggle-card h4 {
+.has-serif-title .kg-toggle-heading-text {
     font-family: var(--font-serif);
 }
 
