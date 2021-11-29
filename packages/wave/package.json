@@ -33,6 +33,7 @@
                 "height": 450
             }
         },
+        "card_assets": true,
         "custom": {
             "title_font": {
                 "type": "select",
