@@ -9,6 +9,14 @@ except for when immediately preceeded by a heading */
     margin-top: 4rem;
 }
 
+/* Image
+/* ---------------------------------------------------------- */
+
+.kg-image {
+    margin-right: auto;
+    margin-left: auto;
+}
+
 /* Gallery
 /* ---------------------------------------------------------- */
 
