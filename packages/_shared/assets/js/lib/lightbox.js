@@ -5,25 +5,26 @@ function lightbox(trigger) {
         var items = [];
         var index = 0;
 
-        var prevSibling = e.target.closest('.kg-card').previousSibling;
+        var previousElementSibling = e.target.closest('.kg-card').previousElementSibling;
+        if (previousElementSibling) {
+            while (previousElementSibling.classList.contains('kg-image-card') || previousElementSibling.classList.contains('kg-gallery-card')) {
+                var prevItems = [];
 
-        while (prevSibling.classList.contains('kg-image-card') || prevSibling.classList.contains('kg-gallery-card')) {
-            var prevItems = [];
+                previousElementSibling.querySelectorAll('img').forEach(function (item) {
+                    prevItems.push({
+                        src: item.getAttribute('src'),
+                        msrc: item.getAttribute('src'),
+                        w: item.getAttribute('width'),
+                        h: item.getAttribute('height'),
+                        el: item,
+                    })
 
-            prevSibling.querySelectorAll('img').forEach(function (item) {
-                prevItems.push({
-                    src: item.getAttribute('src'),
-                    msrc: item.getAttribute('src'),
-                    w: item.getAttribute('width'),
-                    h: item.getAttribute('height'),
-                    el: item,
-                })
+                    index += 1;
+                });
+                previousElementSibling = previousElementSibling.previousSibling;
 
-                index += 1;
-            });
-            prevSibling = prevSibling.previousSibling;
-
-            items = prevItems.concat(items);
+                items = prevItems.concat(items);
+            }
         }
 
         if (e.target.classList.contains('kg-image')) {
@@ -54,19 +55,20 @@ function lightbox(trigger) {
             });
         }
 
-        var nextSibling = e.target.closest('.kg-card').nextSibling;
-
-        while (nextSibling.classList.contains('kg-image-card') || nextSibling.classList.contains('kg-gallery-card')) {
-            nextSibling.querySelectorAll('img').forEach(function (item) {
-                items.push({
-                    src: item.getAttribute('src'),
-                    msrc: item.getAttribute('src'),
-                    w: item.getAttribute('width'),
-                    h: item.getAttribute('height'),
-                    el: item,
-                })
-            });
-            nextSibling = nextSibling.nextSibling;
+        var nextElementSibling = e.target.closest('.kg-card').nextElementSibling;
+        if (nextElementSibling) {
+            while (nextElementSibling.classList.contains('kg-image-card') || nextElementSibling.classList.contains('kg-gallery-card')) {
+                nextElementSibling.querySelectorAll('img').forEach(function (item) {
+                    items.push({
+                        src: item.getAttribute('src'),
+                        msrc: item.getAttribute('src'),
+                        w: item.getAttribute('width'),
+                        h: item.getAttribute('height'),
+                        el: item,
+                    })
+                });
+                nextElementSibling = nextElementSibling.nextSibling;
+            }
         }
 
         var pswpElement = document.querySelectorAll('.pswp')[0];
