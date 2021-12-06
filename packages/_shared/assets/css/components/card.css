@@ -28,7 +28,7 @@ except for when immediately preceeded by a heading */
 /* Toggle
 /* ---------------------------------------------------------- */
 
-.kg-toggle-heading-text {
+.kg-toggle-card .kg-toggle-heading-text {
     font-size: 2rem;
     font-weight: 700;
 }
@@ -39,4 +39,11 @@ except for when immediately preceeded by a heading */
 
 .kg-toggle-content > * + * {
     margin: 2.4rem 0 0;
+}
+
+/* Callout
+/* ---------------------------------------------------------- */
+
+.kg-callout-card-accent a {
+    text-decoration: underline;
 }
