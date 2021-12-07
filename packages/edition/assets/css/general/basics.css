@@ -83,7 +83,7 @@ img {
     height: auto;
 }
 
-blockquote {
+blockquote:not([class]) {
     margin-right: 0;
     margin-left: 0;
     padding: 2rem 3rem;
@@ -97,7 +97,7 @@ blockquote {
     background-color: var(--lighter-gray-color);
 }
 
-blockquote strong {
+blockquote:not([class]) strong {
     font-weight: 700;
 }
 

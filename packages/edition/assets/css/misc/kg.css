@@ -20,6 +20,11 @@
     margin: 2.4rem 0 0;
 }
 
+blockquote.kg-blockquote-alt {
+    font-style: normal;
+    color: var(--secondary-text-color);
+}
+
 .kg-canvas {
     display: grid;
     grid-template-columns:
