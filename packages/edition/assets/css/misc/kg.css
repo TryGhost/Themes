@@ -22,6 +22,7 @@
 
 blockquote.kg-blockquote-alt {
     font-style: normal;
+    font-weight: 700;
     color: var(--secondary-text-color);
 }
 
