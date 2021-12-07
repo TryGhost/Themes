@@ -14,7 +14,7 @@
 
 /* Add lightbox to gallery images. */
 (function () {
-    lightbox('.kg-image, .kg-gallery-image img');
+    lightbox('.kg-image-card > .kg-image, .kg-gallery-image img');
 })();
 
 /* Responsive video in post content */
