@@ -69,6 +69,10 @@ is the very first element in the post content */
     word-break: break-word;
 }
 
+.gh-content a:hover {
+    color: inherit;
+}
+
 .gh-content > ol,
 .gh-content > ul,
 .gh-content > dl,
