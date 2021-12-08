@@ -15,6 +15,13 @@
     text-decoration: underline;
 }
 
+blockquote.kg-blockquote-alt {
+    padding: 0;
+    font-style: normal;
+    line-height: 1.6;
+    color: var(--secondary-text-color);
+}
+
 .kg-width-wide,
 .kg-width-full {
     margin-right: -30px;
