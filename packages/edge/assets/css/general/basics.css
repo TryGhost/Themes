@@ -62,16 +62,16 @@ img {
     height: auto;
 }
 
-blockquote {
-    margin-right: 60px;
-    margin-left: 60px;
-    color: var(--secondary-text-color);
-    font-size: 22px;
-    line-height: 1.45;
+blockquote:not([class]) {
+    margin: 0;
+    padding-left: 2rem;
+    font-size: 20px;
+    line-height: 1.5;
     font-weight: 500;
+    border-left: 4px solid var(--mid-gray-color);
 }
 
-blockquote strong {
+blockquote:not([class]) strong {
     font-weight: 700;
 }
 

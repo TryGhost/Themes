@@ -20,6 +20,12 @@
     font-weight: 500;
 }
 
+blockquote.kg-blockquote-alt {
+    font-weight: 500;
+    font-style: normal;
+    color: var(--secondary-text-color);
+}
+
 .kg-image {
     margin-right: auto;
     margin-left: auto;
