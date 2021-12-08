@@ -16,6 +16,11 @@
     text-decoration: underline;
 }
 
+blockquote.kg-blockquote-alt {
+    font-style: normal;
+    color: var(--secondary-text-color);
+}
+
 .kg-image {
     margin-right: auto;
     margin-left: auto;
