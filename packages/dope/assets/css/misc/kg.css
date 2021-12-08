@@ -20,6 +20,12 @@
     text-decoration: underline;
 }
 
+blockquote.kg-blockquote-alt {
+    font-weight: 700;
+    font-style: normal;
+    color: var(--secondary-text-color)
+}
+
 .kg-canvas {
     display: grid;
     grid-template-columns:

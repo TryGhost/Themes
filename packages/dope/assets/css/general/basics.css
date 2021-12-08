@@ -65,15 +65,14 @@ img {
     height: auto;
 }
 
-blockquote {
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 550px;
+blockquote:not([class]) {
+    margin: 0;
+    padding-left: 2rem;
     color: var(--dark-gray-color);
     font-size: 22px;
-    line-height: 1.4;
-    font-weight: 800;
-    text-align: center;
+    line-height: 1.5;
+    font-weight: 700;
+    border-left: 4px solid var(--mid-gray-color);
 }
 
 ul,
