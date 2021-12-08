@@ -67,9 +67,8 @@ hr {
     border: 0;
 }
 
-blockquote {
+blockquote:not([class]) {
     padding-left: 2rem;
-    font-style: italic;
     border-left: 4px solid var(--ghost-accent-color);
 }
 

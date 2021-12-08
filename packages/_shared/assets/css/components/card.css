@@ -47,3 +47,11 @@ except for when immediately preceeded by a heading */
 .kg-callout-card-accent a {
     text-decoration: underline;
 }
+
+/* Blockquote
+/* ---------------------------------------------------------- */
+
+blockquote.kg-blockquote-alt {
+    font-style: normal;
+    color: var(--color-secondary-text);
+}
