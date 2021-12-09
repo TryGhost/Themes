@@ -30,6 +30,7 @@
 blockquote.kg-blockquote-alt {
     font-style: normal;
     font-weight: 700;
+    line-height: 1.6;
     color: var(--secondary-text-color);
 }
 
