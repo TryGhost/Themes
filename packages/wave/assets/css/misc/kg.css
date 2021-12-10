@@ -31,6 +31,10 @@ blockquote.kg-blockquote-alt {
     font-size: 0.95em;
 }
 
+.kg-button-card .kg-btn {
+    font-size: 1.1em;
+}
+
 .kg-image {
     margin-right: auto;
     margin-left: auto;
