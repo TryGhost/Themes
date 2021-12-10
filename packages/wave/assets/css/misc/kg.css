@@ -35,6 +35,10 @@ blockquote.kg-blockquote-alt {
     font-size: 1.1em;
 }
 
+.kg-nft-card-container:hover {
+    text-decoration: none;
+}
+
 .kg-image {
     margin-right: auto;
     margin-left: auto;
