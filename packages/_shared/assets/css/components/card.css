@@ -63,5 +63,6 @@ except for when immediately preceeded by a heading */
 
 blockquote.kg-blockquote-alt {
     font-style: normal;
+    font-weight: 600;
     color: var(--color-secondary-text);
 }
