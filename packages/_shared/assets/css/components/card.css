@@ -17,6 +17,16 @@ except for when immediately preceeded by a heading */
     margin-left: auto;
 }
 
+/* Embed
+/* ---------------------------------------------------------- */
+
+.kg-embed-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
 /* Gallery
 /* ---------------------------------------------------------- */
 
