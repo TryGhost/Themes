@@ -48,7 +48,7 @@ except for when immediately preceeded by a heading */
 }
 
 .kg-toggle-content > * + * {
-    margin: 2.4rem 0 0;
+    margin: 2rem 0 0;
 }
 
 /* Callout
