@@ -16,7 +16,8 @@
     text-decoration: underline;
 }
 
-.kg-button-card .kg-btn {
+.kg-button-card .kg-btn,
+.kg-product-card .kg-product-card-button {
     font-weight: 500;
 }
 
