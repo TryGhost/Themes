@@ -14,7 +14,7 @@
     width: 100%;
 }
 
-.kg-toggle-heading-text {
+.kg-card.kg-toggle-card .kg-toggle-heading-text {
     font-size: 1.8rem;
     font-weight: 700;
 }
@@ -23,8 +23,12 @@
     font-family: var(--font-serif);
 }
 
-.kg-toggle-content > * + * {
-    margin: 2rem 0 0;
+.kg-card.kg-button-card a.kg-btn {
+    font-size: 1.5rem;
+}
+
+.kg-callout-card-accent a {
+    text-decoration: underline;
 }
 
 blockquote.kg-blockquote-alt {
