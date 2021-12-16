@@ -1,23 +1,19 @@
-.kg-toggle-card .kg-toggle-heading-text {
+.kg-card.kg-toggle-card .kg-toggle-heading-text {
     font-size: 1.8rem;
     font-weight: 500;
 }
 
-.has-serif-title .kg-toggle-heading-text {
+.has-serif-title .kg-toggle-card .kg-toggle-heading-text {
     font-family: var(--font-serif);
     font-weight: 700;
-}
-
-.kg-toggle-content > * + * {
-    margin: 2.4rem 0 0;
 }
 
 .kg-callout-card-accent a {
     text-decoration: underline;
 }
 
-.kg-button-card .kg-btn,
-.kg-product-card .kg-product-card-button {
+.kg-card.kg-button-card .kg-btn,
+.kg-card.kg-product-card .kg-product-card-button {
     font-weight: 500;
 }
 
