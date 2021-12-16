@@ -23,6 +23,10 @@
     margin-top: 4rem;
 }
 
+.gh-article-image img {
+    width: 100%;
+}
+
 @media (max-width: 767px) {
     .gh-article-excerpt {
         font-size: 1.9rem;
