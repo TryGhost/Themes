@@ -38,17 +38,13 @@ except for when immediately preceeded by a heading */
 /* Toggle
 /* ---------------------------------------------------------- */
 
-.kg-toggle-card .kg-toggle-heading-text {
+.kg-card.kg-toggle-card .kg-toggle-heading-text {
     font-size: 2rem;
     font-weight: 700;
 }
 
-.has-serif-title .kg-toggle-heading-text {
+.has-serif-title .kg-toggle-card .kg-toggle-heading-text {
     font-family: var(--font-serif);
-}
-
-.kg-toggle-content > * + * {
-    margin: 2rem 0 0;
 }
 
 /* Callout
@@ -70,6 +66,6 @@ blockquote.kg-blockquote-alt {
 /* Button
 /* ---------------------------------------------------------- */
 
-.kg-button-card .kg-btn {
+.kg-card.kg-button-card .kg-btn {
     font-size: 1em;
 }
