@@ -1,0 +1,61 @@
+<footer class="single-footer container small">
+    <div class="single-footer-left">
+        {{#prev_post}}
+            <div class="navigation navigation-previous">
+                <a class="navigation-link" href="{{url}}" aria-label="Previous post">
+                    <span class="navigation-icon">{{> icons/arrow-left}}</span>
+                </a>
+            </div>
+        {{/prev_post}}
+    </div>
+
+    <div class="single-footer-middle">
+        {{#if @custom.show_author}}
+            <div class="single-footer-top">
+                <h3 class="single-footer-title">Published by:</h3>
+                <div class="author-list">
+                    {{#foreach authors}}
+                        <div class="author-image-placeholder u-placeholder square">
+                            <a href="{{url}}" title="{{name}}">
+                                {{#if profile_image}}
+                                    <img class="author-image u-object-fit" src="{{img_url profile_image size="xs"}}" alt="{{name}}" loading="lazy">
+                                {{else}}
+                                    <span class="u-object-fit">{{> icons/avatar}}</span>
+                                {{/if}}
+                            </a>
+                        </div>
+                    {{/foreach}}
+                </div>
+            </div>
+        {{/if}}
+
+        {{#if @custom.show_share_links}}
+            <div class="single-footer-bottom">
+                <div class="share">
+                    <a class="share-link share-link-facebook"
+                        href="https://www.facebook.com/sharer.php?u={{url absolute="true"}}"
+                        target="_blank" rel="noopener noreferrer">
+                        {{> icons/facebook}}
+                        Share
+                    </a>
+                    <a class="share-link share-link-twitter"
+                        href="https://twitter.com/intent/tweet?url={{url absolute="true"}}&text={{encode title}}"
+                        target="_blank" rel="noopener noreferrer">
+                        {{> icons/twitter}}
+                        Tweet
+                    </a>
+                </div>
+            </div>
+        {{/if}}
+    </div>
+
+    <div class="single-footer-right">
+        {{#next_post}}
+            <div class="navigation navigation-next">
+                <a class="navigation-link" href="{{url}}" aria-label="Next post">
+                    <span class="navigation-icon">{{> icons/arrow-right}}</span>
+                </a>
+            </div>
+        {{/next_post}}
+    </div>
+</footer>
