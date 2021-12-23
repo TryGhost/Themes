@@ -2,21 +2,21 @@
 
 <section class="gh-cta">
     {{#has visibility="paid"}}
-        <h4 class="gh-cta-title">This post is for paying subscribers only</h4>
+        <h4 class="gh-cta-title">{{t "This post is for paying subscribers only"}}</h4>
     {{/has}}
     {{#has visibility="members"}}
-        <h4 class="gh-cta-title">This post is for subscribers only</h4>
+        <h4 class="gh-cta-title">{{t "This post is for subscribers only"}}</h4>
     {{/has}}
     {{#has visibility="filter"}}
-        <h4 class="gh-cta-title">This post is for subscribers on the {{products}} only</h4>
+        <h4 class="gh-cta-title">{{t "This post is for subscribers on the {products} only" products=(products)}}</h4>
     {{/has}}
 
     <div class="gh-cta-actions">
         {{#if @member}}
-            <a class="gh-btn gh-primary-btn" href="#/portal/account/plans" data-portal="account/plans">Upgrade now</a>
+            <a class="gh-btn gh-primary-btn" href="#/portal/account/plans" data-portal="account/plans">{{t "Upgrade now"}}</a>
         {{else}}
-            <a class="gh-btn gh-primary-btn" href="#/portal/signup" data-portal="signup">Subscribe now</a>
-            <a class="gh-cta-link" href="#/portal/signin" data-portal="signin">Already have an account? Sign in.</a>
+            <a class="gh-btn gh-primary-btn" href="#/portal/signup" data-portal="signup">{{t "Subscribe now"}}</a>
+            <a class="gh-cta-link" href="#/portal/signin" data-portal="signin">{{t "Already have an account? Sign in."}}</a>
         {{/if}}
     </div>
 </section>
