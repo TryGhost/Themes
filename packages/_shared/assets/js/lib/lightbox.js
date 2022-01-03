@@ -5,9 +5,9 @@ function lightbox(trigger) {
         var items = [];
         var index = 0;
 
-        var prevSibling = e.target.closest('.kg-card').previousSibling;
+        var prevSibling = e.target.closest('.kg-card').previousElementSibling;
 
-        while (prevSibling.classList.contains('kg-image-card') || prevSibling.classList.contains('kg-gallery-card')) {
+        while (prevSibling && (prevSibling.classList.contains('kg-image-card') || prevSibling.classList.contains('kg-gallery-card'))) {
             var prevItems = [];
 
             prevSibling.querySelectorAll('img').forEach(function (item) {
@@ -21,7 +21,7 @@ function lightbox(trigger) {
 
                 index += 1;
             });
-            prevSibling = prevSibling.previousSibling;
+            prevSibling = prevSibling.previousElementSibling;
 
             items = prevItems.concat(items);
         }
@@ -54,9 +54,9 @@ function lightbox(trigger) {
             });
         }
 
-        var nextSibling = e.target.closest('.kg-card').nextSibling;
+        var nextSibling = e.target.closest('.kg-card').nextElementSibling;
 
-        while (nextSibling.classList.contains('kg-image-card') || nextSibling.classList.contains('kg-gallery-card')) {
+        while (nextSibling && (nextSibling.classList.contains('kg-image-card') || nextSibling.classList.contains('kg-gallery-card'))) {
             nextSibling.querySelectorAll('img').forEach(function (item) {
                 items.push({
                     src: item.getAttribute('src'),
@@ -66,7 +66,7 @@ function lightbox(trigger) {
                     el: item,
                 })
             });
-            nextSibling = nextSibling.nextSibling;
+            nextSibling = nextSibling.nextElementSibling;
         }
 
         var pswpElement = document.querySelectorAll('.pswp')[0];
