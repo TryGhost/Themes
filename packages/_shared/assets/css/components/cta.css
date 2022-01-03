@@ -26,11 +26,11 @@
 }
 
 .gh-cta-link {
-    cursor: pointer;
     margin-top: 0.8rem;
     font-size: 1.4rem;
     color: var(--color-secondary-text);
     text-decoration: none;
+    cursor: pointer;
 }
 
 .gh-cta-link:hover {
