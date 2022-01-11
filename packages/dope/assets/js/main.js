@@ -1,4 +1,5 @@
 var html = $('html');
+var body = $('body');
 
 $(function () {
     'use strict';
@@ -22,6 +23,33 @@ document.addEventListener('lazyloaded', function (e) {
         $(e.target).parent().jarallax(options).addClass('initialized');
     }
 });
+
+var lastScrollY = 0;
+var ticking = false;
+
+function update() {
+    if ((window.innerHeight + window.scrollY + 50) >= document.body.offsetHeight) {
+        body.addClass('portal-hidden');
+    } else {
+        body.removeClass('portal-hidden');
+    }
+
+    ticking = false;
+}
+
+function requestTick() {
+    if (!ticking) {
+        requestAnimationFrame(update);
+        ticking = true;
+    }
+}
+
+function onScroll() {
+    lastScrollY = window.scrollY;
+    requestTick();
+}
+
+window.addEventListener('scroll', onScroll, false);
 
 function tagFeed() {
     'use strict';

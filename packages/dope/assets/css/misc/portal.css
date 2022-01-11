@@ -1,0 +1,4 @@
+.portal-hidden .gh-portal-triggerbtn-iframe {
+    opacity: 0;
+    pointer-events: none;
+}
