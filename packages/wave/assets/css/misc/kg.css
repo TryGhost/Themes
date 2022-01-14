@@ -39,6 +39,18 @@ blockquote.kg-blockquote-alt {
     text-decoration: none;
 }
 
+.kg-card.kg-file-card a.kg-file-card-container {
+    padding: 8px;
+}
+
+.kg-card.kg-file-card a.kg-file-card-container:hover {
+    text-decoration: none;
+}
+
+.kg-file-card .kg-file-card-metadata {
+    font-size: 0.95em;
+}
+
 .has-serif-title .kg-card.kg-header-card h2.kg-header-card-header {
     font-family: var(--font-serif);
 }
