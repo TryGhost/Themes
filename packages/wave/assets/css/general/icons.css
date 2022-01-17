@@ -1,13 +1,13 @@
 @font-face {
-    font-family: IVEEL;
+    font-family: Wave;
     font-weight: normal;
     font-style: normal;
-    src: url('../fonts/IVEEL.ttf') format('truetype'), url('../fonts/IVEEL.woff') format('woff'), url('../fonts/IVEEL.svg') format('svg');
+    src: url('../fonts/Wave.ttf') format('truetype'), url('../fonts/Wave.woff') format('woff'), url('../fonts/Wave.svg') format('svg');
 }
 
 .icon::before {
     display: inline-block;
-    font: normal normal normal 24px/1 IVEEL, sans-serif;
+    font: normal normal normal 24px/1 Wave, sans-serif;
     font-size: inherit;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
