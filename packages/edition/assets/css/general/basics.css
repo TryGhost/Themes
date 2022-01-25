@@ -66,7 +66,7 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 0 0 1.5rem;
+    margin: 0;
     color: var(--darker-gray-color);
     font-family: var(--font-base);
     line-height: 1.3;
@@ -134,10 +134,9 @@ figcaption a {
 pre {
     overflow-x: scroll;
     padding: 1.6rem 2.2rem;
-    color: var(--white-color);
     font-size: 1.6rem !important;
     line-height: 1.5;
-    background-color: var(--darker-gray-color);
+    background-color: var(--lighter-gray-color);
     border-radius: 5px !important;
     -webkit-overflow-scrolling: touch;
 }
@@ -179,7 +178,6 @@ table:not(.highlight) {
 }
 
 table:not(.highlight) thead {
-    border-bottom: 1px solid var(--light-gray-color);
     background-color: var(--lighter-gray-color);
 }
 
@@ -198,7 +196,6 @@ table:not(.highlight) td {
 }
 
 table:not(.highlight) th {
-    color: var(--secondary-text-color);
     text-align: left;
 }
 

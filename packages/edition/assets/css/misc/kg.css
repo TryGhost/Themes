@@ -32,9 +32,11 @@
 }
 
 blockquote.kg-blockquote-alt {
+    padding: 0 2.4rem;
+    font-size: 3rem;
     font-style: normal;
-    font-weight: 700;
-    line-height: 1.6;
+    font-weight: 800;
+    line-height: 1.5;
     color: var(--secondary-text-color);
 }
 

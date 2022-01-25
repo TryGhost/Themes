@@ -20,12 +20,16 @@ headings, text, images and lists. We deal with cards lower down. */
 /* Add back a top margin to all headings, unless a heading
 is the very first element in the post content */
 .gh-content > [id]:not(:first-child) {
-    margin-top: 4.8rem;
+    margin-top: 6.4rem;
 }
 
 /* Add a small margin between a heading and anything after it */
 .gh-content > [id] + * {
-    margin-top: 1.6rem;
+    margin-top: 2rem;
+}
+
+.gh-content > [id] + p {
+    margin-top: 1.2rem;
 }
 
 .gh-content > [id] + .kg-card {
@@ -49,18 +53,45 @@ is the very first element in the post content */
     margin-top: 4.8rem;
 }
 
-.gh-content .kg-card + :not(.kg-card) {
+.gh-content .kg-card + :not(.kg-card):not([id]) {
     margin-top: 4.8rem;
 }
 
-/* Now the content typography styles */
-.gh-content > h2 {
-    font-size: 2.3rem;
+.gh-content :not(.kg-card):not([id]) + .kg-card:not(.kg-width-wide):not(.kg-width-full) {
+    margin-top: 3.6rem;
 }
 
-.gh-content > h3 {
+.gh-content .kg-card:not(.kg-width-wide):not(.kg-width-full) + :not(.kg-card):not([id]) {
+    margin-top: 3.6rem;
+}
+
+/* Now the content typography styles */
+.gh-content h1 {
+    font-size: 3rem;
+}
+
+.gh-content h2 {
+    font-size: 2.4rem;
+}
+
+.gh-content h3 {
     font-size: 2rem;
     font-weight: 600;
+}
+
+.gh-content h4 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.gh-content h5 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.gh-content h6 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
 }
 
 .gh-content a {
@@ -105,9 +136,9 @@ is the very first element in the post content */
 .gh-content > ul,
 .gh-content > ol,
 .gh-content > dl {
-    padding-left: 4rem;
+    padding-left: 2.4rem;
 }
 
 .gh-content li + li {
-    margin-top: 0.8rem;
+    margin-top: 1.2rem;
 }
