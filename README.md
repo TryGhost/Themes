@@ -21,7 +21,7 @@ To run a theme locally, you need to symlink a theme to your local Ghost site:
 yarn symlink --theme <theme-name> --site /dir/to/your/ghost-site
 ```
 
-To create an installable theme zip file in `packages/<theme-name>/dist/`:
+To create an installable theme zip file in `packages/<theme-name>/dist/`, change directory to packages (`cd packages`) and run the following command:
 
 ```bash
 # create .zip file
