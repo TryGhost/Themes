@@ -7,7 +7,7 @@
 .gh-foot-inner {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
 }
 
 .gh-foot-menu .nav li {
@@ -17,7 +17,7 @@
 
 .gh-foot-menu .nav li + li::before {
     padding: 0 1.2rem;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     line-height: 0;
     content: "•";
 }
