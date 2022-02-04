@@ -8,7 +8,9 @@
                     {{> post-media ratio="square"}}
                 </div>
                 {{#if og_description}}
-                    {{> player}}
+                    <div class="container large">
+                        {{> player}}
+                    </div>
                 {{else}}
                     {{> post-header single=true}}
                 {{/if}}

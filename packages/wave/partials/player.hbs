@@ -1,4 +1,4 @@
-<div class="player{{#if is_external}} player-external{{else}} container large{{#unless feature_image}} no-thumbnail{{/unless}}{{/if}}">
+<div class="player{{#if is_external}} player-external{{else}}{{#unless feature_image}} no-thumbnail{{/unless}}{{/if}}">
     <audio class="player-audio"{{#unless is_external}} src="{{og_description}}"{{/unless}}></audio>
     {{> post-media ratio="square" is_placeholder=is_external}}
     <div class="player-wrapper">
