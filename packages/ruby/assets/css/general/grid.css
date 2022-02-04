@@ -38,6 +38,11 @@
     margin-left: -15px;
 }
 
+.post-template .row,
+.page-template .row {
+    justify-content: center;
+}
+
 .col-1,
 .col-2,
 .col-3,

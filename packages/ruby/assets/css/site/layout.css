@@ -19,10 +19,6 @@
         order: 2;
     }
 
-    .content-column.shift {
-        margin-left: 16.666667%;
-    }
-
     .sidebar-column {
         order: 3;
     }
