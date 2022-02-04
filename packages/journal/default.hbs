@@ -86,7 +86,15 @@
                 </nav>
 
                 <div class="gh-powered-by">
-                    <a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a>
+                    {{#if @site.facebook}}         
+                        <a class="gh-author-facebook" href="{{facebook_url @site.facebook}}" target="_blank" rel="noopener" aria-label="Facebook">{{> icons/facebook}}</a>
+                    {{/if}}
+
+                    {{#if @site.twitter}}                        
+                        <a class="gh-author-twitter" href="{{twitter_url @site.twitter}}" target="_blank" rel="noopener" aria-label="Twitter">{{> icons/twitter}}</a>
+                    {{/if}}
+
+                    <a class="gh-author-facebook" href="https://github.com/juancarrillofl" target="_blank" rel="noopener" aria-label="Github">{{> icons/github}}</a>
                 </div>
             </div>
         </footer>
