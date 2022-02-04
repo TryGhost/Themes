@@ -37,14 +37,8 @@
                 <h2 class="gh-section-title">More issues</h2>
 
                 <div class="gh-feed">
-                    {{#foreach posts}}
-                        {{^is "paged"}}
-                            {{^has index="0"}}
-                                {{> loop}}
-                            {{/has}}
-                        {{else}}
-                            {{> loop}}
-                        {{/is}}
+                    {{#foreach posts from="2"}}
+                        {{> loop}}
                     {{/foreach}}
                 </div>
 
