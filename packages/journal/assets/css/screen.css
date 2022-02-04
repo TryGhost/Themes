@@ -291,6 +291,13 @@
     color: #fff;
 }
 
+.gh-subscribe-secondary-description {
+    margin-top: 2.2rem;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    color: #fff;
+}
+
 .gh-subscribe-input {
     display: flex;
     align-items: center;
