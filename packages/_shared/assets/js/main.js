@@ -3,7 +3,7 @@
     var burger = document.querySelector('.gh-burger');
     if (!burger) return;
 
-    burger.addEventListener("click", function () {
+    burger.addEventListener('click', function () {
         if (!document.body.classList.contains('is-head-open')) {
             document.body.classList.add('is-head-open');
         } else {
@@ -29,5 +29,5 @@
         '.gh-content object',
         '.gh-content embed',
     ];
-    reframe(document.querySelectorAll(sources.join(",")));
+    reframe(document.querySelectorAll(sources.join(',')));
 })();
