@@ -30,7 +30,7 @@ except for when immediately preceeded by a heading */
 /* Gallery
 /* ---------------------------------------------------------- */
 
-.kg-image,
+.kg-image[width][height],
 .kg-gallery-image {
     cursor: pointer;
 }
