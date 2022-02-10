@@ -42,6 +42,10 @@
                     {{/foreach}}
                 </div>
 
+                {{#match posts.length "=" 1}}
+                    Additional issues will be published soon.
+                {{/match}}
+
                 <button class="gh-loadmore gh-btn">Load more issues</button>
             </section>
 
