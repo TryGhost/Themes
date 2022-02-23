@@ -30,24 +30,6 @@
     max-height: 32px;
 }
 
-.gh-head-description {
-    position: relative;
-    padding-left: 2rem;
-    margin-left: 2rem;
-    color: var(--color-secondary-text);
-}
-
-.gh-head-description::before {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 1px;
-    height: 40px;
-    margin-top: -20px;
-    content: "";
-    background-color: var(--color-light-gray);
-}
-
 .gh-head-menu {
     display: flex;
     align-items: center;
@@ -201,18 +183,6 @@ Home About Collection Author Portal
     color: var(--color-white);
 }
 
-.is-head-dark .gh-head-description {
-    padding-left: 2rem;
-    margin-left: 2rem;
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.is-head-dark .gh-head-description::before {
-    height: 32px;
-    margin-top: -16px;
-    background-color: rgba(255, 255, 255, 0.4);
-}
-
 .is-head-dark .gh-burger::before,
 .is-head-dark .gh-burger::after {
     background-color: var(--color-white);
@@ -233,18 +203,6 @@ Home About Collection Author Portal
 .is-head-brand .gh-head-logo,
 .is-head-brand .gh-head .nav a {
     color: var(--color-white);
-}
-
-.is-head-brand .gh-head-description {
-    padding-left: 2rem;
-    margin-left: 2rem;
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.is-head-brand .gh-head-description::before {
-    height: 32px;
-    margin-top: -16px;
-    background-color: rgba(255, 255, 255, 0.4);
 }
 
 .is-head-brand .gh-burger::before,
@@ -305,10 +263,6 @@ Home About Collection Author Portal
 @media (max-width: 767px) {
     #gh-head .gh-head-inner {
         padding: 2rem 0;
-    }
-
-    #gh-head .gh-head-description {
-        display: none;
     }
 }
 

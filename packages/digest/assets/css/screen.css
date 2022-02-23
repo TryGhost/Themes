@@ -28,6 +28,24 @@ body {
     letter-spacing: 0.01em;
 }
 
+.gh-head-description {
+    position: relative;
+    padding-left: 2rem;
+    margin-left: 2rem;
+    color: var(--color-secondary-text);
+}
+
+.gh-head-description::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 1px;
+    height: 40px;
+    margin-top: -20px;
+    content: "";
+    background-color: var(--color-light-gray);
+}
+
 .gh-head-btn {
     margin-right: -0.6rem;
 }
@@ -408,6 +426,10 @@ body:not(.home-template) .gh-article-image {
 }
 
 @media (max-width: 767px) {
+    .gh-head-description {
+        display: none;
+    }
+
     .gh-section-featured {
         grid-column: full-start / full-end;
     }
