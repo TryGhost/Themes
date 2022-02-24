@@ -39,6 +39,16 @@
                 "width": 2000
             }
         },
-        "card_assets": true
+        "card_assets": true,
+        "custom": {
+            "enter_tag_names_for_primary_sections": {
+                "type": "text",
+                "group": "homepage"
+            },
+            "enter_tag_names_for_secondary_sections": {
+                "type": "text",
+                "group": "homepage"
+            }
+        }
     }
 }

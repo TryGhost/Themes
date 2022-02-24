@@ -1,29 +1,41 @@
 {{!< default}}
 
-{{#if @site.cover_image}}
-    <div class="gh-cover">
-        <img class="gh-cover-image"
-            srcset="{{img_url @site.cover_image size="s"}} 300w,
-                    {{img_url @site.cover_image size="m"}} 720w,
-                    {{img_url @site.cover_image size="l"}} 960w,
-                    {{img_url @site.cover_image size="xl"}} 1200w,
-                    {{img_url @site.cover_image size="xxl"}} 2000w"
-            sizes="100vw"
-            src="{{img_url @site.cover_image size="xxl"}}"
-            alt="{{title}}"
-        >
-    </div>
-{{/if}}
-
 <main class="gh-main gh-outer">
     <div class="gh-inner">
-        <div class="gh-feed">
-            {{#foreach posts}}
-                {{> loop}}
-            {{/foreach}}
-        </div>
+        {{#if @custom.enter_tag_names_for_primary_sections}}
+            {{#get "tags" filter="slug:[{{@custom.enter_tag_names_for_primary_sections}}]"}}
+                {{#foreach tags}}
+                    {{> "topic-grid"}}
+                {{else}}
+                    No tags found. Please check tag slugs you entered in the custom settings.
+                {{/foreach}}
+            {{/get}}
 
-        {{pagination}}
-        {{!-- <button class="gh-loadmore gh-btn">Load more</button> --}}
+            {{#get "tags" filter="slug:[{{@custom.enter_tag_names_for_secondary_sections}}]"}}
+                {{#if tags}}
+                    <div class="gh-topic-list">
+                        {{#foreach tags}}
+                            {{> "topic-minimal"}}
+                        {{/foreach}}
+                    </div>
+                {{/if}}
+            {{/get}}
+        {{else}}
+            {{#get "tags" include="count.posts" order="count.posts desc" limit="3"}}
+                {{#foreach tags}}
+                    {{> "topic-grid"}}
+                {{/foreach}}
+            {{/get}}
+
+            {{#get "tags" include="count.posts" order="count.posts desc"}}
+                {{#if tags.[3]}}
+                    <div class="gh-topic-list">
+                        {{#foreach tags from="4"}}
+                            {{> "topic-minimal"}}
+                        {{/foreach}}
+                    </div>
+                {{/if}}
+            {{/get}}
+        {{/if}}
     </div>
 </main>

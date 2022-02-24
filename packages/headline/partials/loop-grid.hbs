@@ -1,0 +1,34 @@
+<article class="gh-card {{post_class}}">
+    <a class="gh-card-link" href="{{url}}">
+        {{#if feature_image}}
+            <figure class="gh-card-image">
+                <img
+                    srcset="{{img_url feature_image size="s"}} 300w,
+                            {{img_url feature_image size="m"}} 720w,
+                            {{img_url feature_image size="l"}} 960w,
+                            {{img_url feature_image size="xl"}} 1200w,
+                            {{img_url feature_image size="xxl"}} 2000w"
+                    sizes="(max-width: 1200px) 100vw, 1200px"
+                    src="{{img_url feature_image size="m"}}"
+                    alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
+                >
+            </figure>
+        {{/if}}
+
+        <div class="gh-card-wrapper">
+            <header class="gh-card-header">
+                <h3 class="gh-card-title">{{title}}</h3>
+            </header>
+
+            {{#has index="0"}}
+                <div class="gh-card-excerpt">{{excerpt}}</div>
+            {{/has}}
+
+            <footer class="gh-card-footer">
+                <span class="gh-card-author">By {{#foreach authors}}{{name}}{{/foreach}}</span>
+                <span class="gh-card-footer-sep"></span>
+                <time class="gh-card-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
+            </footer>
+        </div>
+    </a>
+</article>
