@@ -79,6 +79,10 @@
     object-fit: cover;
 }
 
+.gh-topic-grid .gh-card:first-child.no-image .gh-card-wrapper {
+    max-width: 720px;
+}
+
 .gh-topic-grid .gh-card-title {
     font-size: 2rem;
     line-height: 1.3;
@@ -87,6 +91,10 @@
 
 .gh-topic-grid .gh-card:first-child .gh-card-title {
     font-size: 2.8rem;
+}
+
+.gh-topic-grid .gh-card:first-child.no-image .gh-card-title {
+    font-size: 4.2rem;
 }
 
 .gh-card-excerpt {
