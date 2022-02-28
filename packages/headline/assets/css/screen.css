@@ -58,6 +58,11 @@
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), transparent 60%);
 }
 
+.gh-topic-grid .gh-card.featured.no-image:first-child .gh-card-link {
+    min-height: 400px;
+    background: var(--ghost-accent-color);
+}
+
 .gh-topic-grid .gh-card:first-child .gh-card-link > * {
     flex: 1;
 }
