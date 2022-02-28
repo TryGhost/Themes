@@ -2,12 +2,24 @@
 
 <main class="gh-main gh-outer">
     <div class="gh-inner">
+        <section class="gh-topic gh-topic-grid{{#match count.posts "=" 1}} is-singular{{/match}}">
+            <h2 class="gh-topic-name">Latest</h2>
+
+            <div class="gh-topic-content">
+                {{#foreach posts limit="7"}}
+                    {{> "loop-grid"}}
+                {{/foreach}}
+            </div>
+
+            <footer class="gh-topic-footer">
+                <a class="gh-topic-link" href="{{url}}">Show more {{> "icons/arrow"}}</a>
+            </footer>
+        </section>
+
         {{#if @custom.enter_tag_names_for_primary_sections}}
             {{#get "tags" filter="slug:[{{@custom.enter_tag_names_for_primary_sections}}]"}}
                 {{#foreach tags}}
                     {{> "topic-grid"}}
-                {{else}}
-                    No tags found. Please check tag slugs you entered in the custom settings.
                 {{/foreach}}
             {{/get}}
 
