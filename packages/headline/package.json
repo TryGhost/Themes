@@ -41,6 +41,16 @@
         },
         "card_assets": true,
         "custom": {
+            "title_font": {
+                "type": "select",
+                "options": ["Modern sans-serif", "Elegant serif"],
+                "default": "Modern sans-serif"
+            },
+            "body_font": {
+                "type": "select",
+                "options": ["Modern sans-serif", "Elegant serif"],
+                "default": "Elegant serif"
+            },
             "enter_tag_names_for_primary_sections": {
                 "type": "text",
                 "group": "homepage"

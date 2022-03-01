@@ -2,8 +2,14 @@
 
 :root {
     --font-sans: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif; /* stylelint-disable-line value-keyword-case */
-    --font-serif: Georgia, Times, serif; /* stylelint-disable-line value-keyword-case */
+    --font-serif: Lora, Georgia, Times, serif; /* stylelint-disable-line value-keyword-case */
     --head-nav-gap: 32px;
+    --color-primary-text: var(--color-darker-gray);
+}
+
+figcaption {
+    font-size: 1.3rem;
+    text-align: right;
 }
 
 /* Styles specific to grid style sections */
@@ -126,9 +132,7 @@
 
 .gh-card-excerpt {
     margin-top: 12px;
-    font-family: var(--font-serif);
-    font-size: 1.8rem;
-    color: var(--color-primary-text);
+    font-size: 1.7rem;
 }
 
 .gh-topic-grid .gh-card:first-child.no-image .gh-card-excerpt {
@@ -142,7 +146,7 @@
 .gh-card-footer {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
     margin-top: 16px;
     font-size: 1.1rem;
     font-weight: 500;
@@ -215,6 +219,41 @@
     width: 16px;
     height: 16px;
     margin-left: 4px;
+}
+
+/* Article */
+
+.gh-article-header {
+    text-align: center;
+}
+
+.gh-article-title {
+    grid-column: wide-start / wide-end;
+    font-size: 6rem;
+}
+
+.gh-article-meta {
+    margin-top: 32px;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    color: var(--color-secondary-text);
+}
+
+.gh-article-meta a {
+    font-weight: 600;
+}
+
+.gh-article-excerpt {
+    margin-top: 24px;
+    max-width: 920px;
+}
+
+.gh-article-image {
+    margin-top: 56px;
+}
+
+.gh-content {
+    margin-top: 56px;
 }
 
 /* Subscription banner */
