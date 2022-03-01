@@ -251,11 +251,19 @@ figcaption {
 }
 
 .gh-author-image {
+    position: relative;
     width: 64px;
     height: 64px;
     margin-bottom: 20px;
     overflow: hidden;
     border-radius: 50%;
+}
+
+.gh-author-image img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .gh-author-icon {
@@ -317,6 +325,9 @@ figcaption {
 /* Page head */
 
 .gh-pagehead {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     margin: 0 auto 64px;
     max-width: 720px;
     text-align: center;
@@ -324,12 +335,12 @@ figcaption {
 
 .gh-pagehead-description {
     margin-top: 16px;
+    font-size: 1.8rem;
     color: var(--color-secondary-text);
 }
 
 .has-serif-body .gh-pagehead-description {
     font-family: var(--font-serif);
-    font-size: 1.8rem;
 }
 
 /* Subscription banner */

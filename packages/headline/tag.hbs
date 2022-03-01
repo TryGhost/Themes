@@ -40,14 +40,12 @@
             {{/unless}}
         {{/tag}}
 
-        <div class="gh-feed">
-            <section class="gh-topic gh-topic-grid{{#match count.posts "=" 1}} is-singular{{/match}}">
-                <div class="gh-topic-content">
-                    {{#foreach posts limit="all"}}
-                        {{> "loop-grid"}}
-                    {{/foreach}}
-                </div>
-            </section>
+        <div class="gh-topic gh-topic-grid{{#match count.posts "=" 1}} is-singular{{/match}}">
+            <div class="gh-topic-content">
+                {{#foreach posts limit="all"}}
+                    {{> "loop-grid"}}
+                {{/foreach}}
+            </div>
         </div>
     </div>
 </main>
