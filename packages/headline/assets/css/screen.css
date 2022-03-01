@@ -224,36 +224,63 @@ figcaption {
 /* Article */
 
 .gh-article-header {
-    text-align: center;
+    position: relative;
+    justify-items: start;
 }
 
-.gh-article-title {
-    grid-column: wide-start / wide-end;
-    font-size: 6rem;
-}
-
-.gh-article-meta {
-    margin-top: 32px;
-    font-size: 1.3rem;
-    text-transform: uppercase;
-    color: var(--color-secondary-text);
-}
-
-.gh-article-meta a {
+.gh-article-tag {
+    margin-bottom: 12px;
+    font-size: 1.2rem;
     font-weight: 600;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
 }
 
 .gh-article-excerpt {
-    margin-top: 24px;
-    max-width: 920px;
+    font-size: 1.9rem;
 }
 
 .gh-article-image {
-    margin-top: 56px;
+    grid-column: main-start / main-end;
 }
 
-.gh-content {
-    margin-top: 56px;
+.gh-article-sidebar {
+    position: absolute;
+    grid-column: wide-start/main-start;
+    padding-right: 32px;
+}
+
+.gh-author-image {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.gh-author-icon {
+    background-color: var(--color-light-gray);
+}
+
+.gh-author-name {
+    font-size: 1.8rem;
+    letter-spacing: -0.01em;
+}
+
+.gh-article-meta {
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+    font-size: 1.3rem;
+    color: var(--color-secondary-text);
+}
+
+.gh-article-meta-sep {
+    width: 2px;
+    height: 2px;
+    margin: 0 6px;
+    border-radius: 50%;
+    background-color: currentColor;
 }
 
 /* Subscription banner */

@@ -5,18 +5,35 @@
 <main class="gh-main">
     <article class="gh-article {{post_class}}">
         <header class="gh-article-header gh-canvas">
+            {{#if primary_tag}}
+                <a class="gh-article-tag" href="{{primary_tag.url}}">{{primary_tag.name}}</a>
+            {{/if}}
+
             <h1 class="gh-article-title">{{title}}</h1>
 
             {{#is "post"}}
-                <span class="gh-article-meta">
-                    {{#primary_author}}By <a href="{{url}}">{{name}}</a>{{/primary_author}}
-                    {{#if primary_tag}}
-                        in
-                        <a class="gh-article-tag" href="{{primary_tag.url}}">{{primary_tag.name}}</a>
-                    {{/if}}
-                    —
-                    <time datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
-                </span>
+                <aside class="gh-article-sidebar">
+                    {{#primary_author}}
+                        <figure class="gh-author-image">
+                            {{#if profile_image}}
+                                <img src="{{profile_image}}" alt="{{name}}">
+                            {{else}}
+                                <div class="gh-author-icon">{{> icons/avatar}}</div>
+                            {{/if}}
+                        </figure>
+
+                        <h4 class="gh-author-name">{{name}}</h4>
+                    {{/primary_author}}
+
+                    <div class="gh-article-meta">
+                        <time class="gh-article-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
+
+                        {{#if reading_time}}
+                            <span class="gh-article-meta-sep"></span>
+                            <span class="gh-article-length">{{reading_time minute="1 min" minutes="% min"}}</span>
+                        {{/if}}
+                    </div>
+                </aside>
             {{/is}}
 
             {{#if custom_excerpt}}
