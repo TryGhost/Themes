@@ -144,7 +144,7 @@ Home About Collection Author Portal
 /* Transparent header
 /* ---------------------------------------------------------- */
 
-.is-head-transparent.home-template .gh-head {
+.is-head-transparent .gh-head {
     position: absolute;
     right: 0;
     left: 0;
@@ -152,12 +152,9 @@ Home About Collection Author Portal
     background-color: transparent;
 }
 
-.is-head-transparent:not(.home-template) .gh-head {
-    background-color: var(--ghost-accent-color);
-}
-
 .is-head-transparent .gh-head-logo,
-.is-head-transparent .gh-head .nav a {
+.is-head-transparent .gh-head .nav a,
+.is-head-transparent .gh-head-description {
     color: var(--color-white);
 }
 
@@ -169,6 +166,11 @@ Home About Collection Author Portal
 .is-head-transparent .gh-head-btn {
     color: var(--color-darker-gray);
     background-color: var(--color-white);
+}
+
+.is-head-transparent .gh-head-menu::before,
+.is-head-transparent .gh-head-menu::after {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Dark header

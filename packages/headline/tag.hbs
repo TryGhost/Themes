@@ -1,28 +1,53 @@
 {{!< default}}
 
+{{#tag}}
+    {{#if feature_image}}
+        <section class="gh-cover">
+            <img
+                class="gh-cover-image"
+                srcset="{{img_url feature_image size="s"}} 300w,
+                        {{img_url feature_image size="m"}} 720w,
+                        {{img_url feature_image size="l"}} 960w,
+                        {{img_url feature_image size="xl"}} 1200w,
+                        {{img_url feature_image size="xxl"}} 2000w"
+                sizes="100vw"
+                src="{{img_url feature_image size="xl"}}"
+                alt="{{name}}"
+            >
+
+            <div class="gh-cover-content">
+                <h1 class="gh-cover-title">{{name}}</h1>
+
+                {{#if description}}
+                    <p class="gh-cover-description">{{description}}</p>
+                {{/if}}
+            </div>
+        </section>
+    {{/if}}
+{{/tag}}
+
 <main class="gh-main gh-outer">
     <div class="gh-inner">
         {{#tag}}
-            <section class="gh-pagehead">
-                {{#if feature_image}}
-                    <img class="gh-pagehead-image" src="{{img_url feature_image size="s"}}" alt="{{name}}">
-                {{/if}}
-
-                <header class="gh-pagehead-content">
-                    <h1 class="gh-tag-name gh-pagehead-title">{{name}}</h1>
+            {{#unless feature_image}}
+                <section class="gh-pagehead">
+                    <h1 class="gh-pagehead-title">{{name}}</h1>
 
                     {{#if description}}
-                        <div class="gh-tag-description gh-pagehead-description">{{description}}</div>
+                        <div class="gh-pagehead-description">{{description}}</div>
                     {{/if}}
-                </header>
-            </section>
+                </section>
+            {{/unless}}
         {{/tag}}
 
         <div class="gh-feed">
-            {{#foreach posts}}
-            {{/foreach}}
+            <section class="gh-topic gh-topic-grid{{#match count.posts "=" 1}} is-singular{{/match}}">
+                <div class="gh-topic-content">
+                    {{#foreach posts limit="all"}}
+                        {{> "loop-grid"}}
+                    {{/foreach}}
+                </div>
+            </section>
         </div>
-
-        {{pagination}}
     </div>
 </main>

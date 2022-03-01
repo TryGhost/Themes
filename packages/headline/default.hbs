@@ -13,7 +13,7 @@
     {{ghost_head}}
 </head>
 
-<body class="{{body_class}} is-head-b--a_n{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Elegant serif"}} has-serif-body{{/match}}">
+<body class="{{body_class}} is-head-b--a_n{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Elegant serif"}} has-serif-body{{/match}}{{#is "tag"}}{{#if tag.feature_image}} is-head-transparent{{/if}}{{/is}}">
     <div class="gh-site">
         <header id="gh-head" class="gh-head gh-outer">
             <div class="gh-head-inner gh-inner">
