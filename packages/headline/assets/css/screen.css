@@ -5,6 +5,7 @@
     --font-serif: Lora, Georgia, Times, serif; /* stylelint-disable-line value-keyword-case */
     --head-nav-gap: 32px;
     --color-primary-text: var(--color-darker-gray);
+    --h1-size: 4.4rem;
 }
 
 figcaption {
@@ -52,6 +53,10 @@ figcaption {
     gap: 24px;
 }
 
+.gh-topic-grid .gh-card-link:hover {
+    opacity: 1 !important;
+}
+
 .gh-topic-grid .gh-card:first-child .gh-card-link {
     gap: 40px;
 }
@@ -59,7 +64,7 @@ figcaption {
 .gh-topic-grid .gh-card.featured:first-child .gh-card-link {
     align-items: flex-end;
     position: relative;
-    padding: 40px;
+    padding: 48px 40px;
     min-height: 600px;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), transparent 60%);
 }
@@ -77,6 +82,7 @@ figcaption {
     flex-shrink: 0;
     position: relative;
     width: 128px;
+    height: 100%;
 }
 
 .gh-topic-grid .gh-card.featured:first-child .gh-card-image {
@@ -126,7 +132,7 @@ figcaption {
 
 .gh-topic-grid .gh-card.featured:first-child .gh-card-title {
     font-size: 4.2rem;
-    line-height: 1.1;
+    line-height: 1.15;
     color: var(--color-white);
 }
 
@@ -159,6 +165,7 @@ figcaption {
 }
 
 .gh-topic-grid .gh-card.featured:first-child .gh-card-footer {
+    margin-top: 20px;
     color: var(--color-white);
 }
 
@@ -326,11 +333,13 @@ figcaption {
 
 .gh-pagehead {
     display: flex;
-    align-items: center;
     flex-direction: column;
-    margin: 0 auto 64px;
+    margin-bottom: 64px;
     max-width: 720px;
-    text-align: center;
+}
+
+.gh-pagehead-title {
+    color: var(--color-secondary-text);
 }
 
 .gh-pagehead-description {

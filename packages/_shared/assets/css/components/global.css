@@ -80,6 +80,11 @@ figcaption {
     text-align: center;
 }
 
+.gh-content figcaption a {
+    text-decoration: none;
+    color: var(--color-darker-gray);
+}
+
 pre {
     padding: 1.6rem 2.4rem;
     overflow-x: scroll;
