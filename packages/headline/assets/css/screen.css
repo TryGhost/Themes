@@ -300,12 +300,21 @@ figcaption {
 
 /* Full screen cover */
 
-.gh-cover {
+.tag-template .gh-cover {
     --cover-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.4);
+}
+
+.post-template .gh-cover {
+    --cover-height: none;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.4), transparent 30%);
+}
+
+.post-template .gh-cover-image {
+    position: relative;
 }
 
 .gh-cover-content {
