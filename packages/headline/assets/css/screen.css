@@ -57,6 +57,10 @@ figcaption {
     opacity: 1 !important;
 }
 
+.gh-topic-grid .gh-card-link:hover .gh-card-title {
+    opacity: 0.8;
+}
+
 .gh-topic-grid .gh-card:first-child .gh-card-link {
     gap: 40px;
 }
@@ -136,6 +140,10 @@ figcaption {
     color: var(--color-white);
 }
 
+.gh-topic-grid .gh-card.featured:first-child .gh-card-link:hover .gh-card-title {
+    opacity: 0.9;
+}
+
 .gh-card-excerpt {
     margin-top: 12px;
     font-size: 1.7rem;
@@ -201,6 +209,10 @@ figcaption {
 
 .gh-topic-header .gh-topic-link {
     color: var(--color-secondary-text);
+}
+
+.gh-topic-minimal .gh-card-link {
+    display: block;
 }
 
 .gh-topic-minimal .gh-card-title {
@@ -385,6 +397,10 @@ figcaption {
     font-weight: 500;
     background-color: var(--color-white);
     color: var(--color-darker-gray);
+}
+
+.gh-subscribe-btn:hover {
+    opacity: 0.9;
 }
 
 .gh-subscribe-btn svg {
