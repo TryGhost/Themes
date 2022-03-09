@@ -13,11 +13,13 @@
     {{ghost_head}}
 </head>
 
-<body class="{{body_class}} is-head-b--a_n{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Elegant serif"}} has-serif-body{{/match}}{{#is "tag"}}{{#if tag.feature_image}} is-head-transparent{{/if}}{{/is}}{{#is "post"}}{{#if post.featured}}{{#if post.feature_image}} is-head-transparent{{/if}}{{/if}}{{/is}}">
+<body class="{{body_class}} {{#if @site.description}}is-head-b--a_n{{else}}is-head-b--n--a{{/if}}{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Elegant serif"}} has-serif-body{{/match}}{{#is "tag"}}{{#if tag.feature_image}} is-head-transparent{{/if}}{{/is}}{{#is "post"}}{{#if post.featured}}{{#if post.feature_image}} is-head-transparent{{/if}}{{/if}}{{/is}}">
     <div class="gh-site">
         <header id="gh-head" class="gh-head gh-outer">
             <div class="gh-head-inner gh-inner">
-                <a class="gh-head-description" href="{{@site.url}}">{{@site.description}}</a>
+                {{#if @site.description}}
+                    <a class="gh-head-description" href="{{@site.url}}">{{@site.description}}</a>
+                {{/if}}
 
                 <div class="gh-head-brand">
                     <a class="gh-head-logo" href="{{@site.url}}">
