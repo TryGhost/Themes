@@ -22,6 +22,9 @@ figcaption {
 .gh-topic-grid .gh-topic-name {
     margin-bottom: 32px;
     font-size: 2.8rem;
+}
+
+.gh-topic-grid .gh-topic-name a {
     color: var(--color-secondary-text);
 }
 
