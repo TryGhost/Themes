@@ -209,7 +209,7 @@ body:not(.home-template) .gh-topic-grid .gh-card.no-image .gh-card-excerpt {
 
 .gh-topic-list {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 80px 48px;
     margin-top: 120px;
 }
@@ -230,6 +230,10 @@ body:not(.home-template) .gh-topic-grid .gh-card.no-image .gh-card-excerpt {
 
 .gh-topic-header .gh-topic-link {
     color: var(--color-secondary-text);
+}
+
+.gh-topic-minimal .gh-card {
+    max-width: 720px;
 }
 
 .gh-topic-minimal .gh-card-link {
