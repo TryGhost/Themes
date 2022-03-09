@@ -20,9 +20,13 @@
                 <h3 class="gh-card-title">{{title}}</h3>
             </header>
 
-            {{#has index="0"}}
+            {{#is "home"}}
+                {{#has index="0"}}
+                    <div class="gh-card-excerpt">{{excerpt}}</div>
+                {{/has}}
+            {{else}}
                 <div class="gh-card-excerpt">{{excerpt}}</div>
-            {{/has}}
+            {{/is}}
 
             <footer class="gh-card-footer">
                 <span class="gh-card-author">By {{#foreach authors}}{{name}}{{/foreach}}</span>

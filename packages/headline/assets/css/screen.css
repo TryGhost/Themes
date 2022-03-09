@@ -33,19 +33,31 @@ figcaption {
     border-bottom: 1px solid var(--color-light-gray);
 }
 
+body:not(.home-template) .gh-topic-grid .gh-topic-content {
+    row-gap: 64px;
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
 .gh-topic-footer {
     padding-top: 20px;
     text-align: right;
 }
 
-.gh-topic-grid .gh-card:first-child {
+.home-template .gh-topic-grid .gh-card:first-child,
+body:not(.home-template) .gh-topic-grid .gh-card {
     grid-column: 1 / 3;
 }
 
 .gh-topic-grid:not(.is-singular) .gh-card:first-child {
-    margin-bottom: 16px;;
+    margin-bottom: 16px;
     padding-bottom: 48px;
     border-bottom: 1px solid var(--color-light-gray);
+}
+
+body:not(.home-template) .gh-topic-grid:not(.is-singular) .gh-card:first-child {
+    margin-bottom: 0;
+    padding-bottom: 64px;
 }
 
 .gh-topic-grid .gh-card-link {
@@ -61,7 +73,8 @@ figcaption {
     opacity: 0.8;
 }
 
-.gh-topic-grid .gh-card:first-child .gh-card-link {
+.home-template .gh-topic-grid .gh-card:first-child .gh-card-link,
+body:not(.home-template) .gh-topic-grid .gh-card .gh-card-link {
     gap: 40px;
 }
 
@@ -78,7 +91,8 @@ figcaption {
     background: var(--ghost-accent-color);
 }
 
-.gh-topic-grid .gh-card:first-child .gh-card-link > * {
+.home-template .gh-topic-grid .gh-card:first-child .gh-card-link > *,
+body:not(.home-template) .gh-topic-grid .gh-card .gh-card-link > * {
     flex: 1;
 }
 
@@ -102,7 +116,8 @@ figcaption {
     padding-bottom: 70%;
 }
 
-.gh-topic-grid .gh-card:first-child .gh-card-image::before {
+.home-template .gh-topic-grid .gh-card:first-child .gh-card-image::before,
+body:not(.home-template) .gh-topic-grid .gh-card .gh-card-image::before {
     padding-bottom: 60%;
 }
 
@@ -125,11 +140,13 @@ figcaption {
     letter-spacing: -0.01em;
 }
 
-.gh-topic-grid .gh-card:first-child .gh-card-title {
+.home-template .gh-topic-grid .gh-card:first-child .gh-card-title,
+body:not(.home-template) .gh-topic-grid .gh-card .gh-card-title {
     font-size: 2.8rem;
 }
 
-.gh-topic-grid .gh-card:first-child.no-image .gh-card-title {
+.home-template .gh-topic-grid .gh-card:first-child.no-image .gh-card-title,
+body:not(.home-template) .gh-topic-grid .gh-card.no-image .gh-card-title {
     font-size: 4.2rem;
     line-height: 1.2;
 }
@@ -149,7 +166,8 @@ figcaption {
     font-size: 1.7rem;
 }
 
-.gh-topic-grid .gh-card:first-child.no-image .gh-card-excerpt {
+.home-template .gh-topic-grid .gh-card:first-child.no-image .gh-card-excerpt,
+body:not(.home-template) .gh-topic-grid .gh-card.no-image .gh-card-excerpt {
     max-width: 720px;
 }
 
