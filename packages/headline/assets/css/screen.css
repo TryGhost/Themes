@@ -13,6 +13,10 @@ figcaption {
     text-align: right;
 }
 
+.gh-btn {
+    font-weight: 500;
+}
+
 /* Styles specific to grid style sections */
 
 .gh-topic-grid + .gh-topic-grid {
@@ -419,8 +423,6 @@ body:not(.home-template) .gh-topic-grid .gh-card.no-image .gh-card-excerpt {
 
 .gh-subscribe-btn {
     margin-top: 40px;
-    font-size: 1.6rem;
-    font-weight: 500;
     background-color: var(--color-white);
     color: var(--color-darker-gray);
 }
@@ -514,7 +516,6 @@ body:not(.home-template) .gh-topic-grid .gh-card.no-image .gh-card-excerpt {
 
     .gh-head-btn.gh-btn {
         font-size: 1.4rem;
-        font-weight: 500;
     }
 
     .gh-head-menu {

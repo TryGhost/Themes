@@ -23,7 +23,7 @@
         {{/author}}
 
         <div class="gh-topic gh-topic-grid{{#match count.posts "=" 1}} is-singular{{/match}}">
-            <div class="gh-topic-content">
+            <div class="gh-topic-content gh-feed">
                 {{#foreach posts limit="all"}}
                     {{> "loop-grid"}}
                 {{/foreach}}
