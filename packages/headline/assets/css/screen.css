@@ -492,10 +492,6 @@ body:not(.home-template) .gh-topic-grid .gh-card.no-image .gh-card-excerpt {
         justify-content: center;
     }
 
-    .gh-head-description {
-        color: var(--color-darker-gray);
-    }
-
     .gh-head-brand {
         display: flex;
         align-items: center;
