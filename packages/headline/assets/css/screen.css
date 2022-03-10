@@ -339,6 +339,10 @@ body:not(.home-template) .gh-topic-grid .gh-card.no-image .gh-card-excerpt {
     background-color: currentColor;
 }
 
+.gh-read-next {
+    margin-top: 64px;
+}
+
 /* Full screen cover */
 
 .tag-template .gh-cover {
