@@ -13,6 +13,10 @@ figcaption {
     text-align: right;
 }
 
+.has-full-image figcaption {
+    padding: 0 16px;
+}
+
 .gh-btn {
     font-weight: 500;
 }
@@ -290,12 +294,26 @@ body:not(.home-template) .gh-topic-grid .gh-card.no-image .gh-card-excerpt {
 
 .gh-article-image {
     grid-column: main-start / main-end;
+    width: 100%;
+}
+
+.has-wide-image .gh-article-image {
+    grid-column: wide-start / wide-end;
+}
+
+.has-full-image .gh-article-image {
+    grid-column: full-start / full-end;
 }
 
 .gh-article-sidebar {
     position: absolute;
+    left: 0;
     grid-column: wide-start/main-start;
     padding-right: 32px;
+}
+
+:where(.has-wide-image, .has-full-image) .gh-article-sidebar {
+    top: calc(100% + 40px);
 }
 
 .gh-author-image {
