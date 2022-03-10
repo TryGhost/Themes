@@ -8,9 +8,11 @@
             </h2>
 
             <div class="gh-topic-content">
-                {{#foreach posts limit="7"}}
-                    {{> "loop-grid"}}
-                {{/foreach}}
+                {{#get "posts" limit="7"}}
+                    {{#foreach posts}}
+                        {{> "loop-grid"}}
+                    {{/foreach}}
+                {{/get}}
             </div>
 
             <footer class="gh-topic-footer">
