@@ -57,7 +57,9 @@
                         {{^if @member}}
                             <h4 class="gh-subscribe-title">Subscribe to {{@site.title}}</h3>
 
-                            <div class="gh-subscribe-description">Don't miss out on the latest news. Sign up now to get access to the library of members-only articles.</div>
+                            {{#if @custom.email_signup_text}}
+                                <div class="gh-subscribe-description">{{@custom.email_signup_text}}</div>
+                            {{/if}}
 
                             <button class="gh-subscribe-btn gh-btn" data-portal="signup">{{> "icons/email"}} Subscribe now</button>
                         {{else}}
