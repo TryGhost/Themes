@@ -8,7 +8,7 @@
 
         <div class="gh-topic gh-topic-grid{{#match count.posts "=" 1}} is-singular{{/match}}">
             <div class="gh-topic-content">
-                {{#get "posts" limit="all"}}
+                {{#get "posts" include="authors" limit="all"}}
                     {{#foreach posts}}
                         {{> "loop-grid"}}
                     {{/foreach}}
