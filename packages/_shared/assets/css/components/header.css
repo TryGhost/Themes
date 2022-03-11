@@ -198,23 +198,29 @@ Home About Collection Author Portal
 /* Brand header
 /* ---------------------------------------------------------- */
 
-.is-head-brand .gh-head {
+.is-head-brand:not(.is-head-transparent) .gh-head {
     background-color: var(--ghost-accent-color);
 }
 
-.is-head-brand .gh-head-logo,
-.is-head-brand .gh-head .nav a {
+.is-head-brand:not(.is-head-transparent) .gh-head-logo,
+.is-head-brand:not(.is-head-transparent) .gh-head .nav a,
+.is-head-brand:not(.is-head-transparent) .gh-head-description {
     color: var(--color-white);
 }
 
-.is-head-brand .gh-burger::before,
-.is-head-brand .gh-burger::after {
+.is-head-brand:not(.is-head-transparent) .gh-burger::before,
+.is-head-brand:not(.is-head-transparent) .gh-burger::after {
     background-color: var(--color-white);
 }
 
-.is-head-brand .gh-head-btn {
+.is-head-brand:not(.is-head-transparent) .gh-head-btn {
     color: var(--color-darker-gray);
     background-color: #fff;
+}
+
+.is-head-brand:not(.is-head-transparent) .gh-head-menu::before,
+.is-head-brand:not(.is-head-transparent) .gh-head-menu::after {
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 /* Mobile menu

@@ -51,6 +51,11 @@
                 "options": ["Modern sans-serif", "Elegant serif"],
                 "default": "Elegant serif"
             },
+            "header_style": {
+                "type": "select",
+                "options": ["White", "Accent color"],
+                "default": "White"
+            },
             "enter_tag_slugs_for_primary_sections": {
                 "type": "text",
                 "group": "homepage"
