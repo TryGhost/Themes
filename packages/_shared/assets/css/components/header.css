@@ -176,23 +176,29 @@ Home About Collection Author Portal
 /* Dark header
 /* ---------------------------------------------------------- */
 
-.is-head-dark .gh-head {
+.is-head-dark:not(.is-head-transparent) .gh-head {
     background-color: var(--color-darker-gray);
 }
 
-.is-head-dark .gh-head-logo,
-.is-head-dark .gh-head .nav a {
+.is-head-dark:not(.is-head-transparent) .gh-head-logo,
+.is-head-dark:not(.is-head-transparent) .gh-head .nav a,
+.is-head-dark:not(.is-head-transparent) .gh-head-description {
     color: var(--color-white);
 }
 
-.is-head-dark .gh-burger::before,
-.is-head-dark .gh-burger::after {
+.is-head-dark:not(.is-head-transparent) .gh-burger::before,
+.is-head-dark:not(.is-head-transparent) .gh-burger::after {
     background-color: var(--color-white);
 }
 
-.is-head-dark .gh-head-btn {
-    color: #fff;
-    background-color: var(--ghost-accent-color);
+.is-head-dark:not(.is-head-transparent) .gh-head-btn {
+    color: var(--color-darker-gray);
+    background-color: #fff;
+}
+
+.is-head-dark:not(.is-head-transparent) .gh-head-menu::before,
+.is-head-dark:not(.is-head-transparent) .gh-head-menu::after {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Brand header
