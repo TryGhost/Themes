@@ -45,7 +45,8 @@ figcaption {
 }
 
 body:not(.home-template) .gh-topic-grid .gh-topic-content {
-    row-gap: 64px;
+    justify-items: center;
+    row-gap: 48px;
     padding-bottom: 0;
     border-bottom: 0;
 }
@@ -55,9 +56,18 @@ body:not(.home-template) .gh-topic-grid .gh-topic-content {
     text-align: right;
 }
 
-.home-template .gh-topic-grid .gh-card:first-child,
+.gh-topic-grid .gh-card:first-child,
 body:not(.home-template) .gh-topic-grid .gh-card {
     grid-column: 1 / 3;
+}
+
+.gh-topic-grid .gh-card:first-child {
+    width: 100%;
+}
+
+body:not(.home-template) .gh-topic-grid .gh-card:not(:first-child) {
+    max-width: 720px;
+    width: 100%;
 }
 
 .gh-topic-grid:not(.is-singular) .gh-card:first-child {
@@ -68,7 +78,6 @@ body:not(.home-template) .gh-topic-grid .gh-card {
 
 body:not(.home-template) .gh-topic-grid:not(.is-singular) .gh-card:first-child {
     margin-bottom: 0;
-    padding-bottom: 64px;
 }
 
 .gh-topic-grid .gh-card-link {
@@ -84,8 +93,7 @@ body:not(.home-template) .gh-topic-grid:not(.is-singular) .gh-card:first-child {
     opacity: 0.8;
 }
 
-.home-template .gh-topic-grid .gh-card:first-child .gh-card-link,
-body:not(.home-template) .gh-topic-grid .gh-card .gh-card-link {
+.gh-topic-grid .gh-card:first-child .gh-card-link {
     gap: 40px;
 }
 
@@ -102,8 +110,7 @@ body:not(.home-template) .gh-topic-grid .gh-card .gh-card-link {
     background: var(--ghost-accent-color);
 }
 
-.home-template .gh-topic-grid .gh-card:first-child .gh-card-link > *,
-body:not(.home-template) .gh-topic-grid .gh-card .gh-card-link > * {
+.gh-topic-grid .gh-card:first-child .gh-card-link > * {
     flex: 1;
 }
 
@@ -114,6 +121,16 @@ body:not(.home-template) .gh-topic-grid .gh-card .gh-card-link > * {
     height: 100%;
 }
 
+.gh-topic-grid .gh-card-image::before {
+    content: "";
+    display: block;
+    padding-bottom: 70%;
+}
+
+.gh-topic-grid .gh-card:first-child .gh-card-image::before {
+    padding-bottom: 60%;
+}
+
 .gh-topic-grid .gh-card.featured:first-child .gh-card-image {
     position: absolute;
     inset: 0;
@@ -121,15 +138,8 @@ body:not(.home-template) .gh-topic-grid .gh-card .gh-card-link > * {
     width: 100%;
 }
 
-.gh-topic-grid .gh-card-image::before {
-    content: "";
-    display: block;
-    padding-bottom: 70%;
-}
-
-.home-template .gh-topic-grid .gh-card:first-child .gh-card-image::before,
-body:not(.home-template) .gh-topic-grid .gh-card .gh-card-image::before {
-    padding-bottom: 60%;
+body:not(.home-template) .gh-topic-grid .gh-card:not(:first-child) .gh-card-image {
+    width: 160px;
 }
 
 .gh-topic-grid .gh-card-image img {
@@ -151,13 +161,11 @@ body:not(.home-template) .gh-topic-grid .gh-card .gh-card-image::before {
     letter-spacing: -0.01em;
 }
 
-.home-template .gh-topic-grid .gh-card:first-child .gh-card-title,
-body:not(.home-template) .gh-topic-grid .gh-card .gh-card-title {
+.gh-topic-grid .gh-card:first-child .gh-card-title {
     font-size: 2.8rem;
 }
 
-.home-template .gh-topic-grid .gh-card:first-child.no-image .gh-card-title,
-body:not(.home-template) .gh-topic-grid .gh-card.no-image .gh-card-title {
+.gh-topic-grid .gh-card:first-child.no-image .gh-card-title {
     font-size: 4.2rem;
     line-height: 1.2;
 }
@@ -172,14 +180,22 @@ body:not(.home-template) .gh-topic-grid .gh-card.no-image .gh-card-title {
     opacity: 0.9;
 }
 
-.gh-card-excerpt {
+.gh-topic-grid .gh-card-excerpt {
     margin-top: 12px;
     font-size: 1.7rem;
 }
 
-.home-template .gh-topic-grid .gh-card:first-child.no-image .gh-card-excerpt,
-body:not(.home-template) .gh-topic-grid .gh-card.no-image .gh-card-excerpt {
+body:not(.home-template) .gh-topic-grid .gh-card:not(:first-child) .gh-card-excerpt {
+    margin-top: 4px;
+    font-size: 1.5rem;
+}
+
+.gh-topic-grid .gh-card:first-child.no-image .gh-card-excerpt {
     max-width: 720px;
+}
+
+body:not(.home-template) .gh-topic-grid .gh-card:not(:first-child) .gh-card-excerpt {
+    font-size: 1.5rem;
 }
 
 .gh-topic-grid .gh-card.featured:first-child .gh-card-excerpt {
@@ -411,7 +427,6 @@ body:not(.home-template) .gh-topic-grid .gh-card.no-image .gh-card-excerpt {
 }
 
 .gh-pagehead-title {
-    font-size: 8rem;
     color: var(--color-secondary-text);
 }
 
