@@ -20,15 +20,15 @@
             </footer>
         </section>
 
-        {{#if @custom.enter_tag_names_for_primary_sections}}
-            {{#get "tags" filter="slug:[{{@custom.enter_tag_names_for_primary_sections}}]"}}
+        {{#if @custom.enter_tag_slugs_for_primary_sections}}
+            {{#get "tags" filter="slug:[{{@custom.enter_tag_slugs_for_primary_sections}}]"}}
                 {{#foreach tags}}
                     {{> "topic-grid"}}
                 {{/foreach}}
             {{/get}}
 
-            {{#if @custom.enter_tag_names_for_secondary_sections}}
-                {{#get "tags" filter="slug:[{{@custom.enter_tag_names_for_secondary_sections}}]"}}
+            {{#if @custom.enter_tag_slugs_for_secondary_sections}}
+                {{#get "tags" filter="slug:[{{@custom.enter_tag_slugs_for_secondary_sections}}]"}}
                     {{#if tags}}
                         <div class="gh-topic-list">
                             {{#foreach tags}}
