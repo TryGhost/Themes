@@ -56,6 +56,9 @@
                 "options": ["Light", "Accent color", "Dark"],
                 "default": "Light"
             },
+            "footer_text": {
+                "type": "text"
+            },
             "enter_tag_slugs_for_primary_sections": {
                 "type": "text",
                 "group": "homepage"
