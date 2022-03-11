@@ -17,6 +17,10 @@ headings, text, images and lists. We deal with cards lower down. */
     margin: 0;
 }
 
+.gh-content > .kg-card + [id] {
+    margin-top: 6rem !important;
+}
+
 .has-serif-title .gh-content > [id] {
     font-family: var(--font-serif);
     letter-spacing: -0.01em;
