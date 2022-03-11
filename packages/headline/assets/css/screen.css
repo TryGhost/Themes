@@ -174,7 +174,7 @@ body:not(.home-template) .gh-topic-grid .gh-card:not(:first-child) .gh-card-imag
 
 .gh-topic-grid .gh-card.featured:first-child .gh-card-title {
     font-size: 4.2rem;
-    line-height: 1.15;
+    line-height: 1.2;
     color: var(--color-white);
 }
 
