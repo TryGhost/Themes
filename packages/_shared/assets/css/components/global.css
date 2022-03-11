@@ -81,8 +81,8 @@ figcaption {
 }
 
 .gh-content figcaption a {
-    text-decoration: none;
     color: var(--color-darker-gray);
+    text-decoration: none;
 }
 
 pre {

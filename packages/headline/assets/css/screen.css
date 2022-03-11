@@ -45,8 +45,8 @@ figcaption {
 }
 
 body:not(.home-template) .gh-topic-grid .gh-topic-content {
-    justify-items: center;
     row-gap: 48px;
+    justify-items: center;
     padding-bottom: 0;
     border-bottom: 0;
 }
@@ -66,13 +66,13 @@ body:not(.home-template) .gh-topic-grid .gh-card {
 }
 
 body:not(.home-template) .gh-topic-grid .gh-card:not(:first-child) {
-    max-width: 720px;
     width: 100%;
+    max-width: 720px;
 }
 
 .gh-topic-grid:not(.is-singular) .gh-card:first-child {
-    margin-bottom: 16px;
     padding-bottom: 48px;
+    margin-bottom: 16px;
     border-bottom: 1px solid var(--color-light-gray);
 }
 
@@ -98,10 +98,10 @@ body:not(.home-template) .gh-topic-grid:not(.is-singular) .gh-card:first-child {
 }
 
 .gh-topic-grid .gh-card.featured:first-child .gh-card-link {
-    align-items: flex-end;
     position: relative;
-    padding: 48px 40px;
+    align-items: flex-end;
     min-height: 600px;
+    padding: 48px 40px;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), transparent 60%);
 }
 
@@ -115,16 +115,16 @@ body:not(.home-template) .gh-topic-grid:not(.is-singular) .gh-card:first-child {
 }
 
 .gh-topic-grid .gh-card-image {
-    flex-shrink: 0;
     position: relative;
+    flex-shrink: 0;
     width: 128px;
     height: 100%;
 }
 
 .gh-topic-grid .gh-card-image::before {
-    content: "";
     display: block;
     padding-bottom: 70%;
+    content: "";
 }
 
 .gh-topic-grid .gh-card:first-child .gh-card-image::before {
@@ -185,16 +185,12 @@ body:not(.home-template) .gh-topic-grid .gh-card:not(:first-child) .gh-card-imag
     font-size: 1.7rem;
 }
 
-body:not(.home-template) .gh-topic-grid .gh-card:not(:first-child) .gh-card-excerpt {
-    margin-top: 4px;
-    font-size: 1.5rem;
-}
-
 .gh-topic-grid .gh-card:first-child.no-image .gh-card-excerpt {
     max-width: 720px;
 }
 
 body:not(.home-template) .gh-topic-grid .gh-card:not(:first-child) .gh-card-excerpt {
+    margin-top: 4px;
     font-size: 1.5rem;
 }
 
@@ -204,13 +200,13 @@ body:not(.home-template) .gh-topic-grid .gh-card:not(:first-child) .gh-card-exce
 
 .gh-card-footer {
     display: flex;
-    align-items: center;
     gap: 6px;
+    align-items: center;
     margin-top: 16px;
     font-size: 1.1rem;
     font-weight: 500;
-    text-transform: uppercase;
     color: var(--color-secondary-text);
+    text-transform: uppercase;
 }
 
 .gh-card:not(:first-child) .gh-card-footer {
@@ -225,8 +221,8 @@ body:not(.home-template) .gh-topic-grid .gh-card:not(:first-child) .gh-card-exce
 .gh-card-footer-sep {
     width: 2px;
     height: 2px;
-    border-radius: 50%;
     background-color: currentColor;
+    border-radius: 50%;
 }
 
 /* Styles specific to list style sections */
@@ -242,8 +238,8 @@ body:not(.home-template) .gh-topic-grid .gh-card:not(:first-child) .gh-card-exce
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 24px;
     padding-bottom: 12px;
+    margin-bottom: 24px;
     border-bottom: 1px solid var(--color-light-gray);
 }
 
@@ -300,8 +296,8 @@ body:not(.home-template) .gh-topic-grid .gh-card:not(:first-child) .gh-card-exce
     margin-bottom: 12px;
     font-size: 1.2rem;
     font-weight: 600;
-    letter-spacing: 0.01em;
     text-transform: uppercase;
+    letter-spacing: 0.01em;
 }
 
 .gh-article-excerpt {
@@ -369,8 +365,8 @@ body:not(.home-template) .gh-topic-grid .gh-card:not(:first-child) .gh-card-exce
     width: 2px;
     height: 2px;
     margin: 0 6px;
-    border-radius: 50%;
     background-color: currentColor;
+    border-radius: 50%;
 }
 
 .gh-read-next {
@@ -381,6 +377,7 @@ body:not(.home-template) .gh-topic-grid .gh-card:not(:first-child) .gh-card-exce
 
 .tag-template .gh-cover {
     --cover-height: 100vh;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -389,6 +386,7 @@ body:not(.home-template) .gh-topic-grid .gh-card:not(:first-child) .gh-card-exce
 
 .post-template .gh-cover {
     --cover-height: none;
+
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.4), transparent 30%);
 }
 
@@ -403,8 +401,8 @@ body:not(.home-template) .gh-topic-grid .gh-card:not(:first-child) .gh-card-exce
 
 .gh-cover-title {
     font-size: 10rem;
-    letter-spacing: -0.01em;
     color: var(--color-white);
+    letter-spacing: -0.01em;
 }
 
 .gh-cover-description {
@@ -422,8 +420,8 @@ body:not(.home-template) .gh-topic-grid .gh-card:not(:first-child) .gh-card-exce
 .gh-pagehead {
     display: flex;
     flex-direction: column;
-    margin-bottom: 64px;
     max-width: 720px;
+    margin-bottom: 64px;
 }
 
 .gh-pagehead-title {
@@ -460,8 +458,8 @@ body:not(.home-template) .gh-topic-grid .gh-card:not(:first-child) .gh-card-exce
 
 .gh-subscribe-btn {
     margin-top: 40px;
-    background-color: var(--color-white);
     color: var(--color-darker-gray);
+    background-color: var(--color-white);
 }
 
 .gh-subscribe-btn:hover {
@@ -475,9 +473,9 @@ body:not(.home-template) .gh-topic-grid .gh-card:not(:first-child) .gh-card-exce
 /* Site footer */
 
 .gh-foot {
-    margin-top: 120px;
     padding-top: 120px;
     padding-bottom: 120px;
+    margin-top: 120px;
     background-color: var(--color-darker-gray);
 }
 

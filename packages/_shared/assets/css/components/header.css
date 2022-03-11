@@ -49,8 +49,8 @@
 
 .gh-head-actions {
     display: flex;
-    justify-content: flex-end;
     gap: var(--head-nav-gap);
+    justify-content: flex-end;
 }
 
 .gh-head-btn.gh-btn {

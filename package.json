@@ -51,7 +51,8 @@
             "color-function-notation": null,
             "property-no-vendor-prefix": null,
             "media-feature-name-no-vendor-prefix": null,
-            "number-max-precision": null
+            "number-max-precision": null,
+            "value-keyword-case": null
         }
     },
     "renovate": {
