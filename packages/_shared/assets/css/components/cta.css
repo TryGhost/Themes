@@ -1,16 +1,18 @@
-.gh-cta {
-    display: flex;
-    flex-direction: column;
-    margin-top: -16rem;
-    margin-bottom: 4rem;
-    text-align: center;
-}
-
-.gh-cta::before {
+.gh-cta-gradient {
+    position: relative;
+    grid-column: full-start / full-end;
     height: 160px;
+    margin-top: -16rem;
     margin-bottom: 4rem;
     content: "";
     background: linear-gradient(180deg, rgba(255, 255, 255, 0), var(--color-white));
+}
+
+.gh-cta {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4rem;
+    text-align: center;
 }
 
 .gh-cta-title {
