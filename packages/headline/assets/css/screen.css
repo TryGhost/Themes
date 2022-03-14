@@ -382,11 +382,12 @@ body:not(.home-template) .gh-topic-grid .gh-card:not(:first-child) .gh-card-exce
 /* Full screen cover */
 
 .tag-template .gh-cover {
-    --cover-height: 100vh;
+    --cover-height: 50vh;
 
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: -16px;
     background-color: rgba(0, 0, 0, 0.4);
 }
 
@@ -402,19 +403,20 @@ body:not(.home-template) .gh-topic-grid .gh-card:not(:first-child) .gh-card-exce
 
 .gh-cover-content {
     max-width: 720px;
+    margin-top: 136px;
     text-align: center;
 }
 
 .gh-cover-title {
-    font-size: 8rem;
+    font-size: 7.2rem;
     color: var(--color-white);
     text-transform: uppercase;
-    letter-spacing: -0.01em;
+    letter-spacing: 0;
 }
 
 .gh-cover-description {
-    margin-top: 16px;
-    font-size: 2.2rem;
+    margin-top: 20px;
+    font-size: 1.9rem;
     color: var(--color-white);
 }
 
