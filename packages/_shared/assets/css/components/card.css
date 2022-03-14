@@ -5,7 +5,7 @@ except for when immediately preceeded by a heading */
     margin-top: 4rem;
 }
 
-.gh-content .kg-card + :not(.kg-card) {
+.gh-content .kg-card + :not(.kg-card):not([id]) {
     margin-top: 4rem;
 }
 

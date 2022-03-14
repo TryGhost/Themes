@@ -23,29 +23,11 @@
 .gh-head-logo {
     font-size: 2.4rem;
     font-weight: 700;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.02em;
 }
 
 .gh-head-logo img {
     max-height: 32px;
-}
-
-.gh-head-description {
-    position: relative;
-    padding-left: 2rem;
-    margin-left: 2rem;
-    color: var(--color-secondary-text);
-}
-
-.gh-head-description::before {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 1px;
-    height: 40px;
-    margin-top: -20px;
-    content: "";
-    background-color: var(--color-light-gray);
 }
 
 .gh-head-menu {
@@ -67,6 +49,7 @@
 
 .gh-head-actions {
     display: flex;
+    gap: var(--head-nav-gap);
     justify-content: flex-end;
 }
 
@@ -161,7 +144,7 @@ Home About Collection Author Portal
 /* Transparent header
 /* ---------------------------------------------------------- */
 
-.is-head-transparent.home-template .gh-head {
+.is-head-transparent .gh-head {
     position: absolute;
     right: 0;
     left: 0;
@@ -169,12 +152,9 @@ Home About Collection Author Portal
     background-color: transparent;
 }
 
-.is-head-transparent:not(.home-template) .gh-head {
-    background-color: var(--ghost-accent-color);
-}
-
 .is-head-transparent .gh-head-logo,
-.is-head-transparent .gh-head .nav a {
+.is-head-transparent .gh-head .nav a,
+.is-head-transparent .gh-head-description {
     color: var(--color-white);
 }
 
@@ -188,72 +168,65 @@ Home About Collection Author Portal
     background-color: var(--color-white);
 }
 
+.is-head-transparent .gh-head-menu::before,
+.is-head-transparent .gh-head-menu::after {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
 /* Dark header
 /* ---------------------------------------------------------- */
 
-.is-head-dark .gh-head {
+.is-head-dark:not(.is-head-transparent) .gh-head {
     background-color: var(--color-darker-gray);
 }
 
-.is-head-dark .gh-head-logo,
-.is-head-dark .gh-head .nav a {
+.is-head-dark:not(.is-head-transparent) .gh-head-logo,
+.is-head-dark:not(.is-head-transparent) .gh-head .nav a,
+.is-head-dark:not(.is-head-transparent) .gh-head-description {
     color: var(--color-white);
 }
 
-.is-head-dark .gh-head-description {
-    padding-left: 2rem;
-    margin-left: 2rem;
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.is-head-dark .gh-head-description::before {
-    height: 32px;
-    margin-top: -16px;
-    background-color: rgba(255, 255, 255, 0.4);
-}
-
-.is-head-dark .gh-burger::before,
-.is-head-dark .gh-burger::after {
+.is-head-dark:not(.is-head-transparent) .gh-burger::before,
+.is-head-dark:not(.is-head-transparent) .gh-burger::after {
     background-color: var(--color-white);
 }
 
-.is-head-dark .gh-head-btn {
-    color: #fff;
-    background-color: var(--ghost-accent-color);
+.is-head-dark:not(.is-head-transparent) .gh-head-btn {
+    color: var(--color-darker-gray);
+    background-color: #fff;
+}
+
+.is-head-dark:not(.is-head-transparent) .gh-head-menu::before,
+.is-head-dark:not(.is-head-transparent) .gh-head-menu::after {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Brand header
 /* ---------------------------------------------------------- */
 
-.is-head-brand .gh-head {
+.is-head-brand:not(.is-head-transparent) .gh-head {
     background-color: var(--ghost-accent-color);
 }
 
-.is-head-brand .gh-head-logo,
-.is-head-brand .gh-head .nav a {
+.is-head-brand:not(.is-head-transparent) .gh-head-logo,
+.is-head-brand:not(.is-head-transparent) .gh-head .nav a,
+.is-head-brand:not(.is-head-transparent) .gh-head-description {
     color: var(--color-white);
 }
 
-.is-head-brand .gh-head-description {
-    padding-left: 2rem;
-    margin-left: 2rem;
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.is-head-brand .gh-head-description::before {
-    height: 32px;
-    margin-top: -16px;
-    background-color: rgba(255, 255, 255, 0.4);
-}
-
-.is-head-brand .gh-burger::before,
-.is-head-brand .gh-burger::after {
+.is-head-brand:not(.is-head-transparent) .gh-burger::before,
+.is-head-brand:not(.is-head-transparent) .gh-burger::after {
     background-color: var(--color-white);
 }
 
-.is-head-brand .gh-head-btn {
+.is-head-brand:not(.is-head-transparent) .gh-head-btn {
     color: var(--color-darker-gray);
     background-color: #fff;
+}
+
+.is-head-brand:not(.is-head-transparent) .gh-head-menu::before,
+.is-head-brand:not(.is-head-transparent) .gh-head-menu::after {
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 /* Mobile menu
@@ -304,10 +277,6 @@ Home About Collection Author Portal
 @media (max-width: 767px) {
     #gh-head .gh-head-inner {
         padding: 2rem 0;
-    }
-
-    #gh-head .gh-head-description {
-        display: none;
     }
 }
 
