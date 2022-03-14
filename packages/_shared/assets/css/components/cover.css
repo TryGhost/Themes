@@ -1,6 +1,8 @@
 .gh-cover {
     position: relative;
     min-height: var(--cover-height, 50vh);
+    padding-top: 6.4rem;
+    padding-bottom: 6.4rem;
 }
 
 .gh-cover-image {
