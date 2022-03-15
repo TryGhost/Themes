@@ -67,18 +67,18 @@
 
 {{#is "post"}}
     <div class="gh-read-next gh-canvas">
-        <section class="gh-topic gh-topic-minimal">
-            <header class="gh-topic-header">
-                <h2 class="gh-topic-name">Read next</h2>
-            </header>
+        <section class="gh-pagehead">
+            <h1 class="gh-pagehead-title">Read next</h1>
+        </section>
 
+        <div class="gh-topic gh-topic-grid{{#match count.posts "=" 1}} is-singular{{/match}}">
             <div class="gh-topic-content">
-                {{#get "posts" filter="id:-{{id}}" limit="5"}}
+                {{#get "posts" include="authors" filter="id:-{{id}}" limit="5"}}
                     {{#foreach posts}}
-                        {{> "loop-minimal"}}
+                        {{> "loop-grid"}}
                     {{/foreach}}
                 {{/get}}
             </div>
-        </section>
+        </div>
     </div>
 {{/is}}

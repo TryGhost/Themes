@@ -376,7 +376,11 @@ body:not(.home-template) .gh-topic-grid .gh-card:not(:first-child) .gh-card-exce
 }
 
 .gh-read-next {
-    margin-top: 64px;
+    margin-top: 120px;
+}
+
+.gh-read-next > * {
+    grid-column: wide-start / wide-end;
 }
 
 /* Full screen cover */
@@ -620,6 +624,10 @@ body:not(.home-template) .gh-topic-grid .gh-card:not(:first-child) .gh-card-exce
 
     .gh-topic-minimal .gh-card-title {
         font-size: 1.5rem;
+    }
+
+    .gh-read-next {
+        margin-top: 64px;
     }
 
     .gh-foot {
