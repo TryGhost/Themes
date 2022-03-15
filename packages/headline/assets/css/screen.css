@@ -306,6 +306,10 @@ body:not(.home-template) .gh-topic-grid .gh-card:not(:first-child) .gh-card-exce
     font-size: 1.9rem;
 }
 
+.has-full-image .gh-article-excerpt {
+    margin-bottom: -8px;
+}
+
 .gh-article-image {
     grid-column: main-start / main-end;
     width: 100%;
@@ -315,10 +319,6 @@ body:not(.home-template) .gh-topic-grid .gh-card:not(:first-child) .gh-card-exce
     grid-column: wide-start / wide-end;
 }
 
-.has-full-image .gh-article-image {
-    grid-column: full-start / full-end;
-}
-
 .gh-article-sidebar {
     position: absolute;
     left: 0;
@@ -326,8 +326,12 @@ body:not(.home-template) .gh-topic-grid .gh-card:not(:first-child) .gh-card-exce
     padding-right: 32px;
 }
 
-:where(.has-wide-image, .has-full-image) .gh-article-sidebar {
+.has-wide-image .gh-article-sidebar {
     top: calc(100% + 40px);
+}
+
+.has-full-image .gh-article-sidebar {
+    top: 40px;
 }
 
 .gh-author-image {
@@ -377,7 +381,7 @@ body:not(.home-template) .gh-topic-grid .gh-card:not(:first-child) .gh-card-exce
 
 /* Full screen cover */
 
-.tag-template .gh-cover {
+.gh-cover {
     --cover-height: 50vh;
 
     display: flex;
@@ -388,26 +392,48 @@ body:not(.home-template) .gh-topic-grid .gh-card:not(:first-child) .gh-card-exce
 }
 
 .post-template .gh-cover {
-    --cover-height: none;
+    --cover-height: 100vh;
 
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.4), transparent 30%);
-}
-
-.post-template .gh-cover-image {
-    position: relative;
+    align-items: flex-end;
+    padding-top: 120px;
+    padding-bottom: 0;
+    margin-bottom: -56px;
 }
 
 .gh-cover-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     max-width: 720px;
     margin-top: 100px;
     text-align: center;
+}
+
+.post-template .gh-cover-content {
+    position: sticky;
+    bottom: 80px;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin-bottom: 64px;
+    text-align: left;
+}
+
+.gh-cover-content .gh-article-tag {
+    color: var(--color-white);
 }
 
 .gh-cover-title {
     font-size: 7.2rem;
     color: var(--color-white);
     text-transform: uppercase;
+}
+
+.tag-template .gh-cover-title {
     letter-spacing: 0;
+}
+
+.post-template .gh-cover-title {
+    text-transform: none;
 }
 
 .gh-cover-description {
@@ -533,6 +559,11 @@ body:not(.home-template) .gh-topic-grid .gh-card:not(:first-child) .gh-card-exce
         margin-top: 40px;
     }
 
+    .post-template .gh-cover-content {
+        bottom: 32px;
+        margin-bottom: 32px;
+    }
+
     .gh-cover-title {
         font-size: 3.2rem;
     }
@@ -542,12 +573,12 @@ body:not(.home-template) .gh-topic-grid .gh-card:not(:first-child) .gh-card-exce
     }
 
     .gh-topic-grid .gh-topic-content {
-        row-gap: 32px;
+        row-gap: 32px !important;
     }
 
     .gh-topic-grid:not(.is-singular) .gh-card:first-child {
-        padding-bottom: 36px;
-        margin-bottom: 4px;
+        padding-bottom: 36px !important;
+        margin-bottom: 4px !important;
     }
 
     .gh-topic-grid .gh-card-link {
@@ -589,29 +620,6 @@ body:not(.home-template) .gh-topic-grid .gh-card:not(:first-child) .gh-card-exce
 
     .gh-topic-minimal .gh-card-title {
         font-size: 1.5rem;
-    }
-
-    .gh-article-sidebar {
-        position: static;
-        display: grid;
-        grid-template-columns: auto 1fr;
-        grid-column: main-start / main-end;
-        column-gap: 12px;
-        align-items: center;
-        padding-right: 0;
-        margin-top: 24px;
-    }
-
-    .gh-author-image {
-        grid-row: 1 / 3;
-        width: 48px;
-        height: 48px;
-        margin-bottom: 0;
-    }
-
-    .gh-article-meta {
-        margin-top: 0;
-        line-height: 1;
     }
 
     .gh-foot {
@@ -730,5 +738,35 @@ body:not(.home-template) .gh-topic-grid .gh-card:not(:first-child) .gh-card-exce
 
     body:not(.is-head-b--a_n) .gh-head-menu::after {
         display: none;
+    }
+
+    .has-full-image .gh-article-excerpt {
+        margin-top: 36px;
+        font-size: 2.4rem;
+    }
+}
+
+@media (max-width: 1199px) {
+    .gh-article-sidebar {
+        position: static;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-column: main-start / main-end;
+        column-gap: 12px;
+        align-items: center;
+        padding-right: 0;
+        margin-top: 24px;
+    }
+
+    .gh-author-image {
+        grid-row: 1 / 3;
+        width: 48px;
+        height: 48px;
+        margin-bottom: 0;
+    }
+
+    .gh-article-meta {
+        margin-top: 0;
+        line-height: 1;
     }
 }
