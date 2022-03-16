@@ -6,14 +6,14 @@
             <h1 class="gh-pagehead-title">Latest</h1>
         </section>
 
-        <div class="gh-topic gh-topic-grid{{#match count.posts "=" 1}} is-singular{{/match}}">
-            <div class="gh-topic-content">
-                {{#get "posts" include="authors" limit="all"}}
+        {{#get "posts" include="authors" limit="all"}}
+            <div class="gh-topic gh-topic-grid">
+                <div class="gh-topic-content">
                     {{#foreach posts}}
                         {{> "loop-grid"}}
                     {{/foreach}}
-                {{/get}}
+                </div>
             </div>
-        </div>
+        {{/get}}
     </div>
 </main>

@@ -42,20 +42,18 @@ figcaption {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 32px 40px;
-    padding-bottom: 48px;
-    border-bottom: 1px solid var(--color-light-gray);
 }
 
 body:not(.home-template) .gh-topic-grid .gh-topic-content {
     row-gap: 48px;
     justify-items: center;
-    padding-bottom: 0;
-    border-bottom: 0;
 }
 
 .gh-topic-footer {
     padding-top: 20px;
+    margin-top: 48px;
     text-align: right;
+    border-top: 1px solid var(--color-light-gray);
 }
 
 .gh-topic-grid .gh-card:first-child,
@@ -72,14 +70,10 @@ body:not(.home-template) .gh-topic-grid .gh-card:not(:first-child) {
     max-width: 720px;
 }
 
-.gh-topic-grid:not(.is-singular) .gh-card:first-child {
+.gh-topic-grid .gh-card:not(:only-child):first-child {
     padding-bottom: 48px;
     margin-bottom: 16px;
     border-bottom: 1px solid var(--color-light-gray);
-}
-
-body:not(.home-template) .gh-topic-grid:not(.is-singular) .gh-card:first-child {
-    padding-bottom: 64px;
 }
 
 .gh-topic-grid .gh-card-link {
@@ -147,6 +141,10 @@ body:not(.home-template) .gh-topic-grid:not(.is-singular) .gh-card:first-child {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.gh-topic-grid .gh-card-wrapper {
+    margin-top: -3px;
 }
 
 .gh-topic-grid .gh-card.featured:first-child .gh-card-wrapper {
@@ -580,13 +578,13 @@ body:not(.home-template) .gh-topic-grid .gh-card:not(:first-child) .gh-card-exce
         row-gap: 32px !important;
     }
 
-    .gh-topic-grid:not(.is-singular) .gh-card:first-child {
-        padding-bottom: 36px !important;
-        margin-bottom: 4px !important;
+    .gh-topic-grid .gh-card:not(:only-child):first-child {
+        padding-bottom: 36px;
+        margin-bottom: 4px;
     }
 
     .gh-topic-grid .gh-card-link {
-        gap: 20px;
+        gap: 16px;
     }
 
     .gh-topic-grid .gh-card:first-child .gh-card-link {
@@ -612,6 +610,10 @@ body:not(.home-template) .gh-topic-grid .gh-card:not(:first-child) .gh-card-exce
 
     body:not(.home-template) .gh-topic-grid .gh-card:not(:first-child) .gh-card-excerpt {
         display: none;
+    }
+
+    .gh-card:not(:first-child) .gh-card-footer {
+        margin-top: 8px;
     }
 
     .gh-topic-grid .gh-card:not(:first-child) :where(.gh-card-author, .gh-card-footer-sep) {

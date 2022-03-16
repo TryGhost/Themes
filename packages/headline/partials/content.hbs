@@ -71,7 +71,7 @@
             <h1 class="gh-pagehead-title">Read next</h1>
         </section>
 
-        <div class="gh-topic gh-topic-grid{{#match count.posts "=" 1}} is-singular{{/match}}">
+        <div class="gh-topic gh-topic-grid">
             <div class="gh-topic-content">
                 {{#get "posts" include="authors" filter="id:-{{id}}" limit="5"}}
                     {{#foreach posts}}
