@@ -68,14 +68,14 @@
 {{#is "post"}}
     <div class="gh-read-next gh-canvas">
         <section class="gh-pagehead">
-            <h1 class="gh-pagehead-title">Read next</h1>
+            <h4 class="gh-pagehead-title">Read next</h4>
         </section>
 
         <div class="gh-topic gh-topic-grid">
             <div class="gh-topic-content">
                 {{#get "posts" include="authors" filter="id:-{{id}}" limit="5"}}
                     {{#foreach posts}}
-                        {{> "loop-grid"}}
+                        {{> "loop-grid" has_large_post=false}}
                     {{/foreach}}
                 {{/get}}
             </div>
