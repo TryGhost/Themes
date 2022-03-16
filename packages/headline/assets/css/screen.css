@@ -679,7 +679,7 @@ body:not(.home-template) .gh-topic-grid .gh-card {
 }
 
 @media (min-width: 768px) {
-    .gh-topic-grid .gh-card:not(.large) .gh-card-image {
+    body:not(.home-template) .gh-topic-grid .gh-card:not(.large) .gh-card-image {
         width: 160px;
     }
 }
