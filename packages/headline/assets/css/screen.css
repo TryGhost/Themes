@@ -34,6 +34,7 @@ figcaption {
     letter-spacing: 0;
 }
 
+.gh-topic-grid .gh-topic-name,
 .gh-topic-grid .gh-topic-name a {
     color: var(--color-secondary-text);
 }

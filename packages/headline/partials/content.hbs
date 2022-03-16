@@ -66,19 +66,21 @@
 </article>
 
 {{#is "post"}}
-    <div class="gh-read-next gh-canvas">
-        <section class="gh-pagehead">
-            <h4 class="gh-pagehead-title">Read next</h4>
-        </section>
+    {{#get "posts" include="authors" filter="id:-{{id}}" limit="5" as |next|}}
+        {{#if next}}
+            <div class="gh-read-next gh-canvas">
+                <section class="gh-pagehead">
+                    <h4 class="gh-pagehead-title">Read next</h4>
+                </section>
 
-        <div class="gh-topic gh-topic-grid">
-            <div class="gh-topic-content">
-                {{#get "posts" include="authors" filter="id:-{{id}}" limit="5"}}
-                    {{#foreach posts}}
-                        {{> "loop-grid" has_large_post=false}}
-                    {{/foreach}}
-                {{/get}}
+                <div class="gh-topic gh-topic-grid">
+                    <div class="gh-topic-content">
+                        {{#foreach next}}
+                            {{> "loop-grid" has_large_post=false}}
+                        {{/foreach}}
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
+        {{/if}}
+    {{/get}}
 {{/is}}
