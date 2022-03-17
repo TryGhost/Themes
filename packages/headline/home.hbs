@@ -45,21 +45,23 @@
                 {{/get}}
             {{/if}}
         {{else}}
-            {{#get "tags" include="count.posts" order="count.posts desc" limit="3"}}
-                {{#foreach tags}}
-                    {{> "topic-grid"}}
-                {{/foreach}}
-            {{/get}}
+            {{#match posts.length ">" 1}}
+                {{#get "tags" include="count.posts" order="count.posts desc" limit="3"}}
+                    {{#foreach tags}}
+                        {{> "topic-grid"}}
+                    {{/foreach}}
+                {{/get}}
 
-            {{#get "tags" include="count.posts" order="count.posts desc"}}
-                {{#if tags.[3]}}
-                    <div class="gh-topic-list">
-                        {{#foreach tags from="4" limit="3"}}
-                            {{> "topic-minimal"}}
-                        {{/foreach}}
-                    </div>
-                {{/if}}
-            {{/get}}
+                {{#get "tags" include="count.posts" order="count.posts desc"}}
+                    {{#if tags.[3]}}
+                        <div class="gh-topic-list">
+                            {{#foreach tags from="4" limit="3"}}
+                                {{> "topic-minimal"}}
+                            {{/foreach}}
+                        </div>
+                    {{/if}}
+                {{/get}}
+            {{/match}}
         {{/if}}
     </div>
 </main>
