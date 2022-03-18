@@ -111,7 +111,7 @@ function player() {
         }
     });
 
-    playerAudio.on('loadedmetadata', function () {
+    playerAudio.on('timeupdate', function () {
         timeDuration.text(
             new Date(playerAudio[0].duration * 1000).toISOString().substr(11, 8)
         );
