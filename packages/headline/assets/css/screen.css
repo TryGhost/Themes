@@ -786,6 +786,10 @@ body:not(.home-template) .gh-topic-grid .gh-card {
         font-size: 1.4rem;
     }
 
+    .gh-head-btn.gh-btn:hover {
+        opacity: 0.95 !important;
+    }
+
     .gh-head-menu {
         height: 56px;
     }
