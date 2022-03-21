@@ -30,7 +30,7 @@ body:not(.is-head-transparent) .gh-head-logo img + img {
     display: none;
 }
 
-.is-head-transparent .gh-head-logo img:first-of-type {
+.is-head-transparent .gh-head-logo img:first-of-type:not(:only-child) {
     display: none;
 }
 
