@@ -450,6 +450,7 @@ body:not(.home-template) .gh-topic-grid .gh-card {
 }
 
 .tag-template .gh-cover-title {
+    font-family: var(--font-sans);
     letter-spacing: -0.01em;
 }
 
