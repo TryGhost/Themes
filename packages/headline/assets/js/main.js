@@ -6,6 +6,8 @@
     if (!document.body.classList.contains('post-template')) return;
 
     const cover = document.querySelector('.gh-cover');
+    if (!cover) return;
+
     const image = cover.querySelector('.gh-cover-image');
 
     window.addEventListener('load', function () {
