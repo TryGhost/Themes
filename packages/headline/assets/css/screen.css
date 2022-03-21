@@ -504,10 +504,17 @@ body:not(.home-template) .gh-topic-grid .gh-card {
     color: var(--color-white);
 }
 
+.has-serif-title .gh-subscribe-title {
+    font-family: var(--font-serif);
+}
+
 .gh-subscribe-description {
     margin-top: 16px;
-    font-family: var(--font-serif);
     font-size: 2rem;
+}
+
+.has-serif-body .gh-subscribe-description {
+    font-family: var(--font-serif);
 }
 
 .gh-subscribe-btn {
