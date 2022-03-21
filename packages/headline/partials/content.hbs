@@ -1,3 +1,5 @@
+{{#post}}
+
 <article class="gh-article {{post_class}}">
     <header class="gh-article-header gh-canvas">
         {{#unless has_full_image}}
@@ -65,8 +67,10 @@
     </section>
 </article>
 
+{{/post}}
+
 {{#is "post"}}
-    {{#get "posts" include="authors" filter="id:-{{id}}" limit="5" as |next|}}
+    {{#get "posts" include="authors" filter="tags:[{{post.tags}}]+id:-{{post.id}}" limit="3" as |next|}}
         {{#if next}}
             <div class="gh-read-next gh-canvas">
                 <section class="gh-pagehead">
