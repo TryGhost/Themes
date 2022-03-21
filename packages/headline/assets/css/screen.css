@@ -427,11 +427,20 @@ body:not(.home-template) .gh-topic-grid .gh-card {
     padding-top: 120px;
     padding-bottom: 0;
     margin-bottom: -56px;
-    transition: background-color 1.5s ease;
+    background-color: transparent;
 }
 
-.post-template .gh-cover.loading {
+.post-template .gh-cover::before {
+    position: absolute;
+    inset: 0;
+    content: "";
     background-color: var(--color-black);
+    opacity: 0.3;
+    transition: opacity 1.5s ease;
+}
+
+.post-template .gh-cover.loading::before {
+    opacity: 1;
 }
 
 .post-template .gh-cover-image {
