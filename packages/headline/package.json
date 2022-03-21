@@ -56,6 +56,9 @@
                 "options": ["Light", "Accent color", "Dark"],
                 "default": "Light"
             },
+            "white_publication_logo_for_transparent_header": {
+                "type": "image"
+            },
             "email_signup_text": {
                 "type": "text",
                 "default": "Don't miss out on the latest news. Sign up now to get access to the library of members-only articles."
