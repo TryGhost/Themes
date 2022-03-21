@@ -427,6 +427,20 @@ body:not(.home-template) .gh-topic-grid .gh-card {
     padding-top: 120px;
     padding-bottom: 0;
     margin-bottom: -56px;
+    transition: background-color 1.5s ease;
+}
+
+.post-template .gh-cover.loading {
+    background-color: var(--color-black);
+}
+
+.post-template .gh-cover-image {
+    transition: transform 1.5s ease;
+    transform: scale(1);
+}
+
+.post-template .gh-cover.loading .gh-cover-image {
+    transform: scale(1.02);
 }
 
 .gh-cover-content {

@@ -8,5 +8,8 @@
     const cover = document.querySelector('.gh-cover');
     const image = cover.querySelector('.gh-cover-image');
 
-    cover.style.setProperty('--cover-height', image.clientWidth * image.naturalHeight / image.naturalWidth + 'px');
+    window.addEventListener('load', function () {
+        cover.style.setProperty('--cover-height', image.clientWidth * image.naturalHeight / image.naturalWidth + 'px');
+        cover.classList.remove('loading');
+    });
 })();
