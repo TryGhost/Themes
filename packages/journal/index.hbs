@@ -37,9 +37,15 @@
                 <h2 class="gh-section-title">More issues</h2>
 
                 <div class="gh-feed">
-                    {{#foreach posts from="2"}}
-                        {{> loop}}
-                    {{/foreach}}
+                    {{^is "paged"}}
+                        {{#foreach posts from="2"}}
+                            {{> loop}}
+                        {{/foreach}}
+                    {{else}}
+                        {{#foreach posts}}
+                            {{> loop}}
+                        {{/foreach}}
+                    {{/is}}
                 </div>
 
                 {{#match posts.length "=" 1}}
