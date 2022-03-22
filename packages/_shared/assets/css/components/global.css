@@ -73,6 +73,7 @@ blockquote:not([class]) {
 }
 
 figcaption {
+    padding: 0 1.6rem;
     margin-top: 1.6rem;
     font-size: 1.4rem;
     line-height: 1.4;
