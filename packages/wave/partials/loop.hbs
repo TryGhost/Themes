@@ -1,12 +1,30 @@
 <article class="{{post_class}} post-{{comment_id}}">
-    {{> post-media ratio="square"}}
+    {{> "post-image"}}
+
     <div class="post-wrapper">
-        {{> post-header}}
+        <header class="post-header">
+            <h2 class="post-title">
+                <a class="post-title-link" href="{{url}}">{{title}}</a>
+            </h2>
+            {{> "post-meta"}}
+        </header>
+
         {{#if excerpt}}
             <div class="post-excerpt">
                 {{excerpt words="25"}}
             </div>
         {{/if}}
-        {{> post-footer}}
+
+        <footer class="post-footer">
+            <a class="button-text post-footer-more" href="{{url}}">
+                <i class="icon icon-chevron-right"></i>
+                Read more
+            </a>
+            {{#if og_description}}
+                <a class="button button-small button-secondary post-footer-download" href="{{og_description}}" target="_blank" rel="noopener noreferrer">
+                    <i class="icon icon-download"></i>
+                </a>
+            {{/if}}
+        </footer>
     </div>
 </article>

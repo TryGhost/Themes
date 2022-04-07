@@ -12,6 +12,7 @@
     border-radius: 3px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     opacity: 0;
+    visibility: hidden;
     transition-timing-function: var(--animation-base);
     transition-duration: 0.2s;
     transition-property: opacity, transform;
@@ -21,6 +22,7 @@
 
 .popup-opened .popup {
     opacity: 1;
+    visibility: visible;
     transform: translateY(0);
     pointer-events: unset;
 }

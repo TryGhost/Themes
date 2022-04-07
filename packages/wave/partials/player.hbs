@@ -1,11 +1,33 @@
 <div class="player{{#if is_external}} player-external{{else}}{{#unless feature_image}} no-thumbnail{{/unless}}{{/if}}">
     <audio class="player-audio"{{#unless is_external}} src="{{og_description}}"{{/unless}}></audio>
-    {{> post-media ratio="square" is_placeholder=is_external}}
+
+    <div class="post-media{{#if og_description}} js-play{{/if}}{{#if is_placeholder}} js-play{{/if}}" data-url="{{og_description}}" data-id="{{comment_id}}">
+        <div class="button button-play"><i class="icon icon-play"></i></div>
+        <div class="u-placeholder square">
+            <img
+                class="post-image u-object-fit"
+                srcset="{{img_url feature_image size="1x"}} 1x,
+                        {{img_url feature_image size="2x"}} 2x,
+                        {{img_url feature_image size="3x"}} 3x"
+                src="{{img_url feature_image size="2x"}}"
+                alt="{{title}}"
+            >
+        </div>
+    </div>
+
     <div class="player-wrapper">
-        {{> post-header is_placeholder=is_external}}
+
+        <header class="post-header">
+            <h2 class="post-title">
+                <a class="post-title-link" href="{{url}}">{{title}}</a>
+            </h2>
+            {{> "post-meta"}}
+        </header>
+
         <div class="player-track hidden-xs hidden-sm hidden-md">
             <div class="player-progress"></div>
         </div>
+
         <div class="player-controls">
             <div class="player-buttons">
                 <button class="button button-small player-button-play{{^if is_external}} hidden-xs hidden-sm{{/if}} hidden-md hidden-lg hidden-xl js-play">
@@ -24,5 +46,6 @@
                 <span class="player-time-duration">00:00:00</span>
             </div>
         </div>
+
     </div>
 </div>

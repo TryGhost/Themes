@@ -1,0 +1,10 @@
+<div class="post-meta">
+    <span class="post-meta-item post-meta-date">
+        <time datetime="{{date format="YYYY-MM-DD"}}">{{date published_at}}</time>
+    </span>
+    {{#primary_tag}}
+        <span class="post-meta-item post-meta-tags">
+            <a class="post-tag post-tag-{{slug}}" href="{{url}}" title="{{name}}">{{name}}</a>
+        </span>
+    {{/primary_tag}}
+</div>

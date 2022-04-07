@@ -19,27 +19,92 @@
 </head>
 
 <body class="{{body_class}}{{{block "body_class"}}}{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Elegant serif"}} has-serif-body{{/match}}">
-    <div class="site">
-        {{> header}}
-        {{#is "home"}}
-            {{> cover}}
-        {{/is}}
-        <div class="site-content">
-            {{{body}}}
+<div class="site">
+
+    <header class="site-header container">
+        <div class="header-left">
+            <a class="logo" href="{{@site.url}}">
+                <span class="logo-text">{{@site.title}}</span>
+            </a>
         </div>
-        {{> footer}}
+        <div class="header-right">
+            {{#if @site.navigation}}
+                <nav class="main-nav hidden-xs hidden-sm hidden-md">
+                    {{navigation}}
+                </nav>
+            {{/if}}
+            <div class="header-subscribe">
+                <button class="button header-button header-button-subscribe js-popup">Subscribe</button>
+                <div class="subscribe popup">
+                    {{> "subscription-links"}}
+                </div>
+            </div>
+            {{#if @site.navigation}}
+                <div class="header-menu hidden-lg hidden-xl">
+                    <button class="button button-secondary header-button header-button-menu js-popup">
+                        <i class="icon icon-menu"></i>
+                    </button>
+                    <div class="popup">
+                        <div class="mobile-menu">
+                            {{navigation}}
+                        </div>
+                    </div>
+                </div>
+            {{/if}}
+        </div>
+    </header>
+
+    {{#is "home"}}
+    {{#if @site.cover_image}}
+        <div class="container">
+        <div class="site-cover">
+            <img
+                class="cover-image u-object-fit"
+                src="{{img_url @site.cover_image}}"
+                alt="{{@site.title}}"
+            >
+            <div class="cover-content">
+                {{#if @site.logo}}
+                    <img class="cover-logo" src="{{@site.logo}}" alt="{{@site.title}}">
+                {{/if}}
+                {{#if @site.description}}
+                    <div class="cover-description">{{@site.description}}</div>
+                {{/if}}
+            </div>
+        </div>
+        </div>
+    {{/if}}
+    {{/is}}
+
+    <div class="site-content">
+        {{{body}}}
     </div>
 
-    <script
-        src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous">
-    </script>
-    <script src="{{asset "built/main.min.js"}}"></script>
+    <footer class="site-footer container medium">
+        <div class="subscribe">
+            {{> "subscription-links"}}
+        </div>
+        <div class="copyright">
+            Powered by <a href="https://ghost.org/" target="_blank">Ghost</a>
+        </div>
+    </footer>
 
-    {{{block "scripts"}}}
+    {{^is "post"}}
+        {{> player is_external=true}}
+    {{/is}}
 
-    {{ghost_foot}}
+</div>
+
+<script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous">
+</script>
+<script src="{{asset "built/main.min.js"}}"></script>
+
+{{{block "scripts"}}}
+
+{{ghost_foot}}
+
 </body>
-
 </html>

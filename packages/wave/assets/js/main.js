@@ -1,15 +1,5 @@
 var body = $('body');
 
-window.lazySizesConfig = window.lazySizesConfig || {};
-window.lazySizesConfig.loadHidden = false;
-
-document.addEventListener('lazyloaded', function (e) {
-    'use strict';
-    if ($(e.target).parent('.site-cover').length) {
-        $(e.target).parent().addClass('initialized');
-    }
-});
-
 $(function () {
     'use strict';
     video();
@@ -58,10 +48,9 @@ function player() {
 
             // Change player thumbnail and call lazySizes
             playerThumbnail.attr(
-                'data-srcset',
-                clicked.find('.post-image').attr('data-srcset')
+                'srcset',
+                clicked.find('.post-image').attr('srcset')
             );
-            lazySizes.loader.unveil(playerThumbnail[0]);
 
             // Change player title
             playerTitle.text(
