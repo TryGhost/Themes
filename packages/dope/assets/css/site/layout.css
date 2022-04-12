@@ -1,0 +1,23 @@
+.site {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.site-content {
+    flex-grow: 1;
+    padding-top: 100px;
+}
+
+.home-template .site-content {
+    padding-top: 0;
+}
+
+.home-template .content-area,
+.home-template .site-main,
+.home-template .tag-feed,
+.home-template .owl .owl-stage-outer,
+.home-template .owl .owl-stage,
+.home-template .owl .owl-item {
+    height: 100%;
+}

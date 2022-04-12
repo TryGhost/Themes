@@ -1,0 +1,39 @@
+.term {
+    max-width: 500px;
+    margin-top: 30px;
+    margin-bottom: 45px;
+}
+
+.term-name {
+    display: flex;
+    align-items: center;
+    font-size: 3.2rem;
+    font-weight: 800;
+}
+
+.term-name::before {
+    width: 30px;
+    height: 3px;
+    margin-right: 10px;
+    content: "";
+    background-color: var(--dark-gray-color);
+}
+
+.has-serif-title .term-name {
+    font-family: var(--font-serif);
+}
+
+.term-description {
+    margin-top: 16px;
+}
+
+@media (max-width: 767px) {
+    .term {
+        margin-top: 15px;
+        margin-bottom: 30px;
+    }
+
+    .term-name {
+        font-size: 24px;
+    }
+}

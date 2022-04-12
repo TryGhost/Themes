@@ -1,0 +1,42 @@
+.author {
+    display: flex;
+}
+
+.author + .author {
+    margin-top: 30px;
+}
+
+.author-image-placeholder {
+    z-index: 10;
+    flex-shrink: 0;
+    width: 70px;
+    height: 70px;
+    margin-right: 20px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.author-name {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    font-size: 2rem;
+    letter-spacing: -0.01em;
+    cursor: pointer;
+}
+
+.author-location {
+    margin-top: 8px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--secondary-text-color);
+}
+
+.author-bio + .author-location {
+    margin-top: 12px;
+}
+
+.author-bio {
+    margin-top: 8px;
+}

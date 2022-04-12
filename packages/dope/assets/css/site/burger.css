@@ -1,0 +1,31 @@
+.burger {
+    position: relative;
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+    cursor: pointer;
+    background-color: var(--white-color);
+    border: 2px solid var(--mid-gray-color);
+}
+
+.burger::before,
+.burger::after {
+    position: absolute;
+    left: 9px;
+    width: 12px;
+    height: 2px;
+    content: "";
+    background-color: var(--dark-gray-color);
+}
+
+.burger::before {
+    top: 11px;
+}
+
+.burger::after {
+    bottom: 11px;
+}
+
+.home-template .burger {
+    border-color: var(--white-color);
+}

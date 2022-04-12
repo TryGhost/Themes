@@ -32,7 +32,7 @@ function pagination(isInfinite) {
         }
 
         // append contents
-        var postElements = this.response.querySelectorAll('.gh-feed:not(.gh-featured):not(.gh-related) .gh-card');
+        var postElements = this.response.querySelectorAll('.gh-feed:not(.gh-featured):not(.gh-related) > *');
         postElements.forEach(function (item) {
             // document.importNode is important, without it the item's owner
             // document will be different which can break resizing of
@@ -47,7 +47,9 @@ function pagination(isInfinite) {
         } else {
             window.removeEventListener('scroll', onScroll);
             window.removeEventListener('resize', onResize);
-            buttonElement.remove();
+            if (buttonElement) {
+                buttonElement.remove();
+            }
         }
 
         // sync status
