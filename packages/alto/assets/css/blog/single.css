@@ -1,0 +1,32 @@
+.single-post {
+    margin-bottom: 60px;
+}
+
+.single-post .post-title {
+    margin-bottom: 0;
+    font-size: 3.6rem;
+}
+
+.single-post .post-meta {
+    margin-top: 15px;
+}
+
+.single-post .post-media {
+    width: 100%;
+    max-width: 960px;
+    margin: 48px auto 0;
+}
+
+.single-post .post-media img {
+    width: 100%;
+}
+
+.single-post .post-content {
+    font-size: 17px;
+}
+
+@media (max-width: 767px) {
+    .single-post .post-header {
+        margin-top: -30px;
+    }
+}
