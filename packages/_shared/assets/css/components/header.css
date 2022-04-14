@@ -79,6 +79,16 @@ LOGO        Home About Collection Author Portal        Login Subscribe
 
 /*
 ======================================================================
+LOGO                               Home About Collection Author Portal
+======================================================================
+*/
+
+.is-head-b--n .gh-head-inner {
+    grid-template-columns: 1fr auto;
+}
+
+/*
+======================================================================
 LOGO  Home About Collection Author Portal              Login Subscribe
 ======================================================================
 */
