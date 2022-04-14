@@ -1,0 +1,23 @@
+<div class="widget widget-recent u-shadow">
+    <h4 class="widget-title">Recent Posts</h4>
+
+    {{#get "posts" limit="3" include="tags" as |recents|}}
+        {{#if recents}}
+            <div class="recent-posts">
+                {{#foreach recents}}
+                    <article class="recent">
+                        <header class="post-header">
+                            <h5 class="post-title">
+                                <a class="post-title-link" href="{{url}}">{{title}}</a>
+                            </h5>
+
+                            <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">
+                                {{date published_at}}
+                            </time>
+                        </header>
+                    </article>
+                {{/foreach}}
+            </div>
+        {{/if}}
+    {{/get}}
+</div>

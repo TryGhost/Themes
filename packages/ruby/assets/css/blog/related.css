@@ -1,0 +1,11 @@
+.related-posts .post + .post {
+    margin-top: 30px;
+}
+
+.related-title {
+    margin: 20px 0 30px;
+    font-size: 14px;
+    color: var(--secondary-text-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
