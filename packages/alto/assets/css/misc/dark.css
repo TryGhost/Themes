@@ -3,7 +3,7 @@
     background-color: var(--dark-mode-bg-color);
 }
 
-.dark-mode a:not(.menu-item-link):not(.post-tag):not(.post-link):not(.kg-btn):not(.kg-nft-card-container):not(.kg-product-card-button):not(.kg-header-card-button),
+.dark-mode a:not(.menu-item-link):not(.post-tag):not(.kg-btn):not(.kg-nft-card-container):not(.kg-product-card-button):not(.kg-header-card-button),
 .dark-mode h1,
 .dark-mode h2,
 .dark-mode h3,
@@ -42,7 +42,6 @@
 
 .dark-mode .menu-item-link,
 .dark-mode .post-meta,
-.dark-mode .post-link.secondary,
 .dark-mode .page-number,
 .dark-mode .author-location,
 .dark-mode .author-social-item,
