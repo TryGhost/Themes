@@ -1,5 +1,7 @@
 var html = $('html');
 var body = $('body');
+var timeout;
+var st = 0;
 
 $(function () {
     'use strict';
@@ -9,6 +11,27 @@ $(function () {
     offCanvas();
 });
 
+window.addEventListener('scroll', function () {
+    'use strict';
+    if (document.body.classList.contains('home-template')) {
+        if (timeout) {
+            window.cancelAnimationFrame(timeout);
+        }
+        timeout = window.requestAnimationFrame(portalButton);
+    }
+});
+
+function portalButton() {
+    'use strict';
+    st = window.scrollY;
+
+    if (st > 100) {
+        document.body.classList.add('portal-visible');
+    } else {
+        document.body.classList.remove('portal-visible');
+    }
+}
+
 function tagFeed() {
     'use strict';
     var count = $('.tag-feed').attr('data-count');
@@ -16,22 +39,26 @@ function tagFeed() {
     $('.tag-feed').owlCarousel({
         dots: false,
         nav: true,
-        navText: ['', ''],
+        navText: [
+            '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="20" height="20" fill="currentColor"><path d="M26.667 14.667v2.667h-16l7.333 7.333-1.893 1.893-10.56-10.56 10.56-10.56 1.893 1.893-7.333 7.333h16z"></path></svg>',
+            '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="20" height="20" fill="currentColor"><path d="M5.333 14.667v2.667h16l-7.333 7.333 1.893 1.893 10.56-10.56-10.56-10.56-1.893 1.893 7.333 7.333h-16z"></path></svg>',
+        ],
         responsive: {
             0: {
                 items: 1,
+                slideBy: 1
             },
-            768: {
+            1024: {
                 items: count > 1 ? 2 : count,
-            },
-            1200: {
-                items: count > 2 ? 3 : count,
+                slideBy: count
             },
             1920: {
-                items: count > 3 ? 4 : count,
+                items: count > 2 ? 3 : count,
+                slideBy: count
             },
             2560: {
-                items: count > 4 ? 5 : count,
+                items: count > 3 ? 4 : count,
+                slideBy: count
             },
         }
     });

@@ -18,11 +18,15 @@
 }
 
 .widget-title {
-    margin-bottom: 20px;
-    font-size: 11px;
+    margin-bottom: 24px;
+    font-size: 1.2rem;
     color: var(--secondary-text-color);
     text-transform: uppercase;
     letter-spacing: 0.02em;
+}
+
+.widget-recent .widget-title {
+    margin-bottom: 28px;
 }
 
 .widget-recent .recent-posts {
@@ -34,20 +38,8 @@
     display: flex;
 }
 
-.widget-recent .recent::before {
-    margin-top: -10px;
-    margin-right: 20px;
-    font-size: 60px;
-    font-weight: 800;
-    line-height: 1;
-    color: var(--primary-color);
-    content: counter(recent);
-    counter-increment: recent;
-    opacity: 0.5;
-}
-
 .widget-recent .recent + .recent {
-    margin-top: 25px;
+    margin-top: 24px;
 }
 
 .widget-recent .post-header {
@@ -55,7 +47,8 @@
 }
 
 .widget-recent .post-meta {
-    margin-bottom: 5px;
+    margin-top: 8px;
+    margin-bottom: 0;
 }
 
 .widget-recent .post-meta-length {
@@ -64,6 +57,5 @@
 
 .widget-recent .post-title {
     margin-bottom: 0;
-    font-size: 16px;
     line-height: 1.3;
 }

@@ -14,6 +14,9 @@
                 {{#foreach recents}}
                 <article class="recent">
                     <header class="post-header">
+                        <h5 class="post-title">
+                            <a class="post-title-link" href="{{url}}">{{title}}</a>
+                        </h5>
                         <div class="post-meta">
                             <span class="post-meta-item post-meta-date">
                                 <time datetime="{{date format="YYYY-MM-DD"}}">{{date published_at}}</time>
@@ -22,10 +25,6 @@
                                 <span class="post-meta-featured">{{> "icons/star"}}</span>
                             {{/if}}
                         </div>
-
-                        <h5 class="post-title">
-                            <a class="post-title-link" href="{{url}}">{{title}}</a>
-                        </h5>
                     </header>
                 </article>
                 {{/foreach}}

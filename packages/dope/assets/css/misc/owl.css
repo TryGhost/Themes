@@ -58,38 +58,34 @@
 .owl .owl-next {
     position: absolute;
     top: 50%;
-    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
     height: 40px;
-    padding: 0 0 0 2px;
+    padding: 0;
     margin-top: -20px;
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 40px;
-    color: var(--dark-gray-color);
+    color: var(--white-color);
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
-    background-color: var(--white-color);
+    background-color: rgba(0, 0, 0, 0.2);
     border: 0;
     outline: none;
-    box-shadow: var(--shadow-base);
-    transition: color 0.5s var(--animation-base), opacity 0.5s var(--animation-base);
+    transition: opacity 0.3s var(--animation-base);
 }
 
 .owl .owl-prev.disabled,
 .owl .owl-next.disabled {
-    color: var(--secondary-text-color);
-    cursor: default;
+    opacity: 0;
 }
 
 .owl .owl-prev {
-    left: 10px;
-    transform: rotate(-90deg);
+    left: var(--gap);
 }
 
 .owl .owl-next {
-    right: 10px;
-    transform: rotate(90deg);
+    right: var(--gap);
 }
 
 .owl .owl-dots {

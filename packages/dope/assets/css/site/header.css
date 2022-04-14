@@ -29,8 +29,8 @@
     line-height: 1;
 }
 
-@media (max-width: 1124px) {
-    .site-header {
-        padding: 0 4vw;
+@media (max-width: 767px) {
+    .navbar {
+        height: 80px;
     }
 }

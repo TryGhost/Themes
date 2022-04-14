@@ -2,6 +2,10 @@
     margin-bottom: 75px;
 }
 
+.post-image-link:hover {
+    opacity: 1;
+}
+
 .post-wrapper {
     margin-top: 20px;
 }
@@ -14,6 +18,7 @@
     font-size: 14px;
     font-weight: 700;
     color: var(--secondary-text-color);
+    text-transform: lowercase;
 }
 
 .post-meta-item + .post-meta-item:not(:empty)::before {
@@ -37,7 +42,7 @@
 
 .post-title {
     margin-bottom: 0;
-    font-size: 18px;
+    font-size: 2rem;
     font-weight: 800;
 }
 
@@ -59,10 +64,6 @@
     border-radius: 16px;
 }
 
-.post-excerpt {
-    line-height: 1.6;
-}
-
 .has-serif-body .post-excerpt {
     font-family: var(--font-serif);
 }
@@ -80,6 +81,7 @@
     margin-left: -2px;
     font-weight: 700;
     color: var(--primary-color);
+    text-transform: lowercase;
 }
 
 .post-author {

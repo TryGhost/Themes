@@ -51,8 +51,10 @@
     display: flex;
     align-items: center;
     margin-bottom: 0;
-    font-size: 35px;
+    font-size: 3.5rem;
+    font-weight: 800;
     color: var(--white-color);
+    letter-spacing: -0.01em;
 }
 
 .tag-name::before {
@@ -70,7 +72,8 @@
 }
 
 .tag-description {
-    margin-top: 10px;
+    margin-top: 12px;
+    font-size: 1.7rem;
     line-height: 1.4;
     color: var(--white-color);
     opacity: 0.7;
