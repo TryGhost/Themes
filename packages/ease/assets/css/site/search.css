@@ -18,13 +18,13 @@
 .search-result {
     position: absolute;
     top: 100%;
+    width: 100%;
+    max-height: 50vh;
+    margin-top: 5px;
     overflow: hidden;
     overflow-y: scroll;
-    margin-top: 5px;
-    max-height: 50vh;
-    width: 100%;
-    color: var(--dark-gray-color);
     font-size: 15px;
+    color: var(--dark-gray-color);
     background-color: var(--white-color);
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
@@ -52,8 +52,8 @@
 .search-result-row-excerpt {
     display: block;
     overflow: hidden;
-    color: var(--secondary-text-color);
     font-size: 14px;
+    color: var(--secondary-text-color);
     text-overflow: ellipsis;
     white-space: nowrap;
 }

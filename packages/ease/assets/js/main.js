@@ -5,9 +5,6 @@ $(function () {
     parallax();
     search();
     featured();
-    video();
-    table();
-    mobileMenu();
 });
 
 function parallax() {
@@ -143,57 +140,22 @@ function featured() {
         margin: 30,
         nav: true,
         navText: [
-            '<i class="icon icon-chevron-left"></i>',
-            '<i class="icon icon-chevron-right"></i>',
+            '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="18" height="18" fill="currentColor"><path d="M20.547 22.107L14.44 16l6.107-6.12L18.667 8l-8 8 8 8 1.88-1.893z"></path></svg>',
+            '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="18" height="18" fill="currentColor"><path d="M11.453 22.107L17.56 16l-6.107-6.12L13.333 8l8 8-8 8-1.88-1.893z"></path></svg>',
         ],
         responsive: {
             0: {
                 items: 1,
+                slideBy: 1,
             },
             768: {
                 items: 3,
+                slideBy: 3,
             },
             992: {
                 items: 4,
+                slideBy: 4,
             },
         },
-    });
-}
-
-function video() {
-    'use strict';
-    $('.post-content').fitVids();
-}
-
-function table() {
-    'use strict';
-    if (body.hasClass('post-template') || body.hasClass('page-template')) {
-        var tables = $('.post-content').find('.table');
-        tables.each(function (_, table) {
-            var labels = [];
-
-            $(table)
-                .find('thead th')
-                .each(function (_, label) {
-                    labels.push($(label).text());
-                });
-
-            $(table)
-                .find('tr')
-                .each(function (_, row) {
-                    $(row)
-                        .find('td')
-                        .each(function (index, column) {
-                            $(column).attr('data-label', labels[index]);
-                        });
-                });
-        });
-    }
-}
-
-function mobileMenu() {
-    'use strict';
-    $('.burger').on('click', function () {
-        $('body').toggleClass('menu-opened');
     });
 }

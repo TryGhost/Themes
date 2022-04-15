@@ -2,41 +2,19 @@
 
 {{#post}}
 
-<div class="content-area">
-    <main class="site-main">
-        <article class="{{post_class}} single">
-            <header class="post-header container medium">
-                <h1 class="post-title">{{title}}</h1>
-                {{> post-meta}}
-            </header>
+<main class="site-main">
+    <article class="{{post_class}}">
 
-            {{#if feature_image}}
-                <figure class="post-media container large">
-                    <div class="u-placeholder">
-                        <img
-                            class="post-image"
-                            srcset="{{img_url feature_image size="s"}} 400w,
-                                    {{img_url feature_image size="m"}} 750w,
-                                    {{img_url feature_image size="l"}} 960w,
-                                    {{img_url feature_image size="xl"}} 1140w,
-                                    {{img_url feature_image size="xxl"}} 1920w"
-                            sizes="(min-width: 1200px) 960px, 92vw"
-                            src="{{img_url feature_image size="l"}}"
-                            alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
-                        >
-                    </div>
+        <header class="gh-article-header gh-canvas">
+            <h1 class="gh-article-title">{{title}}</h1>
+            {{> "post-image"}}
+        </header>
 
-                    {{#if feature_image_caption}}
-                        <figcaption>{{feature_image_caption}}</figcaption>
-                    {{/if}}
-                </figure>
-            {{/if}}
+        <div class="post-content gh-content kg-canvas">
+            {{content}}
+        </div>
 
-            <div class="post-content gh-content kg-canvas">
-                {{content}}
-            </div>
-        </article>
-    </main>
-</div>
+    </article>
+</main>
 
 {{/post}}

@@ -1,0 +1,39 @@
+{{#get "posts" filter="featured:true" limit="all" include="tags" as |featured|}}
+    {{#if featured}}
+    <section class="featured-wrapper">
+
+        <header class="featured-header topic-header">
+            <h2 class="featured-title topic-name">Featured</h2>
+        </header>
+
+        <div class="featured-posts owl">
+        {{#foreach featured}}
+            <article class="{{post_class}}">
+
+                <figure class="post-media">
+                <div class="u-placeholder same-height horizontal">
+                    <a class="post-image-link" href="{{url}}">
+                        {{#if feature_image}}
+                            <img class="post-image u-object-fit" src="{{img_url feature_image size="l"}}" alt="{{title}}">
+                        {{/if}}
+                    </a>
+                </div>
+                </figure>
+
+                <header class="post-header">
+                    <h2 class="post-title">
+                        <a class="post-title-link" href="{{url}}">{{title}}</a>
+                    </h2>
+                </header>
+
+                {{#primary_tag}}
+                    <a class="post-tag tag-{{slug}}" href="{{url}}" title="{{name}}">{{name}}</a>
+                {{/primary_tag}}
+
+            </article>
+        {{/foreach}}
+        </div>
+
+    </section>
+    {{/if}}
+{{/get}}

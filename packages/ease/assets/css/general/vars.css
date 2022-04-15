@@ -1,0 +1,16 @@
+:root {
+    --primary-color: var(--ghost-accent-color, #6c5ce7);
+    --primary-text-color: #333;
+    --secondary-text-color: #999;
+    --red-color: #dc3545;
+    --orange-color: #ffc107;
+    --green-color: #28a745;
+    --white-color: #fff;
+    --lighter-gray-color: #f7f7f7;
+    --light-gray-color: #f1f1f1;
+    --mid-gray-color: #e6e6e6;
+    --dark-gray-color: #1a1a1a;
+    --black-color: #000;
+    --animation-base: ease-in-out;
+    --h1-size: 3.8rem;
+}

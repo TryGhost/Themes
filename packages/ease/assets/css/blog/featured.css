@@ -1,25 +1,18 @@
-.featured-wrapper .owl-item {
-    transition: opacity 0.2s var(--animation-base);
-}
-
-.featured-wrapper .owl-stage:hover .owl-item {
-    opacity: 0.5;
-}
-
-.featured-wrapper .owl-stage:hover .owl-item:hover {
-    opacity: 1;
-}
-
 .featured-wrapper {
     margin: 30px 0 90px;
 }
 
 .featured-wrapper .post-media {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .featured-wrapper .post-header {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+.featured-wrapper .post-title {
+    font-size: 1.7rem;
+    font-weight: 600;
 }
 
 .featured-wrapper .post-tag {
@@ -28,10 +21,6 @@
 
 .featured-header {
     margin-bottom: 45px;
-}
-
-.featured-title {
-    color: var(--primary-color);
 }
 
 .has-serif-title .featured-title {

@@ -5,8 +5,8 @@
 }
 
 .site-cover .search {
-    margin: 30px auto 0;
     width: 400px;
+    margin: 30px auto 0;
 }
 
 .site-cover .search-field {
@@ -16,18 +16,18 @@
 .cover-content {
     position: relative;
     z-index: 20;
-    margin: auto;
     padding: 30px;
+    margin: auto;
     color: var(--white-color);
     text-align: center;
 }
 
 .cover-description {
+    max-width: 720px;
     margin: 0 auto;
-    max-width: 750px;
-    font-size: 30px;
+    font-size: 3.6rem;
+    font-weight: 600;
     line-height: 1.4;
-    font-weight: 500;
 }
 
 .has-serif-title .cover-description {

@@ -6,74 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{meta_title}}</title>
     <link rel="stylesheet" href="{{asset "built/screen.css"}}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap">
-
-    <script>
-        var siteUrl = '{{@site.url}}';
-        {{#if @custom.content_api_key_for_search}}
-            var gh_search_key = '{{@custom.content_api_key_for_search}}';
-        {{/if}}
-    </script>
 
     {{ghost_head}}
 </head>
 
-<body class="{{body_class}}{{block "body_class"}}{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Elegant serif"}} has-serif-body{{/match}}">
+<body class="{{body_class}}{{block "body_class"}} is-head-b--n{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Elegant serif"}} has-serif-body{{/match}}">
 <div class="site">
 
-    <header class="site-header">
-        <div class="container">
-            <div class="navbar">
+    <header id="gh-head" class="gh-head gh-outer">
+    <div class="gh-head-inner gh-inner">
 
-                <div class="navbar-left">
-                    <a class="logo" href="{{@site.url}}">
-                        {{#if @site.logo}}
-                            <img class="logo-image" src="{{@site.logo}}" alt="{{@site.title}}">
-                        {{else}}
-                            <span class="logo-text">{{@site.title}}</span>
-                        {{/if}}
-                    </a>
-                </div>
-
-                <div class="navbar-right">
-                    {{#if @site.navigation}}
-                        <nav class="main-nav hidden-xs hidden-sm hidden-md">
-                            {{navigation}}
-                        </nav>
-                        <div class="burger{{#if close}} burger-close{{/if}} hidden-lg hidden-xl">
-                            <div class="burger-bar"></div>
-                            <div class="burger-bar"></div>
-                        </div>
-                        <div class="mobile-menu hidden-lg hidden-xl">
-                            <div class="container">
-                                {{#if @site.navigation}}
-                                    <nav class="mobile-nav">
-                                        {{navigation}}
-                                    </nav>
-                                {{/if}}
-                            </div>
-                        </div>
+        <div class="gh-head-brand">
+            <div class="gh-head-brand-wrapper">
+                <a class="gh-head-logo" href="{{@site.url}}">
+                    {{#if @site.logo}}
+                        <img src="{{@site.logo}}" alt="{{@site.title}}">
+                    {{else}}
+                        {{@site.title}}
                     {{/if}}
-                </div>
-
+                </a>
             </div>
+            <button class="gh-burger"></button>
         </div>
+
+        <nav class="gh-head-menu">
+            {{navigation}}
+        </nav>
+
+    </div>
     </header>
 
     {{#is "home"}}
-    {{#if @site.cover_image}}
-    <div class="site-cover u-overlay">
+    <div class="site-cover{{#unless @site.cover_image}} no-image{{/unless}} u-overlay">
 
-        <img class="cover-image jarallax-img u-object-fit" src="{{img_url @site.cover_image}}" alt="{{@site.title}}">
+        {{#if @site.cover_image}}
+            <img class="cover-image jarallax-img u-object-fit" src="{{img_url @site.cover_image}}" alt="{{@site.title}}">
+        {{/if}}
 
         <div class="cover-content">
-
             {{#if @site.description}}
                 <div class="cover-description">{{@site.description}}</div>
             {{/if}}
-
             {{#if @custom.content_api_key_for_search}}
                 <div class="search">
                     <form class="search-form">
@@ -85,53 +58,41 @@
                     <div class="search-result"></div>
                 </div>
             {{/if}}
-
         </div>
 
     </div>
-    {{/if}}
     {{/is}}
 
     <div class="site-content">
         {{{body}}}
     </div>
 
-    <footer class="site-footer container">
-        {{#if @site.secondary_navigation}}
-            <nav class="footer-nav">
+    <footer class="gh-foot gh-outer">
+        <div class="gh-foot-inner gh-inner">
+            <div class="gh-copyright">
+                {{@site.title}} © {{date format="YYYY"}}
+            </div>
+            <nav class="gh-foot-menu">
                 {{navigation type="secondary"}}
             </nav>
-        {{/if}}
-        <div class="footer-social">
-            {{#if @site.facebook}}
-                <a class="footer-social-item footer-social-item-facebook" href="{{facebook_url @site.facebook}}" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                    <i class="icon icon-facebook"></i>
-                </a>
-            {{/if}}
-            {{#if @site.twitter}}
-                <a class="footer-social-item footer-social-item-twitter" href="{{twitter_url @site.twitter}}" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                    <i class="icon icon-twitter"></i>
-                </a>
-            {{/if}}
-            <a class="footer-social-item footer-social-item-rss" href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" target="_blank" rel="noopener noreferrer" aria-label="RSS">
-                <i class="icon icon-rss"></i>
-            </a>
-        </div>
-        <div class="copyright">
-            Powered by <a href="https://ghost.org/" target="_blank">Ghost</a>
+            <div class="gh-powered-by">
+                <a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a>
+            </div>
         </div>
     </footer>
 
 </div>
 
+<script>
+    var siteUrl = '{{@site.url}}';
+    var gh_search_key = '{{@custom.content_api_key_for_search}}' || false;
+</script>
 <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous">
 </script>
 <script src="{{asset "built/main.min.js"}}"></script>
-
-{{{block "scripts"}}}
 
 {{ghost_foot}}
 

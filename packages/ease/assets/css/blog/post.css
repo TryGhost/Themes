@@ -1,7 +1,17 @@
+.post-image-link:hover {
+    opacity: 1;
+}
+
 .post-title {
-    margin-bottom: 10px;
-    font-size: 18px;
-    font-weight: 500;
+    margin-bottom: 0;
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.005em;
+}
+
+.post-link:hover + .post-wrapper .post-title {
+    opacity: 0.8;
 }
 
 .post-title-link {
@@ -11,10 +21,11 @@
 .post-meta {
     display: flex;
     align-items: center;
-    margin-top: 15px;
-    color: var(--secondary-text-color);
-    font-size: 13px;
+    margin-top: 16px;
+    font-size: 1.5rem;
     line-height: 1;
+    color: var(--secondary-text-color);
+    letter-spacing: -0.005em;
 }
 
 .post-author {
@@ -22,16 +33,16 @@
     z-index: 60;
     display: flex;
     align-items: center;
-    margin: 0 12px 0 4px;
+    margin: 0 14px 0 4px;
 }
 
 .post-author-image-link {
     position: relative;
     display: block;
-    overflow: hidden;
+    width: 40px;
+    height: 40px;
     margin: 0 -6px;
-    width: 36px;
-    height: 36px;
+    overflow: hidden;
     border-radius: 50%;
 }
 
@@ -63,7 +74,8 @@
 }
 
 .post-author-name {
-    margin-bottom: 5px;
+    margin-bottom: 6px;
+    font-weight: 600;
 }
 
 .post-author-name-link + .post-author-name-link::before {
@@ -75,46 +87,15 @@
 }
 
 .post-length::before {
-    content: "\02022";
-    padding: 0 6px;
-    font-family: serif;
+    padding: 0 4px;
+    content: "—";
 }
 
 .post-excerpt {
-    color: var(--secondary-text-color);
-    font-size: 15px;
+    margin-top: 8px;
+    font-size: 1.6rem;
     line-height: 1.5;
-}
-
-.post-cta {
-    margin-top: 30px;
-    padding: 30px;
-    border-top: 1px solid var(--mid-gray-color);
-    border-bottom: 1px solid var(--mid-gray-color);
-    text-align: center;
-}
-
-.post-cta a {
-    text-decoration: none !important;
-}
-
-.post-cta .post-cta-title {
-    margin-top: 0;
-}
-
-.post-cta .post-cta-button {
-    margin-top: 10px;
-    color: var(--white-color);
-    line-height: 1.6;
-}
-
-.post-cta .post-cta-message {
-    display: inline-block;
-    margin-top: 10px;
     color: var(--secondary-text-color);
-    font-size: 13px;
-    font-weight: 500;
-    vertical-align: middle;
 }
 
 .post-tags {
@@ -125,12 +106,13 @@
 
 .post-tag {
     display: inline-block;
+    padding: 6px 12px;
     margin: 0 8px 8px 0;
-    padding: 6px 15px;
-    border: 1px solid var(--mid-gray-color);
-    font-size: 13px;
+    font-size: 1.2rem;
+    font-weight: 600;
     line-height: 1;
-    font-weight: 500;
+    letter-spacing: -0.01em;
     background-color: var(--white-color);
+    border: 1px solid var(--mid-gray-color);
     border-radius: 15px;
 }

@@ -1,15 +1,16 @@
-<article class="{{post_class}} u-hover-item">
+<article class="{{post_class}}">
+
     <a class="post-link u-permalink" href="{{url}}"></a>
 
-    {{#if feature_image}}
+    {{!-- {{#if feature_image}}
         <figure class="post-media">
-            <div class="u-placeholder same-height horizontal">
+            <div class="u-placeholder same-height rectangle">
                 <a class="post-image-link" href="{{url}}">
                     <img class="post-image u-object-fit" src="{{img_url feature_image size="l"}}" alt="{{title}}">
                 </a>
             </div>
         </figure>
-    {{/if}}
+    {{/if}} --}}
 
     <div class="post-wrapper">
         <header class="post-header">
@@ -18,6 +19,7 @@
         <div class="post-excerpt">
             {{excerpt words="10"}}
         </div>
-        {{> post-meta}}
+        {{!-- {{> post-meta}} --}}
     </div>
+
 </article>

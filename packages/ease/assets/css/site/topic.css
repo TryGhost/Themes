@@ -1,17 +1,20 @@
-.topic {
-    margin-bottom: 60px;
+.topic-feed {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px 60px;
 }
 
 .topic-header {
     display: flex;
+    padding-bottom: 12px;
     margin-bottom: 20px;
-    padding-bottom: 10px;
     border-bottom: 1px solid var(--mid-gray-color);
 }
 
 .topic-name {
     margin-bottom: 0;
-    font-size: 20px;
+    font-size: 2.2rem;
+    letter-spacing: -0.005em;
 }
 
 .has-serif-title .topic-name {
@@ -23,11 +26,18 @@
     color: var(--secondary-text-color);
 }
 
+.topic-article-feed {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
 .topic-article-title {
     margin-bottom: 0;
-    font-size: 15px;
-    line-height: 1.5;
+    font-size: 1.5rem;
     font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0;
 }
 
 .topic-article-link {
@@ -35,13 +45,16 @@
     padding: 7px 0;
 }
 
-.topic-article-icon {
-    margin: -2px 5px 0 -5px;
-    font-size: 17px;
+.topic-article-link svg {
+    width: 16px;
+    height: 16px;
+    margin: 3px 5px 0 -5px;
 }
 
 .topic-more {
+    display: inline-block;
     margin-top: 20px;
-    color: var(--primary-color);
     font-weight: 700;
+    color: var(--primary-color);
+    letter-spacing: -0.005em;
 }

@@ -14,12 +14,9 @@
 
 .post-feed .post-media {
     flex-shrink: 0;
+    width: 160px;
+    margin-right: 28px;
     margin-bottom: 0;
-    width: 200px;
-}
-
-.post-feed .post-wrapper {
-    margin-left: 30px;
 }
 
 .post-feed .post.no-image .post-wrapper {
@@ -32,8 +29,8 @@
     }
 
     .post-feed .post-media {
-        margin-bottom: 30px;
         width: auto;
+        margin-bottom: 30px;
     }
 
     .post-feed .post-wrapper {
