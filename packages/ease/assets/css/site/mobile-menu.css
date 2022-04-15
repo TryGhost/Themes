@@ -1,0 +1,28 @@
+.mobile-menu {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    z-index: 90;
+    display: none;
+    padding-top: 45px;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-color: var(--white-color);
+}
+
+.mobile-menu .menu-item {
+    margin: 0;
+}
+
+.mobile-menu .menu-item + .menu-item {
+    margin-top: 18px;
+}
+
+.mobile-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-opened .mobile-menu {
+    display: block;
+}

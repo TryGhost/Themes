@@ -1,0 +1,7 @@
+.comment-container {
+    margin-top: 45px;
+}
+
+.comment-container a {
+    color: var(--primary-color) !important;
+}

@@ -1,0 +1,185 @@
+.u-plain-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.u-object-fit {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.u-permalink {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 50;
+    outline: none;
+}
+
+.u-placeholder {
+    position: relative;
+    z-index: 10;
+    background-color: var(--light-gray-color);
+}
+
+.u-placeholder.same-height {
+    height: 0;
+}
+
+.u-placeholder.horizontal {
+    padding-bottom: 50%;
+}
+
+.u-placeholder.rectangle {
+    padding-bottom: 62.5%;
+}
+
+.u-placeholder.square {
+    padding-bottom: 100%;
+}
+
+.u-overlay {
+    position: relative;
+}
+
+.u-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    background-color: var(--black-color);
+    opacity: 1;
+    transition: opacity 1s var(--animation-base);
+}
+
+.u-overlay.initialized::before {
+    opacity: 0.4;
+}
+
+.u-hover-item {
+    transition: opacity 0.2s var(--animation-base);
+}
+
+.u-hover-wrapper:hover .u-hover-item {
+    opacity: 0.5;
+}
+
+.u-hover-wrapper:hover .u-hover-item:hover {
+    opacity: 1;
+}
+
+.u-text-format > * {
+    margin-bottom: 0;
+}
+
+.u-text-format > * + * {
+    margin-top: 30px;
+}
+
+.u-text-format > *:first-child {
+    margin-top: 0 !important;
+}
+
+.u-text-format > * + p,
+.u-text-format > * + ul,
+.u-text-format > * + ol {
+    margin-top: 20px;
+}
+
+.u-text-format h1,
+.u-text-format h2,
+.u-text-format h3,
+.u-text-format h4,
+.u-text-format h5,
+.u-text-format h6 {
+    margin-top: 40px;
+}
+
+.has-serif-title .u-text-format h1,
+.has-serif-title .u-text-format h2,
+.has-serif-title .u-text-format h3,
+.has-serif-title .u-text-format h4,
+.has-serif-title .u-text-format h5,
+.has-serif-title .u-text-format h6 {
+    font-family: var(--font-serif);
+}
+
+.u-text-format h1 + p,
+.u-text-format h2 + p,
+.u-text-format h3 + p,
+.u-text-format h4 + p,
+.u-text-format h5 + p,
+.u-text-format h6 + p {
+    margin-top: 15px;
+}
+
+.u-text-format h1 {
+    font-size: 26px;
+}
+
+.u-text-format h2 {
+    font-size: 23px;
+}
+
+.u-text-format h3 {
+    font-size: 20px;
+}
+
+.u-text-format h4 {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.u-text-format h5 {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.u-text-format h6 {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.u-text-format strong {
+    color: var(--dark-gray-color);
+}
+
+.u-text-format a {
+    color: var(--primary-color);
+}
+
+.u-text-format a:hover {
+    text-decoration: underline;
+}
+
+.u-text-format > .kg-card,
+.u-text-format > .kg-card + * {
+    margin-top: 45px;
+}
+
+.u-text-format hr,
+.u-text-format hr + * {
+    margin-top: 40px;
+}
+
+.u-text-format blockquote,
+.u-text-format blockquote + * {
+    margin-top: 30px;
+}
+
+.has-serif-body .u-text-format > blockquote,
+.has-serif-body .u-text-format > ol,
+.has-serif-body .u-text-format > ul,
+.has-serif-body .u-text-format > dl,
+.has-serif-body .u-text-format > p {
+    font-family: var(--font-serif);
+}

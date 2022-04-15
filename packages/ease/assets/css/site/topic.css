@@ -1,0 +1,47 @@
+.topic {
+    margin-bottom: 60px;
+}
+
+.topic-header {
+    display: flex;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--mid-gray-color);
+}
+
+.topic-name {
+    margin-bottom: 0;
+    font-size: 20px;
+}
+
+.has-serif-title .topic-name {
+    font-family: var(--font-serif);
+}
+
+.topic-count {
+    margin-left: 15px;
+    color: var(--secondary-text-color);
+}
+
+.topic-article-title {
+    margin-bottom: 0;
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.topic-article-link {
+    display: flex;
+    padding: 7px 0;
+}
+
+.topic-article-icon {
+    margin: -2px 5px 0 -5px;
+    font-size: 17px;
+}
+
+.topic-more {
+    margin-top: 20px;
+    color: var(--primary-color);
+    font-weight: 700;
+}

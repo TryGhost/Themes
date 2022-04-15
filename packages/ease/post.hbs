@@ -1,0 +1,70 @@
+{{!< default}}
+
+<div class="content-area">
+    <main class="site-main">
+        {{#post}}
+            <article class="{{post_class}} single">
+                <header class="post-header container medium">
+                    <h1 class="post-title">{{title}}</h1>
+                    {{> post-meta}}
+                </header>
+
+                {{#if feature_image}}
+                    <figure class="post-media container large">
+                        <div class="u-placeholder">
+                            <img
+                                class="post-image"
+                                srcset="{{img_url feature_image size="s"}} 400w,
+                                        {{img_url feature_image size="m"}} 750w,
+                                        {{img_url feature_image size="l"}} 960w,
+                                        {{img_url feature_image size="xl"}} 1140w,
+                                        {{img_url feature_image size="xxl"}} 1920w"
+                                sizes="(min-width: 1200px) 960px, 92vw"
+                                src="{{img_url feature_image size="l"}}"
+                                alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
+                            >
+                        </div>
+
+                        {{#if feature_image_caption}}
+                            <figcaption>{{feature_image_caption}}</figcaption>
+                        {{/if}}
+                    </figure>
+                {{/if}}
+
+                <div class="post-content gh-content kg-canvas">
+                    {{content}}
+                </div>
+
+                {{#if @custom.show_tags}}
+                    {{#if tags}}
+                        <div class="post-tags container medium">
+                            {{#foreach tags}}
+                                <a class="post-tag tag-{{slug}}" href="{{url}}" title="{{name}}">{{name}}</a>
+                            {{/foreach}}
+                        </div>
+                    {{/if}}
+                {{/if}}
+            </article>
+
+            {{!-- <div class="comment-container">
+                <div class="container">
+                    <div class="comment container medium">
+                        If you want to embed comments, this is a good place to do it!
+                    </div>
+                </div>
+            </div> --}}
+        {{/post}}
+
+        {{#if @custom.show_related_posts}}
+            {{#get "posts" limit="2" filter="tags:[{{post.tags}}]+id:-{{post.id}}" include="tags,authors" as |related|}}
+                <section class="related-posts container medium">
+                    <div class="post-feed u-hover-wrapper">
+                        {{#foreach related}}
+                            {{> "loop"}}
+                        {{/foreach}}
+                    </div>
+                </section>
+            {{/get}}
+        {{/if}}
+    </main>
+</div>

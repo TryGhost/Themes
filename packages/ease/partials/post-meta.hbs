@@ -1,0 +1,33 @@
+<div class="post-meta">
+    <div class="post-meta-left">
+        <div class="post-author">
+            {{#foreach authors}}
+                {{#if profile_image}}
+                    <a class="post-author-image-link" href="{{url}}">
+                        <img
+                            class="post-author-image"
+                            src="{{img_url profile_image size="xs"}}"
+                            alt="{{name}}"
+                            loading="lazy"
+                        >
+                    </a>
+                {{/if}}
+            {{/foreach}}
+        </div>
+    </div>
+    <div class="post-meta-right">
+        <div class="post-author-name">
+            {{#foreach authors}}
+                <a class="post-author-name-link" href="{{url}}">{{name}}</a>
+            {{/foreach}}
+        </div>
+        <div class="post-meta-bottom">
+            <div class="post-date">
+                <time datetime="{{date format="YYYY-MM-DD"}}">
+                    {{date published_at}}
+                </time>
+            </div>
+            <div class="post-length">{{reading_time}}</div>
+        </div>
+    </div>
+</div>

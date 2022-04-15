@@ -1,0 +1,52 @@
+.site-cover {
+    z-index: unset !important;
+    display: flex;
+    min-height: 500px;
+}
+
+.site-cover .search {
+    margin: 30px auto 0;
+    width: 400px;
+}
+
+.site-cover .search-field {
+    border: 0;
+}
+
+.cover-content {
+    position: relative;
+    z-index: 20;
+    margin: auto;
+    padding: 30px;
+    color: var(--white-color);
+    text-align: center;
+}
+
+.cover-description {
+    margin: 0 auto;
+    max-width: 750px;
+    font-size: 30px;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+.has-serif-title .cover-description {
+    font-family: var(--font-serif);
+    font-weight: 700;
+}
+
+@media (max-width: 460px) {
+    .site-cover .search {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .site-cover {
+        min-height: 400px;
+    }
+
+    .cover-description {
+        font-size: 24px;
+    }
+}

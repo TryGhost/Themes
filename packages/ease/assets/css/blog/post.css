@@ -1,0 +1,136 @@
+.post-title {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.post-title-link {
+    display: block;
+}
+
+.post-meta {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    color: var(--secondary-text-color);
+    font-size: 13px;
+    line-height: 1;
+}
+
+.post-author {
+    position: relative;
+    z-index: 60;
+    display: flex;
+    align-items: center;
+    margin: 0 12px 0 4px;
+}
+
+.post-author-image-link {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0 -6px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+
+.post-author-image-link:first-child {
+    z-index: 10;
+}
+
+.post-author-image-link:nth-child(2) {
+    z-index: 9;
+}
+
+.post-author-image-link:nth-child(3) {
+    z-index: 8;
+}
+
+.post-author-image-link:nth-child(4) {
+    z-index: 7;
+}
+
+.post-author-image-link:nth-child(5) {
+    z-index: 6;
+}
+
+.post-author-image {
+    height: 100%;
+    border: 2px solid var(--white-color);
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.post-author-name {
+    margin-bottom: 5px;
+}
+
+.post-author-name-link + .post-author-name-link::before {
+    content: ", ";
+}
+
+.post-meta-bottom {
+    display: flex;
+}
+
+.post-length::before {
+    content: "\02022";
+    padding: 0 6px;
+    font-family: serif;
+}
+
+.post-excerpt {
+    color: var(--secondary-text-color);
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.post-cta {
+    margin-top: 30px;
+    padding: 30px;
+    border-top: 1px solid var(--mid-gray-color);
+    border-bottom: 1px solid var(--mid-gray-color);
+    text-align: center;
+}
+
+.post-cta a {
+    text-decoration: none !important;
+}
+
+.post-cta .post-cta-title {
+    margin-top: 0;
+}
+
+.post-cta .post-cta-button {
+    margin-top: 10px;
+    color: var(--white-color);
+    line-height: 1.6;
+}
+
+.post-cta .post-cta-message {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--secondary-text-color);
+    font-size: 13px;
+    font-weight: 500;
+    vertical-align: middle;
+}
+
+.post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.post-tag {
+    display: inline-block;
+    margin: 0 8px 8px 0;
+    padding: 6px 15px;
+    border: 1px solid var(--mid-gray-color);
+    font-size: 13px;
+    line-height: 1;
+    font-weight: 500;
+    background-color: var(--white-color);
+    border-radius: 15px;
+}

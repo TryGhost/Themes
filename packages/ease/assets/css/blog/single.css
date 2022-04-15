@@ -1,0 +1,26 @@
+.single .post-header {
+    margin-bottom: 30px;
+}
+
+.single .post-title {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.has-serif-title .single .post-title {
+    font-family: var(--font-serif);
+}
+
+.single .post-media {
+    margin-bottom: 45px;
+}
+
+.single .post-image {
+    width: 100%;
+}
+
+@media (max-width: 767px) {
+    .single .post-title {
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,56 @@
+.plan-list {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.plan {
+    display: flex;
+    flex-direction: column;
+    margin: 0 30px;
+    max-width: 350px;
+    text-align: center;
+}
+
+.plan-title {
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.plan-price {
+    color: var(--secondary-text-color);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.plan-amount {
+    color: var(--primary-color);
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.plan-feature-list {
+    flex-grow: 1;
+    padding: 0;
+    list-style-type: none;
+}
+
+.plan-feature {
+    margin: 7px 0;
+}
+
+@media (max-width: 767px) {
+    .plan-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .plan {
+        margin: 0;
+    }
+
+    .plan + .plan {
+        margin-top: 60px;
+    }
+}

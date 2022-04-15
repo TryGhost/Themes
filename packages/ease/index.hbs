@@ -1,0 +1,85 @@
+{{!< default}}
+
+<div class="content-area">
+<main class="site-main container">
+
+{{#if @custom.show_featured_posts}}
+    {{#get "posts" filter="featured:true" limit="all" include="tags" as |featured|}}
+        {{#if featured}}
+        <section class="featured-wrapper">
+
+            <header class="featured-header topic-header">
+                <h2 class="featured-title topic-name">Featured Articles</h2>
+            </header>
+
+            <div class="featured-posts owl">
+                {{#foreach featured}}
+                    <article class="{{post_class}}">
+                        {{#if feature_image}}
+                            <figure class="post-media">
+                                <div class="u-placeholder same-height horizontal">
+                                    <a class="post-image-link" href="{{url}}">
+                                        <img class="post-image u-object-fit" src="{{img_url feature_image size="l"}}" alt="{{title}}">
+                                    </a>
+                                </div>
+                            </figure>
+                        {{/if}}
+
+                        <header class="post-header">
+                            <h2 class="post-title">
+                                <a class="post-title-link" href="{{url}}">{{title}}</a>
+                            </h2>
+                            {{#if show_meta}}
+                                {{> post-meta}}
+                            {{/if}}
+                        </header>
+
+                        {{#primary_tag}}
+                            <a class="post-tag tag-{{slug}}" href="{{url}}" title="{{name}}">{{name}}</a>
+                        {{/primary_tag}}
+                    </article>
+                {{/foreach}}
+            </div>
+
+        </section>
+        {{/if}}
+    {{/get}}
+{{/if}}
+
+{{#get "tags" limit="all" include="count.posts"}}
+    <div class="topic-feed">
+    <div class="row">
+
+        {{#foreach tags}}
+        <div class="col-md-6">
+            <section class="topic">
+                <header class="topic-header">
+                    <h2 class="topic-name">{{name}}</h2>
+                    <div class="topic-count">
+                        {{plural count.posts empty="No articles" singular="1 article" plural="% articles"}}
+                    </div>
+                </header>
+                {{#get "posts" order="published_at asc" filter="tag:{{slug}}" limit="5" as |featured|}}
+                    <ul class="topic-article-feed u-plain-list">
+                        {{#foreach featured}}
+                        <li class="topic-article">
+                            <h3 class="topic-article-title">
+                                <a class="topic-article-link" href="{{url}}">
+                                    <i class="topic-article-icon icon icon-chevron-right"></i>{{title}}
+                                </a>
+                            </h3>
+                        </li>
+                        {{/foreach}}
+                    </ul>
+                {{/get}}
+                <a class="topic-more button-arrow button-arrow-right" href="{{url}}">View All</a>
+            </section>
+        </div>
+        {{/foreach}}
+
+    </div>
+    </div>
+{{/get}}
+
+</main>
+</div>

@@ -1,0 +1,42 @@
+.term {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.term-name {
+    margin-bottom: 0;
+    color: var(--primary-color);
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.term-name a {
+    color: var(--primary-color);
+}
+
+.term-description {
+    margin: 15px auto 0;
+    max-width: 500px;
+    color: var(--secondary-text-color);
+    line-height: 1.5;
+}
+
+.term-social {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.term-social-link {
+    padding: 4px;
+    font-size: 17px;
+    line-height: 1;
+}
+
+@media (max-width: 767px) {
+    .term {
+        margin: 0;
+    }
+}
