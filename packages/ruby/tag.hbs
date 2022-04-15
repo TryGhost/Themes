@@ -3,20 +3,14 @@
 <div class="gh-outer">
 <main class="site-main gh-inner">
 
-    <div class="term-tags">
-        {{#tag}}
-            <a class="tag tag-current" href="{{url}}">
-                <span class="tag-name">{{name}}</span>
-            </a>
-        {{/tag}}
-        {{#get "tags" limit="all" filter="id:-{{tag.id}}"}}
-            {{#foreach tags}}
-                <a class="tag" href="{{url}}">
-                    <span class="tag-name">{{name}}</span>
-                </a>
-            {{/foreach}}
-        {{/get}}
+    {{#tag}}
+    <div class="term">
+        <h1 class="term-name">{{name}}</h1>
+        {{#if description}}
+            <p class="term-description">{{description}}</p>
+        {{/if}}
     </div>
+    {{/tag}}
 
     <div class="post-feed gh-feed">
         {{#foreach posts}}

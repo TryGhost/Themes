@@ -1,9 +1,11 @@
-.related-posts .post + .post {
-    margin-top: 30px;
+.related-wrapper {
+    padding: 48px 0 64px;
+    margin-top: 96px;
+    background-color: var(--light-gray-color);
 }
 
 .related-title {
-    margin: 20px 0 30px;
+    margin: 20px 0 40px;
     font-size: 14px;
     color: var(--secondary-text-color);
     text-transform: uppercase;

@@ -4,16 +4,11 @@
 <main class="site-main gh-inner">
 
     {{#author}}
-    <div class="term-author">
+    <div class="term">
         <div class="author-image-placeholder u-placeholder">
-            <img
-                class="author-image u-object-fit"
-                src="{{img_url profile_image size="xs"}}"
-                alt="{{name}}"
-                loading="lazy"
-            >
+            <img class="author-image u-object-fit" src="{{img_url profile_image size="xs"}}" alt="{{name}}">
         </div>
-        <h1 class="author-name">{{name}}</h1>
+        <h1 class="term-name">{{name}}</h1>
     </div>
     {{/author}}
 

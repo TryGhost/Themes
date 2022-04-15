@@ -1,58 +1,25 @@
 {{!< default}}
 
-{{#post}}
+<main class="site-main">
 
-<div class="container">
-<div class="row">
+    {{#post}}
+    <article class="gh-article {{post_class}}">
 
-    <div class="content-column col-lg-8">
-    <div class="content-area">
+        <header class="gh-article-header gh-canvas">
+            <h1 class="gh-article-title">{{title}}</h1>
 
-        <main class="site-main">
-            <article class="{{post_class}}{{#unless feature_image}} no-image{{/unless}} single u-shadow">
-                <header class="post-header">
-                    {{#primary_tag}}
-                        <a class="post-tag" href="{{url}}">{{name}}</a>
-                    {{/primary_tag}}
+            {{#if custom_excerpt}}
+                <p class="gh-article-excerpt">{{custom_excerpt}}</p>
+            {{/if}}
 
-                    <h1 class="post-title">{{title}}</h1>
-                </header>
+            {{> "post-image"}}
+        </header>
 
-                {{#if feature_image}}
-                <figure class="post-media">
-                    <div class="u-placeholder">
-                        <img
-                            class="post-image"
-                            srcset="{{img_url feature_image size="s"}} 400w,
-                                    {{img_url feature_image size="m"}} 750w,
-                                    {{img_url feature_image size="l"}} 960w,
-                                    {{img_url feature_image size="xl"}} 1140w,
-                                    {{img_url feature_image size="xxl"}} 1920w"
-                            sizes="600px"
-                            src="{{img_url feature_image size="l"}}"
-                            alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
-                            loading="lazy"
-                        >
-                    </div>
+        <div class="gh-content gh-canvas">
+            {{content}}
+        </div>
 
-                    {{#if feature_image_caption}}
-                        <figcaption>{{feature_image_caption}}</figcaption>
-                    {{/if}}
-                </figure>
-                {{/if}}
+    </article>
+    {{/post}}
 
-                <div class="post-wrapper">
-                    <div class="post-content gh-content">
-                        {{content}}
-                    </div>
-                </div>
-            </article>
-        </main>
-
-    </div>
-    </div>
-
-</div>
-</div>
-
-{{/post}}
+</main>

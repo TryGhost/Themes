@@ -4,10 +4,6 @@
     gap: 32px;
 }
 
-.post-column {
-    margin-bottom: 30px;
-}
-
 .post-link {
     display: flex;
     flex-direction: column;
@@ -18,13 +14,7 @@
     opacity: 1;
 }
 
-.post-media {
-    margin: 0;
-    background-color: var(--white-color);
-}
-
 .post-image {
-    z-index: -1;
     width: 100%;
 }
 

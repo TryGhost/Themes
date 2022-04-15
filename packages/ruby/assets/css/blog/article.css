@@ -1,0 +1,29 @@
+.gh-article {
+    margin-top: 64px;
+}
+
+.gh-article-meta {
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--secondary-text-color);
+    text-transform: uppercase;
+}
+
+.gh-article-tag {
+    color: var(--tag-color, var(--ghost-accent-color));
+}
+
+.gh-article-title {
+    font-size: 3rem;
+    line-height: 1.4;
+    letter-spacing: -0.03em;
+}
+
+.gh-article-excerpt {
+    font-size: 2rem;
+}
+
+.gh-article-image {
+    grid-column: main-start / main-end;
+}

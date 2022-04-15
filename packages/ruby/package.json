@@ -26,16 +26,16 @@
                 "width": 400
             },
             "m": {
-                "width": 750
+                "width": 720
             },
             "l": {
                 "width": 960
             },
             "xl": {
-                "width": 1140
+                "width": 1200
             },
             "xxl": {
-                "width": 1920
+                "width": 2000
             }
         },
         "card_assets": true,

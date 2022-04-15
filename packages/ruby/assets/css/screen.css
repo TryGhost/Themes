@@ -1,14 +1,12 @@
 @import "shared/assets/css/screen.css";
 @import "general/fonts.css";
 @import "general/basics.css";
-@import "general/grid.css";
 @import "site/header.css";
 @import "site/layout.css";
 @import "site/term.css";
 @import "blog/post.css";
-@import "blog/page.css";
 @import "blog/featured.css";
-@import "blog/single.css";
+@import "blog/article.css";
 @import "blog/author.css";
 @import "blog/navigation.css";
 @import "blog/comment.css";

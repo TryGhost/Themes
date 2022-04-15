@@ -5,10 +5,8 @@
 
 .post-feed .featured .post-link::before {
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    inset: 0;
+    z-index: 10;
     content: "";
     background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
 }
@@ -33,6 +31,7 @@
 .post-feed .featured .post-wrapper,
 .post-feed .featured .post-footer {
     position: relative;
+    z-index: 20;
     background-color: transparent;
 }
 
