@@ -1,4 +1,4 @@
-function pagination(isInfinite) {
+function pagination(isInfinite, callback) {
     var buttonElement = document.querySelector('.gh-loadmore');
 
     // next link element
@@ -33,12 +33,29 @@ function pagination(isInfinite) {
 
         // append contents
         var postElements = this.response.querySelectorAll('.gh-feed:not(.gh-featured):not(.gh-related) > *');
+        var fragment = document.createDocumentFragment();
+        var elems = [];
+
         postElements.forEach(function (item) {
             // document.importNode is important, without it the item's owner
             // document will be different which can break resizing of
             // `object-fit: cover` images in Safari
-            feedElement.appendChild(document.importNode(item, true));
+            var clonedItem = document.importNode(item, true);
+
+            if (callback) {
+                clonedItem.style.position = 'absolute';
+                clonedItem.style.visibility = 'hidden';
+                elems.push(clonedItem);
+            }
+
+            fragment.appendChild(clonedItem);
         });
+
+        feedElement.appendChild(fragment);
+
+        if (callback) {
+            callback(elems);
+        }
 
         // set next link
         var resNextElement = this.response.querySelector('link[rel=next]');
@@ -56,6 +73,13 @@ function pagination(isInfinite) {
         lastDocumentHeight = document.documentElement.scrollHeight;
         ticking = false;
         loading = false;
+
+        imagesLoaded(feedElement, function () {
+            if (feedElement.getBoundingClientRect().bottom <= lastWindowHeight) {
+                console.log(feedElement.getBoundingClientRect().bottom, lastWindowHeight)
+                requestTick();
+            }
+        });
     }
 
     function onUpdate() {

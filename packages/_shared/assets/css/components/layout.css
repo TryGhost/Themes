@@ -32,7 +32,7 @@ use it for applying any other styles. */
         [wide-start]
         minmax(auto, 240px)
         [main-start]
-        min(720px, calc(100% - calc(var(--gap) * 2)))
+        min(var(--content-width, 720px), calc(100% - calc(var(--gap) * 2)))
         [main-end]
         minmax(auto, 240px)
         [wide-end]
