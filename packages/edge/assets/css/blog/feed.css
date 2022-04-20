@@ -1,0 +1,42 @@
+.post-feed {
+    margin: 0 auto;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s var(--animation-base);
+}
+
+.post-feed.initialized {
+    visibility: visible;
+    opacity: 1;
+}
+
+.post-feed .grid-item {
+    width: 330px;
+}
+
+.post-feed .post {
+    position: relative;
+    margin: var(--grid-gap);
+}
+
+.post-feed .post-image {
+    width: 100%;
+}
+
+@media (min-width: 1020px) {
+    .post-feed {
+        max-width: 990px;
+    }
+}
+
+@media (min-width: 1350px) {
+    .post-feed {
+        max-width: 1320px;
+    }
+}
+
+@media (min-width: 1680px) {
+    .post-feed {
+        max-width: 1650px;
+    }
+}
