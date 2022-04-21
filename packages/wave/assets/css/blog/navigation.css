@@ -3,9 +3,6 @@
     gap: 32px;
     align-items: flex-start;
     margin: 64px 0 32px;
-    font-size: 2rem;
-    line-height: 1.3;
-    letter-spacing: -0.01em;
 }
 
 .navigation-left,
@@ -16,6 +13,23 @@
 
 .navigation-right {
     text-align: right;
+}
+
+.navigation a {
+    display: block;
+}
+
+.navigation a:hover {
+    opacity: 1;
+}
+
+.navigation-title {
+    font-size: 2rem;
+    line-height: 1.3;
+}
+
+.navigation a:hover .navigation-title {
+    opacity: 0.8;
 }
 
 .navigation-label {
