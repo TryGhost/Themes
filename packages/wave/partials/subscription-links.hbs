@@ -1,0 +1,20 @@
+<div class="subscribe">
+    {{#if @custom.apple_podcasts_link}}
+        <a href="{{@custom.apple_podcasts_link}}" class="subscribe-link" target="_blank" rel="noopener noreferrer">
+            {{> "icons/apple"}}
+        </a>
+    {{/if}}
+    {{#if @custom.google_podcasts_link}}
+        <a href="{{@custom.google_podcasts_link}}" class="subscribe-link" target="_blank" rel="noopener noreferrer">
+            {{> "icons/google"}}
+        </a>
+    {{/if}}
+    {{#if @custom.spotify_link}}
+        <a href="{{@custom.spotify_link}}" class="subscribe-link" target="_blank" rel="noopener noreferrer">
+            {{> "icons/spotify"}}
+        </a>
+    {{/if}}
+    <a href="{{#if @custom.rss_link}}{{@custom.rss_link}}{{else}}{{@site.url}}/rss{{/if}}" class="subscribe-link" target="_blank" rel="noopener noreferrer">
+        {{> "icons/rss"}}
+    </a>
+</div>

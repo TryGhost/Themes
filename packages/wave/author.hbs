@@ -1,0 +1,14 @@
+{{!< default}}
+
+<main class="site-main container medium">
+    {{#author}}
+        <div class="term-author">
+            {{> "author-box"}}
+        </div>
+    {{/author}}
+    <div class="post-feed">
+        {{#foreach posts}}
+            {{> "loop"}}
+        {{/foreach}}
+    </div>
+</main>

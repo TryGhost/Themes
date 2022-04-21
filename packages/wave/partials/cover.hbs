@@ -1,0 +1,23 @@
+<div class="site-cover gh-outer">
+
+    {{#if @site.cover_image}}
+        <img
+            class="cover-image u-object-fit"
+            src="{{img_url @site.cover_image}}"
+            alt="{{@site.title}}"
+        >
+    {{/if}}
+
+    <div class="cover-content gh-inner">
+        {{#if @site.icon}}
+            <img class="cover-icon" src="{{@site.icon}}" alt="{{@site.title}}">
+        {{/if}}
+        <div class="cover-wrapper">
+            <h1 class="cover-title">{{@site.title}}</h1>
+            {{#if @site.description}}
+                <div class="cover-description">{{@site.description}}</div>
+            {{/if}}
+        </div>
+    </div>
+
+</div>
