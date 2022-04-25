@@ -74,12 +74,14 @@ function pagination(isInfinite, callback) {
         ticking = false;
         loading = false;
 
-        imagesLoaded(feedElement, function () {
-            if (feedElement.getBoundingClientRect().bottom <= lastWindowHeight) {
-                console.log(feedElement.getBoundingClientRect().bottom, lastWindowHeight)
-                requestTick();
-            }
-        });
+        if (isInfinite) {
+            imagesLoaded(feedElement, function () {
+                if (feedElement.getBoundingClientRect().bottom <= lastWindowHeight) {
+                    console.log(feedElement.getBoundingClientRect().bottom, lastWindowHeight)
+                    requestTick();
+                }
+            });
+        }
     }
 
     function onUpdate() {
