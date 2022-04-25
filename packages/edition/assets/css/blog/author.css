@@ -1,0 +1,46 @@
+.author-meta {
+    margin-top: 0.5rem;
+    color: var(--secondary-text-color);
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: 0.02rem;
+    text-transform: uppercase;
+}
+
+.author-social {
+    justify-content: center;
+    margin-top: 2.5rem;
+}
+
+.author-list {
+    display: flex;
+}
+
+.author-list .author-image-placeholder {
+    flex-shrink: 0;
+    overflow: hidden;
+    margin: 0 -4px;
+    width: 54px;
+    border: 2px solid var(--white-color);
+    border-radius: 50%;
+}
+
+.author-list .author-image-placeholder:first-child {
+    z-index: 10;
+}
+
+.author-list .author-image-placeholder:nth-child(2) {
+    z-index: 9;
+}
+
+.author-list .author-image-placeholder:nth-child(3) {
+    z-index: 8;
+}
+
+.author-list .author-image-placeholder:nth-child(4) {
+    z-index: 7;
+}
+
+.author-list .author-image-placeholder:nth-child(5) {
+    z-index: 6;
+}

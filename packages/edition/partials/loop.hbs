@@ -1,0 +1,54 @@
+<article class="feed {{post_class}}" data-month="{{date format="MMMM YYYY"}}">
+
+    <div class="feed-calendar">
+        <div class="feed-calendar-month">
+            {{date published_at format="MMM"}}
+        </div>
+        <div class="feed-calendar-day">
+            {{date published_at format="DD"}}
+        </div>
+    </div>
+
+    {{#match @custom.feed_layout "!=" "Text-only"}}
+    {{#match @custom.feed_layout "!=" "Minimal"}}
+        <div class="feed-image u-placeholder rectangle">
+            {{#if feature_image}}
+                <img
+                    class="u-object-fit"
+                    srcset="{{> "srcset"}}"
+                    sizes="(min-width: 576px) 160px, 90vw"
+                    src="{{img_url feature_image size="m"}}"
+                    alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
+                    loading="lazy"
+                >
+            {{/if}}
+        </div>
+    {{/match}}
+    {{/match}}
+
+    <div class="feed-wrapper">
+        <h2 class="feed-title">{{title}}</h2>
+        {{#if excerpt}}
+            <div class="feed-excerpt">{{excerpt words="20"}}</div>
+        {{/if}}
+        <div class="feed-right">
+            <time class="feed-date" datetime="{{date format="YYYY-MM-DD"}}">
+                {{date published_at}}
+            </time>
+            <div class="feed-visibility feed-visibility-{{visibility}}">
+                {{> "icons/star"}}
+            </div>
+            {{#if reading_time}}
+                <div class="feed-length">
+                    {{reading_time}}
+                </div>
+            {{/if}}
+            <div class="feed-icon">
+                {{> "icons/chevron-right"}}
+            </div>
+        </div>
+    </div>
+
+    <a class="u-permalink" href="{{url}}" aria-label="{{title}}"></a>
+
+</article>

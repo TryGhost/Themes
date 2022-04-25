@@ -1,0 +1,14 @@
+.related-wrapper {
+    margin-top: 80px;
+    padding: 56px 0 32px;
+    background-color: var(--lighter-gray-color);
+}
+
+.related-title {
+    margin-bottom: 20px;
+    font-size: 2.1rem;
+}
+
+.related-wrapper .post-feed {
+    margin-top: 0;
+}
