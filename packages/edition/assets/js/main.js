@@ -60,7 +60,7 @@ function subMenu() {
     }
 
     function exampleFilter(el) {
-        return el.nodeName.toLowerCase() == 'a';
+        return el.nodeName.toLowerCase() == 'li';
     }
 
     if (items.length > 5) {

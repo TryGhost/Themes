@@ -1,3 +1,7 @@
+body:not(.with-full-cover) .cover {
+    margin-top: 9vmin;
+}
+
 .with-full-cover .cover {
     position: relative;
     display: flex;
@@ -81,7 +85,7 @@
 
 .with-full-cover .cover-form input {
     background-color: #fff;
-    border-color: #e6e6e6;
+    border-color: transparent;
 }
 
 .cover-form .form-button {
@@ -103,10 +107,9 @@
 }
 
 .cover-arrow .icon {
-    width: 40px;
-    height: 40px;
+    width: 28px;
+    height: 28px;
     color: #fff;
-    transform: rotate(90deg);
 }
 
 @media (max-width: 767px) {
