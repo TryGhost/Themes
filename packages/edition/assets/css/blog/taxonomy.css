@@ -3,8 +3,8 @@
 }
 
 .taxonomy-media {
-    overflow: hidden;
-    margin: 0 auto 3rem;
     width: 90px;
+    margin: 0 auto 3rem;
+    overflow: hidden;
     border-radius: 50%;
 }

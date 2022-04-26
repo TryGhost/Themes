@@ -15,8 +15,8 @@
 }
 
 .u-placeholder::before {
-    content: "";
     display: block;
+    content: "";
 }
 
 .u-placeholder.horizontal::before {

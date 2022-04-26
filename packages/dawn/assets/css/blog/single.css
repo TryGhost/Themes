@@ -5,16 +5,16 @@
 
 .single-meta {
     margin-bottom: 1rem;
-    color: var(--secondary-text-color);
     font-size: 1.2rem;
     font-weight: 800;
+    color: var(--secondary-text-color);
     text-transform: uppercase;
 }
 
 .single-meta-item + .single-meta-item::before {
-    content: "\02022";
     padding: 0 0.3rem;
     font-family: serif;
+    content: "\02022";
 }
 
 .single-meta-tag .post-tag {
@@ -46,11 +46,11 @@
 }
 
 .single-cta {
-    margin-top: 4rem !important;
     padding: 3rem;
+    margin-top: 4rem !important;
+    text-align: center;
     border-top: 5px solid var(--brand-color);
     border-bottom: 1px solid var(--light-gray-color);
-    text-align: center;
 }
 
 .single-cta-title {
@@ -76,8 +76,8 @@
 
 .single-footer-left,
 .single-footer-right {
-    flex: 2;
     display: flex;
+    flex: 2;
 }
 
 .single-footer-right {

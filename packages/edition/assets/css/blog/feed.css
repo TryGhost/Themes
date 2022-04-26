@@ -5,8 +5,8 @@
 
 .feed-header-wrapper {
     display: flex;
-    justify-content: space-between;
     align-items: flex-end;
+    justify-content: space-between;
     padding-bottom: 1rem;
     border-bottom: 1px solid var(--light-gray-color);
 }
@@ -14,8 +14,8 @@
 .feed-header-title {
     margin-bottom: 0;
     font-size: 1.5rem;
-    letter-spacing: 0.05rem;
     text-transform: uppercase;
+    letter-spacing: 0.05rem;
 }
 
 .post-feed {
@@ -34,8 +34,8 @@
     position: relative;
     display: flex;
     align-items: center;
-    overflow: hidden;
     padding: 1.5rem 0;
+    overflow: hidden;
     line-height: 1;
 }
 
@@ -81,10 +81,10 @@
 .feed-calendar {
     display: flex;
     margin-right: 1.5rem;
-    color: var(--brand-color);
     font-size: 1.1rem;
-    line-height: 1.5;
     font-weight: 800;
+    line-height: 1.5;
+    color: var(--brand-color);
     white-space: nowrap;
 }
 
@@ -99,8 +99,8 @@
 
 .feed-image {
     flex-shrink: 0;
-    margin-right: 2.5rem;
     width: 160px;
+    margin-right: 2.5rem;
 }
 
 .post-feed.right-thumbnail .feed-image {
@@ -113,8 +113,8 @@
 }
 
 .feed-wrapper {
-    flex-grow: 1;
     display: flex;
+    flex-grow: 1;
     overflow: hidden;
 }
 
@@ -128,21 +128,21 @@
 
 .feed-title {
     flex-grow: 1;
-    overflow: hidden;
-    margin-bottom: 0;
     padding-right: 1rem;
+    margin-bottom: 0;
+    overflow: hidden;
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 1.3;
-    letter-spacing: 0;
     text-overflow: ellipsis;
+    letter-spacing: 0;
     white-space: nowrap;
 }
 
 .post-feed.expanded .feed-title {
     font-size: 1.7rem;
-    line-height: 1.2;
     font-weight: 700;
+    line-height: 1.2;
     letter-spacing: -0.005em;
     white-space: normal;
 }
@@ -167,8 +167,8 @@
 .feed-right {
     display: flex;
     align-items: center;
-    color: var(--secondary-text-color);
     font-size: 1.4rem;
+    color: var(--secondary-text-color);
     transition: margin-right 0.2s var(--animation-base);
 }
 
@@ -182,8 +182,8 @@
 
 .feed-visibility {
     margin-right: 1rem;
-    color: var(--orange-color);
     line-height: 0;
+    color: var(--orange-color);
 }
 
 .post-feed.expanded .feed-visibility {
@@ -210,17 +210,17 @@
 }
 
 .post-feed.expanded .feed-length::before {
-    content: "\02022";
     padding: 0 0.7rem;
     font-size: 1rem;
     line-height: 1;
+    content: "\02022";
 }
 
 .feed-icon {
     position: absolute;
     right: 0;
-    color: var(--secondary-text-color);
     line-height: 0;
+    color: var(--secondary-text-color);
     transition: transform 0.2s var(--animation-base);
     transform: translateX(2rem);
 }
@@ -235,23 +235,23 @@
 }
 
 .feed-group::after {
-    content: "";
     display: block;
     height: 4.5vmin;
+    content: "";
 }
 
 .feed-month {
     position: sticky;
     top: 0;
     z-index: 30;
-    margin: 0 -1.5rem;
-    padding: 1rem 1.5rem;
     width: inherit;
-    color: var(--darker-gray-color);
+    padding: 1rem 1.5rem;
+    margin: 0 -1.5rem;
     font-size: 1.5rem;
     font-weight: 800;
-    letter-spacing: 0.05rem;
+    color: var(--darker-gray-color);
     text-transform: uppercase;
+    letter-spacing: 0.05rem;
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(3px);
 }
@@ -266,8 +266,8 @@
     }
 
     .post-feed.expanded .feed-image {
-        margin: 0 0 3rem;
         width: 100%;
+        margin: 0 0 3rem;
     }
 
     .post-feed.expanded .feed-title {

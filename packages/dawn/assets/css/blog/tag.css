@@ -5,8 +5,8 @@
 
 .tag-name {
     margin-bottom: 0;
-    color: var(--brand-color);
     font-size: 3rem;
+    color: var(--brand-color);
 }
 
 .tag-name::before {
@@ -14,8 +14,8 @@
 }
 
 .tag-description {
-    margin: 16px auto 0;
     max-width: 520px;
+    margin: 16px auto 0;
 }
 
 .tag-list {

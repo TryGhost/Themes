@@ -8,9 +8,9 @@
 
 .author-image-placeholder {
     flex-shrink: 0;
-    overflow: hidden;
-    margin-bottom: 2rem;
     width: 70px;
+    margin-bottom: 2rem;
+    overflow: hidden;
     border-radius: 50%;
 }
 
@@ -21,15 +21,15 @@
 
 .author-meta {
     margin-top: 8px;
-    color: var(--secondary-text-color);
     font-size: 1.2rem;
     font-weight: 800;
+    color: var(--secondary-text-color);
     text-transform: uppercase;
 }
 
 .author-bio {
-    margin-top: 16px;
     max-width: 520px;
+    margin-top: 16px;
 }
 
 .author-social {
@@ -41,8 +41,8 @@
 }
 
 .author-list .author-image-placeholder {
-    margin: 0 -4px;
     width: 54px;
+    margin: 0 -4px;
     border: 2px solid var(--white-color);
 }
 

@@ -44,21 +44,21 @@
     right: -13px;
     z-index: 90;
     display: none;
-    margin-top: 20px;
-    padding: 12px 0;
     width: 170px;
+    padding: 12px 0;
+    margin-top: 20px;
     text-align: left;
     background-color: var(--color-darker-gray);
     border-radius: 5px;
 }
 
 .sub-menu::before {
-    content: "";
     position: absolute;
     top: -6px;
     right: 21px;
     width: 0;
     height: 0;
+    content: "";
     border-right: 7px solid transparent;
     border-bottom: 7px solid var(--color-darker-gray);
     border-left: 7px solid transparent;
@@ -70,8 +70,8 @@
 
 .sub-menu a {
     display: block;
-    margin: 0;
     padding: 4px 16px;
-    color: var(--color-white);
+    margin: 0;
     font-size: 1.3rem;
+    color: var(--color-white);
 }

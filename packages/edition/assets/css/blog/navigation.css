@@ -6,9 +6,9 @@
 .navigation-icon {
     display: flex;
     align-items: center;
-    margin: 0 -2px;
     width: 30px;
     height: 30px;
+    margin: 0 -2px;
 }
 
 .navigation-next .navigation-icon {
