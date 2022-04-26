@@ -1,10 +1,9 @@
 {{!< default}}
 
-<div class="content-area">
 <main class="site-main">
 
     {{#author}}
-    <section class="taxonomy container small">
+    <section class="taxonomy gh-canvas">
 
         {{#if profile_image}}
             <div class="taxonomy-media u-placeholder square">
@@ -12,7 +11,8 @@
             </div>
         {{/if}}
 
-        <header class="single-header kg-canvas">
+        <header class="single-header">
+
             {{#if website}}
                 <h1 class="single-title">
                     <a href="{{website}}" target="_blank" rel="noopener noreferrer">{{name}}</a>
@@ -41,12 +41,13 @@
                     </a>
                 {{/if}}
             </div>
+
         </header>
 
     </section>
     {{/author}}
 
-    <div class="post-feed container medium">
+    <div class="post-feed gh-feed gh-canvas">
         {{#foreach posts}}
             {{> "loop"}}
         {{/foreach}}
@@ -55,6 +56,3 @@
     {{pagination}}
 
 </main>
-</div>
-
-{{#contentFor "body_class"}}{{#if next}} paged-next{{/if}}{{#if @site.logo}}{{#if @site.cover_image}} with-alt-header{{/if}}{{/if}}{{/contentFor}}

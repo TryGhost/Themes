@@ -9,7 +9,7 @@
     font-weight: 700;
 }
 
-.is-head-transparent :is(.social-item, .menu-item) {
+:is(.is-head-transparent, .is-head-brand) :is(.social-item, .menu-item) {
     color: var(--color-white);
 }
 
