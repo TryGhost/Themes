@@ -34,19 +34,10 @@ input[type="search"]:focus {
     height: 40px;
     padding: 0;
     font-size: 20px;
+    color: var(--white-color);
     cursor: pointer;
     background-color: var(--primary-color);
     border: 0;
-    border-radius: 0 4px 4px 0;
+    border-radius: 4px;
     outline: none;
-}
-
-.form-button::after {
-    font-family: IVEEL, sans-serif;
-    color: var(--white-color);
-    content: "\e92c";
-}
-
-.form-button svg {
-    display: none;
 }
