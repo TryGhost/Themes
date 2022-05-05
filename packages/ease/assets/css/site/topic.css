@@ -58,3 +58,9 @@
     color: var(--primary-color);
     letter-spacing: -0.005em;
 }
+
+@media (max-width: 767px) {
+    .topic-feed {
+        grid-template-columns: 1fr;
+    }
+}

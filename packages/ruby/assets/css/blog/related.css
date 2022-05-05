@@ -1,5 +1,6 @@
 .related-wrapper {
-    padding: 48px 0 64px;
+    padding-top: 48px;
+    padding-bottom: 64px;
     margin-top: 96px;
     background-color: var(--light-gray-color);
 }

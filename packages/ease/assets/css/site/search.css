@@ -47,6 +47,7 @@
 .search-result-row-link:hover {
     color: var(--dark-gray-color);
     background-color: var(--light-gray-color);
+    opacity: 1;
 }
 
 .search-result-row-title {
