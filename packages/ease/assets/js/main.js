@@ -1,11 +1,4 @@
-// $(function () {
-    // 'use strict';
-    // parallax();
-    search();
-    // featured();
-// });
-
-function parallax() {
+(function () {
     var image = $('.jarallax-img');
     if (!image) return;
 
@@ -18,9 +11,9 @@ function parallax() {
     image.imagesLoaded(function () {
         image.parent().jarallax(options).addClass('initialized');
     });
-}
+})();
 
-function search() {
+(function () {
     'use strict';
     if (typeof gh_search_key == 'undefined' || gh_search_key == '' ) return;
 
@@ -131,9 +124,9 @@ function search() {
             searchResult.innerHTML = '';
         }
     });
-}
+})();
 
-function featured() {
+(function () {
     'use strict';
     $('.featured-posts').owlCarousel({
         dots: false,
@@ -158,4 +151,4 @@ function featured() {
             },
         },
     });
-}
+})();
