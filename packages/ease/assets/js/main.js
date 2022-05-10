@@ -1,11 +1,9 @@
-var body = $('body');
-
-$(function () {
-    'use strict';
-    parallax();
+// $(function () {
+    // 'use strict';
+    // parallax();
     search();
-    featured();
-});
+    // featured();
+// });
 
 function parallax() {
     var image = $('.jarallax-img');
@@ -24,15 +22,11 @@ function parallax() {
 
 function search() {
     'use strict';
-    if (
-        typeof gh_search_key == 'undefined' ||
-        gh_search_key == ''
-    )
-        return;
+    if (typeof gh_search_key == 'undefined' || gh_search_key == '' ) return;
 
-    var searchInput = $('.search-field');
-    var searchButton = $('.search-button');
-    var searchResult = $('.search-result');
+    var searchInput = document.querySelector('.search-field');
+    var searchButton = document.querySelector('.search-button');
+    var searchResult = document.querySelector('.search-result');
 
     var url =
         siteUrl +
@@ -59,7 +53,9 @@ function search() {
     if (
         !indexDump
     ) {
-        $.get(url, function (data) {
+        fetch(url)
+        .then(response => response.json())
+        .then((data) => {
             if (data.posts.length > 0) {
                 index = elasticlunr(function () {
                     this.addField('title');
@@ -73,23 +69,21 @@ function search() {
     } else {
         index = elasticlunr.Index.load(indexDump);
 
-        $.get(
+        fetch(
             url +
-                "&filter=updated_at:>'" +
-                localStorage
-                    .getItem('ease_search_last')
-                    .replace(/\..*/, '')
-                    .replace(/T/, ' ') +
-                "'",
-            function (data) {
-                if (data.posts.length > 0) {
-                    update(data);
-                }
+            "&filter=updated_at:>'" +
+            localStorage.getItem('ease_search_last').replace(/\..*/, '').replace(/T/, ' ') +
+            "'"
+        )
+        .then(response => response.json())
+        .then(data => {
+            if (data.posts.length > 0) {
+                update(data);
             }
-        );
+        });
     }
 
-    searchInput.on('keyup', function (e) {
+    searchInput.addEventListener('keyup', function (e) {
         var result = index.search(e.target.value, { expand: true });
         var output = '';
 
@@ -107,28 +101,34 @@ function search() {
                 '</div>';
         });
 
-        searchResult.html(output);
+        searchResult.innerHTML = output;
 
         if (e.target.value.length > 0) {
-            searchButton.addClass('search-button-clear');
+            searchButton.classList.add('search-button-clear');
         } else {
-            searchButton.removeClass('search-button-clear');
+            searchButton.classList.remove('search-button-clear');
         }
     });
 
-    $('.search-form').on('submit', function (e) {
+    document.querySelector('.search-form').addEventListener('submit', function (e) {
         e.preventDefault();
     });
 
-    searchButton.on('click', function () {
-        if ($(this).hasClass('search-button-clear')) {
-            searchInput.val('').focus().keyup();
+    searchButton.addEventListener('click', function () {
+        if (this.classList.contains('search-button-clear')) {
+            searchInput.value = '';
+            searchInput.focus();
+            searchButton.classList.remove('search-button-clear');
+            searchResult.innerHTML = '';
         }
     });
 
-    $(document).keyup(function (e) {
-        if (e.keyCode === 27) {
-            searchInput.val('').focus().keyup();
+    document.addEventListener('keyup', function (e) {
+        if (e.key === 'Escape') {
+            searchInput.value = '';
+            searchInput.focus();
+            searchButton.classList.remove('search-button-clear');
+            searchResult.innerHTML = '';
         }
     });
 }
