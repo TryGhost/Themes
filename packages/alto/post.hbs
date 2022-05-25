@@ -7,8 +7,7 @@
 
     <article class="{{post_class}}{{#unless feature_image}} no-image{{/unless}} single-post">
 
-        <header class="post-header gh-canvas">
-            <h1 class="post-title">{{title}}</h1>
+        <header class="article-header gh-canvas">
             <div class="post-meta">
                 <span class="post-meta-item post-meta-date">
                     <time datetime="{{date format="YYYY-MM-DD"}}">{{date published_at}}</time>
@@ -24,6 +23,7 @@
                     </span>
                 {{/primary_tag}}
             </div>
+            <h1 class="post-title">{{title}}</h1>
             {{> "post-image"}}
         </header>
 

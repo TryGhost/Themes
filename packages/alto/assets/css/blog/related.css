@@ -13,8 +13,11 @@
     margin-bottom: 0;
 }
 
+.related-posts .post-header {
+    flex-direction: column;
+}
+
 .related-posts .post-title {
-    margin-bottom: 4px;
     font-size: 1.7rem;
     letter-spacing: 0;
 }

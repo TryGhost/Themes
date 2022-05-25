@@ -33,7 +33,7 @@
 .page-number {
     padding: 16px;
     font-size: 13px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 0;
     color: var(--secondary-text-color);
     border: 1px solid var(--mid-gray-color);

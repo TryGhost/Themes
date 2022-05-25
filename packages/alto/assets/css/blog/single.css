@@ -2,13 +2,17 @@
     margin-bottom: 60px;
 }
 
+.single-post .article-header {
+    text-align: center;
+}
+
 .single-post .post-title {
     margin-bottom: 0;
     font-size: 3.6rem;
 }
 
 .single-post .post-meta {
-    margin-top: 15px;
+    margin-bottom: 16px;
 }
 
 .single-post .post-media {

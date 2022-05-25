@@ -7,19 +7,13 @@
     margin-bottom: 0;
 }
 
-.featured-posts .post-header,
-.featured-posts .post-title {
-    margin-bottom: 0;
-}
-
 .featured-posts .post-header {
-    text-align: center;
+    flex-direction: column;
 }
 
 .featured-posts .post-title {
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 1.3;
+    font-size: 2rem;
+    line-height: 1.2;
 }
 
 @media (max-width: 767px) {

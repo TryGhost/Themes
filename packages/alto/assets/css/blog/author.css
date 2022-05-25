@@ -37,12 +37,13 @@
 
 .author-bio {
     margin-top: 8px;
+    font-size: 1.5rem;
 }
 
 .author-location {
     margin-top: 12px;
     font-size: 1.1rem;
-    font-weight: 800;
+    font-weight: 700;
     color: var(--secondary-text-color);
     text-transform: uppercase;
     letter-spacing: 0.01em;

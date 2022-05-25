@@ -9,7 +9,7 @@
 .post-feed .post-media {
     width: 100%;
     max-width: calc(960px + var(--gap) * 2);
-    margin: 0 auto 48px;
+    margin: 0 auto 40px;
 }
 
 .post-media-tag {
@@ -19,7 +19,7 @@
     z-index: 10;
     padding: 2px 10px;
     font-size: 13px;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--white-color);
     background: var(--primary-color);
     border-radius: 15px;
@@ -30,11 +30,12 @@
 }
 
 .post-header {
-    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
 }
 
 .post-title {
-    margin-bottom: 10px;
     font-size: 30px;
     font-weight: 800;
     letter-spacing: -0.01em;
@@ -46,7 +47,7 @@
 
 .post-meta {
     font-size: 12px;
-    font-weight: 800;
+    font-weight: 700;
     color: var(--secondary-text-color);
     text-transform: uppercase;
     letter-spacing: 0.01em;
@@ -63,7 +64,7 @@
 }
 
 .post-excerpt {
-    font-size: 1.7rem;
+    margin-top: 12px;
 }
 
 .has-serif-body .post-excerpt {
