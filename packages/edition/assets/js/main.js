@@ -235,7 +235,7 @@ function gallery() {
     pswp(
         '.kg-gallery-container',
         '.kg-gallery-image',
-        '.kg-gallery-image',
+        '.kg-gallery-image > img',
         false,
         true
     );

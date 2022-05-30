@@ -2,6 +2,11 @@
     cursor: pointer;
 }
 
+.kg-image-card a:hover,
+.kg-gallery-image a:hover {
+    opacity: 1;
+}
+
 .kg-image {
     margin-right: auto;
     margin-left: auto;
