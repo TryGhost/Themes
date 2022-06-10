@@ -30,7 +30,7 @@
         "pump": "3.0.0",
         "stylelint": "14.9.0",
         "stylelint-config-recess-order": "3.0.0",
-        "stylelint-config-standard": "25.0.0",
+        "stylelint-config-standard": "26.0.0",
         "yargs": "17.5.1"
     },
     "browserslist": [
