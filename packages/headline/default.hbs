@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="{{@site.locale}}">
+<html lang="{{@site.locale}}"{{#match @custom.color_scheme "Dark"}} class="dark-mode"{{else match @custom
+.color_scheme "Auto"}} class="auto-color"{{/match}}>
 
 <head>
     <meta charset="utf-8">
