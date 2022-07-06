@@ -53,7 +53,8 @@
             "media-feature-name-no-vendor-prefix": null,
             "number-max-precision": null,
             "value-keyword-case": null,
-            "keyframes-name-pattern": null
+            "keyframes-name-pattern": null,
+            "selector-not-notation": null
         }
     },
     "renovate": {
