@@ -13,11 +13,11 @@
         "zip": "gulp zip"
     },
     "devDependencies": {
-        "autoprefixer": "10.4.4",
+        "autoprefixer": "10.4.7",
         "beeper": "2.1.0",
-        "concurrently": "7.1.0",
-        "cssnano": "5.1.7",
-        "gscan": "4.26.1",
+        "concurrently": "7.2.2",
+        "cssnano": "5.1.12",
+        "gscan": "4.31.2",
         "gulp": "4.0.2",
         "gulp-concat": "2.6.1",
         "gulp-livereload": "4.0.2",
@@ -25,13 +25,13 @@
         "gulp-stylelint": "13.0.0",
         "gulp-uglify": "3.0.2",
         "gulp-zip": "5.1.0",
-        "postcss": "8.4.12",
+        "postcss": "8.4.14",
         "postcss-easy-import": "4.0.0",
         "pump": "3.0.0",
-        "stylelint": "14.6.1",
+        "stylelint": "14.9.1",
         "stylelint-config-recess-order": "3.0.0",
-        "stylelint-config-standard": "25.0.0",
-        "yargs": "17.4.0"
+        "stylelint-config-standard": "26.0.0",
+        "yargs": "17.5.1"
     },
     "browserslist": [
         "defaults"

@@ -35,6 +35,11 @@ except for when immediately preceeded by a heading */
     cursor: pointer;
 }
 
+.kg-image-card a:hover,
+.kg-gallery-image a:hover {
+    opacity: 1 !important;
+}
+
 /* Toggle
 /* ---------------------------------------------------------- */
 
