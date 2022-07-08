@@ -50,6 +50,7 @@
 .gh-head-actions {
     display: flex;
     gap: var(--head-nav-gap);
+    align-items: center;
     justify-content: flex-end;
 }
 
@@ -62,6 +63,15 @@
     display: inline-flex;
     align-items: center;
     color: var(--ghost-accent-color);
+}
+
+.gh-search {
+    margin-right: -6px;
+    margin-left: -6px;
+}
+
+.gh-search:hover {
+    opacity: 0.9;
 }
 
 /* Header variants

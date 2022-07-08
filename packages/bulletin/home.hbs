@@ -4,17 +4,19 @@
     {{^if @member.paid}}
         <div class="gh-home">
             <div class="gh-home-cta">
-                <div class="gh-home-brand">
-                    <a class="gh-home-logo" href="{{@site.url}}">
-                        {{#if @site.logo}}
-                            <img src="{{@site.logo}}" alt="{{@site.title}}">
-                        {{else}}
-                            {{@site.title}}
-                        {{/if}}
-                    </a>
-
-                    <p class="gh-home-description">{{@site.description}}</p>
-                </div>
+                <header class="gh-home-head">
+                    <div class="gh-home-brand">
+                        <a class="gh-home-logo" href="{{@site.url}}">
+                            {{#if @site.logo}}
+                                <img src="{{@site.logo}}" alt="{{@site.title}}">
+                            {{else}}
+                                {{@site.title}}
+                            {{/if}}
+                        </a>
+                        <p class="gh-home-description">{{@site.description}}</p>
+                    </div>
+                    <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button>
+                </header>
 
                 <section class="gh-home-subscribe">
                     {{^if @member}}

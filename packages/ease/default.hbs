@@ -47,11 +47,11 @@
             {{#if @site.description}}
                 <div class="cover-description">{{@site.description}}</div>
             {{/if}}
-            {{#if @custom.content_api_key_for_search}}
-                <div class="search">
+            {{!-- {{#if @custom.content_api_key_for_search}} --}}
+                <div class="search" data-ghost-search>
                     <form class="search-form">
                         <div class="form-wrapper">
-                            <input class="search-field" type="text" placeholder="Search...">
+                            <input class="search-field" type="text" placeholder="Search..." style="cursor: pointer;" disabled>
                             <button class="form-button search-button" type="submit">
                                 {{> "icons/search"}}
                                 {{> "icons/close"}}
@@ -60,7 +60,7 @@
                     </form>
                     <div class="search-result"></div>
                 </div>
-            {{/if}}
+            {{!-- {{/if}} --}}
         </div>
 
     </div>
