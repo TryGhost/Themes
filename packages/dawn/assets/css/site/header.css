@@ -10,11 +10,11 @@
 }
 
 .gh-head-actions {
-    gap: 0;
+    gap: 20px;
 }
 
-.gh-head-actions .menu-item + .menu-item {
-    margin-left: 20px;
+.gh-search {
+    margin-right: -2px;
 }
 
 .gh-head-menu li:nth-child(n+6) {

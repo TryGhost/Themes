@@ -10,6 +10,7 @@
 }
 
 .site-cover .search-field {
+    cursor: pointer;
     border: 0;
 }
 

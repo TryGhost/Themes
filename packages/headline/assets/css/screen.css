@@ -34,6 +34,10 @@ body:not(.is-head-transparent) .gh-head-logo img + img {
     display: none;
 }
 
+.gh-head-actions {
+    gap: 24px;
+}
+
 /* Styles specific to grid style sections */
 
 .gh-topic-grid + .gh-topic-grid {

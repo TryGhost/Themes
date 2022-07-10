@@ -29,6 +29,10 @@
     letter-spacing: 0.01em;
 }
 
+.gh-head-actions {
+    gap: 24px;
+}
+
 .gh-head-btn {
     font-weight: 600;
 }

@@ -47,20 +47,18 @@
             {{#if @site.description}}
                 <div class="cover-description">{{@site.description}}</div>
             {{/if}}
-            {{!-- {{#if @custom.content_api_key_for_search}} --}}
-                <div class="search" data-ghost-search>
-                    <form class="search-form">
-                        <div class="form-wrapper">
-                            <input class="search-field" type="text" placeholder="Search..." style="cursor: pointer;" disabled>
-                            <button class="form-button search-button" type="submit">
-                                {{> "icons/search"}}
-                                {{> "icons/close"}}
-                            </button>
-                        </div>
-                    </form>
-                    <div class="search-result"></div>
-                </div>
-            {{!-- {{/if}} --}}
+            <div class="search">
+                <form class="search-form">
+                    <div class="form-wrapper">
+                        <input class="search-field" type="text" placeholder="Search posts, tags, authors..." data-ghost-search disabled>
+                        <button class="form-button search-button" type="submit">
+                            {{> "icons/search"}}
+                            {{> "icons/close"}}
+                        </button>
+                    </div>
+                </form>
+                <div class="search-result"></div>
+            </div>
         </div>
 
     </div>
@@ -86,10 +84,6 @@
 
 </div>
 
-<script>
-    var siteUrl = '{{@site.url}}';
-    var gh_search_key = '{{@custom.content_api_key_for_search}}' || false;
-</script>
 <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="

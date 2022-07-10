@@ -68,7 +68,7 @@
     color: var(--color-white);
 }
 
-:is(.is-head-transparent, .is-head-brand) :is(.social-item, .menu-item, .menu-item-more) {
+:is(.is-head-transparent, .is-head-brand) :is(.gh-search, .social-item, .menu-item, .menu-item-more) {
     color: var(--color-white);
 }
 

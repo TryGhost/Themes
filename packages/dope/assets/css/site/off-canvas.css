@@ -13,9 +13,15 @@
     -webkit-overflow-scrolling: touch;
 }
 
+.gh-search {
+    position: absolute;
+    top: 20px;
+    left: 29px;
+}
+
 .canvas-close {
     position: absolute;
-    top: 15px;
+    top: 20px;
     right: 15px;
     width: 30px;
     height: 30px;
