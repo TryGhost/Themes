@@ -30,6 +30,7 @@ jobs:
         with:
           api-url: ${{ secrets.ALTO_GHOST_ADMIN_API_URL }}
           api-key: ${{ secrets.ALTO_GHOST_ADMIN_API_KEY }}
+          file: alto.zip
           working-directory: packages/alto
   subtree:
     name: Subtree
