@@ -50,6 +50,7 @@
 .gh-head-actions {
     display: flex;
     gap: var(--head-nav-gap);
+    align-items: center;
     justify-content: flex-end;
 }
 
@@ -64,6 +65,15 @@
     color: var(--ghost-accent-color);
 }
 
+.gh-search {
+    margin-right: -6px;
+    margin-left: -6px;
+}
+
+.gh-search:hover {
+    opacity: 0.9;
+}
+
 /* Header variants
 /* ---------------------------------------------------------- */
 
@@ -75,6 +85,16 @@ LOGO        Home About Collection Author Portal        Login Subscribe
 
 .is-head-b--n--a .gh-head-inner {
     grid-template-columns: 1fr auto 1fr;
+}
+
+/*
+======================================================================
+LOGO                               Home About Collection Author Portal
+======================================================================
+*/
+
+.is-head-b--n .gh-head-inner {
+    grid-template-columns: 1fr auto;
 }
 
 /*
@@ -148,7 +168,7 @@ Home About Collection Author Portal
     position: absolute;
     right: 0;
     left: 0;
-    z-index: 10;
+    z-index: 90;
     background-color: transparent;
 }
 

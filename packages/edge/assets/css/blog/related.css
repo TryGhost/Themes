@@ -1,0 +1,15 @@
+.related-posts {
+    margin-top: 96px;
+}
+
+.related-title {
+    margin: 0 var(--grid-gap) 24px;
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+
+@media (max-width: 767px) {
+    .related-posts {
+        margin-top: 60px;
+    }
+}

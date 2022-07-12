@@ -1,0 +1,47 @@
+.pagination {
+    display: flex;
+    align-items: center;
+    margin-top: 48px;
+    margin-bottom: 32px;
+}
+
+.post-template .pagination {
+    gap: 32px;
+    align-items: flex-start;
+    margin-top: 64px;
+    font-size: 2.2rem;
+    line-height: 1.3;
+}
+
+.pagination-left,
+.pagination-right {
+    flex: 2;
+    font-weight: 700;
+}
+
+.pagination-right {
+    text-align: right;
+}
+
+.pagination-right .button-arrow-right {
+    justify-content: flex-end;
+}
+
+.page-number {
+    padding: 16px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 0;
+    color: var(--secondary-text-color);
+    border: 1px solid var(--mid-gray-color);
+    border-radius: 30px;
+}
+
+.pagination-label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--secondary-text-color);
+    text-transform: uppercase;
+}

@@ -1,0 +1,10 @@
+.gh-head {
+    background-color: transparent;
+}
+
+.gh-head-menu {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.005em;
+}

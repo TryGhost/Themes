@@ -1,0 +1,39 @@
+.post-feed .post {
+    position: relative;
+    display: flex;
+    padding: 35px 0 33px;
+}
+
+.post-feed .post + .post {
+    border-top: 1px solid var(--mid-gray-color);
+}
+
+.post-feed .post-link:hover ~ .post-header .post-title-link {
+    color: var(--primary-color);
+}
+
+.post-feed .post-media {
+    flex-shrink: 0;
+    width: 160px;
+    margin-right: 28px;
+    margin-bottom: 0;
+}
+
+.post-feed .post.no-image .post-wrapper {
+    margin-left: 0;
+}
+
+@media (max-width: 767px) {
+    .post-feed .post {
+        display: block;
+    }
+
+    .post-feed .post-media {
+        width: auto;
+        margin-bottom: 30px;
+    }
+
+    .post-feed .post-wrapper {
+        margin-left: 0;
+    }
+}

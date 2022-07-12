@@ -1,0 +1,51 @@
+.off-canvas {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    width: 350px;
+    height: 100vh;
+    padding: 70px 30px 30px;
+    overflow-y: scroll;
+    background-color: var(--white-color);
+    transition: transform 0.4s var(--animation-base);
+    transform: translateX(350px);
+    -webkit-overflow-scrolling: touch;
+}
+
+.gh-search {
+    position: absolute;
+    top: 20px;
+    left: 29px;
+}
+
+.canvas-close {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    font-size: 23px;
+    line-height: 30px;
+    color: var(--dark-gray-color);
+    text-align: center;
+    cursor: pointer;
+}
+
+.canvas-close:hover {
+    opacity: 0.8;
+}
+
+.canvas-close svg {
+    width: 24px;
+    height: 24px;
+}
+
+html:not(.canvas-visible) .off-canvas {
+    visibility: hidden;
+}
+
+.canvas-opened .off-canvas {
+    visibility: visible;
+    transform: translateX(0) !important;
+}

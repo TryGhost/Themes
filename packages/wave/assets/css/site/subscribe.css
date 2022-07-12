@@ -1,0 +1,15 @@
+.subscribe {
+    display: inline-flex;
+    gap: 16px;
+}
+
+.subscribe-link {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.home-template .subscribe-link {
+    color: var(--color-white);
+}

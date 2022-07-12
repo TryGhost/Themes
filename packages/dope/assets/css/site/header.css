@@ -1,0 +1,36 @@
+.site-header {
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 80;
+    backface-visibility: hidden;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+}
+
+.logo {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.logo-image {
+    max-height: 40px;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+@media (max-width: 767px) {
+    .navbar {
+        height: 80px;
+    }
+}

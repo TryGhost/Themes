@@ -1,0 +1,27 @@
+{{!< default}}
+
+<main class="site-main">
+
+    {{#author}}
+    <div class="term-container gh-canvas">
+        <section class="term">
+            {{#if profile_image}}
+                <img class="term-image" src="{{img_url profile_image size="xs"}}" alt="{{name}}">
+            {{/if}}
+            <h1 class="term-name">{{name}}</h1>
+            {{#if bio}}
+                <div class="term-description">{{bio}}</div>
+            {{/if}}
+        </section>
+    </div>
+    {{/author}}
+
+    <div class="post-feed gh-canvas">
+        {{#foreach posts}}
+            {{> "loop"}}
+        {{/foreach}}
+    </div>
+
+    {{pagination}}
+
+</main>

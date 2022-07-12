@@ -1,0 +1,41 @@
+{{!< default}}
+
+<div class="gh-outer">
+<main class="site-main gh-inner">
+
+    {{#if @custom.show_featured_posts}}
+        {{> "featured-posts"}}
+    {{/if}}
+
+    {{#get "tags" limit="all"}}
+    <div class="topic-feed">
+
+        {{#foreach tags}}
+            <section class="topic">
+                <header class="topic-header">
+                    <h2 class="topic-name">
+                        <a href="{{url}}">{{name}}</a>
+                    </h2>
+                </header>
+                {{#get "posts" order="published_at asc" filter="tag:{{slug}}" limit="5" as |featured|}}
+                    <ul class="topic-article-feed">
+                        {{#foreach featured}}
+                        <li class="topic-article">
+                            <h3 class="topic-article-title">
+                                <a class="topic-article-link" href="{{url}}">
+                                    {{> "icons/chevron-right"}} {{title}}
+                                </a>
+                            </h3>
+                        </li>
+                        {{/foreach}}
+                    </ul>
+                {{/get}}
+                <a class="topic-more" href="{{url}}">Show more →</a>
+            </section>
+        {{/foreach}}
+
+    </div>
+    {{/get}}
+
+</main>
+</div>

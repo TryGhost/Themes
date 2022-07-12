@@ -1,0 +1,62 @@
+@font-face {
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 400;
+    src: local(""), url("../fonts/raleway-v26-latin-regular.woff2") format("woff2"), url("../fonts/raleway-v26-latin-regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 700;
+    src: local(""), url("../fonts/raleway-v26-latin-700.woff2") format("woff2"), url("../fonts/raleway-v26-latin-700.woff") format("woff");
+}
+
+@font-face {
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 800;
+    src: local(""), url("../fonts/raleway-v26-latin-800.woff2") format("woff2"), url("../fonts/raleway-v26-latin-800.woff") format("woff");
+}
+
+@font-face {
+    font-family: Raleway;
+    font-style: italic;
+    font-weight: 400;
+    src: local(""), url("../fonts/raleway-v26-latin-italic.woff2") format("woff2"), url("../fonts/raleway-v26-latin-italic.woff") format("woff");
+}
+
+@font-face {
+    font-family: Raleway;
+    font-style: italic;
+    font-weight: 700;
+    src: local(""), url("../fonts/raleway-v26-latin-700italic.woff2") format("woff2"), url("../fonts/raleway-v26-latin-700italic.woff") format("woff");
+}
+
+@font-face {
+    font-family: "PT Serif";
+    font-style: normal;
+    font-weight: 400;
+    src: local(""), url("../fonts/pt-serif-v16-latin-regular.woff2") format("woff2"), url("../fonts/pt-serif-v16-latin-regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "PT Serif";
+    font-style: normal;
+    font-weight: 700;
+    src: local(""), url("../fonts/pt-serif-v16-latin-700.woff2") format("woff2"), url("../fonts/pt-serif-v16-latin-700.woff") format("woff");
+}
+
+@font-face {
+    font-family: "PT Serif";
+    font-style: italic;
+    font-weight: 400;
+    src: local(""), url("../fonts/pt-serif-v16-latin-italic.woff2") format("woff2"), url("../fonts/pt-serif-v16-latin-italic.woff") format("woff");
+}
+
+@font-face {
+    font-family: "PT Serif";
+    font-style: italic;
+    font-weight: 700;
+    src: local(""), url("../fonts/pt-serif-v16-latin-700italic.woff2") format("woff2"), url("../fonts/pt-serif-v16-latin-700italic.woff") format("woff");
+}

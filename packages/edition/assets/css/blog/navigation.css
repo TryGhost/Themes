@@ -1,0 +1,21 @@
+.navigation-link {
+    display: flex;
+    align-items: center;
+}
+
+.navigation-icon {
+    display: flex;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    margin: 0 -2px;
+}
+
+.navigation-next .navigation-icon {
+    justify-content: flex-end;
+}
+
+.navigation-icon .icon {
+    width: 30px;
+    height: 30px;
+}

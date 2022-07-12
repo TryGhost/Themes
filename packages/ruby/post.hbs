@@ -1,0 +1,49 @@
+{{!< default}}
+
+<main class="site-main">
+
+    {{#post}}
+
+    <article class="gh-article {{post_class}}">
+
+        <header class="gh-article-header gh-canvas">
+            <span class="gh-article-meta"{{#if primary_tag.accent_color}} style="--tag-color: {{primary_tag.accent_color}};"{{/if}}>
+                {{#primary_author}}By <a href="{{url}}">{{name}}</a>{{/primary_author}}
+                {{#if primary_tag}}
+                    in
+                    <a class="gh-article-tag" href="{{primary_tag.url}}">{{primary_tag.name}}</a>
+                {{/if}}
+                —
+                <time datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
+            </span>
+
+            <h1 class="gh-article-title">{{title}}</h1>
+
+            {{#if custom_excerpt}}
+                <p class="gh-article-excerpt">{{custom_excerpt}}</p>
+            {{/if}}
+
+            {{> "post-image"}}
+        </header>
+
+        <div class="gh-content gh-canvas">
+            {{content}}
+        </div>
+
+    </article>
+
+    {{> "post-navigation"}}
+
+    {{!-- <div class="comment-container gh-canvas">
+        <div class="comment">
+            If you want to embed comments, this is a good place to do it!
+        </div>
+    </div> --}}
+
+    {{/post}}
+
+    {{#if @custom.show_related_posts}}
+        {{> "related-posts"}}
+    {{/if}}
+
+</main>

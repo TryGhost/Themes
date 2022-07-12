@@ -1,0 +1,58 @@
+{{!< default}}
+
+<main class="site-main">
+
+    {{#author}}
+    <section class="taxonomy gh-canvas">
+
+        {{#if profile_image}}
+            <div class="taxonomy-media u-placeholder square">
+                <img class="u-object-fit" src="{{img_url profile_image size="s"}}" alt="{{name}}">
+            </div>
+        {{/if}}
+
+        <header class="single-header">
+
+            {{#if website}}
+                <h1 class="single-title">
+                    <a href="{{website}}" target="_blank" rel="noopener noreferrer">{{name}}</a>
+                </h1>
+            {{else}}
+                <h1 class="single-title">{{name}}</h1>
+            {{/if}}
+
+            {{#if location}}
+                <span class="author-meta">{{location}}</span>
+            {{/if}}
+
+            <div class="single-excerpt">{{bio}}</div>
+
+            <div class="share author-social">
+                {{#if facebook}}
+                    <a class="share-link share-link-facebook author-social-item" href="https://www.facebook.com/{{facebook}}" target="_blank" rel="noopener noreferrer">
+                        {{> "icons/facebook"}}
+                        Facebook
+                    </a>
+                {{/if}}
+                {{#if twitter}}
+                    <a class="share-link share-link-twitter author-social-item" href="https://twitter.com/{{twitter}}" target="_blank" rel="noopener noreferrer">
+                        {{> "icons/twitter"}}
+                        Twitter
+                    </a>
+                {{/if}}
+            </div>
+
+        </header>
+
+    </section>
+    {{/author}}
+
+    <div class="post-feed gh-feed gh-canvas">
+        {{#foreach posts}}
+            {{> "loop"}}
+        {{/foreach}}
+    </div>
+
+    {{pagination}}
+
+</main>

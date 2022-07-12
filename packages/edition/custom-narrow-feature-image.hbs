@@ -1,0 +1,16 @@
+{{!< default}}
+
+<main class="site-main">
+
+    {{#post}}
+        {{> "content" width="narrow"}}
+    {{/post}}
+
+    {{#is "post"}}
+        {{> "comment"}}
+        {{#if @custom.show_related_posts}}
+            {{> "related-posts"}}
+        {{/if}}
+    {{/is}}
+
+</main>

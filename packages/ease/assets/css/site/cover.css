@@ -1,0 +1,53 @@
+.site-cover {
+    z-index: unset !important;
+    display: flex;
+    min-height: 500px;
+}
+
+.site-cover .search {
+    width: 400px;
+    margin: 30px auto 0;
+}
+
+.site-cover .search-field {
+    cursor: pointer;
+    border: 0;
+}
+
+.cover-content {
+    position: relative;
+    z-index: 20;
+    padding: 30px;
+    margin: auto;
+    color: var(--white-color);
+    text-align: center;
+}
+
+.cover-description {
+    max-width: 720px;
+    margin: 0 auto;
+    font-size: 3.6rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.has-serif-title .cover-description {
+    font-family: var(--font-serif);
+    font-weight: 700;
+}
+
+@media (max-width: 460px) {
+    .site-cover .search {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .site-cover {
+        min-height: 400px;
+    }
+
+    .cover-description {
+        font-size: 24px;
+    }
+}

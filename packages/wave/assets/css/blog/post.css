@@ -1,0 +1,23 @@
+.post-link:hover {
+    opacity: 0.95;
+}
+
+.post-media {
+    margin-bottom: 24px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.post-title {
+    font-size: 2.4rem;
+    line-height: 1.2;
+}
+
+.post-meta {
+    display: block;
+    margin-top: 6px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-secondary-text);
+    text-transform: uppercase;
+}

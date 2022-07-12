@@ -1,0 +1,29 @@
+<div class="gh-canvas">
+<div class="author-list">
+
+    <h3 class="author-list-title">
+        {{#if og_description}}Hosted by:{{else}}Written by:{{/if}}
+    </h3>
+
+    {{#foreach authors}}
+    <section class="author">
+
+        <div class="author-image-placeholder u-placeholder">
+            <img class="author-image u-object-fit" src="{{img_url profile_image size="xs"}}" alt="{{name}}" loading="lazy">
+        </div>
+
+        <div class="author-wrapper">
+            <header class="author-header">
+                <h4 class="author-name"><a href="{{url}}">{{name}}</a></h4>
+                {{#if location}}
+                    <span class="author-meta">{{location}}</span>
+                {{/if}}
+            </header>
+            <div class="author-bio">{{bio}}</div>
+        </div>
+
+    </section>
+    {{/foreach}}
+
+</div>
+</div>

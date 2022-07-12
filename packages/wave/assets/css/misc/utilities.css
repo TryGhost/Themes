@@ -1,0 +1,98 @@
+.u-permalink {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 50;
+    outline: none;
+}
+
+.u-object-fit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.u-overlay {
+    position: relative;
+}
+
+.u-overlay::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    content: "";
+    background-color: var(--black-color);
+    opacity: 1;
+    transition: opacity 1s var(--animation-base);
+}
+
+.u-overlay.initialized::before {
+    opacity: 0.4;
+}
+
+.u-placeholder {
+    position: relative;
+    z-index: 10;
+    background-color: var(--light-gray-color);
+}
+
+.u-placeholder::before {
+    display: block;
+    content: "";
+}
+
+.u-placeholder.horizontal::before {
+    padding-bottom: 50%;
+}
+
+.u-placeholder.rectangle::before {
+    padding-bottom: 62.5%;
+}
+
+.u-placeholder.square::before {
+    padding-bottom: 100%;
+}
+
+@media (max-width: 767px) {
+    .u-placeholder.horizontal::before {
+        padding-bottom: 62.5%;
+    }
+}
+
+@media (max-width: 575px) {
+    .hidden-xs {
+        display: none !important;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .hidden-sm {
+        display: none !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .hidden-md {
+        display: none !important;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .hidden-lg {
+        display: none !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .hidden-xl {
+        display: none !important;
+    }
+}

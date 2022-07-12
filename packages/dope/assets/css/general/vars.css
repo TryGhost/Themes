@@ -1,0 +1,15 @@
+:root {
+    --primary-color: var(--ghost-accent-color, #9692af);
+    --primary-text-color: #222;
+    --secondary-text-color: #aaa;
+    --yellow-color: #ffc475;
+    --white-color: #fff;
+    --light-gray-color: #f1f1f1;
+    --mid-gray-color: #d9d9d9;
+    --dark-gray-color: #1a1a1a;
+    --black-color: #000;
+    --font-sans: Raleway, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+    --font-serif: "PT Serif", Times, serif;
+    --animation-base: ease;
+    --shadow-base: 0 0 10px rgba(0, 0, 0, 0.2);
+}

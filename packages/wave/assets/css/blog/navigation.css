@@ -1,0 +1,43 @@
+.navigation {
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+    margin: 64px 0 32px;
+}
+
+.navigation-left,
+.navigation-right {
+    flex: 2;
+    font-weight: 700;
+}
+
+.navigation-right {
+    text-align: right;
+}
+
+.navigation a {
+    display: block;
+}
+
+.navigation a:hover {
+    opacity: 1;
+}
+
+.navigation-title {
+    font-size: 2rem;
+    line-height: 1.3;
+}
+
+.navigation a:hover .navigation-title {
+    opacity: 0.8;
+}
+
+.navigation-label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-secondary-text);
+    text-transform: uppercase;
+    letter-spacing: 0;
+}

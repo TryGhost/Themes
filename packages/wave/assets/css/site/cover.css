@@ -1,0 +1,35 @@
+.site-cover {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 400px;
+}
+
+.cover-image {
+    z-index: -1;
+}
+
+.cover-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.cover-icon {
+    width: 120px;
+    margin-right: 32px;
+    border-radius: 8px;
+}
+
+.cover-title {
+    font-size: 3.8rem;
+    color: var(--color-white);
+}
+
+.cover-description {
+    margin-top: 4px;
+    font-size: 1.8rem;
+    color: var(--color-white);
+}

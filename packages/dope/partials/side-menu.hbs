@@ -1,0 +1,49 @@
+<aside class="off-canvas">
+
+    {{#if @site.navigation}}
+        <nav class="main-menu widget">
+            {{navigation}}
+        </nav>
+    {{/if}}
+
+    <div class="widget widget-recent">
+        <h4 class="widget-title">Recent posts</h4>
+        {{#get "posts" limit="3" include="tags" as |recents|}}
+            {{#if recents}}
+            <div class="recent-posts">
+                {{#foreach recents}}
+                <article class="recent">
+                    <header class="post-header">
+                        <h5 class="post-title">
+                            <a class="post-title-link" href="{{url}}">{{title}}</a>
+                        </h5>
+                        <div class="post-meta">
+                            <span class="post-meta-item post-meta-date">
+                                <time datetime="{{date format="YYYY-MM-DD"}}">{{date published_at}}</time>
+                            </span>
+                            {{#if featured}}
+                                <span class="post-meta-featured">{{> "icons/star"}}</span>
+                            {{/if}}
+                        </div>
+                    </header>
+                </article>
+                {{/foreach}}
+            </div>
+            {{/if}}
+        {{/get}}
+    </div>
+
+    <section class="widget widget-links">
+        <h4 class="widget-title">More links</h4>
+        {{navigation type="secondary"}}
+    </section>
+
+    <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button>
+
+    <div class="canvas-close">
+        {{> "icons/close"}}
+    </div>
+
+</aside>
+
+<div class="dimmer"></div>

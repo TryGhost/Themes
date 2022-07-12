@@ -1,0 +1,22 @@
+{{!< default}}
+
+<div class="gh-outer">
+<main class="site-main gh-inner">
+
+    {{#tag}}
+    <div class="term">
+        <h1 class="term-name">{{name}}</h1>
+        {{#if description}}
+            <p class="term-description">{{description}}</p>
+        {{/if}}
+    </div>
+    {{/tag}}
+
+    <div class="post-feed gh-feed">
+        {{#foreach posts}}
+            {{> "loop"}}
+        {{/foreach}}
+    </div>
+
+</main>
+</div>

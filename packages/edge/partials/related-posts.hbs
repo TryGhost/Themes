@@ -1,0 +1,15 @@
+{{#get "posts" limit="all" filter="tags:[{{post.tags}}]+id:-{{post.id}}" as |related|}}
+{{#if related}}
+    <section class="related-posts">
+        <div class="post-feed">
+        {{#if @custom.related_posts_title}}
+            <h3 class="related-title">{{@custom.related_posts_title}}</h3>
+        {{/if}}
+            {{#foreach posts}}
+                <div class="grid-item grid-sizer"></div>
+                {{> "loop"}}
+            {{/foreach}}
+        </div>
+    </section>
+{{/if}}
+{{/get}}

@@ -1,0 +1,19 @@
+{{!< default}}
+
+<div class="content-area gh-outer">
+<main class="site-main gh-inner">
+
+    {{#author}}
+        <section class="term">
+            <h1 class="term-name">{{name}}</h1>
+        </section>
+    {{/author}}
+
+    <div class="post-feed">
+        {{#foreach posts}}
+            {{> "loop"}}
+        {{/foreach}}
+    </div>
+
+</main>
+</div>

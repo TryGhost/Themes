@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="{{@site.locale}}">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{meta_title}}</title>
+
+    <link rel="stylesheet" href="{{asset "built/screen.css"}}">
+
+    {{ghost_head}}
+</head>
+
+<body class="{{body_class}} is-head-b--n--a{{{block "body_class"}}}{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Elegant serif"}} has-serif-body{{/match}}{{^is "home"}}{{#if @site.cover_image}} is-head-brand{{/if}}{{/is}}">
+<div class="site">
+
+    <header id="gh-head" class="gh-head gh-outer">
+    <div class="gh-head-inner">
+
+        <div class="gh-head-brand">
+            <div class="gh-head-brand-wrapper">
+                <a class="gh-head-logo" href="{{@site.url}}">
+                    {{#if @site.logo}}
+                        <img src="{{@site.logo}}" alt="{{@site.title}}">
+                    {{else}}
+                        {{@site.title}}
+                    {{/if}}
+                </a>
+            </div>
+            <button class="gh-burger"></button>
+        </div>
+
+        <nav class="gh-head-menu">
+            {{navigation}}
+        </nav>
+
+        <div class="gh-head-actions">
+            <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button>
+            <div class="social">
+                {{#if @site.facebook}}
+                    <a class="social-item social-item-facebook" href="{{facebook_url @site.facebook}}" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        {{> "icons/facebook"}}
+                    </a>
+                {{/if}}
+                {{#if @site.twitter}}
+                    <a class="social-item social-item-twitter" href="{{twitter_url @site.twitter}}" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                        {{> "icons/twitter"}}
+                    </a>
+                {{/if}}
+            </div>
+            {{#if @member}}
+                <button class="button-text menu-item members-account" data-portal="account">Account</button>
+            {{else}}
+                <button class="button-text menu-item members-login" data-portal="signin">Login</button>
+            {{/if}}
+        </div>
+
+    </div>
+    </header>
+
+    {{#is "home"}}
+        {{> "cover"}}
+        {{#if @custom.show_featured_posts}}
+            {{> "featured-posts"}}
+        {{/if}}
+    {{/is}}
+
+    <div class="site-content">
+        {{{body}}}
+    </div>
+
+    <footer class="gh-foot gh-outer">
+        <div class="gh-foot-inner gh-inner">
+            <div class="gh-copyright">
+                {{@site.title}} © {{date format="YYYY"}}
+            </div>
+            <nav class="gh-foot-menu">
+                {{navigation type="secondary"}}
+            </nav>
+            <div class="gh-powered-by">
+                <a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a>
+            </div>
+        </div>
+    </footer>
+
+    {{> "pswp"}}
+
+</div>
+
+{{!-- Fixes 100vh issue on mobile browsers with toolbar on the bottom --}}
+<script>
+    if (document.body.classList.contains('with-full-cover') && (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.platform))) {
+        document.getElementsByClassName('cover')[0].style.height = window.innerHeight + 'px';
+    }
+</script>
+
+<script src="{{asset "built/main.min.js"}}"></script>
+
+{{ghost_foot}}
+
+</body>
+</html>

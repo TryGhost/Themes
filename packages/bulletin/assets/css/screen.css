@@ -35,6 +35,12 @@ h6 {
     background-color: var(--ghost-accent-color);
 }
 
+.gh-home-head {
+    display: flex;
+    justify-content: space-between;
+    color: var(--color-white);
+}
+
 .gh-home-logo {
     font-size: 2.4rem;
     font-weight: 800;
@@ -53,6 +59,10 @@ h6 {
     font-size: 1.6rem;
     line-height: 1.4;
     color: rgba(255, 255, 255, 0.8);
+}
+
+.gh-home-head .gh-search {
+    margin-top: -2px;
 }
 
 .gh-home-subscribe-title {
@@ -239,6 +249,7 @@ h6 {
 
 .gh-head-inner {
     padding: 2.4rem 0;
+    color: var(--color-white);
 }
 
 .gh-head-logo {

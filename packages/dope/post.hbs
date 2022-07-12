@@ -1,0 +1,56 @@
+{{!< default}}
+
+<div class="content-area">
+<main class="site-main">
+
+    {{#post}}
+
+    <article class="{{post_class}} single-post">
+        {{#if feature_image}}
+            {{> "post-header"}}
+        {{else}}
+            <header class="post-header gh-canvas">
+                {{#primary_tag}}
+                    <div class="post-tags">
+                        <a class="post-tag post-tag-{{slug}}" href="{{url}}" title="{{name}}">{{name}}</a>
+                    </div>
+                {{/primary_tag}}
+
+                <h1 class="post-title">{{title}}</h1>
+
+                <div class="post-meta">
+                    <span class="post-meta-item post-meta-date">
+                        <time datetime="{{date format="YYYY-MM-DD"}}">{{date published_at}}</time>
+                    </span>
+                    <span class="post-meta-item post-meta-length">{{reading_time}}</span>
+                    {{#if featured}}
+                        <span class="post-meta-featured">
+                            {{> "icons/star"}}
+                        </span>
+                    {{/if}}
+                </div>
+            </header>
+        {{/if}}
+        <div class="post-content gh-content gh-canvas">
+            {{content}}
+        </div>
+    </article>
+
+    {{#if @custom.show_author}}
+        {{> "author-box"}}
+    {{/if}}
+
+    {{!-- <div class="comment-container gh-canvas">
+        <div class="comment">
+            If you want to embed comments, this is a good place to do it!
+        </div>
+    </div> --}}
+
+    {{/post}}
+
+    {{#if @custom.show_related_posts}}
+        {{> "related-posts"}}
+    {{/if}}
+
+</main>
+</div>

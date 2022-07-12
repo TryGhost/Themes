@@ -1,0 +1,37 @@
+<div class="player{{#unless feature_image}} no-thumbnail{{/unless}} kg-width-wide">
+
+    <audio class="player-audio" src="{{og_description}}"></audio>
+
+    <div class="post-media">
+        <div class="u-placeholder square">
+            <img class="post-image u-object-fit" src="{{img_url feature_image size="m"}}" alt="{{title}}">
+        </div>
+    </div>
+
+    <div class="player-wrapper">
+
+        <header class="post-header">
+            <button class="button button-play js-play">
+                {{> "icons/play"}}
+                {{> "icons/pause"}}
+            </button>
+            <div class="post-header-wrapper">
+                <h1 class="post-title">{{title}}</h1>
+                <time class="post-meta" datetime="{{date format="YYYY-MM-DD"}}">{{date published_at}}</time>
+            </div>
+        </header>
+
+        <div class="player-track hidden-xs hidden-sm hidden-md">
+            <div class="player-progress"></div>
+        </div>
+
+        <div class="player-controls">
+            <div class="player-time">
+                <span class="player-time-current">00:00:00</span>
+                <span class="player-time-duration">00:00:00</span>
+            </div>
+        </div>
+
+    </div>
+
+</div>

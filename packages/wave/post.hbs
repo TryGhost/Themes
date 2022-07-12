@@ -1,0 +1,55 @@
+{{!< default}}
+
+{{#post}}
+
+<main class="site-main">
+
+    <article class="{{post_class}}">
+
+        {{#if og_description}}
+            <div class="gh-canvas">
+                {{> "player"}}
+            </div>
+        {{else}}
+            <header class="gh-article-header gh-canvas">
+                <h1 class="gh-article-title">{{title}}</h1>
+                <time class="post-meta" datetime="{{date format="YYYY-MM-DD"}}">{{date published_at}}</time>
+                {{> "post-image"}}
+            </header>
+        {{/if}}
+
+        <div class="gh-content gh-canvas">
+            {{content}}
+        </div>
+
+        {{> "author-box"}}
+
+        <div class="gh-canvas">
+        <nav class="navigation">
+
+            <div class="navigation-left">
+                {{#prev_post}}
+                    <a class="newer-posts" href="{{url}}">
+                        <span class="navigation-label">Previous</span>
+                        <h4 class="navigation-title">{{title}}</h4>
+                    </a>
+                {{/prev_post}}
+            </div>
+
+            <div class="navigation-right">
+                {{#next_post}}
+                    <a class="older-posts" href="{{url}}">
+                        <span class="navigation-label">Next</span>
+                        <h4 class="navigation-title">{{title}}</h4>
+                    </a>
+                {{/next_post}}
+            </div>
+
+        </nav>
+        </div>
+
+    </article>
+
+</main>
+
+{{/post}}

@@ -1,0 +1,4 @@
+.home-template.with-full-cover:not(.portal-visible) .gh-portal-triggerbtn-iframe {
+    pointer-events: none;
+    opacity: 0;
+}

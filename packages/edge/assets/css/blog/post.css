@@ -1,0 +1,36 @@
+.post-caption {
+    display: none;
+}
+
+.post-link {
+    display: block;
+}
+
+.post-link:hover {
+    opacity: 1;
+}
+
+.post-lightbox {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: var(--color-white);
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    transform: scale(0.8);
+}
+
+.post-link:hover + .post-lightbox,
+.post-lightbox:hover {
+    opacity: 1;
+    transform: scale(1);
+}

@@ -1,0 +1,61 @@
+.widget + .widget {
+    margin-top: 60px;
+}
+
+.widget ul {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.widget li {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.widget li + li {
+    margin-top: 20px;
+}
+
+.widget-title {
+    margin-bottom: 24px;
+    font-size: 1.2rem;
+    color: var(--secondary-text-color);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.widget-recent .widget-title {
+    margin-bottom: 28px;
+}
+
+.widget-recent .recent-posts {
+    margin-bottom: 32px;
+    counter-reset: recent;
+}
+
+.widget-recent .recent {
+    display: flex;
+}
+
+.widget-recent .recent + .recent {
+    margin-top: 24px;
+}
+
+.widget-recent .post-header {
+    margin-bottom: 0;
+}
+
+.widget-recent .post-meta {
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+.widget-recent .post-meta-length {
+    display: none;
+}
+
+.widget-recent .post-title {
+    margin-bottom: 0;
+    line-height: 1.3;
+}

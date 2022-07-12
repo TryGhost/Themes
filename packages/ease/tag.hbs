@@ -1,0 +1,24 @@
+{{!< default}}
+
+<main class="site-main">
+
+    {{#tag}}
+    <div class="term-container gh-canvas">
+        <section class="term">
+            <h1 class="term-name">{{name}}</h1>
+            {{#if description}}
+                <div class="term-description">{{description}}</div>
+            {{/if}}
+        </section>
+    </div>
+    {{/tag}}
+
+    <div class="post-feed gh-canvas">
+        {{#foreach posts}}
+            {{> "loop"}}
+        {{/foreach}}
+    </div>
+
+    {{pagination}}
+
+</main>

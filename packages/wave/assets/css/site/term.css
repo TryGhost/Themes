@@ -1,0 +1,24 @@
+.term {
+    max-width: 560px;
+    margin-bottom: 48px;
+}
+
+.term-image {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 24px;
+    border-radius: 50%;
+}
+
+.term-name {
+    font-size: 2.8rem;
+}
+
+.term-description {
+    margin-top: 8px;
+    color: var(--color-secondary-text);
+}
+
+.term-author {
+    margin-bottom: 45px;
+}

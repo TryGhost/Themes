@@ -1,0 +1,56 @@
+{{!< default}}
+
+<main class="site-main">
+
+    {{#post}}
+
+    <article class="{{post_class}}">
+
+        <header class="gh-article-header gh-canvas">
+            <h1 class="gh-article-title">{{title}}</h1>
+            <div class="post-meta">
+                Last updated on&nbsp;
+                <time datetime="{{date format="YYYY-MM-DD"}}">{{date updated_at}}</time>
+            </div>
+            {{> "post-image"}}
+        </header>
+
+        <div class="gh-content gh-canvas">
+            {{content}}
+        </div>
+
+        <div class="pagination-container gh-canvas">
+        <nav class="pagination">
+
+            <div class="pagination-left">
+                {{#prev_post}}
+                    <a class="newer-posts" href="{{url}}">
+                        <span class="pagination-label">Previous</span>
+                        {{title}}
+                    </a>
+                {{/prev_post}}
+            </div>
+
+            <div class="pagination-right">
+                {{#next_post}}
+                    <a class="older-posts" href="{{url}}">
+                        <span class="pagination-label">Next</span>
+                        {{title}}
+                    </a>
+                {{/next_post}}
+            </div>
+
+        </nav>
+        </div>
+
+    </article>
+
+    {{!-- <div class="comment-container gh-canvas">
+        <div class="comment">
+            If you want to embed comments, this is a good place to do it!
+        </div>
+    </div> --}}
+
+    {{/post}}
+
+</main>

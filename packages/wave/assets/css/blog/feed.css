@@ -1,0 +1,10 @@
+.post-feed {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+}
+
+.post-feed .post {
+    display: flex;
+    flex-direction: column;
+}

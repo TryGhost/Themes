@@ -1,0 +1,25 @@
+<article class="{{post_class}}">
+
+    <a class="post-link u-permalink" href="{{url}}"></a>
+
+    {{!-- {{#if feature_image}}
+        <figure class="post-media">
+            <div class="u-placeholder same-height rectangle">
+                <a class="post-image-link" href="{{url}}">
+                    <img class="post-image u-object-fit" src="{{img_url feature_image size="l"}}" alt="{{title}}">
+                </a>
+            </div>
+        </figure>
+    {{/if}} --}}
+
+    <div class="post-wrapper">
+        <header class="post-header">
+            <h2 class="post-title">{{title}}</h2>
+        </header>
+        <div class="post-excerpt">
+            {{excerpt words="10"}}
+        </div>
+        {{!-- {{> post-meta}} --}}
+    </div>
+
+</article>

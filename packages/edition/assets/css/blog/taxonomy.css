@@ -1,0 +1,10 @@
+.taxonomy {
+    margin-bottom: 6vmin;
+}
+
+.taxonomy-media {
+    width: 90px;
+    margin: 0 auto 3rem;
+    overflow: hidden;
+    border-radius: 50%;
+}

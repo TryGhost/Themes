@@ -1,0 +1,125 @@
+body:not(.with-full-cover) .cover {
+    margin-top: 9vmin;
+}
+
+.with-full-cover .cover {
+    position: relative;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.with-full-cover .cover.half {
+    height: 60vh;
+}
+
+.with-full-cover .cover::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    content: "";
+    background-color: #000;
+    opacity: 0.3;
+    transition: opacity 1.5s ease;
+}
+
+.cover.image-loading::before {
+    opacity: 1;
+}
+
+.cover-image {
+    transition: transform 2s ease;
+}
+
+.cover.image-loading .cover-image {
+    transform: scale(1.02);
+}
+
+.cover-content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 720px;
+    margin: auto;
+    text-align: center;
+}
+
+.cover-description {
+    font-size: 3.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+}
+
+.has-serif-title .cover-description {
+    font-family: var(--font-serif);
+}
+
+.with-full-cover .cover-description {
+    color: #fff;
+}
+
+.cover-cta {
+    display: flex;
+    margin-top: 2rem;
+}
+
+.cover-cta .button {
+    margin: 0 0.5rem;
+}
+
+.cover-form {
+    width: 100%;
+    max-width: 480px;
+    margin-top: 4.5rem;
+}
+
+.cover-form input {
+    height: 50px;
+}
+
+.with-full-cover .cover-form input {
+    background-color: #fff;
+    border-color: transparent;
+}
+
+.cover-form .form-button {
+    min-width: 110px;
+}
+
+.cover-arrow {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    margin-left: -20px;
+}
+
+.cover.half .cover-arrow {
+    display: none;
+}
+
+.cover-arrow .icon {
+    width: 28px;
+    height: 28px;
+    color: #fff;
+}
+
+@media (max-width: 767px) {
+    .cover-description {
+        font-size: 2.7rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .menu-opened .cover {
+        margin-top: 0;
+    }
+}

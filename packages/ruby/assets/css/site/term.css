@@ -1,0 +1,17 @@
+.term {
+    max-width: 560px;
+    margin: 32px 0 48px;
+}
+
+.term .author-image-placeholder {
+    margin-bottom: 16px;
+}
+
+.term-name {
+    font-size: 2.4rem;
+}
+
+.term-description {
+    margin-top: 12px;
+    line-height: 1.5;
+}
