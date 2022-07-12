@@ -8,6 +8,7 @@ on:
       - 'renovate/*'
     paths:
       - 'packages/alto/**'
+      - '.github/workflows/alto.yml'
 
 jobs:
   test:
