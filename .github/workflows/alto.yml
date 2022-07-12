@@ -51,4 +51,4 @@ jobs:
         with:
           subtree: 'TryGhost/Alto'
           subtree_deploy_key: ${{secrets.ALTO_GITHUB_DEPLOY_KEY}}
-          # split_prefix: 'src/directory'
+          split_prefix: 'packages/alto'
