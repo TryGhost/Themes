@@ -41,16 +41,8 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - uses: johno/actions-push-subdirectories@master
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: nxtlvlsoftware/git-subtree-action@1.1
         with:
-          args: packages/alto TryGhost Alto
-      # - uses: nxtlvlsoftware/git-subtree-action@1.1
-      #   with:
-      #     repo: 'TryGhost/Alto'
-      #     path: 'packages/alto'
-      #     deploy_key: ${{secrets.ALTO_GITHUB_DEPLOY_KEY}}
-      #     force: false
-
+          repo: 'TryGhost/Alto'
+          path: 'packages/alto'
+          deploy_key: ${{secrets.ALTO_GITHUB_DEPLOY_KEY}}
