@@ -1,4 +1,4 @@
-name: Headline
+name: Ease
 
 on:
   pull_request:
@@ -7,8 +7,8 @@ on:
       - main
       - 'renovate/*'
     paths:
-      - 'packages/headline/**'
-      - '.github/workflows/headline.yml'
+      - 'packages/ease/**'
+      - '.github/workflows/ease.yml'
 
 jobs:
   test:
@@ -18,7 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: yarn
-      - run: yarn test:ci --theme headline
+      - run: yarn test:ci --theme ease
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
@@ -29,9 +29,9 @@ jobs:
       - name: Deploy theme
         uses: minimaluminium/action-deploy-theme@custom-dir
         with:
-          api-url: ${{ secrets.HEADLINE_GHOST_ADMIN_API_URL }}
-          api-key: ${{ secrets.HEADLINE_GHOST_ADMIN_API_KEY }}
-          working-directory: packages/headline
+          api-url: ${{ secrets.EASE_GHOST_ADMIN_API_URL }}
+          api-key: ${{ secrets.EASE_GHOST_ADMIN_API_KEY }}
+          working-directory: packages/ease
   subtree:
     name: Subtree
     runs-on: ubuntu-latest
@@ -43,8 +43,8 @@ jobs:
           fetch-depth: 0
       - uses: nxtlvlsoftware/git-subtree-action@1.1
         with:
-          repo: 'TryGhost/Headline'
-          path: 'packages/headline'
-          deploy_key: ${{secrets.HEADLINE_GITHUB_DEPLOY_KEY}}
+          repo: 'TryGhost/Ease'
+          path: 'packages/ease'
+          deploy_key: ${{secrets.EASE_GITHUB_DEPLOY_KEY}}
           branch: main
           force: true
