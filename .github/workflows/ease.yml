@@ -1,5 +1,4 @@
 name: Ease
-
 on:
   pull_request:
   push:

@@ -1,5 +1,4 @@
 name: Edition
-
 on:
   pull_request:
   push:

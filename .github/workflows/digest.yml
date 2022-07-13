@@ -1,5 +1,4 @@
 name: Digest
-
 on:
   pull_request:
   push:

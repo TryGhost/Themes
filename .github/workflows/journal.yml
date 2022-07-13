@@ -1,5 +1,4 @@
 name: Journal
-
 on:
   pull_request:
   push:

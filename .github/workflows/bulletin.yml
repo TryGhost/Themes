@@ -1,5 +1,4 @@
 name: Bulletin
-
 on:
   pull_request:
   push:

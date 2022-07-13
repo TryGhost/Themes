@@ -1,5 +1,4 @@
 name: Dope
-
 on:
   pull_request:
   push:

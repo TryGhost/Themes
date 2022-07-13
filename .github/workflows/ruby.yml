@@ -1,5 +1,4 @@
 name: Ruby
-
 on:
   pull_request:
   push:
