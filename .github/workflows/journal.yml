@@ -7,6 +7,7 @@ on:
       - 'renovate/*'
     paths:
       - 'packages/journal/**'
+      - '.github/workflows/journal.yml'
 
 jobs:
   test:
