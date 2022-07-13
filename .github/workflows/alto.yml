@@ -47,3 +47,4 @@ jobs:
           path: 'packages/alto'
           deploy_key: ${{secrets.ALTO_GITHUB_DEPLOY_KEY}}
           branch: main
+          force: true
