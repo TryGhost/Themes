@@ -7,6 +7,7 @@ on:
       - 'renovate/*'
     paths:
       - 'packages/bulletin/**'
+      - '.github/workflows/bulletin.yml'
 
 jobs:
   test:
