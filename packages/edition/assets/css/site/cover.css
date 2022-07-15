@@ -44,6 +44,7 @@ body:not(.with-full-cover) .cover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
     max-width: 720px;
     margin: auto;
     text-align: center;
