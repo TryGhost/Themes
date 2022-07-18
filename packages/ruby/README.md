@@ -1,10 +1,8 @@
 # Ruby
 
-A multi-column theme with a unique card layout. Share your posts with contemporary style. Completely free and fully responsive, released under the MIT license.
+A multi-column [Ghost](https://github.com/TryGhost/Ghost) theme with a unique card layout. Make your publication more organized with cards and widgets.
 
 **Demo: https://ruby.ghost.io**
-
-&nbsp;
 
 # Instructions
 
@@ -20,20 +18,20 @@ Styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'll need 
 yarn
 
 # Run build & watch for changes
-$ yarn dev
+yarn dev
 ```
 
 Now you can edit `/assets/css/` files, which will be compiled to `/assets/built/` automatically.
 
-The `zip` Gulp task packages the theme files into `dist/<theme-name>.zip`, which you can then upload to your site.
+The `zip` Gulp task packages the theme files into `dist/ruby.zip`, which you can then upload to your site.
 
 ```bash
 yarn zip
 ```
 
-# PostCSS Features Used
+# Contribution
 
-- Autoprefixer - Don't worry about writing browser prefixes of any kind, it's all done automatically with support for the latest 2 major versions of every browser.
+This repo is synced automatically with [TryGhost/Themes](https://github.com/TryGhost/Themes) monorepo. If you're looking to contribute, head over to the main repository [TryGhost/Themes](https://github.com/TryGhost/Themes) where our official themes are developed.
 
 # Copyright & License
 

@@ -1,12 +1,14 @@
 # Ghost Themes
 
+A monorepo for [Ghost](https://github.com/TryGhost/Ghost) official themes. 
+
 ## Development
 
 You'll need [Node](https://nodejs.org/), [Yarn](https://yarnpkg.com/) and [Gulp](https://gulpjs.com) installed globally. After that, from the project's root directory:
 
 ```bash
 # install dependencies
-yarn install
+yarn
 
 # run development server
 yarn dev
@@ -14,12 +16,14 @@ yarn dev
 
 Now you can edit files in `packages/<theme-name>/assets/css/` or `packages/<theme-name>/assets/js/`, which will be compiled to `packages/<theme-name>/assets/built/` automatically.
 
-To run a theme locally, you need to symlink a theme to your local Ghost site:
+To run a theme locally, you need to symlink a theme to your local Ghost site.
 
 ```bash
 # run a theme locally
 yarn symlink --theme <theme-name> --site /dir/to/your/ghost-site
 ```
+
+Restart your Ghost instance and the theme will be listed in the `Design` settings.
 
 To create an installable theme zip file in `packages/<theme-name>/dist/`:
 
@@ -27,10 +31,6 @@ To create an installable theme zip file in `packages/<theme-name>/dist/`:
 # create .zip file
 yarn zip --theme <theme-name>
 ```
-
-## PostCSS Features Used
-
-- Autoprefixer - Don't worry about writing browser prefixes of any kind, it's all done automatically with support for the latest 2 major versions of every browser.
 
 ## Copyright & License
 
