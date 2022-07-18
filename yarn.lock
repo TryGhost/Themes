@@ -4757,8 +4757,8 @@ setprototypeof@1.2.0:
 
 "shared@https://gitpkg.now.sh/TryGhost/Themes/packages/_shared?main":
   version "1.0.0"
-  uid "18e497119335c2312b2aa8ff3b112dd1a73bbad3"
-  resolved "https://gitpkg.now.sh/TryGhost/Themes/packages/_shared?main#18e497119335c2312b2aa8ff3b112dd1a73bbad3"
+  uid "0340faf3bea47eb539a01cf56a609411320d2773"
+  resolved "https://gitpkg.now.sh/TryGhost/Themes/packages/_shared?main#0340faf3bea47eb539a01cf56a609411320d2773"
 
 shell-quote@^1.7.3:
   version "1.7.3"
