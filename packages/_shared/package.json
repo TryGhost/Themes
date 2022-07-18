@@ -1,6 +1,6 @@
 {
-    "name": "shared",
-    "description": "Shared components",
+    "name": "@tryghost/shared-theme-assets",
+    "description": "Shared theme assets for official Ghost themes",
     "version": "1.0.0",
     "license": "MIT",
     "author": {

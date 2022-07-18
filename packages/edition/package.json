@@ -2,6 +2,7 @@
     "name": "edition",
     "description": "A clean, minimal newsletter theme for the Ghost publishing platform",
     "version": "1.0.0",
+    "private": true,
     "engines": {
         "ghost": ">=4.0.0"
     },
