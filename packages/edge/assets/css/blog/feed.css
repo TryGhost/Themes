@@ -23,6 +23,30 @@
     width: 100%;
 }
 
+@media (max-width: 640px) {
+    .post-feed {
+        --grid-gap: 4px;
+
+        max-width: calc(100% - (calc(var(--gap) - var(--grid-gap))) * 2);
+    }
+
+    .post-feed .grid-item {
+        width: 50%;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1019px) {
+    .post-feed {
+        --grid-gap: 8px;
+
+        max-width: calc(100% - (calc(var(--gap) - var(--grid-gap))) * 2);
+    }
+
+    .post-feed .grid-item {
+        width: calc(100% / 3);
+    }
+}
+
 @media (min-width: 1020px) {
     .post-feed {
         max-width: 990px;
