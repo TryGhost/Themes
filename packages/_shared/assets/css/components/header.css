@@ -174,7 +174,8 @@ Home About Collection Author Portal
 
 .is-head-transparent .gh-head-logo,
 .is-head-transparent .gh-head .nav a,
-.is-head-transparent .gh-head-description {
+.is-head-transparent .gh-head-description,
+.is-head-transparent .gh-search {
     color: var(--color-white);
 }
 
@@ -202,7 +203,8 @@ Home About Collection Author Portal
 
 .is-head-dark:not(.is-head-transparent) .gh-head-logo,
 .is-head-dark:not(.is-head-transparent) .gh-head .nav a,
-.is-head-dark:not(.is-head-transparent) .gh-head-description {
+.is-head-dark:not(.is-head-transparent) .gh-head-description,
+.is-head-dark:not(.is-head-transparent) .gh-search {
     color: var(--color-white);
 }
 
@@ -230,7 +232,8 @@ Home About Collection Author Portal
 
 .is-head-brand:not(.is-head-transparent) .gh-head-logo,
 .is-head-brand:not(.is-head-transparent) .gh-head .nav a,
-.is-head-brand:not(.is-head-transparent) .gh-head-description {
+.is-head-brand:not(.is-head-transparent) .gh-head-description,
+.is-head-brand:not(.is-head-transparent) .gh-search {
     color: var(--color-white);
 }
 
