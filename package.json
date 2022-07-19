@@ -56,7 +56,8 @@
             "value-keyword-case": null,
             "keyframes-name-pattern": null,
             "selector-not-notation": null,
-            "keyframe-block-no-duplicate-selectors": null
+            "keyframe-block-no-duplicate-selectors": null,
+            "import-notation": null
         }
     },
     "renovate": {
