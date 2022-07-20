@@ -6,7 +6,7 @@ on:
       - main
       - 'renovate/*'
     paths:
-      - 'packages/wave/**'
+      - 'themes/wave/**'
       - '.github/workflows/wave.yml'
 
 jobs:
@@ -30,7 +30,7 @@ jobs:
         with:
           api-url: ${{ secrets.WAVE_GHOST_ADMIN_API_URL }}
           api-key: ${{ secrets.WAVE_GHOST_ADMIN_API_KEY }}
-          working-directory: packages/wave
+          working-directory: themes/wave
   subtree:
     name: Subtree
     runs-on: ubuntu-latest
@@ -43,6 +43,6 @@ jobs:
       - uses: nxtlvlsoftware/git-subtree-action@1.1
         with:
           repo: 'TryGhost/Wave'
-          path: 'packages/wave'
+          path: 'themes/wave'
           deploy_key: ${{secrets.WAVE_GITHUB_DEPLOY_KEY}}
           force: true

@@ -53,8 +53,8 @@ function doCSS(path, done) {
 function doJS(path, done) {
     pump([
         src([
-            'packages/_shared/assets/js/lib/**/*.js',
-            'packages/_shared/assets/js/main.js',
+            'themes/_shared/assets/js/lib/**/*.js',
+            'themes/_shared/assets/js/main.js',
             `${path}/assets/js/lib/**/*.js`,
             `${path}/assets/js/main.js`,
         ], {sourcemaps: true}),
@@ -66,7 +66,7 @@ function doJS(path, done) {
 }
 
 function main(done) {
-    const tasks = glob.sync('packages/*', {ignore: 'packages/_shared'}).map(path => {
+    const tasks = glob.sync('themes/*', {ignore: 'themes/_shared'}).map(path => {
         const packageName = require(`./${path}/package.json`).name;
 
         function package(taskDone) {
@@ -100,7 +100,7 @@ function main(done) {
     });
 
     function sharedCSS(done) {
-        glob.sync('packages/*', {ignore: 'packages/_shared'}).map(path => {
+        glob.sync('themes/*', {ignore: 'themes/_shared'}).map(path => {
             pump([
                 src(`${path}/assets/css/screen.css`, {sourcemaps: true}),
                 postcss([
@@ -113,14 +113,14 @@ function main(done) {
             ], handleError(done));
         });
     }
-    const sharedCSSWatcher = () => watch('packages/_shared/assets/css/**/*.css', sharedCSS);
+    const sharedCSSWatcher = () => watch('themes/_shared/assets/css/**/*.css', sharedCSS);
 
     function sharedJS(done) {
-        glob.sync('packages/*', {ignore: 'packages/_shared'}).map(path => {
+        glob.sync('themes/*', {ignore: 'themes/_shared'}).map(path => {
             pump([
                 src([
-                    'packages/_shared/assets/js/lib/**/*.js',
-                    'packages/_shared/assets/js/main.js',
+                    'themes/_shared/assets/js/lib/**/*.js',
+                    'themes/_shared/assets/js/main.js',
                     `${path}/assets/js/lib/**/*.js`,
                     `${path}/assets/js/main.js`,
                 ], {sourcemaps: true}),
@@ -131,7 +131,7 @@ function main(done) {
             ], handleError(done));
         });
     }
-    const sharedJSWatcher = () => watch('packages/_shared/assets/js/**/*.js', sharedJS);
+    const sharedJSWatcher = () => watch('themes/_shared/assets/js/**/*.js', sharedJS);
 
     const sharedWatcher = parallel(sharedCSSWatcher, sharedJSWatcher);
 
@@ -142,14 +142,14 @@ function main(done) {
 }
 
 function doLint(theme, fix, done) {
-    let source = ['packages/*/assets/css/**/*.css'];
+    let source = ['themes/*/assets/css/**/*.css'];
 
     if (theme) {
-        source = [`packages/${theme}/assets/css/**/*.css`, 'packages/_shared/assets/css/**/*.css'];
+        source = [`themes/${theme}/assets/css/**/*.css`, 'themes/_shared/assets/css/**/*.css'];
     }
 
     pump([
-        src([...source, '!packages/*/assets/built/*.css'], {base: '.'}),
+        src([...source, '!themes/*/assets/built/*.css'], {base: '.'}),
         gulpStylelint({
             fix: fix,
             reporters: [
@@ -169,7 +169,7 @@ function symlink(done) {
         handleError(done('Required parameters [--theme, --site] missing!'));
     }
 
-    exec(`ln -sfn ${__dirname}/packages/${argv.theme} ${argv.site}/content/themes`);
+    exec(`ln -sfn ${__dirname}/themes/${argv.theme} ${argv.site}/content/themes`);
     done();
 }
 
@@ -180,7 +180,7 @@ function test(done) {
     };
 
     const testGScan = gscanDone => {
-        glob.sync('packages/*', {ignore: 'packages/_shared'}).forEach(path => {
+        glob.sync('themes/*', {ignore: 'themes/_shared'}).forEach(path => {
             exec(`gscan ${path} --colors`, (error, stdout, _stderr) => {
                 console.log(stdout);
                 if (error) process.exit(1);
@@ -203,7 +203,7 @@ function testCI(done) {
     };
 
     const testGScan = gscanDone => {
-        exec(`gscan --fatal --verbose packages/${argv.theme} --colors`, (error, stdout, _stderr) => {
+        exec(`gscan --fatal --verbose themes/${argv.theme} --colors`, (error, stdout, _stderr) => {
             console.log(stdout);
             if (error) process.exit(1);
         });
@@ -214,11 +214,11 @@ function testCI(done) {
 }
 
 function css(done) {
-    doCSS(`./packages/${argv.theme}`, done);
+    doCSS(`./themes/${argv.theme}`, done);
 }
 
 function js(done) {
-    doJS(`./packages/${argv.theme}`, done);
+    doJS(`./themes/${argv.theme}`, done);
 }
 
 const build = series(css, js);
@@ -228,7 +228,7 @@ function zipper(done) {
         handleError(done('Required parameter [--theme] missing!'));
     }
 
-    const filename = require(`./packages/${argv.theme}/package.json`).name + '.zip';
+    const filename = require(`./themes/${argv.theme}/package.json`).name + '.zip';
 
     pump([
         src([
@@ -236,9 +236,9 @@ function zipper(done) {
             '!node_modules', '!node_modules/**',
             '!dist', '!dist/**',
             '!yarn-error.log'
-        ], {cwd: `./packages/${argv.theme}`}),
+        ], {cwd: `./themes/${argv.theme}`}),
         zip(filename),
-        dest(`packages/${argv.theme}/dist/`)
+        dest(`themes/${argv.theme}/dist/`)
     ], handleError(done));
 }
 

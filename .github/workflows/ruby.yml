@@ -6,7 +6,7 @@ on:
       - main
       - 'renovate/*'
     paths:
-      - 'packages/ruby/**'
+      - 'themes/ruby/**'
       - '.github/workflows/ruby.yml'
 
 jobs:
@@ -30,7 +30,7 @@ jobs:
         with:
           api-url: ${{ secrets.RUBY_GHOST_ADMIN_API_URL }}
           api-key: ${{ secrets.RUBY_GHOST_ADMIN_API_KEY }}
-          working-directory: packages/ruby
+          working-directory: themes/ruby
   subtree:
     name: Subtree
     runs-on: ubuntu-latest
@@ -43,6 +43,6 @@ jobs:
       - uses: nxtlvlsoftware/git-subtree-action@1.1
         with:
           repo: 'TryGhost/Ruby'
-          path: 'packages/ruby'
+          path: 'themes/ruby'
           deploy_key: ${{secrets.RUBY_GITHUB_DEPLOY_KEY}}
           force: true

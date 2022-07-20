@@ -14,7 +14,7 @@ yarn
 yarn dev
 ```
 
-Now you can edit files in `packages/<theme-name>/assets/css/` or `packages/<theme-name>/assets/js/`, which will be compiled to `packages/<theme-name>/assets/built/` automatically.
+Now you can edit files in `themes/<theme-name>/assets/css/` or `themes/<theme-name>/assets/js/`, which will be compiled to `themes/<theme-name>/assets/built/` automatically.
 
 To run a theme locally, you need to symlink a theme to your local Ghost site.
 
@@ -25,7 +25,7 @@ yarn symlink --theme <theme-name> --site /dir/to/your/ghost-site
 
 Restart your Ghost instance and the theme will be listed in the `Design` settings.
 
-To create an installable theme zip file in `packages/<theme-name>/dist/`:
+To create an installable theme zip file in `themes/<theme-name>/dist/`:
 
 ```bash
 # create .zip file

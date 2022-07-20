@@ -6,7 +6,7 @@ on:
       - main
       - 'renovate/*'
     paths:
-      - 'packages/ease/**'
+      - 'themes/ease/**'
       - '.github/workflows/ease.yml'
 
 jobs:
@@ -30,7 +30,7 @@ jobs:
         with:
           api-url: ${{ secrets.EASE_GHOST_ADMIN_API_URL }}
           api-key: ${{ secrets.EASE_GHOST_ADMIN_API_KEY }}
-          working-directory: packages/ease
+          working-directory: themes/ease
   subtree:
     name: Subtree
     runs-on: ubuntu-latest
@@ -43,6 +43,6 @@ jobs:
       - uses: nxtlvlsoftware/git-subtree-action@1.1
         with:
           repo: 'TryGhost/Ease'
-          path: 'packages/ease'
+          path: 'themes/ease'
           deploy_key: ${{secrets.EASE_GITHUB_DEPLOY_KEY}}
           force: true

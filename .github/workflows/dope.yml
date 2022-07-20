@@ -6,7 +6,7 @@ on:
       - main
       - 'renovate/*'
     paths:
-      - 'packages/dope/**'
+      - 'themes/dope/**'
       - '.github/workflows/dope.yml'
 
 jobs:
@@ -30,7 +30,7 @@ jobs:
         with:
           api-url: ${{ secrets.DOPE_GHOST_ADMIN_API_URL }}
           api-key: ${{ secrets.DOPE_GHOST_ADMIN_API_KEY }}
-          working-directory: packages/dope
+          working-directory: themes/dope
   subtree:
     name: Subtree
     runs-on: ubuntu-latest
@@ -43,6 +43,6 @@ jobs:
       - uses: nxtlvlsoftware/git-subtree-action@1.1
         with:
           repo: 'TryGhost/Dope'
-          path: 'packages/dope'
+          path: 'themes/dope'
           deploy_key: ${{secrets.DOPE_GITHUB_DEPLOY_KEY}}
           force: true

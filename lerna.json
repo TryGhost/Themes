@@ -1,6 +1,6 @@
 {
   "packages": [
-    "packages/*"
+    "themes/*"
   ],
   "useNx": false,
   "version": "1.0.0",

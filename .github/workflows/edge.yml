@@ -6,7 +6,7 @@ on:
       - main
       - 'renovate/*'
     paths:
-      - 'packages/edge/**'
+      - 'themes/edge/**'
       - '.github/workflows/edge.yml'
 
 jobs:
@@ -30,7 +30,7 @@ jobs:
         with:
           api-url: ${{ secrets.EDGE_GHOST_ADMIN_API_URL }}
           api-key: ${{ secrets.EDGE_GHOST_ADMIN_API_KEY }}
-          working-directory: packages/edge
+          working-directory: themes/edge
   subtree:
     name: Subtree
     runs-on: ubuntu-latest
@@ -43,6 +43,6 @@ jobs:
       - uses: nxtlvlsoftware/git-subtree-action@1.1
         with:
           repo: 'TryGhost/Edge'
-          path: 'packages/edge'
+          path: 'themes/edge'
           deploy_key: ${{secrets.EDGE_GITHUB_DEPLOY_KEY}}
           force: true

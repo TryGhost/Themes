@@ -6,7 +6,7 @@ on:
       - main
       - 'renovate/*'
     paths:
-      - 'packages/journal/**'
+      - 'themes/journal/**'
       - '.github/workflows/journal.yml'
 
 jobs:
@@ -30,7 +30,7 @@ jobs:
         with:
           api-url: ${{ secrets.JOURNAL_GHOST_ADMIN_API_URL }}
           api-key: ${{ secrets.JOURNAL_GHOST_ADMIN_API_KEY }}
-          working-directory: packages/journal
+          working-directory: themes/journal
   subtree:
     name: Subtree
     runs-on: ubuntu-latest
@@ -43,6 +43,6 @@ jobs:
       - uses: nxtlvlsoftware/git-subtree-action@1.1
         with:
           repo: 'TryGhost/Journal'
-          path: 'packages/journal'
+          path: 'themes/journal'
           deploy_key: ${{secrets.JOURNAL_GITHUB_DEPLOY_KEY}}
           force: true

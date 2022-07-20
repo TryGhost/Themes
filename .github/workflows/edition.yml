@@ -6,7 +6,7 @@ on:
       - main
       - 'renovate/*'
     paths:
-      - 'packages/edition/**'
+      - 'themes/edition/**'
       - '.github/workflows/edition.yml'
 
 jobs:
@@ -30,7 +30,7 @@ jobs:
         with:
           api-url: ${{ secrets.EDITION_GHOST_ADMIN_API_URL }}
           api-key: ${{ secrets.EDITION_GHOST_ADMIN_API_KEY }}
-          working-directory: packages/edition
+          working-directory: themes/edition
   subtree:
     name: Subtree
     runs-on: ubuntu-latest
@@ -43,6 +43,6 @@ jobs:
       - uses: nxtlvlsoftware/git-subtree-action@1.1
         with:
           repo: 'TryGhost/Edition'
-          path: 'packages/edition'
+          path: 'themes/edition'
           deploy_key: ${{secrets.EDITION_GITHUB_DEPLOY_KEY}}
           force: true

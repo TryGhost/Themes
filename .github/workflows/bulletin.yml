@@ -6,7 +6,7 @@ on:
       - main
       - 'renovate/*'
     paths:
-      - 'packages/bulletin/**'
+      - 'themes/bulletin/**'
       - '.github/workflows/bulletin.yml'
 
 jobs:
@@ -30,7 +30,7 @@ jobs:
         with:
           api-url: ${{ secrets.BULLETIN_GHOST_ADMIN_API_URL }}
           api-key: ${{ secrets.BULLETIN_GHOST_ADMIN_API_KEY }}
-          working-directory: packages/bulletin
+          working-directory: themes/bulletin
   subtree:
     name: Subtree
     runs-on: ubuntu-latest
@@ -43,6 +43,6 @@ jobs:
       - uses: nxtlvlsoftware/git-subtree-action@1.1
         with:
           repo: 'TryGhost/Bulletin'
-          path: 'packages/bulletin'
+          path: 'themes/bulletin'
           deploy_key: ${{secrets.BULLETIN_GITHUB_DEPLOY_KEY}}
           force: true

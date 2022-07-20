@@ -6,7 +6,7 @@ on:
       - main
       - 'renovate/*'
     paths:
-      - 'packages/digest/**'
+      - 'themes/digest/**'
       - '.github/workflows/digest.yml'
 
 jobs:
@@ -30,7 +30,7 @@ jobs:
         with:
           api-url: ${{ secrets.DIGEST_GHOST_ADMIN_API_URL }}
           api-key: ${{ secrets.DIGEST_GHOST_ADMIN_API_KEY }}
-          working-directory: packages/digest
+          working-directory: themes/digest
   subtree:
     name: Subtree
     runs-on: ubuntu-latest
@@ -43,6 +43,6 @@ jobs:
       - uses: nxtlvlsoftware/git-subtree-action@1.1
         with:
           repo: 'TryGhost/Digest'
-          path: 'packages/digest'
+          path: 'themes/digest'
           deploy_key: ${{secrets.DIGEST_GITHUB_DEPLOY_KEY}}
           force: true

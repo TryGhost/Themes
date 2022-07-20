@@ -6,7 +6,7 @@ on:
       - main
       - 'renovate/*'
     paths:
-      - 'packages/dawn/**'
+      - 'themes/dawn/**'
       - '.github/workflows/dawn.yml'
 
 jobs:
@@ -30,7 +30,7 @@ jobs:
         with:
           api-url: ${{ secrets.DAWN_GHOST_ADMIN_API_URL }}
           api-key: ${{ secrets.DAWN_GHOST_ADMIN_API_KEY }}
-          working-directory: packages/dawn
+          working-directory: themes/dawn
   subtree:
     name: Subtree
     runs-on: ubuntu-latest
@@ -43,6 +43,6 @@ jobs:
       - uses: nxtlvlsoftware/git-subtree-action@1.1
         with:
           repo: 'TryGhost/Dawn'
-          path: 'packages/dawn'
+          path: 'themes/dawn'
           deploy_key: ${{secrets.DAWN_GITHUB_DEPLOY_KEY}}
           force: true
