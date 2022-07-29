@@ -13,7 +13,7 @@
         "zip": "gulp zip"
     },
     "devDependencies": {
-        "autoprefixer": "10.4.7",
+        "autoprefixer": "10.4.8",
         "beeper": "2.1.0",
         "concurrently": "7.3.0",
         "cssnano": "5.1.12",
