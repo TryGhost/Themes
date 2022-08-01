@@ -355,8 +355,11 @@ Home About Collection Author Portal
         z-index: 3999999;
         padding: 0 var(--gap) 2.4rem;
         overflow-y: scroll;
-        background-color: var(--color-white);
         -webkit-overflow-scrolling: touch;
+    }
+
+    .is-head-open:not(.is-head-brand):not(.is-head-dark) #gh-head {
+        background-color: var(--color-white);
     }
 
     .is-head-open #gh-head .gh-head-inner {
