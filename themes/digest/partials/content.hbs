@@ -37,6 +37,12 @@
     {{content}}
 </section>
 
+{{#if comments}}
+    <div class="gh-comments gh-canvas">
+        {{comments}}
+    </div>
+{{/if}}
+
 {{#is "post, home"}}
     <footer class="gh-article-footer gh-canvas">
         <nav class="gh-navigation">

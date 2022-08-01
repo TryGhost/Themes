@@ -17,6 +17,9 @@
                         {{reading_time}}
                     </span>
                 {{/if}}
+                <span>
+                    3 comments
+                </span>
                 {{#primary_tag}}
                     <span class="post-meta-item post-meta-tags">
                         <a class="post-tag post-tag-{{slug}}" href="{{url}}" title="{{name}}">{{name}}</a>
@@ -37,11 +40,11 @@
 
     </article>
 
-    {{!-- <div class="comment-container gh-canvas">
-        <div class="comment">
-            If you want to embed comments, this is a good place to do it!
+    {{#if comments}}
+        <div class="gh-comments gh-canvas">
+            {{comments}}
         </div>
-    </div> --}}
+    {{/if}}
 
     {{#if @custom.show_related_posts}}
         {{> "related"}}

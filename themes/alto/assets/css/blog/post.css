@@ -53,10 +53,10 @@
     letter-spacing: 0.01em;
 }
 
-.post-meta-item + .post-meta-item::before {
+.post-meta span + span::before {
     padding: 0 4px;
     font-family: serif;
-    content: "\02022";
+    content: "/";
 }
 
 .post-tag {

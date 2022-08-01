@@ -41,6 +41,14 @@
         {{content}}
     </div>
 
+    {{#if comments}}
+        {{#is "post"}}
+            <div class="gh-comments gh-canvas">
+                {{comments}}
+            </div>
+        {{/is}}
+    {{/if}}
+
     {{#is "home, post"}}
         <footer class="gh-article-footer gh-canvas{{#prev_post}} has-prev{{/prev_post}}{{#next_post}} has-next{{/next_post}}">
             <nav class="gh-navigation">

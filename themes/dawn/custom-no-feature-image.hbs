@@ -4,7 +4,11 @@
 
     {{#post}}
         {{> "content" no_image=true}}
-        {{> "comment"}}
+        {{#if comments}}
+            <div class="gh-comments gh-canvas">
+                {{comments}}
+            </div>
+        {{/if}}
     {{/post}}
 
     {{#is "post"}}

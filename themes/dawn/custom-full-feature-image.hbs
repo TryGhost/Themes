@@ -4,7 +4,11 @@
 
     {{#post}}
         {{> "content" width="full"}}
-        {{> "comment"}}
+        {{#if comments}}
+            <div class="gh-comments gh-canvas">
+                {{comments}}
+            </div>
+        {{/if}}
     {{/post}}
 
     {{#is "post"}}

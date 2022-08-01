@@ -38,6 +38,12 @@
             <section class="gh-content gh-canvas">
                 {{content}}
             </section>
+
+            {{#if comments}}
+                <div class="gh-comments gh-canvas">
+                    {{comments}}
+                </div>
+            {{/if}}
         </article>
     {{/post}}
 
