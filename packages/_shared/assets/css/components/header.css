@@ -384,9 +384,15 @@ Home About Collection Author Portal
         height: 100%;
     }
 
-    .is-head-open #gh-head .gh-head-menu,
-    .is-head-open #gh-head .gh-head-actions {
+    .is-head-open #gh-head .gh-head-menu {
         display: block;
+    }
+
+    .is-head-open #gh-head .gh-head-actions {
+        display: inline-flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
     }
 
     .is-head-open #gh-head .nav {
