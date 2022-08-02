@@ -86,12 +86,3 @@
     width: 16px;
     height: 16px;
 }
-
-@media (max-width: 991px) {
-    .is-head-open #gh-head .gh-head-actions {
-        display: inline-flex;
-        flex-direction: column;
-        gap: 12px;
-        align-items: center;
-    }
-}
