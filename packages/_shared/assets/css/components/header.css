@@ -375,7 +375,7 @@ Home About Collection Author Portal
         -webkit-overflow-scrolling: touch;
     }
 
-    .is-head-open:not(.is-head-brand):not(.is-head-dark) #gh-head {
+    .is-head-open:not(.is-head-brand):not(.is-head-dark):not(.is-head-transparent) #gh-head {
         background-color: var(--color-white);
     }
 
