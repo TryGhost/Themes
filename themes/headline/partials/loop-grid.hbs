@@ -31,9 +31,9 @@
             {{/if}}
 
             <footer class="gh-card-footer">
-                <span class="gh-card-author">By {{#foreach authors}}{{name}}{{/foreach}}</span>
-                <span class="gh-card-footer-sep"></span>
+                <span class="gh-card-author">{{#foreach authors}}{{name}}{{/foreach}}</span>
                 <time class="gh-card-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
+                <span class="gh-card-comments">{{comment_count}}</span>
             </footer>
         </div>
     </a>

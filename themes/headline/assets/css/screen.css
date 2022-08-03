@@ -233,9 +233,17 @@ body:not(.home-template) .gh-topic-grid .gh-card {
     color: var(--color-white);
 }
 
-.gh-card-footer-sep {
+.gh-card-footer > * + * {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.gh-card-footer > * + *:not(:empty)::before {
+    display: block;
     width: 2px;
     height: 2px;
+    content: "";
     background-color: currentColor;
     border-radius: 50%;
 }

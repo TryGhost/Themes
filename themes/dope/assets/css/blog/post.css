@@ -7,6 +7,10 @@
 }
 
 .post-wrapper {
+    max-width: 720px;
+}
+
+.post:not(.no-image) .post-wrapper {
     margin-top: 20px;
 }
 

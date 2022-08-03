@@ -19,12 +19,6 @@
             {{content}}
         </div>
 
-        {{#if comments}}
-            <div class="gh-comments gh-canvas">
-                {{comments}}
-            </div>
-        {{/if}}
-
         <div class="pagination-container gh-canvas">
         <nav class="pagination">
 
@@ -48,6 +42,12 @@
 
         </nav>
         </div>
+
+        {{#if comments}}
+            <div class="gh-comments gh-canvas">
+                {{comments}}
+            </div>
+        {{/if}}
 
     </article>
 

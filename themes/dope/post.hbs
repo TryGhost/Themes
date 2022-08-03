@@ -28,6 +28,7 @@
                             {{> "icons/star"}}
                         </span>
                     {{/if}}
+                    <span class="post-meta-item post-meta-comments">{{comment_count}}</span>
                 </div>
             </header>
         {{/if}}
@@ -40,17 +41,19 @@
         {{> "author-box"}}
     {{/if}}
 
-    {{#if comments}}
-        <div class="gh-comments gh-canvas">
-            {{comments}}
-        </div>
-    {{/if}}
-
     {{/post}}
 
     {{#if @custom.show_related_posts}}
         {{> "related-posts"}}
     {{/if}}
+
+    {{#post}}
+        {{#if comments}}
+            <div class="gh-comments gh-canvas">
+                {{comments}}
+            </div>
+        {{/if}}
+    {{/post}}
 
 </main>
 </div>

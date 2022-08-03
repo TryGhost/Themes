@@ -133,6 +133,11 @@
     margin-left: 0.6rem;
 }
 
+.gh-card-comments:not(:empty)::before {
+    margin: 0 3px;
+    content: " -";
+}
+
 .gh-loadmore {
     width: 100%;
     padding-top: 1.4rem;
