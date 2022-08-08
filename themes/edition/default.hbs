@@ -84,9 +84,11 @@
         </div>
     </footer>
 
-    {{> "pswp"}}
-
 </div>
+
+{{#is "post, page"}}
+    {{> "pswp"}}
+{{/is}}
 
 {{!-- Fixes 100vh issue on mobile browsers with toolbar on the bottom --}}
 <script>
