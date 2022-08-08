@@ -18,25 +18,25 @@
     <div class="gh-site">
         {{^if @member.paid}}
             {{^is "home"}}
-                {{> header}}
+                {{> "header"}}
             {{/is}}
         {{else}}
-            {{> header}}
+            {{> "header"}}
         {{/if}}
 
         {{{body}}}
 
         {{^if @member.paid}}
             {{^is "home"}}
-                {{> footer}}
+                {{> "footer"}}
             {{/is}}
         {{else}}
-            {{> footer}}
+            {{> "footer"}}
         {{/if}}
     </div>
 
     {{#is "post, page"}}
-        {{> pswp}}
+        {{> "pswp"}}
     {{/is}}
 
     <script src="{{asset "built/main.min.js"}}"></script>
