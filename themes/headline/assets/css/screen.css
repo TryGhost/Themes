@@ -239,7 +239,7 @@ body:not(.home-template) .gh-topic-grid .gh-card {
     align-items: center;
 }
 
-.gh-card-footer > * + *:not(:empty)::before {
+.gh-card-footer > * + *:not(script)::before {
     display: block;
     width: 2px;
     height: 2px;

@@ -110,6 +110,9 @@
 }
 
 .gh-card-meta {
+    display: inline-flex;
+    gap: 6px;
+    align-items: center;
     margin-top: 2rem;
     font-size: 1.2rem;
     font-weight: 500;
@@ -122,20 +125,24 @@
     color: var(--ghost-accent-color);
 }
 
-.gh-card-meta-wrapper {
-    display: inline-flex;
-    align-items: center;
-}
-
-.gh-card-meta-wrapper svg {
+.gh-card-meta svg {
     position: relative;
     top: -1px;
     margin-left: 0.6rem;
 }
 
-.gh-card-comments:not(:empty)::before {
-    margin: 0 3px;
-    content: " -";
+.gh-card-meta > * {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.gh-card-meta > * + *:not(script)::before {
+    width: 2px;
+    height: 2px;
+    content: "";
+    background-color: var(--color-secondary-text);
+    border-radius: 50%;
 }
 
 .gh-loadmore {

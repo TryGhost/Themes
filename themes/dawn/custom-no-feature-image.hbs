@@ -4,11 +4,6 @@
 
     {{#post}}
         {{> "content" no_image=true}}
-        {{#if comments}}
-            <div class="gh-comments gh-canvas">
-                {{comments}}
-            </div>
-        {{/if}}
     {{/post}}
 
     {{#is "post"}}
@@ -16,5 +11,14 @@
             {{> "related-posts"}}
         {{/if}}
     {{/is}}
+
+    {{#post}}
+        {{#if comments}}
+            <div class="gh-comments gh-canvas">
+                <h3 class="comments-title related-title">Comments ({{comment_count empty="0" singular="" plural=""}})</h3>
+                {{comments title="" count=false}}
+            </div>
+        {{/if}}
+    {{/post}}
 
 </main>
