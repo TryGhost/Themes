@@ -4,6 +4,7 @@
 <main class="site-main">
 
     {{#post}}
+
     <article class="{{post_class}} gh-article">
 
         <header class="gh-article-header gh-canvas">
@@ -38,6 +39,13 @@
         </div>
 
     </article>
+
+    {{#if comments}}
+        <div class="gh-comments gh-canvas">
+            {{comments}}
+        </div>
+    {{/if}}
+
     {{/post}}
 
     {{#if @custom.show_related_posts}}

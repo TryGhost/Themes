@@ -7,6 +7,10 @@
 }
 
 .post-wrapper {
+    max-width: 720px;
+}
+
+.post:not(.no-image) .post-wrapper {
     margin-top: 20px;
 }
 
@@ -21,7 +25,7 @@
     text-transform: lowercase;
 }
 
-.post-meta-item + .post-meta-item:not(:empty)::before {
+.post-meta-item + .post-meta-item::before {
     padding: 0 8px 0 4px;
     font-family: serif;
     content: "\02022";

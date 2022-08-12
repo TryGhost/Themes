@@ -34,6 +34,9 @@
                 <span class="gh-card-author">By {{#foreach authors}}{{#if @first}}{{name}}{{else}}, {{name}}{{/if}}{{/foreach}}</span>
                 <span class="gh-card-footer-sep"></span>
                 <time class="gh-card-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
+                {{#if @site.comments_enabled}}
+                    {{comment_count class="gh-card-comments"}}
+                {{/if}}
             </footer>
         </div>
     </a>

@@ -46,8 +46,14 @@
             {{content}}
         </div>
 
+        {{#if comments}}
+            <div class="gh-comments gh-canvas">
+                {{comments}}
+            </div>
+        {{/if}}
+
         {{#is "post"}}
-            <footer class="gh-article-footer gh-canvas">
+            <footer class="gh-article-footer gh-canvas{{#if @site.comments_enabled}}{{#unless @member}} no-border{{/unless}}{{#unless access}} no-border{{/unless}}{{/if}}">
                 <nav class="gh-navigation">
                     <div class="gh-navigation-previous">
                         {{#prev_post}}

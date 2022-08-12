@@ -8,14 +8,11 @@
 
         <footer class="gh-card-meta">
             <time class="gh-card-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
-            —
-            <span class="gh-card-meta-wrapper">
-                <span class="gh-card-duration">{{reading_time}}</span>
-
-                {{^has visibility="public"}}
-                    {{> icons/star}}
-                {{/has}}
-            </span>
+            <span class="gh-card-duration">{{reading_time}}</span>
+            {{comment_count class="gh-card-comments"}}
+            {{^has visibility="public"}}
+                {{> icons/star}}
+            {{/has}}
         </footer>
     </a>
 </article>

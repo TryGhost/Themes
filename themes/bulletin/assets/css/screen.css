@@ -408,6 +408,11 @@ h6 {
     display: none;
 }
 
+.gh-article-footer.no-border {
+    margin-top: 32px;
+    border-top: 0;
+}
+
 .gh-navigation {
     font-size: 1.5rem;
     font-weight: 800;
