@@ -92,7 +92,7 @@
             </div>
         </div>
     {{else}}
-        {{#get "posts" limit="1"}}
+        {{#get "posts" include="authors,tags" limit="1"}}
             {{#foreach posts}}
                 {{> article}}
             {{/foreach}}

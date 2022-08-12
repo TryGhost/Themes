@@ -34,11 +34,11 @@
 
     {{> "post-navigation"}}
 
-    {{!-- <div class="comment-container gh-canvas">
-        <div class="comment">
-            If you want to embed comments, this is a good place to do it!
+    {{#if comments}}
+        <div class="gh-comments gh-canvas">
+            {{comments}}
         </div>
-    </div> --}}
+    {{/if}}
 
     {{/post}}
 

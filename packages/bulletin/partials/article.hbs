@@ -2,7 +2,7 @@
     <header class="gh-article-header gh-canvas{{#match @custom.feature_image_width "Full"}} image-full{{else match @custom.feature_image_width "=" "Wide"}} image-wide{{/match}}">
         <h1 class="gh-article-title">{{title}}</h1>
 
-        {{#is "post"}}
+        {{#is "home,post"}}
             <span class="gh-article-meta">
                 {{#primary_author}}By <a href="{{url}}">{{name}}</a>{{/primary_author}}
                 {{#if primary_tag}}
@@ -41,9 +41,16 @@
         {{content}}
     </div>
 
-    {{#is "home, post"}}
-        <footer class="gh-article-footer gh-canvas{{#prev_post}} has-prev{{/prev_post}}{{#next_post}} has-next{{/next_post}}">
+    {{#if comments}}
+        <div class="gh-comments gh-canvas">
+            {{comments}}
+        </div>
+    {{/if}}
+
+    {{#is "home,post"}}
+        <footer class="gh-article-footer gh-canvas{{#prev_post}} has-prev{{/prev_post}}{{#next_post}} has-next{{/next_post}}{{#if @site.comments_enabled}}{{#unless @member}} no-border{{/unless}}{{#unless access}} no-border{{/unless}}{{/if}}">
             <nav class="gh-navigation">
+
                 <div class="gh-navigation-previous">
                     {{#prev_post}}
                         <a class="gh-navigation-link" href="{{url}}">
@@ -63,6 +70,7 @@
                         </a>
                     {{/next_post}}
                 </div>
+
             </nav>
         </footer>
     {{/is}}

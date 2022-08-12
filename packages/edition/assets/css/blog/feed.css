@@ -181,7 +181,7 @@
     margin-top: 1.5rem;
 }
 
-.post-feed:not(.expanded) .feed-date {
+.post-feed:not(.expanded) :is(.feed-date, .feed-comments) {
     display: none;
 }
 
@@ -214,7 +214,7 @@
     align-items: center;
 }
 
-.post-feed.expanded .feed-length::before {
+.post-feed.expanded :is(.feed-length, .feed-comments)::before {
     padding: 0 0.7rem;
     font-family: serif;
     font-size: 1rem;

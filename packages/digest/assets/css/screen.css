@@ -283,6 +283,10 @@ body:not(.home-template) .gh-article-image {
     margin-top: 6.4rem;
 }
 
+.gh-article-footer.no-border {
+    margin-top: 24px;
+}
+
 .no-pagination .gh-article-footer {
     display: none;
 }
@@ -295,6 +299,10 @@ body:not(.home-template) .gh-article-image {
     text-transform: uppercase;
     letter-spacing: 0.01em;
     border-top: 2px solid var(--color-darker-gray);
+}
+
+.gh-article-footer.no-border .gh-navigation {
+    border-top: 0;
 }
 
 .gh-navigation-previous {

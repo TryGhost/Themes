@@ -3,6 +3,7 @@
 <main class="gh-main">
     {{#post}}
         <article class="gh-article {{post_class}}">
+
             <header class="gh-article-header gh-canvas">
                 {{#if primary_tag}}
                     <a class="gh-article-tag" href="{{primary_tag.url}}">{{primary_tag.name}}</a>
@@ -38,8 +39,20 @@
             <section class="gh-content gh-canvas">
                 {{content}}
             </section>
+
         </article>
     {{/post}}
 
     {{> "related-posts"}}
+
+    {{#post}}
+    {{#if comments}}
+        <div class="gh-comments gh-read-next gh-canvas">
+            <section class="gh-pagehead">
+                <h4 class="gh-pagehead-title">Comments ({{comment_count empty="0" singular="" plural=""}})</h3>
+            </section>
+            {{comments title="" count=false}}
+        </div>
+    {{/if}}
+    {{/post}}
 </main>

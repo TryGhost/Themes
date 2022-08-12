@@ -43,6 +43,9 @@
                     {{reading_time}}
                 </div>
             {{/if}}
+            {{#if @site.comments_enabled}}
+                {{comment_count autowrap="div" class="feed-comments"}}
+            {{/if}}
             <div class="feed-icon">
                 {{> "icons/chevron-right"}}
             </div>
