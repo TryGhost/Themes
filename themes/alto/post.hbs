@@ -34,15 +34,15 @@
 
     </article>
 
-    {{#if @custom.show_related_posts}}
-        {{> "related"}}
-    {{/if}}
-
     {{#if comments}}
         <section class="gh-comments gh-canvas">
             <h3 class="related-title">Comments ({{comment_count empty="0" singular="" plural=""}})</h3>
             {{comments title="" count=false}}
         </section>
+    {{/if}}
+
+    {{#if @custom.show_related_posts}}
+        {{> "related"}}
     {{/if}}
 
     {{/post}}
