@@ -30,7 +30,7 @@
         "postcss": "8.4.16",
         "postcss-easy-import": "4.0.0",
         "pump": "3.0.0",
-        "stylelint": "14.9.1",
+        "stylelint": "14.10.0",
         "stylelint-config-recess-order": "3.0.0",
         "stylelint-config-standard": "26.0.0",
         "yargs": "17.5.1"
