@@ -30,7 +30,9 @@
                     <time datetime="{{date format="YYYY-MM-DD"}}">{{date published_at}}</time>
                 </span>
                 <span class="post-meta-item post-meta-length">{{reading_time}}</span>
-                <span class="post-meta-item post-meta-comments">{{comment_count}}</span>
+                {{#if @site.comments_enabled}}
+                    {{comment_count class="post-meta-item"}}
+                {{/if}}
                 {{#if featured}}
                     <span class="post-meta-featured">
                         {{> "icons/star"}}
