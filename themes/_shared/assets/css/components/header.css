@@ -17,6 +17,7 @@
 
 .gh-head-brand-wrapper {
     display: flex;
+    flex: 1;
     align-items: center;
 }
 
@@ -72,6 +73,22 @@
 
 .gh-search:hover {
     opacity: 0.9;
+}
+
+.gh-head-brand .gh-search {
+    margin-right: 8px;
+}
+
+@media (max-width: 991px) {
+    .gh-head-actions .gh-search {
+        display: none;
+    }
+}
+
+@media (min-width: 992px) {
+    .gh-head-brand .gh-search {
+        display: none;
+    }
 }
 
 /* Header variants
@@ -355,8 +372,11 @@ Home About Collection Author Portal
         z-index: 3999999;
         padding: 0 var(--gap) 2.4rem;
         overflow-y: scroll;
-        background-color: var(--color-white);
         -webkit-overflow-scrolling: touch;
+    }
+
+    .is-head-open:not(.is-head-brand):not(.is-head-dark):not(.is-head-transparent) #gh-head {
+        background-color: var(--color-white);
     }
 
     .is-head-open #gh-head .gh-head-inner {
@@ -364,9 +384,15 @@ Home About Collection Author Portal
         height: 100%;
     }
 
-    .is-head-open #gh-head .gh-head-menu,
-    .is-head-open #gh-head .gh-head-actions {
+    .is-head-open #gh-head .gh-head-menu {
         display: block;
+    }
+
+    .is-head-open #gh-head .gh-head-actions {
+        display: inline-flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
     }
 
     .is-head-open #gh-head .nav {
