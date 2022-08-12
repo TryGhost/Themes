@@ -28,7 +28,9 @@
                             {{> "icons/star"}}
                         </span>
                     {{/if}}
-                    <span class="post-meta-item post-meta-comments">{{comment_count}}</span>
+                    {{#if @site.comments_enabled}}
+                        {{comment_count class="post-meta-item"}}
+                    {{/if}}
                 </div>
             </header>
         {{/if}}
