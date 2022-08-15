@@ -45,6 +45,11 @@ yarn zip
 
 - Autoprefixer - Don't worry about writing browser prefixes of any kind, it's all done automatically with support for the latest 2 major versions of every browser.
 
+# Contribution
+
+This repo is synced automatically with [TryGhost/Themes](https://github.com/TryGhost/Themes) monorepo. If you're looking to contribute or raise an issue, head over to the main repository [TryGhost/Themes](https://github.com/TryGhost/Themes) where our official themes are developed.
+
+
 # Copyright & License
 
 Copyright (c) 2013-2022 Ghost Foundation - Released under the [MIT license](LICENSE).
