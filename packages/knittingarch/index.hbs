@@ -1,0 +1,43 @@
+{{!< default}}
+
+<main id="gh-main" class="gh-main gh-canvas">
+    <section class="gh-pagehead">
+        <header class="gh-pagehead-content">
+            <h1 class="gh-pagehead-title">Archive</h1>
+
+            <div class="gh-pagehead-description">
+                {{#if description}}
+                    {{description}}
+                {{else}}
+                    A collection of {{plural pagination.total empty="0 issues" singular="% issue" plural="% issues"}}
+                {{/if}}
+            </div>
+        </header>
+    </section>
+
+    {{#get "posts" filter="featured:true" limit="all" as |featured|}}
+        {{#if featured}}
+            <section class="gh-section gh-section-featured">
+                <h3 class="gh-section-title"><span>Featured</span></h3>
+
+                <div class="gh-featured">
+                    {{#foreach featured}}
+                        {{> loop}}
+                    {{/foreach}}
+                </div>
+            </section>
+        {{/if}}
+    {{/get}}
+
+    <section class="gh-section">
+        <h3 class="gh-section-title"><span>Latest</span></h3>
+
+        <div class="gh-feed">
+            {{#get "posts" limit="all"}}
+                {{#foreach posts}}
+                    {{> loop}}
+                {{/foreach}}
+            {{/get}}
+        </div>
+    </section>
+</main>

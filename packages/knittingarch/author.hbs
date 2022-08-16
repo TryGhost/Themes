@@ -1,0 +1,44 @@
+{{!< default}}
+
+<main id="gh-main" class="gh-main gh-canvas">
+    {{#author}}
+        <section class="gh-pagehead">
+            {{#if profile_image}}
+                <img class="gh-author-image gh-pagehead-image" src="{{profile_image}}" alt="{{name}}">
+            {{else}}
+                <span class="gh-author-icon">{{> icons/avatar}}</span>
+            {{/if}}
+
+            <header class="gh-pagehead-content">
+                <h1 class="gh-author-name gh-pagehead-title">{{name}}</h1>
+
+                {{#if bio}}
+                    <div class="gh-author-bio gh-pagehead-description">{{bio}}</div>
+                {{/if}}
+
+                <div class="gh-author-meta">
+                    {{#if location}}
+                        <span class="gh-author-location">📍 {{location}}</span>
+                    {{/if}}
+                    {{#if website}}
+                        <a class="gh-author-website" href="{{website}}" target="_blank" rel="noopener">{{website}}</a>
+                    {{/if}}
+                    {{#if twitter}}
+                        <a class="gh-author-twitter" href="{{twitter_url}}" target="_blank" rel="noopener">{{> icons/twitter}}</a>
+                    {{/if}}
+                    {{#if facebook}}
+                        <a class="gh-author-facebook" href="{{facebook_url}}" target="_blank" rel="noopener">{{> icons/facebook}}</a>
+                    {{/if}}
+                </div>
+            </header>
+        </section>
+
+        <div class="gh-feed">
+            {{#get "posts" filter="primary_author:{{slug}}" limit="all"}}
+                {{#foreach posts}}
+                    {{> loop}}
+                {{/foreach}}
+            {{/get}}
+        </div>
+    {{/author}}
+</main>
