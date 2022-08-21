@@ -1,0 +1,440 @@
+@import "@tryghost/shared-theme-assets/assets/css/screen.css";
+@import "fonts.css";
+
+:root {
+    --font-sans: Manrope, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+    --font-serif: Lora, Georgia, Times, serif;
+    --head-nav-gap: 32px;
+    --color-primary-text: var(--color-darker-gray);
+    --color-secondary-text-dark: rgba(0, 0, 0, 0.4);
+    --color-secondary-text-light: rgba(255, 255, 255, 0.64);
+    --color-secondary-text: var(--color-secondary-text-dark);
+    --color-border: rgba(0, 0, 0, 0.08);
+    --color-border-light: rgba(255, 255, 255, 0.2);
+    --gap: clamp(24px, 1.7032rem + 1.9355vw, 48px);
+    --container-width: 1400px;
+}
+
+:root.has-light-text {
+    --color-darker-gray: #fff;
+    --color-secondary-text: var(--color-secondary-text-light);
+    --color-border: var(--color-border-light);
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+.gh-head {
+    color: var(--color-secondary-text);
+    background-color: transparent;
+}
+
+.gh-head-inner {
+    padding: clamp(24px, 1.9355rem + 1.2903vw, 40px) 0;
+}
+
+.gh-head-brand-wrapper {
+    gap: 32px;
+}
+
+.gh-head-logo {
+    font-weight: 800;
+}
+
+.gh-social {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.gh-social-link {
+    line-height: 0;
+    color: inherit;
+}
+
+.gh-social-link svg {
+    width: 18px;
+    height: 18px;
+}
+
+.gh-head-menu {
+    font-weight: 700;
+}
+
+.gh-head-menu a {
+    color: inherit;
+}
+
+.gh-head-btn.gh-btn {
+    height: 36px;
+    padding: 0 16px;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+/* :root.has-light-text .gh-head-btn.gh-btn {
+    color: #15171a;
+    background-color: #fff;
+} */
+
+.gh-about {
+    margin-top: 100px;
+}
+
+.gh-about-inner {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 64px;
+}
+
+.gh-about-bio {
+    font-size: 5.8rem;
+    font-weight: 800;
+    line-height: 1.25;
+}
+
+.gh-subscribe-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 480px;
+    height: 52px;
+    padding: 0 8px 0 24px;
+    margin-top: 32px;
+    color: var(--color-secondary-text);
+    cursor: pointer;
+    background-color: var(--color-border);
+    border-radius: 72px;
+}
+
+.gh-subscribe-input .gh-btn {
+    font-weight: 700;
+}
+
+.has-background-about .gh-about {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    min-height: var(--about-height);
+    margin-top: 0;
+}
+
+.has-background-about .gh-about::before {
+    position: absolute;
+    inset: 0;
+    content: "";
+    background-color: var(--color-black);
+    transition: opacity 1.5s ease;
+}
+
+.has-background-about .gh-about.initialized::before {
+    opacity: 0.3;
+}
+
+.has-background-about .gh-about-image {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.has-background-about .gh-about-content {
+    position: sticky;
+    bottom: 96px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 50%;
+    padding: 0 var(--gap);
+    margin-bottom: 64px;
+    text-align: left;
+}
+
+.has-background-about .gh-about-bio {
+    font-size: clamp(4rem, 5vmin, 6rem);
+    line-height: 1.2;
+    color: #fff;
+}
+
+.has-background-about .gh-subscribe-input {
+    color: var(--color-secondary-text-dark);
+    background-color: #fff;
+    border: 0;
+}
+
+.has-typographical-about .gh-about {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.has-typographical-about .gh-about-image {
+    width: 128px;
+    height: 128px;
+}
+
+.has-typographical-about .gh-about-bio {
+    font-size: 7.2rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.has-typographical-about .gh-subscribe-input {
+    margin-top: 48px;
+}
+
+.gh-section {
+    margin-top: 32px;
+}
+
+.gh-section-title {
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--color-secondary-text);
+    letter-spacing: -0.01em;
+}
+
+.gh-section-btn {
+    justify-self: flex-start;
+    margin-top: 40px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.015em;
+}
+
+.gh-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.gh-card-link {
+    display: flex;
+    gap: 32px;
+}
+
+.gh-card-image {
+    flex-shrink: 0;
+    aspect-ratio: 16 / 10;
+}
+
+.gh-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gh-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.gh-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    margin-top: 16px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--color-secondary-text);
+}
+
+.gh-card-meta > * {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.gh-card-meta > * + *:not(script)::before {
+    width: 2px;
+    height: 2px;
+    content: "";
+    background-color: currentColor;
+    border-radius: 50%;
+}
+
+.gh-card-access svg {
+    margin-right: -5px;
+}
+
+/* .has-classic-feed .gh-card + .gh-card::before {
+    width: calc(100% - 136px - 32px);
+    height: 1px;
+    margin: 20px 0 20px auto;
+    content: "";
+    background-color: var(--color-border);
+}
+
+.has-classic-feed .gh-card-image {
+    width: 136px;
+}
+
+.has-classic-feed .gh-card-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: -0.005em;
+} */
+
+/* .has-classic1-feed .gh-card + .gh-card {
+    margin-top: 80px;
+}
+
+.has-classic1-feed .gh-card-link {
+    gap: 64px;
+}
+
+.has-classic1-feed .gh-card:nth-child(odd) .gh-card-link {
+    flex-direction: row-reverse;
+}
+
+.has-classic1-feed .gh-card-image {
+    width: 320px;
+}
+
+.has-classic1-feed .gh-card-title {
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+.has-classic1-feed .gh-card-meta {
+    margin-top: 16px;
+} */
+
+.has-classic-feed .gh-card + .gh-card {
+    margin-top: 80px;
+}
+
+.has-classic-feed .gh-card-link {
+    flex-direction: row-reverse;
+    gap: 48px;
+}
+
+.has-classic-feed .gh-card-image {
+    width: 600px;
+}
+
+.has-classic-feed .gh-card-title {
+    font-size: 4.8rem;
+    font-weight: 800;
+}
+
+.has-classic-feed .kg-width-full .gh-card-title {
+    font-size: 6.4rem;
+}
+
+.has-typographic-feed .gh-card + .gh-card {
+    margin-top: 6.4rem;
+}
+
+.has-typographic-feed .gh-card-title {
+    font-size: 5.8rem;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+}
+
+.has-typographic-feed .kg-width-full .gh-card-title {
+    font-size: 8rem;
+    line-height: 1;
+}
+
+.has-typographic-feed .gh-card-excerpt {
+    max-width: 920px;
+    margin-top: 12px;
+    font-size: 2.1rem;
+    line-height: 1.5;
+    letter-spacing: -0.005em;
+}
+
+.has-typographic-feed .gh-card-meta {
+    margin-top: 16px;
+}
+
+/* .has-grid-feed .gh-feed {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+}
+
+.has-grid-feed .gh-card-link {
+    flex-direction: column;
+    gap: 24px;
+}
+
+.has-grid-feed .gh-card-image {
+    aspect-ratio: 16 / 9;
+}
+
+.has-grid-feed .gh-card-title {
+    font-size: 2.4rem;
+    font-weight: 800;
+} */
+
+.has-parallax-feed .gh-card {
+    min-height: 480px;
+}
+
+.has-parallax-feed .kg-width-full .gh-card {
+    min-height: 600px;
+}
+
+.has-parallax-feed .gh-card + .gh-card {
+    margin-top: 80px;
+}
+
+.has-parallax-feed .gh-card-link {
+    position: relative;
+    flex-grow: 1;
+}
+
+.has-parallax-feed .gh-card:not(.no-image) .gh-card-link::before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: #000;
+    opacity: 0.2;
+}
+
+.has-parallax-feed .gh-card-image {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+.has-parallax-feed .gh-card-wrapper {
+    position: relative;
+    justify-content: flex-end;
+    padding: 48px 44px;
+}
+
+.has-parallax-feed .kg-width-full .gh-card-wrapper {
+    padding: 64px 48px;
+}
+
+.has-parallax-feed :is(.gh-card-title, .gh-card-meta) {
+    color: #fff;
+}
+
+.has-parallax-feed .gh-card-title {
+    font-size: 5.2rem;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.has-parallax-feed .kg-width-full .gh-card-title {
+    font-size: 6.4rem;
+}
+
+.has-parallax-feed .gh-card-meta {
+    margin-top: 12px;
+}

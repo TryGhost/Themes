@@ -1,0 +1,60 @@
+{{!< default}}
+
+<section class="gh-about gh-outer">
+    <div class="gh-about-inner{{#match @custom.about_section_layout "!=" "Large background"}} gh-inner{{/match}}">
+        {{#match @custom.about_section_layout "!=" "Typographical profile"}}
+            {{#if @site.cover_image}}
+                <img class="gh-about-image" src="{{@site.cover_image}}" alt="{{@site.title}}">
+            {{/if}}
+        {{else}}
+            {{#if @site.icon}}
+                <img class="gh-about-image" src="{{@site.icon}}" alt="{{@site.title}}">
+            {{/if}}
+        {{/match}}
+        <script>
+            (function () {
+                if (!document.body.classList.contains('has-background-about')) return;
+
+                const about = document.querySelector('.gh-about');
+                if (!about) return;
+
+                const image = about.querySelector('.gh-about-image');
+
+                about.style.setProperty('--about-height', image.clientWidth * image.naturalHeight / image.naturalWidth + 'px');
+                about.classList.add('initialized');
+            })();
+        </script>
+        <div class="gh-about-content">
+            {{#if @site.description}}
+                <h1 class="gh-about-bio">{{@site.description}}</h1>
+            {{/if}}
+            <div class="gh-subscribe-input" data-portal>
+                jamie@example.com
+                <span class="gh-btn gh-primary-btn">Subscribe</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<main class="gh-main gh-outer">
+    <section class="gh-section{{#match @custom.about_section_layout "!=" "Large background"}} gh-inner{{/match}}">
+        <div class="gh-section-content">
+        {{!-- <div class="gh-section-content kg-width-wide"> --}}
+            {{!-- <h2 class="gh-section-title">Latest writing</h2> --}}
+            <div class="gh-feed">
+                {{#foreach posts}}
+                    {{!-- {{#match @custom.feed_layout "Classic"}} --}}
+                        {{> "loop"}}
+                    {{!-- {{else match @custom.feed_layout "Typographic"}}
+                        {{> "loop-typographic"}}
+                    {{else}}
+                        {{> "loop-grid"}}
+                    {{/match}} --}}
+                {{/foreach}}
+            </div>
+            {{!-- <button class="gh-section-btn gh-text-btn">Read more</button> --}}
+        </div>
+    </section>
+</main>
+
+{{#contentFor "body_class"}}{{#match @custom.about_section_layout "Large background"}} is-head-transparent has-background-about{{/match}}{{#match @custom.about_section_layout "Typographical profile"}} has-typographical-about{{/match}}{{/contentFor}}

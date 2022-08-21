@@ -192,7 +192,8 @@ Home About Collection Author Portal
 .is-head-transparent .gh-head-logo,
 .is-head-transparent .gh-head .nav a,
 .is-head-transparent .gh-head-description,
-.is-head-transparent .gh-search {
+.is-head-transparent .gh-search,
+.is-head-transparent .gh-social {
     color: var(--color-white);
 }
 
@@ -202,8 +203,8 @@ Home About Collection Author Portal
 }
 
 .is-head-transparent .gh-head-btn {
-    color: var(--color-darker-gray);
-    background-color: var(--color-white);
+    color: #15171a;
+    background-color: #fff;
 }
 
 .is-head-transparent .gh-head-menu::before,
@@ -221,7 +222,8 @@ Home About Collection Author Portal
 .is-head-dark:not(.is-head-transparent) .gh-head-logo,
 .is-head-dark:not(.is-head-transparent) .gh-head .nav a,
 .is-head-dark:not(.is-head-transparent) .gh-head-description,
-.is-head-dark:not(.is-head-transparent) .gh-search {
+.is-head-dark:not(.is-head-transparent) .gh-search,
+.is-head-dark:not(.is-head-transparent) .gh-social {
     color: var(--color-white);
 }
 
@@ -231,7 +233,7 @@ Home About Collection Author Portal
 }
 
 .is-head-dark:not(.is-head-transparent) .gh-head-btn {
-    color: var(--color-darker-gray);
+    color: #15171a;
     background-color: #fff;
 }
 
@@ -250,7 +252,8 @@ Home About Collection Author Portal
 .is-head-brand:not(.is-head-transparent) .gh-head-logo,
 .is-head-brand:not(.is-head-transparent) .gh-head .nav a,
 .is-head-brand:not(.is-head-transparent) .gh-head-description,
-.is-head-brand:not(.is-head-transparent) .gh-search {
+.is-head-brand:not(.is-head-transparent) .gh-search,
+.is-head-brand:not(.is-head-transparent) .gh-social {
     color: var(--color-white);
 }
 
@@ -260,7 +263,7 @@ Home About Collection Author Portal
 }
 
 .is-head-brand:not(.is-head-transparent) .gh-head-btn {
-    color: var(--color-darker-gray);
+    color: #15171a;
     background-color: #fff;
 }
 

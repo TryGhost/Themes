@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="{{@site.locale}}">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{meta_title}}</title>
+    <link rel="stylesheet" href="{{asset "built/screen.css"}}">
+
+    {{#is "home"}}
+        {{#if @site.cover_image}}
+            <link rel="preload" as="image" href="{{@site.cover_image}}">
+        {{/if}}
+    {{/is}}
+
+    <style>
+        :root {
+            --background-color: {{@custom.background_color}}
+        }
+    </style>
+
+    <script>
+        /* The script for calculating the color contrast was taken from
+        https://gomakethings.com/dynamically-changing-the-text-color-based-on-background-color-contrast-with-vanilla-js/ */
+        var accentColor = getComputedStyle(document.documentElement).getPropertyValue('--background-color');
+        accentColor = accentColor.trim().slice(1);
+        var r = parseInt(accentColor.substr(0, 2), 16);
+        var g = parseInt(accentColor.substr(2, 2), 16);
+        var b = parseInt(accentColor.substr(4, 2), 16);
+        var yiq = ((r * 299) + (g * 587) + (b * 114)) / 1000;
+        var textColor = (yiq >= 128) ? 'dark' : 'light';
+
+        document.documentElement.className = `has-${textColor}-text`;
+    </script>
+
+    {{ghost_head}}
+</head>
+
+<body class="{{body_class}}{{{block "body_class"}}}{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Elegant serif"}} has-serif-body{{/match}}{{#match @custom.feed_layout "Classic"}} has-classic-feed{{/match}}{{#match @custom.feed_layout "Typographic"}} has-typographic-feed{{/match}}{{#match @custom.feed_layout "Parallax"}} has-parallax-feed{{/match}}">
+    <div class="gh-site">
+        <header id="gh-head" class="gh-head gh-outer">
+            <div class="gh-head-inner">
+                <div class="gh-head-brand">
+                    <div class="gh-head-brand-wrapper">
+                        <a class="gh-head-logo" href="{{@site.url}}">
+                            {{#if @site.logo}}
+                                <img src="{{@site.logo}}" alt="{{@site.title}}">
+                            {{else}}
+                                {{@site.title}}
+                            {{/if}}
+                        </a>
+                        <div class="gh-social">
+                            {{#if @site.facebook}}
+                                <a class="gh-social-link gh-social-facebook" href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
+                            {{/if}}
+                            {{#if @site.twitter}}
+                                <a class="gh-social-link gh-social-twitter" href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
+                            {{/if}}
+                        </div>
+                    </div>
+                    <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button>
+                    <button class="gh-burger"></button>
+                </div>
+
+                <nav class="gh-head-menu">
+                    {{navigation}}
+                </nav>
+
+                <div class="gh-head-actions">
+                    <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button>
+                    {{^is "home"}}
+                        {{#unless @member}}
+                            <a class="gh-head-btn gh-btn gh-primary-btn" href="#/portal/signup" data-portal="signup">Subscribe</a>
+                        {{else}}
+                            <a class="gh-head-btn gh-btn" href="#/portal/account" data-portal="account">Account</a>
+                        {{/unless}}
+                    {{/is}}
+                </div>
+            </div>
+        </header>
+
+        {{{body}}}
+
+        <footer class="gh-foot gh-outer">
+            <div class="gh-foot-inner gh-inner">
+                <div class="gh-copyright">
+                    {{@site.title}} © {{date format="YYYY"}}
+                </div>
+
+                <nav class="gh-foot-menu">
+                    {{navigation type="secondary"}}
+                </nav>
+
+                <div class="gh-powered-by">
+                    <a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    {{#is "post, page"}}
+        {{> "pswp"}}
+    {{/is}}
+
+    <script src="{{asset "built/main.min.js"}}"></script>
+
+    {{ghost_foot}}
+</body>
+
+</html>
