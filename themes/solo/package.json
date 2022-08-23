@@ -45,19 +45,14 @@
                 "type": "color",
                 "default": "#ffffff"
             },
-            "title_font": {
+            "typography": {
                 "type": "select",
-                "options": ["Modern sans-serif", "Elegant serif"],
-                "default": "Modern sans-serif"
-            },
-            "body_font": {
-                "type": "select",
-                "options": ["Modern sans-serif", "Elegant serif"],
+                "options": ["Modern sans-serif", "Elegant serif", "Consistent mono"],
                 "default": "Modern sans-serif"
             },
             "about_section_layout": {
                 "type": "select",
-                "options": ["Side by side", "Large background", "Typographical profile"],
+                "options": ["Side by side", "Large background", "Typographic profile"],
                 "default": "Side by side",
                 "group": "homepage"
             },

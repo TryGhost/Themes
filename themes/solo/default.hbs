@@ -5,7 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{meta_title}}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="{{asset "built/screen.css"}}">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;0,800;1,400;1,700&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
     {{#is "home"}}
         {{#if @site.cover_image}}
@@ -36,7 +40,7 @@
     {{ghost_head}}
 </head>
 
-<body class="{{body_class}}{{{block "body_class"}}}{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Elegant serif"}} has-serif-body{{/match}}{{#match @custom.feed_layout "Classic"}} has-classic-feed{{/match}}{{#match @custom.feed_layout "Typographic"}} has-typographic-feed{{/match}}{{#match @custom.feed_layout "Parallax"}} has-parallax-feed{{/match}}">
+<body class="{{body_class}}{{{block "body_class"}}}{{#match @custom.typography "Elegant serif"}} has-serif-font{{/match}}{{#match @custom.typography "Consistent mono"}} has-mono-font{{/match}}{{#match @custom.feed_layout "Classic"}} has-classic-feed{{/match}}{{#match @custom.feed_layout "Typographic"}} has-typographic-feed{{/match}}{{#match @custom.feed_layout "Parallax"}} has-parallax-feed{{/match}}">
     <div class="gh-site">
         <header id="gh-head" class="gh-head gh-outer">
             <div class="gh-head-inner">

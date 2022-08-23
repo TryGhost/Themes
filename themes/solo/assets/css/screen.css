@@ -3,7 +3,8 @@
 
 :root {
     --font-sans: Manrope, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
-    --font-serif: Lora, Georgia, Times, serif;
+    --font-serif: "Noto Serif", Lora, Georgia, Times, serif;
+    --font-mono: "JetBrains Mono";
     --head-nav-gap: 32px;
     --color-primary-text: var(--color-darker-gray);
     --color-secondary-text-dark: rgba(0, 0, 0, 0.4);
@@ -79,7 +80,7 @@ body {
 } */
 
 .gh-about {
-    margin-top: 100px;
+    margin-top: 48px;
 }
 
 .gh-about-inner {
@@ -91,7 +92,15 @@ body {
 .gh-about-bio {
     font-size: 5.8rem;
     font-weight: 800;
-    line-height: 1.25;
+    line-height: 1.2;
+}
+
+.has-serif-font .gh-about-bio {
+    font-family: var(--font-serif);
+}
+
+.has-mono-font .gh-about-bio {
+    font-family: var(--font-mono);
 }
 
 .gh-subscribe-input {
@@ -115,9 +124,6 @@ body {
 
 .has-background-about .gh-about {
     position: relative;
-    display: flex;
-    align-items: flex-end;
-    min-height: var(--about-height);
     margin-top: 0;
 }
 
@@ -131,6 +137,12 @@ body {
 
 .has-background-about .gh-about.initialized::before {
     opacity: 0.3;
+}
+
+.has-background-about .gh-about-inner {
+    display: flex;
+    align-items: flex-end;
+    min-height: var(--about-height);
 }
 
 .has-background-about .gh-about-image {
@@ -149,14 +161,12 @@ body {
     flex-direction: column;
     align-items: flex-start;
     max-width: 50%;
-    padding: 0 var(--gap);
     margin-bottom: 64px;
     text-align: left;
 }
 
 .has-background-about .gh-about-bio {
-    font-size: clamp(4rem, 5vmin, 6rem);
-    line-height: 1.2;
+    font-size: clamp(4rem, 3.4194rem + 1.6129vw, 6rem);
     color: #fff;
 }
 
@@ -166,24 +176,23 @@ body {
     border: 0;
 }
 
-.has-typographical-about .gh-about {
+.has-typographic-about .gh-about-inner {
     display: flex;
     flex-direction: column;
     gap: 48px;
 }
 
-.has-typographical-about .gh-about-image {
+.has-typographic-about .gh-about-image {
     width: 128px;
     height: 128px;
 }
 
-.has-typographical-about .gh-about-bio {
+.has-typographic-about .gh-about-bio {
     font-size: 7.2rem;
     font-weight: 800;
-    line-height: 1.2;
 }
 
-.has-typographical-about .gh-subscribe-input {
+.has-typographic-about .gh-subscribe-input {
     margin-top: 48px;
 }
 
@@ -218,6 +227,10 @@ body {
     gap: 32px;
 }
 
+.gh-card-link:hover {
+    opacity: 1;
+}
+
 .gh-card-image {
     flex-shrink: 0;
     aspect-ratio: 16 / 10;
@@ -234,6 +247,18 @@ body {
     flex-direction: column;
     flex-grow: 1;
     justify-content: center;
+}
+
+.has-serif-font .gh-card-title {
+    font-family: var(--font-serif);
+}
+
+.has-mono-font .gh-card-title {
+    font-family: var(--font-mono);
+}
+
+.gh-card-link:hover .gh-card-title {
+    opacity: 0.8;
 }
 
 .gh-card-meta {
