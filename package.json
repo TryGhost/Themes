@@ -58,7 +58,8 @@
             "keyframes-name-pattern": null,
             "selector-not-notation": null,
             "keyframe-block-no-duplicate-selectors": null,
-            "import-notation": null
+            "import-notation": null,
+            "keyframe-selector-notation": null
         }
     },
     "renovate": {
