@@ -94,7 +94,7 @@
     {{else}}
         {{#get "posts" include="authors,tags" limit="1"}}
             {{#foreach posts}}
-                {{> article}}
+                {{> "article"}}
             {{/foreach}}
         {{/get}}
     {{/if}}

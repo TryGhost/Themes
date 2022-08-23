@@ -2,76 +2,58 @@
     <header class="gh-article-header gh-canvas{{#match @custom.feature_image_width "Full"}} image-full{{else match @custom.feature_image_width "=" "Wide"}} image-wide{{/match}}">
         <h1 class="gh-article-title">{{title}}</h1>
 
-        {{#is "home,post"}}
-            <span class="gh-article-meta">
-                {{#primary_author}}By <a href="{{url}}">{{name}}</a>{{/primary_author}}
-                {{#if primary_tag}}
-                    in
-                    <a class="gh-article-tag" href="{{primary_tag.url}}">{{primary_tag.name}}</a>
-                {{/if}}
-                —
-                <time datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
-            </span>
-        {{/is}}
+        <span class="gh-article-meta">
+            {{#primary_author}}By <a href="{{url}}">{{name}}</a>{{/primary_author}}
+            {{#if primary_tag}}
+                in
+                <a class="gh-article-tag" href="{{primary_tag.url}}">{{primary_tag.name}}</a>
+            {{/if}}
+            —
+            <time datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
+        </span>
 
         {{#if custom_excerpt}}
             <p class="gh-article-excerpt">{{custom_excerpt}}</p>
         {{/if}}
 
-        {{#if feature_image}}
-            <figure class="gh-article-image">
-                <img
-                    srcset="{{img_url feature_image size="s"}} 300w,
-                            {{img_url feature_image size="m"}} 720w,
-                            {{img_url feature_image size="l"}} 960w,
-                            {{img_url feature_image size="xl"}} 1200w,
-                            {{img_url feature_image size="xxl"}} 2000w"
-                    sizes="(max-width: 1200px) 100vw, 1200px"
-                    src="{{img_url feature_image size="xl"}}"
-                    alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
-                >
-                {{#if feature_image_caption}}
-                    <figcaption>{{feature_image_caption}}</figcaption>
-                {{/if}}
-            </figure>
-        {{/if}}
+        {{> "feature-image"}}
     </header>
 
     <div class="gh-content gh-canvas">
         {{content}}
     </div>
 
-    {{#if comments}}
-        <div class="gh-comments gh-canvas">
-            {{comments}}
-        </div>
-    {{/if}}
-
-    {{#is "home,post"}}
-        <footer class="gh-article-footer gh-canvas{{#prev_post}} has-prev{{/prev_post}}{{#next_post}} has-next{{/next_post}}{{#if @site.comments_enabled}}{{#unless @member}} no-border{{/unless}}{{#unless access}} no-border{{/unless}}{{/if}}">
-            <nav class="gh-navigation">
-
-                <div class="gh-navigation-previous">
-                    {{#prev_post}}
-                        <a class="gh-navigation-link" href="{{url}}">
-                            {{> icons/arrow-left}} <span class="gh-navigation-hide">Previous issue</span>
-                        </a>
-                    {{/prev_post}}
-                </div>
-
-                <div class="gh-navigation-middle">
-                    <a class="gh-navigation-link" href="/page/2">Browse archive</a>
-                </div>
-
-                <div class="gh-navigation-next">
-                    {{#next_post}}
-                        <a class="gh-navigation-link" href="{{url}}">
-                            <span class="gh-navigation-hide">Next issue</span> {{> icons/arrow-right}}
-                        </a>
-                    {{/next_post}}
-                </div>
-
-            </nav>
-        </footer>
+    {{#is "post"}}
+        {{#if comments}}
+            <div class="gh-comments gh-canvas">
+                {{comments}}
+            </div>
+        {{/if}}
     {{/is}}
+
+    <footer class="gh-article-footer gh-canvas{{#prev_post}} has-prev{{/prev_post}}{{#next_post}} has-next{{/next_post}}{{#if @site.comments_enabled}}{{#unless @member}} no-border{{/unless}}{{#unless access}} no-border{{/unless}}{{/if}}">
+        <nav class="gh-navigation">
+
+            <div class="gh-navigation-previous">
+                {{#prev_post}}
+                    <a class="gh-navigation-link" href="{{url}}">
+                        {{> icons/arrow-left}} <span class="gh-navigation-hide">Previous issue</span>
+                    </a>
+                {{/prev_post}}
+            </div>
+
+            <div class="gh-navigation-middle">
+                <a class="gh-navigation-link" href="/page/2">Browse archive</a>
+            </div>
+
+            <div class="gh-navigation-next">
+                {{#next_post}}
+                    <a class="gh-navigation-link" href="{{url}}">
+                        <span class="gh-navigation-hide">Next issue</span> {{> icons/arrow-right}}
+                    </a>
+                {{/next_post}}
+            </div>
+
+        </nav>
+    </footer>
 </article>
