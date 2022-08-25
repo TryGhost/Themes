@@ -1,3 +1,60 @@
 {{!< default}}
 
-<main class="gh-main"></main>
+<main class="gh-main">
+    {{#post}}
+        <article class="gh-article {{post_class}}">
+            <header class="gh-article-header gh-canvas">
+                <h1 class="gh-article-title">{{title}}</h1>
+                {{#if custom_excerpt}}
+                    <p class="gh-article-excerpt">{{custom_excerpt}}</p>
+                {{/if}}
+                {{> "feature-image"}}
+            </header>
+
+            <aside class="gh-article-meta gh-canvas">
+                <div class="gh-article-meta-inner">
+                    {{#if primary_tag}}
+                        <a class="gh-article-tag" href="{{primary_tag.url}}">{{primary_tag.name}}</a>
+                    {{/if}}
+                    <time class="gh-article-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
+                </div>
+            </aside>
+
+            <section class="gh-content gh-canvas">
+                {{content}}
+            </section>
+
+            <footer class="gh-article-footer gh-canvas">
+                <nav class="gh-navigation">
+                    <div class="gh-navigation-previous">
+                        {{#prev_post}}
+                            <a class="gh-navigation-link" href="{{url}}">← Previous</a>
+                        {{/prev_post}}
+                    </div>
+
+                    <div class="gh-navigation-middle">
+                        {{!-- <button class="gh-text-btn" {{#unless @member}}data-portal{{else}}{{#if access}}data-modal{{else}}data-portal{{/if}}{{/unless}} style="display: flex; align-items: center; gap: 6px;"> --}}
+                        <button class="gh-text-btn" style="display: flex; align-items: center; gap: 6px;" data-toggle-comments>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M45.4,177A95.9,95.9,0,1,1,79,210.6h0L45.8,220a7.9,7.9,0,0,1-9.8-9.8L45.4,177Z" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></path><circle cx="100" cy="128" r="16"></circle><circle cx="156" cy="128" r="16"></circle></svg>
+                            {{comment_count empty="Discussion"}}
+                        </button>
+                    </div>
+
+                    <div class="gh-navigation-next">
+                        {{#next_post}}
+                            <a class="gh-navigation-link" href="{{url}}">Next →</a>
+                        {{/next_post}}
+                    </div>
+                </nav>
+            </footer>
+
+            {{#if comments}}
+                <div class="gh-comments gh-canvas">
+                    <div class="gh-comments-inner">
+                        {{comments title="" count=false}}
+                    </div>
+                </div>
+            {{/if}}
+        </article>
+    {{/post}}
+</main>

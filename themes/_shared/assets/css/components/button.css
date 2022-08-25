@@ -56,8 +56,14 @@
     padding: 0;
     margin: 0;
     color: var(--darker-gray-color);
+    letter-spacing: inherit;
     cursor: pointer;
     background-color: transparent;
     border: 0;
     outline: none;
+    will-change: opacity;
+}
+
+.gh-text-btn:hover {
+    opacity: 0.8;
 }

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{asset "built/screen.css"}}">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;0,800;1,400;1,700&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;0,800;1,400;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
     {{#is "home"}}
         {{#if @site.cover_image}}
@@ -84,6 +84,30 @@
         </header>
 
         {{{body}}}
+
+        {{!-- {{#unless @member.paid}}
+            <section class="gh-subscribe gh-outer">
+                <div class="gh-subscribe-inner gh-inner">
+                    {{#if @site.icon}}
+                        <img class="gh-subscribe-icon" src="{{@site.icon}}" alt="{{@site.title}}">
+                    {{/if}}
+                    <div class="gh-subscribe-wrapper">
+                        {{#unless @member}}
+                            <h3 class="gh-subscribe-title">Subscribe to {{@site.title}}</h3>
+                            <p class="gh-subscribe-description">Don’t miss out on the latest issues. Sign up now to get access to the library of members-only issues.</p>
+                            <div class="gh-subscribe-input" data-portal>
+                                jamie@example.com
+                                <span class="gh-btn gh-primary-btn">Subscribe</span>
+                            </div>
+                        {{else}}
+                            <h3 class="gh-subscribe-title">Ready for unlimited access?</h3>
+                            <p class="gh-subscribe-description">Upgrade to a paid account to get full access to all content.</p>
+                            <button class="gh-subscribe-btn gh-btn gh-primary-btn" data-portal="account/plans">Upgrade now</button>
+                        {{/unless}}
+                    </div>
+                </div>
+            </section>
+        {{/unless}} --}}
 
         <footer class="gh-foot gh-outer">
             <div class="gh-foot-inner gh-inner">

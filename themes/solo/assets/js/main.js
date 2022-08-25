@@ -1,6 +1,17 @@
 (function () {
     jarallax(document.querySelectorAll('.has-parallax-feed .gh-card'), {
-        speed: 0.1,
+        speed: 0.8,
+    });
+})();
+
+(function () {
+    document.querySelector('[data-toggle-comments]').addEventListener('click', function () {
+        document.body.classList.toggle('comments-opened');
+    });
+
+    document.querySelector('.gh-comments').addEventListener('click', function (e) {
+        e.stopPropagation();
+        document.body.classList.toggle('modal-opened');
     });
 })();
 

@@ -37,24 +37,11 @@
 </section>
 
 <main class="gh-main gh-outer">
-    <section class="gh-section{{#match @custom.about_section_layout "!=" "Large background"}} gh-inner{{/match}}">
-        <div class="gh-section-content">
-        {{!-- <div class="gh-section-content kg-width-wide"> --}}
-            {{!-- <h2 class="gh-section-title">Latest writing</h2> --}}
-            <div class="gh-feed">
-                {{#foreach posts}}
-                    {{!-- {{#match @custom.feed_layout "Classic"}} --}}
-                        {{> "loop"}}
-                    {{!-- {{else match @custom.feed_layout "Typographic"}}
-                        {{> "loop-typographic"}}
-                    {{else}}
-                        {{> "loop-grid"}}
-                    {{/match}} --}}
-                {{/foreach}}
-            </div>
-            {{!-- <button class="gh-section-btn gh-text-btn">Read more</button> --}}
-        </div>
-    </section>
+    <div class="gh-feed{{#match @custom.about_section_layout "!=" "Large background"}} gh-inner{{/match}}">
+        {{#foreach posts}}
+            {{> "loop"}}
+        {{/foreach}}
+    </div>
 </main>
 
-{{#contentFor "body_class"}}{{#match @custom.about_section_layout "Large background"}} is-head-transparent has-background-about{{/match}}{{#match @custom.about_section_layout "Typographic profile"}} has-typographic-about{{/match}}{{/contentFor}}
+{{#contentFor "body_class"}}{{#match @custom.about_section_layout "Side by side"}} has-side-about{{/match}}{{#match @custom.about_section_layout "Large background"}} is-head-transparent has-background-about{{/match}}{{#match @custom.about_section_layout "Typographic profile"}} has-typographic-about{{/match}}{{/contentFor}}
