@@ -1,0 +1,95 @@
+/* @group Footer */
+
+#footer{
+    margin-top: $section-padding;
+    padding: 0;
+    
+	.widgets{	  
+        border-left: 0;
+        border-right: 0;
+        .default-sidebar{
+            display: flex;
+            flex-flow: row wrap;
+        }
+        .widget{
+            padding: $section-padding 35px;
+            &:first-child{
+                border: 0;
+            }
+            &:after{
+                margin: 0;
+
+            }
+        }
+        .default-sidebar, .mobile-sidebar{
+            display: flex;
+            flex-flow: row wrap;
+        }
+        .grid-33{
+            flex-grow: 1;
+        }
+    }
+    
+    .logo{
+		margin: 20px;
+        text-align: center;
+        a{
+            display: inline-block;
+            color: $black;
+            &:hover{
+                transform: translateY(-3px);
+            }
+        }
+        a i.fa{ margin-right: 5px; }
+        .dot{
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin-left: 5px;
+            vertical-align: baseline;
+        }
+        &.text-logo span{
+            display: inline-block;
+            &::first-letter{
+                color: $main-color;
+            }
+        }
+	}
+
+	a#back-to-top{
+		position: fixed;
+		right: 10px;
+		bottom: -10px;
+		text-align: center;
+		z-index: 99;
+        border: 0;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        padding: 0;
+        font-size: 25px;
+        opacity: 0;
+        img{ vertical-align: middle; }
+        i.fa{ margin: 0; }
+        &:hover{
+            background: $black;
+            transform: none;
+        }
+        &.visible{
+            opacity: 1;
+            bottom: 10px;
+        }
+    }
+    .epcl-border{ margin: 0; }
+	.published{ text-align: center;  margin: 0 0 50px; font-size: 14px; }
+    .published a{ 
+        font-weight: bold; 
+        &:hover{
+            color: $black;
+        }
+    }
+}
+
+
+/* @end */

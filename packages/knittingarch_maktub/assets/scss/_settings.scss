@@ -1,0 +1,103 @@
+/*------------------------------------*\
+    			SETTINGS
+\*------------------------------------*/
+
+/* @group Font Families */
+
+$font-family: "Source Serif Pro", "Source Sans Pro", serif;
+$font-weight: 400;
+$font-size: 17px; // General content font size
+$line-height: 1.8;
+
+$font-size-editor: 17px; // Single Content font size
+$line-height-editor: 2;
+$font-weight-editor: 400;
+
+$title-font-family: "Josefin Sans", sans-serif;
+$title-font-size: 30px;
+
+/* @end */
+
+/* @group Colors */
+
+// CSS2 
+:root{
+    --main-color: var(--ghost-accent-color); // #FF4C60
+    --titles-color: #454360; // 6758FC
+    --black: #4B4870;
+}
+
+
+$main-color: var(--main-color);
+$secondary-color: #65EBE7; // 7169FE 1CDCE1 65EBE7
+$black: #4B4870; // 4A4771 252A40
+$titles-color: var(--titles-color);
+
+// Content
+
+$background-color: #F9F9FE; // Body background color FAFAFB FDFDFD F9F9FE
+$text-color: #596172; // Primary text color
+$meta-color: #424851;
+$white: #fff;
+$light-gray: #555;
+$border-color: #eee; // #eee
+$input-bg-color: #F9F9FE; // f9f9f9 F9F9FE
+
+// Decorations
+
+$small-shadow: 0 3px 5px -2px rgba(7,10,25,.2); // Used on small images (like widgets or related articles)
+$medium-shadow: 0px 3px 5px -1px rgba(7,10,25, 0.2);
+$large-shadow: 0 3px 12px -1px rgba(7,10,25, 0.1), 0 22px 27px -30px rgba(7,10,25, 0.1); // Used on Large Containers (boxes, single article, etc)
+$main-shadow: 0 3px 12px -1px rgba(7,10,25, 0.1), 0 22px 27px -20px rgba(7,10,25, 0.1);
+
+// Social Colors
+
+$twitter-color: #1DA1F2;
+$instagram-color: #EF00A2;
+$facebook-color: #175BEB;
+$linkedin-color: #0077b5;
+$pinterest-color: #EE3E52;
+$dribbble-color: #D97AA6;
+$tumblr-color: #5F7990;
+$youtube-color: #fb5555;
+$flickr-color: #EF3998;
+$twitch-color: #8551e6;
+$vk-color: #6299dc;
+$telegram-color: #0088cc;
+$rss-color: #f26522;
+$tiktok-color: #69c9d0;
+$whatsapp-color: #1FB381;
+
+$lighten: 9%; //Lighten amount for hovers and overlays, example: subscribe input box background
+$darken: 4%; //Darken amount for hovers and overlays, example: search box background
+
+$border-radius: 25px;
+$border-radius-sections: 0px;
+
+/* @end */
+
+/* @group Effects speed */
+
+$transition-time: 300ms;
+$transition-method: ease;
+
+/* @end */
+
+/* @group Content Width and Margins */
+
+$editor-width: 780px;
+$editor-base-unit: 32px; // Space between paragraphs and titles (post content)
+$section-padding: 50px; // Padding top and bottom for containers, example: sidebar widgets, suscribe form
+$element-padding: 25px;
+
+$grid-container: 1240px; // Max width for the theme
+$grid-usmall: 600px;
+$grid-small: 780px;
+$grid-medium: 990px;
+$grid-large: 1400px;
+$grid-ularge: 1600px;
+$grid-gap: 20px; // Space betweens grids elements
+
+/* @end */
+
+$assets_path: '..'; // Do not change

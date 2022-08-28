@@ -1,0 +1,24 @@
+<div class="text">{{excerpt}}..</div>
+<div class="section np-bottom">
+    <div class="subscribe-cta visibility-paid">
+
+        {{#has visibility="paid"}}
+            <h3 class="title">{{t "This article is for paid members only"}}</h3>
+            <p>{{t "To continue reading this article, upgrade your account to get full access."}}</p>
+        {{/has}}
+        {{#has visibility="members"}}
+            <h3 class="title">{{t "This article is for subscribers only"}}</h3>
+            <p>{{t "To continue reading this article, just register your email and we will send you access."}}</p>
+        {{/has}}
+        {{#has visibility="tiers"}}
+            <h3 class="title">{{t "This post is for subscribers on our tiers:"}} {{tiers separator=", " suffix="" lastSeparator=(t " and ") }}</h3>
+            <p>{{t "To continue reading this article, upgrade your account to get full access."}}</p>
+        {{/has}}
+
+        <a href="{{@site.url}}/membership" class="button red">{{t "Subscribe Now"}} <i class="fa fa-paper-plane"></i></a>
+
+        <p class="sign-in underline-effect"><small>{{t "Already have an account?"}} <a href="{{@site.url}}/signin" class="fw-bold">{{t "Sign In"}}</a></small></p>
+        
+    </div>
+
+</div>

@@ -1,0 +1,35 @@
+<!-- start: .widget-text-->
+<div class="widget widget_epcl_about grid-25 tablet-grid-50 mobile-grid-100">
+    <div class="widget-content">
+        <h4 class="widget-title title medium bordered"><span class="bg">{{t "About Me" }}</span><span class="border"></span></h4>
+        {{#get "authors" limit="1"}}
+            {{#foreach authors visibility="public"}}
+                {{#if profile_image}}
+                    <div class="avatar">                            
+                        <a href="{{url}}" class="translate-effect thumb"><span class="fullimage cover" style="background-image: url( {{img_url profile_image size="widget_thumb"}} );"></span></a>                            
+                    </div>
+                {{/if}}
+                <div class="info">
+                    <h4 class="title small author-name underline-effect no-margin"><a href="{{url}}">{{name}}</a></h4>
+                    {{#if location}}
+                        <p class="founder">{{location}}</p>             
+                    {{/if}}              
+                    <div class="social">                        
+                        {{#if twitter}}
+                            <a href="{{twitter_url}}" class="twitter translate-effect tooltip" title="{{t 'Follow me on Twitter' }}" target="_blank"><i class="fa fa-twitter"></i></a>
+                        {{/if}}
+                        {{#if facebook}}
+                            <a href="{{facebook_url}}" class="facebook translate-effect tooltip" title="{{t 'Follow me on Facebook' }}" target="_blank"><i class="fa fa-facebook"></i></a>
+                        {{/if}}
+                        {{#if website}}
+                            <a href="{{website}}" class="website translate-effect tooltip" title="{{t 'Website' }}: {{website}}" target="_blank"><i class="fa fa-globe"></i></a>
+                        {{/if}}
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <p>{{bio}}</p>
+            {{/foreach}}
+        {{/get}}
+    </div>
+</div>
+<!-- end: .widget-text -->

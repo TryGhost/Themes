@@ -1,0 +1,48 @@
+/* @group Sidebar */
+
+div.left-content{
+    margin-right: 0;
+    padding-right: 50px;
+    .classic &{
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-right: 0;
+    }
+    .grid-sidebar &, .classic-sidebar &{
+        // padding-left: 0;
+        padding-right: 50px;
+    }
+    .grid-sidebar &{
+        padding-left: 0;
+        padding-right: 30px;
+    }
+    .no-sidebar &{
+        padding-right: $grid-gap;
+        max-width: 900px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+.no-active-sidebar div.left-content{ width: auto; float: none; }
+#sidebar{
+    position: relative;
+    z-index: 2;
+    float: right;
+	.widget{
+        position: relative;
+        margin-bottom: $section-padding;
+        width: auto;
+        float: none;
+        padding-left: 0;
+        padding-right: 0;
+        // padding-bottom: $section-padding;
+        // border-bottom: 2px dashed $border-color;
+        // background: #fff;
+        // padding: 30px;
+        // box-shadow: 0 3px 12px -1px rgba(7,10,25,.1), 0 22px 27px -30px rgba(7,10,25,.1);
+        // border-radius: 15px;
+        &:last-child{ margin-bottom: 0; border-bottom: 0; }
+    }
+}
+
+/* @end */

@@ -1,0 +1,38 @@
+<!-- start: .author -->
+<section id="author" class="author section {{#if profile_image}} with-avatar{{else}} no-avatar{{/if}}">
+    <div class="flex">
+        <a class="author meta-info epcl-dropcap rounded large no-border {{#if profile_image}}epcl-loader{{/if}}">
+            {{#if profile_image}}
+                <span class="author-image cover lazy" data-src="{{profile_image}}"></span>
+            {{else}}
+                <span class="first-letter" data-title="{{name}}"></span>
+            {{/if}}
+        </a>   
+
+        <div class="right">
+            <h4 class="title author-name underline-effect"><a href="{{url}}">{{name}}</a></h4>
+            {{#if location}}
+                <p class="position">{{location}}</p>
+            {{/if}}
+        </div>
+
+    </div>
+    <div class="clear"></div>
+    
+    <div class="info">
+        <p>{{bio}}</p>
+        <div class="social">
+            {{#if twitter}}
+                <a href="{{twitter_url}}" class="twitter tooltip" title="{{ t 'Follow me on Twitter' }} " target="_blank"><i class="fa fa-twitter"></i></a>
+            {{/if}}
+            {{#if facebook}}
+                <a href="{{facebook_url}}" class="facebook tooltip" title="{{ t 'Follow me on Facebook' }}" target="_blank"><i class="fa fa-facebook"></i></a>
+            {{/if}}
+            {{#if website}}
+                <a href="{{website}}" class="website tooltip" title="{{ t 'Website' }}: {{website}}" target="_blank"><i class="fa fa-globe"></i></a>
+            {{/if}}
+        </div>  
+    </div> 
+
+</section>
+<!-- end: .author -->

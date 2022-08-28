@@ -1,0 +1,78 @@
+/* @group Author and Tags page */
+
+.archive #author div.avatar{ margin-top: 10px; }
+.tag-description{
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    background: $white;
+    text-align: center;
+    min-height: 150px;
+    margin: 60px auto 80px;
+    padding-left: 50px;
+    padding-right: 50px;
+    box-shadow: $large-shadow;
+    position: relative;
+    z-index: 1;
+    .left{
+        position: relative;
+        z-index: 2;
+        margin: 0 auto;
+        width: auto;
+        .title{
+            &:before{
+                content: '#';
+                color: $main-color;
+                font-size: 115%;
+                margin-right: 5px;
+                vertical-align: middle;
+                position: relative;
+                top: -1px;
+                font-weight: normal;
+            }
+        }
+        .total{
+        
+        }
+    }
+    .right{
+        font-size: 16px;
+        position: relative;
+        z-index: 2;
+        p{
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    }
+    .epcl-image{
+        @include absolute-element;
+        z-index: -1 ;
+    }
+    &.image-bg{
+        color: $white;
+        .title{ color: $white; }
+    }
+    .icon{
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        svg{
+            width: 60px;
+            height: 60px;
+        }
+
+    }
+}
+
+/* @end */
+
+/* @group Search Page */
+
+.epcl-search-box{
+    .search-field{
+        background: $white;
+    }
+}
+
+/* @end */

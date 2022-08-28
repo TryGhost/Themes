@@ -1,0 +1,77 @@
+<article class="default classic-large primary-cat-4 grid-100 tablet-grid-100 ctag-{{primary_tag.slug}}">
+
+    <header>        
+        <div class="post-format-image">
+            <div class="featured-image epcl-flex">
+
+                <a class="epcl-dropcap main-effect text-only" href="{{url}}">
+                    <span class="first-letter fake-layout" data-title="{{title}}"></span>
+                </a>
+                
+                <div class="info">                
+                    <h1 class="main-title title gradient-effect large"><a href="{{url}}">{{title}}</a></h1>
+                    <!-- start: .meta -->
+                    <div class="meta hide-on-mobile">
+                        <time class="meta-info" datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM DD, YYYY"}}</time>  
+                        <div class="min-read meta-info">{{reading_time minute=(t "1 min read") minutes=(t "% min read")}}</div>
+                        <a href="{{url}}#comments" class="comments meta-info icon mobile tooltip" title="{{t "Go to comments"}}"><svg><use xlink:href="#comments-outline-icon"></use></svg> <span class="disqus-comment-count" data-disqus-url="{{@site.url}}{{url}}" data-disqus-identifier="{{comment_id}}">0</span></a>  
+
+                        <div class="clear"></div>
+                    </div>
+                    <!-- end: .meta -->
+                </div>
+
+            </div>
+
+            <div class="clear"></div>
+
+            <!-- start: .meta -->
+            <div class="meta hide-on-tablet hide-on-desktop">
+                
+                <time class="meta-info" datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM DD, YYYY"}}</time>  
+                <div class="min-read meta-info">{{reading_time minute=(t "1 min read") minutes=(t "% min read")}}</div>
+                <a href="{{url}}#comments" class="comments meta-info icon mobile"><svg><use xlink:href="#comments-outline-icon"></use></svg> <span class="disqus-comment-count" data-disqus-url="{{@site.url}}{{url}}" data-disqus-identifier="{{comment_id}}">0</span></a>  
+
+                <div class="clear"></div>
+            </div>
+            <!-- end: .meta -->
+        </div>
+    
+    </header>
+
+    <!-- start: .bottom -->
+    <div class="bottom">   
+        
+        <div class="post-excerpt">                    
+            <p>{{excerpt words="33"}}...</p>    
+            <div class="clear"></div>              
+        </div>  
+                
+        {{#if tags}}               
+            <div class="tags">
+                {{#foreach tags visibility="public" limit="3"}}
+                    <a href="{{url}}" class="ctag ctag-{{slug}}" data-id="ctag-{{slug}}">{{name}}</a>
+                {{/foreach}}
+            </div>
+        {{/if}}         
+        
+        <div class="meta bottom">
+            {{#foreach authors limit="1" }}
+                <a href="{{url}}" title="{{name}}" class="author meta-info hide-on-mobile loaded">                                        
+                    <div class="epcl-dropcap rounded medium author-avatar">
+                        <span class="first-letter" data-title="{{name}}"></span>
+                    </div>                         
+                    <span class="author-name">{{name}}</span>
+                </a>
+            {{/foreach}}
+        </div>
+        
+        <div class="clear"></div>
+
+        <a href="{{url}}" class="continue-reading epcl-button black bordered" data-title="{{t "Continue Reading"}}">{{t "Continue Reading"}}</a>
+
+    </div>   
+    <!-- end: .bottom -->
+    <div class="clear"></div>
+
+</article>

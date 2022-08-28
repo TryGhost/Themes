@@ -1,0 +1,15 @@
+{{!< default}}
+
+<main id="home" class="main grid-container grid-large">
+    
+    <div class="epcl-row">
+        <!-- start: .content-wrapper -->
+        <div class="content-wrapper content">   
+            {{#get "posts" limit="6" include="tags,authors" }}   
+                {{> home-blocks/grid-posts}}          
+            {{/get}}     
+        </div>
+        <!-- end: .content-wrapper -->
+    </div>
+
+</main>

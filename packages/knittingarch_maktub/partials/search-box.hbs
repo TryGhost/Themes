@@ -1,0 +1,24 @@
+<div id="form-lang" data-results-title="{{t 'Results for your search'}}" data-no-results="{{t 'No results found'}}"></div>
+
+<div class="hide-on-desktop hide-on-tablet hide-on-mobile">
+    <div id="search-lightbox" class="mfp-hide grid-container grid-small grid-parent">
+        <h4 class="title textcenter hide-on-mobile hide-on-tablet">{{{t "Press {key} to close" key="<span>ESC</span>"}}}</h4>
+        <div class="search-wrapper section">                
+            <form action="{{@site.url}}" method="get" class="search-form">
+                <input type="text" name="s" id="s" value="" class="search-field" placeholder="{{t "Type to start your search..."}}" required>
+                <button type="submit" class="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <div id="search-results" class="grid-container np-mobile"></div>
+        {{#get "tags" limit="5" order="count.posts desc"}}
+            <div class="categories hide-on-mobile">
+                <h5 class="textcenter">{{{t "Or check our <span>P</span>opular <span>C</span>ategories..."}}}</h5>
+                <div class="widget_tag_cloud">
+                    {{#foreach tags visibility="public"}}
+                        <a href="{{url}}" class="ctag ctag-{{slug}}" data-id="ctag-{{slug}}">{{name}}</a>
+                    {{/foreach}}
+                </div>
+            </div>
+        {{/get}}
+    </div>
+</div>

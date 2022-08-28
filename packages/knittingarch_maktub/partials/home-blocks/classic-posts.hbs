@@ -1,0 +1,16 @@
+<div class="center left-content grid-70">
+    <!-- start: .articles -->
+    <div class="articles classic">
+                
+        {{#foreach posts visibility="all"}}
+            {{> loop/classic-article}}                 
+        {{/foreach}}
+        
+    </div>
+    <!-- end: .articles -->
+    
+    {{pagination}}
+
+</div>
+
+{{> sidebar}}     

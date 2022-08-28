@@ -1,0 +1,41 @@
+{{!< default}}
+
+<main id="archives" class="main">
+
+    <div class="grid-container">
+
+        {{#tag}}
+
+            <div class="tag-description section">
+                <div class="left grid-35 tablet-grid-45 np-mobile">
+                    <h1 class="title large fw-semibold no-margin ctag-{{slug}}">{{name}}</h1>
+                    <div class="total">{{plural ../pagination.total empty=(t "0  Articles") singular=(t "1 Article") plural=(t "% Articles")}}</div>
+                    <div class="epcl-decoration-counter">{{../pagination.total}}</div>
+                </div>
+                {{#if description}}
+                    <div class="right grid-65 tablet-grid-55 np-tablet np-mobile">
+                        <p>{{description}}</p>
+                    </div>
+                {{/if}}
+                <div class="clear"></div>
+            </div>
+         
+        {{/tag}}
+
+    </div>
+
+    <div class="grid-container {{#match @custom.archives_layout "Masonry"}}grid-large{{/match}}">
+        <div class="epcl-row">
+            <!-- start: .content-wrapper -->
+            <div class="content-wrapper content">      
+                {{#match @custom.archives_layout "Masonry"}}
+                    {{> home-blocks/grid-posts}}
+                {{else}}
+                    {{> home-blocks/classic-posts}}
+                {{/match}}                 
+            </div>
+            <!-- end: .content-wrapper -->
+        </div>
+    </div>
+
+</main>

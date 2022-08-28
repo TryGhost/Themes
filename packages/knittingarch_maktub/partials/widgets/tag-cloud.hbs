@@ -1,0 +1,11 @@
+<!-- start: .widget-tag-cloud -->
+<div class="widget widget_epcl_tag_cloud grid-25 tablet-grid-50 mobile-grid-100">
+    <h4 class="widget-title title medium bordered"><span class="bg">{{t "Tag Cloud" }}</span><span class="border"></span></h4>
+    {{#get "tags" limit="30"}}
+        {{!-- {{tags separator=""}} --}}
+        {{#foreach tags visibility="public"}}
+            <a href="{{url}}" class="ctag ctag-{{slug}}" data-id="ctag-{{slug}}">{{name}}</a>
+        {{/foreach}}
+    {{/get}}
+</div>
+<!-- end: .widget-tag-cloud -->

@@ -1,0 +1,27 @@
+/* @group Page */
+
+#page{
+    #single{
+        .share-buttons{ margin-top: 0; }
+        .post-content{ margin-top: 0; }
+        &.fullcover{
+            .featured-image{
+                margin-bottom: $section-padding;
+                div.info{
+                    position: absolute;
+                    left: 0;
+                    bottom: 50%;
+                    transform: translateY(50%);
+                    width: 100%;
+                    text-align: center;
+                    max-width: none;
+                    .title{ background: none; border: 0; }
+                }
+            }
+            // #sidebar{ margin-top: $section-padding - 5px; }
+
+        }
+    }
+}
+
+/* @end */

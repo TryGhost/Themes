@@ -1,0 +1,51 @@
+{{!< default}}
+
+{{#post}}
+
+<!-- start: #page -->
+<main id="page" class="main grid-container">
+	
+    <!-- start: .center -->
+    <div id="single" class="content fullcover no-sidebar">
+        
+        {{#if feature_image }}
+            <div class="post-format-wrapper featured-image cover epcl-decoration-border">
+                <img src="{{asset '/images/transparent.gif'}}" data-src="{{img_url feature_image size="single_fullcover" }}" alt="{{title}}" class="lazy fullwidth">
+                <div class="info">
+                    <h1 class="title large white">{{title}}</h1>
+                </div>
+                <div class="epcl-overlay"></div>
+            </div>
+        {{/if}}
+
+        <div class="content">
+        
+            <!-- start: .left-content -->
+            <div class="left-content grid-70 np-mobile">
+                <article class="main-article {{post_class}}">
+                
+                    <section class="post-content">
+                        {{^if feature_image }}
+                            <h1 class="title ularge bold bordered">{{title}}</h1>
+                        {{/if}}
+                        <div class="text">
+                            {{content}}
+                        </div>
+                        <div class="clear"></div>
+                    </section>
+                    
+                </article>
+            </div>
+            <!-- end: .content -->
+            
+            <div class="clear"></div>
+
+        </div>
+    
+    </div>
+    <!-- end: .center -->
+    
+</main>
+<!-- end: #page -->
+
+{{/post}}

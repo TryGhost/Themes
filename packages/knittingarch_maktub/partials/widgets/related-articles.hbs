@@ -1,0 +1,30 @@
+{{#is "post"}}
+    <!-- start: .recent-articles -->
+    <div class="widget widget_epcl_posts_thumbs grid-25 tablet-grid-50 mobile-grid-100">
+        <h4 class="widget-title title medium bordered"><span class="bg">{{t "Related Articles" }}</span><span class="border"></span></h4>
+        {{#get "posts" filter="primary_tag:{{primary_tag.slug}}" limit="5" as |related-sidebar| }}
+            {{#foreach related-sidebar visibility="all"}}
+                <article class="{{post_class}} item">
+                    {{#if feature_image}}
+                        <a href="{{url}}" class="thumb epcl-dropcap main-effect effect-small epcl-loader">
+                            <span class="fullimage cover lazy" data-src="{{img_url feature_image size="widget_thumb"}}"></span>
+                            <span class="fullimage cover lazy fake-layout" data-src="{{img_url feature_image size="widget_thumb"}}"></span>
+                        </a>
+                    {{else}}
+                        <a class="epcl-dropcap small main-effect text-only effect-small" href="{{url}}">
+                            <span class="first-letter fake-layout" data-title="{{title}}"></span>
+                        </a>
+                    {{/if}}
+                    <div class="info">
+                        <div class="right">
+                            <h4 class="title usmall underline-effect"><a href="{{url}}">{{title}}</a></h4>	
+                            <time datetime="{{date format='YYYY-MM-DD'}}">{{date}}</time>		
+                        </div>				
+                    </div>
+                    <div class="clear"></div>
+                </article>
+            {{/foreach}}
+        {{/get}}
+    </div>
+    <!-- end: .recent-articles -->
+{{/is}}

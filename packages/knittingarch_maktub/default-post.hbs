@@ -1,0 +1,225 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+{{#post}}
+
+<!-- start: #single -->
+<main id="single" class="main grid-container {{{block "main-class" }}}">
+
+    {{{block "top-image" }}}
+
+    <!-- start: .center -->
+    <div class="center content epcl-row">
+
+        <!-- start: .content -->
+        <div class="left-content grid-70 np-mobile">
+
+            <article class="main-article post-access-{{visibility}} {{post_class}}">
+    
+                <header>
+
+                    {{{block "bottom-image" }}}
+
+                    {{#if feature_image}}
+                        <div class="info">    
+                            <h1 class="main-title title textcenter">{{title}}</h1>
+                            <!-- start: .meta -->
+                            <div class="meta">
+                                <time class="meta-info" datetime="{{date format="YYYY-MM-DD"}}">{{date format="MMMM DD, YYYY"}}</time>
+                                <div class="min-read meta-info">{{reading_time minute=(t "1 min read") minutes=(t "% min read")}}</div>
+                                <a href="#comments" class="comments meta-info icon mobile"><svg><use xlink:href="#comments-outline-icon"></use></svg> <span class="disqus-comment-count" data-disqus-url="{{@site.url}}{{url}}" data-disqus-identifier="{{comment_id}}">0</span></a> 
+                                <div class="clear"></div>
+                            </div>
+                            <!-- end: .meta -->             
+                        </div>
+                    {{else}}
+                        <div class="post-style-text epcl-flex ctag-{{primary_tag.slug}}">
+                            <div class="epcl-dropcap">
+                                <span class="first-letter" data-title="{{title}}"></span>
+                            </div>
+                            <div class="info">    
+                                <h1 class="main-title title large">{{title}}</h1>
+                                <!-- start: .meta -->
+                                <div class="meta hide-on-mobile">
+                                    <time class="meta-info" datetime="{{date format="YYYY-MM-DD"}}">{{date format="MMMM DD, YYYY"}}</time>
+                                    <div class="min-read meta-info">{{reading_time minute=(t "1 min read") minutes=(t "% min read")}}</div>
+                                    <a href="#comments" class="comments meta-info icon mobile"><svg><use xlink:href="#comments-outline-icon"></use></svg> <span class="disqus-comment-count" data-disqus-url="{{@site.url}}{{url}}" data-disqus-identifier="{{comment_id}}">0</span></a> 
+                                    <div class="clear"></div>
+                                </div>
+                                <!-- end: .meta -->        
+                            </div>
+                        </div>
+
+                        <!-- start: .meta -->
+                        <div class="meta hide-on-tablet hide-on-desktop">
+                            <time class="meta-info" datetime="{{date format="YYYY-MM-DD"}}">{{date format="MMMM DD, YYYY"}}</time>
+                            <div class="min-read meta-info">{{reading_time minute=(t "1 min read") minutes=(t "% min read")}}</div>
+                            <a href="#comments" class="comments meta-info icon mobile"><svg><use xlink:href="#comments-outline-icon"></use></svg> <span class="disqus-comment-count" data-disqus-url="{{@site.url}}{{url}}" data-disqus-identifier="{{comment_id}}">0</span></a> 
+                            <div class="clear"></div>
+                        </div>
+                        <!-- end: .meta -->     
+                    {{/if}}
+
+                    <div class="clear"></div>
+
+                </header>
+
+                <section class="post-content">
+                    {{#if access}}
+                        <div class="text">{{content}}</div>
+                    {{else}}
+                        {{> content-cta}}
+                    {{/if}}
+
+                    {{#if tags}}
+                        <div class="tags textcenter">
+                            <p class="title usmall">{{t "Tagged in:"}}</p>                            
+                            <div class="tags">
+                                {{#foreach tags visibility="public"}}
+                                    <a href="{{url}}" class="ctag ctag-{{slug}}" data-id="ctag-{{slug}}">{{name}}</a>
+                                {{/foreach}}
+                            </div>                            
+                        </div> 
+                    {{/if}}                
+
+                    <!-- start: .share-buttons -->
+                    <div class="share-buttons section">
+                        <h5 class="title small">{{t "Share Article:"}}</h5>                            
+                        <a class="facebook button circle" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}" target="_blank"><i class="fa fa-facebook"></i></a>
+                        <a class="twitter button circle" href="http://twitter.com/share?text={{encode title}}&url={{url absolute="true"}}" target="_blank"><i class="fa fa-twitter"></i></a>
+                        <a href="mailto:?subject={{encode title}}&body={{url absolute="true"}}" class="email button circle" target="_blank"><i class="fa fa-envelope"></i></a>
+                        <a class="whatsapp button circle" href="https://api.whatsapp.com/send?text={{url absolute="true"}}" target="_blank" data-action="share/whatsapp/share"><i class="fa fa-whatsapp"></i></a>
+                        <div class="clear"></div>
+                        <div class="permalink">
+                            <input type="text" name="shortlink" value="{{url absolute="true" }}" id="copy-link" readonly>
+                            <span class="copy"><svg class="icon large main-color"><use xlink:href="#copy"></use></svg></span>
+                        </div>
+                    </div>
+                    <!-- end: .share-buttons -->
+
+                </section>
+
+            </article>
+            <div class="clear"></div>
+
+            {{#primary_author}}
+                {{> author-box }}
+            {{/primary_author}}
+
+            <div class="clear"></div>
+
+            {{#if @custom.disqus_shortname}}
+                <!-- start: disqus integration -->
+                <div id="comments" class="section bg-white">
+                    <h3 class="title bordered no-margin">{{t "Comments"}}<span class="border"></span></h3>
+                    <div id="disqus_thread"></div>
+                </div>
+
+                <script>
+                    /**
+                        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                        */
+                    var disqus_shortname = theme_config.disqus_shortname; // required: replace example with your forum shortname
+                    var disqus_config = function () {
+                        this.page.url = '{{@site.url}}{{url}}';  // Replace PAGE_URL with your page's canonical URL variable
+                        this.page.identifier = '{{comment_id}}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    };
+
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+                <!-- end: disqus integration -->
+            {{/if}}
+            
+            {{#get "posts" filter="id:-{{id}}+primary_tag:{{primary_tag.slug}}" limit="4" as |related-articles| }}
+                {{#if related-articles}}
+                    <section class="related section" id="epcl-related-stories">
+                        <h3 class="title bordered">{{t "Related Articles"}}<span class="border"></span></h3>
+                        <div class="epcl-row">                        
+                            {{#foreach related-articles visibility="all" columns="2"}}
+                                <article class="item grid-50 tablet-grid-50 mobile-grid-100 ctag-{{primary_tag.slug}} {{post_class}}">
+                                    {{#if feature_image}}
+                                    <a href="{{url}}" class="thumb epcl-dropcap epcl-loader main-effect">
+                                        <span class="fullimage cover lazy" data-src="{{img_url feature_image size="thumbnail"}}"></span>
+                                        <span class="fullimage cover lazy fake-layout" data-src="{{img_url feature_image size="thumbnail"}}"></span>
+                                    </a>
+                                    {{else}}
+                                        <a class="epcl-dropcap large main-effect text-only" href="{{url}}">
+                                            <span class="first-letter fake-layout" data-title="{{title}}"></span>
+                                        </a>
+                                    {{/if}}
+                                    <div class="info">
+                                        <h4 class="title small no-margin underline-effect"><a href="{{url}}">{{title}}</a></h4>
+                                        <time class="small" datetime="{{date format='YYYY-MM-DD'}}">{{date}}</time>
+                                    </div>
+                                </article>
+                                {{#if @rowEnd}}
+                                    <div class="clear"></div>
+                                {{/if}}
+                            {{/foreach}}                    
+                        </div>
+                        <div class="clear"></div>
+                    </section>
+                {{/if}}
+            {{/get}}
+
+            <section class="siblings section" id="epcl-other-stories">
+                <h3 class="title bordered">{{t "Other Stories"}}<span class="border"></span></h3>
+                {{#prev_post}}
+                    <article class="prev bg-white">
+                        {{#if feature_image}}
+                            <div class="thumb epcl-dropcap epcl-loader">
+                                <span class="fullimage cover lazy" data-src="{{img_url feature_image size="thumbnail"}}"></span>
+                            </div>
+                        {{else}}
+                            <div class="thumb epcl-dropcap">
+                                <span class="first-letter" data-title="{{title}}"></span>
+                            </div>
+                        {{/if}}
+                        <a href="{{url}}" class="full-link"></a>
+                        <div class="info">
+                            <h4 class="title usmall no-margin">{{title}}</h4>
+                            <span class="meta">{{t "Previous Story"}}</span>
+                        </div>                
+                    </article>
+                {{/prev_post}}
+
+                {{#next_post}}
+                    <article class="next bg-white">
+                        {{#if feature_image}}
+                            <div class="thumb epcl-dropcap epcl-loader">
+                                <span class="fullimage cover lazy" data-src="{{img_url feature_image size="thumbnail"}}"></span>
+                            </div>
+                        {{else}}
+                            <div class="thumb epcl-dropcap">
+                                <span class="first-letter" data-title="{{title}}"></span>
+                            </div>
+                        {{/if}}
+                        <a href="{{url}}" class="full-link"></a>
+                        <div class="info">
+                            <h4 class="title usmall no-margin">{{title}}</h4>
+                            <span class="meta">{{t "Next Story"}}</span>
+                        </div>                
+                    </article>
+                {{/next_post}}
+                <div class="clear"></div>
+            </section>
+
+            <div class="clear"></div>
+        </div>
+        <!-- end: .content -->
+
+        {{{block "sidebar" }}}        
+
+        <div class="clear"></div>
+
+    </div>
+    <!-- end: .center -->
+
+</main>
+<!-- end: #single -->
+
+{{/post}}

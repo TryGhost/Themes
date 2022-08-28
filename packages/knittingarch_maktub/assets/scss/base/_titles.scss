@@ -1,0 +1,53 @@
+
+h1{ font-size: 26px; }
+h2{ font-size: 24px; }
+h3{ font-size: 22px; }
+h4{ font-size: 20px; }
+h5{ font-size: 18px; }
+h6{ font-size: 16px; }
+
+.title{
+	font-family: $title-font-family;
+	font-weight: 700;
+	font-size: $title-font-size;
+    margin-bottom: 40px;
+    line-height: 1.45;
+    letter-spacing: 0px;
+    color: $titles-color;
+    a{
+        color: $titles-color;
+    }
+	&.ularge{
+		font-size: 60px;
+        margin-bottom: 30px;
+        line-height: 1.2;		
+	}
+	&.large{ font-size: 38px; line-height: 1.2; }
+	&.medium{ font-size: 24px; line-height: 1.4; margin-bottom: 30px; }
+	&.small{ font-size: 18px; margin-bottom: 10px; }
+	&.usmall{ font-size: 15px; margin-bottom: 5px; letter-spacing: 0.25px; }
+    &.white{ color: #fff; }
+    &.letter-decoration ::first-letter{
+        color: $main-color;
+    }
+	&.bordered{
+        position: relative;
+        display: flex;
+        align-items: center;
+        span.bg{
+            max-width: 90%;
+        }
+        span.border{
+            height: 2px;
+            background: $main-color;
+            content: '';
+            flex: 1 1 auto;
+            margin-left: 15px;
+            min-width: 30px;
+            &.small{
+                max-width: 80px;
+            }
+        }
+    }
+    &.bold{ font-weight: bold !important; }
+}

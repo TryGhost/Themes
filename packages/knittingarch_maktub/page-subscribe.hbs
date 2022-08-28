@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="{{@site.locale}}">
+<head>
+    {{! Page Meta }}
+    <title>{{t "Subscribe"}} - {{@site.title}}</title>
+
+    {{> head}}
+
+    {{ghost_head}}
+</head>
+<body class="{{#if @site.cover_image}}cover{{/if}} {{body_class}}" {{#if @site.cover_image}}style="background: url({{@site.cover_image}}) no-repeat center center fixed;"{{/if}}>
+
+    <main id="page-subscribe" class="main grid-container grid-usmall">
+
+        <header class="section underline-effect">
+            <nav>
+                <a href="{{@site.url}}" class="title usmall">{{t "Go back to home" }}</a>
+            </nav>
+        </header>
+        
+        <div class="epcl-subscribe">
+            <div class="grid-container grid-small grid-parent np-mobile textcenter">
+                <h4 class="title large">{{{t "Subscribe to <span>{site_title}</span>" site_title=@site.title }}}</h4>
+                <p>{{@site.description}}</p>           	
+
+                <form class="subscribe-form" data-members-form="subscribe">
+                    <div class="form-group">
+                        <input type="text" name="name" class="inputbox" required placeholder="{{t "Enter your name"}}" data-members-name autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" class="inputbox" required placeholder="{{t "Enter your email address"}}" data-members-email>
+                    </div>
+                    <div class="form-group">
+                        <button class="epcl-button dark bordered large submit" type="submit" data-title="{{t "Submit"}}">{{t "Submit"}}<span class="loader"></span></button>
+                    </div>                      
+                    <div class="message">
+                        <p class="error-detail" data-members-error></p>
+                        <p class="success-message">{{t "Subscription was sent successfully, check your email"}} <i class="fa fa-envelope-o"></i></p>
+                    </div>
+                    <br>
+                    <p class="underline-effect np-bottom">{{t "Already have an account?"}} <a href="{{@site.url}}/signin" class="fw-bold">{{t "Sign In"}}</a></p>                
+                </form>
+        
+            </div>
+        </div>
+
+    </main>
+
+    <!-- start: #footer -->
+    <footer id="footer" class="grid-container">
+        {{!-- {{> site-logo}} --}}
+        <p class="published underline-effect">{{t "Published with" }} <a href="https://ghost.org/" target="_blank">Ghost</a></p>
+        <div class="clear"></div>
+    </footer>
+    <!-- end: #footer -->
+
+    {{ghost_foot}}
+
+    <script type="text/javascript" src="{{asset 'dist/scripts.min.js' }}" defer></script>
+
+</body>
+</html>

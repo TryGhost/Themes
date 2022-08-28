@@ -1,0 +1,107 @@
+{{!< default}}
+
+{{#post}}
+
+<!-- start: #page -->
+<main id="page" class="main account-page grid-container grid-small np-mobile np-tablet">
+	
+    <!-- start: #single -->
+    <div id="single" class="content fullcover no-sidebar">
+        
+        {{#if feature_image }}
+            <div class="post-format-wrapper featured-image cover epcl-decoration-border">
+                <img src="{{asset '/images/transparent.gif'}}" data-src="{{img_url feature_image size="single_fullcover" }}" alt="{{title}}" class="lazy fullwidth">
+                <div class="info">
+                    <h1 class="title large white">{{title}}</h1>
+                </div>
+                <div class="epcl-overlay"></div>
+            </div>
+        {{/if}}
+
+        <div class="content">
+        
+            <!-- start: .left-content -->
+            <div class="left-content grid-70 np-mobile">
+                <article class="main-article {{post_class}}">
+                
+                    <section class="post-content">
+                        
+                        <div class="epcl-row">
+                            {{#if @member.subscriptions}}
+                                {{#foreach @member.subscriptions}}
+                                    {{#if @member.avatar_image}}
+                                        <div class="avatar"><img src="{{@member.avatar_image}}" class="fullwidth"></div>
+                                    {{/if}}
+                                    <h1 class="title textcenter">{{@member.name}}<br><a class="button dark small" data-members-signout>{{t "Sign Out"}}</a></h1>           
+                                    <div class="subscription">
+                                        
+                                        {{#if cancel_at_period_end}}
+                                            <p class="description">
+                                                <strong class="subscription-expiration-warning">{{t "Your subscription will expire on {expire_date}" expire_date=(date current_period_end format="DD MMM YYYY") }}.</strong> {{t "If you change your mind in the mean time you can turn auto-renew back on to continue your subscription."}}
+                                            </p>
+                                        {{else}}
+                                            <p class="description">
+                                                {{t "Hey! You have an active account with access to all Areas. Get in touch if have any problems or need some help getting things updated, and thanks for subscribing."}}
+                                            </p>
+                                        {{/if}}
+                                        <div class="subscriber-details">
+                                            <div class="subscriber-detail">
+                                                <label class="subscriber-detail-label title usmall">{{t "Email address"}}</label>
+                                                <span class="subscriber-detail-content">{{@member.email}}</span>
+                                            </div>
+                                            <div class="subscriber-detail">
+                                                <label class="subscriber-detail-label title usmall">{{t "Your plan"}}</label>
+                                                <span class="subscriber-detail-content">$<span class="plan-price" data-value="{{plan.amount}}">0</span>/{{plan.interval}}</span>
+                                            </div>
+                                            <div class="subscriber-detail">
+                                                <label class="subscriber-detail-label title usmall">{{t "Card"}}</label>
+                                                <span class="subscriber-detail-content">**** **** **** {{default_payment_card_last4}}</span>
+                                            </div>
+                                            <div class="subscriber-detail">
+                                                <label class="subscriber-detail-label title usmall">
+                                                    {{#if cancel_at_period_end}}
+                                                        {{t "Expires"}}
+                                                    {{else}}
+                                                        {{t "Next bill date"}}
+                                                    {{/if}}
+                                                </label>
+                                                <span class="subscriber-detail-content">{{date current_period_end format="DD MMM YYYY"}}</span>
+                                            </div>                                    
+                                        </div>
+                                        <a href="javascript:" class="edit-billing button small" data-members-edit-billing>{{t "Edit billing info"}}</a>&nbsp;
+                                        {{cancel_link class="cancel-link button small dark" cancelLabel=(t "Cancel subscription") continueLabel=(t "Continue subscription") }}
+                                        
+                                    </div>
+                                {{/foreach}}      
+                            {{else}}
+                                {{#if @member.avatar_image}}
+                                    <div class="avatar"><img src="{{@member.avatar_image}}" class="fullwidth"></div>
+                                {{/if}}
+                                <h1 class="title textcenter">{{@member.name}}<br><a class="button dark small" data-members-signout>{{t "Sign Out"}}</a></h1>  
+                                <div class="subscription">
+                                    <p class="description">
+                                        {{t "Hey! Currently you have an active account with access to posts for subscribers only. If you want to get access to all content, consider upgrading your account." }}
+                                    </p>
+                                    <p><a href="{{@site.url}}/membership" class="button">{{t "Check our plans"}} <i class="fa fa-paper-plane"></i></a></p>
+                                </div>
+                            {{/if}}           
+
+                        </div>
+                        <div class="clear"></div>
+                    </section>
+                    
+                </article>
+            </div>
+            <!-- end: .content -->
+            
+            <div class="clear"></div>
+
+        </div>
+    
+    </div>
+    <!-- end: #single -->
+    
+</main>
+<!-- end: #page -->
+
+{{/post}}

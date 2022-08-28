@@ -1,0 +1,100 @@
+/* @group Forms */
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="search"],
+textarea,
+select{
+	display: block;
+    background: $input-bg-color;
+    border: 1px solid transparent;
+    color: $text-color;
+    font-size: 14px;
+    font-family: $font-family;
+    line-height: 1.8;
+    letter-spacing: 0.25px;
+    padding: 15px 25px;
+	height: 45px;
+	width: 100%;
+	margin-bottom: 15px;
+    box-sizing: border-box;
+    outline: 0;
+    box-shadow: $small-shadow;
+	@include transition;
+	@include placeholder{
+        color: $text-color;
+	};
+    &:focus{ 
+        border-color: darken($input-bg-color, 3%);
+    }
+    &.large{
+        font-size: 18px;
+    }
+}
+textarea{
+    width: 100%;
+    height: 170px;
+    resize: none;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+input[type="submit"], button[type="submit"]{
+    @include button;
+    font-family: $title-font-family;
+    font-size: 18px;
+    padding: 12px 35px;
+    font-weight: 600;
+    @include transition;
+    &:hover{
+        // transform: translateY(-2px);
+    }
+}
+
+select{
+    max-width: 100%;
+    height: auto;
+    border: 0;
+	padding-right: 25px;
+    background: $input-bg-color url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAUBAMAAABohZD3AAAAA3NCSVQICAjb4U/gAAAAD1BMVEX///8AAAAAAAAAAAAAAABRO2rwAAAABXRSTlMAESIzRJTdRHwAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzbovLKMAAAAY0lEQVQYlVXOyRGAIBBE0QYNgIMBWJYBcDAAFvOPSYRZ5zL1Tv3xvPY6dueC4JyA27AB2IzzMIx/4hDW6Sg+p8EJfVESCpkTEpkSGpMSshg6DkmoxlHHOaFbjoTiHHR83UX/A5M3KIMZPyPWAAAAAElFTkSuQmCC') no-repeat 97% center !important;
+	background-size: 9px 6px !important;
+	font: $font-size $font-family;
+	outline: 0;
+	cursor: pointer;
+    appearance: none;
+    option{
+        color: #222;
+        background: #fff;
+    }
+}
+button{
+	@include transition;
+}
+
+form p{ padding-bottom: 15px; font-size: 13px; }
+
+// Search Form
+
+form.search-form{
+    position: relative;
+    z-index: 1;
+    input.search-field{
+        padding-right: 50px;
+	 }
+    .submit{
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        color: $main-color;
+        background: none;
+        transform: translateY(-50%);
+        padding: 0;
+        box-shadow: none !important;
+        backface-visibility: hidden;
+    }
+    .submit:hover{ opacity: .75; }
+}
+
+/* @end */

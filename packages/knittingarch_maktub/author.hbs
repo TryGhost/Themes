@@ -1,0 +1,34 @@
+{{!< default}}
+
+<main id="archives" class="main">
+
+    <!-- start: .content-wrapper -->
+    <div class="content-wrapper">
+    
+        {{#author}}
+            <div class="grid-container">
+                {{> author-box }}
+            </div>
+        {{/author}}
+        
+        <div class="clear"></div>
+    
+    </div>
+    <!-- end: .content-wrapper -->
+
+    <div class="grid-container {{#match @custom.archives_layout "Masonry"}}grid-large{{/match}}">
+        <div class="epcl-row">
+            <!-- start: .content-wrapper -->
+            <div class="content-wrapper">      
+                {{#match @custom.archives_layout "Masonry"}}
+                    {{> home-blocks/grid-posts}}
+                {{else}}
+                    {{> home-blocks/classic-posts}}
+                {{/match}}                 
+            </div>
+            <!-- end: .content-wrapper -->
+        </div>
+    </div>
+
+
+</main>

@@ -1,0 +1,55 @@
+{{! Document Settings }}
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+{{! Mobile Support }}
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+{{! Styles'n'Scripts }}
+<link rel="shortcut icon" href="{{asset 'favicon.ico' }}">
+
+{{! Theme Styles }}
+
+<style>{{> css/critical-css}}</style>
+{{!-- <link href="{{asset 'dist/style.min.css' }}" type="text/css" rel="stylesheet"> --}}
+<link href="{{asset 'dist/plugins.min.css' }}" type="text/css" rel="preload" as="style" onload="this.rel='stylesheet'">
+
+{{! Custom Google Font }}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap" rel="preload" as="style" onload="this.rel='stylesheet'">
+
+<script>
+	// Theme Config, check the documentation before edit this file
+    var search_engine_key = 'e08514f928d175f017584aaf54'; // example: e08514f918d175f017584aaf34
+    var site_url = '{{@site.url}}';
+    {{#if @custom.search_api_key}}
+        search_engine_key = "{{@custom.search_api_key}}";
+    {{/if}}
+	var theme_config = {
+		masonry: 'on', // If you don't need masonry style, just set to "off"
+        sticky_sidebar: 'on', // on / off
+		disqus_shortname: 'ghostexample', // You can create your own Disqus Comments here: https://disqus.com/admin/create/
+	};
+    {{#if @custom.disqus_shortname}}
+        theme_config.disqus_shortname = "{{@custom.disqus_shortname}}";
+    {{/if}}
+</script>
+
+{{!-- Custom tag colors --}}
+{{#if @custom.custom_colors}}
+    <style>
+        {{#get "tags" }}
+            {{#foreach tags visibility="public"}}
+                {{#if accent_color}}
+                    .ctag-{{slug}}::before{ color: {{accent_color}} !important; }
+                    .ctag-{{slug}} .epcl-dropcap:not(.author-avatar){ background: {{accent_color}}; }
+                    .ctag-{{slug}} .epcl-dropcap:not(.author-avatar).text-only .fake-layout{ background: {{accent_color}}; }
+                    .ctag-{{slug}} .epcl-dropcap:not(.author-avatar).text-only:after{ border-color: {{accent_color}}; }
+                {{/if}}
+            {{/foreach}}  
+        {{/get}}
+    </style>
+{{/if}}

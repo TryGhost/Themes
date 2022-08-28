@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="{{@site.locale}}">
+<head>
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+
+    {{> head}}
+    {{!-- Node JS (Windows Local mode) do not link these files automatically --}}
+    {{!-- <script defer src="/public/cards.min.js?v=eb2c0a021c"></script>
+    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=eb2c0a021c"> --}}
+    {{ghost_head}}
+
+</head>
+<body class="{{#if @site.cover_image}}cover{{/if}} {{body_class}}" {{#if @site.cover_image}}style="background: url({{@site.cover_image}}) no-repeat center center fixed;"{{/if}}>
+
+    {{> svg-icons}}
+
+    <!-- start: .mobile.main-nav -->
+    <nav class="mobile main-nav hide-on-desktop-lg">
+        {{navigation}}
+    </nav>
+    <!-- end: .mobile.main-nav -->
+    <div class="menu-overlay hide-on-desktop-lg"></div>
+
+	<!-- start: #wrapper -->
+	<div id="wrapper">
+
+		{{> header}}
+
+        {{{body}}}
+
+		{{> footer}}        
+
+    </div>
+    <!-- end: #wrapper -->
+
+    {{ghost_foot}}
+
+    <script src="{{asset 'dist/scripts.min.js' }}" defer></script>
+
+</body>
+</html>

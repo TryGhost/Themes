@@ -1,0 +1,23 @@
+@import "settings";
+@import "generic/functions";
+
+/* Font Awesome 4.7.0 by @Icons8 - https://fontawesome.com/v4.7.0 */
+
+@import "plugins/font-awesome.min";
+
+/* Slick Slider: http://kenwheeler.github.io/slick/ */
+
+@import "plugins/slick";
+@import "plugins/slick-theme";
+
+/* PrismJS 1.14.0 https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript+markup-templating+git+sql+python+sass+scss&plugins=line-numbers+toolbar+remove-initial-line-feed+show-language+copy-to-clipboard */
+
+@import "plugins/prism";
+
+/* Tooltipster http://iamceege.github.io/tooltipster/ */
+
+@import "plugins/tooltipster";
+
+/* Magnific magnific-popup http://dimsemenov.com/plugins/magnific-popup/ */
+
+@import "plugins/jquery.magnific-popup";

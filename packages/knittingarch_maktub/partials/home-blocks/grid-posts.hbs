@@ -1,0 +1,14 @@
+<div class="center">
+    <!-- start: .articles -->
+    <div class="articles grid-posts" data-aos="fade-up">
+                
+        {{#foreach posts visibility="all"}}
+            {{> loop/grid-article}}                 
+        {{/foreach}}
+        
+    </div>
+    <!-- end: .articles -->
+    
+    {{pagination}}
+
+</div>

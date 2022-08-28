@@ -1,0 +1,17 @@
+{{!< default}}
+
+<main id="home" class="main grid-container {{#match @custom.home_layout "Masonry"}}grid-large{{/match}}">
+    
+    <div class="epcl-row">
+        <!-- start: .content-wrapper -->
+        <div class="content-wrapper content">      
+            {{#match @custom.home_layout "Masonry"}}
+                {{> home-blocks/grid-posts}}
+            {{else}}
+                {{> home-blocks/classic-posts}}
+            {{/match}}                 
+        </div>
+        <!-- end: .content-wrapper -->
+    </div>
+
+</main>

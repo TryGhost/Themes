@@ -1,0 +1,239 @@
+/* @group EPCL Modules */
+
+.epcl-carousel, .epcl-slider, .epcl-popular-categories{
+    .epcl-overlay{ display: none; }
+    .image-bg{
+        color: #fff;
+        // text-shadow: 0px 1px 1px rgba(#000, 0.5);
+        .title, .title a, div.meta, div.meta a, time, div.tags a{ color: #fff; }
+        div.tags a{
+            background: none;
+            box-shadow: none;
+            &:hover{ color: #fff !important; }
+        }
+        .title a:hover, div.meta a:hover{
+            // color: $main-color;
+        }
+        .counter{ display: none; }
+        .epcl-overlay{ display: block; }
+        .epcl-loader{
+            @include absolute-element;
+        }
+    }
+    .counter{
+        position: absolute;
+        left: 50%;
+        top: 90%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        font-size: 300px;
+        font-family: $title-font-family;      
+        margin-top: 30px;
+        line-height: 1;
+        font-weight: bold;
+        opacity: 0;          
+    }
+}
+
+.epcl-carousel{
+    padding: 0;
+    visibility: hidden;
+    height: 300px;
+    opacity: 0;
+	margin: 40px auto 0;
+    @include transition(1000ms);
+    &.slick-initialized{
+        visibility: visible;
+        height: inherit;
+        opacity: 1;
+    }
+	.item{
+        text-align: center;
+        padding: 10px 0;
+		.img{
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+			@include transition;
+		}
+		article{
+			position: relative;
+			z-index: 1;
+            margin: 0 15px;
+            height: 300px;
+            background: $white;
+            box-shadow: $large-shadow;
+			@include transition();
+			&:hover{
+				transform: translateY(-3px);
+			}
+		}
+		.info{
+			position: absolute;
+			left: 0;
+			bottom: 15px;
+			width: 100%;
+			box-sizing: border-box;
+			padding: 20px 30px;
+			z-index: 2;
+            time{ padding-bottom: 7px; display: inline-block; }
+            div.meta{
+                margin-top: 20px;
+                .meta-info{ margin-right: 0; }
+            }
+            .author{ display: inline-block; }
+		}
+        .counter{
+            top: 50%;
+            opacity: 0.05;
+        }
+        
+	}
+}
+
+// Slider
+.epcl-slider{
+    padding: 0;
+    visibility: hidden;
+    opacity: 0;
+    margin-top: $section-padding;
+    @include transition(1000ms);
+    margin-bottom: 20px;
+    background: $white;
+    box-shadow: $large-shadow;
+    &.slick-initialized{
+        visibility: visible;
+        height: inherit;
+        opacity: 1;
+    }
+    .slick-slide{   
+        position: relative;
+        z-index: 3;
+        article{
+
+            display: flex;
+            min-height: 450px;
+            box-sizing: border-box;               
+        }
+        .img{
+            @include absolute-element;
+            object-fit: cover;
+        }
+        .info{
+            max-width: 700px;
+            margin: auto auto;
+            padding: 25px 40px;
+            text-align: center;
+            position: relative;
+            z-index: 11; 
+            .tags{
+                font-size: 16px;
+            }  
+            .title{
+                margin-top: 30px;
+                margin-bottom: 20px;
+                font-size: 50px;
+            }
+            .author{
+                display: inline-block;
+                margin-top: 30px;
+            }
+        }
+    }
+    .slick-current{
+        .item .counter{
+            opacity: 0.05;
+            top: 50%;
+            @include transition(800ms);
+        }
+        .info{            
+            opacity: 1;
+            @include transition(600ms);
+        }
+    }
+}
+
+// Text Editor
+
+.epcl-text-editor{
+    &.no-background{
+        padding-top: 0;
+        padding-bottom: 0;
+        .bg-content{
+            background: none;
+            box-shadow: none;
+        }
+    }
+    .bg-content{
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+        position: relative;
+        z-index: 2;
+    }
+    .text{
+        :last-child{ padding-bottom: 0; margin-bottom: 0; }
+    }
+}
+
+// Popular Categories Carousel
+.epcl-popular-categories{
+    margin-top: $section-padding;
+    .slick-slider{
+        margin: 0 -10px;
+    }
+    .slick-track{
+        margin-left: 0;
+    }
+    .item{
+        height: 250px;
+        position: relative;
+        margin: 10px;
+        overflow: hidden;
+        background: $white;
+        box-shadow: $large-shadow;
+        display: flex;
+        @include transition;
+        &:hover{
+            transform: translateY(-3px);
+        }
+        .info{
+            text-align: center;
+            width: 100%;
+            margin-top: auto;
+            margin-bottom: auto;
+            // font-size: 18px;
+            position: relative;
+            z-index: 2;
+        }
+        .title{
+            margin-bottom: 0px;
+            font-weight: 600;
+            &:before{
+                content: '#';
+                color: $main-color;
+                font-size: 135%;
+                margin-right: 5px;
+                vertical-align: middle;
+                position: relative;
+                top: -1px;
+                font-weight: normal;
+            }
+        }
+        .counter{
+            top: 50%;
+            opacity: 0.05;
+            z-index: 1;
+            font-size: 200px;
+        }
+        // .count{
+        //     display: inline-block;
+        //     width: 7px;
+        //     height: 7px;
+        //     margin: 0 1px;
+        //     border-radius: 50%;
+        //     vertical-align: middle;
+        // }
+    }
+}
+
+/* @end */
+    

@@ -1,0 +1,77 @@
+{
+	"name": "maktub",
+	"version": "1.1.0",
+	"demo": "https://ghost.estudiopatagon.com/maktub",
+    "engines": {
+        "ghost": ">=5.0.0"
+    },
+	"author": {
+		"name": "Estudio Patagon",
+        "email": "admin@estudiopatagon.com",
+        "url": "https://estudiopatagon.com"
+	},
+	"gpm": {
+        "type": "theme",
+        "categories": [
+            "Minimal",
+            "Magazine"
+        ]
+    },
+	"config": {
+        "posts_per_page": 6,
+        "image_sizes": {
+            "thumbnail": {
+                "width": 150,
+                "height": 150
+            },
+            "medium": {
+                "width": 300,
+                "height": 300
+            },
+            "classic": {
+                "width": 950,
+                "height": 500
+            },
+            "fullcover": {
+                "width": 1500,
+                "height": 600
+            }
+        },
+        "card_assets": true,
+        "custom": {
+            "home_layout": {
+                "type": "select",
+                "options": [
+                    "Classic",
+                    "Masonry"
+                ],
+                "default": "Classic"
+            },
+            "archives_layout": {
+                "type": "select",
+                "options": [
+                    "Classic",
+                    "Masonry"
+                ],
+                "default": "Classic"
+            },
+            "custom_colors": {
+                "type": "boolean",
+                "default": true
+            },
+            "disqus_shortname": {
+                "type": "text",
+                "default": "ghostexample"
+            },
+            "search_api_key": {
+                "type": "text",
+                "default": ""
+            }
+        }
+    },
+    "keywords": [
+        "ghost",
+        "theme",
+        "ghost-theme"
+    ]
+}

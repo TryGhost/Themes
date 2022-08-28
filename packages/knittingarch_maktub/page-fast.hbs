@@ -1,0 +1,68 @@
+{{!-- THIS PAGE IS FOR DEMO ONLY PURPOSES, you can safely remove it --}}
+<!DOCTYPE html>
+<html lang="{{@site.locale}}">
+<head>
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+
+    {{> head}}
+    <style>:root {--ghost-accent-color: #FF4C60;}</style>
+    {{ghost_head}}
+</head>
+<body class="{{#if @site.cover_image}}cover{{/if}} {{body_class}}" {{#if @site.cover_image}}style="background: url({{@site.cover_image}}) no-repeat center center fixed;"{{/if}}>
+
+	<!-- start: #wrapper -->
+	<div id="wrapper">
+
+        {{> header}}
+
+        <main id="home" class="main grid-container">
+            
+            <div class="epcl-row">
+                <!-- start: .content-wrapper -->
+                <div class="content-wrapper content">      
+                    {{#get "posts" limit="6" include="tags,authors" }}
+                        <div class="center left-content grid-70">
+                            <!-- start: .articles -->
+                            <div class="articles classic">
+                                        
+                                {{#foreach posts visibility="all"}}
+                                    {{> demo/text-article}}                 
+                                {{/foreach}}
+                                
+                            </div>
+                            <!-- end: .articles -->
+                            
+                            {{pagination}}
+
+                        </div>
+                    {{/get}}
+
+                    {{> demo/sidebar}}     
+                        
+                </div>
+                <!-- end: .content-wrapper -->
+            </div>
+
+        </main>
+
+    {{> demo/footer}}        
+
+    </div>
+    <!-- end: #wrapper -->
+
+    {{ghost_foot}}
+
+    {{> svg-icons}}
+
+    <!-- start: .mobile.main-nav -->
+    <nav class="mobile main-nav hide-on-desktop-lg">
+        {{navigation}}
+    </nav>
+    <!-- end: .mobile.main-nav -->
+    <div class="menu-overlay hide-on-desktop-lg"></div>
+
+    <script src="{{asset 'dist/scripts.min.js' }}" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!-- start: #footer -->
+<footer id="footer">
+
+    <div class="epcl-subscribe">
+        <div class="grid-container grid-small grid-parent np-mobile textcenter">
+            <h4 class="title large">{{{t "Subscribe to <span>{site_title}</span>" site_title=@site.title }}}</h4>
+            <p>{{t "Get the latest posts delivered right to your email."}}</p>           	
+
+            <form class="subscribe-form" data-members-form="subscribe">
+                <div class="form-group">
+                    <input type="email" name="email" class="inputbox" required placeholder="{{t "Enter your email address"}}" data-members-email>
+                </div>
+                <button class="epcl-button dark bordered submit" type="submit" data-title="{{t "Submit"}}">{{t "Submit"}}<span class="loader"></span></button>
+                <p class="error-detail" data-members-error></p>
+                <p class="success-message">{{t "Subscription was sent successfully, check your email"}} <i class="fa fa-envelope-o"></i></p>
+            </form>
+            
+            <div class="epcl-social-buttons fill-color">
+                {{> social-buttons}}
+            </div>
+    
+        </div>
+    </div>
+
+	<div class="widgets grid-container grid-large">
+        <div class="epcl-row">
+
+            {{> widgets/recent-articles }}
+
+            {{> widgets/tag-cloud }}
+
+            {{> widgets/social-profiles }}
+
+            {{> widgets/about }}
+
+            <div class="clear"></div>
+        </div>
+
+	</div>
+
+    {{> site-logo }}
+
+	<p class="published border-effect">{{t "Published with" }} <a href="https://ghost.org/" target="_blank">Ghost</a></p>
+
+    <div class="clear"></div>
+
+    <a id="back-to-top" class="epcl-button dark"><i class="fa fa-angle-up"></i></a>
+
+</footer>
+<!-- end: #footer -->

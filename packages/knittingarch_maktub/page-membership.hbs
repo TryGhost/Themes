@@ -1,0 +1,101 @@
+{{!< default}}
+
+{{#post}}
+
+<!-- start: #page -->
+<main id="page" class="main grid-container">
+	
+    <!-- start: .center -->
+    <div id="single" class="membership-page center content">
+
+        <div class="content">
+        
+            <!-- start: .left-content -->
+            <div class="left-content">
+                <article class="{{post_class}}">
+                
+                    <section class="post-content">
+
+                        <div class="epcl-row">
+                            {{#get "tiers" include="monthly_price,yearly_price,benefits" limit="all" as |tiers|}}
+                                <div class="textcenter">
+                                    <div class="epcl-switch" data-active-price="monthly">
+                                        <button data-price="monthly">{{t "Monthly"}}</button>
+                                        <button data-price="yearly">{{t "Yearly"}}</button>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                                <div class="epcl-plans epcl-flex" data-active-price="monthly">
+                                    {{#foreach tiers}}
+                                        
+                                        {{#if description}}
+                                            <!-- start: .free -->
+                                            <div class="epcl-plan grid-33 tablet-grid-33 np-mobile" data-type="{{type}}">
+                                                
+                                                <div class="subscribe-plan">
+
+                                                    <h3 class="title large bold">{{name}}</h3>
+                                                    {{#if monthly_price}}
+                                                        <div class="epcl-price" data-price="monthly">{{price monthly_price currency=currency}} <span class="interval">{{t "/Month"}}</span></div>
+                                                    {{/if}}
+                                                    {{#if yearly_price}}
+                                                        <div class="epcl-price" data-price="yearly">{{price yearly_price currency=currency}} <span class="interval">{{t "/Year"}}</span></div>                                                        
+                                                    {{/if}}
+                                                    {{#match type "=" "free"}}
+                                                        <div class="epcl-price" data-price="free">{{t "$0"}}</div>
+                                                    {{/match}}
+                                                    {{#if description}}
+                                                        <p class="description"><strong>{{description}}</strong></p>
+                                                    {{/if}}
+                                                    {{#if benefits}}
+                                                        <ul>
+                                                            {{#foreach benefits as |benefit| }}
+                                                                <li>{{benefit}}</li>
+                                                            {{/foreach}}                                 
+                                                        </ul>
+                                                    {{/if}}
+                                                    {{!-- {{#if monthly_price}}
+                                                        <a href="javascript:void(0);" class="epcl-button small black" data-members-plan={{id}}>{{t "Sign Up Now"}}</a>
+                                                    {{else}}
+                                                        
+                                                    {{/if}}    --}}
+                                                    {{#match type "=" "free"}}
+                                                        <a href="{{@site.url}}/subscribe" class="epcl-button small">{{t "Sign Up for Free"}}</a>
+                                                    {{else}}
+                                                        {{#if monthly_price}}
+                                                            <a href="javascript:void(0);" class="epcl-button small black epcl-pay-button" data-portal="signup/{{id}}/monthly" data-price="monthly">{{t "Sign Up Now"}}</a>
+                                                        {{/if}}
+                                                        {{#if yearly_price}}
+                                                            <a href="javascript:void(0);" class="epcl-button small black epcl-pay-button" data-portal="signup/{{id}}/yearly" data-price="yearly">{{t "Sign Up Now"}}</a>                                                 
+                                                        {{/if}}  
+                                                    {{/match}}                                                 
+                                                </div>
+                                            </div>
+                                            <!-- end: .free -->
+                                        {{/if}}
+                                    {{/foreach}}
+                                </div>
+                            {{/get}}
+
+                            <div class="clear"></div>
+                            <p class="underline-effect account textcenter">{{t "Already have an account?"}} <a href="{{@site.url}}/signin" class="fw-bold">{{t "Sign In"}}</a></p>   
+                        </div>
+
+                        <div class="clear"></div>
+                    </section>
+                    
+                </article>
+            </div>
+            <!-- end: .content -->
+            
+            <div class="clear"></div>
+
+        </div>
+    
+    </div>
+    <!-- end: .center -->
+    
+</main>
+<!-- end: #page -->
+
+{{/post}}

@@ -1,0 +1,68 @@
+/*------------------------------------*\
+    	     CONTENT TABLE
+\*------------------------------------*/
+/**
+ * 		/
+ * SETTINGS...........Main variables for the project (Colours, Fonts and Grids width)
+ *
+ * 		/GENERIC/
+ * FUNCTIONS..........Functions and Mixins
+ * GRIDS..............Grids, ref: https://unsemantic.com/
+ * RESET..............Reset based on Boilerplate and Normalize
+ *
+ *		/BASE/
+ * EDITOR.............Editor Texts (wp-editor or equivalent)
+ * FORMS..............Form styles
+ * RESPONSIVE.........Media queries for the whole project (notebooks, tablet, mobile)
+ * STYLE..............Main styles
+ * TITLES.............Titles styles and sizes
+ *
+ */
+
+@import "settings";
+
+/*------------------------------------*\
+    	 	   GENERIC
+\*------------------------------------*/
+
+@import "generic/functions";
+@import "generic/grids";
+@import "generic/reset";
+
+/*------------------------------------*\
+    		BASE ELEMENTS
+\*------------------------------------*/
+
+@import "base/titles";
+@import "base/effects";
+@import "base/buttons";
+@import "base/forms";
+@import "base/widgets";
+@import "base/style";
+@import "base/editor";
+
+/*------------------------------------*\
+    		OBJECTS/COMPONENTS
+\*------------------------------------*/
+
+@import "objects/header";
+@import "objects/footer";
+
+@import "objects/articles";
+@import "objects/sidebar";
+
+@import "objects/page"; // Standard Page
+@import "objects/page-home";
+@import "objects/page-archives";
+@import "objects/page-404";
+
+@import "objects/single"; // Post content
+
+@import "objects/membership";
+
+
+/*------------------------------------*\
+    		RESPONSIVE
+\*------------------------------------*/
+
+@import "base/responsive";

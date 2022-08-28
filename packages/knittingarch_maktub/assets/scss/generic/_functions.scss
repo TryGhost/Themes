@@ -1,0 +1,42 @@
+@function double($var){
+	@return $var * 2;
+}
+
+@function half($var){
+	@return $var / 2;
+}
+
+@mixin absolute-element() {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+@mixin transition($ms: $transition-time) {
+	transition: all $ms $transition-method;
+}
+
+@mixin optional-at-root($sel) {
+    @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+        @content;
+    }
+}
+
+@mixin placeholder {
+    @include optional-at-root('::-webkit-input-placeholder') {
+        @content;
+    }
+    @include optional-at-root(':-moz-placeholder') {
+        @content;
+    }
+    @include optional-at-root('::-moz-placeholder') {
+      @content;
+    }
+    @include optional-at-root(':-ms-input-placeholder') {
+       @content;
+    }
+}

@@ -1,0 +1,11 @@
+<nav class="epcl-pagination section">
+	<div class="nav">
+		{{#if prev}}
+			<a class="prev epcl-button secondary small" href="{{page_url prev}}">{{t "Previous" }}</a>
+		{{/if}}
+		<span class="page-number">{{t "Page {page} of {pages}" page=page pages=pages }}</span>
+		{{#if next}}
+			<a class="next epcl-button secondary small" href="{{page_url next}}">{{t "Next" }}</a>
+		{{/if}}
+	</div>
+</nav>

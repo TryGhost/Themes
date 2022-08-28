@@ -1,0 +1,91 @@
+<article class="default grid-33 tablet-grid-50 mobile-grid-100 np-mobile ctag-{{primary_tag.slug}} post-access-{{visibility}}">
+    <div class="epcl-bg">
+        <header>            
+            <div class="post-format-image ">
+                <div class="featured-image epcl-flex">
+                                    
+                    {{#if feature_image}}
+                        <a href="{{url}}" class="thumb epcl-dropcap large epcl-loader main-effect">
+                            {{#if @first}}
+                                <span class="fullimage cover" style="background-image: url({{ img_url feature_image size="medium" }});"></span>
+                            {{else}}
+                                <span class="fullimage cover lazy" data-src="{{ img_url feature_image size="medium" }}"></span>
+                                <span class="fullimage cover lazy fake-layout" data-src="{{ img_url feature_image size="medium" }}"></span>
+                            {{/if}}   
+                        </a>
+                    {{else}}
+                        <a class="epcl-dropcap large main-effect text-only" href="{{url}}">
+                            <span class="first-letter fake-layout" data-title="{{title}}"></span>
+                        </a>
+                    {{/if}}
+                    
+                    <div class="info">                
+                        <h1 class="main-title title gradient-effect large"><a href="{{url}}">{{title}}</a></h1>
+                    </div>
+    
+                </div>
+
+                <div class="clear"></div>
+                <!-- start: .meta -->
+                <div class="meta">
+                    <time class="meta-info" datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM DD, YYYY"}}</time>  
+                    <div class="min-read meta-info">{{reading_time minute=(t "1 min read") minutes=(t "% min read")}}</div>
+                    <a href="{{url}}#comments" class="comments meta-info icon mobile tooltip" title="{{t "Go to comments"}}" style="display: inline-block"><svg><use xlink:href="#comments-outline-icon"></use></svg> <span class="disqus-comment-count" data-disqus-url="{{@site.url}}{{url}}" data-disqus-identifier="{{comment_id}}">0</span></a>
+                    
+                    {{#has visibility="members"}}
+                        <a href="{{url}}" class="access-icon visibility-members meta-info tooltip" title="{{t "Members Article"}}">
+                            <svg><use xlink:href="#locked"></use></svg>                
+                        </a>
+                    {{/has}}
+                    {{#has visibility="paid"}}
+                        <a href="{{url}}" class="access-icon visibility-paid meta-info tooltip" title="{{t "Paid Article"}}">         
+                            <svg><use xlink:href="#vip"></use></svg>     
+                        </a>
+                    {{/has}}
+                    {{#has visibility="tiers"}}
+                        <a href="{{url}}" class="access-icon visibility-paid meta-info tooltip" title="{{t "Paid Article"}}">         
+                            <svg><use xlink:href="#vip"></use></svg>     
+                        </a>
+                    {{/has}}
+
+                    <div class="clear"></div>
+                </div>
+                <!-- end: .meta -->
+            </div>    
+            
+        </header>
+        
+        <div class="post-excerpt">                    
+            <p>{{excerpt words="20"}}...</p>    
+            <div class="clear"></div>              
+        </div>  
+        
+        <div class="meta">
+            
+            {{#primary_tag}}               
+                <div class="tags">
+                    <a href="{{url}}" class="ctag ctag-{{slug}}" data-id="ctag-{{slug}}">{{name}}</a>  
+                </div>
+            {{/primary_tag}}  
+
+            {{#foreach authors limit="1" }}
+                <a href="{{url}}" title="{{name}}" class="author meta-info alignright hide-on-mobile">                                        
+                    {{#if profile_image}}
+                        <span class="author-image cover lazy" data-src="{{img_url profile_image size="avatar_thumb"}}"></span>
+                    {{else}}
+                        <div class="epcl-dropcap rounded medium author-avatar">
+                            <span class="first-letter" data-title="{{name}}"></span>
+                        </div>                          
+                    {{/if}}
+                    <span class="author-name">{{name}}</span>
+                </a>
+            {{/foreach}}
+            
+            <div class="clear"></div>
+        </div>
+
+        <div class="clear"></div>
+
+    </div>
+
+</article>

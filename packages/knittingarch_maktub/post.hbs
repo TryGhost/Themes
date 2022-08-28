@@ -1,0 +1,22 @@
+{{!< default-post}}
+
+{{! If you want to edit post sections/modules go to default-post.hbs
+which contains all sections applied for Classic/Fullcover articles }}
+
+{{#post}}
+
+    {{#contentFor "main-class"}}standard{{/contentFor}}    
+
+    {{#contentFor "bottom-image"}}
+        {{#if feature_image}}
+            <div class="featured-image epcl-decoration-border">
+                <img class="fullwidth" width="950" height="400" src="{{img_url feature_image size="classic"}}" alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}">
+            </div>
+        {{/if}}
+    {{/contentFor}}
+
+    {{#contentFor "sidebar"}}
+        {{> sidebar }}
+    {{/contentFor}}
+
+{{/post}}
