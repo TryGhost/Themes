@@ -5,26 +5,10 @@
 })();
 
 (function () {
-    document.querySelector('[data-toggle-comments]').addEventListener('click', function () {
+    const toggle = document.querySelector('[data-toggle-comments]');
+    if (!toggle) return;
+
+    toggle.addEventListener('click', function () {
         document.body.classList.toggle('comments-opened');
     });
-
-    document.querySelector('.gh-comments').addEventListener('click', function (e) {
-        e.stopPropagation();
-        document.body.classList.toggle('modal-opened');
-    });
 })();
-
-// (function () {
-//     if (!document.body.classList.contains('has-background-about')) return;
-
-//     const about = document.querySelector('.gh-about');
-//     if (!about) return;
-
-//     const image = about.querySelector('.gh-about-image');
-
-//     imagesLoaded(image, function () {
-//         about.style.setProperty('--about-height', image.clientWidth * image.naturalHeight / image.naturalWidth + 'px');
-//         about.classList.add('initialized');
-//     });
-// })();

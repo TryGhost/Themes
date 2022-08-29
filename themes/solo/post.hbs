@@ -33,11 +33,12 @@
                     </div>
 
                     <div class="gh-navigation-middle">
-                        {{!-- <button class="gh-text-btn" {{#unless @member}}data-portal{{else}}{{#if access}}data-modal{{else}}data-portal{{/if}}{{/unless}} style="display: flex; align-items: center; gap: 6px;"> --}}
-                        <button class="gh-text-btn" style="display: flex; align-items: center; gap: 6px;" data-toggle-comments>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M45.4,177A95.9,95.9,0,1,1,79,210.6h0L45.8,220a7.9,7.9,0,0,1-9.8-9.8L45.4,177Z" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></path><circle cx="100" cy="128" r="16"></circle><circle cx="156" cy="128" r="16"></circle></svg>
-                            {{comment_count empty="Discussion"}}
-                        </button>
+                        {{#if @site.comments_enabled}}
+                            <button class="gh-comments-toggle gh-text-btn" data-toggle-comments>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M45.4,177A95.9,95.9,0,1,1,79,210.6h0L45.8,220a7.9,7.9,0,0,1-9.8-9.8L45.4,177Z" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></path><circle cx="100" cy="128" r="16"></circle><circle cx="156" cy="128" r="16"></circle></svg>
+                                {{comment_count empty="Discussion"}}
+                            </button>
+                        {{/if}}
                     </div>
 
                     <div class="gh-navigation-next">
