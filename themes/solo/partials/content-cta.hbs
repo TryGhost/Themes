@@ -1,0 +1,22 @@
+{{{html}}}
+
+<section class="gh-cta">
+    {{#has visibility="paid"}}
+        <h4 class="gh-cta-title">This post is for paying subscribers only</h4>
+    {{/has}}
+    {{#has visibility="members"}}
+        <h4 class="gh-cta-title">This post is for subscribers only</h4>
+    {{/has}}
+    {{#has visibility="filter"}}
+        <h4 class="gh-cta-title">This post is for subscribers on the {{tiers}} only</h4>
+    {{/has}}
+
+    <div class="gh-cta-actions">
+        {{#if @member}}
+            <button class="gh-btn gh-primary-btn" href="#/portal/account/plans" data-portal="account/plans">Upgrade now</button>
+        {{else}}
+            <button class="gh-btn gh-primary-btn" href="#/portal/signup" data-portal="signup">Subscribe now</button>
+            <span class="gh-cta-link" href="#/portal/signin" data-portal="signin">Already have an account? Sign in.</span>
+        {{/if}}
+    </div>
+</section>

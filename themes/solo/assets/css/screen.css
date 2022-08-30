@@ -13,9 +13,9 @@
     --color-border: rgba(0, 0, 0, 0.08);
     --color-border-light: rgba(255, 255, 255, 0.2);
     --gap: clamp(24px, 1.7032rem + 1.9355vw, 48px);
-    --container-width: 1800px;
+    --container-width: 1500px;
     --content-width: 800px;
-    --content-font-size: 2rem;
+    --content-font-size: clamp(1.8rem, 0.18vw + 1.71rem, 2rem);
 }
 
 :root.has-light-text {
@@ -47,11 +47,11 @@ figcaption {
         [full-start]
         minmax(var(--gap), auto)
         [wide-start]
-        500px
+        minmax(auto, 500px)
         [main-start]
-        500px
+        minmax(auto, 500px)
         [main-end]
-        500px
+        minmax(auto, 500px)
         [wide-end]
         minmax(var(--gap), auto)
         [full-end];
@@ -238,7 +238,7 @@ figcaption {
 }
 
 .has-typographic-about .gh-about-bio {
-    max-width: 1400px;
+    max-width: 1200px;
     font-size: clamp(3.2rem, 2.2rem + 3.125vw, 7.2rem);
     font-weight: 800;
     line-height: 1.1;
@@ -361,7 +361,7 @@ figcaption {
 }
 
 .has-typographic-feed .gh-card-title {
-    max-width: 1400px;
+    max-width: 1200px;
     font-size: clamp(3.2rem, 2.4rem + 2.5vw, 6.4rem);
     font-weight: 800;
     line-height: 1.05;
@@ -467,7 +467,8 @@ figcaption {
     position: absolute;
     top: 0;
     bottom: 0;
-    z-index: -1;
+    z-index: 10;
+    grid-row-start: 1;
     grid-column: wide-start / main-start !important;
     width: 100%;
     margin: 0 !important;
@@ -485,11 +486,11 @@ figcaption {
     width: fit-content;
     padding: 2px 12px;
     font-size: 1.8rem;
-    font-weight: 800;
-    color: #fff !important;
+    font-weight: 700;
+    color: var(--tag-color, var(--color-darker-gray)) !important;
     text-decoration: none !important;
-    letter-spacing: -0.015em;
-    background-color: var(--ghost-accent-color);
+    letter-spacing: -0.01em;
+    border: 2px solid var(--color-border);
     border-radius: 24px;
 }
 
@@ -526,6 +527,12 @@ figcaption {
     line-height: 1.5;
 }
 
+.gh-content > :is(.kg-width-wide, .kg-width-full) {
+    position: relative;
+    z-index: 20;
+    transform: translate3d(0, 0, 0);
+}
+
 .gh-content > *:not(.kg-width-wide):not(.kg-width-full) {
     grid-column: main-start / wide-end;
 }
@@ -542,8 +549,28 @@ figcaption {
     margin-top: clamp(6.4rem, 3rem + 10.625vw, 20rem);
 }
 
-.gh-post-upgrade-cta {
-    max-width: 720px;
+.gh-cta {
+    position: relative;
+    z-index: 20;
+    grid-column: wide-start / wide-end !important;
+    padding: clamp(8rem, 10.71vw + 2.86rem, 20rem) clamp(4.8rem, 4.64vw + 2.57rem, 10rem);
+    margin-top: clamp(6.4rem, 5vw + 4rem, 12rem);
+    background-color: var(--color-lighter-gray);
+    transform: translate3d(0, 0, 0);
+}
+
+.gh-cta-title {
+    margin-bottom: 24px;
+    font-size: clamp(3.6rem, 1.79vw + 2.74rem, 5.6rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+}
+
+.gh-cta .gh-btn {
+    padding-right: 22px;
+    padding-left: 22px;
+    font-size: 1.8rem;
+    letter-spacing: -0.005em;
 }
 
 .gh-navigation {
@@ -560,21 +587,22 @@ figcaption {
 }
 
 .gh-comments {
-    margin-top: 120px;
+    position: relative;
+    margin-top: clamp(6.4rem, 5vw + 4rem, 12rem);
 }
 
-/* .gh-comments:not(.no-border)::before {
-    grid-column: wide-start / wide-end;
-    height: 1px;
-    margin-bottom: 48px;
-    content: "";
-    background-color: var(--color-border);
-} */
+.gh-comments-header {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: block;
+    grid-row-start: 1;
+    grid-column: wide-start / main-start;
+}
 
 .gh-comments-title {
     position: sticky;
     top: 48px;
-    grid-column: wide-start / main-start;
     height: fit-content;
     font-weight: 800;
 }
@@ -585,46 +613,36 @@ figcaption {
     background-color: var(--color-lighter-gray);
 }
 
-/* .gh-comments {
-    position: fixed;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.2s, transform 0.2s;
-    transform: translateY(16px);
-}
+@media (max-width: 767px) {
+    .gh-article-title {
+        grid-column: wide-start / wide-end;
+    }
 
-.comments-opened .gh-comments {
-    position: static;
-    visibility: visible;
-    opacity: 1;
-    transform: translateY(0);
-}
+    .gh-content {
+        font-size: var(--content-font-size);
+    }
 
-.gh-comments-inner {
-    position: relative;
-    grid-column: wide-start / wide-end;
-    padding: 80px;
-    background-image: linear-gradient(180deg, #f4f4f4, #fff);
-    border-radius: 24px;
-}
+    .gh-content > :not(.kg-width-wide):not(.kg-width-full) {
+        grid-column: wide-start / wide-end;
+    }
 
-.gh-comments-inner::before {
-    position: absolute;
-    top: -16px;
-    left: 50%;
-    width: 0;
-    height: 0;
-    margin-left: -8px;
-    content: "";
-    border-right: 16px solid transparent;
-    border-bottom: 16px solid #f4f4f4;
-    border-left: 16px solid transparent;
-}
+    .gh-article-meta {
+        position: static;
+        grid-column: wide-start / wide-end !important;
+    }
 
-#ghost-comments-root {
-    max-width: 720px;
-    margin: 0 auto;
-} */
+    .gh-article-meta-inner {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 16px;
+    }
+
+    .gh-comments-title,
+    .gh-comments-inner {
+        grid-column: wide-start / wide-end;
+    }
+}
 
 @media (max-width: 1199px) {
     .gh-article-meta {
