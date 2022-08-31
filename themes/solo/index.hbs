@@ -1,8 +1,8 @@
 {{!< default}}
 
 <section class="gh-about gh-outer">
-    <div class="gh-about-inner{{#match @custom.about_section_layout "!=" "Large background"}} gh-inner{{/match}}">
-        {{#match @custom.about_section_layout "!=" "Typographic profile"}}
+    <div class="gh-about-inner{{#match @custom.header_section_layout "!=" "Large background"}} gh-inner{{/match}}">
+        {{#match @custom.header_section_layout "!=" "Typographic profile"}}
             {{#if @site.cover_image}}
                 <img class="gh-about-image" src="{{@site.cover_image}}" alt="{{@site.title}}">
             {{/if}}
@@ -37,11 +37,11 @@
 </section>
 
 <main class="gh-main gh-outer">
-    <div class="gh-feed{{#match @custom.about_section_layout "!=" "Large background"}} gh-inner{{/match}}">
+    <div class="gh-feed{{#match @custom.header_section_layout "!=" "Large background"}} gh-inner{{/match}}">
         {{#foreach posts}}
             {{> "loop"}}
         {{/foreach}}
     </div>
 </main>
 
-{{#contentFor "body_class"}}{{#match @custom.about_section_layout "Side by side"}} has-side-about{{/match}}{{#match @custom.about_section_layout "Large background"}} is-head-transparent has-background-about{{/match}}{{#match @custom.about_section_layout "Typographic profile"}} has-typographic-about{{/match}}{{/contentFor}}
+{{#contentFor "body_class"}}{{#match @custom.header_section_layout "Side by side"}} has-side-about{{/match}}{{#match @custom.header_section_layout "Large background"}} is-head-transparent has-background-about{{/match}}{{#match @custom.header_section_layout "Typographic profile"}} has-typographic-about{{/match}}{{/contentFor}}

@@ -1,7 +1,7 @@
-<article class="gh-card {{post_class}}">
+<article class="gh-card {{post_class}}"{{#if primary_tag.accent_color}} style="--tag-color: {{primary_tag.accent_color}};"{{/if}}>
     <a class="gh-card-link" href="{{url}}">
 
-        {{#match @custom.feed_layout "!=" "Typographic"}}
+        {{#match @custom.post_feed_layout "!=" "Typographic"}}
             <figure class="gh-card-image">
                 {{#if feature_image}}
                     <img
@@ -21,7 +21,7 @@
 
         <div class="gh-card-wrapper">
             <h2 class="gh-card-title">{{title}}</h2>
-            {{#match @custom.feed_layout "Typographic"}}
+            {{#match @custom.post_feed_layout "Typographic"}}
                 {{#if custom_excerpt}}
                     <p class="gh-card-excerpt">{{excerpt}}</p>
                 {{/if}}

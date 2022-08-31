@@ -15,10 +15,11 @@
     --gap: clamp(24px, 1.7032rem + 1.9355vw, 48px);
     --container-width: 1500px;
     --content-width: 800px;
-    --content-font-size: clamp(1.8rem, 0.18vw + 1.71rem, 2rem);
+    --content-font-size: clamp(1.7rem, 0.18vw + 1.61rem, 1.9rem);
 }
 
 :root.has-light-text {
+    --color-lighter-gray: rgba(0, 0, 0, 0.1);
     --color-darker-gray: #fff;
     --color-secondary-text: var(--color-secondary-text-light);
     --color-border: var(--color-border-light);
@@ -52,6 +53,22 @@ figcaption {
         minmax(auto, 500px)
         [main-end]
         minmax(auto, 500px)
+        [wide-end]
+        minmax(var(--gap), auto)
+        [full-end];
+}
+
+.page-template .no-image .gh-canvas {
+    display: grid;
+    grid-template-columns:
+        [full-start]
+        minmax(var(--gap), auto)
+        [wide-start]
+        minmax(auto, calc((var(--container-width, 1200px) - var(--content-width, 720px)) / 2))
+        [main-start]
+        min(var(--content-width, 720px), calc(100% - calc(var(--gap) * 2)))
+        [main-end]
+        minmax(auto, calc((var(--container-width, 1200px) - var(--content-width, 720px)) / 2))
         [wide-end]
         minmax(var(--gap), auto)
         [full-end];
@@ -142,7 +159,7 @@ figcaption {
     font-size: clamp(3.2rem, 2.4452rem + 2.0968vw, 5.8rem);
 }
 
-@media (max-width: 991px) {
+@media (max-width: 840px) {
     .has-side-about .gh-about-inner {
         display: flex;
         flex-direction: column-reverse;
@@ -317,13 +334,23 @@ figcaption {
 }
 
 .has-classic-feed .gh-card-image {
+    position: relative;
     flex: 1;
-    flex-shrink: 0;
-    height: 100%;
-    aspect-ratio: 16 / 9;
+}
+
+.has-classic-feed .gh-card-image::before {
+    display: block;
+    padding-bottom: 56.25%;
+    content: "";
+}
+
+.has-classic-feed .no-image .gh-card-image {
+    background-color: var(--tag-color, var(--color-lighter-gray));
 }
 
 .has-classic-feed .gh-card-image img {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -331,6 +358,8 @@ figcaption {
 
 .has-classic-feed .gh-card-wrapper {
     flex: 1;
+    flex-shrink: 0;
+    width: 100%;
 }
 
 .has-classic-feed .gh-card-title {
@@ -386,6 +415,10 @@ figcaption {
 .has-parallax-feed .gh-card {
     display: flex;
     min-height: 640px;
+}
+
+.has-parallax-feed .gh-card.no-image {
+    background-color: var(--tag-color, var(--color-darker-gray));
 }
 
 .has-parallax-feed .kg-width-full .gh-card {
@@ -458,9 +491,9 @@ figcaption {
 /* Article
 /* ---------------------------------------------------------- */
 
-.no-image .gh-article-header {
-    padding-top: 40px;
-    padding-bottom: 80px;
+.post-template .no-image .gh-article-header {
+    padding-top: clamp(1.6rem, 2.14vw + 0.57rem, 4rem);
+    padding-bottom: clamp(4rem, 3.57vw + 2.29rem, 8rem);
 }
 
 .gh-article-meta {
@@ -479,25 +512,42 @@ figcaption {
     top: 48px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+}
+
+.gh-article-meta .gh-author-image {
+    width: 72px;
+    height: 72px;
+    margin-bottom: 16px;
+}
+
+.gh-article-meta .gh-author-name {
+    font-size: 1.9rem;
+    letter-spacing: -0.01em;
+}
+
+.gh-article-meta .gh-author-name a {
+    color: var(--color-darker-gray);
+    text-decoration: none;
+}
+
+.gh-article-date {
+    margin-top: 4px;
+    font-size: 1.4rem;
+    color: var(--color-secondary-text);
+    letter-spacing: -0.015em;
 }
 
 .gh-article-tag {
     width: fit-content;
     padding: 2px 12px;
-    font-size: 1.8rem;
+    margin-top: 20px;
+    font-size: 1.6rem;
     font-weight: 700;
     color: var(--tag-color, var(--color-darker-gray)) !important;
     text-decoration: none !important;
     letter-spacing: -0.01em;
     border: 2px solid var(--color-border);
     border-radius: 24px;
-}
-
-.gh-article-date {
-    font-size: 1.6rem;
-    color: var(--color-secondary-text);
-    letter-spacing: -0.015em;
 }
 
 .gh-article-title {
@@ -508,12 +558,36 @@ figcaption {
     letter-spacing: -0.03em;
 }
 
+.page-template .no-image .gh-article-title {
+    grid-column: main-start / main-end;
+}
+
+.has-serif-font .gh-article-title {
+    font-family: var(--font-serif);
+}
+
+.has-mono-font .gh-article-title {
+    font-family: var(--font-mono);
+}
+
 .gh-article-excerpt {
     grid-column: wide-start / wide-end;
     max-width: 960px;
     font-size: clamp(1.8rem, 1.6rem + 0.625vw, 2.6rem);
     font-weight: 500;
     line-height: 1.4;
+}
+
+.has-serif-font .gh-article-excerpt {
+    font-family: var(--font-serif);
+}
+
+.has-mono-font .gh-article-excerpt {
+    font-family: var(--font-mono);
+}
+
+.gh-article-excerpt .emoji {
+    color: initial;
 }
 
 .gh-article-image {
@@ -537,12 +611,24 @@ figcaption {
     grid-column: main-start / wide-end;
 }
 
+.page-template .no-image .gh-content > *:not(.kg-width-wide):not(.kg-width-full) {
+    grid-column: main-start / main-end;
+}
+
 .gh-content > p {
-    max-width: 800px;
+    max-width: 720px;
 }
 
 .gh-content > [id] {
     font-weight: 800;
+}
+
+.has-serif-font .gh-content > :is(p, ul, ol) {
+    font-family: var(--font-serif);
+}
+
+.has-mono-font .gh-content > :is(p, ul, ol) {
+    font-family: var(--font-mono);
 }
 
 .gh-article-footer {
@@ -566,6 +652,14 @@ figcaption {
     letter-spacing: -0.03em;
 }
 
+.has-serif-font .gh-cta-title {
+    font-family: var(--font-serif);
+}
+
+.has-mono-font .gh-cta-title {
+    font-family: var(--font-mono);
+}
+
 .gh-cta .gh-btn {
     padding-right: 22px;
     padding-left: 22px;
@@ -578,6 +672,14 @@ figcaption {
     font-size: clamp(2rem, 1.7rem + 0.9375vw, 3.2rem);
     font-weight: 800;
     letter-spacing: -0.02em;
+}
+
+.has-serif-font .gh-navigation {
+    font-family: var(--font-serif);
+}
+
+.has-mono-font .gh-navigation {
+    font-family: var(--font-mono);
 }
 
 .gh-comments-toggle {
@@ -605,6 +707,14 @@ figcaption {
     top: 48px;
     height: fit-content;
     font-weight: 800;
+}
+
+.has-serif-font .gh-comments-title {
+    font-family: var(--font-serif);
+}
+
+.has-mono-font .gh-comments-title {
+    font-family: var(--font-mono);
 }
 
 .gh-comments-inner {
@@ -720,14 +830,23 @@ figcaption {
 }
 
 .gh-author-image {
-    width: 100px;
+    width: 96px;
+    height: 96px;
     margin-bottom: 24px;
+    overflow: hidden;
     border-radius: 50%;
+}
+
+.gh-author-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .gh-author-meta {
     margin-top: 16px;
     font-size: 1.8rem;
+    color: var(--color-secondary-text);
 }
 
 .gh-author-location {

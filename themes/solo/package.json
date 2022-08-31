@@ -50,13 +50,13 @@
                 "options": ["Modern sans-serif", "Elegant serif", "Consistent mono"],
                 "default": "Modern sans-serif"
             },
-            "about_section_layout": {
+            "header_section_layout": {
                 "type": "select",
                 "options": ["Side by side", "Large background", "Typographic profile"],
                 "default": "Side by side",
                 "group": "homepage"
             },
-            "feed_layout": {
+            "post_feed_layout": {
                 "type": "select",
                 "options": ["Classic", "Typographic", "Parallax"],
                 "default": "Classic",
