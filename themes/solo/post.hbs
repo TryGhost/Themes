@@ -35,12 +35,8 @@
 
             {{#if comments}}
                 <div class="gh-comments gh-canvas">
-                    <header class="gh-comments-header">
-                        <h2 class="gh-comments-title">Comments ({{comment_count empty="0" single="" plural=""}})</h2>
-                    </header>
-                    <div class="gh-comments-inner">
-                        {{comments title="" count=false}}
-                    </div>
+                    <h2 class="gh-comments-title">Comments ({{comment_count empty="0" single="" plural=""}})</h2>
+                    {{comments title="" count=false}}
                 </div>
             {{/if}}
 

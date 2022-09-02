@@ -28,10 +28,12 @@
             {{#if @site.description}}
                 <h1 class="gh-about-bio">{{@site.description}}</h1>
             {{/if}}
-            <div class="gh-subscribe-input" data-portal>
-                jamie@example.com
-                <span class="gh-btn gh-primary-btn">Subscribe</span>
-            </div>
+            {{#unless @member}}
+                <div class="gh-subscribe-input" data-portal>
+                    jamie@example.com
+                    <span class="gh-btn gh-primary-btn">Subscribe</span>
+                </div>
+            {{/unless}}
         </div>
     </div>
 </section>
