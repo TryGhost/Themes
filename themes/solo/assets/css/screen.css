@@ -490,11 +490,6 @@ figcaption {
 /* Article
 /* ---------------------------------------------------------- */
 
-.post-template .no-image .gh-article-header {
-    padding-top: clamp(1.6rem, 2.14vw + 0.57rem, 4rem);
-    padding-bottom: clamp(4rem, 3.57vw + 2.29rem, 8rem);
-}
-
 .gh-article-meta {
     position: absolute;
     top: 0;
@@ -629,10 +624,19 @@ figcaption {
     margin-top: clamp(6.4rem, 3rem + 10.625vw, 20rem);
 }
 
+@media (max-width: 767px) {
+    .gh-content {
+        font-size: var(--content-font-size);
+    }
+}
+
+/* Custom CTA
+/* ---------------------------------------------------------- */
+
 .gh-cta {
     position: relative;
     z-index: 20;
-    grid-column: wide-start / wide-end !important;
+    grid-column: full-start / full-end !important;
     padding: clamp(8rem, 10.71vw + 2.86rem, 20rem) clamp(4.8rem, 4.64vw + 2.57rem, 10rem);
     margin-top: clamp(6.4rem, 5vw + 4rem, 12rem);
     background-color: var(--color-lighter-gray);
@@ -661,6 +665,9 @@ figcaption {
     letter-spacing: -0.005em;
 }
 
+/* Navigation
+/* ---------------------------------------------------------- */
+
 .gh-navigation {
     grid-column: full-start / full-end;
     font-size: clamp(2rem, 1.7rem + 0.9375vw, 3.2rem);
@@ -675,6 +682,9 @@ figcaption {
 .has-mono-font .gh-navigation {
     font-family: var(--font-mono);
 }
+
+/* Comments
+/* ---------------------------------------------------------- */
 
 .gh-comments {
     margin-top: clamp(4.8rem, 4.64vw + 2.57rem, 10rem);
@@ -695,12 +705,6 @@ figcaption {
 
 .has-mono-font .gh-comments-title {
     font-family: var(--font-mono);
-}
-
-@media (max-width: 767px) {
-    .gh-content {
-        font-size: var(--content-font-size);
-    }
 }
 
 /* Subscribe
