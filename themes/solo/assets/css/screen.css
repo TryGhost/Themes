@@ -13,7 +13,7 @@
     --gap: clamp(24px, 1.7032rem + 1.9355vw, 48px);
     --head-nav-gap: 32px;
     --container-width: 1440px;
-    --content-font-size: clamp(1.7rem, 0.27vw + 1.57rem, 2rem);
+    --content-font-size: clamp(1.7rem, 0.38vw + 1.4rem, 2rem);
 }
 
 :root.has-light-text {
@@ -41,30 +41,7 @@ figcaption {
 }
 
 .gh-canvas {
-    grid-template-columns:
-        [edge-start]
-        minmax(var(--gap), auto)
-        [full-start]
-        repeat(12, minmax(auto, 120px))
-        [full-end]
-        minmax(var(--gap), auto)
-        [edge-end];
-}
-
-.page-template .no-image .gh-canvas {
-    display: grid;
-    grid-template-columns:
-        [full-start]
-        minmax(var(--gap), auto)
-        [wide-start]
-        minmax(auto, calc((var(--container-width, 1200px) - var(--content-width, 720px)) / 2))
-        [main-start]
-        min(var(--content-width, 720px), calc(100% - calc(var(--gap) * 2)))
-        [main-end]
-        minmax(auto, calc((var(--container-width, 1200px) - var(--content-width, 720px)) / 2))
-        [wide-end]
-        minmax(var(--gap), auto)
-        [full-end];
+    grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 
 /* Header
@@ -202,7 +179,7 @@ figcaption {
 
 .has-background-about .gh-about-content {
     position: sticky;
-    bottom: 96px;
+    bottom: 64px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -496,7 +473,7 @@ figcaption {
     bottom: 0;
     z-index: 10;
     grid-row-start: 1;
-    grid-column: full-start / span 3 !important;
+    grid-column: 1 / span 3 !important;
     width: 100%;
     margin: 0 !important;
 }
@@ -544,7 +521,7 @@ figcaption {
 }
 
 .gh-article-title {
-    grid-column: full-start / span 9;
+    grid-column: 1 / span 9;
     font-size: clamp(4rem, 2.86vw + 2.63rem, 7.2rem);
     font-weight: 800;
     line-height: 1;
@@ -552,7 +529,7 @@ figcaption {
 }
 
 .page-template .no-image .gh-article-title {
-    grid-column: main-start / main-end;
+    grid-column: 4 / span 6;
 }
 
 .has-serif-font .gh-article-title {
@@ -564,7 +541,7 @@ figcaption {
 }
 
 .gh-article-excerpt {
-    grid-column: full-start / span 9;
+    grid-column: 1 / span 9;
     max-width: 840px;
     font-size: clamp(1.8rem, 0.54vw + 1.54rem, 2.4rem);
     font-weight: 500;
@@ -584,17 +561,21 @@ figcaption {
 }
 
 .gh-article-image {
-    grid-column: full-start / full-end;
+    grid-column: 1 / span 12;
     margin-top: clamp(4rem, 3rem + 3.125vw, 8rem);
 }
 
 .gh-content {
     position: relative;
-    margin-top: 80px;
+    margin-top: clamp(4rem, 3rem + 3.125vw, 8rem);
+}
+
+.no-image .gh-content {
+    margin-top: clamp(4rem, 2.14vw + 2.97rem, 6.4rem);
 }
 
 .gh-content > * {
-    grid-column: 5 / span 6;
+    grid-column: 4 / span 6;
 }
 
 .gh-content > [id] {
@@ -602,13 +583,13 @@ figcaption {
 }
 
 .gh-content > .kg-width-wide {
-    grid-column: 5 / full-end;
+    grid-column: 4 / span 9;
 }
 
 .gh-content > .kg-width-full {
     position: relative;
     z-index: 20;
-    grid-column: full-start / full-end;
+    grid-column: 1 / span 12;
     transform: translate3d(0, 0, 0);
 }
 
@@ -636,7 +617,7 @@ figcaption {
 .gh-cta {
     position: relative;
     z-index: 20;
-    grid-column: full-start / full-end !important;
+    grid-column: 1 / span 12 !important;
     padding: clamp(8rem, 10.71vw + 2.86rem, 20rem) clamp(4.8rem, 4.64vw + 2.57rem, 10rem);
     margin-top: clamp(6.4rem, 5vw + 4rem, 12rem);
     background-color: var(--color-lighter-gray);
@@ -659,8 +640,9 @@ figcaption {
 }
 
 .gh-cta .gh-btn {
-    padding-right: 22px;
-    padding-left: 22px;
+    height: 48px;
+    padding-right: 24px;
+    padding-left: 24px;
     font-size: 1.8rem;
     letter-spacing: -0.005em;
 }
@@ -669,7 +651,7 @@ figcaption {
 /* ---------------------------------------------------------- */
 
 .gh-navigation {
-    grid-column: full-start / full-end;
+    grid-column: 1 / span 12;
     font-size: clamp(2rem, 1.7rem + 0.9375vw, 3.2rem);
     font-weight: 800;
     letter-spacing: -0.02em;
@@ -691,7 +673,7 @@ figcaption {
 }
 
 .gh-comments > * {
-    grid-column: 5 / span 6;
+    grid-column: 4 / span 6;
 }
 
 .gh-comments .gh-comments-title {

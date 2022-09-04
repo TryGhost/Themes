@@ -1,7 +1,9 @@
 {{!< default}}
 
-<main class="gh-main">
-    {{#post}}
+{{#post}}
+
+<main class="gh-main gh-outer">
+    <div class="gh-inner">
         <article class="gh-article {{post_class}}">
             <header class="gh-article-header gh-canvas">
                 <h1 class="gh-article-title">{{title}}</h1>
@@ -15,5 +17,7 @@
                 {{content}}
             </section>
         </article>
-    {{/post}}
+    </div>
 </main>
+
+{{/post}}
