@@ -565,6 +565,17 @@ figcaption {
     margin-top: clamp(4rem, 3rem + 3.125vw, 8rem);
 }
 
+.has-wide-image .gh-article-image {
+    grid-row-start: 1;
+    grid-column: 4 / span 9;
+    margin-top: 0;
+    margin-bottom: clamp(4rem, 2.14vw + 2.97rem, 6.4rem);
+}
+
+.has-wide-image .gh-article-image.has-caption {
+    margin-bottom: clamp(2.4rem, 0.71vw + 2.06rem, 3.2rem);
+}
+
 .gh-content {
     position: relative;
     margin-top: clamp(4rem, 3rem + 3.125vw, 8rem);
