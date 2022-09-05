@@ -191,7 +191,7 @@ figcaption {
     position: relative;
 }
 
-.has-background-about .gh-about::before {
+/* .has-background-about .gh-about::before {
     position: absolute;
     inset: 0;
     content: "";
@@ -201,12 +201,25 @@ figcaption {
 
 .has-background-about .gh-about.initialized::before {
     opacity: 0.3;
-}
+} */
 
 .has-background-about .gh-about-inner {
+    position: relative;
     display: flex;
     align-items: flex-end;
     min-height: var(--about-height);
+}
+
+.has-background-about .gh-about-inner::before {
+    position: absolute;
+    inset: 0;
+    content: "";
+    background-color: var(--color-black);
+    transition: opacity 1.5s ease;
+}
+
+.has-background-about .gh-about.initialized .gh-about-inner::before {
+    opacity: 0.4;
 }
 
 .has-background-about .gh-about-image {
@@ -220,17 +233,20 @@ figcaption {
 
 .has-background-about .gh-about-content {
     position: sticky;
-    bottom: 64px;
+    bottom: calc(var(--gap) + 16px);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     max-width: 50%;
-    margin-bottom: 64px;
+    padding-left: var(--gap);
+    margin-top: calc(var(--gap) + 16px);
+    margin-bottom: calc(var(--gap) + 16px);
     text-align: left;
 }
 
 .has-background-about .gh-about-bio {
-    font-size: clamp(2.4rem, 1.5rem + 2.8125vw, 6rem);
+    /* font-size: clamp(2.4rem, 1.5rem + 2.8125vw, 6rem); */
+    font-size: clamp(2.4rem, 2.14vw + 1.37rem, 4.8rem);
     color: #fff;
 }
 
