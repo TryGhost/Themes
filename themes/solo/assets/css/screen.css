@@ -52,7 +52,8 @@ figcaption {
     grid-column: 4 / span 9;
 }
 
-.gh-canvas > .kg-width-full {
+.gh-canvas > .kg-width-full,
+.gh-canvas > .kg-gallery-card.kg-width-wide {
     position: relative;
     z-index: 20;
     grid-column: 1 / span 12;
@@ -90,7 +91,6 @@ figcaption {
 
 .gh-head {
     font-size: 1.6rem;
-    color: var(--color-secondary-text);
     background-color: transparent;
 }
 
@@ -110,6 +110,7 @@ figcaption {
     display: flex;
     gap: 16px;
     align-items: center;
+    color: var(--color-secondary-text);
 }
 
 .gh-social-link {
@@ -191,7 +192,7 @@ figcaption {
     position: relative;
 }
 
-/* .has-background-about .gh-about::before {
+.has-background-about .gh-about::before {
     position: absolute;
     inset: 0;
     content: "";
@@ -200,26 +201,13 @@ figcaption {
 }
 
 .has-background-about .gh-about.initialized::before {
-    opacity: 0.3;
-} */
+    opacity: 0.4;
+}
 
 .has-background-about .gh-about-inner {
-    position: relative;
     display: flex;
     align-items: flex-end;
     min-height: var(--about-height);
-}
-
-.has-background-about .gh-about-inner::before {
-    position: absolute;
-    inset: 0;
-    content: "";
-    background-color: var(--color-black);
-    transition: opacity 1.5s ease;
-}
-
-.has-background-about .gh-about.initialized .gh-about-inner::before {
-    opacity: 0.4;
 }
 
 .has-background-about .gh-about-image {
@@ -238,15 +226,13 @@ figcaption {
     flex-direction: column;
     align-items: flex-start;
     max-width: 50%;
-    padding-left: var(--gap);
     margin-top: calc(var(--gap) + 16px);
     margin-bottom: calc(var(--gap) + 16px);
     text-align: left;
 }
 
 .has-background-about .gh-about-bio {
-    /* font-size: clamp(2.4rem, 1.5rem + 2.8125vw, 6rem); */
-    font-size: clamp(2.4rem, 2.14vw + 1.37rem, 4.8rem);
+    font-size: clamp(3.2rem, 2.5vw + 2rem, 6rem);
     color: #fff;
 }
 
@@ -644,11 +630,11 @@ figcaption {
     font-weight: 800;
 }
 
-.has-serif-font .gh-content > :is(p, ul, ol) {
+.has-serif-font .gh-content > :is([id], p, ul, ol) {
     font-family: var(--font-serif);
 }
 
-.has-mono-font .gh-content > :is(p, ul, ol) {
+.has-mono-font .gh-content > :is([id], p, ul, ol) {
     font-family: var(--font-mono);
 }
 
@@ -673,8 +659,11 @@ figcaption {
     }
 
     .gh-article-meta {
-        grid-row-start: 2;
         margin-bottom: 32px !important;
+    }
+
+    .has-wide-image .gh-article-meta {
+        grid-row-start: 2;
     }
 
     .gh-article-meta-inner {

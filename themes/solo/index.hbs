@@ -1,7 +1,7 @@
 {{!< default}}
 
 <section class="gh-about gh-outer">
-    <div class="gh-about-inner gh-inner">
+    <div class="gh-about-inner{{#match @custom.header_section_layout "!=" "Large background"}} gh-inner{{/match}}">
         {{#match @custom.header_section_layout "!=" "Typographic profile"}}
             {{#if @site.cover_image}}
                 <img class="gh-about-image" src="{{@site.cover_image}}" alt="{{@site.title}}">
