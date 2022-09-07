@@ -1,0 +1,20 @@
+{{!< default}}
+
+<main class="gh-main gh-outer">
+    {{#tag}}
+        <section class="gh-article gh-inner">
+            <header class="gh-article-header">
+                <h1 class="gh-article-title">{{name}}</h1>
+                {{#if description}}
+                    <p class="gh-article-excerpt">{{description}}</p>
+                {{/if}}
+                {{> "feature-image"}}
+            </header>
+        </section>
+    {{/tag}}
+    <div class="gh-feed{{#match @custom.header_section_layout "!=" "Large background"}} gh-inner{{/match}}">
+        {{#foreach posts}}
+            {{> "loop"}}
+        {{/foreach}}
+    </div>
+</main>

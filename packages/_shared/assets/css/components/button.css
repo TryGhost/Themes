@@ -14,6 +14,10 @@
     border-radius: 100px;
 }
 
+.gh-post-upgrade-cta .gh-btn {
+    line-height: inherit;
+}
+
 .gh-primary-btn {
     background-color: var(--ghost-accent-color);
 }
@@ -47,4 +51,23 @@
 .gh-icon-btn svg {
     width: 20px;
     height: 20px;
+}
+
+.gh-text-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    color: var(--darker-gray-color);
+    letter-spacing: inherit;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    will-change: opacity;
+}
+
+.gh-text-btn:hover {
+    opacity: 0.8;
 }

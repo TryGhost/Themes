@@ -1,0 +1,38 @@
+{{!< default}}
+
+<main class="gh-main gh-outer">
+    {{#author}}
+        <section class="gh-article gh-inner">
+            <header class="gh-article-header">
+                {{#if profile_image}}
+                    <img class="gh-author-image" src="{{img_url profile_image size="s"}}" alt="{{name}}">
+                {{/if}}
+                <h1 class="gh-article-title">{{name}}</h1>
+                {{#if bio}}
+                    <p class="gh-article-excerpt">{{bio}}</p>
+                {{/if}}
+            </header>
+            <footer class="gh-author-meta">
+                {{#if location}}
+                    <div class="gh-author-location">{{location}}</div>
+                {{/if}}
+                <div class="gh-author-social">
+                    {{#if website}}
+                        <a class="gh-author-social-link" href="{{website}}" target="_blank" rel="noopener">{{website}}</a>
+                    {{/if}}
+                    {{#if twitter}}
+                        <a class="gh-author-social-link" href="{{twitter_url}}" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
+                    {{/if}}
+                    {{#if facebook}}
+                        <a class="gh-author-social-link" href="{{facebook_url}}" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
+                    {{/if}}
+                </div>
+            </footer>
+        </section>
+    {{/author}}
+    <div class="gh-feed{{#match @custom.header_section_layout "!=" "Large background"}} gh-inner{{/match}}">
+        {{#foreach posts}}
+            {{> "loop"}}
+        {{/foreach}}
+    </div>
+</main>

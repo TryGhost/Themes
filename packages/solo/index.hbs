@@ -1,0 +1,49 @@
+{{!< default}}
+
+<section class="gh-about gh-outer">
+    <div class="gh-about-inner{{#match @custom.header_section_layout "!=" "Large background"}} gh-inner{{/match}}">
+        {{#match @custom.header_section_layout "!=" "Typographic profile"}}
+            {{#if @site.cover_image}}
+                <img class="gh-about-image" src="{{@site.cover_image}}" alt="{{@site.title}}">
+            {{/if}}
+        {{else}}
+            {{#if @site.icon}}
+                <img class="gh-about-image" src="{{@site.icon}}" alt="{{@site.title}}">
+            {{/if}}
+        {{/match}}
+        <script>
+            (function () {
+                if (!document.body.classList.contains('has-background-about')) return;
+
+                const about = document.querySelector('.gh-about');
+                if (!about) return;
+
+                const image = about.querySelector('.gh-about-image');
+
+                about.style.setProperty('--about-height', image.clientWidth * image.naturalHeight / image.naturalWidth + 'px');
+                about.classList.add('initialized');
+            })();
+        </script>
+        <div class="gh-about-content">
+            {{#if @site.description}}
+                <h1 class="gh-about-bio">{{@site.description}}</h1>
+            {{/if}}
+            {{#unless @member}}
+                <div class="gh-subscribe-input" data-portal>
+                    jamie@example.com
+                    <span class="gh-btn gh-primary-btn">Subscribe</span>
+                </div>
+            {{/unless}}
+        </div>
+    </div>
+</section>
+
+<main class="gh-main gh-outer">
+    <div class="gh-feed gh-inner">
+        {{#foreach posts}}
+            {{> "loop"}}
+        {{/foreach}}
+    </div>
+</main>
+
+{{#contentFor "body_class"}}{{#match @custom.header_section_layout "Side by side"}} has-side-about{{/match}}{{#match @custom.header_section_layout "Large background"}} is-head-transparent has-background-about{{/match}}{{#match @custom.header_section_layout "Typographic profile"}} has-typographic-about{{/match}}{{/contentFor}}

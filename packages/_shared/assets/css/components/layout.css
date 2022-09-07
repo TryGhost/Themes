@@ -16,7 +16,7 @@
 }
 
 .gh-inner {
-    max-width: 1200px;
+    max-width: var(--container-width, 1200px);
     margin: 0 auto;
 }
 
@@ -30,11 +30,11 @@ use it for applying any other styles. */
         [full-start]
         minmax(var(--gap), auto)
         [wide-start]
-        minmax(auto, 240px)
+        minmax(auto, calc((var(--container-width, 1200px) - var(--content-width, 720px)) / 2))
         [main-start]
         min(var(--content-width, 720px), calc(100% - calc(var(--gap) * 2)))
         [main-end]
-        minmax(auto, 240px)
+        minmax(auto, calc((var(--container-width, 1200px) - var(--content-width, 720px)) / 2))
         [wide-end]
         minmax(var(--gap), auto)
         [full-end];
