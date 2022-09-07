@@ -1,7 +1,11 @@
-(function () {
+function initParallax() {
     jarallax(document.querySelectorAll('.has-parallax-feed .gh-card'), {
         speed: 0.8,
     });
+}
+
+(function () {
+    initParallax();
 })();
 
 (function () {
@@ -28,4 +32,8 @@
     });
 
     element.innerHTML = text;
+})();
+
+(function () {
+    pagination(true, initParallax);
 })();

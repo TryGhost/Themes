@@ -37,7 +37,7 @@ figcaption {
 }
 
 .kg-width-full figcaption {
-    padding: 0 16px;
+    padding: 0;
 }
 
 .gh-canvas {
@@ -262,8 +262,9 @@ figcaption {
     display: flex;
     flex-direction: column;
     gap: 48px;
+    justify-content: flex-end;
     width: 100%;
-    padding-top: clamp(2.4rem, 2rem + 1.25vw, 4rem);
+    padding-bottom: clamp(2.4rem, 2rem + 1.25vw, 4rem);
 }
 
 .has-typographic-about .gh-about-image {
@@ -561,6 +562,13 @@ figcaption {
     border-radius: 24px;
 }
 
+.gh-content .gh-article-header {
+    grid-row-start: 1;
+    grid-column: 4 / span 9;
+    margin-top: 0;
+    margin-bottom: clamp(4.8rem, 1.43vw + 4.11rem, 6.4rem);
+}
+
 .gh-article-title {
     grid-column: 1 / span 9;
     font-size: clamp(4rem, 2.86vw + 2.63rem, 7.2rem);
@@ -606,23 +614,16 @@ figcaption {
     margin-top: clamp(4rem, 3rem + 3.125vw, 8rem);
 }
 
-.has-wide-image .gh-article-image {
-    grid-row-start: 1;
-    grid-column: 4 / span 9;
-    margin-top: 0;
-    margin-bottom: clamp(4rem, 2.14vw + 2.97rem, 6.4rem);
-}
-
-.has-wide-image .gh-article-image.has-caption {
-    margin-bottom: clamp(2.4rem, 0.71vw + 2.06rem, 3.2rem);
-}
-
 .gh-content {
     position: relative;
     margin-top: clamp(4rem, 3rem + 3.125vw, 8rem);
 }
 
-.no-image .gh-content {
+.post-template .no-image .gh-content {
+    margin-top: 0;
+}
+
+.page-template .no-image .gh-content {
     margin-top: clamp(4rem, 2.14vw + 2.97rem, 6.4rem);
 }
 
@@ -650,19 +651,16 @@ figcaption {
 }
 
 @media (max-width: 991px) {
-    :is(.gh-article-title, .gh-article-excerpt) {
+    :is(.gh-article-title, .gh-article-excerpt),
+    .gh-content > .gh-article-header {
         grid-column: 1 / span 10;
-    }
-
-    .has-wide-image .gh-article-image {
-        grid-column: 1 / span 12;
     }
 
     .gh-article-meta {
         margin-bottom: 32px !important;
     }
 
-    .has-wide-image .gh-article-meta {
+    .no-image .gh-article-meta {
         grid-row-start: 2;
     }
 
@@ -688,7 +686,8 @@ figcaption {
 }
 
 @media (max-width: 767px) {
-    :is(.gh-article-title, .gh-article-excerpt) {
+    :is(.gh-article-title, .gh-article-excerpt),
+    .gh-content > .gh-article-header {
         grid-column: 1 / span 12;
     }
 
