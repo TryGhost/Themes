@@ -2,11 +2,11 @@
 except for when immediately preceeded by a heading */
 
 .gh-content :not(.kg-card):not([id]) + .kg-card {
-    margin-top: 2em;
+    margin-top: calc(2em * var(--content-spacing-multiplier, 1));
 }
 
 .gh-content .kg-card + :not(.kg-card):not([id]) {
-    margin-top: 2em;
+    margin-top: calc(2em * var(--content-spacing-multiplier, 1));
 }
 
 /* Image

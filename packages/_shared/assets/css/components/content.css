@@ -10,7 +10,7 @@ headings, text, images and lists. We deal with cards lower down. */
 
 /* Default vertical spacing */
 .gh-content > * + * {
-    margin-top: 1.6em;
+    margin-top: calc(1.6em * var(--content-spacing-multiplier, 1));
     margin-bottom: 0;
 }
 
@@ -20,7 +20,7 @@ headings, text, images and lists. We deal with cards lower down. */
 }
 
 .gh-content > .kg-card + [id] {
-    margin-top: 2em !important;
+    margin-top: calc(2em * var(--content-spacing-multiplier, 1)) !important;
 }
 
 .has-serif-title .gh-content > [id] {
@@ -31,24 +31,24 @@ headings, text, images and lists. We deal with cards lower down. */
 /* Add back a top margin to all headings, unless a heading
 is the very first element in the post content */
 .gh-content > [id]:not(:first-child) {
-    margin-top: 1.6em;
+    margin-top: calc(1.6em * var(--content-spacing-multiplier, 1));
 }
 
 /* Add a small margin between a heading and anything after it */
 .gh-content > [id] + * {
-    margin-top: 0.8em;
+    margin-top: calc(0.8em * var(--content-spacing-multiplier, 1));
 }
 
 /* A larger margin before/after HRs and blockquotes */
 .gh-content > hr,
 .gh-content > blockquote {
     position: relative;
-    margin-top: 2.4em;
+    margin-top: calc(2.4em * var(--content-spacing-multiplier, 1));
 }
 
 .gh-content > hr + *,
 .gh-content > blockquote + * {
-    margin-top: 2.4em;
+    margin-top: calc(2.4em * var(--content-spacing-multiplier, 1));
 }
 
 /* Now the content typography styles */

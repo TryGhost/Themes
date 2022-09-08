@@ -106,23 +106,6 @@ figcaption {
     font-weight: 800;
 }
 
-.gh-social {
-    display: flex;
-    gap: 16px;
-    align-items: center;
-    color: var(--color-secondary-text);
-}
-
-.gh-social-link {
-    line-height: 0;
-    color: inherit;
-}
-
-.gh-social-link svg {
-    width: 18px;
-    height: 18px;
-}
-
 .gh-head-menu {
     font-weight: 700;
 }
@@ -167,10 +150,19 @@ figcaption {
     margin-top: 48px;
 }
 
+.has-side-about .gh-about.no-image {
+    margin-top: 80px;
+    margin-bottom: 48px;
+}
+
 .has-side-about .gh-about-inner {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: clamp(4rem, 0.0842rem + 3.9474vw, 6.4rem);
+}
+
+.has-side-about .gh-about.no-image .gh-about-inner {
+    grid-template-columns: 1fr;
 }
 
 .has-side-about .gh-about-bio {
@@ -207,7 +199,7 @@ figcaption {
 .has-background-about .gh-about-inner {
     display: flex;
     align-items: flex-end;
-    min-height: var(--about-height);
+    min-height: 100vh;
 }
 
 .has-background-about .gh-about-image {
@@ -221,18 +213,18 @@ figcaption {
 
 .has-background-about .gh-about-content {
     position: sticky;
-    bottom: calc(var(--gap) + 16px);
+    bottom: calc(var(--gap) + 24px);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     max-width: 50%;
-    margin-top: calc(var(--gap) + 16px);
-    margin-bottom: calc(var(--gap) + 16px);
+    margin-top: 200px;
+    margin-bottom: calc(var(--gap) + 24px);
     text-align: left;
 }
 
 .has-background-about .gh-about-bio {
-    font-size: clamp(3.2rem, 2.5vw + 2rem, 6rem);
+    font-size: clamp(4rem, 1.79vw + 3.14rem, 6rem);
     color: #fff;
 }
 
@@ -546,6 +538,7 @@ figcaption {
 .gh-article-date {
     margin-top: 4px;
     font-size: 1.4rem;
+    font-weight: 480;
     color: var(--color-secondary-text);
 }
 
@@ -615,8 +608,11 @@ figcaption {
 }
 
 .gh-content {
+    --content-spacing-multiplier: 1.5;
+
     position: relative;
     margin-top: clamp(4rem, 3rem + 3.125vw, 8rem);
+    line-height: 1.7;
 }
 
 .post-template .no-image .gh-content {
@@ -629,6 +625,10 @@ figcaption {
 
 .gh-content > [id] {
     font-weight: 800;
+}
+
+.gh-content > :is(p, ul, ol) {
+    font-weight: 480;
 }
 
 .has-serif-font .gh-content > :is([id], p, ul, ol) {
@@ -832,4 +832,28 @@ figcaption {
 
 .gh-author-social-link {
     line-height: 0;
+}
+
+/* Footer
+/* ---------------------------------------------------------- */
+
+.gh-foot {
+    padding-top: clamp(8rem, 4.55vw + 6.18rem, 12rem);
+    padding-bottom: clamp(8rem, 4.55vw + 6.18rem, 12rem);
+}
+
+.gh-foot-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+}
+
+.gh-foot-menu {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.gh-copyright {
+    font-size: 1.4rem;
 }

@@ -1,7 +1,7 @@
 {{!< default}}
 
-<section class="gh-about gh-outer">
-    <div class="gh-about-inner{{#match @custom.header_section_layout "!=" "Large background"}} gh-inner{{/match}}">
+<section class="gh-about gh-outer{{#unless @site.cover_image}} no-image{{/unless}}">
+    <div class="gh-about-inner gh-inner">
         {{#match @custom.header_section_layout "!=" "Typographic profile"}}
             {{#if @site.cover_image}}
                 <img class="gh-about-image" src="{{@site.cover_image}}" alt="{{@site.title}}">
@@ -46,4 +46,4 @@
     </div>
 </main>
 
-{{#contentFor "body_class"}}{{#match @custom.header_section_layout "Side by side"}} has-side-about{{/match}}{{#match @custom.header_section_layout "Large background"}} is-head-transparent has-background-about{{/match}}{{#match @custom.header_section_layout "Typographic profile"}} has-typographic-about{{/match}}{{/contentFor}}
+{{#contentFor "body_class"}}{{#match @custom.header_section_layout "Side by side"}} has-side-about{{/match}}{{#match @custom.header_section_layout "Large background"}}{{#if @site.cover_image}} is-head-transparent has-background-about{{else}} has-side-about{{/if}}{{/match}}{{#match @custom.header_section_layout "Typographic profile"}}{{#if @site.icon}} has-typographic-about{{else}} has-side-about{{/if}}{{/match}}{{/contentFor}}

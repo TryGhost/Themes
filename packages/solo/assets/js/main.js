@@ -34,6 +34,6 @@ function initParallax() {
     element.innerHTML = text;
 })();
 
-(function () {
-    pagination(true, initParallax);
-})();
+// (function () {
+//     pagination(true);
+// })();
