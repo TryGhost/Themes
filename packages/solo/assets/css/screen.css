@@ -106,6 +106,10 @@ figcaption {
     font-weight: 800;
 }
 
+.gh-head-logo img {
+    max-height: 48px;
+}
+
 .gh-head-menu {
     font-weight: 700;
 }
@@ -130,17 +134,44 @@ figcaption {
 /* About section
 /* ---------------------------------------------------------- */
 
-.gh-about-bio {
+.gh-about {
+    margin-bottom: 40px;
+}
+
+.gh-about-primary {
+    max-width: 1200px;
+    font-size: clamp(3.2rem, 2.4452rem + 2.0968vw, 5.8rem);
     font-weight: 800;
     line-height: 1.2;
 }
 
-.has-serif-font .gh-about-bio {
+.has-serif-font .gh-about-primary {
     font-family: var(--font-serif);
 }
 
-.has-mono-font .gh-about-bio {
+.has-mono-font .gh-about-primary {
     font-family: var(--font-mono);
+}
+
+.gh-about-primary a {
+    text-decoration: underline;
+}
+
+.gh-about-secondary {
+    max-width: 840px;
+    font-size: clamp(2.4rem, 0.54vw + 2.14rem, 3rem);
+    font-weight: 500;
+}
+
+.gh-about-primary + .gh-about-secondary {
+    max-width: 640px;
+    margin-top: 20px;
+    font-size: clamp(2rem, 0.36vw + 1.83rem, 2.4rem);
+    font-weight: 450;
+}
+
+.gh-about-secondary a {
+    text-decoration: underline;
 }
 
 /* Side by side about section
@@ -165,8 +196,9 @@ figcaption {
     grid-template-columns: 1fr;
 }
 
-.has-side-about .gh-about-bio {
-    font-size: clamp(3.2rem, 2.4452rem + 2.0968vw, 5.8rem);
+.has-side-about .gh-about-content-inner {
+    position: sticky;
+    top: 40px;
 }
 
 @media (max-width: 840px) {
@@ -199,7 +231,7 @@ figcaption {
 .has-background-about .gh-about-inner {
     display: flex;
     align-items: flex-end;
-    min-height: 100vh;
+    min-height: var(--about-height, 100vh);
 }
 
 .has-background-about .gh-about-image {
@@ -223,9 +255,13 @@ figcaption {
     text-align: left;
 }
 
-.has-background-about .gh-about-bio {
-    font-size: clamp(4rem, 1.79vw + 3.14rem, 6rem);
+.has-background-about .gh-about-primary {
     color: #fff;
+}
+
+.has-background-about .gh-about-secondary {
+    color: #fff;
+    opacity: 0.7;
 }
 
 .has-background-about .gh-subscribe-input {
@@ -266,13 +302,6 @@ figcaption {
     object-fit: cover;
 }
 
-.has-typographic-about .gh-about-bio {
-    max-width: 1200px;
-    font-size: clamp(3.2rem, 2.2rem + 3.125vw, 7.2rem);
-    font-weight: 800;
-    line-height: 1.1;
-}
-
 .has-typographic-about .gh-subscribe-input {
     margin-top: 48px;
 }
@@ -289,6 +318,10 @@ figcaption {
     flex-direction: column;
     flex-grow: 1;
     justify-content: center;
+}
+
+.gh-card-title {
+    font-weight: 800;
 }
 
 .has-serif-font .gh-card-title {
@@ -376,7 +409,6 @@ figcaption {
 
 .has-classic-feed .gh-card-title {
     font-size: clamp(3.2rem, 2.7rem + 1.5625vw, 5.2rem);
-    font-weight: 800;
 }
 
 .has-classic-feed .kg-width-full .gh-card-title {
@@ -404,15 +436,14 @@ figcaption {
 .has-typographic-feed .gh-card-title {
     max-width: 1200px;
     font-size: clamp(3.2rem, 2.4rem + 2.5vw, 6.4rem);
-    font-weight: 800;
-    line-height: 1.05;
-    letter-spacing: -0.02em;
+    line-height: 1.1;
 }
 
 .has-typographic-feed .gh-card-excerpt {
     max-width: 920px;
     margin-top: 16px;
-    font-size: 2.1rem;
+    font-size: clamp(1.8rem, 0.27vw + 1.67rem, 2.1rem);
+    font-weight: 450;
     line-height: 1.5;
     letter-spacing: -0.005em;
 }
@@ -483,8 +514,7 @@ figcaption {
 }
 
 .has-parallax-feed .gh-card-title {
-    font-size: 5.2rem;
-    font-weight: 800;
+    font-size: clamp(3.2rem, 2.4rem + 2.5vw, 6.4rem);
     line-height: 1.1;
 }
 
@@ -782,7 +812,7 @@ figcaption {
     height: 52px;
     padding: 0 8px 0 24px;
     margin-top: 40px;
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     color: var(--color-secondary-text);
     cursor: pointer;
     background-color: var(--color-border);

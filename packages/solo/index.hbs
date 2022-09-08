@@ -1,6 +1,6 @@
 {{!< default}}
 
-<section class="gh-about gh-outer{{#unless @site.cover_image}} no-image{{/unless}}">
+<section class="gh-about gh-outer{{#match @custom.header_section_layout "!=" "Typographic profile"}}{{#unless @site.cover_image}} no-image{{/unless}}{{else}}{{#unless @site.icon}} no-image{{/unless}}{{/match}}">
     <div class="gh-about-inner gh-inner">
         {{#match @custom.header_section_layout "!=" "Typographic profile"}}
             {{#if @site.cover_image}}
@@ -25,15 +25,20 @@
             })();
         </script>
         <div class="gh-about-content">
-            {{#if @site.description}}
-                <h1 class="gh-about-bio">{{@site.description}}</h1>
-            {{/if}}
-            {{#unless @member}}
-                <div class="gh-subscribe-input" data-portal>
-                    jamie@example.com
-                    <span class="gh-btn gh-primary-btn">Subscribe</span>
-                </div>
-            {{/unless}}
+            <div class="gh-about-content-inner">
+                {{#if @custom.primary_header}}
+                    <h1 class="gh-about-primary">{{{@custom.primary_header}}}</h1>
+                {{/if}}
+                {{#if @custom.secondary_header}}
+                    <p class="gh-about-secondary">{{{@custom.secondary_header}}}</p>
+                {{/if}}
+                {{#unless @member}}
+                    <div class="gh-subscribe-input" data-portal>
+                        jamie@example.com
+                        <span class="gh-btn gh-primary-btn">Subscribe</span>
+                    </div>
+                {{/unless}}
+            </div>
         </div>
     </div>
 </section>
