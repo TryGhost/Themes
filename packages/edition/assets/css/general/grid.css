@@ -1,0 +1,16 @@
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 5vw;
+    padding-left: 5vw;
+    max-width: calc(1130px + 10vw);
+    width: 100%;
+}
+
+.container.medium {
+    max-width: calc(750px + 10vw);
+}
+
+.container.small {
+    max-width: calc(720px + 10vw);
+}
