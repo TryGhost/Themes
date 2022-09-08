@@ -1,0 +1,38 @@
+{{!< default}}
+
+<div class="content-area">
+    <main class="site-main">
+        {{#post}}
+            <article class="{{post_class}} single">
+                <div class="single-media container medium{{#if og_description}} hidden-md hidden-lg hidden-xl{{/if}}">
+                    {{> post-media ratio="square"}}
+                </div>
+                {{#if og_description}}
+                    <div class="container large">
+                        {{> player}}
+                    </div>
+                {{else}}
+                    {{> post-header single=true}}
+                {{/if}}
+                <div class="post-content gh-content kg-canvas">
+                    {{content}}
+                </div>
+                <div class="container medium">
+                    {{> share}}
+                    <div class="author-list">
+                        <h3 class="author-list-title">
+                            {{#if og_description}}
+                                Hosted by:
+                            {{else}}
+                                Written by:
+                            {{/if}}
+                        </h3>
+                        {{#foreach authors}}
+                            {{> author}}
+                        {{/foreach}}
+                    </div>
+                </div>
+            </article>
+        {{/post}}
+    </main>
+</div>

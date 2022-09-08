@@ -1,0 +1,16 @@
+.term {
+    margin-bottom: 40px;
+}
+
+.term-name {
+    margin-bottom: 8px;
+    font-size: 24px;
+}
+
+.term-description {
+    color: var(--secondary-text-color);
+}
+
+.term-author {
+    margin-bottom: 45px;
+}

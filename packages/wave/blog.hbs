@@ -1,0 +1,18 @@
+{{!< default}}
+
+<div class="content-area">
+    <main class="site-main container medium">
+        <div class="post-feed">
+            {{#foreach posts}}
+                {{> "loop"}}
+            {{/foreach}}
+        </div>
+        {{pagination}}
+    </main>
+</div>
+
+{{#contentFor "title"}}{{tag.name}} - {{meta_title}}{{/contentFor}}
+{{#if tag.description}}
+    {{#contentFor "description"}}
+        <meta name="description" content="{{tag.description}}">{{/contentFor}}
+{{/if}}

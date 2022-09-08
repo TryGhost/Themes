@@ -1,0 +1,98 @@
+{
+    "name": "wave",
+    "description": "A Ghost theme",
+    "version": "1.0.0",
+    "engines": {
+        "ghost": ">=4.0.0"
+    },
+    "license": "MIT",
+        "author": {
+            "name": "Ghost Foundation",
+            "email": "hello@ghost.org",
+            "url": "https://ghost.org"
+        },
+    "keywords": [
+        "ghost",
+        "theme",
+        "ghost-theme"
+    ],
+    "config": {
+        "posts_per_page": 5,
+        "image_sizes": {
+            "1x": {
+                "width": 150,
+                "height": 150
+            },
+            "2x": {
+                "width": 300,
+                "height": 300
+            },
+            "3x": {
+                "width": 450,
+                "height": 450
+            }
+        },
+        "card_assets": true,
+        "custom": {
+            "title_font": {
+                "type": "select",
+                "options": ["Modern sans-serif", "Elegant serif"],
+                "default": "Modern sans-serif"
+            },
+            "body_font": {
+                "type": "select",
+                "options": ["Modern sans-serif", "Elegant serif"],
+                "default": "Modern sans-serif"
+            },
+            "apple_podcasts_link": {
+                "type": "text",
+                "default": "https://podcasts.apple.com/"
+            },
+            "google_podcasts_link": {
+                "type": "text",
+                "default": "https://podcasts.google.com/"
+            },
+            "spotify_link": {
+                "type": "text",
+                "default": "https://open.spotify.com/"
+            },
+            "overcast_link": {
+                "type": "text",
+                "default": "https://overcast.fm/"
+            },
+            "stitcher_link": {
+                "type": "text",
+                "default": "https://www.stitcher.com/"
+            },
+            "rss_link": {
+                "type": "text"
+            }
+        }
+    },
+    "scripts": {
+        "dev": "gulp",
+        "test": "gscan .",
+        "test:ci": "gscan --fatal --verbose .",
+        "lint": "gulp lint",
+        "zip": "gulp zip"
+    },
+    "devDependencies": {
+        "autoprefixer": "10.4.7",
+        "beeper": "2.1.0",
+        "cssnano": "5.1.12",
+        "gscan": "4.31.2",
+        "gulp": "4.0.2",
+        "gulp-concat": "2.6.1",
+        "gulp-livereload": "4.0.2",
+        "gulp-postcss": "9.0.1",
+        "gulp-stylelint": "13.0.0",
+        "gulp-uglify": "3.0.2",
+        "gulp-zip": "5.1.0",
+        "postcss": "8.4.14",
+        "postcss-easy-import": "4.0.0",
+        "pump": "3.0.0",
+        "stylelint": "14.9.1",
+        "stylelint-config-standard": "26.0.0",
+        "stylelint-order": "5.0.0"
+    }
+}

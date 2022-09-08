@@ -1,0 +1,27 @@
+.single .player {
+    margin-bottom: 45px;
+}
+
+.single .single-media .post-media {
+    margin: 0 auto 30px;
+}
+
+.single > .post-header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.single > .post-header .post-title {
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.single > .post-header .post-meta {
+    margin-top: 8px;
+}
+
+@media (max-width: 767px) {
+    .single .player {
+        margin-bottom: 30px;
+    }
+}

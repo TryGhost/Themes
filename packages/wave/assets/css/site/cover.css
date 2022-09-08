@@ -1,0 +1,25 @@
+.site-cover {
+    position: relative;
+    display: flex;
+    padding: 30px;
+    min-height: 350px;
+}
+
+.cover-content {
+    position: relative;
+    z-index: 10;
+    margin: auto;
+    max-width: 500px;
+    color: var(--white-color);
+    text-align: center;
+}
+
+.cover-logo {
+    margin: 0 auto;
+    max-height: 100px;
+}
+
+.cover-description {
+    margin-top: 20px;
+    font-size: 16px;
+}

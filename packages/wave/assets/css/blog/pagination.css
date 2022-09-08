@@ -1,0 +1,29 @@
+.pagination,
+.infinite-scroll-status,
+body:not(.paged-next) .infinite-scroll-button {
+    display: none;
+}
+
+.infinite-scroll-request {
+    margin: 30px auto 0;
+    width: 40px;
+    height: 40px;
+    background-color: var(--darker-gray-color);
+    border-radius: 50%;
+    animation: scaleOut 1s infinite ease-in-out;
+}
+
+.infinite-scroll-action {
+    display: flex;
+    justify-content: center;
+}
+
+.infinite-scroll-button {
+    margin-top: 45px;
+    width: 100%;
+}
+
+.infinite-scroll-button .icon {
+    font-size: 18px;
+    transform: rotate(90deg);
+}

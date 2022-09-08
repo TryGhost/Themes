@@ -1,0 +1,42 @@
+<div class="subscribe{{#if is_popup}} popup{{/if}}">
+    {{#if @custom.apple_podcasts_link}}
+        <a href="{{@custom.apple_podcasts_link}}" class="subscribe-link" target="_blank"
+            rel="noopener noreferrer">
+            <i class="icon icon-apple"></i>
+            <span class="subscribe-text">Apple</span>
+        </a>
+    {{/if}}
+    {{#if @custom.google_podcasts_link}}
+        <a href="{{@custom.google_podcasts_link}}" class="subscribe-link"
+            target="_blank" rel="noopener noreferrer">
+            <i class="icon icon-google"></i>
+            <span class="subscribe-text">Google</span>
+        </a>
+    {{/if}}
+    {{#if @custom.spotify_link}}
+        <a href="{{@custom.spotify_link}}" class="subscribe-link" target="_blank"
+            rel="noopener noreferrer">
+            <i class="icon icon-spotify"></i>
+            <span class="subscribe-text">Spotify</span>
+        </a>
+    {{/if}}
+    {{#if @custom.overcast_link}}
+        <a href="{{@custom.overcast_link}}" class="subscribe-link" target="_blank"
+            rel="noopener noreferrer">
+            <i class="icon icon-overcast"></i>
+            <span class="subscribe-text">Overcast</span>
+        </a>
+    {{/if}}
+    {{#if @custom.stitcher_link}}
+        <a href="{{@custom.stitcher_link}}" class="subscribe-link" target="_blank"
+            rel="noopener noreferrer">
+            <i class="icon icon-stitcher"></i>
+            <span class="subscribe-text">Stitcher</span>
+        </a>
+    {{/if}}
+    <a href="{{#if @custom.rss_link}}{{@custom.rss_link}}{{else}}{{@site.url}}/rss{{/if}}" class="subscribe-link" target="_blank"
+        rel="noopener noreferrer">
+        <i class="icon icon-rss"></i>
+        <span class="subscribe-text">RSS</span>
+    </a>
+</div>

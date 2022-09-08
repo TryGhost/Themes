@@ -1,0 +1,19 @@
+routes:
+  /rss/:
+    template: rss
+    content_type: text/xml
+
+collections:
+  /:
+    permalink: /{slug}/
+    template: index
+    filter: tag:-blog
+  /blog/:
+    permalink: /blog/{slug}/
+    template: blog
+    filter: tag:blog
+    data: tag.blog
+
+taxonomies:
+  tag: /tag/{slug}/
+  author: /author/{slug}/

@@ -1,0 +1,29 @@
+.site-footer {
+    padding-top: 30px;
+    padding-bottom: 45px;
+    text-align: center;
+}
+
+.site-footer .subscribe {
+    justify-content: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--mid-gray-color);
+}
+
+.site-footer .subscribe-link {
+    margin: 0 10px;
+}
+
+.copyright a {
+    text-decoration: underline;
+}
+
+.subscribe + .copyright {
+    margin-top: 18px;
+}
+
+@media (max-width: 767px) {
+    .site-footer {
+        padding-top: 15px;
+    }
+}

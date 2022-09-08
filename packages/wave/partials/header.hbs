@@ -1,0 +1,32 @@
+<header class="site-header container">
+    <div class="header-left">
+        <a class="logo" href="{{@site.url}}">
+            <span class="logo-text">{{@site.title}}</span>
+        </a>
+    </div>
+    <div class="header-right">
+        {{#if @site.navigation}}
+            <nav class="main-nav hidden-xs hidden-sm hidden-md">
+                {{navigation}}
+            </nav>
+        {{/if}}
+        <div class="header-subscribe">
+            <button
+                class="button header-button header-button-subscribe js-popup">Subscribe</button>
+            {{> customize/subscribe is_popup=true}}
+        </div>
+        {{#if @site.navigation}}
+            <div class="header-menu hidden-lg hidden-xl">
+                <button
+                    class="button button-secondary header-button header-button-menu js-popup">
+                    <i class="icon icon-menu"></i>
+                </button>
+                <div class="popup">
+                    <div class="mobile-menu">
+                        {{> navigation}}
+                    </div>
+                </div>
+            </div>
+        {{/if}}
+    </div>
+</header>

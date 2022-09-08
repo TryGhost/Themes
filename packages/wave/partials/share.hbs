@@ -1,0 +1,21 @@
+<div class="share">
+    <a class="share-item share-facebook"
+        href="https://www.facebook.com/sharer.php?u={{url absolute="true"}}"
+        target="_blank" rel="noopener noreferrer">
+        <i class="icon icon-facebook hidden-md hidden-lg hidden-xl"></i>
+        <span class="share-text hidden-xs hidden-sm">Share</span>
+    </a>
+    <a class="share-item share-twitter"
+        href="https://twitter.com/intent/tweet?url={{url absolute="true"}}&text={{encode title}}"
+        target="_blank" rel="noopener noreferrer">
+        <i class="icon icon-twitter hidden-md hidden-lg hidden-xl"></i>
+        <span class="share-text hidden-xs hidden-sm">Tweet</span>
+    </a>
+    {{#if og_description}}
+        <a class="share-item share-download" href="{{og_description}}"
+            target="_blank" rel="noopener noreferrer">
+            <i class="icon icon-download hidden-md hidden-lg hidden-xl"></i>
+            <span class="share-text hidden-xs hidden-sm">Download</span>
+        </a>
+    {{/if}}
+</div>

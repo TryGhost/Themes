@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="{{@site.locale}}">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{^is "blog"}}
+        <title>{{meta_title}}</title>
+    {{else}}
+        <title>{{block "title"}}</title>
+        {{{block "description"}}}
+    {{/is}}
+    <link rel="stylesheet" href="{{asset "built/screen.css"}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap">
+
+    {{ghost_head}}
+</head>
+
+<body class="{{body_class}}{{{block "body_class"}}}{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Elegant serif"}} has-serif-body{{/match}}">
+    <div class="site">
+        {{> header}}
+        {{#is "home"}}
+            {{> cover}}
+        {{/is}}
+        <div class="site-content">
+            {{{body}}}
+        </div>
+        {{> footer}}
+    </div>
+
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+    </script>
+    <script src="{{asset "built/main.min.js"}}"></script>
+
+    {{{block "scripts"}}}
+
+    {{ghost_foot}}
+</body>
+
+</html>

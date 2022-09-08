@@ -1,0 +1,12 @@
+<article class="{{post_class}} post-{{comment_id}}">
+    {{> post-media ratio="square"}}
+    <div class="post-wrapper">
+        {{> post-header}}
+        {{#if excerpt}}
+            <div class="post-excerpt">
+                {{excerpt words="25"}}
+            </div>
+        {{/if}}
+        {{> post-footer}}
+    </div>
+</article>

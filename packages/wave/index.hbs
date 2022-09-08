@@ -1,0 +1,18 @@
+{{!< default}}
+
+<div class="content-area">
+    <main class="site-main container medium">
+        {{#tag}}
+            <section class="term">
+                <h1 class="term-name">{{name}}</h1>
+                <div class="term-description">{{description}}</div>
+            </section>
+        {{/tag}}
+        <div class="post-feed">
+            {{#foreach posts}}
+                {{> "loop"}}
+            {{/foreach}}
+        </div>
+        {{pagination}}
+    </main>
+</div>

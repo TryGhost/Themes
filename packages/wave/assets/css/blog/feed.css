@@ -1,0 +1,48 @@
+.post-feed .post {
+    display: flex;
+}
+
+.post-feed .post + .post {
+    margin-top: 45px;
+}
+
+.post-feed .post-excerpt {
+    margin-top: 15px;
+}
+
+.post-feed .post-footer {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.post-feed .post-footer-download {
+    margin-top: -1px;
+    margin-left: 12px;
+}
+
+@media (max-width: 767px) {
+    .post-feed .post + .post {
+        margin-top: 30px;
+    }
+
+    .post-feed .post-media {
+        margin-right: 20px;
+        width: 80px;
+    }
+
+    .post-feed .post-media .button-play {
+        margin-top: -17px;
+        margin-left: -17px;
+        width: 34px;
+        height: 34px;
+    }
+
+    .post-feed .post-media .letter {
+        display: none;
+    }
+
+    .post-feed .post-excerpt {
+        display: none;
+    }
+}

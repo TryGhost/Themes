@@ -1,0 +1,40 @@
+<section class="author">
+    <div class="author-image-placeholder u-placeholder">
+        <img class="author-image lazyload u-object-fit"
+            data-src="{{img_url profile_image size="1x"}}"
+            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+            alt="{{name}}">
+    </div>
+    <div class="author-wrapper">
+        <header class="author-header">
+            <h4 class="author-name"><a href="{{url}}">{{name}}</a></h4>
+            <div class="author-social">
+                {{#if website}}
+                    <a class="author-social-item author-website"
+                        href="{{website}}" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="icon icon-web"></i>
+                    </a>
+                {{/if}}
+                {{#if facebook}}
+                    <a class="author-social-item author-facebook"
+                        href="https://www.facebook.com/{{facebook}}"
+                        target="_blank" rel="noopener noreferrer">
+                        <i class="icon icon-facebook"></i>
+                    </a>
+                {{/if}}
+                {{#if twitter}}
+                    <a class="author-social-item author-twitter"
+                        href="https://twitter.com/{{twitter}}" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="icon icon-twitter"></i>
+                    </a>
+                {{/if}}
+            </div>
+        </header>
+        {{#if location}}
+            <span class="author-meta">{{location}}</span>
+        {{/if}}
+        <div class="author-bio">{{bio}}</div>
+    </div>
+</section>

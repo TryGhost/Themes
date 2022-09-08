@@ -1,0 +1,57 @@
+.subscribe {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.subscribe-link {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.subscribe-link .icon {
+    position: relative;
+    font-size: 20px;
+}
+
+.subscribe-link .icon-apple {
+    color: #c45ff0;
+}
+
+.subscribe-link .icon-google {
+    color: #4285f4;
+}
+
+.subscribe-link .icon-spotify {
+    color: #1ed760;
+}
+
+.subscribe-link .icon-overcast {
+    color: #fc7e0f;
+}
+
+.subscribe-link .icon-stitcher {
+    top: 1px;
+    color: #000;
+}
+
+.subscribe-link .icon-rss {
+    color: #ffa500;
+}
+
+.subscribe-text {
+    margin-left: 6px;
+}
+
+.icon-apple + .subscribe-text {
+    margin-left: 4px;
+}
+
+.icon-stitcher + .subscribe-text {
+    margin-left: 8px;
+}
+
+.icon-rss + .subscribe-text {
+    margin-left: 2px;
+}

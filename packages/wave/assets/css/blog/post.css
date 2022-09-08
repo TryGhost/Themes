@@ -1,0 +1,77 @@
+.post-media {
+    position: relative;
+    flex-shrink: 0;
+    overflow: hidden;
+    margin-right: 25px;
+    width: 150px;
+    height: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.post-media .button-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 20;
+    margin-top: -20px;
+    margin-left: -20px;
+    transition: transform 0.1s var(--animation-base);
+}
+
+.post-media:active .button-play {
+    transform: scale(0.9);
+}
+
+.post-media .letter {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    color: var(--mid-gray-color);
+    font-size: 100px;
+    line-height: 150px;
+    font-weight: 500;
+    letter-spacing: -3px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.post-title {
+    margin-bottom: 0;
+    font-size: 20px;
+}
+
+.has-serif-title .post-title {
+    font-family: var(--font-serif);
+    font-weight: 700;
+}
+
+.post-meta {
+    margin-top: 5px;
+    color: var(--secondary-text-color);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.post-meta-tags {
+    margin-left: 5px;
+}
+
+.post-meta-tags .post-tag {
+    color: var(--brand-color);
+}
+
+.post-meta-tags .post-tag + .post-tag::before {
+    content: ", ";
+}
+
+.has-serif-body .post-excerpt {
+    font-family: var(--font-serif);
+}
+
+@media (max-width: 767px) {
+    .post-title {
+        font-size: 17px;
+    }
+}
