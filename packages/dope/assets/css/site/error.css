@@ -1,0 +1,23 @@
+.error {
+    text-align: center;
+}
+
+.error-code {
+    margin: 90px 0 -5px;
+    color: var(--dark-gray-color);
+    font-size: 46px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.error-posts {
+    margin: 60px 0;
+    text-align: left;
+}
+
+.error-link {
+    display: inline-block;
+    margin-top: 60px;
+    color: var(--primary-color) !important;
+    font-weight: 700;
+}

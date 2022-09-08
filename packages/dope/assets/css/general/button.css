@@ -1,0 +1,14 @@
+.button-arrow-icon {
+    display: inline-block;
+    line-height: 1;
+    vertical-align: middle;
+    transition: transform 0.2s var(--animation-base);
+}
+
+.button-arrow-right:hover .button-arrow-icon {
+    transform: translateX(5px);
+}
+
+.button-arrow-left:hover .button-arrow-icon {
+    transform: translateX(-5px);
+}

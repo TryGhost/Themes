@@ -1,0 +1,38 @@
+.share {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    line-height: 1;
+}
+
+.share-item {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 700;
+    background-color: var(--light-gray-color);
+    transition: 0.3s var(--animation-base);
+    transition-property: background-color, color;
+}
+
+.share-item + .share-item {
+    margin-left: 15px;
+}
+
+.share-item:hover {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+
+.share-label {
+    margin-left: 5px;
+}
+
+@media (max-width: 767px) {
+    .share-item + .share-item {
+        margin-left: 10px;
+    }
+}

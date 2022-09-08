@@ -1,0 +1,28 @@
+.pagination {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 60px auto 30px;
+    width: 120px;
+    height: 120px;
+    outline: none;
+    border: 2px solid var(--mid-gray-color);
+    line-height: 1;
+    background-color: var(--white-color);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.load-more {
+    margin: 10px 0 6px;
+    color: var(--dark-gray-color);
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.page-number {
+    color: var(--secondary-text-color);
+    font-size: 12px;
+    font-weight: 500;
+}

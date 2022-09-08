@@ -1,0 +1,17 @@
+.slicknav_menu .slicknav_nav {
+  display: block !important;
+  list-style-type: none;
+  margin: 0 0 45px;
+  padding: 0;
+  width: 100%;
+}
+.slicknav_menu .menu-item {
+  line-height: 1;
+  margin: 0;
+}
+.slicknav_menu .menu-item + .menu-item {
+  margin-top: 20px;
+}
+.slicknav_menu .menu-item-link {
+  outline: none;
+}
