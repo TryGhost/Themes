@@ -1,0 +1,10 @@
+<nav class="pagination">
+    {{#if next}}
+        <a class="older-posts" href="{{page_url next}}"></a>
+    {{/if}}
+</nav>
+{{#if next}}
+    <div class="infinite-scroll-status">
+        <div class="infinite-scroll-request"></div>
+    </div>
+{{/if}}

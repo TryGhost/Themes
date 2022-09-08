@@ -1,0 +1,19 @@
+.infinite-scroll-request {
+    margin: 60px auto 0;
+    width: 40px;
+    height: 40px;
+    background-color: var(--dark-gray-color);
+    border-radius: 50%;
+    animation: scaleOut 1s infinite ease-in-out;
+}
+
+@keyframes scaleOut {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
