@@ -1,0 +1,20 @@
+.site-footer {
+    margin-top: 30px;
+}
+
+.site-footer .social {
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.footer-inner {
+    padding: 45px 0;
+}
+
+.copyright {
+    text-align: center;
+}
+
+.copyright a {
+    text-decoration: underline;
+}

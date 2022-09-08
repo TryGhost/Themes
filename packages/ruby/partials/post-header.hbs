@@ -1,0 +1,17 @@
+<header class="post-header">
+    {{#unless hide_tag}}
+        {{#primary_tag}}
+            <a class="post-tag" href="{{url}}">{{name}}</a>
+        {{/primary_tag}}
+    {{/unless}}
+    <{{tag}} class="post-title">
+        {{#unless hide_link}}
+            <a class="post-title-link" href="{{url}}">{{title}}</a>
+        {{else}}
+            {{title}}
+        {{/unless}}
+    </{{tag}}>
+    {{#if show_date}}
+        {{> post-date}}
+    {{/if}}
+</header>

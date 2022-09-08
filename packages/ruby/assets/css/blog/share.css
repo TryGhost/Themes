@@ -1,0 +1,45 @@
+.share {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    line-height: 1;
+}
+
+.share-item {
+    width: 28px;
+    height: 28px;
+    color: var(--white-color);
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.share-item + .share-item {
+    margin-left: 8px;
+}
+
+.share-facebook {
+    background-color: #3b5998;
+}
+
+.share-twitter {
+    background-color: #1da1f2;
+}
+
+.share-pinterest {
+    background-color: #bd081c;
+}
+
+.share-linkedin {
+    background-color: #0077b5;
+}
+
+.share-reddit {
+    background-color: #ff4500;
+}
+
+.share-vk {
+    background-color: #45668e;
+}

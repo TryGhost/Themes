@@ -1,0 +1,16 @@
+.error {
+    text-align: center;
+}
+
+.error-code {
+    margin: 60px 0 10px;
+    font-size: 40px;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.error-message {
+    margin-bottom: 45px;
+    color: var(--secondary-text-color);
+}

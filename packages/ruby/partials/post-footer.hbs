@@ -1,0 +1,14 @@
+<footer class="post-footer">
+    <a class="post-link" href="{{url}}">Read More</a>
+    <div class="post-author">
+        {{#foreach authors}}
+            {{#if profile_image}}
+                <a class="post-author-link" href="{{url}}">
+                    <img class="post-author-image"
+                        src="{{img_url profile_image size="xs"}}"
+                        alt="{{name}}">
+                </a>
+            {{/if}}
+        {{/foreach}}
+    </div>
+</footer>

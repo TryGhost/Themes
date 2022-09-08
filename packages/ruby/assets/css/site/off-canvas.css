@@ -1,0 +1,77 @@
+.dimmer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 90;
+    display: none;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.off-canvas {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 90;
+    overflow-y: scroll;
+    padding: 60px 0 90px;
+    width: 320px;
+    height: 100vh;
+    background-color: var(--light-gray-color);
+    transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+    transform: translateX(320px);
+    -webkit-overflow-scrolling: touch;
+}
+
+.off-canvas .burger {
+    position: absolute;
+    top: 15px;
+    right: 12px;
+    margin: 0;
+}
+
+.off-canvas .related-posts {
+    margin: 45px 0 30px;
+    padding: 0 20px;
+}
+
+.off-canvas .widget-area {
+    padding: 0 20px;
+}
+
+.off-canvas .widget {
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.off-canvas .widget + .widget {
+    margin-top: 45px;
+}
+
+body:not(.canvas-visible) .off-canvas {
+    visibility: hidden;
+}
+
+.canvas-opened {
+    overflow-y: hidden;
+}
+
+.canvas-opened .off-canvas {
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.mobile-menu {
+    margin: 0 20px 45px;
+}
+
+.mobile-menu .nav-list {
+    display: block;
+}
+
+.mobile-menu .menu-item {
+    margin: 20px 0;
+    letter-spacing: 0;
+}
