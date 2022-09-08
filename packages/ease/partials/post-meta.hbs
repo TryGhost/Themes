@@ -1,0 +1,27 @@
+<div class="post-meta">
+    {{#unless hide_author}}
+        <div class="post-meta-left">
+            {{> post-author}}
+        </div>
+        <div class="post-meta-right">
+            <div class="post-author-name">
+                {{#foreach authors}}<a class="post-author-name-link"
+                        href="{{url}}">{{name}}</a>{{/foreach}}
+            </div>
+            <div class="post-meta-bottom">
+                <div class="post-date">
+                    <time datetime="{{date format="YYYY-MM-DD"}}">
+                        {{date published_at}}
+                    </time>
+                </div>
+                <div class="post-length">{{reading_time}}</div>
+            </div>
+        </div>
+    {{else}}
+        <div class="post-date">
+            <time datetime="{{date format="YYYY-MM-DD"}}">
+                {{date published_at}}
+            </time>
+        </div>
+    {{/unless}}
+</div>

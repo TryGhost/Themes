@@ -1,0 +1,9 @@
+{{#get "posts" limit="2" filter="tags:[{{post.tags}}]+id:-{{post.id}}" include="tags,authors" as |related|}}
+    <section class="related-posts container medium">
+        <div class="post-feed u-hover-wrapper">
+            {{#foreach related}}
+                {{> loop tag="h4"}}
+            {{/foreach}}
+        </div>
+    </section>
+{{/get}}

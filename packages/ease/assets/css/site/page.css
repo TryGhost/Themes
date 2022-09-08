@@ -1,0 +1,17 @@
+.page-heading {
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.page-subheading {
+    color: var(--secondary-text-color);
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.page-header {
+    margin: 0 auto 45px;
+    max-width: 500px;
+    text-align: center;
+}

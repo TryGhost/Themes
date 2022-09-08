@@ -1,0 +1,40 @@
+.site-footer {
+    padding-top: 45px;
+    padding-bottom: 45px;
+    text-align: center;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.footer-nav .menu-item {
+    margin: 0 12px;
+}
+
+.footer-social-item {
+    margin: 0 5px;
+}
+
+.copyright {
+    margin-top: 5px;
+    color: var(--secondary-text-color);
+    font-size: 14px;
+}
+
+.copyright a {
+    color: var(--secondary-text-color);
+    text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+    .footer-nav {
+        flex-direction: column;
+    }
+
+    .footer-nav .menu-item {
+        margin: 8px 0;
+    }
+}

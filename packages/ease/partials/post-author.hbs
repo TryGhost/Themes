@@ -1,0 +1,12 @@
+<div class="post-author">
+    {{#foreach authors}}
+        {{#if profile_image}}
+            <a class="post-author-image-link" href="{{url}}">
+                <img class="post-author-image lazyload"
+                    data-src="{{img_url profile_image size="xs"}}"
+                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                    alt="{{name}}">
+            </a>
+        {{/if}}
+    {{/foreach}}
+</div>

@@ -1,0 +1,21 @@
+{{#get "posts" filter="featured:true" limit="all" include="tags" as |featured|}}
+    {{#if featured}}
+        <section class="featured-wrapper">
+            <header class="featured-header topic-header">
+                <h2 class="featured-title topic-name">Featured Articles</h2>
+            </header>
+            <div class="featured-posts owl">
+                {{#foreach featured}}
+                    <article class="{{post_class}}">
+                        {{> post-media small_image=true same_height=true ratio="horizontal"}}
+                        {{> post-header tag="h2" hide_author=true}}
+                        {{#primary_tag}}
+                            <a class="post-tag tag-{{slug}}" href="{{url}}"
+                                title="{{name}}">{{name}}</a>
+                        {{/primary_tag}}
+                    </article>
+                {{/foreach}}
+            </div>
+        </section>
+    {{/if}}
+{{/get}}
