@@ -163,6 +163,14 @@ figcaption {
     font-weight: 500;
 }
 
+.has-serif-font .gh-about-secondary {
+    font-family: var(--font-serif);
+}
+
+.has-mono-font .gh-about-secondary {
+    font-family: var(--font-mono);
+}
+
 .gh-about-primary + .gh-about-secondary {
     max-width: 640px;
     margin-top: 20px;
@@ -446,6 +454,14 @@ figcaption {
     font-weight: 450;
     line-height: 1.5;
     letter-spacing: -0.005em;
+}
+
+.has-serif-font.has-typographic-feed .gh-card-excerpt {
+    font-family: var(--font-serif);
+}
+
+.has-mono-font.has-typographic-feed .gh-card-excerpt {
+    font-family: var(--font-mono);
 }
 
 .has-typographic-feed .gh-card-meta {
