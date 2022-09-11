@@ -379,6 +379,7 @@ body:not(.home-template) .gh-topic-grid .gh-card {
 .gh-author-name {
     font-size: 1.8rem;
     letter-spacing: -0.01em;
+    margin-bottom: 20px;
 }
 
 .gh-article-meta {

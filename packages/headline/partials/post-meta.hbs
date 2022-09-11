@@ -1,6 +1,6 @@
 {{#is "post"}}
     <aside class="gh-article-sidebar">
-        {{#primary_author}}
+        {{#foreach authors}}
             <figure class="gh-author-image">
                 {{#if profile_image}}
                     <img src="{{profile_image}}" alt="{{name}}">
@@ -12,7 +12,7 @@
             <h4 class="gh-author-name">
                 <a href="{{url}}">{{name}}</a>
             </h4>
-        {{/primary_author}}
+        {{/foreach}}
 
         <div class="gh-article-meta">
             <div class="gh-article-meta-inner">
