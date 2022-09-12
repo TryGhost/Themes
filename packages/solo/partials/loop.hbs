@@ -1,0 +1,53 @@
+<article class="gh-card {{post_class}}"{{#if primary_tag.accent_color}} style="--tag-color: {{primary_tag.accent_color}};"{{/if}}>
+    <a class="gh-card-link" href="{{url}}">
+
+        {{#match @custom.post_feed_layout "!=" "Typographic"}}
+            <figure class="gh-card-image">
+                {{#if feature_image}}
+                    <img
+                        {{#match @custom.post_feed_layout "Parallax"}}class="jarallax-img"{{/match}}
+                        srcset="{{img_url feature_image size="s"}} 300w,
+                                {{img_url feature_image size="m"}} 720w,
+                                {{img_url feature_image size="l"}} 960w,
+                                {{img_url feature_image size="xl"}} 1200w,
+                                {{img_url feature_image size="xxl"}} 2000w"
+                        sizes="(max-width: 1200px) 100vw, 1200px"
+                        src="{{img_url feature_image size="m"}}"
+                        alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
+                    >
+                {{/if}}
+            </figure>
+        {{/match}}
+
+        <div class="gh-card-wrapper">
+            <h2 class="gh-card-title">{{title}}</h2>
+            {{#match @custom.post_feed_layout "Typographic"}}
+                {{#if custom_excerpt}}
+                    <p class="gh-card-excerpt">{{excerpt}}</p>
+                {{/if}}
+            {{/match}}
+            <footer class="gh-card-meta">
+                <time class="gh-card-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
+                {{#if reading_time}}
+                    <span class="gh-card-length">{{reading_time}}</span>
+                {{/if}}
+                {{#unless access}}
+                {{^has visibility="public"}}
+                    <span class="gh-card-access">
+                        {{> "icons/lock"}}
+                        {{#has visibility="members"}}
+                            Members
+                        {{else}}
+                            Paid
+                        {{/has}}
+                    </span>
+                {{/has}}
+                {{/unless}}
+                {{#if @site.comments_enabled}}
+                    {{comment_count class="gh-card-comments"}}
+                {{/if}}
+            </footer>
+        </div>
+
+    </a>
+</article>

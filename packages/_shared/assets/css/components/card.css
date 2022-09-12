@@ -2,11 +2,11 @@
 except for when immediately preceeded by a heading */
 
 .gh-content :not(.kg-card):not([id]) + .kg-card {
-    margin-top: 4rem;
+    margin-top: calc(2em * var(--content-spacing-multiplier, 1));
 }
 
 .gh-content .kg-card + :not(.kg-card):not([id]) {
-    margin-top: 4rem;
+    margin-top: calc(2em * var(--content-spacing-multiplier, 1));
 }
 
 /* Image
@@ -55,6 +55,10 @@ except for when immediately preceeded by a heading */
 /* Callout
 /* ---------------------------------------------------------- */
 
+.kg-callout-card.kg-card {
+    border-radius: 0.25em;
+}
+
 .kg-callout-card-accent a {
     text-decoration: underline;
 }
@@ -84,4 +88,33 @@ blockquote.kg-blockquote-alt {
 
 .has-serif-body .kg-header-card h3.kg-header-card-subheader {
     font-family: var(--font-serif);
+}
+
+/* Bookmark
+/* ---------------------------------------------------------- */
+
+.kg-bookmark-card .kg-bookmark-container {
+    border-radius: 0.25em !important;
+}
+
+.kg-bookmark-card .kg-bookmark-content {
+    padding: 1.15em;
+}
+
+.kg-bookmark-card .kg-bookmark-title {
+    font-size: 0.9em;
+}
+
+.kg-bookmark-card .kg-bookmark-description {
+    max-height: none;
+    margin-top: 0.3em;
+    font-size: 0.8em;
+}
+
+.kg-bookmark-card .kg-bookmark-metadata {
+    font-size: 0.8em;
+}
+
+.kg-bookmark-card .kg-bookmark-thumbnail img {
+    border-radius: 0 0.2em 0.2em 0;
 }

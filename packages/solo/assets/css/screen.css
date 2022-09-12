@@ -1,0 +1,905 @@
+@import "@tryghost/shared-theme-assets/assets/css/screen.css";
+@import "fonts.css";
+
+:root {
+    --font-sans: Manrope, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+    --font-serif: Libre Baskerville, Georgia, Times, serif;
+    --font-mono: JetBrains Mono, Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+    --color-primary-text: var(--color-darker-gray);
+    --color-secondary-text-dark: rgba(0, 0, 0, 0.4);
+    --color-secondary-text-light: rgba(255, 255, 255, 0.64);
+    --color-secondary-text: var(--color-secondary-text-dark);
+    --color-border: rgba(0, 0, 0, 0.08);
+    --gap: clamp(24px, 1.7032rem + 1.9355vw, 48px);
+    --head-nav-gap: 32px;
+    --container-width: 1440px;
+    --content-font-size: clamp(1.7rem, 0.38vw + 1.4rem, 2rem);
+}
+
+:root.has-light-text {
+    --color-lighter-gray: rgba(0, 0, 0, 0.1);
+    --color-darker-gray: #fff;
+    --color-secondary-text: var(--color-secondary-text-light);
+    --color-border: rgba(255, 255, 255, 0.2);
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+.gh-main {
+    padding-top: clamp(4.8rem, 4rem + 2.5vw, 8rem);
+}
+
+figcaption {
+    font-size: 1.3rem;
+    text-align: right;
+}
+
+.kg-width-full figcaption {
+    padding: 0;
+}
+
+.gh-canvas {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.gh-canvas > * {
+    grid-column: 4 / span 6;
+}
+
+.gh-canvas > .kg-width-wide {
+    grid-column: 4 / span 9;
+}
+
+.gh-canvas > .kg-width-full,
+.gh-canvas > .kg-gallery-card.kg-width-wide {
+    position: relative;
+    z-index: 20;
+    grid-column: 1 / span 12;
+    transform: translate3d(0, 0, 0);
+}
+
+@media (max-width: 991px) {
+    .gh-canvas > * {
+        grid-column: 3 / span 8;
+    }
+
+    .gh-canvas > .kg-width-wide {
+        grid-column: 3 / span 10;
+    }
+}
+
+@media (max-width: 767px) {
+    .gh-canvas > * {
+        grid-column: 2 / span 10;
+    }
+
+    .gh-canvas > .kg-width-wide {
+        grid-column: 1 / span 12;
+    }
+}
+
+@media (max-width: 480px) {
+    .gh-canvas > * {
+        grid-column: 1 / span 12;
+    }
+}
+
+/* Header
+/* ---------------------------------------------------------- */
+
+.gh-head {
+    font-size: 1.6rem;
+    background-color: transparent;
+}
+
+.gh-head-inner {
+    padding: clamp(24px, 1.9355rem + 1.2903vw, 40px) 0;
+}
+
+.gh-head-brand-wrapper {
+    gap: 32px;
+}
+
+.gh-head-logo {
+    font-weight: 800;
+}
+
+.gh-head-logo img {
+    max-height: 48px;
+}
+
+.gh-head-menu {
+    font-weight: 700;
+}
+
+.gh-head-menu a {
+    color: inherit;
+}
+
+.gh-head-btn.gh-btn {
+    height: 36px;
+    padding: 0 16px;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+@media (max-width: 991px) {
+    .is-head-open:not(.is-head-brand):not(.is-head-dark):not(.is-head-transparent) #gh-head {
+        background-color: var(--background-color);
+    }
+}
+
+/* About section
+/* ---------------------------------------------------------- */
+
+.gh-about {
+    margin-bottom: 40px;
+}
+
+.gh-about-primary {
+    max-width: 1200px;
+    font-size: clamp(3.2rem, 2.4452rem + 2.0968vw, 5.8rem);
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.has-serif-font .gh-about-primary {
+    font-family: var(--font-serif);
+}
+
+.has-mono-font .gh-about-primary {
+    font-family: var(--font-mono);
+}
+
+.gh-about-primary a {
+    text-decoration: underline;
+}
+
+.gh-about-secondary {
+    max-width: 840px;
+    font-size: clamp(2.4rem, 0.54vw + 2.14rem, 3rem);
+    font-weight: 500;
+}
+
+.has-serif-font .gh-about-secondary {
+    font-family: var(--font-serif);
+}
+
+.has-mono-font .gh-about-secondary {
+    font-family: var(--font-mono);
+}
+
+.gh-about-primary + .gh-about-secondary {
+    max-width: 640px;
+    margin-top: 20px;
+    font-size: clamp(2rem, 0.36vw + 1.83rem, 2.4rem);
+    font-weight: 450;
+}
+
+.gh-about-secondary a {
+    text-decoration: underline;
+}
+
+/* Side by side about section
+/* ---------------------------------------------------------- */
+
+.has-side-about .gh-about {
+    margin-top: 48px;
+}
+
+.has-side-about .gh-about.no-image {
+    margin-top: 80px;
+    margin-bottom: 48px;
+}
+
+.has-side-about .gh-about-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(4rem, 0.0842rem + 3.9474vw, 6.4rem);
+}
+
+.has-side-about .gh-about.no-image .gh-about-inner {
+    grid-template-columns: 1fr;
+}
+
+.has-side-about .gh-about-content-inner {
+    position: sticky;
+    top: 40px;
+}
+
+@media (max-width: 840px) {
+    .has-side-about .gh-about-inner {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 64px;
+    }
+}
+
+/* Large background about section
+/* ---------------------------------------------------------- */
+
+.has-background-about .gh-about {
+    position: relative;
+}
+
+.has-background-about .gh-about::before {
+    position: absolute;
+    inset: 0;
+    content: "";
+    background-color: var(--color-black);
+    transition: opacity 1.5s ease;
+}
+
+.has-background-about .gh-about.initialized::before {
+    opacity: 0.4;
+}
+
+.has-background-about .gh-about-inner {
+    display: flex;
+    align-items: flex-end;
+    min-height: var(--about-height, 100vh);
+}
+
+.has-background-about .gh-about-image {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.has-background-about .gh-about-content {
+    position: sticky;
+    bottom: calc(var(--gap) + 24px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 50%;
+    margin-top: 200px;
+    margin-bottom: calc(var(--gap) + 24px);
+    text-align: left;
+}
+
+.has-background-about .gh-about-primary {
+    color: #fff;
+}
+
+.has-background-about .gh-about-secondary {
+    color: #fff;
+    opacity: 0.7;
+}
+
+.has-background-about .gh-subscribe-input {
+    color: var(--color-secondary-text-dark);
+    background-color: #fff;
+    border: 0;
+}
+
+@media (max-width: 991px) {
+    .has-background-about .gh-about-content {
+        max-width: none;
+    }
+}
+
+/* Typographic profile about section
+/* ---------------------------------------------------------- */
+
+.has-typographic-about .gh-about {
+    display: flex;
+    min-height: calc(100vh - 110px);
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+.has-typographic-about .gh-about-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    justify-content: flex-end;
+    width: 100%;
+    padding-bottom: clamp(2.4rem, 2rem + 1.25vw, 4rem);
+}
+
+.has-typographic-about .gh-about-image {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.has-typographic-about .gh-subscribe-input {
+    margin-top: 48px;
+}
+
+/* Post card
+/* ---------------------------------------------------------- */
+
+.gh-card-link:hover {
+    opacity: 1;
+}
+
+.gh-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.gh-card-title {
+    font-weight: 800;
+}
+
+.has-serif-font .gh-card-title {
+    font-family: var(--font-serif);
+}
+
+.has-mono-font .gh-card-title {
+    font-family: var(--font-mono);
+}
+
+.gh-card-link:hover .gh-card-title {
+    opacity: 0.8;
+}
+
+.gh-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    margin-top: 16px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--color-secondary-text);
+}
+
+.gh-card-meta > * {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.gh-card-meta > * + *:not(script)::before {
+    width: 2px;
+    height: 2px;
+    content: "";
+    background-color: currentColor;
+    border-radius: 50%;
+}
+
+.gh-card-access svg {
+    margin-right: -5px;
+}
+
+/* Classic feed
+/* ---------------------------------------------------------- */
+
+.has-classic-feed .gh-card + .gh-card {
+    margin-top: clamp(4.8rem, 4rem + 2.5vw, 8rem);
+}
+
+.has-classic-feed .gh-card-link {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: clamp(4rem, 3rem + 3.125vw, 8rem);
+}
+
+.has-classic-feed .gh-card-image {
+    position: relative;
+    flex: 1;
+}
+
+.has-classic-feed .gh-card-image::before {
+    display: block;
+    padding-bottom: 56.25%;
+    content: "";
+}
+
+.has-classic-feed .no-image .gh-card-image {
+    background-color: var(--tag-color, var(--color-lighter-gray));
+}
+
+.has-classic-feed .gh-card-image img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.has-classic-feed .gh-card-wrapper {
+    flex: 1;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.has-classic-feed .gh-card-title {
+    font-size: clamp(3.2rem, 2.7rem + 1.5625vw, 5.2rem);
+}
+
+.has-classic-feed .kg-width-full .gh-card-title {
+    font-size: clamp(3.2rem, 2.4rem + 2.5vw, 6.4rem);
+}
+
+@media (max-width: 991px) {
+    .has-classic-feed .gh-card-link {
+        flex-direction: column;
+        gap: 32px;
+    }
+}
+
+/* Typographic feed
+/* ---------------------------------------------------------- */
+
+.has-typographic-feed.home-template .gh-main {
+    padding-top: 0;
+}
+
+.has-typographic-feed .gh-card {
+    margin-top: clamp(8rem, 6rem + 6.25vw, 16rem);
+}
+
+.has-typographic-feed .gh-card-title {
+    max-width: 1200px;
+    font-size: clamp(3.2rem, 2.4rem + 2.5vw, 6.4rem);
+    line-height: 1.1;
+}
+
+.has-typographic-feed .gh-card-excerpt {
+    max-width: 920px;
+    margin-top: 16px;
+    font-size: clamp(1.8rem, 0.27vw + 1.67rem, 2.1rem);
+    font-weight: 450;
+    line-height: 1.5;
+    letter-spacing: -0.005em;
+}
+
+.has-serif-font.has-typographic-feed .gh-card-excerpt {
+    font-family: var(--font-serif);
+}
+
+.has-mono-font.has-typographic-feed .gh-card-excerpt {
+    font-family: var(--font-mono);
+}
+
+.has-typographic-feed .gh-card-meta {
+    margin-top: 16px;
+}
+
+/* Parallax feed
+/* ---------------------------------------------------------- */
+
+.has-parallax-feed .gh-card {
+    display: flex;
+    min-height: 640px;
+}
+
+.has-parallax-feed .gh-card.no-image {
+    background-color: var(--tag-color, var(--color-darker-gray));
+}
+
+.has-parallax-feed .kg-width-full .gh-card {
+    min-height: 800px;
+}
+
+.has-parallax-feed .gh-card + .gh-card {
+    margin-top: 80px;
+}
+
+.has-parallax-feed .gh-card-link {
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+}
+
+.has-parallax-feed .gh-card:not(.no-image) .gh-card-link::before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: #000;
+    opacity: 0.6;
+    transition: opacity 0.4s;
+}
+
+.has-parallax-feed .gh-card:not(.no-image):hover .gh-card-link::before {
+    opacity: 0.4;
+}
+
+.has-parallax-feed .gh-card-image {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+.has-parallax-feed .gh-card-wrapper {
+    position: relative;
+    justify-content: flex-end;
+    padding: 64px 48px;
+}
+
+.has-parallax-feed .kg-width-full .gh-card-wrapper {
+    padding: 64px 48px;
+}
+
+.has-parallax-feed :is(.gh-card-title, .gh-card-meta) {
+    color: #fff;
+}
+
+.has-parallax-feed .gh-card-title {
+    font-size: clamp(3.2rem, 2.4rem + 2.5vw, 6.4rem);
+    line-height: 1.1;
+}
+
+.has-parallax-feed .gh-card:not(.no-image) .gh-card-link:hover .gh-card-title {
+    opacity: 1;
+}
+
+.has-parallax-feed .kg-width-full .gh-card-title {
+    font-size: 6.4rem;
+}
+
+.has-parallax-feed .gh-card-meta {
+    margin-top: 12px;
+}
+
+/* Article
+/* ---------------------------------------------------------- */
+
+.gh-article-meta {
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+    grid-row-start: 1;
+    width: 100%;
+    margin: 0 !important;
+}
+
+.gh-article-meta-inner {
+    position: sticky;
+    top: 48px;
+    display: flex;
+    flex-direction: column;
+}
+
+.gh-article-meta .gh-author-image {
+    width: 72px;
+    height: 72px;
+    margin-bottom: 16px;
+}
+
+.gh-article-meta .gh-author-name {
+    font-size: 1.9rem;
+    letter-spacing: -0.01em;
+}
+
+.gh-article-meta .gh-author-name a {
+    color: var(--color-darker-gray);
+    text-decoration: none;
+}
+
+.gh-article-date {
+    margin-top: 4px;
+    font-size: 1.4rem;
+    font-weight: 480;
+    color: var(--color-secondary-text);
+}
+
+.gh-article-tag {
+    width: fit-content;
+    padding: 2px 12px;
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--tag-color, var(--color-darker-gray)) !important;
+    text-decoration: none !important;
+    letter-spacing: -0.01em;
+    border: 2px solid var(--color-border);
+    border-radius: 24px;
+}
+
+.gh-content .gh-article-header {
+    grid-row-start: 1;
+    grid-column: 4 / span 9;
+    margin-top: 0;
+    margin-bottom: clamp(4.8rem, 1.43vw + 4.11rem, 6.4rem);
+}
+
+.gh-article-title {
+    grid-column: 1 / span 9;
+    font-size: clamp(4rem, 2.86vw + 2.63rem, 7.2rem);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.03em;
+}
+
+.page-template .no-image .gh-article-title {
+    grid-column: 4 / span 6;
+}
+
+.has-serif-font .gh-article-title {
+    font-family: var(--font-serif);
+}
+
+.has-mono-font .gh-article-title {
+    font-family: var(--font-mono);
+}
+
+.gh-article-excerpt {
+    grid-column: 1 / span 9;
+    max-width: 840px;
+    font-size: clamp(1.8rem, 0.54vw + 1.54rem, 2.4rem);
+    font-weight: 500;
+    line-height: 1.45;
+}
+
+.has-serif-font .gh-article-excerpt {
+    font-family: var(--font-serif);
+}
+
+.has-mono-font .gh-article-excerpt {
+    font-family: var(--font-mono);
+}
+
+.gh-article-excerpt .emoji {
+    color: initial;
+}
+
+.gh-article-image {
+    grid-column: 1 / span 12;
+    margin-top: clamp(4rem, 3rem + 3.125vw, 8rem);
+}
+
+.gh-content {
+    --content-spacing-multiplier: 1.5;
+
+    position: relative;
+    margin-top: clamp(4rem, 3rem + 3.125vw, 8rem);
+    line-height: 1.7;
+}
+
+.post-template .no-image .gh-content {
+    margin-top: 0;
+}
+
+.page-template .no-image .gh-content {
+    margin-top: clamp(4rem, 2.14vw + 2.97rem, 6.4rem);
+}
+
+.gh-content > [id] {
+    font-weight: 800;
+}
+
+.gh-content > :is(p, ul, ol) {
+    font-weight: 480;
+}
+
+.has-serif-font .gh-content > :is([id], p, ul, ol) {
+    font-family: var(--font-serif);
+}
+
+.has-mono-font .gh-content > :is([id], p, ul, ol) {
+    font-family: var(--font-mono);
+}
+
+.gh-article-footer {
+    margin-top: clamp(6.4rem, 3rem + 10.625vw, 20rem);
+}
+
+@media (min-width: 992px) {
+    .gh-article-meta {
+        position: absolute;
+        grid-column: 1 / span 3;
+    }
+}
+
+@media (max-width: 991px) {
+    :is(.gh-article-title, .gh-article-excerpt),
+    .gh-content > .gh-article-header {
+        grid-column: 1 / span 10;
+    }
+
+    .gh-article-meta {
+        margin-bottom: 32px !important;
+    }
+
+    .no-image .gh-article-meta {
+        grid-row-start: 2;
+    }
+
+    .gh-article-meta-inner {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .gh-article-meta .gh-author-image {
+        width: 64px;
+        height: 64px;
+        margin-right: 12px;
+        margin-bottom: 0;
+    }
+
+    .gh-article-meta-wrapper {
+        flex-grow: 1;
+    }
+
+    .gh-article-tag {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    :is(.gh-article-title, .gh-article-excerpt),
+    .gh-content > .gh-article-header {
+        grid-column: 1 / span 12;
+    }
+
+    .gh-content {
+        font-size: var(--content-font-size);
+    }
+}
+
+/* Custom CTA
+/* ---------------------------------------------------------- */
+
+.gh-cta {
+    position: relative;
+    z-index: 20;
+    grid-column: 1 / span 12 !important;
+    padding: clamp(8rem, 10.71vw + 2.86rem, 20rem) clamp(4.8rem, 4.64vw + 2.57rem, 10rem);
+    margin-top: clamp(6.4rem, 5vw + 4rem, 12rem);
+    background-color: var(--color-lighter-gray);
+    transform: translate3d(0, 0, 0);
+}
+
+.gh-cta-title {
+    margin-bottom: 24px;
+    font-size: clamp(3.6rem, 1.79vw + 2.74rem, 5.6rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+}
+
+.has-serif-font .gh-cta-title {
+    font-family: var(--font-serif);
+}
+
+.has-mono-font .gh-cta-title {
+    font-family: var(--font-mono);
+}
+
+.gh-cta .gh-btn {
+    height: 48px;
+    padding-right: 24px;
+    padding-left: 24px;
+    font-size: 1.8rem;
+    letter-spacing: -0.005em;
+}
+
+/* Navigation
+/* ---------------------------------------------------------- */
+
+.gh-navigation {
+    grid-column: 1 / span 12;
+    font-size: clamp(2rem, 1.7rem + 0.9375vw, 3.2rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.has-serif-font .gh-navigation {
+    font-family: var(--font-serif);
+}
+
+.has-mono-font .gh-navigation {
+    font-family: var(--font-mono);
+}
+
+/* Comments
+/* ---------------------------------------------------------- */
+
+.gh-comments {
+    margin-top: clamp(4.8rem, 4.64vw + 2.57rem, 10rem);
+}
+
+.gh-comments .gh-comments-title {
+    margin-bottom: 48px;
+    font-weight: 800;
+}
+
+.has-serif-font .gh-comments-title {
+    font-family: var(--font-serif);
+}
+
+.has-mono-font .gh-comments-title {
+    font-family: var(--font-mono);
+}
+
+/* Subscribe
+/* ---------------------------------------------------------- */
+
+.gh-subscribe-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 480px;
+    height: 52px;
+    padding: 0 8px 0 24px;
+    margin-top: 40px;
+    font-size: 1.7rem;
+    color: var(--color-secondary-text);
+    cursor: pointer;
+    background-color: var(--color-border);
+    border-radius: 72px;
+}
+
+.gh-subscribe-input .gh-btn {
+    font-weight: 700;
+}
+
+/* Archive
+/* ---------------------------------------------------------- */
+
+:is(.tag-template, .author-template) .gh-article {
+    margin-bottom: 80px;
+}
+
+.gh-author-image {
+    width: 96px;
+    height: 96px;
+    margin-bottom: 24px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.gh-author-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gh-author-meta {
+    margin-top: 16px;
+    font-size: 1.8rem;
+    color: var(--color-secondary-text);
+}
+
+.gh-author-location {
+    margin-bottom: 6px;
+}
+
+.gh-author-social {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.gh-author-social-link {
+    line-height: 0;
+}
+
+/* Footer
+/* ---------------------------------------------------------- */
+
+.gh-foot {
+    padding-top: clamp(8rem, 4.55vw + 6.18rem, 12rem);
+    padding-bottom: clamp(8rem, 4.55vw + 6.18rem, 12rem);
+}
+
+.gh-foot-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+}
+
+.gh-foot-menu {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.gh-copyright {
+    font-size: 1.4rem;
+}
