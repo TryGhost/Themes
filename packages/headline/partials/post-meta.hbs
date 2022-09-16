@@ -1,18 +1,26 @@
 {{#is "post"}}
     <aside class="gh-article-sidebar">
-        {{#primary_author}}
-            <figure class="gh-author-image">
-                {{#if profile_image}}
-                    <img src="{{profile_image}}" alt="{{name}}">
-                {{else}}
-                    <div class="gh-author-icon">{{> icons/avatar}}</div>
-                {{/if}}
-            </figure>
 
-            <h4 class="gh-author-name">
-                <a href="{{url}}">{{name}}</a>
-            </h4>
-        {{/primary_author}}
+        <div class="gh-author-image-list">
+            {{#foreach authors}}
+                <a class="gh-author-image" href="{{url}}">
+                    {{#if profile_image}}
+                        <img src="{{profile_image}}" alt="{{name}}">
+                    {{else}}
+                        <div class="gh-author-icon">{{> icons/avatar}}</div>
+                    {{/if}}
+                </a>
+            {{/foreach}}
+        </div>
+
+        <div class="gh-author-name-list">
+            {{#foreach authors}}
+                <h4 class="gh-author-name">
+                    <a href="{{url}}">{{name}}</a>
+                </h4>
+                {{#unless @last}},&nbsp;{{/unless}}
+            {{/foreach}}
+        </div>
 
         <div class="gh-article-meta">
             <div class="gh-article-meta-inner">
@@ -23,5 +31,6 @@
                 {{/if}}
             </div>
         </div>
+
     </aside>
 {{/is}}

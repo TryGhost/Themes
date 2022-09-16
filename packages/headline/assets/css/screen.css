@@ -356,6 +356,11 @@ body:not(.home-template) .gh-topic-grid .gh-card {
     top: 40px;
 }
 
+.gh-author-image-list {
+    display: flex;
+    margin-left: -2px;
+}
+
 .gh-author-image {
     position: relative;
     width: 64px;
@@ -363,6 +368,36 @@ body:not(.home-template) .gh-topic-grid .gh-card {
     margin-bottom: 20px;
     overflow: hidden;
     border-radius: 50%;
+}
+
+.gh-author-image-list .gh-author-image {
+    margin-bottom: 16px;
+    border: 2px solid var(--color-white);
+}
+
+.gh-author-image-list .gh-author-image:only-child {
+    width: 68px;
+    height: 68px;
+}
+
+.gh-author-image-list .gh-author-image:hover {
+    opacity: 1;
+}
+
+.gh-author-image-list .gh-author-image + .gh-author-image {
+    margin-left: -20px;
+}
+
+.gh-author-image-list .gh-author-image:nth-child(1) {
+    z-index: 30;
+}
+
+.gh-author-image-list .gh-author-image:nth-child(2) {
+    z-index: 20;
+}
+
+.gh-author-image-list .gh-author-image:nth-child(3) {
+    z-index: 10;
 }
 
 .gh-author-image img {
@@ -376,13 +411,22 @@ body:not(.home-template) .gh-topic-grid .gh-card {
     background-color: var(--color-light-gray);
 }
 
+.gh-author-name-list {
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 800;
+    line-height: 1.35;
+}
+
 .gh-author-name {
+    display: flex;
     font-size: 1.8rem;
+    line-height: 1.35;
     letter-spacing: -0.01em;
 }
 
 .gh-article-meta {
-    margin-top: 6px;
+    margin-top: 3px;
     font-size: 1.3rem;
     color: var(--color-secondary-text);
     letter-spacing: -0.003em;
@@ -391,7 +435,6 @@ body:not(.home-template) .gh-topic-grid .gh-card {
 .gh-article-meta-inner {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
 }
 
 .gh-article-meta-sep {
@@ -848,15 +891,31 @@ body:not(.home-template) .gh-topic-grid .gh-card {
         margin-top: 24px;
     }
 
-    .gh-article-sidebar .gh-author-image {
+    .gh-article-sidebar .gh-author-image-list {
         grid-row: 1 / 3;
+    }
+
+    .gh-article-sidebar .gh-author-image {
         width: 48px;
         height: 48px;
         margin-bottom: 0;
     }
 
+    .gh-author-image-list .gh-author-image + .gh-author-image {
+        margin-left: -16px;
+    }
+
+    .gh-author-name-list {
+        font-weight: 600;
+    }
+
+    .gh-author-name {
+        font-size: 1.7rem;
+        font-weight: 600;
+    }
+
     .gh-article-meta {
-        margin-top: 0;
+        margin-top: -6px;
         line-height: 1;
     }
 }
