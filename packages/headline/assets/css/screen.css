@@ -204,7 +204,7 @@ body:not(.home-template) .gh-topic-grid .gh-card {
     display: -webkit-box;
     margin-top: 4px;
     overflow-y: hidden;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
@@ -350,10 +350,6 @@ body:not(.home-template) .gh-topic-grid .gh-card {
 
 .has-wide-image .gh-article-sidebar {
     top: calc(100% + 40px);
-}
-
-.has-full-image .gh-article-sidebar {
-    top: 40px;
 }
 
 .gh-author-image-list {
