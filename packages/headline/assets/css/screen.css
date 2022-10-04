@@ -583,6 +583,7 @@ body:not(.home-template) .gh-topic-grid .gh-card {
 /* Subscription banner */
 
 .gh-subscribe {
+    margin-top: 40px;
     margin-bottom: 80px;
     text-align: center;
 }
@@ -623,7 +624,7 @@ body:not(.home-template) .gh-topic-grid .gh-card {
 /* Site footer */
 
 .gh-foot {
-    padding-top: 120px;
+    padding-top: 80px;
     padding-bottom: 120px;
     margin-top: 120px;
     background-color: var(--color-darker-gray);
@@ -644,10 +645,14 @@ body:not(.home-template) .gh-topic-grid .gh-card {
 
 .gh-foot-menu {
     width: 100%;
-    padding: 16px 0;
+    padding-bottom: 32px;
     text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.gh-subscribe ~ .gh-foot-menu {
+    padding: 16px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .gh-foot-menu .nav {
@@ -660,9 +665,13 @@ body:not(.home-template) .gh-topic-grid .gh-card {
 }
 
 .gh-copyright {
-    margin-top: 64px;
+    margin-top: 32px;
     color: var(--color-secondary-text);
     letter-spacing: -0.006em;
+}
+
+.gh-subscribe ~ .gh-copyright {
+    margin-top: 64px;
 }
 
 /* Media queries */

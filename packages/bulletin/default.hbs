@@ -14,25 +14,60 @@
     {{ghost_head}}
 </head>
 
-<body class="{{body_class}} is-head-brand{{^if @member.paid}}{{#is "home"}} is-home-cta{{/is}}{{/if}}{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Elegant serif"}} has-serif-body{{/match}}">
+<body class="{{body_class}} is-head-brand{{#if @site.members_enabled}}{{#unless @member}}{{#is "home"}} is-home-cta{{/is}}{{/unless}}{{/if}}{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Elegant serif"}} has-serif-body{{/match}}">
     <div class="gh-site">
-        {{^if @member.paid}}
-            {{^is "home"}}
-                {{> "header"}}
-            {{/is}}
-        {{else}}
-            {{> "header"}}
-        {{/if}}
+
+        <header id="gh-head" class="gh-head gh-outer">
+            <div class="gh-head-inner">
+                <div class="gh-head-brand">
+                    <div class="gh-head-brand-wrapper">
+                        <a class="gh-head-logo" href="{{@site.url}}">
+                            {{#if @site.logo}}
+                                <img src="{{@site.logo}}" alt="{{@site.title}}">
+                            {{else}}
+                                {{@site.title}}
+                            {{/if}}
+                        </a>
+                    </div>
+                    <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button>
+                    <button class="gh-burger"></button>
+                </div>
+
+                <nav class="gh-head-menu">
+                    {{navigation}}
+                </nav>
+
+                <div class="gh-head-actions">
+                    <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button>
+                    {{#if @site.members_enabled}}
+                        {{#unless @member}}
+                            <a class="gh-head-btn gh-btn" href="#/portal/signup" data-portal="signup">Subscribe</a>
+                        {{else}}
+                            <a class="gh-head-btn gh-btn" href="#/portal/account" data-portal="account">Account</a>
+                        {{/unless}}
+                    {{/if}}
+                </div>
+            </div>
+        </header>
 
         {{{body}}}
 
-        {{^if @member.paid}}
-            {{^is "home"}}
-                {{> "footer"}}
-            {{/is}}
-        {{else}}
-            {{> "footer"}}
-        {{/if}}
+        <footer class="gh-foot gh-outer">
+            <div class="gh-foot-inner gh-inner">
+                <div class="gh-copyright">
+                    {{@site.title}} © {{date format="YYYY"}}
+                </div>
+
+                <nav class="gh-foot-menu">
+                    {{navigation type="secondary"}}
+                </nav>
+
+                <div class="gh-powered-by">
+                    <a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a>
+                </div>
+            </div>
+        </footer>
+
     </div>
 
     {{#is "post, page"}}

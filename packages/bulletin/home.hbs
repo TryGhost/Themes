@@ -1,96 +1,95 @@
 {{!< default}}
 
 <main id="gh-main" class="gh-main">
-    {{^if @member.paid}}
-        <div class="gh-home">
-            <div class="gh-home-cta">
-                <header class="gh-home-head">
-                    <div class="gh-home-brand">
-                        <a class="gh-home-logo" href="{{@site.url}}">
-                            {{#if @site.logo}}
-                                <img src="{{@site.logo}}" alt="{{@site.title}}">
-                            {{else}}
-                                {{@site.title}}
-                            {{/if}}
-                        </a>
-                        <p class="gh-home-description">{{@site.description}}</p>
-                    </div>
-                    <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button>
-                </header>
+    {{#if @site.members_enabled}}
+        {{#unless @member}}
+            <div class="gh-home">
+                <div class="gh-home-cta">
+                    <header class="gh-home-head">
+                        <div class="gh-home-brand">
+                            <a class="gh-home-logo" href="{{@site.url}}">
+                                {{#if @site.logo}}
+                                    <img src="{{@site.logo}}" alt="{{@site.title}}">
+                                {{else}}
+                                    {{@site.title}}
+                                {{/if}}
+                            </a>
+                            <p class="gh-home-description">{{@site.description}}</p>
+                        </div>
+                        <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button>
+                    </header>
 
-                <section class="gh-home-subscribe">
-                    {{^if @member}}
+                    <section class="gh-home-subscribe">
                         <h2 class="gh-home-subscribe-title">Stay tuned</h2>
                         <p class="gh-home-subscribe-description">Don’t miss out on the latest issues. Sign up now to get access to the library of members-only issues.</p>
-
                         <a class="gh-home-subscribe-input" href="#/portal/signup" data-portal="signup">
-                            jamie@example.com
-                            <span>{{> icons/arrow-right}}</span>
+                            jamie@example.com <span>{{> icons/arrow-right}}</span>
                         </a>
-                    {{else}}
-                        <h2 class="gh-home-subscribe-title">Ready for unlimited access?</h2>
-                        <p class="gh-home-subscribe-description">Upgrade to a paid account to get full access to all content.</p>
+                    </section>
 
-                        <a class="gh-home-subscribe-btn gh-btn gh-primary-btn" href="#/portal/account/plans" data-portal="account/plans">Upgrade now</a>
-                    {{/if}}
-                </section>
+                    <footer class="gh-home-footer">
+                        <p class="gh-home-copyright">{{@site.title}} © {{date format="YYYY"}}</p>
+                    </footer>
+                </div>
 
-                <footer class="gh-home-footer">
-                    <p class="gh-home-copyright">{{@site.title}} © {{date format="YYYY"}}</p>
-                </footer>
-            </div>
+                <div class="gh-home-latest">
+                    <section class="gh-home-latest-wrapper">
+                        {{#if @site.icon}}
+                            <img class="gh-home-latest-icon" src="{{@site.icon}}" alt="{{@site.title}}">
+                        {{/if}}
 
-            <div class="gh-home-latest">
-                <section class="gh-home-latest-wrapper">
-                    {{#if @site.icon}}
-                        <img class="gh-home-latest-icon" src="{{@site.icon}}" alt="{{@site.title}}">
-                    {{/if}}
+                        {{#foreach posts limit="1"}}
+                            <article class="gh-article {{post_class}}">
+                                <header class="gh-article-header">
+                                    <h2 class="gh-article-title">{{title}}</h2>
+                                    <span class="gh-article-meta">
+                                        By {{primary_author.name}} —
+                                        <time datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
+                                    </span>
+                                </header>
 
-                    {{#foreach posts limit="1"}}
-                        <article class="gh-article {{post_class}}">
-                            <header class="gh-article-header">
-                                <h2 class="gh-article-title">{{title}}</h2>
-                                <span class="gh-article-meta">
-                                    By {{primary_author.name}} —
-                                    <time datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
-                                </span>
-                            </header>
+                                {{#if feature_image}}
+                                    <figure class="gh-article-image">
+                                        <img
+                                            srcset="{{img_url feature_image size="s"}} 300w,
+                                                    {{img_url feature_image size="m"}} 720w,
+                                                    {{img_url feature_image size="l"}} 960w,
+                                                    {{img_url feature_image size="xl"}} 1200w,
+                                                    {{img_url feature_image size="xxl"}} 2000w"
+                                            sizes="(max-width: 1200px) 100vw, 1200px"
+                                            src="{{img_url feature_image size="xl"}}"
+                                            alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
+                                        >
+                                        {{#if feature_image_caption}}
+                                            <figcaption>{{feature_image_caption}}</figcaption>
+                                        {{/if}}
+                                    </figure>
+                                {{/if}}
 
-                            {{#if feature_image}}
-                                <figure class="gh-article-image">
-                                    <img
-                                        srcset="{{img_url feature_image size="s"}} 300w,
-                                                {{img_url feature_image size="m"}} 720w,
-                                                {{img_url feature_image size="l"}} 960w,
-                                                {{img_url feature_image size="xl"}} 1200w,
-                                                {{img_url feature_image size="xxl"}} 2000w"
-                                        sizes="(max-width: 1200px) 100vw, 1200px"
-                                        src="{{img_url feature_image size="xl"}}"
-                                        alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
-                                    >
-                                    {{#if feature_image_caption}}
-                                        <figcaption>{{feature_image_caption}}</figcaption>
-                                    {{/if}}
-                                </figure>
-                            {{/if}}
+                                <div class="gh-content">
+                                    {{content}}
+                                </div>
+                            </article>
 
-                            <div class="gh-content">
-                                {{content}}
-                            </div>
-                        </article>
+                            <footer class="gh-home-latest-footer">
+                                <a class="gh-btn" href="{{url}}">Read latest issue</a>
+                            </footer>
+                        {{/foreach}}
+                    </section>
 
-                        <footer class="gh-home-latest-footer">
-                            <a class="gh-btn" href="{{url}}">Read latest issue</a>
-                        </footer>
-                    {{/foreach}}
-                </section>
-
-                <div class="gh-home-latest-label">
-                    <span class="gh-home-latest-indicator"></span>
-                    Latest issue
+                    <div class="gh-home-latest-label">
+                        <span class="gh-home-latest-indicator"></span>
+                        Latest issue
+                    </div>
                 </div>
             </div>
-        </div>
+        {{else}}
+            {{#get "posts" include="authors,tags" limit="1"}}
+                {{#foreach posts}}
+                    {{> "article"}}
+                {{/foreach}}
+            {{/get}}
+        {{/unless}}
     {{else}}
         {{#get "posts" include="authors,tags" limit="1"}}
             {{#foreach posts}}

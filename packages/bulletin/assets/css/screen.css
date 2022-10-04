@@ -15,7 +15,7 @@ h6 {
     font-weight: 800;
 }
 
-.is-home-cta .gh-portal-triggerbtn-iframe {
+.is-home-cta :is(.gh-head, .gh-foot, .gh-portal-triggerbtn-iframe) {
     display: none;
 }
 
@@ -125,10 +125,6 @@ h6 {
     color: var(--color-darker-gray);
     background-color: #fff;
     border-radius: 50%;
-}
-
-.gh-home-subscribe-btn {
-    margin-top: 4rem;
 }
 
 .gh-home-copyright {

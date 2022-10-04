@@ -72,23 +72,27 @@
                         </section>
                     </div>
 
-                    {{^if @member.paid}}
-                        <div class="gh-signup">
-                            {{^if @member}}
-                                <p class="gh-signup-description">Sign up now to get access to the library of members-only issues.</p>
+                    {{#if @site.members_enabled}}
+                        {{^if @member.paid}}
+                            <div class="gh-signup">
+                                {{^if @member}}
+                                    <p class="gh-signup-description">Sign up now to get access to the library of members-only issues.</p>
 
-                                <a class="gh-subscribe-input" href="#/portal/signup" data-portal="signup">
-                                    <div class="gh-subscribe-input-text">
-                                        {{> icons/email}}
-                                        jamie@example.com
-                                    </div>
-                                    <div class="gh-subscribe-input-btn">Subscribe</div>
-                                </a>
-                            {{else}}
-                                <p class="gh-signup-description">Upgrade to a paid account to get full access.</p>
-                                <a class="gh-signup-btn gh-btn gh-primary-btn" href="#/portal/account/plans" data-portal="account/plans">Upgrade now</a>
-                            {{/if}}
-                        </div>
+                                    <a class="gh-subscribe-input" href="#/portal/signup" data-portal="signup">
+                                        <div class="gh-subscribe-input-text">
+                                            {{> icons/email}}
+                                            jamie@example.com
+                                        </div>
+                                        <div class="gh-subscribe-input-btn">Subscribe</div>
+                                    </a>
+                                {{else}}
+                                    {{#if @setting.paid_members_enabled}}
+                                        <p class="gh-signup-description">Upgrade to a paid account to get full access.</p>
+                                        <a class="gh-signup-btn gh-btn gh-primary-btn" href="#/portal/account/plans" data-portal="account/plans">Upgrade now</a>
+                                    {{/if}}
+                                {{/if}}
+                            </div>
+                        {{/if}}
                     {{/if}}
                 </section>
 
