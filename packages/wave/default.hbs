@@ -11,35 +11,111 @@
         {{{block "description"}}}
     {{/is}}
     <link rel="stylesheet" href="{{asset "built/screen.css"}}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap">
 
     {{ghost_head}}
 </head>
 
 <body class="{{body_class}}{{{block "body_class"}}}{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Elegant serif"}} has-serif-body{{/match}}">
-    <div class="site">
-        {{> header}}
-        {{#is "home"}}
-            {{> cover}}
-        {{/is}}
-        <div class="site-content">
-            {{{body}}}
+<div class="site">
+
+    <header id="gh-head" class="gh-head gh-outer">
+    <div class="gh-head-inner">
+
+        <div class="gh-head-brand">
+            <div class="gh-head-brand-wrapper">
+                <a class="gh-head-logo" href="{{@site.url}}">
+                    {{@site.title}}
+                </a>
+            </div>
+            <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button>
+            <button class="gh-burger"></button>
         </div>
-        {{> footer}}
+
+        <nav class="gh-head-menu">
+            {{navigation}}
+        </nav>
+
+        <div class="gh-head-actions">
+            <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button>
+            {{#if @site.members_enabled}}
+                {{#unless @member}}
+                    <a class="gh-head-btn gh-btn gh-primary-btn" href="#/portal/signup" data-portal="signup">Subscribe</a>
+                {{else}}
+                    <a class="gh-head-btn gh-btn" href="#/portal/account" data-portal="account">Account</a>
+                {{/unless}}
+            {{/if}}
+        </div>
+
+    </div>
+    </header>
+
+    {{#is "home"}}
+    {{#if @site.cover_image}}
+        <div class="site-cover u-overlay">
+            <img class="cover-image u-object-fit" src="{{img_url @site.cover_image}}" alt="{{@site.title}}">
+            <div class="cover-content">
+                {{#if @site.logo}}
+                    <img class="cover-logo" src="{{@site.logo}}" alt="{{@site.title}}">
+                {{/if}}
+                {{#if @site.description}}
+                    <div class="cover-description">{{@site.description}}</div>
+                {{/if}}
+            </div>
+        </div>
+    {{/if}}
+    {{/is}}
+
+    <div class="site-content">
+        {{{body}}}
     </div>
 
-    <script
-        src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous">
-    </script>
-    <script src="{{asset "built/main.min.js"}}"></script>
+    <footer class="gh-foot gh-outer">
+        <div class="gh-foot-inner gh-inner">
+            <div class="subscribe{{#if is_popup}} popup{{/if}}">
+                {{#if @custom.apple_podcasts_link}}
+                    <a href="{{@custom.apple_podcasts_link}}" class="subscribe-link" target="_blank" rel="noopener noreferrer">
+                        {{> "icons/apple"}}
+                        <span class="subscribe-text">Apple</span>
+                    </a>
+                {{/if}}
+                {{#if @custom.google_podcasts_link}}
+                    <a href="{{@custom.google_podcasts_link}}" class="subscribe-link" target="_blank" rel="noopener noreferrer">
+                        {{> "icons/google"}}
+                        <span class="subscribe-text">Google</span>
+                    </a>
+                {{/if}}
+                {{#if @custom.spotify_link}}
+                    <a href="{{@custom.spotify_link}}" class="subscribe-link" target="_blank" rel="noopener noreferrer">
+                        {{> "icons/spotify"}}
+                        <span class="subscribe-text">Spotify</span>
+                    </a>
+                {{/if}}
+                <a href="{{#if @custom.rss_link}}{{@custom.rss_link}}{{else}}{{@site.url}}/rss{{/if}}" class="subscribe-link rss" target="_blank" rel="noopener noreferrer">
+                    {{> "icons/rss"}}
+                    <span class="subscribe-text">RSS</span>
+                </a>
+            </div>
+            <nav class="gh-foot-menu">
+                {{navigation type="secondary"}}
+            </nav>
+            <div class="gh-copyright">
+                {{@site.title}} © {{date format="YYYY"}}. Powered by <a href="https://ghost.org/" target="_blank" rel="noopener">Ghost</a>
+            </div>
+        </div>
+    </footer>
 
-    {{{block "scripts"}}}
+</div>
 
-    {{ghost_foot}}
+<script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous">
+</script>
+<script src="{{asset "built/main.min.js"}}"></script>
+
+{{{block "scripts"}}}
+
+{{ghost_foot}}
+
 </body>
-
 </html>

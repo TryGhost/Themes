@@ -1,38 +1,47 @@
 {{!< default}}
 
-<div class="content-area">
-    <main class="site-main">
-        {{#post}}
-            <article class="{{post_class}} single">
-                <div class="single-media container medium{{#if og_description}} hidden-md hidden-lg hidden-xl{{/if}}">
-                    {{> post-media ratio="square"}}
-                </div>
-                {{#if og_description}}
-                    <div class="container large">
-                        {{> player}}
-                    </div>
-                {{else}}
-                    {{> post-header single=true}}
-                {{/if}}
-                <div class="post-content gh-content kg-canvas">
-                    {{content}}
-                </div>
-                <div class="container medium">
-                    {{> share}}
-                    <div class="author-list">
-                        <h3 class="author-list-title">
-                            {{#if og_description}}
-                                Hosted by:
-                            {{else}}
-                                Written by:
-                            {{/if}}
-                        </h3>
-                        {{#foreach authors}}
-                            {{> author}}
-                        {{/foreach}}
-                    </div>
-                </div>
-            </article>
-        {{/post}}
-    </main>
-</div>
+{{#post}}
+
+<main class="site-main">
+    <article class="{{post_class}} single">
+
+        {{#if og_description}}
+            <div class="gh-outer">
+                {{> "player"}}
+            </div>
+        {{else}}
+            <header class="post-header gh-canvas">
+                {{> "post-meta"}}
+                <h1 class="post-title">{{title}}</h1>
+                {{> "feature-image"}}
+            </header>
+        {{/if}}
+
+        <div class="post-content gh-content gh-canvas">
+            {{content}}
+        </div>
+
+        <div class="gh-canvas">
+            <div class="author-list">
+                <h3 class="author-list-title">
+                    {{#if og_description}}Hosted by:{{else}}Written by:{{/if}}
+                </h3>
+                {{#foreach authors}}
+                    {{> "author-box"}}
+                {{/foreach}}
+            </div>
+            {{#if comments}}
+                <section class="gh-comments">
+                    <header class="gh-comments-header">
+                        <h3 class="gh-comments-title author-list-title">Member discussion:</h3>
+                        {{comment_count class="gh-comments-count"}}
+                    </header>
+                    {{comments title="" count=false}}
+                </section>
+            {{/if}}
+        </div>
+
+    </article>
+</main>
+
+{{/post}}

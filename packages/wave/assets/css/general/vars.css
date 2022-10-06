@@ -1,0 +1,15 @@
+:root {
+    --brand-color: var(--ghost-accent-color, #fc7e0f);
+    --primary-text-color: #5a656b;
+    --secondary-text-color: #aaa;
+    --white-color: #fff;
+    --light-gray-color: #f6f6f6;
+    --mid-gray-color: #e6e6e6;
+    --dark-gray-color: #a8aab1;
+    --darker-gray-color: #1a1a1a;
+    --black-color: #000;
+    --animation-base: ease-in-out;
+    --font-sans: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+    --font-serif: Lora, Times, serif;
+    --content-font-size: 1.6rem;
+}

@@ -1,17 +1,19 @@
 {{!< default}}
 
-<div class="content-area">
-    <main class="site-main container medium">
-        {{#author}}
-            <div class="term-author">
-                {{> author}}
-            </div>
-        {{/author}}
-        <div class="post-feed">
-            {{#foreach posts}}
-                {{> "loop"}}
-            {{/foreach}}
+<div class="gh-outer">
+<main class="site-main gh-inner">
+
+    {{#author}}
+        <div class="term">
+            {{> "author-box"}}
         </div>
-        {{pagination}}
-    </main>
+    {{/author}}
+
+    <div class="post-feed">
+        {{#foreach posts}}
+            {{> "loop"}}
+        {{/foreach}}
+    </div>
+
+</main>
 </div>

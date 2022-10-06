@@ -1,77 +1,73 @@
 .author-list {
-    margin-top: 45px;
+    margin-top: 64px;
 }
 
 .author-list-title {
-    margin-bottom: 20px;
-    color: var(--brand-color);
+    margin-bottom: 24px;
     font-size: 14px;
     font-weight: 700;
-    letter-spacing: 0.5px;
     text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .author {
     display: flex;
-    padding: 30px 30px;
+    padding: 30px;
     background-color: var(--light-gray-color);
-    border-radius: 3px;
+    border-radius: 6px;
 }
 
 .author + .author {
-    margin-top: 20px;
+    margin-top: 28px;
 }
 
 .author-image-placeholder {
     flex-shrink: 0;
-    overflow: hidden;
+    width: 72px;
+    height: 72px;
     margin-right: 20px;
-    width: 75px;
-    height: 75px;
+    overflow: hidden;
     border-radius: 50%;
 }
 
 .author-wrapper {
-    flex-grow: 1;
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
 }
 
 .author-header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
 
 .author-name {
     margin-bottom: 0;
-    font-size: 18px;
+    font-size: 2rem;
 }
 
 .author-social {
     display: flex;
+    gap: 10px;
 }
 
 .author-social-item {
-    margin-left: 8px;
     font-size: 16px;
-    line-height: 1;
-}
-
-.author-facebook {
-    margin-left: 7px;
+    line-height: 0;
 }
 
 .author-meta {
-    margin-top: 3px;
+    margin-top: 4px;
+    font-size: 1.2rem;
+    font-weight: 600;
     color: var(--secondary-text-color);
-    font-size: 11px;
-    font-weight: 700;
     text-transform: uppercase;
 }
 
 .author-bio {
-    margin-top: 15px;
+    margin-top: 12px;
+    font-size: 1.5rem;
 }
 
 @media (max-width: 767px) {
@@ -81,8 +77,8 @@
     }
 
     .author-image-placeholder {
-        margin-right: 15px;
         width: 60px;
         height: 60px;
+        margin-right: 15px;
     }
 }

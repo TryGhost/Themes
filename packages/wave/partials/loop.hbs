@@ -1,12 +1,29 @@
 <article class="{{post_class}} post-{{comment_id}}">
-    {{> post-media ratio="square"}}
+    <div class="post-media">
+        {{#if og_description}}
+            <div class="post-play">{{> "icons/play"}}</div>
+        {{/if}}
+        <div class="u-placeholder square">
+            <a href="{{url}}">
+                {{#if feature_image}}
+                    <img class="post-image lazyload u-object-fit" src="{{img_url feature_image size="m"}}" alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}">
+                {{else}}
+                    <span class="letter">{{title}}</span>
+                {{/if}}
+            </a>
+        </div>
+    </div>
     <div class="post-wrapper">
-        {{> post-header}}
+        <header class="post-header">
+            {{> "post-meta"}}
+            <h2 class="post-title">
+                <a class="post-title-link" href="{{url}}">{{title}}</a>
+            </h2>
+        </header>
         {{#if excerpt}}
             <div class="post-excerpt">
                 {{excerpt words="25"}}
             </div>
         {{/if}}
-        {{> post-footer}}
     </div>
 </article>

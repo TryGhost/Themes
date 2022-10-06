@@ -1,25 +1,27 @@
 .site-cover {
     position: relative;
     display: flex;
-    padding: 30px;
-    min-height: 350px;
+    min-height: 480px;
+    padding: 8vmin var(--gap);
 }
 
 .cover-content {
     position: relative;
     z-index: 10;
+    max-width: 720px;
     margin: auto;
-    max-width: 500px;
     color: var(--white-color);
     text-align: center;
 }
 
 .cover-logo {
-    margin: 0 auto;
     max-height: 100px;
+    margin: 0 auto;
+    margin-bottom: 32px;
 }
 
 .cover-description {
-    margin-top: 20px;
-    font-size: 16px;
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 1.5;
 }

@@ -1,27 +1,18 @@
-.single .player {
-    margin-bottom: 45px;
-}
-
 .single .single-media .post-media {
     margin: 0 auto 30px;
 }
 
 .single > .post-header {
-    margin-bottom: 30px;
+    margin-bottom: 48px;
     text-align: center;
 }
 
 .single > .post-header .post-title {
-    font-size: 27px;
+    font-size: 4rem;
     font-weight: 700;
 }
 
 .single > .post-header .post-meta {
-    margin-top: 8px;
-}
-
-@media (max-width: 767px) {
-    .single .player {
-        margin-bottom: 30px;
-    }
+    margin-bottom: 16px;
+    font-size: 1.3rem;
 }

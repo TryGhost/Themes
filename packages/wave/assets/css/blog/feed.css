@@ -1,9 +1,14 @@
+.post-feed {
+    max-width: 840px;
+    margin: 0 auto;
+}
+
 .post-feed .post {
     display: flex;
 }
 
 .post-feed .post + .post {
-    margin-top: 45px;
+    margin-top: 64px;
 }
 
 .post-feed .post-excerpt {
@@ -27,15 +32,15 @@
     }
 
     .post-feed .post-media {
-        margin-right: 20px;
         width: 80px;
+        margin-right: 20px;
     }
 
     .post-feed .post-media .button-play {
-        margin-top: -17px;
-        margin-left: -17px;
         width: 34px;
         height: 34px;
+        margin-top: -17px;
+        margin-left: -17px;
     }
 
     .post-feed .post-media .letter {

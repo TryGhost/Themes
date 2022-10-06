@@ -4,7 +4,7 @@
     "version": "1.0.0",
     "private": true,
     "engines": {
-        "ghost": ">=4.0.0"
+        "ghost": ">=5.0.0"
     },
     "license": "MIT",
         "author": {
@@ -20,17 +20,23 @@
     "config": {
         "posts_per_page": 5,
         "image_sizes": {
-            "1x": {
-                "width": 150,
-                "height": 150
+            "xs": {
+                "width": 150
             },
-            "2x": {
-                "width": 300,
-                "height": 300
+            "s": {
+                "width": 300
             },
-            "3x": {
-                "width": 450,
-                "height": 450
+            "m": {
+                "width": 720
+            },
+            "l": {
+                "width": 960
+            },
+            "xl": {
+                "width": 1200
+            },
+            "xxl": {
+                "width": 2000
             }
         },
         "card_assets": true,
@@ -57,14 +63,6 @@
                 "type": "text",
                 "default": "https://open.spotify.com/"
             },
-            "overcast_link": {
-                "type": "text",
-                "default": "https://overcast.fm/"
-            },
-            "stitcher_link": {
-                "type": "text",
-                "default": "https://www.stitcher.com/"
-            },
             "rss_link": {
                 "type": "text"
             }
@@ -73,12 +71,11 @@
     "scripts": {
         "dev": "gulp",
         "test": "gscan .",
-        "test:ci": "gscan --fatal --verbose .",
-        "lint": "gulp lint",
         "zip": "gulp zip"
     },
     "devDependencies": {
-        "autoprefixer": "10.4.12",
+        "@tryghost/shared-theme-assets": "1.1.0",
+        "autoprefixer": "10.4.8",
         "beeper": "2.1.0",
         "cssnano": "5.1.13",
         "gscan": "4.34.0",
@@ -86,14 +83,10 @@
         "gulp-concat": "2.6.1",
         "gulp-livereload": "4.0.2",
         "gulp-postcss": "9.0.1",
-        "gulp-stylelint": "13.0.0",
         "gulp-uglify": "3.0.2",
         "gulp-zip": "5.1.0",
-        "postcss": "8.4.17",
+        "postcss": "8.4.16",
         "postcss-easy-import": "4.0.0",
-        "pump": "3.0.0",
-        "stylelint": "14.13.0",
-        "stylelint-config-standard": "26.0.0",
-        "stylelint-order": "5.0.0"
+        "pump": "3.0.0"
     }
 }
