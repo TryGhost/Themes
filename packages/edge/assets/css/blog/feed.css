@@ -11,6 +11,7 @@
 }
 
 .post-feed .grid-item {
+    position: absolute;
     width: 330px;
 }
 

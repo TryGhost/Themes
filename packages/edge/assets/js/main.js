@@ -5,7 +5,9 @@ $(function () {
 
 function feed() {
     'use strict';
+
     var grid = document.querySelector('.post-feed');
+    if (!grid) return;
     var masonry;
 
     imagesLoaded(grid, function () {
@@ -23,22 +25,23 @@ function feed() {
 
         masonry.layout();
 
-        function callback(items) {
-            imagesLoaded(items, function (items) {
-                items.elements.forEach(function (item) {
+        function callback(items, loadNextPage) {
+            imagesLoaded(items, function (loaded) {
+                masonry.appended(items);
+                masonry.layout();
+                loaded.elements.forEach(function (item) {
                     item.style.visibility = 'visible';
-                    masonry.appended(item);
-                    masonry.layout();
                 });
+                loadNextPage();
             });
         }
 
-        pagination(true, callback);
+        pagination(true, callback, true);
     });
 
     pswp(
         '.post-feed',
-        '.grid-item:not(.grid-sizer)',
+        '.post',
         '.post-lightbox',
         '.post-caption',
         false

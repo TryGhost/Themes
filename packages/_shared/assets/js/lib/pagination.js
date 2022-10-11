@@ -1,133 +1,89 @@
-function pagination(isInfinite, callback) {
-    var buttonElement = document.querySelector('.gh-loadmore');
+function pagination(isInfinite, done, isMasonry = false) {
+    let loading = false;
+    const feedElement = document.querySelector('.gh-feed');
+    const target = feedElement.nextElementSibling || feedElement.parentElement.nextElementSibling || document.querySelector('.gh-foot');
+    const buttonElement = document.querySelector('.gh-loadmore');
 
-    // next link element
-    var nextElement = document.querySelector('link[rel=next]');
-    if (!nextElement && buttonElement) {
-        buttonElement.remove();
-        return;
-    }
+    const loadNextPage = async function () {
+        const nextElement = document.querySelector('link[rel=next]');
+        if (!nextElement) return;
 
-    // post feed element
-    var feedElement = document.querySelector('.gh-feed:not(.gh-featured):not(.gh-related)');
-    if (!feedElement) {
-        return;
-    }
+        try {
+            const res = await fetch(nextElement.href);
+            const html = await res.text();
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
 
-    var buffer = 300;
+            const postElements = doc.querySelectorAll('.gh-feed:not(.gh-featured):not(.gh-related) > *');
+            const fragment = document.createDocumentFragment();
+            const elems = [];
 
-    var ticking = false;
-    var loading = false;
+            postElements.forEach(function (post) {
+                var clonedItem = document.importNode(post, true);
 
-    var lastScrollY = window.scrollY;
-    var lastWindowHeight = window.innerHeight;
-    var lastDocumentHeight = document.documentElement.scrollHeight;
-
-    function onPageLoad() {
-        if (this.status === 404) {
-            window.removeEventListener('scroll', onScroll);
-            window.removeEventListener('resize', onResize);
-            buttonElement.remove();
-            return;
-        }
-
-        // append contents
-        var postElements = this.response.querySelectorAll('.gh-feed:not(.gh-featured):not(.gh-related) > *');
-        var fragment = document.createDocumentFragment();
-        var elems = [];
-
-        postElements.forEach(function (item) {
-            // document.importNode is important, without it the item's owner
-            // document will be different which can break resizing of
-            // `object-fit: cover` images in Safari
-            var clonedItem = document.importNode(item, true);
-
-            if (callback) {
-                clonedItem.style.position = 'absolute';
-                clonedItem.style.visibility = 'hidden';
-                elems.push(clonedItem);
-            }
-
-            fragment.appendChild(clonedItem);
-        });
-
-        feedElement.appendChild(fragment);
-
-        if (callback) {
-            callback(elems);
-        }
-
-        // set next link
-        var resNextElement = this.response.querySelector('link[rel=next]');
-        if (resNextElement) {
-            nextElement.href = resNextElement.href;
-        } else {
-            window.removeEventListener('scroll', onScroll);
-            window.removeEventListener('resize', onResize);
-            if (buttonElement) {
-                buttonElement.remove();
-            }
-        }
-
-        // sync status
-        lastDocumentHeight = document.documentElement.scrollHeight;
-        ticking = false;
-        loading = false;
-
-        if (isInfinite) {
-            imagesLoaded(feedElement, function () {
-                if (feedElement.getBoundingClientRect().bottom <= lastWindowHeight) {
-                    console.log(feedElement.getBoundingClientRect().bottom, lastWindowHeight)
-                    requestTick();
+                if (isMasonry) {
+                    clonedItem.style.visibility = 'hidden';
                 }
+
+                fragment.appendChild(clonedItem);
+                elems.push(clonedItem);
             });
+
+            feedElement.appendChild(fragment);
+
+            if (done) {
+                done(elems, loadNextWithCheck);
+            }
+
+            const resNextElement = doc.querySelector('link[rel=next]');
+            if (resNextElement && resNextElement.href) {
+                nextElement.href = resNextElement.href;
+            } else {
+                nextElement.remove();
+                if (buttonElement) {
+                    buttonElement.remove();
+                }
+            }
+        } catch (e) {
+            nextElement.remove();
+            throw e;
+        }
+    };
+
+    const loadNextWithCheck = async function () {
+        if (target.getBoundingClientRect().top <= window.innerHeight && document.querySelector('link[rel=next]')) {
+            await loadNextPage();
         }
     }
 
-    function onUpdate() {
-        // return if already loading
-        if (loading) {
-            return;
-        }
-
-        // return if not scroll to the bottom
-        if (isInfinite && lastScrollY + lastWindowHeight <= lastDocumentHeight - buffer) {
-            ticking = false;
-            return;
-        }
+    const callback = async function (entries) {
+        if (loading) return;
 
         loading = true;
 
-        var xhr = new window.XMLHttpRequest();
-        xhr.responseType = 'document';
+        if (entries[0].isIntersecting) {
+            // keep loading next page until target is out of the viewport or we've loaded the last page
+            if (!isMasonry) {
+                while (target.getBoundingClientRect().top <= window.innerHeight && document.querySelector('link[rel=next]')) {
+                    await loadNextPage();
+                }
+            } else {
+                await loadNextPage();
+            }
+        }
 
-        xhr.addEventListener('load', onPageLoad);
+        loading = false;
 
-        xhr.open('GET', nextElement.href);
-        xhr.send(null);
-    }
+        if (!document.querySelector('link[rel=next]')) {
+            observer.disconnect();
+        }
+    };
 
-    function requestTick() {
-        ticking || window.requestAnimationFrame(onUpdate);
-        ticking = true;
-    }
-
-    function onScroll() {
-        lastScrollY = window.scrollY;
-        requestTick();
-    }
-
-    function onResize() {
-        lastWindowHeight = window.innerHeight;
-        lastDocumentHeight = document.documentElement.scrollHeight;
-        requestTick();
-    }
+    const observer = new IntersectionObserver(callback);
 
     if (isInfinite) {
-        window.addEventListener('scroll', onScroll, {passive: true});
-        window.addEventListener('resize', onResize);
-        requestTick();
+        observer.observe(target);
     } else {
-        buttonElement.addEventListener('click', requestTick);
+        buttonElement.addEventListener('click', loadNextPage);
     }
 }
