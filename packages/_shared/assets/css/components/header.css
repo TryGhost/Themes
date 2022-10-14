@@ -8,7 +8,7 @@
     grid-auto-flow: row dense;
     column-gap: var(--head-nav-gap);
     align-items: center;
-    padding: 3.2rem 0;
+    height: 100%;
 }
 
 .gh-head-brand {
@@ -17,7 +17,6 @@
 
 .gh-head-brand-wrapper {
     display: flex;
-    flex: 1;
     align-items: center;
 }
 
@@ -33,6 +32,7 @@
 
 .gh-head-menu {
     display: flex;
+    gap: var(--head-nav-gap);
     align-items: center;
 }
 
@@ -56,8 +56,9 @@
 }
 
 .gh-head-btn.gh-btn {
-    padding: 0.9rem 1.4rem;
-    font-size: 1.5rem;
+    padding: 0.85em 1.1em;
+    font-size: inherit;
+    font-weight: 600;
 }
 
 .gh-head-btn:not(.gh-btn) {
@@ -104,6 +105,10 @@ LOGO        Home About Collection Author Portal        Login Subscribe
     grid-template-columns: 1fr auto 1fr;
 }
 
+.is-head-left-logo .gh-head-inner {
+    grid-template-columns: 1fr auto 1fr;
+}
+
 /*
 ======================================================================
 LOGO                               Home About Collection Author Portal
@@ -121,10 +126,6 @@ LOGO  Home About Collection Author Portal              Login Subscribe
 */
 
 .is-head-b-n--a .gh-head-inner {
-    grid-template-columns: auto auto 1fr;
-}
-
-.is-head-left-logo .gh-head-inner {
     grid-template-columns: auto auto 1fr;
 }
 
@@ -164,6 +165,10 @@ Home About Collection Author Portal
 
 .is-head-b--a_n .gh-head-menu {
     grid-row-start: 2;
+}
+
+.is-head-stacked .gh-head {
+    height: auto;
 }
 
 .is-head-stacked .gh-head-inner {
@@ -378,22 +383,26 @@ Home About Collection Author Portal
     transform: rotate(-45deg);
 }
 
-@media (max-width: 767px) {
-    #gh-head .gh-head-inner {
-        padding: 2rem 0;
-    }
-}
-
 @media (max-width: 991px) {
+    #gh-head {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 60px;
+    }
+
     #gh-head .gh-head-inner {
+        grid-template-rows: auto 1fr auto;
         grid-template-columns: 1fr;
     }
 
     #gh-head .gh-head-brand {
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr auto auto;
         grid-column-start: 1;
         align-items: center;
-        justify-content: space-between;
+        height: 60px;
     }
 
     .gh-burger {
@@ -428,12 +437,13 @@ Home About Collection Author Portal
     }
 
     .is-head-open #gh-head {
-        position: fixed;
+        /* position: fixed;
         top: 0;
         right: 0;
         bottom: 0;
-        left: 0;
-        z-index: 3999999;
+        left: 0; */
+        z-index: 90;
+        height: 100vh;
         padding: 0 var(--gap) 2.4rem;
         overflow-y: scroll;
         -webkit-overflow-scrolling: touch;
@@ -441,11 +451,6 @@ Home About Collection Author Portal
 
     .is-head-open:not(.is-head-brand):not(.is-head-dark):not(.is-head-transparent) #gh-head {
         background-color: var(--color-white);
-    }
-
-    .is-head-open #gh-head .gh-head-inner {
-        grid-template-rows: auto 1fr auto;
-        height: 100%;
     }
 
     .is-head-open #gh-head .gh-head-menu {

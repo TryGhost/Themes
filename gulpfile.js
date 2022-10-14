@@ -100,7 +100,7 @@ function main(done) {
     });
 
     function sharedCSS(done) {
-        glob.sync('packages/*', {ignore: 'packages/_shared'}).map(path => {
+        glob.sync('packages/journal', {ignore: 'packages/_shared'}).map(path => {
             pump([
                 src(`${path}/assets/css/screen.css`, {sourcemaps: true}),
                 postcss([
@@ -116,7 +116,7 @@ function main(done) {
     const sharedCSSWatcher = () => watch('packages/_shared/assets/css/**/*.css', sharedCSS);
 
     function sharedJS(done) {
-        glob.sync('packages/*', {ignore: 'packages/_shared'}).map(path => {
+        glob.sync('packages/journal', {ignore: 'packages/_shared'}).map(path => {
             pump([
                 src([
                     'packages/_shared/assets/js/lib/**/*.js',

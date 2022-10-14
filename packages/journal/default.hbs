@@ -30,19 +30,28 @@
 
                 <nav class="gh-head-menu">
                     {{navigation}}
+                    {{#unless @site.members_enabled}}
+                        {{#match @custom.header_style "Stacked"}}
+                            <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button>
+                        {{/match}}
+                    {{/unless}}
                 </nav>
 
                 <div class="gh-head-actions">
-                    <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button>
-                    {{#if @site.members_enabled}}
+                    {{#unless @site.members_enabled}}
+                        {{^match @custom.header_style "Stacked"}}
+                            <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button>
+                        {{/match}}
+                    {{else}}
+                        <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button>
                         {{#unless @member}}
-                            <a class="gh-head-btn" href="#/portal/signup" data-portal="signup">
+                            <a class="gh-head-btn gh-btn gh-primary-btn" href="#/portal/signup" data-portal="signup">
                                 {{> icons/email}} Subscribe
                             </a>
                         {{else}}
                             <a class="gh-head-btn" href="#/portal/account" data-portal="account">Account</a>
                         {{/unless}}
-                    {{/if}}
+                    {{/unless}}
                 </div>
             </div>
         </header>

@@ -9,14 +9,6 @@
     --head-nav-gap: 3.2rem;
 }
 
-.gh-btn {
-    padding-right: 1.6rem;
-    padding-left: 1.6rem;
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    border-radius: 6px;
-}
-
 .tag-template .gh-main,
 .author-template .gh-main {
     padding-top: 8vmin;
@@ -32,10 +24,6 @@
 
 .gh-head-actions {
     gap: 24px;
-}
-
-.gh-head-btn {
-    font-weight: 600;
 }
 
 .gh-head-btn svg {
