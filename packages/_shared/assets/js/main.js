@@ -12,7 +12,7 @@
     });
 })();
 
-/* Add lightbox to gallery images. */
+/* Add lightbox to gallery images */
 (function () {
     lightbox(
         '.kg-image-card > .kg-image[width][height], .kg-gallery-image > img'
@@ -30,4 +30,9 @@
         '.gh-content embed',
     ];
     reframe(document.querySelectorAll(sources.join(',')));
+})();
+
+/* Turn the main nav into dropdown menu when there are more than 5 menu items */
+(function () {
+    dropdown();
 })();

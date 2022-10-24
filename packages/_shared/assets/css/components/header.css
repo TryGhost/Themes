@@ -25,6 +25,7 @@
     font-size: 2.4rem;
     font-weight: 700;
     letter-spacing: -0.02em;
+    white-space: nowrap;
 }
 
 .gh-head-logo img {
@@ -37,16 +38,26 @@
     align-items: center;
 }
 
-.nav {
+.gh-head .nav {
     display: inline-flex;
+    gap: var(--head-nav-gap);
     align-items: center;
     padding: 0;
     margin: 0;
+    white-space: nowrap;
     list-style: none;
 }
 
-.gh-head .nav li + li {
-    margin-left: var(--head-nav-gap);
+.gh-head .nav-more-toggle {
+    position: relative;
+    margin: 0 -6px;
+    font-size: inherit;
+    text-transform: inherit;
+}
+
+.gh-head .nav-more-toggle svg {
+    width: 24px;
+    height: 24px;
 }
 
 .gh-head-actions {
@@ -57,7 +68,8 @@
 }
 
 .gh-head-btn.gh-btn {
-    padding: 0.85em 1.1em;
+    gap: 0.4em;
+    padding: 0.85em 1.2em;
     font-size: inherit;
     font-weight: 600;
 }
@@ -66,6 +78,11 @@
     display: inline-flex;
     align-items: center;
     color: var(--ghost-accent-color);
+}
+
+.gh-head-btn svg {
+    width: 1.3em;
+    height: 1.3em;
 }
 
 .gh-search {
@@ -107,7 +124,17 @@ LOGO        Home About Collection Author Portal        Login Subscribe
 }
 
 .is-head-left-logo .gh-head-inner {
-    grid-template-columns: 1fr auto auto;
+    grid-template-columns: auto 1fr auto;
+}
+
+.is-head-left-logo .gh-head-menu {
+    justify-content: flex-end;
+}
+
+@media (min-width: 992px) {
+    .is-head-left-logo .gh-head-menu {
+        margin-left: 32px;
+    }
 }
 
 /*
@@ -156,6 +183,12 @@ Home About Collection            LOGO                  Login Subscribe
     gap: 24px;
 }
 
+@media (min-width: 992px) {
+    .is-head-middle-logo .gh-head-menu {
+        max-width: 60%;
+    }
+}
+
 /*
 ======================================================================
 LOGO                                                   Login Subscribe
@@ -201,6 +234,7 @@ Home About Collection Author Portal
         grid-column: 1 / 4;
         justify-content: center;
         height: 56px;
+        margin: 0 48px;
     }
 
     .is-head-stacked .gh-head-menu::before,
@@ -343,6 +377,33 @@ Home About Collection Author Portal
     background-color: rgba(255, 255, 255, 0.3);
 }
 
+/* Dropdown menu
+/* ---------------------------------------------------------- */
+
+.gh-dropdown {
+    position: absolute;
+    top: 100%;
+    right: -16px;
+    z-index: 90;
+    display: none;
+    width: 200px;
+    padding: 12px 0;
+    margin-top: 20px;
+    text-align: left;
+    background-color: var(--color-white);
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04), 0 7px 20px -5px rgba(0, 0, 0, 0.15);
+}
+
+.gh-dropdown li {
+    margin: 0 !important;
+}
+
+.gh-dropdown a {
+    display: block;
+    padding: 6px 20px;
+}
+
 /* Mobile menu
 /* ---------------------------------------------------------- */
 
@@ -400,6 +461,8 @@ Home About Collection Author Portal
     #gh-head .gh-head-inner {
         grid-template-rows: auto 1fr auto;
         grid-template-columns: 1fr;
+        gap: 48px;
+        height: auto;
     }
 
     #gh-head .gh-head-brand {
@@ -411,7 +474,7 @@ Home About Collection Author Portal
     }
 
     #gh-head .gh-head-logo {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 
     .gh-burger {
@@ -421,19 +484,22 @@ Home About Collection Author Portal
     #gh-head .gh-head-menu,
     #gh-head .gh-head-actions {
         position: fixed;
-        justify-content: center;
+        justify-content: flex-start;
         visibility: hidden;
         opacity: 0;
         transform: translateY(8px);
     }
 
-    #gh-head .nav a {
-        font-size: 2.4rem;
+    #gh-head .nav {
+        gap: 16px;
+        align-items: flex-start;
+        line-height: 1.4;
     }
 
-    #gh-head .nav li + li {
-        margin-top: 1.2rem;
-        margin-left: 0;
+    #gh-head .nav a {
+        font-size: 2.6rem;
+        font-weight: 600;
+        text-transform: none;
     }
 
     #gh-head .gh-head-actions {
@@ -441,8 +507,8 @@ Home About Collection Author Portal
     }
 
     #gh-head .gh-head-btn {
-        margin-top: 3.2rem;
-        margin-left: 0;
+        width: 100%;
+        font-size: 1.4rem;
     }
 
     #gh-head .gh-head-btn:not(.gh-btn) {
@@ -455,9 +521,9 @@ Home About Collection Author Portal
 
     .is-head-open #gh-head {
         position: fixed;
-        z-index: 90;
+        z-index: 3999999;
         height: 100vh;
-        padding: 0 var(--gap) 48px;
+        padding: 0 var(--gap) 100px;
         overflow-y: scroll;
         -webkit-overflow-scrolling: touch;
     }
@@ -471,15 +537,21 @@ Home About Collection Author Portal
         position: static;
         visibility: visible;
         opacity: 1;
-        transition: all 0.4s;
+        transition: transform 0.4s, opacity 0.4s;
         transform: translateY(0);
     }
 
     .is-head-open #gh-head .gh-head-actions {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        left: 0;
         display: inline-flex;
         flex-direction: column;
         gap: 12px;
         align-items: center;
+        padding: var(--gap);
+        background: #fff;
         transition-delay: 0.2s;
     }
 
@@ -495,4 +567,59 @@ Home About Collection Author Portal
     .is-head-open #gh-main {
         opacity: 0;
     }
+}
+
+.animate__animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes bounceIn {
+    from,
+    20%,
+    40%,
+    60%,
+    80%,
+    to {
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+
+    0% {
+        opacity: 0;
+        transform: scale3d(0.7, 0.7, 0.7);
+    }
+
+    40% {
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.animate__bounceIn {
+    animation-name: bounceIn;
+    animation-duration: 0.3s;
+}
+
+@keyframes zoomOut {
+    from {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+        transform: scale3d(0.7, 0.7, 0.7);
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.animate__zoomOut {
+    animation-name: zoomOut;
+    animation-duration: 0.3s;
 }
