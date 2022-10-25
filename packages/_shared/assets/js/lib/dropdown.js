@@ -7,6 +7,11 @@ function dropdown() {
 
     const navHTML = nav.innerHTML;
 
+    const items = nav.querySelectorAll('li');
+    items.forEach(function (item, index) {
+        item.style.transitionDelay = `${0.03 * (index + 1)}s`;
+    });
+
     const makeDropdown = function () {
         if (mediaQuery.matches) return;
         const submenuItems = [];

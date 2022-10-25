@@ -487,11 +487,15 @@ Home About Collection Author Portal
         justify-content: flex-start;
         visibility: hidden;
         opacity: 0;
-        transform: translateY(8px);
+    }
+
+    #gh-head .gh-head-menu {
+        transition: none;
+        transform: translateY(0);
     }
 
     #gh-head .nav {
-        gap: 16px;
+        gap: 14px;
         align-items: flex-start;
         line-height: 1.4;
     }
@@ -502,6 +506,11 @@ Home About Collection Author Portal
         text-transform: none;
     }
 
+    #gh-head .nav li {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+
     #gh-head .gh-head-actions {
         text-align: center;
     }
@@ -509,6 +518,8 @@ Home About Collection Author Portal
     #gh-head .gh-head-btn {
         width: 100%;
         font-size: 1.4rem;
+        opacity: 0;
+        transform: translateY(8px);
     }
 
     #gh-head .gh-head-btn:not(.gh-btn) {
@@ -532,12 +543,25 @@ Home About Collection Author Portal
         background-color: var(--color-white);
     }
 
+    .is-head-open.is-head-transparent #gh-head {
+        background-color: var(--ghost-accent-color);
+    }
+
     .is-head-open #gh-head .gh-head-menu,
     .is-head-open #gh-head .gh-head-actions {
         position: static;
         visibility: visible;
         opacity: 1;
-        transition: transform 0.4s, opacity 0.4s;
+    }
+
+    .is-head-open #gh-head .nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .is-head-open #gh-head .nav li {
+        opacity: 1;
+        transition: transform 0.2s, opacity 0.2s;
         transform: translateY(0);
     }
 
@@ -551,17 +575,14 @@ Home About Collection Author Portal
         gap: 12px;
         align-items: center;
         padding: var(--gap);
-        background: #fff;
+        background-color: var(--color-white);
+    }
+
+    .is-head-open #gh-head .gh-head-btn {
+        opacity: 1;
+        transition: transform 0.4s, opacity 0.4s;
         transition-delay: 0.2s;
-    }
-
-    .is-head-open #gh-head .nav {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .is-head-open.is-head-transparent #gh-head {
-        background-color: var(--ghost-accent-color);
+        transform: translateY(0);
     }
 
     .is-head-open #gh-main {
