@@ -94,14 +94,6 @@ figcaption {
     background-color: transparent;
 }
 
-.gh-head-inner {
-    padding: clamp(24px, 1.9355rem + 1.2903vw, 40px) 0;
-}
-
-.gh-head-brand-wrapper {
-    gap: 32px;
-}
-
 .gh-head-logo {
     font-weight: 800;
 }
@@ -114,15 +106,13 @@ figcaption {
     font-weight: 700;
 }
 
-.gh-head-menu a {
-    color: inherit;
+.is-head-stacked .gh-head-menu::before,
+.is-head-stacked .gh-head-menu::after {
+    background-color: var(--color-border);
 }
 
-.gh-head-btn.gh-btn {
-    height: 36px;
-    padding: 0 16px;
-    font-size: 1.6rem;
-    font-weight: 700;
+.gh-head-menu a {
+    color: inherit;
 }
 
 @media (max-width: 991px) {

@@ -5,6 +5,7 @@ function dropdown() {
     const nav = menu.querySelector('.nav');
     if (!nav) return;
 
+    const logo = document.querySelector('.gh-head-logo');
     const navHTML = nav.innerHTML;
 
     const items = nav.querySelectorAll('li');
@@ -17,8 +18,12 @@ function dropdown() {
         const submenuItems = [];
 
         while ((nav.offsetWidth + 64) > menu.offsetWidth) {
-            submenuItems.unshift(nav.lastElementChild);
-            nav.lastElementChild.remove();
+            if (nav.lastElementChild) {
+                submenuItems.unshift(nav.lastElementChild);
+                nav.lastElementChild.remove();
+            } else {
+                return;
+            }
         }
 
         if (!submenuItems.length) return;
@@ -26,10 +31,17 @@ function dropdown() {
         const toggle = document.createElement('button');
         toggle.setAttribute('class', 'nav-more-toggle gh-icon-btn');
         toggle.setAttribute('aria-label', 'More');
-        toggle.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M21.333 16c0-1.473 1.194-2.667 2.667-2.667v0c1.473 0 2.667 1.194 2.667 2.667v0c0 1.473-1.194 2.667-2.667 2.667v0c-1.473 0-2.667-1.194-2.667-2.667v0zM13.333 16c0-1.473 1.194-2.667 2.667-2.667v0c1.473 0 2.667 1.194 2.667 2.667v0c0 1.473-1.194 2.667-2.667 2.667v0c-1.473 0-2.667-1.194-2.667-2.667v0zM5.333 16c0-1.473 1.194-2.667 2.667-2.667v0c1.473 0 2.667 1.194 2.667 2.667v0c0 1.473-1.194 2.667-2.667 2.667v0c-1.473 0-2.667-1.194-2.667-2.667v0z"></path></svg>';
+        toggle.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor"><path d="M21.333 16c0-1.473 1.194-2.667 2.667-2.667v0c1.473 0 2.667 1.194 2.667 2.667v0c0 1.473-1.194 2.667-2.667 2.667v0c-1.473 0-2.667-1.194-2.667-2.667v0zM13.333 16c0-1.473 1.194-2.667 2.667-2.667v0c1.473 0 2.667 1.194 2.667 2.667v0c0 1.473-1.194 2.667-2.667 2.667v0c-1.473 0-2.667-1.194-2.667-2.667v0zM5.333 16c0-1.473 1.194-2.667 2.667-2.667v0c1.473 0 2.667 1.194 2.667 2.667v0c0 1.473-1.194 2.667-2.667 2.667v0c-1.473 0-2.667-1.194-2.667-2.667v0z"></path></svg>';
 
         const wrapper = document.createElement('div');
         wrapper.setAttribute('class', 'gh-dropdown');
+
+        if (submenuItems.length >= 10) {
+            document.body.classList.add('is-dropdown-mega');
+            wrapper.style.gridTemplateRows = `repeat(${Math.ceil(submenuItems.length / 2)}, 1fr)`;
+        } else {
+            document.body.classList.remove('is-dropdown-mega');
+        }
 
         submenuItems.forEach(function (child) {
             wrapper.appendChild(child);
@@ -40,9 +52,15 @@ function dropdown() {
 
         toggle.addEventListener('click', function () {
             if (window.getComputedStyle(wrapper).display == 'none') {
-                wrapper.style.display = 'block';
+                wrapper.style.display = submenuItems.length < 10 ? 'block' : 'grid';
                 wrapper.classList.add('animate__animated', 'animate__bounceIn');
             } else {
+                wrapper.classList.add('animate__animated', 'animate__zoomOut');
+            }
+        });
+
+        window.addEventListener('click', function (e) {
+            if (!toggle.contains(e.target) && window.getComputedStyle(wrapper).display != 'none') {
                 wrapper.classList.add('animate__animated', 'animate__zoomOut');
             }
         });
@@ -55,7 +73,9 @@ function dropdown() {
         });
     }
 
-    makeDropdown();
+    imagesLoaded(logo, function () {
+        makeDropdown();
+    });
 
     window.addEventListener('resize', function () {
         setTimeout(() => {

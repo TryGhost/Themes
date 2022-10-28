@@ -41,6 +41,16 @@
         },
         "card_assets": true,
         "custom": {
+            "header_style": {
+                "type": "select",
+                "options": ["Logo on the left", "Logo in the middle", "Stacked"],
+                "default": "Stacked"
+            },
+            "header_color": {
+                "type": "select",
+                "options": ["Light", "Accent color", "Dark"],
+                "default": "Light"
+            },
             "title_font": {
                 "type": "select",
                 "options": ["Modern sans-serif", "Elegant serif"],
@@ -50,11 +60,6 @@
                 "type": "select",
                 "options": ["Modern sans-serif", "Elegant serif"],
                 "default": "Elegant serif"
-            },
-            "header_style": {
-                "type": "select",
-                "options": ["Light", "Accent color", "Dark"],
-                "default": "Light"
             },
             "white_publication_logo_for_transparent_header": {
                 "type": "image"

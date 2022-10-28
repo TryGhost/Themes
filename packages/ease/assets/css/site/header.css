@@ -6,3 +6,7 @@
     font-size: 1.5rem;
     font-weight: 500;
 }
+
+.gh-head-menu::after {
+    display: none;
+}

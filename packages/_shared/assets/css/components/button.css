@@ -1,11 +1,12 @@
 .gh-btn {
     display: inline-flex;
+    gap: 0.4em;
     align-items: center;
     justify-content: center;
-    padding: 1.2rem 2rem;
+    padding: calc(0.75em * var(--multiplier, 1)) calc(1.15em * var(--multiplier, 1));
     font-size: 1.6rem;
     font-weight: 700;
-    line-height: 1.1;
+    line-height: 1;
     color: var(--color-white);
     letter-spacing: inherit;
     cursor: pointer;

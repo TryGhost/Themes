@@ -22,6 +22,7 @@
 }
 
 .gh-head-logo {
+    position: relative;
     font-size: 2.4rem;
     font-weight: 700;
     letter-spacing: -0.02em;
@@ -29,7 +30,14 @@
 }
 
 .gh-head-logo img {
-    max-height: 32px;
+    max-height: 40px;
+}
+
+.gh-head-logo img:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
 }
 
 .gh-head-menu {
@@ -68,8 +76,6 @@
 }
 
 .gh-head-btn.gh-btn {
-    gap: 0.4em;
-    padding: 0.85em 1.2em;
     font-size: inherit;
     font-weight: 600;
 }
@@ -127,13 +133,10 @@ LOGO        Home About Collection Author Portal        Login Subscribe
     grid-template-columns: auto 1fr auto;
 }
 
-.is-head-left-logo .gh-head-menu {
-    justify-content: flex-end;
-}
-
 @media (min-width: 992px) {
     .is-head-left-logo .gh-head-menu {
-        margin-left: 32px;
+        margin-right: 32px;
+        margin-left: 16px;
     }
 }
 
@@ -180,12 +183,12 @@ Home About Collection            LOGO                  Login Subscribe
 }
 
 .is-head-middle-logo .gh-head-actions {
-    gap: 24px;
+    gap: 28px;
 }
 
 @media (min-width: 992px) {
     .is-head-middle-logo .gh-head-menu {
-        max-width: 60%;
+        max-width: 90%;
     }
 }
 
@@ -295,10 +298,11 @@ Home About Collection Author Portal
 }
 
 .is-head-transparent .gh-head-logo,
-.is-head-transparent .gh-head .nav a,
+.is-head-transparent .gh-head .nav > li a,
 .is-head-transparent .gh-head-description,
 .is-head-transparent .gh-search,
-.is-head-transparent .gh-social {
+.is-head-transparent .gh-social,
+.is-head-transparent .nav-more-toggle {
     color: var(--color-white);
 }
 
@@ -328,7 +332,8 @@ Home About Collection Author Portal
 .is-head-dark:not(.is-head-transparent) .gh-head .nav a,
 .is-head-dark:not(.is-head-transparent) .gh-head-description,
 .is-head-dark:not(.is-head-transparent) .gh-search,
-.is-head-dark:not(.is-head-transparent) .gh-social {
+.is-head-dark:not(.is-head-transparent) .gh-social,
+.is-head-dark:not(.is-head-transparent) .nav-more-toggle {
     color: var(--color-white);
 }
 
@@ -358,7 +363,8 @@ Home About Collection Author Portal
 .is-head-brand:not(.is-head-transparent) .gh-head .nav a,
 .is-head-brand:not(.is-head-transparent) .gh-head-description,
 .is-head-brand:not(.is-head-transparent) .gh-search,
-.is-head-brand:not(.is-head-transparent) .gh-social {
+.is-head-brand:not(.is-head-transparent) .gh-social,
+.is-head-brand:not(.is-head-transparent) .nav-more-toggle {
     color: var(--color-white);
 }
 
@@ -393,15 +399,30 @@ Home About Collection Author Portal
     background-color: var(--color-white);
     border-radius: 5px;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04), 0 7px 20px -5px rgba(0, 0, 0, 0.15);
+    transform: translateZ(0);
 }
 
-.gh-dropdown li {
-    margin: 0 !important;
+.is-head-middle-logo .gh-dropdown {
+    right: auto;
+    left: -24px;
 }
 
-.gh-dropdown a {
+.is-dropdown-mega .gh-dropdown {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-flow: column;
+    column-gap: 40px;
+    width: auto;
+    padding: 20px 32px;
+}
+
+.gh-dropdown li a {
     display: block;
     padding: 6px 20px;
+    color: #15171a !important;
+}
+
+.is-dropdown-mega .gh-dropdown li a {
+    padding: 8px 0;
 }
 
 /* Mobile menu
@@ -484,7 +505,7 @@ Home About Collection Author Portal
     #gh-head .gh-head-menu,
     #gh-head .gh-head-actions {
         position: fixed;
-        justify-content: flex-start;
+        justify-content: center;
         visibility: hidden;
         opacity: 0;
     }
@@ -495,8 +516,8 @@ Home About Collection Author Portal
     }
 
     #gh-head .nav {
-        gap: 14px;
-        align-items: flex-start;
+        gap: 20px;
+        align-items: center;
         line-height: 1.4;
     }
 
@@ -517,7 +538,8 @@ Home About Collection Author Portal
 
     #gh-head .gh-head-btn {
         width: 100%;
-        font-size: 1.4rem;
+        font-size: 1.8rem;
+        text-transform: none;
         opacity: 0;
         transform: translateY(8px);
     }
@@ -543,7 +565,8 @@ Home About Collection Author Portal
         background-color: var(--color-white);
     }
 
-    .is-head-open.is-head-transparent #gh-head {
+    .is-head-open.is-head-transparent #gh-head,
+    .is-head-open.is-head-transparent #gh-head .gh-head-actions {
         background-color: var(--ghost-accent-color);
     }
 
