@@ -2,7 +2,7 @@
 <div class="grid-item">
 <figure class="{{post_class}}">
 
-    <a class="post-link" href="{{url}}">
+    <a class="post-link" aria-label="Navigate to {{title}} page" href="{{url}}">
         <img
             class="post-image"
             srcset="{{img_url feature_image size="s"}} 300w,
@@ -15,7 +15,7 @@
         >
     </a>
 
-    <a class="post-lightbox" href="{{img_url feature_image}}">
+    <a class="post-lightbox" aria-label="Expand image" href="{{img_url feature_image}}">
         {{> "icons/maximize"}}
     </a>
 
