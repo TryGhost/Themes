@@ -24,6 +24,7 @@
 
 @media (max-width: 767px) {
     .featured-posts {
-        margin: 0;
+        margin-top: 24px;
+        margin-bottom: 0;
     }
 }

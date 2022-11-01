@@ -106,6 +106,12 @@ production stylesheet in assets/built/screen.css using gulp dev
     font-weight: 600;
 }
 
+@media (max-width: 850px) {
+    .gh-head {
+        margin: -6vw;
+    }
+}
+
 /* Post Feed
 /* ---------------------------------------------------------- */
 

@@ -62,9 +62,3 @@ use it for applying any other styles. */
         padding-bottom: 4.8rem;
     }
 }
-
-@media (max-width: 991px) {
-    .gh-site {
-        padding-top: 80px;
-    }
-}

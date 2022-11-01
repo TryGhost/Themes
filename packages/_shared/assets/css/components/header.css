@@ -188,7 +188,7 @@ Home About Collection            LOGO                  Login Subscribe
 
 @media (min-width: 992px) {
     .is-head-middle-logo .gh-head-menu {
-        max-width: 90%;
+        margin-right: 64px;
     }
 }
 
@@ -472,10 +472,6 @@ Home About Collection Author Portal
 
 @media (max-width: 991px) {
     #gh-head {
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
         height: 64px;
     }
 
@@ -483,7 +479,6 @@ Home About Collection Author Portal
         grid-template-rows: auto 1fr auto;
         grid-template-columns: 1fr;
         gap: 48px;
-        height: auto;
     }
 
     #gh-head .gh-head-brand {
@@ -554,9 +549,10 @@ Home About Collection Author Portal
 
     .is-head-open #gh-head {
         position: fixed;
+        right: 0;
+        left: 0;
         z-index: 3999999;
         height: 100vh;
-        padding: 0 var(--gap) 100px;
         overflow-y: scroll;
         -webkit-overflow-scrolling: touch;
     }
@@ -589,7 +585,7 @@ Home About Collection Author Portal
     }
 
     .is-head-open #gh-head .gh-head-actions {
-        position: fixed;
+        position: sticky;
         right: 0;
         bottom: 0;
         left: 0;

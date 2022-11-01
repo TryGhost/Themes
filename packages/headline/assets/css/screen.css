@@ -22,6 +22,14 @@ figcaption {
     font-weight: 500;
 }
 
+body:not(.is-head-stacked) .gh-head {
+    height: 88px;
+}
+
+body:not(.is-head-stacked) .gh-head-inner {
+    border-bottom: 1px solid var(--color-light-gray);
+}
+
 .nav {
     letter-spacing: -0.006em;
 }
