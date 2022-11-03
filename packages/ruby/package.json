@@ -41,7 +41,7 @@
         },
         "card_assets": true,
         "custom": {
-            "header_style": {
+            "navigation_layout": {
                 "type": "select",
                 "options": ["Logo on the left", "Logo in the middle", "Stacked"],
                 "default": "Logo in the middle"

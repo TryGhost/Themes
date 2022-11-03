@@ -41,12 +41,12 @@
         },
         "card_assets": true,
         "custom": {
-            "header_style": {
+            "navigation_layout": {
                 "type": "select",
                 "options": ["Logo on the left", "Logo in the middle", "Stacked"],
                 "default": "Stacked"
             },
-            "header_color": {
+            "header_style": {
                 "type": "select",
                 "options": ["Light", "Accent color", "Dark"],
                 "default": "Light"

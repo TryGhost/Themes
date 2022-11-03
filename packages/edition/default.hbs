@@ -11,7 +11,7 @@
     {{ghost_head}}
 </head>
 
-<body class="{{body_class}}{{{block "body_class"}}} is-head-{{#match @custom.header_style "Logo on the left"}}left-logo{{else match @custom.header_style "Logo in the middle"}}middle-logo{{else}}stacked{{/match}}{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Elegant serif"}} has-serif-body{{/match}}{{^is "home"}}{{#if @site.cover_image}} is-head-brand{{/if}}{{/is}}">
+<body class="{{body_class}}{{{block "body_class"}}} is-head-{{#match @custom.navigation_layout "Logo on the left"}}left-logo{{else match @custom.navigation_layout "Logo in the middle"}}middle-logo{{else}}stacked{{/match}}{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Elegant serif"}} has-serif-body{{/match}}{{^is "home"}}{{#if @site.cover_image}} is-head-brand{{/if}}{{/is}}">
 <div class="site">
 
     <header id="gh-head" class="gh-head gh-outer">
@@ -33,7 +33,7 @@
             <nav class="gh-head-menu">
                 {{navigation}}
                 {{#unless @site.members_enabled}}
-                    {{#match @custom.header_style "Stacked"}}
+                    {{#match @custom.navigation_layout "Stacked"}}
                         <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button>
                     {{/match}}
                 {{/unless}}
@@ -41,7 +41,7 @@
 
             <div class="gh-head-actions">
                 {{#unless @site.members_enabled}}
-                    {{^match @custom.header_style "Stacked"}}
+                    {{^match @custom.navigation_layout "Stacked"}}
                         <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button>
                     {{/match}}
                 {{else}}

@@ -36,7 +36,7 @@
     {{ghost_head}}
 </head>
 
-<body class="{{body_class}}{{{block "body_class"}}} is-head-{{#match @custom.header_style "Logo on the left"}}left-logo{{else match @custom.header_style "Logo in the middle"}}middle-logo{{else}}stacked{{/match}}{{#match @custom.typography "Elegant serif"}} has-serif-font{{/match}}{{#match @custom.typography "Consistent mono"}} has-mono-font{{/match}}{{#match @custom.post_feed_layout "Classic"}} has-classic-feed{{/match}}{{#match @custom.post_feed_layout "Typographic"}} has-typographic-feed{{/match}}{{#match @custom.post_feed_layout "Parallax"}} has-parallax-feed{{/match}}">
+<body class="{{body_class}}{{{block "body_class"}}} is-head-{{#match @custom.navigation_layout "Logo on the left"}}left-logo{{else match @custom.navigation_layout "Logo in the middle"}}middle-logo{{else}}stacked{{/match}}{{#match @custom.typography "Elegant serif"}} has-serif-font{{/match}}{{#match @custom.typography "Consistent mono"}} has-mono-font{{/match}}{{#match @custom.post_feed_layout "Classic"}} has-classic-feed{{/match}}{{#match @custom.post_feed_layout "Typographic"}} has-typographic-feed{{/match}}{{#match @custom.post_feed_layout "Parallax"}} has-parallax-feed{{/match}}">
 <div class="gh-site">
 
     <header id="gh-head" class="gh-head gh-outer">
@@ -58,7 +58,7 @@
             <nav class="gh-head-menu">
                 {{navigation}}
                 {{#unless @site.members_enabled}}
-                    {{#match @custom.header_style "Stacked"}}
+                    {{#match @custom.navigation_layout "Stacked"}}
                         <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button>
                     {{/match}}
                 {{/unless}}
@@ -66,7 +66,7 @@
 
             <div class="gh-head-actions">
                 {{#unless @site.members_enabled}}
-                    {{^match @custom.header_style "Stacked"}}
+                    {{^match @custom.navigation_layout "Stacked"}}
                         <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button>
                     {{/match}}
                 {{else}}
