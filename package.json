@@ -33,7 +33,7 @@
         "stylelint": "14.14.1",
         "stylelint-config-recess-order": "3.0.0",
         "stylelint-config-standard": "29.0.0",
-        "yargs": "17.6.0"
+        "yargs": "17.6.2"
     },
     "browserslist": [
         "defaults"
