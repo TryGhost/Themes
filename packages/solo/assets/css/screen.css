@@ -40,6 +40,19 @@ figcaption {
     padding: 0;
 }
 
+hr {
+    background-color: var(--color-border);
+}
+
+.gh-content h2 {
+    font-size: 2.25em;
+    letter-spacing: -0.03em;
+}
+
+.gh-content h3 {
+    font-size: 1.6em;
+}
+
 .gh-canvas {
     grid-template-columns: repeat(12, minmax(0, 1fr));
 }
@@ -151,6 +164,7 @@ figcaption {
     max-width: 840px;
     font-size: clamp(2.4rem, 0.54vw + 2.14rem, 3rem);
     font-weight: 500;
+    letter-spacing: -0.008em;
 }
 
 .has-serif-font .gh-about-secondary {
@@ -351,12 +365,24 @@ figcaption {
     align-items: center;
 }
 
-.gh-card-meta > * + *:not(script)::before {
+.gh-card-meta > * + *:not(script):not(.gh-card-access)::before {
     width: 2px;
     height: 2px;
     content: "";
     background-color: currentColor;
     border-radius: 50%;
+}
+
+.gh-card-access {
+    padding: 0 10px 0 8px;
+    margin-left: 4px;
+    background-color: var(--color-border);
+    border-radius: 40px;
+}
+
+.has-parallax-feed .gh-card-access {
+    color: var(--color-darker-gray);
+    background-color: var(--color-white);
 }
 
 .gh-card-access svg {
@@ -366,8 +392,17 @@ figcaption {
 /* Classic feed
 /* ---------------------------------------------------------- */
 
+.has-classic-feed .gh-card.no-image {
+    max-width: 1200px;
+}
+
 .has-classic-feed .gh-card + .gh-card {
     margin-top: clamp(4.8rem, 4rem + 2.5vw, 8rem);
+}
+
+.has-classic-feed .gh-card + .gh-card.no-image,
+.has-classic-feed .gh-card.no-image + .gh-card {
+    margin-top: clamp(8rem, 7.14vw + 4.57rem, 16rem);
 }
 
 .has-classic-feed .gh-card-link {
@@ -388,7 +423,7 @@ figcaption {
 }
 
 .has-classic-feed .no-image .gh-card-image {
-    background-color: var(--tag-color, var(--color-lighter-gray));
+    display: none;
 }
 
 .has-classic-feed .gh-card-image img {
@@ -626,6 +661,10 @@ figcaption {
     line-height: 1.45;
 }
 
+.page-template .no-image .gh-article-excerpt {
+    grid-column: 4 / span 6;
+}
+
 .has-serif-font .gh-article-excerpt {
     font-family: var(--font-serif);
 }
@@ -651,11 +690,7 @@ figcaption {
     line-height: 1.7;
 }
 
-.post-template .no-image .gh-content {
-    margin-top: 0;
-}
-
-.page-template .no-image .gh-content {
+:is(.post-template, .page-template) .no-image .gh-content {
     margin-top: clamp(4rem, 2.14vw + 2.97rem, 6.4rem);
 }
 
@@ -740,14 +775,14 @@ figcaption {
     z-index: 20;
     grid-column: 1 / span 12 !important;
     padding: clamp(8rem, 10.71vw + 2.86rem, 20rem) clamp(4.8rem, 4.64vw + 2.57rem, 10rem);
-    margin-top: clamp(6.4rem, 5vw + 4rem, 12rem);
+    margin-top: clamp(8rem, 7.14vw + 4.57rem, 16rem);
     background-color: var(--color-lighter-gray);
     transform: translate3d(0, 0, 0);
 }
 
 .gh-cta-title {
     margin-bottom: 24px;
-    font-size: clamp(3.6rem, 1.79vw + 2.74rem, 5.6rem);
+    font-size: clamp(3rem, 0.71vw + 2.66rem, 3.8rem);
     font-weight: 800;
     letter-spacing: -0.03em;
 }

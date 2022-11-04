@@ -61,7 +61,7 @@
             "header_section_layout": {
                 "type": "select",
                 "options": ["Side by side", "Large background", "Typographic profile"],
-                "default": "Side by side",
+                "default": "Large background",
                 "group": "homepage"
             },
             "primary_header": {
