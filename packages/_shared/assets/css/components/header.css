@@ -562,8 +562,13 @@ Home About Collection Author Portal
     }
 
     .is-head-open.is-head-transparent #gh-head,
-    .is-head-open.is-head-transparent #gh-head .gh-head-actions {
+    .is-head-open:is(.is-head-transparent, .is-head-brand) #gh-head .gh-head-actions {
         background-color: var(--ghost-accent-color);
+    }
+
+    .is-head-open.is-head-dark #gh-head,
+    .is-head-open.is-head-dark #gh-head .gh-head-actions {
+        background-color: var(--color-darker-gray);
     }
 
     .is-head-open #gh-head .gh-head-menu,
