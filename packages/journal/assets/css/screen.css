@@ -9,14 +9,6 @@
     --head-nav-gap: 3.2rem;
 }
 
-.gh-btn {
-    padding-right: 1.6rem;
-    padding-left: 1.6rem;
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    border-radius: 6px;
-}
-
 .tag-template .gh-main,
 .author-template .gh-main {
     padding-top: 8vmin;
@@ -28,20 +20,6 @@
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.01em;
-}
-
-.gh-head-actions {
-    gap: 24px;
-}
-
-.gh-head-btn {
-    font-weight: 600;
-}
-
-.gh-head-btn svg {
-    width: 16px;
-    height: 16px;
-    margin-right: 0.6rem;
 }
 
 .gh-latest {
@@ -580,38 +558,6 @@
         grid-column: main-start / main-end;
         max-width: 480px;
         padding-top: 0;
-    }
-}
-
-@media (min-width: 992px) {
-    .gh-head-inner {
-        row-gap: 0 !important;
-        padding: 0;
-    }
-
-    .gh-head-brand {
-        display: flex;
-        align-items: center;
-        height: 80px;
-    }
-
-    .gh-head-menu {
-        height: 56px;
-    }
-
-    .gh-head-menu::before,
-    .gh-head-menu::after {
-        position: absolute;
-        top: 80px;
-        left: 0;
-        width: 100%;
-        height: 1px;
-        content: "";
-        background-color: var(--color-light-gray);
-    }
-
-    .gh-head-menu::after {
-        top: 136px;
     }
 }
 

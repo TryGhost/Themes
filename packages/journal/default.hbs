@@ -10,89 +10,103 @@
     {{ghost_head}}
 </head>
 
-<body class="{{body_class}} is-head-b--a_n{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Elegant serif"}} has-serif-body{{/match}}">
-    <div class="gh-site">
-        <header id="gh-head" class="gh-head gh-outer">
-            <div class="gh-head-inner gh-inner">
-                <div class="gh-head-brand">
-                    <div class="gh-head-brand-wrapper">
-                        <a class="gh-head-logo" href="{{@site.url}}">
-                            {{#if @site.logo}}
-                                <img src="{{@site.logo}}" alt="{{@site.title}}">
-                            {{else}}
-                                {{@site.title}}
-                            {{/if}}
-                        </a>
-                    </div>
-                    <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button>
-                    <button class="gh-burger"></button>
-                </div>
+<body class="{{body_class}} is-head-{{#match @custom.navigation_layout "Logo on the left"}}left-logo{{else match @custom.navigation_layout "Logo in the middle"}}middle-logo{{else}}stacked{{/match}}{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Elegant serif"}} has-serif-body{{/match}}">
+<div class="gh-site">
 
-                <nav class="gh-head-menu">
-                    {{navigation}}
-                </nav>
-
-                <div class="gh-head-actions">
-                    <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button>
-                    {{#if @site.members_enabled}}
-                        {{#unless @member}}
-                            <a class="gh-head-btn" href="#/portal/signup" data-portal="signup">
-                                {{> icons/email}} Subscribe
-                            </a>
+    <header id="gh-head" class="gh-head gh-outer">
+        <div class="gh-head-inner gh-inner">
+            <div class="gh-head-brand">
+                <div class="gh-head-brand-wrapper">
+                    <a class="gh-head-logo" href="{{@site.url}}">
+                        {{#if @site.logo}}
+                            <img src="{{@site.logo}}" alt="{{@site.title}}">
                         {{else}}
-                            <a class="gh-head-btn" href="#/portal/account" data-portal="account">Account</a>
+                            {{@site.title}}
+                        {{/if}}
+                    </a>
+                </div>
+                <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button>
+                <button class="gh-burger"></button>
+            </div>
+
+            <nav class="gh-head-menu">
+                {{navigation}}
+                {{#unless @site.members_enabled}}
+                    {{#match @custom.navigation_layout "Stacked"}}
+                        <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button>
+                    {{/match}}
+                {{/unless}}
+            </nav>
+
+            <div class="gh-head-actions">
+                {{#unless @site.members_enabled}}
+                    {{^match @custom.navigation_layout "Stacked"}}
+                        <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button>
+                    {{/match}}
+                {{else}}
+                    <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button>
+                    {{#unless @member}}
+                        {{#unless @site.members_invite_only}}
+                            <a class="gh-head-btn gh-btn gh-primary-btn" href="#/portal/signup" data-portal="signup">{{> "icons/email"}} Subscribe</a>
+                        {{else}}
+                            <a class="gh-head-btn gh-btn gh-primary-btn" href="#/portal/signin" data-portal="signin">Login</a>
                         {{/unless}}
-                    {{/if}}
-                </div>
+                    {{else}}
+                        <a class="gh-head-btn gh-btn gh-primary-btn" href="#/portal/account" data-portal="account">Account</a>
+                    {{/unless}}
+                {{/unless}}
             </div>
-        </header>
+        </div>
+    </header>
 
-        {{{body}}}
+    {{{body}}}
 
-        {{#if @site.members_enabled}}
-        {{#unless @member}}
-            <div class="gh-subscribe">
-                <div class="gh-outer">
-                    <section class="gh-subscribe-inner">
-                        <h3 class="gh-subscribe-title">Subscribe to {{@site.title}}</h3>
-                        <div class="gh-subscribe-description">Don’t miss out on the latest issues. Sign up now to get access to the library of members-only issues.</div>
-                        <a class="gh-subscribe-input" href="#/portal/signup" data-portal="signup">
-                            <div class="gh-subscribe-input-text">
-                                {{> icons/email}}
-                                jamie@example.com
-                            </div>
-                            <div class="gh-subscribe-input-btn">Subscribe</div>
-                        </a>
-                    </section>
-                </div>
+    {{#if @site.members_enabled}}
+    {{#unless @member}}
+        <div class="gh-subscribe">
+            <div class="gh-outer">
+                <section class="gh-subscribe-inner">
+                    <h3 class="gh-subscribe-title">Subscribe to {{@site.title}}</h3>
+                    <div class="gh-subscribe-description">Don’t miss out on the latest issues. Sign up now to get access to the library of members-only issues.</div>
+                    <a class="gh-subscribe-input" href="#/portal/signup" data-portal="signup">
+                        <div class="gh-subscribe-input-text">
+                            {{> icons/email}}
+                            jamie@example.com
+                        </div>
+                        <div class="gh-subscribe-input-btn">Subscribe</div>
+                    </a>
+                </section>
             </div>
-        {{/unless}}
-        {{/if}}
+        </div>
+    {{/unless}}
+    {{/if}}
 
-        <footer class="gh-foot gh-outer">
-            <div class="gh-foot-inner gh-inner">
-                <div class="gh-copyright">
-                    {{@site.title}} © {{date format="YYYY"}}
-                </div>
-
-                <nav class="gh-foot-menu">
-                    {{navigation type="secondary"}}
-                </nav>
-
-                <div class="gh-powered-by">
-                    <a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a>
-                </div>
+    <footer class="gh-foot gh-outer">
+        <div class="gh-foot-inner gh-inner">
+            <div class="gh-copyright">
+                {{@site.title}} © {{date format="YYYY"}}
             </div>
-        </footer>
-    </div>
 
-    {{#is "post, page"}}
-        {{> "pswp"}}
-    {{/is}}
+            <nav class="gh-foot-menu">
+                {{navigation type="secondary"}}
+            </nav>
 
-    <script src="{{asset "built/main.min.js"}}"></script>
+            <div class="gh-powered-by">
+                <a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a>
+            </div>
+        </div>
+    </footer>
 
-    {{ghost_foot}}
+</div>
+
+{{#is "post, page"}}
+    {{> "pswp"}}
+{{/is}}
+
+<script src="{{asset "built/main.min.js"}}"></script>
+
+{{ghost_foot}}
+
 </body>
 
 </html>

@@ -10,6 +10,14 @@
     font-size: 1.3rem;
 }
 
+.gh-foot-menu .nav {
+    display: inline-flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
 .gh-foot-menu .nav li {
     display: flex;
     align-items: center;

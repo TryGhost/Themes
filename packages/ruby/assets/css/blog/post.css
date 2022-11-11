@@ -131,3 +131,9 @@
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+@media (min-width: 992px) {
+    .is-head-stacked .post-feed {
+        margin-top: 32px;
+    }
+}

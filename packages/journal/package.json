@@ -41,6 +41,11 @@
         },
         "card_assets": true,
         "custom": {
+            "navigation_layout": {
+                "type": "select",
+                "options": ["Logo on the left", "Logo in the middle", "Stacked"],
+                "default": "Stacked"
+            },
             "title_font": {
                 "type": "select",
                 "options": ["Modern sans-serif", "Elegant serif"],

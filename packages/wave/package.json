@@ -41,6 +41,11 @@
         },
         "card_assets": true,
         "custom": {
+            "navigation_layout": {
+                "type": "select",
+                "options": ["Logo on the left", "Logo in the middle", "Stacked"],
+                "default": "Logo on the left"
+            },
             "title_font": {
                 "type": "select",
                 "options": ["Modern sans-serif", "Elegant serif"],
@@ -74,7 +79,7 @@
         "zip": "gulp zip"
     },
     "devDependencies": {
-        "@tryghost/shared-theme-assets": "1.1.0",
+        "@tryghost/shared-theme-assets": "1.2.0",
         "autoprefixer": "10.4.13",
         "beeper": "2.1.0",
         "cssnano": "5.1.14",
