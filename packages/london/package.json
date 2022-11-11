@@ -84,9 +84,9 @@
     },
     "devDependencies": {
         "@tryghost/shared-theme-assets": "1.2.0",
-        "autoprefixer": "10.4.12",
+        "autoprefixer": "10.4.13",
         "beeper": "2.1.0",
-        "cssnano": "5.1.13",
+        "cssnano": "5.1.14",
         "gscan": "4.34.0",
         "gulp": "4.0.2",
         "gulp-concat": "2.6.1",
@@ -94,7 +94,7 @@
         "gulp-postcss": "9.0.1",
         "gulp-uglify": "3.0.2",
         "gulp-zip": "5.1.0",
-        "postcss": "8.4.17",
+        "postcss": "8.4.19",
         "postcss-easy-import": "4.0.0",
         "pump": "3.0.0"
     }

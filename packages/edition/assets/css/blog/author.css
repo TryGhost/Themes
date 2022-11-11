@@ -44,3 +44,7 @@
 .author-list .author-image-placeholder:nth-child(5) {
     z-index: 6;
 }
+
+.author-list .author-image-placeholder span {
+    background-color: var(--light-gray-color);
+}
