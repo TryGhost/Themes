@@ -2,7 +2,7 @@ function dropdown() {
     const mediaQuery = window.matchMedia('(max-width: 991px)');
 
     const menu = document.querySelector('.gh-head-menu');
-    const nav = menu.querySelector('.nav');
+    const nav = menu?.querySelector('.nav');
     if (!nav) return;
 
     const logo = document.querySelector('.gh-head-logo');
