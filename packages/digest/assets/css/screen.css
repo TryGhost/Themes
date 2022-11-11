@@ -29,8 +29,10 @@ body {
     letter-spacing: 0.01em;
 }
 
-.gh-head-btn {
+.gh-head-btn.gh-btn {
     --multiplier: 1.3;
+
+    font-weight: 700;
 }
 
 .gh-section + .gh-section {

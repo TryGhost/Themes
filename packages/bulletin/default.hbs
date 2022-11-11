@@ -41,7 +41,11 @@
                     <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button>
                     {{#if @site.members_enabled}}
                         {{#unless @member}}
-                            <a class="gh-head-btn gh-btn" href="#/portal/signup" data-portal="signup">Subscribe</a>
+                            {{#unless @site.members_invite_only}}
+                                <a class="gh-head-btn gh-btn" href="#/portal/signup" data-portal="signup">Subscribe</a>
+                            {{else}}
+                                <a class="gh-head-btn gh-btn" href="#/portal/signin" data-portal="signin">Login</a>
+                            {{/unless}}
                         {{else}}
                             <a class="gh-head-btn gh-btn" href="#/portal/account" data-portal="account">Account</a>
                         {{/unless}}
