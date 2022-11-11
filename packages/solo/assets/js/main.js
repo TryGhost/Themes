@@ -70,6 +70,21 @@ function pagination(isInfinite = true, done) {
 }
 
 (function () {
+    if (!document.body.classList.contains('has-background-about')) return;
+
+    const about = document.querySelector('.gh-about');
+    if (!about) return;
+
+    const image = about.querySelector('.gh-about-image');
+
+    if (!image.naturalWidth) {
+        imagesLoaded(image, function () {
+            about.style.setProperty('--about-height', image.clientWidth * image.naturalHeight / image.naturalWidth + 'px');
+        });
+    }
+})();
+
+(function () {
     initParallax();
 })();
 
