@@ -14,7 +14,7 @@
     {{ghost_head}}
 </head>
 
-<body class="{{body_class}} is-head-brand{{#if @site.members_enabled}}{{#unless @member}}{{#is "home"}} is-home-cta{{/is}}{{/unless}}{{/if}}{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Elegant serif"}} has-serif-body{{/match}}">
+<body class="{{body_class}} is-head-left-logo is-head-brand{{#if @site.members_enabled}}{{#unless @member}}{{#is "home"}} is-home-cta{{/is}}{{/unless}}{{/if}}{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Elegant serif"}} has-serif-body{{/match}}">
     <div class="gh-site">
 
         <header id="gh-head" class="gh-head gh-outer">
@@ -35,21 +35,30 @@
 
                 <nav class="gh-head-menu">
                     {{navigation}}
+                    {{#unless @site.members_enabled}}
+                        {{#match @custom.navigation_layout "Stacked"}}
+                            <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button>
+                        {{/match}}
+                    {{/unless}}
                 </nav>
 
                 <div class="gh-head-actions">
-                    <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button>
-                    {{#if @site.members_enabled}}
+                    {{#unless @site.members_enabled}}
+                        {{^match @custom.navigation_layout "Stacked"}}
+                            <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button>
+                        {{/match}}
+                    {{else}}
+                        <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button>
                         {{#unless @member}}
                             {{#unless @site.members_invite_only}}
-                                <a class="gh-head-btn gh-btn" href="#/portal/signup" data-portal="signup">Subscribe</a>
+                                <a class="gh-head-btn gh-btn gh-primary-btn" href="#/portal/signup" data-portal="signup">Subscribe</a>
                             {{else}}
-                                <a class="gh-head-btn gh-btn" href="#/portal/signin" data-portal="signin">Login</a>
+                                <a class="gh-head-btn gh-btn gh-primary-btn" href="#/portal/signin" data-portal="signin">Login</a>
                             {{/unless}}
                         {{else}}
-                            <a class="gh-head-btn gh-btn" href="#/portal/account" data-portal="account">Account</a>
+                            <a class="gh-head-btn gh-btn gh-primary-btn" href="#/portal/account" data-portal="account">Account</a>
                         {{/unless}}
-                    {{/if}}
+                    {{/unless}}
                 </div>
             </div>
         </header>

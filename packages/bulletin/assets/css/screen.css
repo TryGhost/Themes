@@ -244,16 +244,16 @@ h6 {
     animation: 1.2s blink ease infinite;
 }
 
-.gh-head-inner {
-    padding: 2.4rem 0;
-    color: var(--color-white);
+.is-head-left-logo .gh-head-inner {
+    grid-template-columns: 1fr 50% 1fr;
 }
 
 .gh-head-logo {
     font-weight: 800;
 }
 
-.gh-head-menu a {
+.gh-head-menu,
+.gh-head-actions {
     font-size: 1.5rem;
     font-weight: 700;
 }
@@ -496,6 +496,13 @@ h6 {
 
     .gh-home-latest .gh-home-latest-label {
         display: none;
+    }
+}
+
+@media (min-width: 992px) {
+    .is-head-left-logo .gh-head-menu {
+        justify-content: center;
+        margin: 0;
     }
 }
 
