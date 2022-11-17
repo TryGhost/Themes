@@ -48,6 +48,11 @@
             </nav>
 
             <div class="gh-head-actions">
+                <div class="toggle-track">
+                    <div class="toggle-moon">{{> "icons/moon"}}</div>
+                    <div class="toggle-sun">{{> "icons/sun"}}</div>
+                    <div class="toggle-thumb"></div>
+                </div>
                 {{#unless @site.members_enabled}}
                     {{^match @custom.navigation_layout "Stacked"}}
                         <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button>
