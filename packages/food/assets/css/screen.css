@@ -1,0 +1,23 @@
+@import "@tryghost/shared-theme-assets/assets/css/v2/screen.css";
+
+.gh-list {
+    align-items: center;
+    text-align: center;
+}
+
+.gh-list.odd .gh-list-item:nth-child(4) {
+    display: none;
+}
+
+.gh-list.odd .gh-list-item:nth-child(2) {
+    grid-column: span 2;
+}
+
+.gh-list.odd .gh-list-item:nth-child(2) .gh-list-item-title {
+    font-size: 1.8em;
+}
+
+.gh-cta {
+    border-top: 1px solid var(--color-darker-gray);
+    border-bottom: 1px solid var(--color-darker-gray);
+}

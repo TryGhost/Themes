@@ -66,7 +66,7 @@ function doJS(path, done) {
 }
 
 function main(done) {
-    const tasks = glob.sync('packages/food', {ignore: 'packages/_shared'}).map(path => {
+    const tasks = glob.sync('packages/*', {ignore: 'packages/_shared'}).map(path => {
         const packageName = require(`./${path}/package.json`).name;
 
         function package(taskDone) {
@@ -100,7 +100,7 @@ function main(done) {
     });
 
     function sharedCSS(done) {
-        glob.sync('packages/food', {ignore: 'packages/_shared'}).map(path => {
+        glob.sync('packages/*', {ignore: 'packages/_shared'}).map(path => {
             pump([
                 src(`${path}/assets/css/screen.css`, {sourcemaps: true}),
                 postcss([
@@ -113,7 +113,7 @@ function main(done) {
             ], handleError(done));
         });
     }
-    const sharedCSSWatcher = () => watch('packages/_shared/assets/css/v2/**/*.css', sharedCSS);
+    const sharedCSSWatcher = () => watch('packages/_shared/assets/css/**/*.css', sharedCSS);
 
     function sharedJS(done) {
         glob.sync('packages/*', {ignore: 'packages/_shared'}).map(path => {

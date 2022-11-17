@@ -1,0 +1,41 @@
+.gh-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.gh-list + .gh-list {
+    margin-top: 200px;
+}
+
+.gh-list-title {
+    font-size: 2.2em;
+}
+
+.gh-list-item {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.gh-list-item-title {
+    font-size: 1.2em;
+}
+
+.gh-list.grid .gh-list-feed {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 64px 48px;
+}
+
+.gh-list.grid.big .gh-list-item:first-child {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column: span 4;
+    gap: 48px;
+    align-items: center;
+}
+
+.gh-list.grid.big .gh-list-item:first-child .gh-list-item-title {
+    font-size: 2.6em;
+}

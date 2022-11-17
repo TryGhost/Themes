@@ -1,0 +1,19 @@
+.gh-foot {
+    padding: 120px 0;
+    text-align: center;
+}
+
+.gh-foot-inner {
+    display: grid;
+    gap: 32px;
+    justify-content: center;
+}
+
+.gh-foot .nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
