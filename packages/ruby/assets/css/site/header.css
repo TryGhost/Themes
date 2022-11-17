@@ -2,9 +2,14 @@
     background-color: transparent;
 }
 
-.gh-head-menu {
+.gh-head-menu,
+.gh-head-actions {
     font-size: 1.2rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.005em;
+}
+
+.gh-head-btn {
+    --multiplier: 1.3;
 }

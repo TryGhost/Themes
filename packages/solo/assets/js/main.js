@@ -4,70 +4,20 @@ function initParallax() {
     });
 }
 
-function pagination(isInfinite = true, done) {
-    let loading = false;
-    const feedElement = document.querySelector('.gh-feed');
-    const target = feedElement.nextElementSibling || feedElement.parentElement.nextElementSibling;
+(function () {
+    if (!document.body.classList.contains('has-background-about')) return;
 
-    const loadNextPage = async function () {
-        const nextElement = document.querySelector('link[rel=next]');
+    const about = document.querySelector('.gh-about');
+    if (!about) return;
 
-        if (!nextElement) {
-            return;
-        }
+    const image = about.querySelector('.gh-about-image');
 
-        try {
-            const res = await fetch(nextElement.href);
-            const html = await res.text();
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(html, 'text/html');
-
-            const posts = doc.querySelectorAll('.gh-feed > *');
-
-            posts.forEach(function (post) {
-                feedElement.appendChild(document.importNode(post, true));
-            });
-
-            if (done) {
-                done();
-            }
-
-            const resNextElement = doc.querySelector('link[rel=next]');
-            if (resNextElement && resNextElement.href) {
-                nextElement.href = resNextElement.href;
-            } else {
-                nextElement.remove();
-            }
-        } catch (e) {
-            nextElement.remove();
-            throw e;
-        }
-    };
-
-    const callback = async function (entries) {
-        if (loading) {
-            return;
-        }
-
-        loading = true;
-
-        if (entries[0].isIntersecting) {
-            // keep loading next page until target is out of the viewport or we've loaded the last page
-            while (target.getBoundingClientRect().top <= window.innerHeight && document.querySelector('link[rel=next]')) {
-                await loadNextPage();
-            }
-        }
-
-        loading = false;
-
-        if (!document.querySelector('link[rel=next]')) {
-            observer.disconnect();
-        }
-    };
-
-    const observer = new IntersectionObserver(callback);
-    observer.observe(target);
-}
+    if (!image.naturalWidth) {
+        imagesLoaded(image, function () {
+            about.style.setProperty('--about-height', image.clientWidth * image.naturalHeight / image.naturalWidth + 'px');
+        });
+    }
+})();
 
 (function () {
     initParallax();

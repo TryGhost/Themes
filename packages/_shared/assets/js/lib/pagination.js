@@ -1,6 +1,8 @@
 function pagination(isInfinite, done, isMasonry = false) {
-    let loading = false;
     const feedElement = document.querySelector('.gh-feed');
+    if (!feedElement) return;
+
+    let loading = false;
     const target = feedElement.nextElementSibling || feedElement.parentElement.nextElementSibling || document.querySelector('.gh-foot');
     const buttonElement = document.querySelector('.gh-loadmore');
 

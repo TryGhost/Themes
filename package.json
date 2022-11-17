@@ -26,14 +26,14 @@
         "gulp-stylelint": "13.0.0",
         "gulp-uglify": "3.0.2",
         "gulp-zip": "5.1.0",
-        "lerna": "6.0.1",
-        "postcss": "8.4.18",
+        "lerna": "6.0.3",
+        "postcss": "8.4.19",
         "postcss-easy-import": "4.0.0",
         "pump": "3.0.0",
-        "stylelint": "14.14.0",
+        "stylelint": "14.15.0",
         "stylelint-config-recess-order": "3.0.0",
         "stylelint-config-standard": "29.0.0",
-        "yargs": "17.6.0"
+        "yargs": "17.6.2"
     },
     "browserslist": [
         "defaults"

@@ -45,6 +45,11 @@
                 "type": "color",
                 "default": "#ffffff"
             },
+            "navigation_layout": {
+                "type": "select",
+                "options": ["Logo on the left", "Logo in the middle", "Stacked"],
+                "default": "Logo on the left"
+            },
             "typography": {
                 "type": "select",
                 "options": ["Modern sans-serif", "Elegant serif", "Consistent mono"],
@@ -56,7 +61,7 @@
             "header_section_layout": {
                 "type": "select",
                 "options": ["Side by side", "Large background", "Typographic profile"],
-                "default": "Side by side",
+                "default": "Large background",
                 "group": "homepage"
             },
             "primary_header": {
@@ -83,7 +88,7 @@
         "zip": "gulp zip"
     },
     "devDependencies": {
-        "@tryghost/shared-theme-assets": "1.2.0",
+        "@tryghost/shared-theme-assets": "1.3.1",
         "autoprefixer": "10.4.13",
         "beeper": "2.1.0",
         "cssnano": "5.1.14",
@@ -94,7 +99,7 @@
         "gulp-postcss": "9.0.1",
         "gulp-uglify": "3.0.2",
         "gulp-zip": "5.1.0",
-        "postcss": "8.4.18",
+        "postcss": "8.4.19",
         "postcss-easy-import": "4.0.0",
         "pump": "3.0.0"
     }
