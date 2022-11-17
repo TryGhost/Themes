@@ -1,5 +1,6 @@
 .gh-header {
-    padding: 160px 0 184px;
+    padding-top: 160px;
+    padding-bottom: 160px;
 }
 
 .gh-header-content {
@@ -37,4 +38,26 @@
     padding: 0 12px;
     color: #fff;
     background-color: var(--ghost-accent-color);
+}
+
+.gh-header[class*="has-background"] {
+    position: relative;
+    margin-bottom: 80px;
+    background-color: var(--ghost-accent-color);
+}
+
+.gh-header.has-background .gh-header-primary {
+    color: #fff;
+}
+
+.gh-header.has-background .gh-header-input {
+    border: 0;
+}
+
+.gh-header.has-background .gh-header-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

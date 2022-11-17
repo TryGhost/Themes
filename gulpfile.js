@@ -133,9 +133,17 @@ function main(done) {
     }
     const sharedJSWatcher = () => watch('packages/_shared/assets/js/**/*.js', sharedJS);
 
-    const sharedWatcher = parallel(sharedCSSWatcher, sharedJSWatcher);
+    function copyPartials(done) {
+        pump([
+            src('packages/_shared/partials/*'),
+            dest('packages/food/partials/components/')
+        ], handleError(done));
+    }
+    const sharedPartialWatcher = () => watch('packages/_shared/partials/*.hbs', copyPartials);
 
-    return series(parallel(...tasks), sharedWatcher, tasksDone => {
+    const sharedWatcher = parallel(sharedCSSWatcher, sharedJSWatcher, sharedPartialWatcher);
+
+    return series(parallel(...tasks), copyPartials, sharedWatcher, tasksDone => {
         tasksDone();
         done();
     })();
