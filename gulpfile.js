@@ -68,7 +68,11 @@ function doJS(path, done) {
 }
 
 function main(done) {
+<<<<<<< HEAD
     const tasks = glob.sync('packages/*', {ignore: 'packages/_shared'}).map(path => {
+=======
+    const tasks = glob.sync('packages/zimo-ds', {ignore: 'packages/_shared'}).map(path => {
+>>>>>>> fbe24752 (Setting up playground for design system)
         const packageName = require(`./${path}/package.json`).name;
 
         function package(taskDone) {
@@ -101,6 +105,7 @@ function main(done) {
         return package;
     });
 
+<<<<<<< HEAD
     function sharedCSS_v1(done) {
         oldPackages.map(path => {
             pump([
@@ -119,6 +124,10 @@ function main(done) {
 
     function sharedCSS_v2(done) {
         glob.sync('packages/*', {ignore: ['packages/_shared', ...oldPackages]}).map(path => {
+=======
+    function sharedCSS(done) {
+        glob.sync('packages/zimo-ds', {ignore: 'packages/_shared'}).map(path => {
+>>>>>>> fbe24752 (Setting up playground for design system)
             pump([
                 src(`${path}/assets/css/screen.css`, {sourcemaps: true}),
                 postcss([

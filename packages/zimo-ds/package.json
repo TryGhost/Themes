@@ -1,6 +1,6 @@
 {
-    "name": "food",
-    "description": "A Ghost theme",
+    "name": "zimo-ds",
+    "description": "Zimo's Playground for Theme Design System",
     "version": "1.0.0",
     "private": true,
     "engines": {
