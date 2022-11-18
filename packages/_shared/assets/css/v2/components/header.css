@@ -33,11 +33,12 @@
     width: 100%;
     max-width: 480px;
     height: 52px;
-    padding: 0 4px 0 16px;
+    padding: 0 4px 0 20px;
     color: var(--color-secondary-text);
     cursor: pointer;
     background-color: var(--color-white);
     border: 1px solid var(--color-border);
+    border-radius: 32px;
 }
 
 .gh-header-input span {
@@ -45,9 +46,11 @@
     align-items: center;
     justify-content: center;
     height: calc(100% - 8px);
-    padding: 0 12px;
+    padding: 0 16px;
+    font-weight: 600;
     color: #fff;
     background-color: var(--ghost-accent-color);
+    border-radius: 32px;
 }
 
 .gh-header-input[data-ghost-search] span {

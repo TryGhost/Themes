@@ -2,19 +2,12 @@
 
 <main class="gh-main">
 
-    {{> "components/header" layout="side" background="image" action="search"}}
+    {{> "components/header" layout="wide" background="image" action="search"}}
 
     <div class="gh-inner">
-        {{!-- {{> "latest"}} --}}
-
-        {{#get "tags" include="count.posts" order="count.posts desc" limit="3"}}
-            {{#foreach tags}}
-                {{> "components/list"}}
-            {{/foreach}}
-        {{/get}}
-
+        {{> "components/list" layout="grid" count="3" column="3" slug="environment" sameRatio=false}}
+        {{> "components/list" layout="grid" count="4" column="4" slug="culture" sameRatio=true}}
         {{> "components/cta"}}
-
     </div>
 
 </main>

@@ -5,15 +5,19 @@
     text-align: center;
 } */
 
-.gh-list.odd .gh-list-item:nth-child(4) {
+.gh-list.grid:not(.magazine)[data-column="3"] .gh-list-feed {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.gh-list.grid:not(.magazine)[data-column="3"] .gh-list-item:nth-child(4) {
     display: none;
 }
 
-.gh-list.odd .gh-list-item:nth-child(2) {
+.gh-list.grid:not(.magazine)[data-column="3"] .gh-list-item:nth-child(2) {
     grid-column: span 2;
 }
 
-.gh-list.odd .gh-list-item:nth-child(2) .gh-list-item-title {
+.gh-list.grid:not(.magazine)[data-column="3"] .gh-list-item:nth-child(2) .gh-list-item-title {
     font-size: 1.8em;
 }
 

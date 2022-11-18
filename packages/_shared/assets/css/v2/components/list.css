@@ -22,13 +22,33 @@
     font-size: 1.2em;
 }
 
+/* Grid layout */
+
 .gh-list.grid .gh-list-feed {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 64px 48px;
 }
 
-.gh-list.grid.big .gh-list-item:first-child {
+/* 2-column grid layout */
+
+.gh-list.grid:not(.magazine)[data-column="2"] .gh-list-feed {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.gh-list.grid:not(.magazine)[data-column="2"] .gh-list-item-title {
+    font-size: 2.6rem;
+}
+
+/* 3-column grid layout */
+
+.gh-list.grid:not(.magazine)[data-column="3"] .gh-list-feed {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Magazine layout */
+
+.gh-list.grid.magazine .gh-list-item:first-child {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column: span 4;
@@ -36,6 +56,21 @@
     align-items: center;
 }
 
-.gh-list.grid.big .gh-list-item:first-child .gh-list-item-title {
+.gh-list.grid.magazine .gh-list-item:first-child .gh-list-item-title {
     font-size: 2.6em;
+}
+
+/* Same ratio thumbnail */
+
+.gh-list.has-same-ratio .gh-list-item-image {
+    position: relative;
+    aspect-ratio: 16 / 10;
+}
+
+.gh-list.has-same-ratio .gh-list-item-image img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
