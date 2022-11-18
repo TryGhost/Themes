@@ -1,9 +1,9 @@
 @import "@tryghost/shared-theme-assets/assets/css/v2/screen.css";
 
-.gh-list {
+/* .gh-list {
     align-items: center;
     text-align: center;
-}
+} */
 
 .gh-list.odd .gh-list-item:nth-child(4) {
     display: none;

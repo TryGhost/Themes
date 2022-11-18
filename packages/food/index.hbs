@@ -2,10 +2,10 @@
 
 <main class="gh-main">
 
-    {{> "components/header"}}
+    {{> "components/header" layout="side" background="image" action="search"}}
 
     <div class="gh-inner">
-        {{> "latest"}}
+        {{!-- {{> "latest"}} --}}
 
         {{#get "tags" include="count.posts" order="count.posts desc" limit="3"}}
             {{#foreach tags}}

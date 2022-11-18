@@ -1,6 +1,6 @@
 .gh-header {
-    padding-top: 160px;
-    padding-bottom: 160px;
+    padding-top: 240px;
+    padding-bottom: 240px;
 }
 
 .gh-header-content {
@@ -16,6 +16,16 @@
     font-size: 3em;
 }
 
+.gh-header-action {
+    margin-top: 40px;
+}
+
+.gh-header-button {
+    --multiplier: 1.2;
+
+    font-size: 2rem;
+}
+
 .gh-header-input {
     display: flex;
     align-items: center;
@@ -24,7 +34,6 @@
     max-width: 480px;
     height: 52px;
     padding: 0 4px 0 16px;
-    margin-top: 32px;
     color: var(--color-secondary-text);
     cursor: pointer;
     background-color: var(--color-white);
@@ -34,30 +43,87 @@
 .gh-header-input span {
     display: flex;
     align-items: center;
+    justify-content: center;
     height: calc(100% - 8px);
     padding: 0 12px;
     color: #fff;
     background-color: var(--ghost-accent-color);
 }
 
+.gh-header-input[data-ghost-search] span {
+    aspect-ratio: 1;
+    padding: 0;
+}
+
+/* With background image or color */
+
 .gh-header[class*="has-background"] {
     position: relative;
     margin-bottom: 80px;
-    background-color: var(--ghost-accent-color);
 }
 
-.gh-header.has-background .gh-header-primary {
+.gh-header[class*="has-background"] .gh-header-content {
+    position: relative;
+    z-index: 20;
+}
+
+.gh-header[class*="has-background"] .gh-header-primary {
     color: #fff;
 }
 
-.gh-header.has-background .gh-header-input {
+.gh-header[class*="has-background"] .gh-header-input {
     border: 0;
 }
 
-.gh-header.has-background .gh-header-image {
+.gh-header[class*="has-background"] .gh-header-button {
+    color: #15171a;
+    background-color: #fff;
+}
+
+/* With background image */
+
+.gh-header.has-background-image::before {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    content: "";
+    background-color: #15171a;
+    opacity: 0.5;
+}
+
+.gh-header.has-background-image .gh-header-image {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/* With background color */
+
+.gh-header.has-background-color {
+    background-color: var(--ghost-accent-color);
+}
+
+/* Side by side */
+
+.gh-header.is-side {
+    padding-top: 80px;
+    padding-bottom: 120px;
+}
+
+.gh-header.is-side .gh-header-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+}
+
+.gh-header.is-side .gh-header-image {
+    position: static;
+}
+
+.gh-header.is-side .gh-header-content {
+    align-items: flex-start;
+    padding-left: 32px;
+    text-align: left;
 }
