@@ -1,3 +1,12 @@
+{{!--
+    Parameters:
+    * layout (grid, magazine)
+    * count (number)
+    * column (number)
+    * slug (tag)
+    * sameRatio (true, false)
+--}}
+
 <div class="gh-list{{#match layout "magazine"}} grid magazine{{else match layout "grid"}} grid{{/match}}{{#if sameRatio}} has-same-ratio{{/if}}" data-column="{{column}}">
     {{#if slug}}
         {{#get "tags" filter="slug:{{slug}}"}}

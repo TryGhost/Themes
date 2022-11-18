@@ -1,3 +1,10 @@
+{{!--
+    Parameters:
+    * layout (wide, side)
+    * background (color, image)
+    * action (button, email, search)
+--}}
+
 <section class="gh-header gh-outer{{#match layout "side"}}{{#match background "image"}} is-side{{/match}}{{/match}}{{#match layout "!=" "side"}}{{#match background "image"}} has-background-image{{else match background "color"}} has-background-color{{/match}}{{/match}}">
     <div class="gh-header-inner{{#match layout "side"}} gh-inner{{/match}}">
 
