@@ -152,10 +152,13 @@ function main(done) {
     const sharedJSWatcher = () => watch('packages/_shared/assets/js/**/*.js', sharedJS);
 
     function copyPartials(done) {
-        pump([
-            src('packages/_shared/partials/*'),
-            dest('packages/food/partials/components/')
-        ], handleError(done));
+        glob.sync('packages/*', {ignore: ['packages/_shared', ...oldPackages]}).map(path => {
+            pump([
+                src('packages/_shared/partials/*'),
+                dest(`${path}/partials/components/`),
+                livereload()
+            ], handleError(done));
+        });
     }
     const sharedPartialWatcher = () => watch('packages/_shared/partials/*.hbs', copyPartials);
 
