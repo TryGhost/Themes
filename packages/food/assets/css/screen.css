@@ -61,7 +61,7 @@ body {
 }
 
 .gh-list.grid:not(.magazine)[data-column="3"] .gh-list-item:nth-child(2) .gh-list-item-title {
-    --font-multiplier: 1.4;
+    --font-multiplier: 1.8;
 }
 
 .gh-cta-inner {
@@ -72,4 +72,51 @@ body {
 .is-font-serif .gh-cta-input,
 .is-font-serif .gh-cta-input span {
     border-radius: 0;
+}
+
+/* Global component overrides */
+.gh-header {
+    padding-top: clamp(8rem,13.64vw + 2.55rem,24rem);
+    padding-bottom: clamp(8rem,13.64vw + 2.55rem,28rem);
+}
+
+.gh-header-primary {
+    font-size: clamp(3rem, 2.05vw + 4.8rem, 7.8rem);
+    font-weight: 600;
+}
+
+.gh-list.grid.magazine .gh-list-header {
+    display: none;
+}
+
+.gh-list.grid.magazine .gh-list-item:first-child .gh-list-item-content {
+    margin: 0 auto;
+    max-width: 420px;
+}
+
+.gh-list.grid.magazine .gh-list-item:not(:first-child) .gh-list-item-excerpt {
+    display: none;
+}
+
+.gh-list-item-primary-tag {
+    margin-bottom: 12px;
+    font-weight: 600;
+    color: var(--ghost-accent-color);
+}
+
+.gh-header-input {
+    height: 72px;
+    max-width: 580px;
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    padding-left: 25px;
+}
+
+.gh-head-btn.gh-btn {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+}
+
+.gh-header-input span {
+    padding: 0 35px;
 }

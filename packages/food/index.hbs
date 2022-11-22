@@ -2,8 +2,8 @@
 
 <main class="gh-main">
 
-    {{> "components/header" layout="wide" background="" action="search"}}
-    {{> "components/list" layout="magazine" count="5"}}
+    {{> "components/header" layout="wide" background="" action="email"}}
+    {{> "components/list" layout="magazine" count="5" showExcerpt=true showPrimaryTag=true}}
 
     {{#if @custom.enter_tag_slugs_for_lists}}
         {{#get "tags" filter="slug:[{{@custom.enter_tag_slugs_for_lists}}]"}}

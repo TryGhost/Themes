@@ -33,6 +33,14 @@
     opacity: 1;
 }
 
+.gh-list-item-primary-tag,
+.gh-list-item-primary-author,
+.gh-list-item-published-at,
+.gh-list-item-reading-time {
+    display: inline-block;
+    font-size: calc(1.2rem * var(--font-multiplier, 1));
+}
+
 .gh-list-item-title {
     font-size: calc(2rem * var(--font-multiplier, 1));
     font-weight: 600;
@@ -45,7 +53,29 @@
 }
 
 .gh-list-item-excerpt {
+    font-size: calc(1.35rem * var(--font-multiplier, 1));
     margin-top: 16px;
+    margin-bottom: 12px;
+}
+
+.gh-list-item-primary-author::before,
+.gh-list-item-published-at::before,
+.gh-list-item-reading-time::before {
+    margin-right: 0.35em;
+    display: inline-block;
+}
+
+.gh-list-item-primary-author::before {
+    content: "by";
+}
+
+.gh-list-item-published-at::before {
+    content: "on";
+}
+
+.gh-list-item-primary-author + .gh-list-item-reading-time::before,
+.gh-list-item-published-at + .gh-list-item-reading-time::before {
+    content: "•";
 }
 
 /* Grid layout */
