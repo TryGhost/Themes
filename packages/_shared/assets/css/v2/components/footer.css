@@ -1,6 +1,11 @@
 .gh-foot {
-    padding: 120px 0;
+    padding: 160px 0 120px;
+    font-size: calc(1.6rem * var(--font-multiplier, 1));
     text-align: center;
+}
+
+.is-font-serif .gh-foot {
+    font-family: var(--font-serif);
 }
 
 .gh-foot-inner {
@@ -16,4 +21,13 @@
     padding: 0;
     margin: 0;
     list-style-type: none;
+}
+
+.gh-copyright {
+    color: var(--color-secondary-text);
+}
+
+.gh-copyright a {
+    color: var(--color-secondary-text);
+    text-decoration: underline;
 }

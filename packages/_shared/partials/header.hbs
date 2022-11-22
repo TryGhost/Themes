@@ -9,7 +9,9 @@
     <div class="gh-header-inner{{#match layout "side"}} gh-inner{{/match}}">
 
         {{#match background "image"}}
-            <img class="gh-header-image" src="{{img_url @site.cover_image}}" alt="{{@site.title}}">
+            {{#if @site.cover_image}}
+                <img class="gh-header-image" src="{{img_url @site.cover_image}}" alt="{{@site.title}}">
+            {{/if}}
         {{/match}}
 
         <div class="gh-header-content">

@@ -2,12 +2,31 @@
 
 <main class="gh-main">
 
-    {{> "components/header" layout="wide" background="image" action="search"}}
+    {{> "components/header" layout="wide" background="" action="search"}}
+    {{> "components/list" layout="magazine" count="5"}}
 
-    <div class="gh-inner">
-        {{> "components/list" layout="grid" count="3" column="3" slug="environment" sameRatio=false}}
-        {{> "components/list" layout="grid" count="4" column="4" slug="culture" sameRatio=true}}
-        {{> "components/cta"}}
-    </div>
+    {{#if @custom.enter_tag_slugs_for_lists}}
+        {{#get "tags" filter="slug:[{{@custom.enter_tag_slugs_for_lists}}]"}}
+            {{#foreach tags}}
+                {{#if @odd}}
+                    {{> "components/list" layout="grid" column="3" count="3" showHeader=true}}
+                {{else}}
+                    {{> "components/list" layout="grid" column="4" count="4" showHeader=true}}
+                {{/if}}
+            {{/foreach}}
+        {{/get}}
+    {{else}}
+        {{#get "tags" include="count.posts" order="count.posts desc" limit="4"}}
+            {{#foreach tags}}
+                {{#if @odd}}
+                    {{> "components/list" layout="grid" column="3" count="3" showHeader=true}}
+                {{else}}
+                    {{> "components/list" layout="grid" column="4" count="4" showHeader=true}}
+                {{/if}}
+            {{/foreach}}
+        {{/get}}
+    {{/if}}
+
+    {{> "components/cta"}}
 
 </main>

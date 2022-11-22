@@ -1,6 +1,9 @@
 .gh-head {
     height: 100px;
-    background-color: var(--color-white);
+}
+
+.is-font-serif .gh-head {
+    font-family: var(--font-serif);
 }
 
 .gh-head-inner {
@@ -23,7 +26,7 @@
 
 .gh-head-logo {
     position: relative;
-    font-size: 2.4rem;
+    font-size: calc(2.6rem * var(--font-multiplier, 1));
     font-weight: 700;
     letter-spacing: -0.02em;
     white-space: nowrap;
@@ -44,6 +47,8 @@
     display: flex;
     gap: var(--head-nav-gap);
     align-items: center;
+    font-size: calc(1.6rem * var(--font-multiplier, 1));
+    font-weight: 500;
 }
 
 .gh-head .nav {
@@ -76,6 +81,7 @@
 }
 
 .gh-head-btn.gh-btn {
+    font-family: var(--font-sans);
     font-size: inherit;
     font-weight: 600;
 }

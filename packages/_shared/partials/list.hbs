@@ -13,14 +13,14 @@
             {{#foreach tags}}
                 <header class="gh-list-header">
                     <h2 class="gh-list-title">{{name}}</h2>
-                    <a href="{{url}}">View all</a>
+                    <a class="gh-list-action" href="{{url}}">View all</a>
                 </header>
             {{/foreach}}
         {{/get}}
     {{else}}
         <header class="gh-list-header">
             <h2 class="gh-list-title">Latest</h2>
-            <a href="{{url}}">View all</a>
+            <a class="gh-list-action" href="{{url}}">View all</a>
         </header>
     {{/if}}
     <div class="gh-list-feed">

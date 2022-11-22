@@ -33,10 +33,14 @@
         document.documentElement.className = `has-${textColor}-text`;
     </script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
     {{ghost_head}}
 </head>
 
-<body class="{{body_class}}{{{block "body_class"}}} is-head-{{#match @custom.navigation_layout "Logo on the left"}}left-logo{{else match @custom.navigation_layout "Logo in the middle"}}middle-logo{{else}}stacked{{/match}}">
+<body class="{{body_class}}{{{block "body_class"}}} is-font-{{#match @custom.style "Elegant"}}serif{{else}}sans{{/match}} is-head-{{#match @custom.navigation_layout "Logo on the left"}}left-logo{{else match @custom.navigation_layout "Logo in the middle"}}middle-logo{{else}}stacked{{/match}}">
 <div class="gh-site">
 
     <header id="gh-head" class="gh-head gh-outer">

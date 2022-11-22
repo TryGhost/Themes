@@ -1,25 +1,51 @@
-.gh-list {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
+.gh-list + .gh-list {
+    margin-top: clamp(10rem, 11.36vw + 5.45rem, 20rem);
 }
 
-.gh-list + .gh-list {
-    margin-top: 200px;
+.gh-list-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.gh-list-header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
 }
 
 .gh-list-title {
-    font-size: 2.2em;
+    font-size: calc(4rem * var(--font-multiplier, 1));
 }
 
-.gh-list-item {
+.is-font-serif .gh-list-title {
+    font-family: var(--font-serif);
+}
+
+.gh-list-item-inner {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 20px;
+}
+
+.gh-list-item-inner:hover {
+    opacity: 1;
 }
 
 .gh-list-item-title {
-    font-size: 1.2em;
+    font-size: calc(2rem * var(--font-multiplier, 1));
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: -0.005em;
+}
+
+.is-font-serif .gh-list-item-title {
+    font-family: var(--font-serif);
+}
+
+.gh-list-item-excerpt {
+    margin-top: 16px;
 }
 
 /* Grid layout */
@@ -49,15 +75,19 @@
 /* Magazine layout */
 
 .gh-list.grid.magazine .gh-list-item:first-child {
+    grid-column: span 4;
+}
+
+.gh-list.grid.magazine .gh-list-item:first-child .gh-list-item-inner {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column: span 4;
     gap: 48px;
     align-items: center;
 }
 
 .gh-list.grid.magazine .gh-list-item:first-child .gh-list-item-title {
-    font-size: 2.6em;
+    font-size: calc(4.8rem * var(--font-multiplier, 1));
+    line-height: 1.1;
 }
 
 /* Same ratio thumbnail */

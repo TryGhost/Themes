@@ -41,6 +41,15 @@
         },
         "card_assets": true,
         "custom": {
+            "style": {
+                "type": "select",
+                "options": ["Elegant", "Playful"],
+                "default": "Elegant"
+            },
+            "background_color": {
+                "type": "color",
+                "default": "#ffffff"
+            },
             "navigation_layout": {
                 "type": "select",
                 "options": ["Logo on the left", "Logo in the middle", "Stacked"],

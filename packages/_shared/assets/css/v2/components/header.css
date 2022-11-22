@@ -1,6 +1,6 @@
 .gh-header {
-    padding-top: 240px;
-    padding-bottom: 240px;
+    padding-top: clamp(8rem, 13.64vw + 2.55rem, 20rem);
+    padding-bottom: clamp(8rem, 13.64vw + 2.55rem, 20rem);
 }
 
 .gh-header-content {
@@ -13,7 +13,13 @@
 }
 
 .gh-header-primary {
-    font-size: 3em;
+    font-size: calc(clamp(3rem, 2.05vw + 2.18rem, 4.8rem) * var(--font-multiplier, 1));
+    line-height: 1.2;
+}
+
+.is-font-serif .gh-header-primary {
+    font-family: var(--font-serif);
+    line-height: 1.1;
 }
 
 .gh-header-action {
@@ -32,13 +38,18 @@
     justify-content: space-between;
     width: 100%;
     max-width: 480px;
-    height: 52px;
+    height: 56px;
     padding: 0 4px 0 20px;
-    color: var(--color-secondary-text);
+    color: var(--color-secondary-text-dark);
     cursor: pointer;
     background-color: var(--color-white);
-    border: 1px solid var(--color-border);
+    border: 0;
     border-radius: 32px;
+    box-shadow: 0 0 0 1px var(--color-border);
+}
+
+.gh-header-input[data-ghost-search] {
+    padding-right: 8px;
 }
 
 .gh-header-input span {
@@ -56,6 +67,8 @@
 .gh-header-input[data-ghost-search] span {
     aspect-ratio: 1;
     padding: 0;
+    color: #15171a;
+    background-color: transparent;
 }
 
 /* With background image or color */

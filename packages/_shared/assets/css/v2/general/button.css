@@ -46,7 +46,7 @@
     width: 30px;
     height: 30px;
     padding: 0;
-    color: var(--darker-gray-color);
+    color: var(--color-darker-gray);
     cursor: pointer;
     background-color: transparent;
     border: 0;
@@ -64,7 +64,7 @@
     justify-content: center;
     padding: 0;
     margin: 0;
-    color: var(--darker-gray-color);
+    color: var(--color-darker-gray);
     letter-spacing: inherit;
     cursor: pointer;
     background-color: transparent;
