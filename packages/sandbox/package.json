@@ -54,10 +54,6 @@
                 "type": "select",
                 "options": ["Logo on the left", "Logo in the middle", "Stacked"],
                 "default": "Logo in the middle"
-            },
-            "enter_tag_slugs_for_lists": {
-                "type": "text",
-                "group": "homepage"
             }
         }
     },

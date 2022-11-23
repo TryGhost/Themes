@@ -3,6 +3,13 @@
     padding-bottom: clamp(8rem, 13.64vw + 2.55rem, 20rem);
 }
 
+.gh-header:not(.has-background-image):not(.has-background-color) {
+    max-width: var(--container-width, 1200px);
+    margin: 0 auto 40px;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+}
+
 .gh-header-content {
     display: flex;
     flex-direction: column;

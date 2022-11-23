@@ -2,10 +2,15 @@
 
 :root {
     --font-serif: Cormorant, serif;
+    --font-sans-serif: Poppins, sans-serif;
 }
 
 body {
     background-color: var(--background-color);
+}
+
+body.is-font-sans {
+    font-family: var(--font-sans-serif);
 }
 
 .is-font-serif {
@@ -26,6 +31,7 @@ body {
 .gh-header {
     padding-top: clamp(8rem,13.64vw + 3.6rem,20rem);
     padding-bottom: clamp(8rem,13.64vw + 3.6rem,20rem);
+    border: none !important;
 }
 
 .gh-header-content {
