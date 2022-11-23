@@ -133,7 +133,7 @@
 }
 
 .gh-list.grid.magazine .gh-list-item:first-child .gh-list-item-title {
-    font-size: calc(4.8rem * var(--font-multiplier, 1));
+    font-size: calc(4.2rem * var(--font-multiplier, 1));
     line-height: 1.1;
 }
 
