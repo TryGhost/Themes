@@ -5,10 +5,14 @@
     * column (number)
     * slug (tag)
     * showHeader (true, false)
-    * sameRatio (true, false)
+    * showPrimaryTag (true, false)
+    * showPrimaryAuthor (true, false)
+    * showExcerpt (true, false)
+    * showPublishedAt (true, false)
+    * showReadingTime (true, false)
 --}}
 
-<div class="gh-list{{#match layout "magazine"}} grid magazine{{else match layout "grid"}} grid{{/match}}{{#if sameRatio}} has-same-ratio{{/if}} gh-outer" data-column="{{column}}">
+<div class="gh-list{{#match layout "magazine"}} grid magazine{{else match layout "grid"}} grid{{/match}} gh-outer" data-column="{{column}}">
     <div class="gh-list-inner gh-inner">
 
         {{#if showHeader}}
@@ -16,15 +20,15 @@
                 {{#get "tags" filter="slug:{{slug}}"}}
                     {{#foreach tags}}
                         <header class="gh-list-header">
-                            <h2 class="gh-list-title">{{name}}</h2>
-                            <a class="gh-list-action" href="{{url}}">View all</a>
+                            <a href="{{url}}"><h2 class="gh-list-title">{{name}}</h2></a>
+                            <a class="gh-list-action" href="{{url}}">View all &rarr;</a>
                         </header>
                     {{/foreach}}
                 {{/get}}
             {{else}}
                 <header class="gh-list-header">
-                    <h2 class="gh-list-title">Latest</h2>
-                    <a class="gh-list-action" href="{{url}}">View all</a>
+                    <a href="{{url}}"><h2 class="gh-list-title">Latest</h2></a>
+                    <a class="gh-list-action" href="{{url}}">View all &rarr;</a>
                 </header>
             {{/if}}
         {{/if}}
@@ -37,8 +41,7 @@
                             showPrimaryTag=../../showPrimaryTag
                             showExcerpt=../../showExcerpt
                             showPrimaryAuthor=../../showPrimaryAuthor
-                            showPublishedAt=../../showPublishedAt
-                            showReadingTime=../../showReadingTime}}
+                            showPublishedAt=../../showPublishedAt}}
                     {{/foreach}}
                 {{/get}}
             {{else}}
@@ -48,8 +51,7 @@
                             showPrimaryTag=../../showPrimaryTag
                             showExcerpt=../../showExcerpt
                             showPrimaryAuthor=../../showPrimaryAuthor
-                            showPublishedAt=../../showPublishedAt
-                            showReadingTime=../../showReadingTime}}
+                            showPublishedAt=../../showPublishedAt}}
                     {{/foreach}}
                 {{/get}}
             {{/if}}

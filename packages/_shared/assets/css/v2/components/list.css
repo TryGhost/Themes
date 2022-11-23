@@ -8,15 +8,19 @@
     gap: 40px;
 }
 
+.gh-list-item {
+    line-height: 1.45em;
+}
+
 .gh-list-header {
     display: flex;
-    flex-direction: column;
     gap: 8px;
-    align-items: flex-start;
+    align-items: flex-end;
+    justify-content: space-between;
 }
 
 .gh-list-title {
-    font-size: calc(4rem * var(--font-multiplier, 1));
+    font-size: calc(2.7rem * var(--font-multiplier, 1));
 }
 
 .is-font-serif .gh-list-title {
@@ -33,17 +37,9 @@
     opacity: 1;
 }
 
-.gh-list-item-primary-tag,
-.gh-list-item-primary-author,
-.gh-list-item-published-at,
-.gh-list-item-reading-time {
-    display: inline-block;
-    font-size: calc(1.2rem * var(--font-multiplier, 1));
-}
-
 .gh-list-item-title {
     font-size: calc(2rem * var(--font-multiplier, 1));
-    font-weight: 600;
+    font-weight: 700;
     line-height: 1.25;
     letter-spacing: -0.005em;
 }
@@ -53,9 +49,23 @@
 }
 
 .gh-list-item-excerpt {
-    font-size: calc(1.35rem * var(--font-multiplier, 1));
+    font-size: calc(1.55rem * var(--font-multiplier, 1));
     margin-top: 16px;
     margin-bottom: 12px;
+}
+
+.gh-list-item-primary-tag,
+.gh-list-item-primary-author,
+.gh-list-item-published-at,
+.gh-list-item-reading-time {
+    display: inline-block;
+    font-size: calc(1.35rem * var(--font-multiplier, 1));
+    line-height: 1.1;
+}
+
+.gh-list-item-primary-author,
+.gh-list-item-published-at {
+    font-weight: 500;
 }
 
 .gh-list-item-primary-author::before,
@@ -65,12 +75,20 @@
     display: inline-block;
 }
 
+.gh-list-item-primary-tag {
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
 .gh-list-item-primary-author::before {
     content: "by";
+    font-weight: 300;
 }
 
 .gh-list-item-published-at::before {
     content: "on";
+    font-weight: 300;
 }
 
 .gh-list-item-primary-author + .gh-list-item-reading-time::before,
@@ -112,7 +130,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 48px;
-    align-items: center;
 }
 
 .gh-list.grid.magazine .gh-list-item:first-child .gh-list-item-title {
@@ -120,14 +137,13 @@
     line-height: 1.1;
 }
 
-/* Same ratio thumbnail */
-
-.gh-list.has-same-ratio .gh-list-item-image {
+/* Set same ratio thumbnail by default */
+.gh-list .gh-list-item-image {
     position: relative;
     aspect-ratio: 16 / 10;
 }
 
-.gh-list.has-same-ratio .gh-list-item-image img {
+.gh-list .gh-list-item-image img {
     position: absolute;
     inset: 0;
     width: 100%;

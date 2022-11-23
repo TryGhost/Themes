@@ -3,29 +3,30 @@
 <main class="gh-main">
 
     {{> "components/header" layout="wide" background="" action="search"}}
-    {{> "components/list" layout="magazine" count="5" showExcerpt=true showPrimaryTag=true}}
 
-    {{#if @custom.enter_tag_slugs_for_lists}}
-        {{#get "tags" filter="slug:[{{@custom.enter_tag_slugs_for_lists}}]"}}
-            {{#foreach tags}}
-                {{#if @odd}}
-                    {{> "components/list" layout="grid" column="3" count="3" showHeader=true}}
-                {{else}}
-                    {{> "components/list" layout="grid" column="4" count="4" showHeader=true}}
-                {{/if}}
-            {{/foreach}}
-        {{/get}}
-    {{else}}
-        {{#get "tags" include="count.posts" order="count.posts desc" limit="4"}}
-            {{#foreach tags}}
-                {{#if @odd}}
-                    {{> "components/list" layout="grid" column="3" count="3" showHeader=true}}
-                {{else}}
-                    {{> "components/list" layout="grid" column="4" count="4" showHeader=true}}
-                {{/if}}
-            {{/foreach}}
-        {{/get}}
-    {{/if}}
+    {{!-- Variations on list layouts --}}
+    {{> "components/list" 
+        layout="magazine" 
+        count="5" 
+        showHeader=true
+        showExcerpt=true 
+        showPrimaryTag=true 
+        showPrimaryAuthor=true 
+        showExcerpt=true 
+        showPublishedAt=true
+        showReadingTime=true}}
+
+    {{> "components/list" 
+        layout="grid" 
+        count="12" 
+        columns="3"
+        showHeader=true
+        showExcerpt=true 
+        showPrimaryTag=true 
+        showPrimaryAuthor=true 
+        showExcerpt=true 
+        showPublishedAt=true
+        showReadingTime=true}}
 
     {{> "components/cta"}}
 
