@@ -31,65 +31,25 @@
 
         <div class="gh-list-feed">
             {{#if slug}}
-                {{#get "posts" filter="tag:{{slug}}" limit=count}}
+                {{#get "posts" include="tags,authors" filter="tag:{{slug}}" limit=count}}
                     {{#foreach posts}}
-                        <article class="gh-list-item">
-                            <a class="gh-list-item-inner" href="{{url}}">
-                                {{#if feature_image}}
-                                    <figure class="gh-list-item-image">
-                                        <img
-                                            srcset="{{img_url feature_image size="s"}} 300w,
-                                                    {{img_url feature_image size="m"}} 720w,
-                                                    {{img_url feature_image size="l"}} 960w,
-                                                    {{img_url feature_image size="xl"}} 1200w,
-                                                    {{img_url feature_image size="xxl"}} 2000w"
-                                            sizes="(max-width: 1200px) 100vw, 1200px"
-                                            src="{{img_url feature_image size="m"}}"
-                                            alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
-                                        >
-                                    </figure>
-                                {{/if}}
-                                <div class="gh-list-item-content">
-                                    <h3 class="gh-list-item-title">{{title}}</h3>
-                                    {{#match ../../layout "magazine"}}
-                                        {{#if @first}}
-                                            <p class="gh-list-item-excerpt">{{excerpt}}</p>
-                                        {{/if}}
-                                    {{/match}}
-                                </div>
-                            </a>
-                        </article>
+                        {{> components/list-item 
+                            showPrimaryTag=../../showPrimaryTag
+                            showExcerpt=../../showExcerpt
+                            showPrimaryAuthor=../../showPrimaryAuthor
+                            showPublishedAt=../../showPublishedAt
+                            showReadingTime=../../showReadingTime}}
                     {{/foreach}}
                 {{/get}}
             {{else}}
-                {{#get "posts" limit=count}}
+                {{#get "posts" include="tags,authors" limit=count}}
                     {{#foreach posts}}
-                        <article class="gh-list-item">
-                            <a class="gh-list-item-inner" href="{{url}}">
-                                {{#if feature_image}}
-                                    <figure class="gh-list-item-image">
-                                        <img
-                                            srcset="{{img_url feature_image size="s"}} 300w,
-                                                    {{img_url feature_image size="m"}} 720w,
-                                                    {{img_url feature_image size="l"}} 960w,
-                                                    {{img_url feature_image size="xl"}} 1200w,
-                                                    {{img_url feature_image size="xxl"}} 2000w"
-                                            sizes="(max-width: 1200px) 100vw, 1200px"
-                                            src="{{img_url feature_image size="m"}}"
-                                            alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
-                                        >
-                                    </figure>
-                                {{/if}}
-                                <div class="gh-list-item-content">
-                                    <h3 class="gh-list-item-title">{{title}}</h3>
-                                    {{#match ../../layout "magazine"}}
-                                        {{#if @first}}
-                                            <p class="gh-list-item-excerpt">{{excerpt}}</p>
-                                        {{/if}}
-                                    {{/match}}
-                                </div>
-                            </a>
-                        </article>
+                        {{> components/list-item 
+                            showPrimaryTag=../../showPrimaryTag
+                            showExcerpt=../../showExcerpt
+                            showPrimaryAuthor=../../showPrimaryAuthor
+                            showPublishedAt=../../showPublishedAt
+                            showReadingTime=../../showReadingTime}}
                     {{/foreach}}
                 {{/get}}
             {{/if}}

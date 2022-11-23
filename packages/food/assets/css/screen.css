@@ -64,6 +64,10 @@ body {
     --font-multiplier: 1.4;
 }
 
+.gh-list.grid.magazine .gh-list-item:not(:first-child) .gh-list-item-excerpt {
+    display: none;
+}
+
 .gh-cta-inner {
     border-top: 1px solid var(--color-border);
     border-bottom: 1px solid var(--color-border);
@@ -72,4 +76,11 @@ body {
 .is-font-serif .gh-cta-input,
 .is-font-serif .gh-cta-input span {
     border-radius: 0;
+}
+
+/* Component customisation */
+.gh-list-item-primary-tag {
+    color: var(--ghost-accent-color);
+    margin-bottom: 8px;
+    font-weight: 600;
 }
