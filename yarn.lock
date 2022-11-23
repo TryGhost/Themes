@@ -4162,7 +4162,7 @@ gulp-cli@^2.2.0:
     v8flags "^3.2.0"
     yargs "^7.1.0"
 
-gulp-compile-handlebars@^0.6.1:
+gulp-compile-handlebars@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/gulp-compile-handlebars/-/gulp-compile-handlebars-0.6.1.tgz#9cc1d9cb951105dfae530928d2a904a14d74c5d3"
   integrity sha512-ptx+4u0Nq14Eq+pDoL6Np5Uqj0v0YoxsaGy1ZvlX9O+ujRKkkO9vVzdpTK9lVflrQkdui7ZVHDGEQpycdWd7yg==
