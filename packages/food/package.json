@@ -55,6 +55,12 @@
                 "options": ["Logo on the left", "Logo in the middle", "Stacked"],
                 "default": "Logo in the middle"
             },
+            "main_action": {
+                "type": "select",
+                "options": ["Subscribe", "Search", "No action"],
+                "default": "Subscribe",
+                "group": "homepage"
+            },
             "enter_tag_slugs_for_lists": {
                 "type": "text",
                 "group": "homepage"

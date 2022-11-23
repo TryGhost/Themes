@@ -32,6 +32,10 @@ body {
     max-width: 1080px;
 }
 
+.is-font-serif .gh-header-primary{
+    line-height: 1.0em;
+}
+
 .gh-header-primary {
     font-size: calc(clamp(4rem, 2.05vw + 3.4rem, 6.4rem)*var(--font-multiplier, 1));
 }
@@ -54,6 +58,10 @@ body {
 .is-font-serif .gh-header-input,
 .is-font-serif .gh-header-input span {
     border-radius: 0;
+}
+
+.gh-main .gh-list:first-child {
+    margin-top: 60px;
 }
 
 .gh-list {
@@ -122,7 +130,8 @@ body {
 }
 
 .gh-list.grid.magazine .gh-list-item:first-child .gh-list-item-title {
-    font-size: 6.2rem;
+    font-size: 5.8rem;
+    line-height: 1;
 }
 
 .gh-list.grid.magazine .gh-list-item:first-child .gh-list-item-excerpt {
