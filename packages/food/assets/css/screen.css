@@ -18,6 +18,37 @@ body {
 
 .is-font-serif .gh-head-btn {
     border-radius: 0;
+    font-family: var(--font-serif);
+    font-size: 1.85rem;
+    font-weight: 700;
+}
+
+.gh-header {
+    padding-top: clamp(8rem,13.64vw + 3.6rem,20rem);
+    padding-bottom: clamp(8rem,13.64vw + 3.6rem,20rem);
+}
+
+.gh-header-content {
+    max-width: 1080px;
+}
+
+.gh-header-primary {
+    font-size: calc(clamp(4rem, 2.05vw + 3.4rem, 6.4rem)*var(--font-multiplier, 1));
+}
+
+.gh-header-input {
+    height: 68px;
+    padding-left: 24px;
+    max-width: 560px;
+}
+
+.is-font-serif .gh-header-input {
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+}
+
+.is-font-serif .gh-header-input span {
+    font-weight: 700;
 }
 
 .is-font-serif .gh-header-input,
@@ -30,11 +61,23 @@ body {
 }
 
 .gh-list-header {
+    flex-direction: column;
     align-items: center;
 }
 
 .gh-list-title {
     color: var(--ghost-accent-color);
+}
+
+.gh-list-title {
+    font-size: 3.8rem;
+}
+
+.gh-list-item-primary-tag {
+    color: var(--ghost-accent-color) !important;
+    margin-bottom: 8px;
+    font-size: 1.4rem;
+    font-weight: 600;
 }
 
 .gh-list-action {
@@ -68,6 +111,34 @@ body {
     display: none;
 }
 
+.gh-list.grid.magazine .gh-list-item:first-child .gh-list-item-inner {
+    align-items: center;
+}
+
+.gh-list.grid.magazine .gh-list-item:first-child .gh-list-item-content {
+    padding: 0 30px;
+    margin: 0 auto;
+    max-width: 520px;
+}
+
+.gh-list.grid.magazine .gh-list-item:first-child .gh-list-item-title {
+    font-size: 6.2rem;
+}
+
+.gh-list.grid.magazine .gh-list-item:first-child .gh-list-item-excerpt {
+    font-size: 1.6rem;
+}
+
+.gh-list .gh-list-item-image {
+    aspect-ratio: unset;
+}
+
+.gh-list .gh-list-item-image img {
+    height: unset;
+    object-fit: unset;
+    position: unset;
+}
+
 .gh-cta-inner {
     border-top: 1px solid var(--color-border);
     border-bottom: 1px solid var(--color-border);
@@ -78,9 +149,8 @@ body {
     border-radius: 0;
 }
 
-/* Component customisation */
-.gh-list-item-primary-tag {
-    color: var(--ghost-accent-color);
-    margin-bottom: 8px;
-    font-weight: 600;
+.is-font-serif .gh-cta-input {
+    font-family: var(--font-serif);
+    font-size: 1.9rem;
+    font-weight: 700;
 }

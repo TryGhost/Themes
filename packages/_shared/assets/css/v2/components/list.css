@@ -1,5 +1,5 @@
 .gh-list + .gh-list {
-    margin-top: clamp(10rem, 11.36vw + 5.45rem, 20rem);
+    margin-top: clamp(10rem, 11.36vw + 3.45rem, 16rem);
 }
 
 .gh-list-inner {
