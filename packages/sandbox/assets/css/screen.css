@@ -1,0 +1,86 @@
+@import "@tryghost/shared-theme-assets/assets/css/v2/screen.css";
+
+:root {
+    --font-serif: Cormorant, serif;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+.is-font-serif {
+    --font-multiplier: 1.15;
+}
+
+.is-font-serif .gh-head-menu {
+    font-weight: 600;
+}
+
+.is-font-serif .gh-head-btn {
+    border-radius: 0;
+}
+
+.is-font-serif .gh-header-input,
+.is-font-serif .gh-header-input span {
+    border-radius: 0;
+}
+
+.gh-list {
+    text-align: center;
+}
+
+.gh-list-header {
+    align-items: center;
+}
+
+.gh-list-title {
+    color: var(--ghost-accent-color);
+}
+
+.gh-list-action {
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+.is-font-sans .gh-list-item-image img {
+    border-radius: 16px;
+}
+
+.gh-list.grid:not(.magazine)[data-column="3"] .gh-list-feed {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.gh-list.grid:not(.magazine)[data-column="3"] .gh-list-item:nth-child(4) {
+    display: none;
+}
+
+.gh-list.grid:not(.magazine)[data-column="3"] .gh-list-item:nth-child(2) {
+    grid-column: span 2;
+}
+
+.gh-list.grid:not(.magazine)[data-column="3"] .gh-list-item:nth-child(2) .gh-list-item-title {
+    --font-multiplier: 1.4;
+}
+
+.gh-list.grid.magazine .gh-list-item:not(:first-child) .gh-list-item-excerpt {
+    display: none;
+}
+
+.gh-cta-inner {
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.is-font-serif .gh-cta-input,
+.is-font-serif .gh-cta-input span {
+    border-radius: 0;
+}
+
+/* Component customisation */
+.gh-list-item-primary-tag {
+    color: var(--ghost-accent-color);
+    margin-bottom: 8px;
+    font-weight: 600;
+}

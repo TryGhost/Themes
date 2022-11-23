@@ -1,0 +1,29 @@
+{{!--
+    Parameters:
+    * layout (wide, side)
+    * background (color, image)
+    * action (button, email, search)
+--}}
+
+<section class="gh-header gh-outer{{#match layout "side"}}{{#match background "image"}} is-side{{/match}}{{/match}}{{#match layout "!=" "side"}}{{#match background "image"}} has-background-image{{else match background "color"}} has-background-color{{/match}}{{/match}}">
+    <div class="gh-header-inner{{#match layout "side"}} gh-inner{{/match}}">
+
+        {{#match background "image"}}
+            {{#if @site.cover_image}}
+                <img class="gh-header-image" src="{{img_url @site.cover_image}}" alt="{{@site.title}}">
+            {{/if}}
+        {{/match}}
+
+        <div class="gh-header-content">
+            <h1 class="gh-header-primary">Recipies you can make under 15 minutes and places you can go if you don't have 15 minutes.</h1>
+            {{#match action "button"}}
+                <a class="gh-header-action gh-header-button gh-btn" href="#">Learn more</a>
+            {{else match action "email"}}
+                <button class="gh-header-action gh-header-input" data-portal>jamie@example.com <span>Subscribe</span></button>
+            {{else match action "search"}}
+                <button class="gh-header-action gh-header-input" data-ghost-search>Search posts, tags and authors <span>{{> "icons/search"}}</span></button>
+            {{/match}}
+        </div>
+
+    </div>
+</section>
