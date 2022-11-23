@@ -152,5 +152,8 @@ body {
 .is-font-serif .gh-cta-input {
     font-family: var(--font-serif);
     font-size: 1.9rem;
+}
+
+.is-font-serif .gh-cta-input span {
     font-weight: 700;
 }

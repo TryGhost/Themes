@@ -2,7 +2,7 @@
     Parameters:
     * layout (grid, magazine)
     * count (number)
-    * column (number)
+    * columns (number)
     * slug (tag)
     * showHeader (true, false)
     * showPrimaryTag (true, false)
@@ -33,7 +33,7 @@
             {{/if}}
         {{/if}}
 
-        <div class="gh-list-feed">
+        <div class="gh-list-feed"{{#if columns}} style="grid-template-columns: repeat({{columns}}, 1fr);"{{/if}}>
             {{#if slug}}
                 {{#get "posts" include="tags,authors" filter="tag:{{slug}}" limit=count}}
                     {{#foreach posts}}

@@ -2,7 +2,12 @@
 
 <main class="gh-main">
 
-    {{> "components/header" layout="wide" background="image" action="email"}}
+    {{#if @site.cover_image}}
+        {{> "components/header" layout="wide" background="image" action="email"}}
+    {{else}}
+        {{> "components/header" layout="wide" background="" action="email"}}
+    {{/if}}
+
     {{> "components/list" layout="magazine" count="5" showExcerpt=true showPrimaryTag=true}}
 
     {{#if @custom.enter_tag_slugs_for_lists}}
