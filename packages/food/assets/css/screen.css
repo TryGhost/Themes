@@ -165,6 +165,12 @@ body.is-font-sans {
     justify-content: center;
 }
 
+.gh-article-meta-tag {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--ghost-accent-color);
+}
+
 /* CTA */
 
 .gh-cta-inner {

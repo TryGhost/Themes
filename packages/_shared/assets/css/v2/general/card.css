@@ -122,7 +122,7 @@ blockquote.kg-blockquote-alt {
 /* Caption
 /* ---------------------------------------------------------- */
 
-.kg-card figcaption {
+figcaption {
     margin-top: 12px;
     font-size: 1.4rem;
 }
@@ -131,6 +131,6 @@ blockquote.kg-blockquote-alt {
     padding: 0 16px;
 }
 
-.kg-card figcaption a {
+figcaption a {
     color: var(--color-darker-gray);
 }
