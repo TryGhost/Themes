@@ -36,6 +36,11 @@ body.is-font-sans {
     border: none !important;
 }
 
+.gh-header.has-background-image {
+    padding-top: clamp(8rem, 13.64vw + 5rem, 30rem);
+    padding-bottom: clamp(8rem, 13.64vw + 5rem, 30rem);
+}
+
 .gh-header-content {
     max-width: 1080px;
 }

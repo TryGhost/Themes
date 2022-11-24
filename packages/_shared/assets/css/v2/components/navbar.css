@@ -217,7 +217,7 @@ Search                         LOGO                    Login Subscribe
         width: 100%;
         height: 1px;
         content: "";
-        background-color: var(--color-light-gray);
+        background-color: var(--color-border);
     }
 
     .is-head-stacked .gh-head-menu::after {
