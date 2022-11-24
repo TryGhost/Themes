@@ -1,0 +1,110 @@
+/* Content refers to styling all page and post content that is
+created within the Ghost editor. The main content handles
+headings, text, images and lists. We deal with cards lower down. */
+
+.gh-content {
+    margin-top: 48px;
+    font-size: var(--content-font-size, 1.8rem);
+    letter-spacing: var(--content-letter-spacing, 0);
+}
+
+/* Default vertical spacing */
+.gh-content > * + * {
+    margin-top: calc(1.6em * var(--content-spacing-multiplier, 1));
+    margin-bottom: 0;
+}
+
+/* [id] represents all headings h1-h6, reset all margins */
+.gh-content > [id] {
+    margin: 0;
+}
+
+.gh-content > .kg-card + [id] {
+    margin-top: calc(2em * var(--content-spacing-multiplier, 1)) !important;
+}
+
+.has-serif-title .gh-content > [id] {
+    font-family: var(--font-serif);
+    letter-spacing: -0.01em;
+}
+
+/* Add back a top margin to all headings, unless a heading
+is the very first element in the post content */
+.gh-content > [id]:not(:first-child) {
+    margin-top: calc(1.6em * var(--content-spacing-multiplier, 1));
+}
+
+/* Add a small margin between a heading and anything after it */
+.gh-content > [id] + * {
+    margin-top: calc(0.8em * var(--content-spacing-multiplier, 1));
+}
+
+/* A larger margin before/after HRs and blockquotes */
+.gh-content > hr,
+.gh-content > blockquote {
+    position: relative;
+    margin-top: calc(2.4em * var(--content-spacing-multiplier, 1));
+}
+
+.gh-content > hr + *,
+.gh-content > blockquote + * {
+    margin-top: calc(2.4em * var(--content-spacing-multiplier, 1));
+}
+
+/* Now the content typography styles */
+.gh-content h2 {
+    font-size: 1.6em;
+}
+
+.gh-content h3 {
+    font-size: 1.4em;
+}
+
+.gh-content a {
+    color: var(--ghost-accent-color);
+    text-decoration: underline;
+    word-break: break-word;
+}
+
+.gh-content .kg-callout-card .kg-callout-text,
+.gh-content .kg-toggle-card .kg-toggle-content > ol,
+.gh-content .kg-toggle-card .kg-toggle-content > ul,
+.gh-content .kg-toggle-card .kg-toggle-content > p {
+    font-size: 0.95em;
+}
+
+.has-serif-body .gh-content > blockquote,
+.has-serif-body .gh-content > ol,
+.has-serif-body .gh-content > ul,
+.has-serif-body .gh-content > dl,
+.has-serif-body .gh-content > p,
+.has-serif-body .gh-content .kg-callout-text,
+.has-serif-body .gh-content .kg-toggle-content > ol,
+.has-serif-body .gh-content .kg-toggle-content > ul,
+.has-serif-body .gh-content .kg-toggle-content > p {
+    font-family: var(--font-serif);
+}
+
+.gh-content ul,
+.gh-content ol,
+.gh-content dl {
+    padding-left: 2.8rem;
+}
+
+.gh-content li + li {
+    margin-top: 0.8rem;
+}
+
+.gh-content hr {
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-light-gray);
+    border: 0;
+}
+
+@media (max-width: 767px) {
+    .gh-content {
+        margin-top: 3.2rem;
+        font-size: 1.7rem;
+    }
+}
