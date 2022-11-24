@@ -2,6 +2,7 @@
 @import "general/global.css";
 @import "general/layout.css";
 @import "general/button.css";
+@import "general/lightbox.css";
 @import "components/navbar.css";
 @import "components/header.css";
 @import "components/list.css";
