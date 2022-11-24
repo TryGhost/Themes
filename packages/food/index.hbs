@@ -3,16 +3,8 @@
 <main class="gh-main">
 
     {{#match @custom.main_action "No action"}}
-        {{#if @site.description}}
-            {{> "components/header" layout="wide" background="image"}}
-        {{else}}
-            {{#if @site.cover_image}}
-                {{> "components/header" layout="wide" background="image"}}
-            {{/if}}
-        {{/if}}
-    {{/match}}
-
-    {{#match @custom.main_action "Search"}}
+        {{> "components/header" layout="wide" background="image"}}
+    {{else match @custom.main_action "Search"}}
         {{> "components/header" layout="wide" background="image" action="search"}}
     {{else match @custom.main_action "Subscribe"}}
         {{> "components/header" layout="wide" background="image" action="email"}}
