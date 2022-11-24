@@ -17,6 +17,8 @@ body.is-font-sans {
     --font-multiplier: 1.15;
 }
 
+/* Navbar */
+
 .is-font-serif .gh-head-menu {
     font-weight: 600;
 }
@@ -65,6 +67,8 @@ body.is-font-sans {
 .is-font-serif .gh-header-input span {
     border-radius: 0;
 }
+
+/* Post list */
 
 .gh-main .gh-list:first-child {
     margin-top: 60px;
@@ -150,6 +154,18 @@ body.is-font-sans {
     height: unset;
     object-fit: unset;
 }
+
+/* Article */
+
+.gh-article-header {
+    text-align: center;
+}
+
+.gh-article-meta {
+    justify-content: center;
+}
+
+/* CTA */
 
 .gh-cta-inner {
     border-top: 1px solid var(--color-border);

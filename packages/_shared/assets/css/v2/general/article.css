@@ -28,13 +28,21 @@
 }
 
 .gh-article-title {
-    font-size: clamp(3.2rem, 1.59vw + 2.56rem, 4.6rem);
+    font-size: calc(clamp(3.2rem, 1.59vw + 2.56rem, 4.6rem) * var(--font-multiplier, 1));
     line-height: 1.15;
+}
+
+.is-font-serif .gh-article-title {
+    font-family: var(--font-serif);
 }
 
 .gh-article-excerpt {
     margin-top: 24px;
-    font-size: 1.8rem;
+    font-size: calc(1.8rem * var(--font-multiplier, 1));
+}
+
+.is-font-serif .gh-article-excerpt {
+    font-family: var(--font-serif);
 }
 
 .gh-article-image {

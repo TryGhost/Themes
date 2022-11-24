@@ -4,7 +4,7 @@ headings, text, images and lists. We deal with cards lower down. */
 
 .gh-content {
     margin-top: 48px;
-    font-size: var(--content-font-size, 1.8rem);
+    font-size: calc(var(--content-font-size, 1.8rem) * var(--font-multiplier, 1));
     letter-spacing: var(--content-letter-spacing, 0);
 }
 
@@ -23,7 +23,7 @@ headings, text, images and lists. We deal with cards lower down. */
     margin-top: calc(2em * var(--content-spacing-multiplier, 1)) !important;
 }
 
-.has-serif-title .gh-content > [id] {
+.is-font-serif .gh-content > [id] {
     font-family: var(--font-serif);
     letter-spacing: -0.01em;
 }
@@ -53,11 +53,11 @@ is the very first element in the post content */
 
 /* Now the content typography styles */
 .gh-content h2 {
-    font-size: 1.6em;
+    font-size: calc(1.6em * var(--font-multiplier, 1));
 }
 
 .gh-content h3 {
-    font-size: 1.4em;
+    font-size: calc(1.4em * var(--font-multiplier, 1));
 }
 
 .gh-content a {
@@ -73,15 +73,15 @@ is the very first element in the post content */
     font-size: 0.95em;
 }
 
-.has-serif-body .gh-content > blockquote,
-.has-serif-body .gh-content > ol,
-.has-serif-body .gh-content > ul,
-.has-serif-body .gh-content > dl,
-.has-serif-body .gh-content > p,
-.has-serif-body .gh-content .kg-callout-text,
-.has-serif-body .gh-content .kg-toggle-content > ol,
-.has-serif-body .gh-content .kg-toggle-content > ul,
-.has-serif-body .gh-content .kg-toggle-content > p {
+.is-font-serif .gh-content > blockquote,
+.is-font-serif .gh-content > ol,
+.is-font-serif .gh-content > ul,
+.is-font-serif .gh-content > dl,
+.is-font-serif .gh-content > p,
+.is-font-serif .gh-content .kg-callout-text,
+.is-font-serif .gh-content .kg-toggle-content > ol,
+.is-font-serif .gh-content .kg-toggle-content > ul,
+.is-font-serif .gh-content .kg-toggle-content > p {
     font-family: var(--font-serif);
 }
 
