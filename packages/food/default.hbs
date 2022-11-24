@@ -45,36 +45,22 @@
     {{ghost_head}}
 </head>
 
-<body class="{{body_class}}{{{block "body_class"}}} is-font-{{#match @custom.style "Elegant"}}serif{{else}}sans{{/match}} is-head-{{#match @custom.navigation_layout "Logo on the left"}}left-logo{{else match @custom.navigation_layout "Logo in the middle"}}middle-logo{{else}}stacked{{/match}}">
+<body class="{{body_class}}{{{block "body_class"}}} is-font-{{#match @custom.style "Elegant"}}serif{{else}}sans{{/match}}">
 <div class="gh-site">
 
     {{#is "home"}}
         {{#match @custom.main_action "Subscribe"}}
-            {{> "components/navbar" hideSubscribeButton=true}}
+            {{> "components/navbar" navigationLayout=@custom.navigation_layout hideSubscribeButton=true}}
         {{else}}
-            {{> "components/navbar"}}
+            {{> "components/navbar" navigationLayout=@custom.navigation_layout}}
         {{/match}}
     {{else}}
-        {{> "components/navbar"}}
+        {{> "components/navbar" navigationLayout=@custom.navigation_layout}}
     {{/is}}
 
     {{{body}}}
 
-    <footer class="gh-foot gh-outer">
-        <div class="gh-foot-inner gh-inner">
-            <nav class="gh-foot-menu">
-                {{navigation type="secondary"}}
-            </nav>
-
-            <div class="gh-copyright">
-                {{#unless @custom.footer_text}}
-                    {{@site.title}} © {{date format="YYYY"}}. Powered by <a href="https://ghost.org/" target="_blank" rel="noopener">Ghost</a>
-                {{else}}
-                    {{@custom.footer_text}}
-                {{/unless}}
-            </div>
-        </div>
-    </footer>
+    {{> components/footer footer_text=@custom.footer_text}}
 
 </div>
 
