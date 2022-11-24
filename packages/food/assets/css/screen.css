@@ -185,3 +185,9 @@ body.is-font-sans {
 .is-font-serif .gh-cta-input span {
     font-weight: 700;
 }
+
+/* Archive */
+
+.is-font-sans .tag-template .gh-archive-image img {
+    border-radius: 16px;
+}

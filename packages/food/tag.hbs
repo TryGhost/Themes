@@ -1,0 +1,44 @@
+{{!< default}}
+
+<main class="gh-main gh-outer">
+    <div class="gh-inner">
+
+        {{#tag}}
+            <section class="gh-archive">
+                <header class="gh-archive-header">
+                    <h1 class="gh-archive-title">{{name}}</h1>
+                    {{#if description}}
+                        <p class="gh-archive-description">{{description}}</p>
+                    {{/if}}
+                </header>
+                {{#if feature_image}}
+                    <figure class="gh-archive-image">
+                        <img
+                            srcset="{{img_url feature_image size="s"}} 300w,
+                                    {{img_url feature_image size="m"}} 720w,
+                                    {{img_url feature_image size="l"}} 960w,
+                                    {{img_url feature_image size="xl"}} 1200w,
+                                    {{img_url feature_image size="xxl"}} 2000w"
+                            sizes="(max-width: 1200px) 100vw, 1200px"
+                            src="{{img_url feature_image size="xl"}}"
+                            alt="{{name}}"
+                        >
+                    </figure>
+                {{/if}}
+            </section>
+        {{/tag}}
+
+        <div class="gh-list grid" data-column="4">
+            <div class="gh-list-feed">
+                {{#foreach posts}}
+                    {{> components/list-item
+                        showPrimaryTag=../../showPrimaryTag
+                        showExcerpt=../../showExcerpt
+                        showPrimaryAuthor=../../showPrimaryAuthor
+                        showPublishedAt=../../showPublishedAt}}
+                {{/foreach}}
+            </div>
+        </div>
+
+    </div>
+</main>
