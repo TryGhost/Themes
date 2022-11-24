@@ -22,15 +22,15 @@ body.is-font-sans {
 }
 
 .is-font-serif .gh-head-btn {
-    border-radius: 0;
     font-family: var(--font-serif);
     font-size: 1.85rem;
     font-weight: 700;
+    border-radius: 0;
 }
 
 .gh-header {
-    padding-top: clamp(8rem,13.64vw + 3.6rem,20rem);
-    padding-bottom: clamp(8rem,13.64vw + 3.6rem,20rem);
+    padding-top: clamp(8rem, 13.64vw + 3.6rem, 20rem);
+    padding-bottom: clamp(8rem, 13.64vw + 3.6rem, 20rem);
     border: none !important;
 }
 
@@ -38,18 +38,18 @@ body.is-font-sans {
     max-width: 1080px;
 }
 
-.is-font-serif .gh-header-primary{
-    line-height: 1.0em;
+.is-font-serif .gh-header-primary {
+    line-height: 1em;
 }
 
 .gh-header-primary {
-    font-size: calc(clamp(4rem, 2.05vw + 3.4rem, 6.4rem)*var(--font-multiplier, 1));
+    font-size: calc(clamp(4rem, 2.05vw + 3.4rem, 6.4rem) *var(--font-multiplier, 1));
 }
 
 .gh-header-input {
+    max-width: 560px;
     height: 68px;
     padding-left: 24px;
-    max-width: 560px;
 }
 
 .is-font-serif .gh-header-input {
@@ -80,18 +80,15 @@ body.is-font-sans {
 }
 
 .gh-list-title {
+    font-size: 3.8rem;
     color: var(--ghost-accent-color);
 }
 
-.gh-list-title {
-    font-size: 3.8rem;
-}
-
 .gh-list-item-primary-tag {
-    color: var(--ghost-accent-color) !important;
     margin-bottom: 8px;
     font-size: 1.4rem;
     font-weight: 600;
+    color: var(--ghost-accent-color) !important;
 }
 
 .gh-list-action {
@@ -130,9 +127,9 @@ body.is-font-sans {
 }
 
 .gh-list.grid.magazine .gh-list-item:first-child .gh-list-item-content {
+    max-width: 520px;
     padding: 0 30px;
     margin: 0 auto;
-    max-width: 520px;
 }
 
 .gh-list.grid.magazine .gh-list-item:first-child .gh-list-item-title {
@@ -149,9 +146,9 @@ body.is-font-sans {
 }
 
 .gh-list .gh-list-item-image img {
+    position: unset;
     height: unset;
     object-fit: unset;
-    position: unset;
 }
 
 .gh-cta-inner {

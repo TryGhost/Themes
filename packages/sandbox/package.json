@@ -54,6 +54,9 @@
                 "type": "select",
                 "options": ["Logo on the left", "Logo in the middle", "Stacked"],
                 "default": "Logo in the middle"
+            },
+            "footer_text": {
+                "type": "text"
             }
         }
     },

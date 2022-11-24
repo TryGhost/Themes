@@ -49,9 +49,9 @@
 }
 
 .gh-list-item-excerpt {
-    font-size: calc(1.55rem * var(--font-multiplier, 1));
     margin-top: 16px;
     margin-bottom: 12px;
+    font-size: calc(1.55rem * var(--font-multiplier, 1));
 }
 
 .gh-list-item-primary-tag,
@@ -71,24 +71,24 @@
 .gh-list-item-primary-author::before,
 .gh-list-item-published-at::before,
 .gh-list-item-reading-time::before {
-    margin-right: 0.35em;
     display: inline-block;
+    margin-right: 0.35em;
 }
 
 .gh-list-item-primary-tag {
     display: inline-block;
-    font-weight: 600;
     margin-bottom: 10px;
+    font-weight: 600;
 }
 
 .gh-list-item-primary-author::before {
-    content: "by";
     font-weight: 300;
+    content: "by";
 }
 
 .gh-list-item-published-at::before {
-    content: "on";
     font-weight: 300;
+    content: "on";
 }
 
 .gh-list-item-primary-author + .gh-list-item-reading-time::before,
