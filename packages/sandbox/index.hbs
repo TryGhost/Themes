@@ -2,12 +2,12 @@
 
 <main class="gh-main">
 
-    {{> "components/header" layout="wide" background="image" action=""}}
+    {{> "components/header" layout="side" background="image" action="email"}}
 
     {{!-- Variations on list layouts --}}
     {{> "components/list" 
         layout="magazine" 
-        count="5" 
+        count="all" 
         showHeader=true
         showExcerpt=true 
         showPrimaryTag=true 
@@ -18,8 +18,8 @@
 
     {{> "components/list" 
         layout="grid" 
-        count="12" 
-        columns="4"
+        count="all" 
+        columns="3"
         showHeader=true
         showExcerpt=true 
         showPrimaryTag=true 

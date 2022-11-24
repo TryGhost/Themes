@@ -33,7 +33,7 @@
             {{/if}}
         {{/if}}
 
-        <div class="gh-list-feed"{{#if columns}} style="grid-template-columns: repeat({{columns}}, 1fr);"{{/if}}>
+        <div class="gh-list-feed">
             {{#if slug}}
                 {{#get "posts" include="tags,authors" filter="tag:{{slug}}" limit=count}}
                     {{#foreach posts}}
