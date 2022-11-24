@@ -107,8 +107,9 @@ body.is-font-sans {
     text-transform: uppercase;
 }
 
-.is-font-sans .gh-list-item-image img {
-    border-radius: 16px;
+.is-font-sans .gh-list-item-image img,
+.is-font-sans .gh-article-image img {
+    border-radius: 20px;
 }
 
 .gh-list.grid:not(.magazine)[data-column="3"] .gh-list-feed {
@@ -162,8 +163,18 @@ body.is-font-sans {
 
 /* Article */
 
+.is-font-sans h1,
+.is-font-sans h2,
+.is-font-sans h3 {
+    letter-spacing: -0.025em;
+}
+
 .gh-article-header {
     text-align: center;
+}
+
+.gh-article-title {
+    font-size: 5.8rem;
 }
 
 .gh-article-meta {
@@ -174,6 +185,11 @@ body.is-font-sans {
     font-size: 1.6rem;
     font-weight: 600;
     color: var(--ghost-accent-color);
+}
+
+
+.is-font-sans .kg-image-card img {
+    border-radius: 8px;
 }
 
 /* CTA */
