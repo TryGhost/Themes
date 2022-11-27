@@ -1,5 +1,6 @@
 .gh-foot {
-    padding: 160px 0 120px;
+    padding-top: 160px;
+    padding-bottom: 120px;
     font-size: calc(1.6rem * var(--font-multiplier, 1));
     text-align: center;
 }
@@ -17,7 +18,8 @@
 .gh-foot .nav {
     display: flex;
     flex-wrap: wrap;
-    gap: 32px;
+    gap: 12px 32px;
+    justify-content: center;
     padding: 0;
     margin: 0;
     list-style-type: none;

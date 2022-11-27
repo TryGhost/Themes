@@ -14,7 +14,7 @@
     --font-sans: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
     --font-serif: Georgia, serif;
     --font-mono: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
-    --gap: 36px;
+    --gap: clamp(2rem, 1.82vw + 1.27rem, 3.6rem);
     --head-nav-gap: 28px;
 }
 
