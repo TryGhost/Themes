@@ -1,5 +1,5 @@
 :root {
-    --color-primary-text: #15171a;
+    --color-primary-text: var(--color-darker-gray);
     --color-secondary-text-dark: rgba(0, 0, 0, 0.4);
     --color-secondary-text-light: rgba(255, 255, 255, 0.64);
     --color-secondary-text: var(--color-secondary-text-dark);
