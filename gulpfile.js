@@ -53,10 +53,11 @@ function doCSS(path, done) {
 }
 
 function doJS(path, done) {
+    const version = oldPackages.includes(path) ? 'v1' : 'v2';
     pump([
         src([
-            'packages/_shared/assets/js/lib/**/*.js',
-            'packages/_shared/assets/js/main.js',
+            `packages/_shared/assets/js/${version}/lib/**/*.js`,
+            `packages/_shared/assets/js/${version}/main.js`,
             `${path}/assets/js/lib/**/*.js`,
             `${path}/assets/js/main.js`,
         ], {sourcemaps: true}),
@@ -133,12 +134,12 @@ function main(done) {
     }
     const sharedCSSWatcher_v2 = () => watch('packages/_shared/assets/css/v2/**/*.css', sharedCSS_v2);
 
-    function sharedJS(done) {
-        glob.sync('packages/*', {ignore: 'packages/_shared'}).map(path => {
+    function sharedJS_v1(done) {
+        oldPackages.map(path => {
             pump([
                 src([
-                    'packages/_shared/assets/js/lib/**/*.js',
-                    'packages/_shared/assets/js/main.js',
+                    'packages/_shared/assets/js/v1/lib/**/*.js',
+                    'packages/_shared/assets/js/v1/main.js',
                     `${path}/assets/js/lib/**/*.js`,
                     `${path}/assets/js/main.js`,
                 ], {sourcemaps: true}),
@@ -149,7 +150,25 @@ function main(done) {
             ], handleError(done));
         });
     }
-    const sharedJSWatcher = () => watch('packages/_shared/assets/js/**/*.js', sharedJS);
+    const sharedJSWatcher_v1 = () => watch('packages/_shared/assets/js/v1/**/*.js', sharedJS_v1);
+
+    function sharedJS_v2(done) {
+        glob.sync('packages/*', {ignore: ['packages/_shared', ...oldPackages]}).map(path => {
+            pump([
+                src([
+                    'packages/_shared/assets/js/v2/lib/**/*.js',
+                    'packages/_shared/assets/js/v2/main.js',
+                    `${path}/assets/js/lib/**/*.js`,
+                    `${path}/assets/js/main.js`,
+                ], {sourcemaps: true}),
+                concat('main.min.js'),
+                uglify(),
+                dest(`${path}/assets/built/`, {sourcemaps: '.'}),
+                livereload()
+            ], handleError(done));
+        });
+    }
+    const sharedJSWatcher_v2 = () => watch('packages/_shared/assets/js/v2/**/*.js', sharedJS_v2);
 
     function copyPartials(done) {
         glob.sync('packages/*', {ignore: ['packages/_shared', ...oldPackages]}).map(path => {
@@ -162,7 +181,7 @@ function main(done) {
     }
     const sharedPartialWatcher = () => watch('packages/_shared/partials/*.hbs', copyPartials);
 
-    const sharedWatcher = parallel(sharedCSSWatcher_v1, sharedCSSWatcher_v2, sharedJSWatcher, sharedPartialWatcher);
+    const sharedWatcher = parallel(sharedCSSWatcher_v1, sharedCSSWatcher_v2, sharedJSWatcher_v1, sharedJSWatcher_v2, sharedPartialWatcher);
 
     return series(parallel(...tasks), copyPartials, sharedWatcher, tasksDone => {
         tasksDone();
