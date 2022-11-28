@@ -1,13 +1,14 @@
 /* Mobile menu burger toggle */
 (function () {
-    var burger = document.querySelector('.gh-burger');
+    var head = document.querySelector('.gh-head');
+    var burger = head.querySelector('.gh-burger');
     if (!burger) return;
 
     burger.addEventListener('click', function () {
-        if (!document.body.classList.contains('is-head-open')) {
-            document.body.classList.add('is-head-open');
+        if (!head.classList.contains('is-head-open')) {
+            head.classList.add('is-head-open');
         } else {
-            document.body.classList.remove('is-head-open');
+            head.classList.remove('is-head-open');
         }
     });
 })();

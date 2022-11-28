@@ -121,7 +121,7 @@
         display: none;
     }
 
-    body:not(.is-dropdown-loaded) .gh-head-menu .nav > li {
+    .gh-head:not(.is-dropdown-loaded) .gh-head-menu .nav > li {
         opacity: 0;
     }
 }
@@ -501,7 +501,7 @@ Search                         LOGO                    Login Subscribe
         transition: opacity 0.4s;
     }
 
-    .is-head-open #gh-head {
+    .is-head-open#gh-head {
         position: fixed;
         right: 0;
         left: 0;
@@ -511,39 +511,39 @@ Search                         LOGO                    Login Subscribe
         -webkit-overflow-scrolling: touch;
     }
 
-    .is-head-open:not(.is-head-brand):not(.is-head-dark):not(.is-head-transparent) #gh-head {
+    .is-head-open:not(.is-head-brand):not(.is-head-dark):not(.is-head-transparent)#gh-head {
         background-color: var(--color-white);
     }
 
-    .is-head-open.is-head-transparent #gh-head,
-    .is-head-open:is(.is-head-transparent, .is-head-brand) #gh-head .gh-head-actions {
+    .is-head-open.is-head-transparent#gh-head,
+    .is-head-open:is(.is-head-transparent, .is-head-brand)#gh-head .gh-head-actions {
         background-color: var(--ghost-accent-color);
     }
 
-    .is-head-open.is-head-dark #gh-head,
-    .is-head-open.is-head-dark #gh-head .gh-head-actions {
+    .is-head-open.is-head-dark#gh-head,
+    .is-head-open.is-head-dark#gh-head .gh-head-actions {
         background-color: var(--color-darker-gray);
     }
 
-    .is-head-open #gh-head .gh-head-menu,
-    .is-head-open #gh-head .gh-head-actions {
+    .is-head-open#gh-head .gh-head-menu,
+    .is-head-open#gh-head .gh-head-actions {
         position: static;
         visibility: visible;
         opacity: 1;
     }
 
-    .is-head-open #gh-head .nav {
+    .is-head-open#gh-head .nav {
         display: flex;
         flex-direction: column;
     }
 
-    .is-head-open #gh-head .nav li {
+    .is-head-open#gh-head .nav li {
         opacity: 1;
         transition: transform 0.2s, opacity 0.2s;
         transform: translateY(0);
     }
 
-    .is-head-open #gh-head .gh-head-actions {
+    .is-head-open#gh-head .gh-head-actions {
         position: sticky;
         right: 0;
         bottom: 0;
@@ -556,14 +556,14 @@ Search                         LOGO                    Login Subscribe
         background-color: var(--color-white);
     }
 
-    .is-head-open #gh-head .gh-head-btn {
+    .is-head-open#gh-head .gh-head-btn {
         opacity: 1;
         transition: transform 0.4s, opacity 0.4s;
         transition-delay: 0.2s;
         transform: translateY(0);
     }
 
-    .is-head-open #gh-main {
+    .is-head-open#gh-main {
         opacity: 0;
     }
 }
