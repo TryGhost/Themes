@@ -44,17 +44,7 @@
             </section>
         {{/author}}
 
-        <div class="gh-list grid" data-column="4">
-            <div class="gh-list-feed">
-                {{#foreach posts}}
-                    {{> components/list-item
-                        showPrimaryTag=../../showPrimaryTag
-                        showExcerpt=../../showExcerpt
-                        showPrimaryAuthor=../../showPrimaryAuthor
-                        showPublishedAt=../../showPublishedAt}}
-                {{/foreach}}
-            </div>
-        </div>
+        {{> "components/list" layout="grid" column="4" showExcerpt=true showPrimaryTag=true hasPagination=true}}
 
     </div>
 </main>

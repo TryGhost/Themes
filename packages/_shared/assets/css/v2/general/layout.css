@@ -13,9 +13,19 @@
     padding-left: var(--gap);
 }
 
+.gh-outer .gh-outer {
+    padding-right: 0;
+    padding-left: 0;
+}
+
 .gh-inner {
     max-width: var(--container-width, 1200px);
     margin: 0 auto;
+}
+
+.gh-inner .gh-inner {
+    max-width: unset;
+    margin: unset;
 }
 
 /* Canvas creates a multi-column, centered grid which the post
