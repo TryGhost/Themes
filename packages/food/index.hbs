@@ -10,8 +10,7 @@
         {{> "components/header" layout="wide" background="image" action="email"}}
     {{/match}}
 
-    {{> "components/list" layout="magazine" count="5" showExcerpt=true showPrimaryTag=true hasPagination=true}}
-    {{!-- {{> "components/list" layout="magazine" count="5" showExcerpt=true showPrimaryTag=true}}
+    {{> "components/list" layout="magazine" count="5" showExcerpt=true showPrimaryTag=true}}
 
     {{#if @custom.enter_tag_slugs_for_lists}}
         {{#get "tags" filter="slug:[{{@custom.enter_tag_slugs_for_lists}}]"}}
@@ -33,7 +32,7 @@
                 {{/if}}
             {{/foreach}}
         {{/get}}
-    {{/if}} --}}
+    {{/if}}
 
     {{> "components/cta"}}
 
