@@ -23,15 +23,17 @@
             {{/foreach}}
         {{/get}}
     {{else}}
-        {{#get "tags" include="count.posts" order="count.posts desc" limit="4"}}
-            {{#foreach tags}}
-                {{#if @odd}}
-                    {{> "components/list" layout="grid" column="3" count="3" showHeader=true}}
-                {{else}}
-                    {{> "components/list" layout="grid" column="4" count="4" showHeader=true}}
-                {{/if}}
-            {{/foreach}}
-        {{/get}}
+        {{#match posts.length ">" 1}}
+            {{#get "tags" include="count.posts" order="count.posts desc" limit="4"}}
+                {{#foreach tags}}
+                    {{#if @odd}}
+                        {{> "components/list" layout="grid" column="3" count="3" showHeader=true}}
+                    {{else}}
+                        {{> "components/list" layout="grid" column="4" count="4" showHeader=true}}
+                    {{/if}}
+                {{/foreach}}
+            {{/get}}
+        {{/match}}
     {{/if}}
 
     {{> "components/cta"}}
