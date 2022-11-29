@@ -24,7 +24,7 @@
         {{/get}}
     {{else}}
         {{#match posts.length ">" 1}}
-            {{#get "tags" include="count.posts" order="count.posts desc" limit="4"}}
+            {{#get "tags" include="count.posts" order="count.posts desc" limit="3"}}
                 {{#foreach tags}}
                     {{#if @odd}}
                         {{> "components/list" layout="grid" column="3" count="3" showHeader=true}}
