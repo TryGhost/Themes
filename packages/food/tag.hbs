@@ -2,7 +2,9 @@
 
 <main class="gh-main gh-outer">
     <div class="gh-inner">
-        {{> "components/tag-header"}}
+        {{#tag}}
+            {{> "components/tag-header"}}
+        {{/tag}}
         {{> "components/list" layout="grid" column="4" showExcerpt=true showPrimaryTag=true hasPagination=true}}
     </div>
 </main>
