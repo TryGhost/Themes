@@ -48,3 +48,37 @@ body {
     font-size: 3.2rem;
     line-height: 1.4;
 }
+
+/* Podcast services */
+
+.gh-podcast-service-list {
+    display: flex;
+    gap: 64px;
+    justify-content: center;
+    padding: 64px 0;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.gh-podcast-service-list a {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 48px auto;
+    column-gap: 12px;
+    font-weight: 500;
+}
+
+.gh-podcast-service-list svg {
+    grid-row: -1 / 1;
+    width: 48px;
+    height: 48px;
+}
+
+.gh-podcast-service-list svg + span {
+    margin-top: 2px;
+    font-size: 1.2rem;
+}
+
+.gh-podcast-service-list span + span {
+    font-size: 1.8rem;
+    font-weight: 600;
+}

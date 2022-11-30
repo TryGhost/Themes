@@ -57,6 +57,18 @@
             },
             "footer_text": {
                 "type": "text"
+            },
+            "apple_podcasts_link": {
+                "type": "text",
+                "default": "https://podcasts.apple.com/"
+            },
+            "google_podcasts_link": {
+                "type": "text",
+                "default": "https://podcasts.google.com/"
+            },
+            "spotify_link": {
+                "type": "text",
+                "default": "https://open.spotify.com/"
             }
         }
     },
