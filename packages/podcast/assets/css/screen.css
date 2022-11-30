@@ -90,9 +90,10 @@ body {
 }
 
 .gh-list-item-content {
+    position: relative;
     display: flex;
     flex-direction: column;
-    position: relative;
+    margin-top: -20px;
 }
 
 .gh-list-item-published-at {
@@ -106,7 +107,7 @@ body {
 
 .gh-list-item-content::before {
     position: absolute;
-    top: calc(100% - 24px);
+    top: calc(100% - 12px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -119,8 +120,8 @@ body {
 
 .gh-list-item-content::after {
     position: relative;
-    top: 12px;
-    left: 56px;
+    top: 24px;
+    left: 60px;
     font-weight: 600;
     content: "View episode";
 }
