@@ -55,10 +55,6 @@
     box-shadow: 0 0 0 1px var(--color-border);
 }
 
-.gh-header-input[data-ghost-search] {
-    padding-right: 8px;
-}
-
 .gh-header-input span {
     display: flex;
     align-items: center;

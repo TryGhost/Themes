@@ -31,7 +31,7 @@ headings, text, images and lists. We deal with cards lower down. */
 /* Add back a top margin to all headings, unless a heading
 is the very first element in the post content */
 .gh-content > [id]:not(:first-child) {
-    margin-top: calc(1.6em * var(--content-spacing-multiplier, 1));
+    margin-top: calc(2.4em * var(--content-spacing-multiplier, 1));
 }
 
 /* Add a small margin between a heading and anything after it */
