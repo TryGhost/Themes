@@ -130,9 +130,18 @@ blockquote.kg-blockquote-alt {
 /* Product
 /* ---------------------------------------------------------- */
 
-.is-font-serif .kg-product-card .kg-product-card-title,
-.is-font-serif .kg-product-card .kg-product-card-description :is(p, ul, ol),
-.is-font-serif .kg-product-card .kg-product-card-button {
+.kg-product-card.kg-card .kg-product-card-image {
+    margin-bottom: 12px;
+}
+
+.kg-product-card.kg-card a.kg-product-card-button {
+    height: 2.8em;
+    margin-top: 12px;
+}
+
+.is-font-serif .kg-product-card.kg-card .kg-product-card-title,
+.is-font-serif .kg-product-card.kg-card .kg-product-card-description :is(p, ul, ol),
+.is-font-serif .kg-product-card.kg-card .kg-product-card-button {
     font-family: var(--font-serif);
 }
 

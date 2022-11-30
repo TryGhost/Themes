@@ -192,10 +192,6 @@ body.is-font-sans {
     color: var(--ghost-accent-color);
 }
 
-.is-font-sans .kg-image-card img {
-    border-radius: 8px;
-}
-
 /* CTA */
 
 .gh-cta-inner {
@@ -233,10 +229,18 @@ body.is-font-sans {
     border-radius: 0;
 }
 
+.is-font-sans .kg-product-card-image {
+    border-radius: 8px;
+}
+
 .is-font-sans .kg-product-card .kg-product-card-button {
     border-radius: 32px;
 }
 
 .is-font-serif .kg-product-card .kg-product-card-button {
     border-radius: 0;
+}
+
+.is-font-sans .kg-image-card img {
+    border-radius: 16px;
 }
