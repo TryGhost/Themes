@@ -82,3 +82,45 @@ body {
     font-size: 1.8rem;
     font-weight: 600;
 }
+
+/* Post list */
+
+.gh-list {
+    margin-top: 120px;
+}
+
+.gh-list-item-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.gh-list-item-published-at {
+    order: -1;
+    margin-bottom: 12px;
+}
+
+.gh-list-item-published-at::before {
+    display: none;
+}
+
+.gh-list-item-content::before {
+    position: absolute;
+    top: calc(100% - 24px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32' style='margin-top: 3px' fill='#fff'%3E%3Cpath d='M10.667 6.853v18.667l14.667-9.333-14.667-9.333z'%3E%3C/path%3E%3C/svg%3E");
+    background-color: var(--ghost-accent-color);
+    border-radius: 50%;
+}
+
+.gh-list-item-content::after {
+    position: relative;
+    top: 12px;
+    left: 56px;
+    font-weight: 600;
+    content: "View episode";
+}

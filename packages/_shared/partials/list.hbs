@@ -13,7 +13,7 @@
     * hasPagination (true, false)
 --}}
 
-<div class="gh-list{{#match layout "magazine"}} grid magazine{{else match layout "grid"}} grid{{/match}} gh-outer" data-column="{{column}}">
+<div class="gh-list{{#match layout "magazine"}} grid magazine{{else match layout "grid"}} grid{{else match layout "simple"}} simple{{/match}} gh-outer" data-column="{{column}}">
     <div class="gh-list-inner gh-inner">
 
         {{#if showHeader}}

@@ -151,6 +151,28 @@
     line-height: 1.1;
 }
 
+/* Simple layout */
+
+.gh-list.simple .gh-list-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+.gh-list.simple .gh-list-item-inner {
+    flex-direction: row;
+    gap: 48px;
+    align-items: center;
+}
+
+.gh-list.simple .gh-list-item-inner > * {
+    flex: 1;
+}
+
+.gh-list.simple .gh-list-item-title {
+    font-size: calc(3.2rem * var(--font-multiplier, 1));
+}
+
 /* Media queries */
 
 @media (max-width: 767px) {
