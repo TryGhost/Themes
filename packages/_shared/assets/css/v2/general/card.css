@@ -125,6 +125,7 @@ blockquote.kg-blockquote-alt {
 figcaption {
     margin-top: 12px;
     font-size: 1.4rem;
+    text-align: center;
 }
 
 .kg-card.kg-width-full figcaption {
@@ -132,5 +133,6 @@ figcaption {
 }
 
 figcaption a {
-    color: var(--color-darker-gray);
+    color: var(--ghost-accent-color);
+    text-decoration: underline;
 }
