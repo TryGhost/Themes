@@ -220,7 +220,7 @@ body.is-font-sans {
 
 /* Archive */
 
-.is-font-sans .tag-template .gh-archive-image img {
+.is-font-sans.tag-template .gh-archive-image img {
     border-radius: 16px;
 }
 
