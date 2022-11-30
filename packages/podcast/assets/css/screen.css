@@ -1,1 +1,50 @@
 @import "@tryghost/shared-theme-assets/assets/css/v2/screen.css";
+
+@font-face {
+    font-family: "Mona Sans";
+    font-weight: 200 900;
+    font-stretch: 75% 125%;
+    src:
+        url("/assets/fonts/Mona-Sans.woff2") format("woff2 supports variations"),
+        url("/assets/fonts/Mona-Sans.woff2") format("woff2-variations");
+}
+
+:root {
+    --font-sans: "Mona Sans", sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+/* Header */
+
+.gh-header {
+    padding: 0;
+}
+
+.gh-header.has-background-image::before {
+    display: none;
+}
+
+.gh-header.has-background-image .gh-header-image {
+    position: static;
+    margin-top: 40px;
+}
+
+.gh-header-content {
+    margin-top: 120px;
+}
+
+.gh-header-image + .gh-header-content {
+    margin-top: 72px;
+}
+
+.gh-header[class*="has-background"] .gh-header-primary {
+    color: var(--color-darker-gray);
+}
+
+.gh-header-image + .gh-header-content .gh-header-primary {
+    font-size: 3.2rem;
+    line-height: 1.4;
+}

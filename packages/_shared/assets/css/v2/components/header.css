@@ -1,4 +1,7 @@
 .gh-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding-top: clamp(8rem, 13.64vw + 2.55rem, 20rem);
     padding-bottom: clamp(8rem, 13.64vw + 2.55rem, 20rem);
 }
