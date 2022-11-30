@@ -9,6 +9,14 @@ except for when immediately preceeded by a heading */
     margin-top: calc(2em * var(--content-spacing-multiplier, 1));
 }
 
+.gh-content :not(.kg-card):not([id]) + .kg-card:is(.kg-width-wide, .kg-width-full) {
+    margin-top: calc(4em * var(--content-spacing-multiplier, 1));
+}
+
+.gh-content .kg-card:is(.kg-width-wide, .kg-width-full) + :not(.kg-card):not([id]) {
+    margin-top: calc(4em * var(--content-spacing-multiplier, 1));
+}
+
 /* Image
 /* ---------------------------------------------------------- */
 

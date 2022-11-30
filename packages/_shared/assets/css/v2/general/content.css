@@ -43,12 +43,12 @@ is the very first element in the post content */
 .gh-content > hr,
 .gh-content > blockquote {
     position: relative;
-    margin-top: calc(2.4em * var(--content-spacing-multiplier, 1));
+    margin-top: calc(3.2em * var(--content-spacing-multiplier, 1));
 }
 
 .gh-content > hr + *,
 .gh-content > blockquote + * {
-    margin-top: calc(2.4em * var(--content-spacing-multiplier, 1));
+    margin-top: calc(3.2em * var(--content-spacing-multiplier, 1));
 }
 
 /* Now the content typography styles */
