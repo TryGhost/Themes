@@ -222,3 +222,21 @@ body.is-font-sans {
 .is-font-sans .tag-template .gh-archive-image img {
     border-radius: 16px;
 }
+
+/* Cards */
+
+.is-font-sans .kg-product-card-container {
+    border-radius: 16px;
+}
+
+.is-font-serif .kg-product-card-container {
+    border-radius: 0;
+}
+
+.is-font-sans .kg-product-card .kg-product-card-button {
+    border-radius: 32px;
+}
+
+.is-font-serif .kg-product-card .kg-product-card-button {
+    border-radius: 0;
+}

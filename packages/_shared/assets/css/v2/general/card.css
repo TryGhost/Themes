@@ -127,6 +127,15 @@ blockquote.kg-blockquote-alt {
     border-radius: 0 0.2em 0.2em 0;
 }
 
+/* Product
+/* ---------------------------------------------------------- */
+
+.is-font-serif .kg-product-card .kg-product-card-title,
+.is-font-serif .kg-product-card .kg-product-card-description :is(p, ul, ol),
+.is-font-serif .kg-product-card .kg-product-card-button {
+    font-family: var(--font-serif);
+}
+
 /* Caption
 /* ---------------------------------------------------------- */
 
