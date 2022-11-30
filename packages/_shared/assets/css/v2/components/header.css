@@ -51,7 +51,7 @@
     cursor: pointer;
     background-color: var(--color-white);
     border: 0;
-    border-radius: 32px;
+    border-radius: 48px;
     box-shadow: 0 0 0 1px var(--color-border);
 }
 

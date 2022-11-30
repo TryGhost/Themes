@@ -55,12 +55,6 @@ body.is-font-sans {
     line-height: 1em;
 }
 
-.gh-header-input {
-    max-width: 560px;
-    height: 68px;
-    padding-left: 24px;
-}
-
 .is-font-serif .gh-header-input {
     font-family: var(--font-serif);
     font-size: 2.2rem;
@@ -115,6 +109,17 @@ body.is-font-sans {
 }
 
 @media (min-width: 1200px) {
+    .gh-header-input {
+        max-width: 560px;
+        height: 68px;
+        padding-right: 6px;
+        padding-left: 24px;
+    }
+
+    .gh-header-input span {
+        height: calc(100% - 12px);
+    }
+
     .gh-list.grid:not(.magazine)[data-column="3"] .gh-list-feed {
         grid-template-columns: repeat(4, 1fr);
     }
