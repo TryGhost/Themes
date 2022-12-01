@@ -18,15 +18,38 @@ body {
     background-color: var(--background-color);
 }
 
+.is-font-narrow {
+    font-variation-settings: "wdth" 100;
+}
+
 :is(h1, h2, h3, h4, h5, h6) {
     font-variation-settings: "wdth" 125;
     font-weight: 800;
+}
+
+.is-font-narrow :is(h1, h2, h3, h4, h5, h6) {
+    font-variation-settings: "wdth" 75;
+    font-weight: 600;
 }
 
 .gh-btn {
     --multiplier: 1.2;
 
     border-radius: 0;
+}
+
+.is-font-narrow .gh-btn {
+    --multiplier: 0.85;
+
+    font-size: 1.9rem;
+    font-variation-settings: "wdth" 80;
+}
+
+/* Navbar */
+
+.is-font-narrow .gh-head-logo {
+    font-size: 2.8rem;
+    font-variation-settings: "wdth" 80;
 }
 
 /* Header */
@@ -47,6 +70,13 @@ body {
     --font-multiplier: 0.8;
 
     line-height: 1.3;
+}
+
+.is-font-narrow .gh-header-primary {
+    --font-multiplier: 1.2;
+
+    font-weight: 600;
+    line-height: 1.15;
 }
 
 /* Podcast services */
@@ -100,6 +130,10 @@ body {
     border: 4px solid var(--color-darker-gray);
 }
 
+.is-font-narrow .gh-list-item-inner {
+    border-width: 2px;
+}
+
 .gh-list-item-image {
     flex: unset !important;
     width: 260px;
@@ -128,6 +162,13 @@ body {
     font-weight: 800;
 }
 
+.is-font-narrow .gh-list-item-title {
+    --font-multiplier: 1.3;
+
+    font-weight: 650;
+    line-height: 1.05;
+}
+
 .gh-list-item-excerpt {
     display: -webkit-box;
     margin-top: 10px;
@@ -136,27 +177,6 @@ body {
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
-
-/* .gh-list-item-content::before {
-    position: absolute;
-    top: calc(100% - 12px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 48px;
-    height: 48px;
-    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32' style='margin-top: 3px' fill='#fff'%3E%3Cpath d='M10.667 6.853v18.667l14.667-9.333-14.667-9.333z'%3E%3C/path%3E%3C/svg%3E");
-    background-color: var(--ghost-accent-color);
-    border-radius: 50%;
-}
-
-.gh-list-item-content::after {
-    position: relative;
-    top: 24px;
-    left: 60px;
-    font-weight: 600;
-    content: "View episode";
-} */
 
 .gh-list-item-content::before {
     position: absolute;
@@ -181,7 +201,18 @@ body {
     background-color: var(--ghost-accent-color);
 }
 
+.is-font-narrow .gh-list-item-content::after {
+    font-size: 1.8rem;
+    font-variation-settings: "wdth" 80;
+}
+
 /* CTA */
+
+.is-font-narrow .gh-cta-title {
+    --font-multiplier: 1.4;
+
+    font-weight: 600;
+}
 
 .gh-cta-input {
     padding-right: 0;
@@ -191,4 +222,9 @@ body {
 .gh-cta-input span {
     height: 100%;
     border-radius: 0;
+}
+
+.is-font-narrow .gh-cta-input span {
+    font-size: 1.8rem;
+    font-variation-settings: "wdth" 80;
 }

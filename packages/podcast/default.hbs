@@ -36,7 +36,7 @@
     {{ghost_head}}
 </head>
 
-<body class="{{body_class}}{{{block "body_class"}}} is-font-sans">
+<body class="{{body_class}}{{{block "body_class"}}} is-font-sans{{#match @custom.style "Narrow"}} is-font-narrow{{/match}}">
 <div class="gh-site">
 
     {{#is "home"}}

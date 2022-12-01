@@ -43,7 +43,7 @@
         "custom": {
             "style": {
                 "type": "select",
-                "options": ["Thin", "Wide"],
+                "options": ["Wide", "Narrow"],
                 "default": "Wide"
             },
             "background_color": {
