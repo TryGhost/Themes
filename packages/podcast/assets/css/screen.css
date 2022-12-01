@@ -73,7 +73,7 @@ body {
 }
 
 .is-font-narrow .gh-header-primary {
-    --font-multiplier: 1.2;
+    --font-multiplier: 1.1;
 
     font-weight: 600;
     line-height: 1.15;
