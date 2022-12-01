@@ -31,41 +31,16 @@ body {
 
 /* Header */
 
-/* .gh-header {
-    padding: 0;
-}
-
-.gh-header.has-background-image::before {
-    display: none;
-}
-
-.gh-header.has-background-image .gh-header-image {
-    position: static;
-    margin-top: 40px;
-} */
-
-/* .gh-header-content {
-    margin-top: 120px;
-} */
-
-/* .gh-header-image + .gh-header-content {
-    margin-top: 72px;
-}
-
-.gh-header[class*="has-background"] .gh-header-primary {
-    color: var(--color-darker-gray);
-}
-
-.gh-header-image + .gh-header-content .gh-header-primary {
-    font-size: 3.2rem;
-    line-height: 1.4;
-} */
-
 .gh-header {
     justify-content: flex-end;
     min-height: calc(100vh - 100px - 177px);
     padding-bottom: 64px;
     margin-bottom: 0 !important;
+}
+
+.gh-header.has-background-image::before {
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6));
+    opacity: 1;
 }
 
 .gh-header-primary {
