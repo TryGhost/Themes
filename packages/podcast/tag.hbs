@@ -1,0 +1,10 @@
+{{!< default}}
+
+<main class="gh-main gh-outer">
+    <div class="gh-inner">
+        {{#tag}}
+            {{> "components/tag-header"}}
+        {{/tag}}
+        {{> "components/list" layout="simple" showExcerpt=true showPublishedAt=true hasPagination=true}}
+    </div>
+</main>
