@@ -28,12 +28,12 @@
     height: 52px;
     padding: 0 4px 0 20px;
     margin-top: 32px;
-    color: var(--color-secondary-text-dark);
+    line-height: 1;
+    color: var(--color-secondary-text);
     cursor: pointer;
-    background-color: var(--color-white);
+    background-color: var(--color-border);
     border: 0;
     border-radius: 32px;
-    box-shadow: 0 0 0 1px var(--color-border);
 }
 
 .gh-cta-input span {
@@ -43,6 +43,7 @@
     height: calc(100% - 8px);
     padding: 0 16px;
     font-weight: 600;
+    line-height: 1;
     color: #fff;
     background-color: var(--ghost-accent-color);
     border-radius: 32px;

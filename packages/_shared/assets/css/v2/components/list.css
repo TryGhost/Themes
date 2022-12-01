@@ -8,10 +8,6 @@
     gap: 40px;
 }
 
-.gh-list-item {
-    line-height: 1.45em;
-}
-
 .gh-list-header {
     display: flex;
     gap: 8px;
@@ -51,7 +47,7 @@
 .gh-list-item-excerpt {
     margin-top: 16px;
     margin-bottom: 12px;
-    font-size: calc(1.55rem * var(--font-multiplier, 1));
+    font-size: calc(1.5rem * var(--font-multiplier, 1));
 }
 
 .gh-list-item-primary-tag,

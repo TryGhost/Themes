@@ -6,7 +6,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    font-size: calc(1.4rem * var(--font-multiplier, 1));
+    font-size: calc(1.5rem * var(--font-multiplier, 1));
 }
 
 .gh-article-meta:not(:empty) {
@@ -62,11 +62,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 40px;
+    margin-bottom: 48px;
+}
+
+.gh-article-comments-title {
+    font-size: calc(2.6rem * var(--font-multiplier, 1));
 }
 
 .gh-article-comments .gh-article-comments-title {
-    margin-bottom: 28px;
+    margin-bottom: 48px;
 }
 
 .gh-article-comments-header .gh-article-comments-title {

@@ -1,27 +1,21 @@
 @import "@tryghost/shared-theme-assets/assets/css/v2/screen.css";
 
 :root {
-    --font-serif: Cormorant, serif;
-    --font-sans-serif: Poppins, sans-serif;
+    --font-serif: EB Garamond, serif;
+    --font-sans: Poppins, sans-serif;
 }
 
 body {
     background-color: var(--background-color);
 }
 
-body.is-font-sans {
-    font-family: var(--font-sans-serif);
-}
-
 .is-font-serif {
-    --font-multiplier: 1.15;
+    --font-multiplier: 1.1;
+
+    font-family: var(--font-serif);
 }
 
 /* Navbar */
-
-.is-font-serif .gh-head-menu {
-    font-weight: 600;
-}
 
 .is-font-serif .gh-head-btn {
     font-family: var(--font-serif);
@@ -52,7 +46,8 @@ body.is-font-sans {
 }
 
 .is-font-serif .gh-header-primary {
-    line-height: 1em;
+    font-weight: 500;
+    letter-spacing: -0.015em;
 }
 
 .is-font-serif .gh-header-input {
@@ -91,9 +86,12 @@ body.is-font-sans {
 
 .gh-list-item-primary-tag {
     margin-bottom: 8px;
-    font-size: 1.4rem;
     font-weight: 600;
-    color: var(--ghost-accent-color) !important;
+    color: var(--ghost-accent-color);
+}
+
+.is-font-serif .gh-list-item-primary-tag {
+    --font-multiplier: 1.2;
 }
 
 .gh-list-action {
@@ -157,8 +155,10 @@ body.is-font-sans {
     line-height: 1;
 }
 
-.gh-list.grid.magazine .gh-list-item:first-child .gh-list-item-excerpt {
-    font-size: 1.6rem;
+.is-font-serif .gh-list.grid.magazine .gh-list-item:first-child .gh-list-item-excerpt {
+    --font-multiplier: 1.25;
+
+    line-height: 1.4;
 }
 
 .gh-list .gh-list-item-image {
@@ -192,7 +192,6 @@ body.is-font-sans {
 }
 
 .gh-article-meta-tag {
-    font-size: 1.6rem;
     font-weight: 600;
     color: var(--ghost-accent-color);
 }
@@ -248,4 +247,8 @@ body.is-font-sans {
 
 .is-font-sans .kg-image-card img {
     border-radius: 16px;
+}
+
+.is-font-serif figcaption {
+    --font-multiplier: 1.15;
 }

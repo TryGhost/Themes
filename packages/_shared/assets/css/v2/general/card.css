@@ -150,7 +150,7 @@ blockquote.kg-blockquote-alt {
 
 figcaption {
     margin-top: 12px;
-    font-size: 1.4rem;
+    font-size: calc(1.4rem * var(--font-multiplier, 1));
     text-align: center;
 }
 
