@@ -39,7 +39,11 @@
 <body class="{{body_class}}{{{block "body_class"}}} is-font-sans">
 <div class="gh-site">
 
-    {{> "components/navbar" navigationLayout=@custom.navigation_layout}}
+    {{#is "home"}}
+        {{> "components/navbar" navigationLayout=@custom.navigation_layout isTransparent=true}}
+    {{else}}
+        {{> "components/navbar" navigationLayout=@custom.navigation_layout}}
+    {{/is}}
 
     {{{body}}}
 

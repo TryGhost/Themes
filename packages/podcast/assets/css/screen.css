@@ -33,7 +33,7 @@ body {
 
 .gh-header {
     justify-content: flex-end;
-    min-height: calc(100vh - 100px - 177px);
+    min-height: var(--header-height, calc(100vh - 177px));
     padding-bottom: 64px;
     margin-bottom: 0 !important;
 }
