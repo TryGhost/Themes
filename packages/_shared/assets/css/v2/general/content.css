@@ -28,6 +28,10 @@ headings, text, images and lists. We deal with cards lower down. */
     letter-spacing: -0.01em;
 }
 
+.gh-content > *:first-child {
+    margin-top: 0 !important;
+}
+
 /* Add back a top margin to all headings, unless a heading
 is the very first element in the post content */
 .gh-content > [id]:not(:first-child) {
@@ -42,6 +46,7 @@ is the very first element in the post content */
 /* A larger margin before/after HRs and blockquotes */
 .gh-content > hr,
 .gh-content > blockquote,
+.gh-content > iframe,
 .gh-content > .kg-product-card {
     position: relative;
     margin-top: calc(3.2em * var(--content-spacing-multiplier, 1)) !important;
@@ -49,6 +54,7 @@ is the very first element in the post content */
 
 .gh-content > hr + *,
 .gh-content > blockquote + *,
+.gh-content > iframe + *,
 .gh-content > .kg-product-card + * {
     margin-top: calc(3.2em * var(--content-spacing-multiplier, 1)) !important;
 }
