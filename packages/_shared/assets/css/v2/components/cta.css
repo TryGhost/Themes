@@ -27,13 +27,16 @@
     max-width: 480px;
     height: 52px;
     padding: 0 4px 0 20px;
-    margin-top: 32px;
     line-height: 1;
     color: var(--color-secondary-text);
     cursor: pointer;
     background-color: var(--color-border);
     border: 0;
     border-radius: 32px;
+}
+
+.gh-cta-title + .gh-cta-input {
+    margin-top: 32px;
 }
 
 .gh-cta-input span {

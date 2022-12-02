@@ -55,6 +55,10 @@
                 "options": ["Logo on the left", "Logo in the middle", "Stacked"],
                 "default": "Logo in the middle"
             },
+            "email_signup_text": {
+                "type": "text",
+                "default": "Get the latest weekly! No spam, just food"
+            },
             "footer_text": {
                 "type": "text"
             },

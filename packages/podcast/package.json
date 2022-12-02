@@ -55,6 +55,10 @@
                 "options": ["Logo on the left", "Logo in the middle", "Stacked"],
                 "default": "Logo on the left"
             },
+            "email_signup_text": {
+                "type": "text",
+                "default": "Get the latest episodes in your inbox directly"
+            },
             "footer_text": {
                 "type": "text"
             },
