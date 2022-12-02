@@ -3,6 +3,13 @@
 <main class="gh-main">
     {{> "components/header" layout="wide" background="image"}}
     {{> "podcast-services"}}
+    <section class="gh-archive gh-outer">
+        <div class="gh-archive-inner gh-inner">
+            <header class="gh-archive-header">
+                <h1 class="gh-archive-title">Latest episodes</h1>
+            </header>
+        </div>
+    </section>
     {{> "components/list" layout="simple" count="3" showExcerpt=true showPublishedAt=true}}
     {{#match pagination.pages ">" 1}}
         <div class="gh-more gh-outer">

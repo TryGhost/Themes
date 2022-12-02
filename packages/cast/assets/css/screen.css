@@ -149,10 +149,6 @@ body:not(.post-template):not(.page-template) {
 
 /* Post list */
 
-.home-template .gh-list {
-    margin-top: clamp(6.4rem, 4.09vw + 4.76rem, 10rem);
-}
-
 .gh-list-item-inner {
     gap: 40px !important;
     padding: 24px;
@@ -286,5 +282,9 @@ body:not(.post-template):not(.page-template) {
 /* Archive */
 
 .gh-archive {
-    margin-bottom: 56px;
+    margin-bottom: 48px;
+}
+
+.gh-podcast-service-list + .gh-archive {
+    margin-top: clamp(6.4rem, 4.09vw + 4.76rem, 10rem);
 }
