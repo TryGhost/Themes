@@ -40,9 +40,17 @@
 <div class="gh-site">
 
     {{#is "home"}}
-        {{> "components/navbar" navigationLayout=@custom.navigation_layout fullWidth=true isTransparent=true}}
+        {{#if @site.cover_image}}
+            {{> "components/navbar" navigationLayout=@custom.navigation_layout fullWidth=true isTransparent=true}}
+        {{else}}
+            {{> "components/navbar" navigationLayout=@custom.navigation_layout}}
+        {{/if}}
     {{else}}
-        {{> "components/navbar" navigationLayout=@custom.navigation_layout fullWidth=true}}
+        {{#if @site.cover_image}}
+            {{> "components/navbar" navigationLayout=@custom.navigation_layout fullWidth=true}}
+        {{else}}
+            {{> "components/navbar" navigationLayout=@custom.navigation_layout}}
+        {{/if}}
     {{/is}}
 
     {{{body}}}
