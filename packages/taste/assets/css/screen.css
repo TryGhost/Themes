@@ -106,6 +106,20 @@ body {
     border-radius: 20px;
 }
 
+@media (min-width: 768px) {
+    .gh-list-item.no-image .gh-list-item-inner {
+        height: 100%;
+        padding: 0 32px;
+        border-right: 1px solid var(--color-border);
+        border-left: 1px solid var(--color-border);
+    }
+
+    .gh-list-item.no-image + .gh-list-item.no-image .gh-list-item-inner {
+        padding-left: 0;
+        border-left: 0;
+    }
+}
+
 @media (min-width: 1200px) {
     .gh-header-input {
         max-width: 560px;
