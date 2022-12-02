@@ -70,6 +70,14 @@ body:not(.post-template):not(.page-template) {
     opacity: 1;
 }
 
+.gh-header-inner {
+    max-width: 1200px;
+}
+
+.gh-header-content {
+    max-width: unset;
+}
+
 .gh-header-primary {
     --font-multiplier: 0.8;
 

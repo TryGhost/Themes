@@ -40,9 +40,9 @@
 <div class="gh-site">
 
     {{#is "home"}}
-        {{> "components/navbar" navigationLayout=@custom.navigation_layout isTransparent=true}}
+        {{> "components/navbar" navigationLayout=@custom.navigation_layout fullWidth=true isTransparent=true}}
     {{else}}
-        {{> "components/navbar" navigationLayout=@custom.navigation_layout}}
+        {{> "components/navbar" navigationLayout=@custom.navigation_layout fullWidth=true}}
     {{/is}}
 
     {{{body}}}
