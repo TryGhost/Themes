@@ -145,6 +145,26 @@ blockquote.kg-blockquote-alt {
     font-family: var(--font-serif);
 }
 
+/* File
+/* ---------------------------------------------------------- */
+
+.kg-file-card.kg-card .kg-file-card-container {
+    padding: 0.6em;
+}
+
+.kg-file-card.kg-card .kg-file-card-contents {
+    margin: 4px 8px 6px;
+}
+
+.kg-file-card.kg-card .kg-file-card-metadata {
+    font-size: 0.9em;
+}
+
+.kg-file-card.kg-card .kg-file-card-filesize::before {
+    margin-right: 6px;
+    margin-left: 6px;
+}
+
 /* Caption
 /* ---------------------------------------------------------- */
 
