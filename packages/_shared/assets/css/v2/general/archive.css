@@ -1,8 +1,12 @@
 .gh-archive {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.gh-archive-inner {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 48px;
-    margin: 80px 0;
 }
 
 .gh-archive-header {

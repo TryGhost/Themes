@@ -22,6 +22,10 @@ body {
     font-variation-settings: "wdth" 100;
 }
 
+body:not(.post-template):not(.page-template) {
+    --container-width: 960px;
+}
+
 :is(h1, h2, h3, h4, h5, h6) {
     font-variation-settings: "wdth" 125;
     font-weight: 800;
@@ -86,7 +90,7 @@ body {
     gap: 64px;
     justify-content: center;
     padding: 64px 0;
-    background-color: var(--color-darker-gray);
+    background-color: #15171a;
 }
 
 .gh-podcast-service-list a {
@@ -95,7 +99,7 @@ body {
     grid-template-columns: 48px auto;
     column-gap: 16px;
     font-weight: 500;
-    color: var(--color-white);
+    color: #fff;
 }
 
 .gh-podcast-service-list svg {
@@ -116,12 +120,8 @@ body {
 
 /* Post list */
 
-.gh-list {
+.home-template .gh-list {
     margin-top: 100px;
-}
-
-.gh-list-inner {
-    max-width: 960px;
 }
 
 .gh-list-item-inner {
@@ -206,6 +206,12 @@ body {
     font-variation-settings: "wdth" 80;
 }
 
+.gh-more {
+    margin-top: 48px;
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
 /* CTA */
 
 .is-font-narrow .gh-cta-title {
@@ -227,4 +233,10 @@ body {
 .is-font-narrow .gh-cta-input span {
     font-size: 1.8rem;
     font-variation-settings: "wdth" 80;
+}
+
+/* Archive */
+
+.gh-archive {
+    margin-bottom: 56px;
 }

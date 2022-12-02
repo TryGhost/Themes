@@ -1,0 +1,15 @@
+{{!< default}}
+
+<main class="gh-main">
+    {{> "components/header" layout="wide" background="image"}}
+    {{> "podcast-services"}}
+    {{> "components/list" layout="simple" count="3" showExcerpt=true showPublishedAt=true}}
+    {{#match pagination.pages ">" 1}}
+        <div class="gh-more gh-outer">
+            <div class="gh-inner">
+                <a href="/page/2">All episodes →</a>
+            </div>
+        </div>
+    {{/match}}
+    {{> "components/cta"}}
+</main>
