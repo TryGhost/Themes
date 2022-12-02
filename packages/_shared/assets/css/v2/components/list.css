@@ -152,7 +152,7 @@
 .gh-list.simple .gh-list-feed {
     display: flex;
     flex-direction: column;
-    gap: 64px;
+    gap: clamp(3.2rem, 3.64vw + 1.75rem, 6.4rem);
 }
 
 .gh-list.simple .gh-list-item-inner {
@@ -179,5 +179,9 @@
 
     .gh-list.grid.magazine .gh-list-item:first-child .gh-list-item-inner {
         display: flex;
+    }
+
+    .gh-list.simple .gh-list-item-inner {
+        flex-direction: column;
     }
 }

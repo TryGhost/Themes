@@ -61,7 +61,7 @@ body:not(.post-template):not(.page-template) {
 .gh-header {
     justify-content: flex-end;
     min-height: var(--header-height, calc(100vh - 177px));
-    padding-bottom: 64px;
+    padding-bottom: clamp(3.2rem, 3.64vw + 1.75rem, 6.4rem);
     margin-bottom: 0 !important;
 }
 
@@ -118,10 +118,31 @@ body:not(.post-template):not(.page-template) {
     font-weight: 600;
 }
 
+@media (max-width: 767px) {
+    .gh-podcast-service-list {
+        gap: 40px;
+        padding: 32px 0;
+    }
+
+    .gh-podcast-service-list a {
+        display: block;
+        font-size: 0;
+    }
+
+    .gh-podcast-service-list svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .gh-podcast-service-list span {
+        display: none;
+    }
+}
+
 /* Post list */
 
 .home-template .gh-list {
-    margin-top: 100px;
+    margin-top: clamp(6.4rem, 4.09vw + 4.76rem, 10rem);
 }
 
 .gh-list-item-inner {
@@ -144,7 +165,7 @@ body:not(.post-template):not(.page-template) {
     position: relative;
     display: flex;
     flex-direction: column;
-    padding-bottom: 56px;
+    padding-bottom: 64px;
 }
 
 .gh-list-item-published-at {
@@ -180,7 +201,7 @@ body:not(.post-template):not(.page-template) {
 
 .gh-list-item-content::before {
     position: absolute;
-    top: calc(100% - 32px);
+    top: calc(100% - 40px);
     left: 16px;
     z-index: 10;
     font-size: 0;
@@ -189,7 +210,7 @@ body:not(.post-template):not(.page-template) {
 
 .gh-list-item-content::after {
     position: absolute;
-    top: calc(100% - 40px);
+    top: calc(100% - 48px);
     display: flex;
     align-items: center;
     height: 48px;
@@ -210,6 +231,12 @@ body:not(.post-template):not(.page-template) {
     margin-top: 48px;
     font-size: 2.4rem;
     font-weight: 700;
+}
+
+@media (max-width: 767px) {
+    .gh-list-item-image {
+        width: 100%;
+    }
 }
 
 /* CTA */
