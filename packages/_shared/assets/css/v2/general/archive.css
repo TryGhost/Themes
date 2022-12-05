@@ -58,3 +58,9 @@
 .gh-archive-social a[href*="twitter"] {
     font-size: 0;
 }
+
+@media (max-width: 767px) {
+    .gh-archive-inner {
+        grid-template-columns: 1fr;
+    }
+}
