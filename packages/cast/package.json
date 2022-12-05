@@ -64,15 +64,18 @@
             },
             "apple_podcasts_link": {
                 "type": "text",
-                "default": "https://podcasts.apple.com/"
+                "default": "https://podcasts.apple.com/",
+                "group": "homepage"
             },
             "google_podcasts_link": {
                 "type": "text",
-                "default": "https://podcasts.google.com/"
+                "default": "https://podcasts.google.com/",
+                "group": "homepage"
             },
             "spotify_link": {
                 "type": "text",
-                "default": "https://open.spotify.com/"
+                "default": "https://open.spotify.com/",
+                "group": "homepage"
             }
         }
     },

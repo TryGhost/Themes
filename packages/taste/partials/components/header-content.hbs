@@ -8,7 +8,12 @@
         {{/match}}
 
         <div class="gh-header-content">
-            <h1 class="gh-header-primary">{{@site.description}}</h1>
+            {{#if primary}}
+                <h1 class="gh-header-primary">{{primary}}</h1>
+            {{/if}}
+            {{#if secondary}}
+                <p class="gh-header-secondary">{{secondary}}</p>
+            {{/if}}
             {{#match action "button"}}
                 <a class="gh-header-action gh-header-button gh-btn" href="#">Learn more</a>
             {{else match action "email"}}

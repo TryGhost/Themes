@@ -62,6 +62,16 @@
             "footer_text": {
                 "type": "text"
             },
+            "primary_header": {
+                "type": "text",
+                "default": "Recipes you can make under 15 minutes",
+                "group": "homepage"
+            },
+            "secondary_header": {
+                "type": "text",
+                "default": "Subscribe below to receive the latest recipes directly in your inbox",
+                "group": "homepage"
+            },
             "main_action": {
                 "type": "select",
                 "options": ["Subscribe", "Search", "No action"],

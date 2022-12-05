@@ -32,6 +32,14 @@
     line-height: 1.1;
 }
 
+.gh-header-secondary {
+    font-size: calc(2.4rem * var(--font-multiplier, 1));
+}
+
+.gh-header-primary + .gh-header-secondary {
+    margin-top: 20px;
+}
+
 .gh-header-action {
     margin-top: 40px;
 }
@@ -93,7 +101,7 @@
     z-index: 20;
 }
 
-.gh-header[class*="has-background"] .gh-header-primary {
+.gh-header[class*="has-background"] :is(.gh-header-primary, .gh-header-secondary) {
     color: #fff;
 }
 
