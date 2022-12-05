@@ -110,14 +110,14 @@
 
 .gh-list.grid .gh-list-feed {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 64px 48px;
 }
 
 /* 2-column grid layout */
 
 .gh-list.grid:not(.magazine)[data-column="2"] .gh-list-feed {
-    grid-template-columns: repeat(auto-fit, minmax(560px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .gh-list.grid:not(.magazine)[data-column="2"] .gh-list-item-title {
@@ -127,7 +127,7 @@
 /* 3-column grid layout */
 
 .gh-list.grid:not(.magazine)[data-column="3"] .gh-list-feed {
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
 }
 
 /* Magazine layout */
@@ -183,5 +183,23 @@
 
     .gh-list.simple .gh-list-item-inner {
         flex-direction: column;
+    }
+}
+
+@media (min-width: 768px) {
+    .gh-list.grid .gh-list-feed {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .gh-list.grid .gh-list-feed {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .gh-list.grid .gh-list-feed {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
