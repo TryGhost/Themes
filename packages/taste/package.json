@@ -48,7 +48,7 @@
             },
             "background_color": {
                 "type": "color",
-                "default": "#ffffff"
+                "default": "#faf6e9"
             },
             "navigation_layout": {
                 "type": "select",
