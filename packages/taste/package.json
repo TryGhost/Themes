@@ -72,7 +72,7 @@
                 "default": "Subscribe below to receive the latest recipes directly in your inbox",
                 "group": "homepage"
             },
-            "main_action": {
+            "header_action": {
                 "type": "select",
                 "options": ["Subscribe", "Search", "No action"],
                 "default": "Subscribe",
