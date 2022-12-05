@@ -3,7 +3,7 @@
     const services = document.querySelector('.gh-podcast-service-list');
     if (!header || !services) return;
 
-    header.style.setProperty('--header-height', `calc(100vh - ${services.offsetHeight}px)`);
+    header.style.setProperty('--services-height', `${services.offsetHeight}px`);
 })();
 
 (function () {

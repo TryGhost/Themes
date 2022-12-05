@@ -73,7 +73,7 @@ body:not(.post-template):not(.page-template) {
 }
 
 .gh-header.has-background-image {
-    min-height: var(--header-height, calc(100vh - 177px));
+    min-height: var(--header-height, calc(100vh - var(--services-height, 177px)));
     padding-bottom: clamp(3.2rem, 3.64vw + 1.75rem, 6.4rem);
 }
 
@@ -101,6 +101,13 @@ body:not(.post-template):not(.page-template) {
 
     font-weight: 600;
     line-height: 1.15;
+}
+
+@media (max-width: 767px) {
+    .gh-header.has-background-image {
+        min-height: unset;
+        aspect-ratio: 3 / 2;
+    }
 }
 
 /* Podcast services */
