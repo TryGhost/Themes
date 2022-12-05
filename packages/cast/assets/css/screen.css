@@ -55,6 +55,10 @@ body:not(.post-template):not(.page-template) {
     --container-width: 1200px;
 }
 
+.gh-head-logo {
+    margin-top: -3px;
+}
+
 .is-font-narrow .gh-head-logo {
     font-size: 2.8rem;
     font-variation-settings: "wdth" 80;
