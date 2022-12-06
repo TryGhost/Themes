@@ -22,7 +22,7 @@ body {
     font-variation-settings: "wdth" 100;
 }
 
-body:not(.post-template):not(.page-template) {
+.gh-inner {
     --container-width: 960px;
 }
 
@@ -50,10 +50,6 @@ body:not(.post-template):not(.page-template) {
 }
 
 /* Navbar */
-
-.gh-head {
-    --container-width: 1200px;
-}
 
 .gh-head-logo {
     margin-top: -3px;
