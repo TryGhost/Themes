@@ -110,7 +110,7 @@
     margin-right: 8px;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 767px) {
     .gh-head-members {
         width: 100%;
     }
@@ -121,7 +121,7 @@
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
     .gh-head-brand .gh-search {
         display: none;
     }
@@ -432,7 +432,7 @@ Search                         LOGO                    Login Subscribe
     transform: rotate(-45deg);
 }
 
-@media (max-width: 991px) {
+@media (max-width: 767px) {
     #gh-head {
         height: 64px;
     }
