@@ -115,7 +115,8 @@ hr {
     max-height: 48px;
 }
 
-.gh-head-menu {
+.gh-head-menu,
+.gh-head-link {
     font-weight: 700;
 }
 
