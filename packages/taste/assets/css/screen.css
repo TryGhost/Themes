@@ -234,8 +234,11 @@ body {
 
 .gh-list.grid.magazine .gh-list-item:first-child .gh-list-item-title {
     --font-multiplier: 1.26;
-    font-weight: 500;
     line-height: 1.1em;
+}
+
+.is-font-serif .gh-list.grid.magazine .gh-list-item:first-child .gh-list-item-title {
+    font-weight: 500;
 }
 
 .is-font-serif .gh-list.grid.magazine .gh-list-item:first-child .gh-list-item-excerpt {
