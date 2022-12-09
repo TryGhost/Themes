@@ -106,7 +106,23 @@ body {
 @media (max-width: 767px) {
     .gh-header.has-background-image {
         min-height: unset;
-        aspect-ratio: 3 / 2;
+        aspect-ratio: 1;
+    }
+
+    .gh-header-primary {
+        font-size: calc(2.8rem*var(--font-multiplier, 1));
+    }
+
+    .gh-header-secondary {
+        --font-multiplier: 0.65;
+    }
+    
+    .gh-header-primary+.gh-header-secondary {
+        margin-top: 12px;
+    }
+
+    .gh-archive-title {
+        font-size: calc(2.2rem*var(--font-multiplier, 1));
     }
 }
 
