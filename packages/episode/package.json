@@ -41,7 +41,7 @@
         },
         "card_assets": true,
         "custom": {
-            "style": {
+            "typography": {
                 "type": "select",
                 "options": ["Wide", "Narrow"],
                 "default": "Wide"
@@ -61,6 +61,16 @@
             },
             "footer_text": {
                 "type": "text"
+            },
+            "primary_header": {
+                "type": "text",
+                "default": "A podcast about music and technology",
+                "group": "homepage"
+            },
+            "secondary_header": {
+                "type": "text",
+                "default": "Subscribe with your favorite podcast service below",
+                "group": "homepage"
             },
             "apple_podcasts_link": {
                 "type": "text",
