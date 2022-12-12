@@ -78,7 +78,7 @@
                 "default": "Subscribe",
                 "group": "homepage"
             },
-            "enter_tag_slugs_for_lists": {
+            "enter_tag_slugs_for_homepage_sections": {
                 "type": "text",
                 "group": "homepage"
             }

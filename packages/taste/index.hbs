@@ -12,8 +12,8 @@
 
     {{> "components/list" layout="magazine" count="5" showExcerpt=true showPrimaryTag=true}}
 
-    {{#if @custom.enter_tag_slugs_for_lists}}
-        {{#get "tags" filter="slug:[{{@custom.enter_tag_slugs_for_lists}}]"}}
+    {{#if @custom.enter_tag_slugs_for_homepage_sections}}
+        {{#get "tags" filter="slug:[{{@custom.enter_tag_slugs_for_homepage_sections}}]"}}
             {{#foreach tags}}
                 {{#if @odd}}
                     {{> "components/list" layout="grid" column="3" count="3" showHeader=true}}
