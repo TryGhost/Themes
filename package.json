@@ -27,7 +27,7 @@
         "gulp-uglify": "3.0.2",
         "gulp-zip": "5.1.0",
         "lerna": "6.1.0",
-        "postcss": "8.4.19",
+        "postcss": "8.4.20",
         "postcss-easy-import": "4.0.0",
         "pump": "3.0.0",
         "stylelint": "14.16.0",
