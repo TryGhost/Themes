@@ -57,19 +57,19 @@
             },
             "email_signup_text": {
                 "type": "text",
-                "default": "Get the latest weekly! No spam, just food"
+                "default": "Subscribe for daily recipes. No spam, just food."
             },
             "footer_text": {
                 "type": "text"
             },
             "primary_header": {
                 "type": "text",
-                "default": "Recipes you can make under 15 minutes",
+                "default": "Delicious meals in under 15 minutes",
                 "group": "homepage"
             },
             "secondary_header": {
                 "type": "text",
-                "default": "Subscribe below to receive the latest recipes directly in your inbox",
+                "default": "A new recipe everyday, directly in your inbox.",
                 "group": "homepage"
             },
             "header_action": {

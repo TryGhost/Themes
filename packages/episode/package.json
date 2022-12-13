@@ -57,19 +57,19 @@
             },
             "email_signup_text": {
                 "type": "text",
-                "default": "Get the latest episodes in your inbox directly"
+                "default": "Get the latest episodes directly in your inbox"
             },
             "footer_text": {
                 "type": "text"
             },
             "primary_header": {
                 "type": "text",
-                "default": "A podcast about music and technology",
+                "default": "A weekly podcast about creativity, design, and building the things we love.",
                 "group": "homepage"
             },
             "secondary_header": {
                 "type": "text",
-                "default": "Subscribe with your favorite podcast service below",
+                "default": "Subscribe below to never miss an episode.",
                 "group": "homepage"
             },
             "apple_podcasts_link": {
