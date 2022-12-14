@@ -43,12 +43,16 @@
     opacity: 0;
 }
 
+.gh-head-menu,
+.gh-head-link {
+    font-size: calc(1.6rem * var(--font-multiplier, 1));
+    font-weight: 500;
+}
+
 .gh-head-menu {
     display: flex;
     gap: var(--head-nav-gap);
     align-items: center;
-    font-size: calc(1.6rem * var(--font-multiplier, 1));
-    font-weight: 500;
 }
 
 .gh-head .nav {
@@ -78,6 +82,12 @@
     gap: var(--head-nav-gap);
     align-items: center;
     justify-content: flex-end;
+}
+
+.gh-head-members {
+    display: flex;
+    gap: 20px;
+    align-items: center;
 }
 
 .gh-head-btn.gh-btn {
@@ -110,13 +120,18 @@
     margin-right: 8px;
 }
 
-@media (max-width: 991px) {
-    .gh-head-actions .gh-search {
+@media (max-width: 767px) {
+    .gh-head-members {
+        width: 100%;
+    }
+
+    .gh-head-actions .gh-search,
+    .gh-head-actions .gh-head-link {
         display: none;
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
     .gh-head-brand .gh-search {
         display: none;
     }
@@ -141,7 +156,7 @@ LOGO   Home About Collection Author Portal             Login Subscribe
 
 @media (min-width: 992px) {
     .is-head-left-logo .gh-head-menu {
-        margin-right: 32px;
+        margin-right: 64px;
         margin-left: 16px;
     }
 }
@@ -247,7 +262,8 @@ Search                         LOGO                    Login Subscribe
 .is-head-transparent .gh-head-description,
 .is-head-transparent .gh-search,
 .is-head-transparent .gh-social,
-.is-head-transparent .nav-more-toggle {
+.is-head-transparent .nav-more-toggle,
+.is-head-transparent .gh-head-link {
     color: var(--color-white);
 }
 
@@ -278,7 +294,8 @@ Search                         LOGO                    Login Subscribe
 .is-head-dark:not(.is-head-transparent) .gh-head-description,
 .is-head-dark:not(.is-head-transparent) .gh-search,
 .is-head-dark:not(.is-head-transparent) .gh-social,
-.is-head-dark:not(.is-head-transparent) .nav-more-toggle {
+.is-head-dark:not(.is-head-transparent) .nav-more-toggle,
+.is-head-dark:not(.is-head-transparent) .gh-head-link {
     color: var(--color-white);
 }
 
@@ -309,7 +326,8 @@ Search                         LOGO                    Login Subscribe
 .is-head-brand:not(.is-head-transparent) .gh-head-description,
 .is-head-brand:not(.is-head-transparent) .gh-search,
 .is-head-brand:not(.is-head-transparent) .gh-social,
-.is-head-brand:not(.is-head-transparent) .nav-more-toggle {
+.is-head-brand:not(.is-head-transparent) .nav-more-toggle,
+.is-head-brand:not(.is-head-transparent) .gh-head-link {
     color: var(--color-white);
 }
 
@@ -424,7 +442,7 @@ Search                         LOGO                    Login Subscribe
     transform: rotate(-45deg);
 }
 
-@media (max-width: 991px) {
+@media (max-width: 767px) {
     #gh-head {
         height: 64px;
     }

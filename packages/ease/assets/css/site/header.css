@@ -2,7 +2,8 @@
     letter-spacing: -0.01em;
 }
 
-.gh-head-menu {
+.gh-head-menu,
+.gh-head-link {
     font-size: 1.5rem;
     font-weight: 500;
 }

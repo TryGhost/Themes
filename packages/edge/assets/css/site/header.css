@@ -1,4 +1,5 @@
-.gh-head-menu {
+.gh-head-menu,
+.gh-head-link {
     font-size: 1.5rem;
     font-weight: 600;
     letter-spacing: -0.009em;
