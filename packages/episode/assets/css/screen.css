@@ -92,12 +92,13 @@ body {
 }
 
 .gh-header-primary {
-    font-size: calc(clamp(3rem, 5.4vh + 1.2rem, 7.2rem)*var(--font-multiplier, 1));
+    font-size: calc(clamp(3rem, 5.4vh + 1.2rem, 7.2rem) * var(--font-multiplier, 1));
     line-height: 1.1;
 }
 
 .is-font-narrow .gh-header-primary {
     --font-multiplier: 1.3;
+
     font-weight: 600;
     line-height: 1.05;
     letter-spacing: -0.02em;
@@ -116,8 +117,8 @@ body {
     .gh-header-secondary {
         --font-multiplier: 0.65;
     }
-    
-    .gh-header-primary+.gh-header-secondary {
+
+    .gh-header-primary + .gh-header-secondary {
         margin-top: 12px;
     }
 

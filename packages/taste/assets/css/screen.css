@@ -135,12 +135,12 @@ body {
     .gh-list.grid .gh-list-item.no-image::after,
     .gh-list.grid .gh-list-item:not(.no-image) + .gh-list-item.no-image::before {
         position: absolute;
-        content: "";
-        display: block;
-        background: var(--color-border);
         top: 0;
         bottom: 0;
+        display: block;
         width: 1px;
+        content: "";
+        background: var(--color-border);
     }
 
     .gh-list.grid .gh-list-item.no-image::after {
@@ -234,6 +234,7 @@ body {
 
 .gh-list.grid.magazine .gh-list-item:first-child .gh-list-item-title {
     --font-multiplier: 1.26;
+
     line-height: 1.1em;
 }
 
