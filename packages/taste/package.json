@@ -1,0 +1,108 @@
+{
+    "name": "taste",
+    "description": "A Ghost theme",
+    "version": "1.0.0",
+    "private": true,
+    "engines": {
+        "ghost": ">=5.0.0"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Ghost Foundation",
+        "email": "hello@ghost.org",
+        "url": "https://ghost.org"
+    },
+    "keywords": [
+        "ghost",
+        "theme",
+        "ghost-theme"
+    ],
+    "config": {
+        "posts_per_page": 12,
+        "image_sizes": {
+            "xs": {
+                "width": 150
+            },
+            "s": {
+                "width": 300
+            },
+            "m": {
+                "width": 720
+            },
+            "l": {
+                "width": 960
+            },
+            "xl": {
+                "width": 1200
+            },
+            "xxl": {
+                "width": 2000
+            }
+        },
+        "card_assets": true,
+        "custom": {
+            "style": {
+                "type": "select",
+                "options": ["Elegant", "Playful"],
+                "default": "Elegant"
+            },
+            "background_color": {
+                "type": "color",
+                "default": "#faf6e9"
+            },
+            "navigation_layout": {
+                "type": "select",
+                "options": ["Logo on the left", "Logo in the middle", "Stacked"],
+                "default": "Logo in the middle"
+            },
+            "email_signup_text": {
+                "type": "text",
+                "default": "Subscribe for daily recipes. No spam, just food."
+            },
+            "footer_text": {
+                "type": "text"
+            },
+            "primary_header": {
+                "type": "text",
+                "default": "Delicious meals in under 15 minutes",
+                "group": "homepage"
+            },
+            "secondary_header": {
+                "type": "text",
+                "default": "A new recipe everyday, directly in your inbox.",
+                "group": "homepage"
+            },
+            "header_action": {
+                "type": "select",
+                "options": ["Subscribe", "Search", "No action"],
+                "default": "Subscribe",
+                "group": "homepage"
+            },
+            "enter_tag_slugs_for_homepage_sections": {
+                "type": "text",
+                "group": "homepage"
+            }
+        }
+    },
+    "scripts": {
+        "dev": "gulp",
+        "test": "gscan .",
+        "zip": "gulp zip"
+    },
+    "devDependencies": {
+        "@tryghost/shared-theme-assets": "1.3.1",
+        "autoprefixer": "10.4.13",
+        "beeper": "2.1.0",
+        "cssnano": "5.1.14",
+        "gscan": "4.34.0",
+        "gulp": "4.0.2",
+        "gulp-concat": "2.6.1",
+        "gulp-livereload": "4.0.2",
+        "gulp-postcss": "9.0.1",
+        "gulp-uglify": "3.0.2",
+        "gulp-zip": "5.1.0",
+        "postcss": "8.4.19",
+        "postcss-easy-import": "4.0.0",
+        "pump": "3.0.0"
+    }
+}

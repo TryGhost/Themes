@@ -35,18 +35,11 @@
 
                 <nav class="gh-head-menu">
                     {{navigation}}
-                    {{#unless @site.members_enabled}}
-                        {{#match @custom.navigation_layout "Stacked"}}
-                            <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button>
-                        {{/match}}
-                    {{/unless}}
                 </nav>
 
                 <div class="gh-head-actions">
                     {{#unless @site.members_enabled}}
-                        {{^match @custom.navigation_layout "Stacked"}}
-                            <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button>
-                        {{/match}}
+                        <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button>
                     {{else}}
                         <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button>
                         {{#unless @member}}

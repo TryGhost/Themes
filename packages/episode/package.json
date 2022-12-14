@@ -1,0 +1,113 @@
+{
+    "name": "episode",
+    "description": "A Ghost theme",
+    "version": "1.0.0",
+    "private": true,
+    "engines": {
+        "ghost": ">=5.0.0"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Ghost Foundation",
+        "email": "hello@ghost.org",
+        "url": "https://ghost.org"
+    },
+    "keywords": [
+        "ghost",
+        "theme",
+        "ghost-theme"
+    ],
+    "config": {
+        "posts_per_page": 3,
+        "image_sizes": {
+            "xs": {
+                "width": 150
+            },
+            "s": {
+                "width": 300
+            },
+            "m": {
+                "width": 720
+            },
+            "l": {
+                "width": 960
+            },
+            "xl": {
+                "width": 1200
+            },
+            "xxl": {
+                "width": 2000
+            }
+        },
+        "card_assets": true,
+        "custom": {
+            "typography": {
+                "type": "select",
+                "options": ["Wide", "Narrow"],
+                "default": "Wide"
+            },
+            "background_color": {
+                "type": "color",
+                "default": "#ebebeb"
+            },
+            "navigation_layout": {
+                "type": "select",
+                "options": ["Logo on the left", "Logo in the middle", "Stacked"],
+                "default": "Logo on the left"
+            },
+            "email_signup_text": {
+                "type": "text",
+                "default": "Get the latest episodes directly in your inbox"
+            },
+            "footer_text": {
+                "type": "text"
+            },
+            "primary_header": {
+                "type": "text",
+                "default": "A weekly podcast about creativity, design, and building the things we love.",
+                "group": "homepage"
+            },
+            "secondary_header": {
+                "type": "text",
+                "default": "Subscribe below to never miss an episode.",
+                "group": "homepage"
+            },
+            "apple_podcasts_link": {
+                "type": "text",
+                "default": "https://podcasts.apple.com/",
+                "group": "homepage"
+            },
+            "google_podcasts_link": {
+                "type": "text",
+                "default": "https://podcasts.google.com/",
+                "group": "homepage"
+            },
+            "spotify_link": {
+                "type": "text",
+                "default": "https://open.spotify.com/",
+                "group": "homepage"
+            }
+        }
+    },
+    "scripts": {
+        "dev": "gulp",
+        "test": "gscan .",
+        "zip": "gulp zip"
+    },
+    "devDependencies": {
+        "@tryghost/shared-theme-assets": "1.3.1",
+        "autoprefixer": "10.4.13",
+        "beeper": "2.1.0",
+        "cssnano": "5.1.14",
+        "gscan": "4.34.0",
+        "gulp": "4.0.2",
+        "gulp-concat": "2.6.1",
+        "gulp-livereload": "4.0.2",
+        "gulp-postcss": "9.0.1",
+        "gulp-uglify": "3.0.2",
+        "gulp-zip": "5.1.0",
+        "postcss": "8.4.19",
+        "postcss-easy-import": "4.0.0",
+        "pump": "3.0.0"
+    }
+}

@@ -1,0 +1,8 @@
+{{!< default}}
+
+<main class="gh-main">
+    {{#author}}
+        {{> "components/author-header"}}
+    {{/author}}
+    {{> "components/list" layout="simple" showExcerpt=true showPublishedAt=true hasPagination=true}}
+</main>

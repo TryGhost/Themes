@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="{{@site.locale}}">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{meta_title}}</title>
+    <link rel="stylesheet" href="{{asset "built/screen.css"}}">
+
+    {{#is "home"}}
+        {{#if @site.cover_image}}
+            <link rel="preload" as="image" href="{{@site.cover_image}}">
+        {{/if}}
+    {{/is}}
+
+    <style>
+        :root {
+            --background-color: {{@custom.background_color}}
+        }
+    </style>
+
+    <script>
+        /* The script for calculating the color contrast was taken from
+        https://gomakethings.com/dynamically-changing-the-text-color-based-on-background-color-contrast-with-vanilla-js/ */
+        var accentColor = getComputedStyle(document.documentElement).getPropertyValue('--background-color');
+        accentColor = accentColor.trim().slice(1);
+        var r = parseInt(accentColor.substr(0, 2), 16);
+        var g = parseInt(accentColor.substr(2, 2), 16);
+        var b = parseInt(accentColor.substr(4, 2), 16);
+        var yiq = ((r * 299) + (g * 587) + (b * 114)) / 1000;
+        var textColor = (yiq >= 128) ? 'dark' : 'light';
+
+        document.documentElement.className = `has-${textColor}-text`;
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    {{#match @custom.style "Elegant"}}
+        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    {{else}}
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    {{/match}}
+
+    {{ghost_head}}
+</head>
+
+<body class="{{body_class}}{{{block "body_class"}}} is-font-{{#match @custom.style "Elegant"}}serif{{else}}sans{{/match}}">
+<div class="gh-site">
+
+    {{#is "home"}}
+        {{#match @custom.header_action "Subscribe"}}
+            {{> "components/navbar" navigationLayout=@custom.navigation_layout hideSubscribeButton=true}}
+        {{else}}
+            {{> "components/navbar" navigationLayout=@custom.navigation_layout}}
+        {{/match}}
+    {{else}}
+        {{> "components/navbar" navigationLayout=@custom.navigation_layout}}
+    {{/is}}
+
+    {{{body}}}
+
+    {{> components/footer footerText=@custom.footer_text}}
+
+</div>
+
+{{#is "post, page"}}
+    {{> "pswp"}}
+{{/is}}
+
+<script src="{{asset "built/main.min.js"}}"></script>
+
+{{ghost_foot}}
+
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+{{!< default}}
+
+<main class="gh-main">
+    {{> "components/header" layout="wide" background="image" primary=@custom.primary_header secondary=@custom.secondary_header}}
+    {{> "podcast-services"}}
+    <section class="gh-archive gh-outer">
+        <div class="gh-archive-inner gh-inner">
+            <header class="gh-archive-header">
+                <h1 class="gh-archive-title">Latest episodes</h1>
+            </header>
+        </div>
+    </section>
+    {{> "components/list" layout="simple" count="3" showExcerpt=true showPublishedAt=true}}
+    {{#match pagination.pages ">" 1}}
+        <div class="gh-more gh-outer">
+            <div class="gh-inner">
+                <a href="/page/2">All episodes →</a>
+            </div>
+        </div>
+    {{/match}}
+    {{> "components/cta" title=@custom.email_signup_text}}
+</main>

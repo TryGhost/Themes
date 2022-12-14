@@ -18,6 +18,8 @@ const easyimport = require('postcss-easy-import');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 
+const oldPackages = ['packages/alto', 'packages/bulletin', 'packages/dawn', 'packages/digest', 'packages/dope', 'packages/ease', 'packages/edge', 'packages/edition', 'packages/headline', 'packages/journal', 'packages/london', 'packages/ruby', 'packages/solo', 'packages/wave'];
+
 function serve(done) {
     livereload.listen();
     done();
@@ -51,10 +53,11 @@ function doCSS(path, done) {
 }
 
 function doJS(path, done) {
+    const version = oldPackages.includes(path) ? 'v1' : 'v2';
     pump([
         src([
-            'packages/_shared/assets/js/lib/**/*.js',
-            'packages/_shared/assets/js/main.js',
+            `packages/_shared/assets/js/${version}/lib/**/*.js`,
+            `packages/_shared/assets/js/${version}/main.js`,
             `${path}/assets/js/lib/**/*.js`,
             `${path}/assets/js/main.js`,
         ], {sourcemaps: true}),
@@ -99,8 +102,8 @@ function main(done) {
         return package;
     });
 
-    function sharedCSS(done) {
-        glob.sync('packages/*', {ignore: 'packages/_shared'}).map(path => {
+    function sharedCSS_v1(done) {
+        oldPackages.map(path => {
             pump([
                 src(`${path}/assets/css/screen.css`, {sourcemaps: true}),
                 postcss([
@@ -113,14 +116,30 @@ function main(done) {
             ], handleError(done));
         });
     }
-    const sharedCSSWatcher = () => watch('packages/_shared/assets/css/**/*.css', sharedCSS);
+    const sharedCSSWatcher_v1 = () => watch('packages/_shared/assets/css/v1/**/*.css', sharedCSS_v1);
 
-    function sharedJS(done) {
-        glob.sync('packages/*', {ignore: 'packages/_shared'}).map(path => {
+    function sharedCSS_v2(done) {
+        glob.sync('packages/*', {ignore: ['packages/_shared', ...oldPackages]}).map(path => {
+            pump([
+                src(`${path}/assets/css/screen.css`, {sourcemaps: true}),
+                postcss([
+                    easyimport,
+                    autoprefixer(),
+                    cssnano()
+                ]),
+                dest(`${path}/assets/built/`, {sourcemaps: '.'}),
+                livereload()
+            ], handleError(done));
+        });
+    }
+    const sharedCSSWatcher_v2 = () => watch('packages/_shared/assets/css/v2/**/*.css', sharedCSS_v2);
+
+    function sharedJS_v1(done) {
+        oldPackages.map(path => {
             pump([
                 src([
-                    'packages/_shared/assets/js/lib/**/*.js',
-                    'packages/_shared/assets/js/main.js',
+                    'packages/_shared/assets/js/v1/lib/**/*.js',
+                    'packages/_shared/assets/js/v1/main.js',
                     `${path}/assets/js/lib/**/*.js`,
                     `${path}/assets/js/main.js`,
                 ], {sourcemaps: true}),
@@ -131,11 +150,40 @@ function main(done) {
             ], handleError(done));
         });
     }
-    const sharedJSWatcher = () => watch('packages/_shared/assets/js/**/*.js', sharedJS);
+    const sharedJSWatcher_v1 = () => watch('packages/_shared/assets/js/v1/**/*.js', sharedJS_v1);
 
-    const sharedWatcher = parallel(sharedCSSWatcher, sharedJSWatcher);
+    function sharedJS_v2(done) {
+        glob.sync('packages/*', {ignore: ['packages/_shared', ...oldPackages]}).map(path => {
+            pump([
+                src([
+                    'packages/_shared/assets/js/v2/lib/**/*.js',
+                    'packages/_shared/assets/js/v2/main.js',
+                    `${path}/assets/js/lib/**/*.js`,
+                    `${path}/assets/js/main.js`,
+                ], {sourcemaps: true}),
+                concat('main.min.js'),
+                uglify(),
+                dest(`${path}/assets/built/`, {sourcemaps: '.'}),
+                livereload()
+            ], handleError(done));
+        });
+    }
+    const sharedJSWatcher_v2 = () => watch('packages/_shared/assets/js/v2/**/*.js', sharedJS_v2);
 
-    return series(parallel(...tasks), sharedWatcher, tasksDone => {
+    function copyPartials(done) {
+        glob.sync('packages/*', {ignore: ['packages/_shared', ...oldPackages]}).map(path => {
+            pump([
+                src('packages/_shared/partials/*'),
+                dest(`${path}/partials/components/`),
+                livereload()
+            ], handleError(done));
+        });
+    }
+    const sharedPartialWatcher = () => watch('packages/_shared/partials/*.hbs', copyPartials);
+
+    const sharedWatcher = parallel(sharedCSSWatcher_v1, sharedCSSWatcher_v2, sharedJSWatcher_v1, sharedJSWatcher_v2, sharedPartialWatcher);
+
+    return series(parallel(...tasks), copyPartials, sharedWatcher, tasksDone => {
         tasksDone();
         done();
     })();

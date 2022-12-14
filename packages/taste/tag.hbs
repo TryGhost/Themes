@@ -1,0 +1,10 @@
+{{!< default}}
+
+<main class="gh-main gh-outer">
+    <div class="gh-inner">
+        {{#tag}}
+            {{> "components/tag-header"}}
+        {{/tag}}
+        {{> "components/list" layout="grid" column="4" showPrimaryTag=true hasPagination=true}}
+    </div>
+</main>

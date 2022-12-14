@@ -20,6 +20,7 @@
         "cssnano": "5.1.14",
         "gscan": "4.34.0",
         "gulp": "4.0.2",
+        "gulp-compile-handlebars": "0.6.1",
         "gulp-concat": "2.6.1",
         "gulp-livereload": "4.0.2",
         "gulp-postcss": "9.0.1",
