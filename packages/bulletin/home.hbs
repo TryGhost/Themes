@@ -84,17 +84,13 @@
                 </div>
             </div>
         {{else}}
-            {{#get "posts" include="authors,tags" limit="1"}}
-                {{#foreach posts}}
-                    {{> "article"}}
-                {{/foreach}}
-            {{/get}}
-        {{/unless}}
-    {{else}}
-        {{#get "posts" include="authors,tags" limit="1"}}
-            {{#foreach posts}}
+            {{#foreach posts limit="1"}}
                 {{> "article"}}
             {{/foreach}}
-        {{/get}}
+        {{/unless}}
+    {{else}}
+        {{#foreach posts limit="1"}}
+            {{> "article"}}
+        {{/foreach}}
     {{/if}}
 </main>
