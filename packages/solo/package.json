@@ -17,6 +17,7 @@
         "theme",
         "ghost-theme"
     ],
+    "docs": "https://solo.ghost.io/about/",
     "config": {
         "posts_per_page": 6,
         "image_sizes": {

@@ -17,6 +17,7 @@
         "theme",
         "ghost-theme"
     ],
+    "docs": "https://taste.ghost.io/about/",
     "config": {
         "posts_per_page": 12,
         "image_sizes": {

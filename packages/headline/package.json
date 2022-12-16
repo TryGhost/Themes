@@ -17,6 +17,7 @@
         "theme",
         "ghost-theme"
     ],
+    "docs": "https://headline.ghost.io/about/",
     "config": {
         "posts_per_page": 7,
         "image_sizes": {

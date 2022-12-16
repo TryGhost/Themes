@@ -17,6 +17,7 @@
         "theme",
         "ghost-theme"
     ],
+    "docs": "https://episode.ghost.io/about/",
     "config": {
         "posts_per_page": 3,
         "image_sizes": {

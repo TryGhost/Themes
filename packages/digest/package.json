@@ -17,6 +17,7 @@
         "theme",
         "ghost-theme"
     ],
+    "docs": "https://digest.ghost.io/about/",
     "config": {
         "posts_per_page": 1,
         "image_sizes": {
