@@ -17,7 +17,12 @@
             </button>
             <div class="post-header-wrapper">
                 <h1 class="post-title">{{#is "post"}}{{title}}{{else}}Episode{{/is}}</h1>
-                <time class="post-meta" datetime="{{date format="YYYY-MM-DD"}}">{{date published_at}}</time>
+                <div class="post-meta">
+                    <time datetime="{{date format="YYYY-MM-DD"}}">{{date published_at}}</time>
+                    <button class="player-backward">-10s</button>
+                    <button class="player-forward">+30s</button>
+                    <button class="player-speed">1x</button>
+                </div>
             </div>
         </header>
 

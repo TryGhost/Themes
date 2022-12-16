@@ -24,6 +24,10 @@ function player() {
     var timeCurrent = jQuery('.player-time-current');
     var timeDuration = jQuery('.player-time-duration');
     var playButton = jQuery('.button-play');
+    var backwardButton = jQuery('.player-backward');
+    var forwardButton = jQuery('.player-forward');
+    var playerSpeed = 1;
+    var speedButton = jQuery('.player-speed');
 
     jQuery('.js-play').on('click', function () {
         var clicked = jQuery(this);
@@ -36,8 +40,8 @@ function player() {
                 player.attr('data-playing', episode.attr('data-id'));
                 player.find('.post-image').attr('src', episode.find('.post-image').attr('src'));
                 player.find('.post-title').text(episode.find('.post-title').text());
-                player.find('.post-meta').attr('datetime', episode.find('.post-meta-date time').attr('datetime'));
-                player.find('.post-meta').text(episode.find('.post-meta-date time').text());
+                player.find('.post-meta time').attr('datetime', episode.find('.post-meta-date time').attr('datetime'));
+                player.find('.post-meta time').text(episode.find('.post-meta-date time').text());
             }
         }
 
@@ -78,5 +82,24 @@ function player() {
                 (e.target.currentTime / playerAudio[0].duration) * 100 + '%'
             );
         });
+    });
+
+    backwardButton.on('click', function () {
+        playerAudio[0].currentTime = playerAudio[0].currentTime - 10;
+    });
+
+    forwardButton.on('click', function () {
+        playerAudio[0].currentTime = playerAudio[0].currentTime + 30;
+    });
+
+    speedButton.on('click', function () {
+        if (playerSpeed < 2) {
+            playerSpeed += 0.5;
+        } else {
+            playerSpeed = 1;
+        }
+
+        playerAudio[0].playbackRate = playerSpeed;
+        speedButton.text(playerSpeed + 'x');
     });
 }
