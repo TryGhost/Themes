@@ -29,7 +29,7 @@ function player() {
     var playerSpeed = 1;
     var speedButton = jQuery('.player-speed');
 
-    jQuery('.js-play').on('click', function () {
+    jQuery('.post-feed').on('click', '.js-play', function () {
         var clicked = jQuery(this);
 
         if (clicked.hasClass('post-play')) {
