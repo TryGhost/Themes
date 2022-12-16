@@ -72,6 +72,10 @@ function dropdown() {
         makeDropdown();
     });
 
+    window.addEventListener('load', function () {
+        makeDropdown();
+    });
+
     window.addEventListener('resize', function () {
         setTimeout(() => {
             nav.innerHTML = navHTML;

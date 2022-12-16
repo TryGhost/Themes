@@ -79,6 +79,7 @@
     display: flex;
     gap: 20px;
     align-items: center;
+    white-space: nowrap;
 }
 
 .gh-head-btn.gh-btn {
