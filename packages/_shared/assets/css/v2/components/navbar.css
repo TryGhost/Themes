@@ -122,6 +122,8 @@
 
 @media (max-width: 767px) {
     .gh-head-members {
+        flex-direction: column-reverse;
+        gap: 16px;
         width: 100%;
     }
 
@@ -503,12 +505,15 @@ Search                         LOGO                    Login Subscribe
         text-align: center;
     }
 
+    #gh-head :is(.gh-head-btn, .gh-head-link) {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
     #gh-head .gh-head-btn {
         width: 100%;
         font-size: 1.8rem;
         text-transform: none;
-        opacity: 0;
-        transform: translateY(8px);
     }
 
     #gh-head .gh-head-btn:not(.gh-btn) {
@@ -521,10 +526,9 @@ Search                         LOGO                    Login Subscribe
 
     .is-head-open#gh-head {
         position: fixed;
-        right: 0;
-        left: 0;
+        inset: 0;
         z-index: 3999999;
-        height: 100vh;
+        height: 100%;
         overflow-y: scroll;
         -webkit-overflow-scrolling: touch;
     }
@@ -570,15 +574,19 @@ Search                         LOGO                    Login Subscribe
         flex-direction: column;
         gap: 12px;
         align-items: center;
-        padding: var(--gap);
+        padding: var(--gap) 0 calc(var(--gap) + 8px);
         background-color: var(--color-white);
     }
 
-    .is-head-open#gh-head .gh-head-btn {
+    .is-head-open#gh-head :is(.gh-head-btn, .gh-head-link) {
         opacity: 1;
         transition: transform 0.4s, opacity 0.4s;
         transition-delay: 0.2s;
         transform: translateY(0);
+    }
+
+    .is-head-open#gh-head .gh-head-link {
+        transition-delay: 0.4s;
     }
 
     .is-head-open#gh-main {

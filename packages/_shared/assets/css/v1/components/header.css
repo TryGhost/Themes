@@ -112,11 +112,12 @@
 
 @media (max-width: 767px) {
     .gh-head-members {
+        flex-direction: column-reverse;
+        gap: 16px;
         width: 100%;
     }
 
-    .gh-head-actions .gh-search,
-    .gh-head-actions .gh-head-link {
+    .gh-head-actions .gh-search {
         display: none;
     }
 }
@@ -493,12 +494,15 @@ Search                         LOGO                    Login Subscribe
         text-align: center;
     }
 
+    #gh-head :is(.gh-head-btn, .gh-head-link) {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
     #gh-head .gh-head-btn {
         width: 100%;
         font-size: 1.8rem;
         text-transform: none;
-        opacity: 0;
-        transform: translateY(8px);
     }
 
     #gh-head .gh-head-btn:not(.gh-btn) {
@@ -511,10 +515,9 @@ Search                         LOGO                    Login Subscribe
 
     .is-head-open #gh-head {
         position: fixed;
-        right: 0;
-        left: 0;
+        inset: 0;
         z-index: 3999999;
-        height: 100vh;
+        height: 100%;
         overflow-y: scroll;
         -webkit-overflow-scrolling: touch;
     }
@@ -560,73 +563,22 @@ Search                         LOGO                    Login Subscribe
         flex-direction: column;
         gap: 12px;
         align-items: center;
-        padding: var(--gap);
+        padding: var(--gap) 0 calc(var(--gap) + 8px);
         background-color: var(--color-white);
     }
 
-    .is-head-open #gh-head .gh-head-btn {
+    .is-head-open #gh-head :is(.gh-head-btn, .gh-head-link) {
         opacity: 1;
         transition: transform 0.4s, opacity 0.4s;
         transition-delay: 0.2s;
         transform: translateY(0);
     }
 
+    .is-head-open #gh-head .gh-head-link {
+        transition-delay: 0.4s;
+    }
+
     .is-head-open #gh-main {
         opacity: 0;
     }
-}
-
-.animate__animated {
-    animation-duration: 1s;
-    animation-fill-mode: both;
-}
-
-@keyframes bounceIn {
-    from,
-    20%,
-    40%,
-    60%,
-    80%,
-    to {
-        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    }
-
-    0% {
-        opacity: 0;
-        transform: scale3d(0.7, 0.7, 0.7);
-    }
-
-    40% {
-        transform: scale3d(1.1, 1.1, 1.1);
-    }
-
-    to {
-        opacity: 1;
-        transform: scale3d(1, 1, 1);
-    }
-}
-
-.animate__bounceIn {
-    animation-name: bounceIn;
-    animation-duration: 0.3s;
-}
-
-@keyframes zoomOut {
-    from {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0;
-        transform: scale3d(0.7, 0.7, 0.7);
-    }
-
-    to {
-        opacity: 0;
-    }
-}
-
-.animate__zoomOut {
-    animation-name: zoomOut;
-    animation-duration: 0.3s;
 }
