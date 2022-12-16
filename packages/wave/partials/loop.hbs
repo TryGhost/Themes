@@ -1,7 +1,10 @@
-<article class="{{post_class}} post-{{comment_id}}">
+<article class="{{post_class}}"{{#if og_description}} data-url="{{og_description}}"{{/if}} data-id="{{comment_id}}">
     <div class="post-media">
         {{#if og_description}}
-            <div class="post-play">{{> "icons/play"}}</div>
+            <div class="post-play js-play">
+                {{> "icons/play"}}
+                {{> "icons/pause"}}
+            </div>
         {{/if}}
         <div class="u-placeholder square">
             <a href="{{url}}">

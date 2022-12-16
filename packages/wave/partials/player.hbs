@@ -16,7 +16,7 @@
                 {{> "icons/pause"}}
             </button>
             <div class="post-header-wrapper">
-                <h1 class="post-title">{{title}}</h1>
+                <h1 class="post-title">{{#is "post"}}{{title}}{{else}}Episode{{/is}}</h1>
                 <time class="post-meta" datetime="{{date format="YYYY-MM-DD"}}">{{date published_at}}</time>
             </div>
         </header>

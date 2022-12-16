@@ -52,6 +52,15 @@
     border-radius: 50%;
 }
 
+.post-play svg:nth-child(2),
+.post-play.playing svg:nth-child(1) {
+    display: none;
+}
+
+.post-play.playing svg:nth-child(2) {
+    display: block;
+}
+
 .post-title {
     margin-bottom: 0;
     font-size: 2.8rem;

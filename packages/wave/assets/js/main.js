@@ -18,13 +18,28 @@ function cover() {
 
 function player() {
     'use strict';
+    var player = jQuery('.player');
     var playerAudio = jQuery('.player-audio');
     var playerProgress = jQuery('.player-progress');
     var timeCurrent = jQuery('.player-time-current');
     var timeDuration = jQuery('.player-time-duration');
+    var playButton = jQuery('.button-play');
 
     jQuery('.js-play').on('click', function () {
         var clicked = jQuery(this);
+
+        if (clicked.hasClass('post-play')) {
+            var episode = clicked.closest('.post');
+            if (player.attr('data-playing') !== episode.attr('data-id')) {
+                playerAudio.attr('src', episode.attr('data-url'));
+                jQuery('.post[data-id="' + player.attr('data-playing') + '"]').find('.post-play').removeClass('playing');
+                player.attr('data-playing', episode.attr('data-id'));
+                player.find('.post-image').attr('src', episode.find('.post-image').attr('src'));
+                player.find('.post-title').text(episode.find('.post-title').text());
+                player.find('.post-meta').attr('datetime', episode.find('.post-meta-date time').attr('datetime'));
+                player.find('.post-meta').text(episode.find('.post-meta-date time').text());
+            }
+        }
 
         if (playerAudio[0].paused) {
             var playPromise = playerAudio[0].play();
@@ -32,6 +47,9 @@ function player() {
                 playPromise
                     .then(function () {
                         clicked.addClass('playing');
+                        playButton.addClass('playing');
+                        jQuery('.post[data-id="' + player.attr('data-playing') + '"]').find('.post-play').addClass('playing');
+                        jQuery('body').addClass('player-opened');
                     })
                     .catch(function (error) {
                         console.log(error);
@@ -40,6 +58,8 @@ function player() {
         } else {
             playerAudio[0].pause();
             clicked.removeClass('playing');
+            playButton.removeClass('playing');
+            jQuery('.post[data-id="' + player.attr('data-playing') + '"]').find('.post-play').removeClass('playing');
         }
     });
 

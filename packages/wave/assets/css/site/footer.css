@@ -1,3 +1,7 @@
+.player-opened .gh-foot {
+    padding-bottom: 240px;
+}
+
 .gh-foot-inner {
     display: flex;
     flex-direction: column;

@@ -16,6 +16,10 @@
     border-radius: 6px 0 0 6px;
 }
 
+.player.no-thumbnail .post-media {
+    display: none;
+}
+
 .player .post-header {
     display: flex;
     flex-grow: 1;
@@ -102,5 +106,29 @@
 @media (max-width: 767px) {
     .player .post-media {
         display: none;
+    }
+}
+
+body:not(.post-template):not(.page-template) .player {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    z-index: 90;
+    max-width: 840px;
+    margin-bottom: 0;
+    border-bottom: 0;
+    border-radius: 6px 6px 0 0;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.6s;
+    transform: translate(-50%, 200px);
+}
+
+body:not(.post-template):not(.page-template).player-opened .player {
+    transform: translate(-50%, 0);
+}
+
+@media (max-width: 840px) {
+    body:not(.post-template):not(.page-template) .player {
+        border-radius: 0;
     }
 }
