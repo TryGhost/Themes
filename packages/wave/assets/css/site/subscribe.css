@@ -16,3 +16,9 @@
 .subscribe-link.rss {
     gap: 4px;
 }
+
+@media (max-width: 767px) {
+    .subscribe .subscribe-text {
+        display: none;
+    }
+}
