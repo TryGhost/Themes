@@ -127,8 +127,7 @@
         width: 100%;
     }
 
-    .gh-head-actions .gh-search,
-    .gh-head-actions .gh-head-link {
+    .gh-head-actions .gh-search {
         display: none;
     }
 }
