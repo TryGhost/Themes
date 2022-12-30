@@ -58,13 +58,15 @@
                         {{/foreach}}
                     {{/get}}
                 {{else}}
-                    {{#foreach posts limit=count}}
-                        {{> components/list-item
-                            showPrimaryTag=../showPrimaryTag
-                            showExcerpt=../showExcerpt
-                            showPrimaryAuthor=../showPrimaryAuthor
-                            showPublishedAt=../showPublishedAt}}
-                    {{/foreach}}
+                    {{#get "posts" include="tags,authors" limit=count}}
+                        {{#foreach posts}}
+                            {{> components/list-item
+                                showPrimaryTag=../showPrimaryTag
+                                showExcerpt=../showExcerpt
+                                showPrimaryAuthor=../showPrimaryAuthor
+                                showPublishedAt=../showPublishedAt}}
+                        {{/foreach}}
+                    {{/get}}
                 {{/if}}
             </div>
         {{/if}}
