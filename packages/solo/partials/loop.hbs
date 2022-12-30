@@ -29,16 +29,18 @@
             <footer class="gh-card-meta">
                 <time class="gh-card-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
                 {{#if reading_time}}
-                    <span class="gh-card-length">{{reading_time}}</span>
+                    <span class="gh-card-length">
+                        {{reading_time minute=(t "readingTime.oneMinute") minutes=(t "readingTime.minutes")}}
+                    </span>
                 {{/if}}
                 {{#unless access}}
                 {{^has visibility="public"}}
                     <span class="gh-card-access">
                         {{> "icons/lock"}}
                         {{#has visibility="members"}}
-                            Members
+                            {{t "members" }}
                         {{else}}
-                            Paid
+                            {{t "paid" }}
                         {{/has}}
                     </span>
                 {{/has}}
