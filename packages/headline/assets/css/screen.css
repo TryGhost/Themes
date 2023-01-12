@@ -39,7 +39,7 @@ body:not(.is-head-transparent) .gh-head-logo img + img {
 }
 
 body.is-head-transparent .gh-head-logo img + img {
-    opacity: 1.0;
+    opacity: 1;
 }
 
 .is-head-transparent .gh-head-logo img:first-of-type:not(:only-child) {
