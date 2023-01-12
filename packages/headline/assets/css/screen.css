@@ -38,8 +38,13 @@ body:not(.is-head-transparent) .gh-head-logo img + img {
     display: none;
 }
 
+body.is-head-transparent .gh-head-logo img + img {
+    opacity: 1.0;
+}
+
 .is-head-transparent .gh-head-logo img:first-of-type:not(:only-child) {
-    display: none;
+    display: block;
+    opacity: 0;
 }
 
 /* Styles specific to grid style sections */
