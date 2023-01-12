@@ -17,7 +17,7 @@
         </section>
 
         <div class="gh-feed">
-            {{#get "posts" filter="primary_tag:{{slug}}" limit="all"}}
+            {{#get "posts" filter="tags:{{slug}}" limit="all"}}
                 {{#foreach posts}}
                     {{> loop}}
                 {{/foreach}}
