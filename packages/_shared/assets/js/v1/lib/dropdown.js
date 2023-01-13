@@ -57,13 +57,11 @@ function dropdown() {
 
         document.body.classList.add('is-dropdown-loaded');
 
-        toggle.addEventListener('click', function () {
-            document.body.classList.toggle('is-dropdown-open');
-        });
-
         window.addEventListener('click', function (e) {
-            if (!toggle.contains(e.target) && document.body.classList.contains('is-dropdown-open')) {
+            if (document.body.classList.contains('is-dropdown-open')) {
                 document.body.classList.remove('is-dropdown-open');
+            } else if (toggle.contains(e.target)) {
+                document.body.classList.add('is-dropdown-open');
             }
         });
     }
@@ -73,7 +71,9 @@ function dropdown() {
     });
 
     window.addEventListener('load', function () {
-        makeDropdown();
+        if (!logo) {
+            makeDropdown();
+        }
     });
 
     window.addEventListener('resize', function () {

@@ -58,13 +58,11 @@ function dropdown() {
 
         head.classList.add('is-dropdown-loaded');
 
-        toggle.addEventListener('click', function () {
-            head.classList.toggle('is-dropdown-open');
-        });
-
         window.addEventListener('click', function (e) {
-            if (!toggle.contains(e.target) && head.classList.contains('is-dropdown-open')) {
+            if (head.classList.contains('is-dropdown-open')) {
                 head.classList.remove('is-dropdown-open');
+            } else if (toggle.contains(e.target)) {
+                head.classList.add('is-dropdown-open');
             }
         });
     }
@@ -74,7 +72,9 @@ function dropdown() {
     });
 
     window.addEventListener('load', function () {
-        makeDropdown();
+        if (!logo) {
+            makeDropdown();
+        }
     });
 
     window.addEventListener('resize', function () {
