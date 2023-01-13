@@ -592,12 +592,12 @@ body:not(.home-template) .gh-topic-grid .gh-card {
 .gh-subscribe {
     margin-top: 40px;
     margin-bottom: 80px;
-    text-align: center;
 }
 
 .gh-subscribe-title {
     font-size: 4.4rem;
     color: var(--color-white);
+    white-space: break-spaces;
 }
 
 .has-serif-title .gh-subscribe-title {
@@ -607,6 +607,7 @@ body:not(.home-template) .gh-topic-grid .gh-card {
 .gh-subscribe-description {
     margin-top: 16px;
     font-size: 2rem;
+    white-space: break-spaces;
 }
 
 .has-serif-body .gh-subscribe-description {
