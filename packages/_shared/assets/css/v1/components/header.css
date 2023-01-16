@@ -194,9 +194,9 @@ Search                         LOGO                    Login Subscribe
 
 .is-head-stacked .gh-head-brand {
     display: flex;
-    min-height: 80px;
     grid-row-start: 1;
     grid-column-start: 2;
+    min-height: 80px;
 }
 
 @media (min-width: 992px) {
