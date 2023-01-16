@@ -60,6 +60,21 @@ body {
     font-variation-settings: "wdth" 80;
 }
 
+@media (max-width: 767px) {
+    #gh-head a:not(.gh-primary-btn) {
+        color: var(--color-black);
+    }
+
+    #gh-head.is-head-open .gh-search {
+        color: var(--color-black);
+    }
+
+    #gh-head.is-head-open .gh-burger::after,
+    #gh-head.is-head-open .gh-burger::before {
+        background-color: var(--color-black);
+    }
+}
+
 /* Header */
 
 .gh-header {
