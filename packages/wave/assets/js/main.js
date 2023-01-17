@@ -29,7 +29,7 @@ function player() {
     var playerSpeed = 1;
     var speedButton = jQuery('.player-speed');
 
-    jQuery('.post-feed').on('click', '.js-play', function () {
+    jQuery('.site').on('click', '.js-play', function () {
         var clicked = jQuery(this);
 
         if (clicked.hasClass('post-play')) {
@@ -68,14 +68,15 @@ function player() {
     });
 
     playerAudio.on('timeupdate', function () {
+        const duration = isNaN(playerAudio[0].duration) ? 0 : playerAudio[0].duration;
         timeDuration.text(
-            new Date(playerAudio[0].duration * 1000).toISOString().substr(11, 8)
+            new Date(duration * 1000).toISOString().substring(11, 19)
         );
         playerAudio[0].addEventListener('timeupdate', function (e) {
             timeCurrent.text(
                 new Date(e.target.currentTime * 1000)
                     .toISOString()
-                    .substr(11, 8)
+                    .substring(11, 19)
             );
             playerProgress.css(
                 'width',
