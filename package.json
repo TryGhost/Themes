@@ -34,7 +34,7 @@
         "stylelint": "15.2.0",
         "stylelint-config-recess-order": "4.0.0",
         "stylelint-config-standard": "30.0.1",
-        "yargs": "17.7.0"
+        "yargs": "17.7.1"
     },
     "browserslist": [
         "defaults"
