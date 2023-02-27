@@ -53,7 +53,7 @@ function doCSS(path, done) {
 }
 
 function doJS(path, done) {
-    const version = oldPackages.includes(path) ? 'v1' : 'v2';
+    const version = oldPackages.includes(path.replace(/^.\//, '')) ? 'v1' : 'v2';
     pump([
         src([
             `packages/_shared/assets/js/${version}/lib/**/*.js`,
