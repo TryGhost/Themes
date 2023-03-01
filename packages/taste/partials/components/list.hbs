@@ -61,10 +61,10 @@
                     {{#get "posts" include="tags,authors" limit=count}}
                         {{#foreach posts}}
                             {{> components/list-item
-                                showPrimaryTag=../showPrimaryTag
-                                showExcerpt=../showExcerpt
-                                showPrimaryAuthor=../showPrimaryAuthor
-                                showPublishedAt=../showPublishedAt}}
+                                showPrimaryTag=../../showPrimaryTag
+                                showExcerpt=../../showExcerpt
+                                showPrimaryAuthor=../../showPrimaryAuthor
+                                showPublishedAt=../../showPublishedAt}}
                         {{/foreach}}
                     {{/get}}
                 {{/if}}
