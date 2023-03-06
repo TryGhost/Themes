@@ -6,6 +6,10 @@ function pagination(isInfinite, done, isMasonry = false) {
     const target = feedElement.nextElementSibling || feedElement.parentElement.nextElementSibling || document.querySelector('.gh-foot');
     const buttonElement = document.querySelector('.gh-loadmore');
 
+    if (!document.querySelector('link[rel=next]') && buttonElement) {
+        buttonElement.remove();
+    }
+
     const loadNextPage = async function () {
         const nextElement = document.querySelector('link[rel=next]');
         if (!nextElement) return;
