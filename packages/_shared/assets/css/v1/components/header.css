@@ -199,6 +199,12 @@ Search                         LOGO                    Login Subscribe
     min-height: 80px;
 }
 
+@media (max-width: 767px) {
+    .is-head-stacked .gh-head-brand {
+        min-height: unset;
+    }
+}
+
 @media (min-width: 992px) {
     .is-head-stacked .gh-head-inner {
         padding: 0;
@@ -252,6 +258,7 @@ Search                         LOGO                    Login Subscribe
 }
 
 .is-head-transparent .gh-head-logo,
+.is-head-transparent .gh-head-logo a,
 .is-head-transparent .gh-head .nav > li a,
 .is-head-transparent .gh-head-description,
 .is-head-transparent .gh-search,
@@ -284,6 +291,7 @@ Search                         LOGO                    Login Subscribe
 }
 
 .is-head-dark:not(.is-head-transparent) .gh-head-logo,
+.is-head-dark:not(.is-head-transparent) .gh-head-logo a,
 .is-head-dark:not(.is-head-transparent) .gh-head .nav a,
 .is-head-dark:not(.is-head-transparent) .gh-head-description,
 .is-head-dark:not(.is-head-transparent) .gh-search,
@@ -316,6 +324,7 @@ Search                         LOGO                    Login Subscribe
 }
 
 .is-head-brand:not(.is-head-transparent) .gh-head-logo,
+.is-head-brand:not(.is-head-transparent) .gh-head-logo a,
 .is-head-brand:not(.is-head-transparent) .gh-head .nav a,
 .is-head-brand:not(.is-head-transparent) .gh-head-description,
 .is-head-brand:not(.is-head-transparent) .gh-search,

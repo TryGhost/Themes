@@ -33,11 +33,11 @@ body:not(.is-head-stacked) .gh-head-inner {
     letter-spacing: -0.006em;
 }
 
-body:not(.is-head-transparent) .gh-head-logo img + img {
+body:not(.is-head-transparent):not(.is-head-brand):not(.is-head-dark) .gh-head-logo img + img {
     display: none;
 }
 
-body.is-head-transparent .gh-head-logo img + img {
+body:is(.is-head-transparent, .is-head-brand, .is-head-dark) .gh-head-logo img + img {
     opacity: 1;
 }
 
