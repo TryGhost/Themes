@@ -592,6 +592,7 @@ body:not(.home-template) .gh-topic-grid .gh-card {
 .gh-subscribe {
     margin-top: 40px;
     margin-bottom: 80px;
+    text-align: center;
 }
 
 .gh-subscribe-title {
