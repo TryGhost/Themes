@@ -60,7 +60,8 @@
             "selector-not-notation": null,
             "keyframe-block-no-duplicate-selectors": null,
             "import-notation": null,
-            "keyframe-selector-notation": null
+            "keyframe-selector-notation": null,
+            "declaration-block-no-redundant-longhand-properties": null
         }
     },
     "renovate": {
