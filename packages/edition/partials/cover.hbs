@@ -6,11 +6,15 @@
     <div class="cover-content">
         {{#if @site.description}}
             <div class="cover-description">
-                {{#if @custom.email_signup_text}}
-                    {{@custom.email_signup_text}}
+                {{#unless @member}}
+                    {{#if @custom.email_signup_text}}
+                        {{@custom.email_signup_text}}
+                    {{else}}
+                        {{@site.description}}
+                    {{/if}}
                 {{else}}
                     {{@site.description}}
-                {{/if}}
+                {{/unless}}
             </div>
         {{/if}}
 
