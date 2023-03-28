@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="{{@site.locale}}">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{meta_title}}</title>
+    <link rel="stylesheet" href="{{asset "built/screen.css"}}">
+
+    {{ghost_head}}
+</head>
+
+<body class="{{body_class}}{{{block "body_class"}}}">
+<div class="gh-site">
+
+    {{> "components/navbar" navigationLayout=@custom.navigation_layout}}
+
+    {{{body}}}
+
+    {{> components/footer footerText=@custom.footer_text}}
+
+</div>
+
+{{#is "post, page"}}
+    {{> "pswp"}}
+{{/is}}
+
+<script src="{{asset "built/main.min.js"}}"></script>
+
+{{ghost_foot}}
+
+</body>
+
+</html>

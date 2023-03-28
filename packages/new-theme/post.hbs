@@ -1,0 +1,10 @@
+{{!< default}}
+
+{{#post}}
+
+<main class="gh-main">
+    {{> "components/article" showPublishedAt=true hideFeatureImage=true showComments=true}}
+    {{> "components/cta" title=@custom.email_signup_text}}
+</main>
+
+{{/post}}
