@@ -90,3 +90,33 @@
     width: 144px;
     aspect-ratio: 1;
 }
+
+/* CTA */
+
+.gh-cta {
+    margin-top: 120px;
+}
+
+.gh-cta-inner {
+    align-items: flex-start;
+    padding: clamp(4.8rem, 3.64vw + 3.35rem, 8rem);
+    background-color: #e6f0e0;
+    border-radius: 8px;
+}
+
+.gh-cta-input {
+    height: 60px;
+    padding-right: 0;
+    font-size: 1.8rem;
+    background-color: var(--color-white);
+    border-radius: 4px;
+}
+
+.gh-cta-input span {
+    height: 100%;
+    padding: 0 24px;
+    font-size: 1.6rem;
+    line-height: 1.1;
+    text-transform: uppercase;
+    border-radius: 0 4px 4px 0;
+}
