@@ -2,6 +2,7 @@
 
 :root {
     --font-sans: "Libre Franklin", sans-serif;
+    --container-width: 1400px;
 }
 
 /* @media (min-width: 992px) {
@@ -13,6 +14,8 @@
 .gh-btn {
     border-radius: 4px;
 }
+
+/* Navbar */
 
 .gh-head-link, .gh-head-btn.gh-btn, .gh-head-menu {
     font-size: 1.3rem;
@@ -26,4 +29,64 @@
 
 .gh-head-logo {
     text-transform: uppercase;
+}
+
+/* List */
+
+.gh-list-item-inner {
+    position: relative;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    padding-top: 40px;
+}
+
+.gh-list-item-primary-tag {
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--ghost-accent-color);
+    text-transform: uppercase;
+}
+
+.gh-list-item-primary-tag::after {
+    flex-grow: 1;
+    height: 1px;
+    margin-left: 1.6rem;
+    content: "";
+    background-color: var(--color-light-gray);
+}
+
+/* Featured posts */
+
+.gh-list.grid.magazine {
+    margin-top: 96px;
+}
+
+.gh-list.grid.magazine .gh-list-feed {
+    grid-template-columns: repeat(12, 1fr);
+    row-gap: 32px;
+}
+
+.gh-list.grid.magazine .gh-list-item:first-child {
+    grid-row: span 4;
+    grid-column: span 7;
+}
+
+.gh-list.grid.magazine .gh-list-item:first-child .gh-list-item-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+}
+
+.gh-list.grid.magazine .gh-list-item:not(:first-child) {
+    grid-column: 8 / -1;
+}
+
+.gh-list.grid.magazine .gh-list-item:not(:first-child) .gh-list-item-image {
+    flex-shrink: 0;
+    width: 144px;
+    aspect-ratio: 1;
 }
