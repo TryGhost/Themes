@@ -23,3 +23,7 @@
 .gh-head-btn.gh-btn {
     --multiplier: 1.3;
 }
+
+.gh-head-logo {
+    text-transform: uppercase;
+}
