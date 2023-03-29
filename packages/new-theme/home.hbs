@@ -3,4 +3,23 @@
 <main class="gh-main">
     {{> "components/list" layout="magazine" count="4" featured=true showExcerpt=true showPrimaryTag=true}}
     {{> "components/cta" title=@custom.email_signup_text}}
+
+    <div class="gh-home gh-outer">
+        <div class="gh-home-inner gh-inner">
+            <section class="gh-latest">
+                <h2 class="gh-latest-title">Recent stories</h2>
+                {{> "components/list" layout="simple" count="5" showExcerpt=true showPrimaryTag=true}}
+                {{#match pagination.pages ">" 1}}
+                    <div class="gh-more gh-outer">
+                        <div class="gh-inner">
+                            <a href="/page/2">All stories →</a>
+                        </div>
+                    </div>
+                {{/match}}
+            </section>
+            <aside class="gh-sidebar">
+                {{> "components/cta" title=@custom.email_signup_text}}
+            </aside>
+        </div>
+    </div>
 </main>
