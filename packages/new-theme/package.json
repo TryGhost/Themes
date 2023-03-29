@@ -45,7 +45,7 @@
             "navigation_layout": {
                 "type": "select",
                 "options": ["Logo on the left", "Logo in the middle", "Stacked"],
-                "default": "Logo on the left"
+                "default": "Stacked"
             },
             "email_signup_text": {
                 "type": "text",

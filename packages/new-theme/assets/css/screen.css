@@ -1,1 +1,25 @@
 @import "@tryghost/shared-theme-assets/assets/css/v2/screen.css";
+
+:root {
+    --font-sans: "Libre Franklin", sans-serif;
+}
+
+/* @media (min-width: 992px) {
+    .is-head-stacked .gh-head-actions {
+        grid-row-start: 2;
+    }
+} */
+
+.gh-btn {
+    border-radius: 4px;
+}
+
+.gh-head-link, .gh-head-btn.gh-btn, .gh-head-menu {
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.gh-head-btn.gh-btn {
+    --multiplier: 1.3;
+}
