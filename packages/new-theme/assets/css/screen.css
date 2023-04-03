@@ -1,8 +1,10 @@
 @import "@tryghost/shared-theme-assets/assets/css/v2/screen.css";
 
 :root {
-    --font-sans: "Libre Franklin", sans-serif;
-    --container-width: 1400px;
+    --font-sans: Epilogue, sans-serif;
+    --font-serif: Marcellus, serif;
+    --container-width: 1360px;
+    --color-secondary-text: #666;
 }
 
 /* @media (min-width: 992px) {
@@ -18,17 +20,42 @@
 /* Navbar */
 
 .gh-head-link, .gh-head-btn.gh-btn, .gh-head-menu {
-    font-size: 1.3rem;
-    font-weight: 600;
+    /* font-family: var(--font-serif); */
+    font-size: 1.4rem;
+    /* font-weight: 400; */
+    font-weight: 500;
+    letter-spacing: 0.01em;
     text-transform: uppercase;
+    /* -webkit-font-smoothing: subpixel-antialiased; */
+}
+
+.gh-head .nav {
+    gap: 40px;
+}
+
+.gh-head-link {
+    margin-top: 2px;
 }
 
 .gh-head-btn.gh-btn {
     --multiplier: 1.3;
+
+    padding: 14px 18px 12px;
 }
 
 .gh-head-logo {
+    font-weight: 900;
     text-transform: uppercase;
+}
+
+@media (min-width: 992px) {
+    .is-head-stacked .gh-head-menu {
+        height: 72px;
+    }
+
+    .is-head-stacked .gh-head-menu::after {
+        opacity: 0;
+    }
 }
 
 /* List */
@@ -47,10 +74,10 @@
     display: flex;
     align-items: center;
     width: 100%;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
+    /* font-weight: 700; */
     font-weight: 600;
     color: var(--ghost-accent-color);
-    text-transform: uppercase;
 }
 
 .gh-list-item-primary-tag::after {
@@ -61,10 +88,27 @@
     background-color: var(--color-light-gray);
 }
 
+.gh-list-item-title {
+    /* font-family: var(--font-serif); */
+    /* font-size: 2.4rem; */
+    font-size: 2.3rem;
+    /* font-weight: 400; */
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    /* -webkit-font-smoothing: subpixel-antialiased; */
+}
+
+.gh-list-item-excerpt {
+    margin-top: 8px;
+    line-height: 1.5;
+    color: var(--color-secondary-text);
+}
+
 /* Featured posts */
 
 .gh-list.grid.magazine {
-    margin-top: 96px;
+    margin-top: 48px;
 }
 
 .gh-list.grid.magazine .gh-list-feed {
@@ -77,19 +121,24 @@
     grid-column: span 7;
 }
 
+.gh-list.grid.magazine .gh-list-item:not(:first-child) {
+    grid-column: 8 / -1;
+}
+
 .gh-list.grid.magazine .gh-list-item:first-child .gh-list-item-inner {
     grid-template-columns: 1fr;
     gap: 32px;
 }
 
-.gh-list.grid.magazine .gh-list-item:not(:first-child) {
-    grid-column: 8 / -1;
-}
-
 .gh-list.grid.magazine .gh-list-item:not(:first-child) .gh-list-item-image {
     flex-shrink: 0;
-    width: 144px;
+    width: 136px;
     aspect-ratio: 1;
+}
+
+.gh-list.grid.magazine .gh-list-item:first-child .gh-list-item-excerpt {
+    margin-top: 16px;
+    font-size: 1.8rem;
 }
 
 /* CTA */
