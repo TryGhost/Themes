@@ -21,11 +21,12 @@
 
 .gh-head-link, .gh-head-btn.gh-btn, .gh-head-menu {
     /* font-family: var(--font-serif); */
-    font-size: 1.4rem;
+    /* font-size: 1.4rem; */
+    font-size: 1.5rem;
     /* font-weight: 400; */
     font-weight: 500;
-    letter-spacing: 0.01em;
-    text-transform: uppercase;
+    /* letter-spacing: 0.01em; */
+    /* text-transform: uppercase; */
     /* -webkit-font-smoothing: subpixel-antialiased; */
 }
 
@@ -34,13 +35,15 @@
 }
 
 .gh-head-link {
-    margin-top: 2px;
+    /* margin-top: 2px; */
+    margin-top: 1px;
 }
 
 .gh-head-btn.gh-btn {
     --multiplier: 1.3;
 
-    padding: 14px 18px 12px;
+    /* padding: 14px 18px 12px; */
+    padding: 15px 18px 12px;
 }
 
 .gh-head-logo {
