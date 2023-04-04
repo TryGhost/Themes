@@ -2,7 +2,7 @@
 
 <main class="gh-main">
     {{> "components/list" layout="magazine" count="4" featured=true showExcerpt=true showPrimaryTag=true}}
-    {{> "components/cta" title=@custom.email_signup_text}}
+    {{> "components/cta" title=(concat "Sign up for " @site.title) description=@custom.email_signup_text}}
 
     <div class="gh-home gh-outer">
         <div class="gh-home-inner gh-inner">
@@ -18,7 +18,7 @@
                 {{/match}}
             </section>
             <aside class="gh-sidebar">
-                {{> "components/cta" title=@custom.email_signup_text}}
+                {{> "components/cta" title=(concat "Sign up for " @site.title) description=@custom.email_signup_text}}
             </aside>
         </div>
     </div>
