@@ -294,3 +294,30 @@
     grid-column: 8 / -1;
     padding-left: 48px;
 }
+
+/* Footer */
+
+.gh-foot {
+    padding-top: 80px;
+    margin-top: 160px;
+    color: #fff;
+    background-color: var(--ghost-accent-color);
+}
+
+.gh-foot-inner::before {
+    margin-bottom: 24px;
+    font-size: 3.2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    content: "The Local Wire";
+}
+
+.gh-foot a, .gh-copyright, .gh-copyright a {
+    color: #fff;
+}
+
+.gh-copyright {
+    font-size: 1.4rem;
+    opacity: 0.7;
+}
