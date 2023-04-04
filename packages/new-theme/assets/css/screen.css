@@ -255,6 +255,8 @@
 
 .gh-latest-title {
     margin-bottom: 48px;
+    font-size: calc(clamp(3rem, 1.36vw + 2.45rem, 4.2rem) * var(--font-multiplier, 1));
+    letter-spacing: -0.015em;
 }
 
 .gh-latest .gh-list.simple .gh-list-feed {
@@ -271,7 +273,7 @@
 }
 
 .gh-latest .gh-list.simple .gh-list-item-title {
-    --font-multiplier: 0.75;
+    font-size: 2.6rem;
 }
 
 .gh-latest .gh-list.simple .gh-list-item-excerpt {
