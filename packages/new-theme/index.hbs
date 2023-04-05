@@ -1,5 +1,20 @@
 {{!< default}}
 
 <main class="gh-main">
-
+    <div class="gh-home gh-outer">
+        <div class="gh-home-inner gh-inner">
+            <section class="gh-latest">
+                <h1 class="gh-latest-title">All stories</h1>
+                {{#match pagination.page 2}}
+                    {{#get "posts" include="tags" limit=@config.posts_per_page as |recent|}}
+                        {{> "components/list" layout="simple" showExcerpt=true showPrimaryTag=true hasPagination=true}}
+                    {{/get}}
+                {{/match}}
+                {{> "components/list" layout="simple" showExcerpt=true showPrimaryTag=true hasPagination=true}}
+            </section>
+            <aside class="gh-sidebar">
+                {{> "components/cta" title=(concat "Sign up for " @site.title) description=@custom.email_signup_text}}
+            </aside>
+        </div>
+    </div>
 </main>

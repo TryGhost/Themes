@@ -15,7 +15,13 @@
                     >
                 </figure>
             {{/if}}
-            <h1 class="gh-archive-title">{{name}}</h1>
+            <h1 class="gh-archive-title">
+                {{#if website}}
+                    <a href="{{website}}" target="_blank" rel="noopener">{{name}}</a>
+                {{else}}
+                    {{name}}
+                {{/if}}
+            </h1>
             {{#if bio}}
                 <p class="gh-archive-description">{{bio}}</p>
             {{/if}}
@@ -24,9 +30,6 @@
                     <div class="gh-archive-location">{{location}}</div>
                 {{/if}}
                 <div class="gh-archive-social">
-                    {{#if website}}
-                        <a href="{{website}}" target="_blank" rel="noopener">{{website}}</a>
-                    {{/if}}
                     {{#if facebook}}
                         <a href="{{facebook_url}}" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
                     {{/if}}

@@ -1,12 +1,12 @@
 {{!< default}}
 
 <main class="gh-main">
-    {{#author}}
-        {{> "components/author-header"}}
-    {{/author}}
     <div class="gh-home gh-outer">
         <div class="gh-home-inner gh-inner">
             <section class="gh-latest">
+                {{#author}}
+                    {{> "components/author-header"}}
+                {{/author}}
                 {{> "components/list" layout="simple" showExcerpt=true showPrimaryTag=true hasPagination=true}}
             </section>
             <aside class="gh-sidebar">

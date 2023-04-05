@@ -2,11 +2,18 @@
 
 <main class="gh-main">
     {{#tag}}
-        {{> "components/tag-header" layout="Background image"}}
+        {{#if feature_image}}
+            {{> "components/tag-header" layout="Background image"}}
+        {{/if}}
     {{/tag}}
     <div class="gh-home gh-outer">
         <div class="gh-home-inner gh-inner">
             <section class="gh-latest">
+                {{#tag}}
+                    {{#unless feature_image}}
+                        {{> "components/tag-header"}}
+                    {{/unless}}
+                {{/tag}}
                 {{> "components/list" layout="simple" showExcerpt=true showPrimaryTag=true hasPagination=true}}
             </section>
             <aside class="gh-sidebar">

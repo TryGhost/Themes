@@ -34,7 +34,7 @@
 }
 
 .author-template .gh-archive-image {
-    width: 88px;
+    width: 80px;
     margin-bottom: 8px;
 }
 
@@ -44,15 +44,15 @@
 
 .gh-archive-meta {
     display: flex;
-    flex-direction: column;
-    gap: 4px;
-    margin-top: 8px;
+    gap: 16px;
+    align-items: center;
+    margin-top: 4px;
     font-size: 1.5rem;
 }
 
 .gh-archive-social {
     display: flex;
-    gap: 8px;
+    gap: 12px;
     align-items: center;
 }
 
@@ -97,6 +97,7 @@
 }
 
 .gh-archive.is-archive-background.has-image .gh-archive-title {
+    font-size: calc(clamp(3rem, 1.36vw + 2.45rem, 4.2rem) * var(--font-multiplier, 1));
     color: #fff;
 }
 
