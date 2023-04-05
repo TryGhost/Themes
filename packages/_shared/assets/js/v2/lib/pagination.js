@@ -1,6 +1,6 @@
 function pagination(isInfinite, done, isMasonry = false) {
     const feedElements = document.querySelectorAll('.gh-feed');
-    if (!feedElements) return;
+    if (!feedElements.length) return;
 
     const feedElement = feedElements[feedElements.length - 1];
 
