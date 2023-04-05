@@ -241,6 +241,20 @@
     height: 48px;
 }
 
+/* CTA - Single post */
+
+.post-template .gh-cta {
+    margin-top: 80px;
+}
+
+.post-template .gh-cta-inner {
+    max-width: 720px;
+}
+
+.post-template .gh-cta-input {
+    max-width: none;
+}
+
 /* Homepage */
 
 .gh-home {
