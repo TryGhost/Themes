@@ -1,4 +1,9 @@
-<section class="gh-archive gh-outer">
+{{!--
+    Parameters:
+    * layout ("Side by side", "Background image")
+--}}
+
+<section class="gh-archive{{#match layout "Background image"}} is-archive-background{{/match}}{{#if feature_image}} has-image{{/if}} gh-outer">
     <div class="gh-archive-inner gh-inner">
         <header class="gh-archive-header">
             <h1 class="gh-archive-title">{{name}}</h1>

@@ -1,3 +1,5 @@
+/* Side by side */
+
 .gh-archive {
     margin-top: 80px;
     margin-bottom: 80px;
@@ -63,4 +65,54 @@
     .gh-archive-inner {
         grid-template-columns: 1fr;
     }
+}
+
+/* Background image */
+
+.gh-archive.is-archive-background.has-image {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 560px;
+    margin: 0;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.gh-archive.is-archive-background .gh-archive-inner {
+    display: flex;
+    justify-content: center;
+    max-width: 560px;
+}
+
+.gh-archive.is-archive-background .gh-archive-header {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+}
+
+.gh-archive.is-archive-background.has-image .gh-archive-header {
+    padding: 120px 0;
+    margin-top: 100px;
+}
+
+.gh-archive.is-archive-background.has-image .gh-archive-title {
+    color: #fff;
+}
+
+.gh-archive.is-archive-background.has-image .gh-archive-description {
+    color: #fff;
+    opacity: 0.8;
+}
+
+.gh-archive.is-archive-background.has-image .gh-archive-image {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+.gh-archive.is-archive-background.has-image .gh-archive-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

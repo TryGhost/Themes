@@ -1,13 +1,14 @@
 {{!--
     Parameters:
     * navigationLayout ("Stacked", "Logo on the left", "Logo in the middle")
+    * isTransparent (true, false)
 --}}
 
 <header id="gh-head" class="gh-head gh-outer is-head-{{#match navigationLayout "Logo on the left"}}left-logo{{else match navigationLayout "Logo in the middle"}}middle-logo{{else}}stacked{{/match}}{{#if isTransparent}} is-head-transparent{{/if}}">
     <div class="gh-head-inner{{#unless fullWidth}} gh-inner{{/unless}}">
         <div class="gh-head-brand">
             <div class="gh-head-brand-wrapper">
-                <a class="gh-head-logo" href="{{@site.url}}">
+                <a class="gh-head-logo{{#if @site.logo}} has-image{{/if}}" href="{{@site.url}}">
                     {{#if @site.logo}}
                         <img src="{{@site.logo}}" alt="{{@site.title}}">
                     {{else}}

@@ -51,6 +51,10 @@
     text-transform: uppercase;
 }
 
+.gh-head-logo:not(.has-image) {
+    margin-top: 8px;
+}
+
 @media (min-width: 992px) {
     .is-head-stacked .gh-head-menu {
         height: 72px;
@@ -259,24 +263,20 @@
     letter-spacing: -0.015em;
 }
 
-.gh-latest .gh-list.simple .gh-list-feed {
+.gh-list.simple .gh-list-feed {
     gap: 40px;
 }
 
-.gh-latest .gh-list.simple .gh-list-item-inner > * {
-    flex: auto;
-}
-
-.gh-latest .gh-list.simple .gh-list-item-image {
-    flex-shrink: 0;
+.gh-list.simple .gh-list-item-image {
+    flex: none;
     width: 240px;
 }
 
-.gh-latest .gh-list.simple .gh-list-item-title {
+.gh-list.simple .gh-list-item-title {
     font-size: 2.6rem;
 }
 
-.gh-latest .gh-list.simple .gh-list-item-excerpt {
+.gh-list.simple .gh-list-item-excerpt {
     margin-top: 12px;
 }
 
