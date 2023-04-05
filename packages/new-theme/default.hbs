@@ -17,16 +17,6 @@
 <body class="{{body_class}}{{{block "body_class"}}}">
 <div class="gh-site">
 
-    {{#is "tag"}}
-        {{#if tag.feature_image}}
-            {{> "components/navbar" navigationLayout=@custom.navigation_layout isTransparent=true}}
-        {{else}}
-            {{> "components/navbar" navigationLayout=@custom.navigation_layout}}
-        {{/if}}
-    {{else}}
-        {{> "components/navbar" navigationLayout=@custom.navigation_layout}}
-    {{/is}}
-
     {{{body}}}
 
     {{> components/footer footerText=@custom.footer_text}}

@@ -1,4 +1,33 @@
-<article class="gh-article {{post_class}}">
+{{!--
+    Parameters:
+    * imageWidth (small, wide, full)
+    * showPrimaryTag (true, false)
+    * showPublishedAt (true, false)
+    * showAuthors (true, false)
+    * showReadingTime (true, false)
+--}}
+
+<article class="gh-article has-{{imageWidth}}-image {{post_class}}">
+
+    {{#match imageWidth "full"}}
+        <header class="gh-article-cover gh-outer">
+            <div class="gh-article-cover-inner gh-inner">
+                {{#if feature_image}}
+                    <img class="gh-article-image"
+                        srcset="{{img_url feature_image size="s"}} 300w,
+                                {{img_url feature_image size="m"}} 720w,
+                                {{img_url feature_image size="l"}} 960w,
+                                {{img_url feature_image size="xl"}} 1200w,
+                                {{img_url feature_image size="xxl"}} 2000w"
+                        sizes="(max-width: 1200px) 100vw, 1200px"
+                        src="{{img_url feature_image size="xl"}}"
+                        alt="{{title}}"
+                    >
+                {{/if}}
+                <h1 class="gh-article-title">{{title}}</h1>
+            </div>
+        </header>
+    {{/match}}
 
     <header class="gh-article-header gh-canvas">
         {{!--
@@ -7,7 +36,7 @@
             Can be removed when :has selector is widely supported.
         --}}
         <span class="gh-article-meta"><!--
-         -->{{#if showPrimaryTag}}
+        -->{{#if showPrimaryTag}}
                 {{#if primary_tag}}
                     <a class="gh-article-meta-tag" href="{{primary_tag.url}}"{{#if primary_tag.accent_color}} style="color: {{primary_tag.accent_color}};"{{/if}}>{{primary_tag.name}}</a>
                 {{/if}}
@@ -28,31 +57,35 @@
             {{/if}}<!--
         --></span>
 
-        <h1 class="gh-article-title">{{title}}</h1>
+        {{#match imageWidth "!=" "full"}}
+            <h1 class="gh-article-title">{{title}}</h1>
+        {{/match}}
 
         {{#if custom_excerpt}}
             <p class="gh-article-excerpt">{{custom_excerpt}}</p>
         {{/if}}
 
-        {{#unless hideFeatureImage}}
-            {{#if feature_image}}
-                <figure class="gh-article-image kg-width-wide">
-                    <img
-                        srcset="{{img_url feature_image size="s"}} 300w,
-                                {{img_url feature_image size="m"}} 720w,
-                                {{img_url feature_image size="l"}} 960w,
-                                {{img_url feature_image size="xl"}} 1200w,
-                                {{img_url feature_image size="xxl"}} 2000w"
-                        sizes="(max-width: 1200px) 100vw, 1200px"
-                        src="{{img_url feature_image size="xl"}}"
-                        alt="{{title}}"
-                    >
-                    {{#if feature_image_caption}}
-                        <figcaption>{{feature_image_caption}}</figcaption>
-                    {{/if}}
-                </figure>
-            {{/if}}
-        {{/unless}}
+        {{#match imageWidth "!=" "full"}}
+            {{#unless hideFeatureImage}}
+                {{#if feature_image}}
+                    <figure class="gh-article-image{{#match imageWidth "wide"}} kg-width-wide{{/match}}">
+                        <img
+                            srcset="{{img_url feature_image size="s"}} 300w,
+                                    {{img_url feature_image size="m"}} 720w,
+                                    {{img_url feature_image size="l"}} 960w,
+                                    {{img_url feature_image size="xl"}} 1200w,
+                                    {{img_url feature_image size="xxl"}} 2000w"
+                            sizes="(max-width: 1200px) 100vw, 1200px"
+                            src="{{img_url feature_image size="xl"}}"
+                            alt="{{title}}"
+                        >
+                        {{#if feature_image_caption}}
+                            <figcaption>{{feature_image_caption}}</figcaption>
+                        {{/if}}
+                    </figure>
+                {{/if}}
+            {{/unless}}
+        {{/match}}
     </header>
 
     <section class="gh-content gh-canvas">

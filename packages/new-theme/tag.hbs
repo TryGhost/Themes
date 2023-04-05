@@ -1,5 +1,11 @@
 {{!< default}}
 
+{{#if tag.feature_image}}
+    {{> "components/navbar" navigationLayout=@custom.navigation_layout isTransparent=true}}
+{{else}}
+    {{> "components/navbar" navigationLayout=@custom.navigation_layout}}
+{{/if}}
+
 <main class="gh-main">
     {{#tag}}
         {{#if feature_image}}

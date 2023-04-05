@@ -1,5 +1,7 @@
 {{!< default}}
 
+{{> "components/navbar" navigationLayout=@custom.navigation_layout}}
+
 <main class="gh-main">
     {{> "components/list" layout="magazine" count="4" featured=true showExcerpt=true showPrimaryTag=true}}
     {{> "components/cta" title=(concat "Sign up for " @site.title) description=@custom.email_signup_text}}
