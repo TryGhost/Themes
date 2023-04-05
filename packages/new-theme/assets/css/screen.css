@@ -335,6 +335,58 @@
     margin-bottom: 8px;
 }
 
+/* Article */
+
+.gh-article-header {
+    position: relative;
+}
+
+.gh-article-meta {
+    position: absolute;
+    left: 0;
+    display: grid;
+    grid-column: wide-start/main-start;
+    gap: 4px;
+    width: 100%;
+    max-width: 160px;
+    margin-top: 8px;
+    margin-right: 32px;
+}
+
+.gh-article-meta > * + *::before {
+    display: none;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+}
+
+.gh-article-meta-date {
+    order: 1;
+    font-size: 1.3rem;
+    color: var(--color-secondary-text);
+}
+
+.gh-article-meta-authors {
+    gap: 4px;
+    order: 2;
+}
+
+.gh-article-meta-authors::before {
+    display: inline;
+    content: "By";
+}
+
+.gh-article-meta-authors a {
+    text-decoration: underline;
+}
+
+.gh-article-meta-tag {
+    order: 3;
+    margin-top: 12px;
+    font-weight: 600;
+    color: var(--ghost-accent-color);
+}
+
 /* Footer */
 
 .gh-foot {

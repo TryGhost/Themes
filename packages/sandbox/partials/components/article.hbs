@@ -15,6 +15,14 @@
             {{#if showPublishedAt}}
                 <time class="gh-article-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
             {{/if}}
+            {{#if showAuthors}}
+                <span class="gh-article-meta-authors">
+                    {{#foreach authors}}
+                        <a href="{{url}}">{{name}}</a>
+                        {{#unless @last}},&nbsp;{{/unless}}
+                    {{/foreach}}
+                </span>
+            {{/if}}
             {{#if showReadingTime}}
                 <span class="gh-article-meta-length">{{reading_time}}</span>
             {{/if}}<!--
