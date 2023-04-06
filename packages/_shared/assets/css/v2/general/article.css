@@ -124,4 +124,11 @@
 
 .gh-article-cover + .gh-article-header .gh-article-excerpt {
     margin-top: 0;
+    font-size: 1.4em;
+    line-height: 1.5;
+    color: var(--color-secondary-text);
+}
+
+.gh-article-cover + .gh-article-header + .gh-content {
+    margin-top: 1.6em;
 }
