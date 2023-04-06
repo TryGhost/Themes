@@ -109,7 +109,7 @@
 }
 
 .gh-article.has-full-image .gh-article-title {
-    --font-multiplier: 1.6;
+    font-size: calc(clamp(3.2rem, 4.55vw + 1.38rem, 7.2rem) * var(--font-multiplier, 1));
 
     position: sticky;
     bottom: 100px;
