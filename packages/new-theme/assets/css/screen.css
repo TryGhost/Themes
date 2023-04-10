@@ -30,6 +30,13 @@
 
 @font-face {
     font-family: Epilogue;
+    font-style: normal;
+    font-weight: 800;
+    src: local(""), url("../fonts/epilogue-v17-latin-800.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: Epilogue;
     font-style: italic;
     font-weight: 400;
     src: local(""), url("../fonts/epilogue-v17-latin-italic.woff2") format("woff2");
