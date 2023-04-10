@@ -90,12 +90,17 @@
 .gh-article.has-full-image .gh-article-cover {
     position: relative;
     background-color: rgba(0, 0, 0, 0.3);
+    transition: background-color 1.5s ease;
+}
+
+.gh-article.has-full-image .gh-article-cover.loading {
+    background-color: #000;
 }
 
 .gh-article.has-full-image .gh-article-cover-inner {
     display: flex;
     align-items: flex-end;
-    min-height: var(--cover-height, 100vh);
+    min-height: max(var(--cover-height, 100vh), 100vh);
 }
 
 .gh-article.has-full-image .gh-article-image {
@@ -106,14 +111,19 @@
     height: 100%;
     margin: 0;
     object-fit: cover;
+    transition: transform 1.5s ease;
+    transform: scale(1);
+}
+
+.gh-article.has-full-image .gh-article-cover.loading .gh-article-image {
+    transform: scale(1.02);
 }
 
 .gh-article.has-full-image .gh-article-title {
-    font-size: calc(clamp(3.2rem, 4.55vw + 1.38rem, 7.2rem) * var(--font-multiplier, 1));
-
     position: sticky;
     bottom: 100px;
     margin-bottom: 64px;
+    font-size: calc(clamp(3.2rem, 4.55vw + 1.38rem, 7.2rem) * var(--font-multiplier, 1));
     line-height: 1.2;
     color: #fff;
 }

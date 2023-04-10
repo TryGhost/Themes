@@ -3,6 +3,20 @@
 })();
 
 (function () {
+    if (!document.body.classList.contains('post-template')) return;
+
+    const cover = document.querySelector('.gh-article-cover');
+    if (!cover) return;
+
+    const image = cover.querySelector('.gh-article-image');
+
+    window.addEventListener('load', function () {
+        cover.style.setProperty('--cover-height', image.clientWidth * image.naturalHeight / image.naturalWidth + 'px');
+        cover.classList.remove('loading');
+    });
+})();
+
+(function () {
     const cta = document.querySelector('.gh-main > .gh-cta');
 
     if (!cta) {
