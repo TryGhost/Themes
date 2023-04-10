@@ -339,7 +339,7 @@
 /* CTA - Single post */
 
 .post-template .gh-cta {
-    margin-top: 80px;
+    margin-top: clamp(6.4rem, 1.82vw + 5.67rem, 8rem);
 }
 
 .post-template .gh-cta-inner {
@@ -393,9 +393,9 @@
 }
 
 .gh-latest-title {
-    margin-bottom: 64px;
+    margin-bottom: 48px;
     font-size: calc(clamp(3rem, 1.36vw + 2.45rem, 4.2rem) * var(--font-multiplier, 1));
-    letter-spacing: -0.015em;
+    letter-spacing: -0.02em;
 }
 
 .gh-latest .gh-list + .gh-list {
@@ -420,13 +420,14 @@
 }
 
 .gh-more {
-    margin-top: 32px;
+    margin: 32px 0;
 }
 
 .gh-more a {
-    font-size: 2.4rem;
+    font-size: 2.6rem;
     font-weight: 700;
     color: var(--ghost-accent-color);
+    text-decoration: underline;
 }
 
 .gh-sidebar {
@@ -540,17 +541,37 @@
     }
 }
 
+/* Related */
+
+.gh-related {
+    margin-top: clamp(6.4rem, 6.36vw + 3.85rem, 12rem);
+}
+
+.gh-related-title {
+    margin-bottom: 48px;
+    font-size: calc(clamp(3rem, 1.36vw + 2.45rem, 4.2rem) * var(--font-multiplier, 1));
+    letter-spacing: -0.02em;
+}
+
+.gh-related-feed {
+    position: relative;
+}
+
+.gh-related .gh-list-item {
+    position: relative;
+    padding-top: 40px;
+}
+
 /* Footer */
 
 .gh-foot {
     padding-top: 80px;
-    margin-top: 160px;
+    margin-top: clamp(6.4rem, 6.36vw + 3.85rem, 12rem);
     color: #fff;
     background-color: var(--ghost-accent-color);
 }
 
 .gh-foot-inner::before {
-    margin-bottom: 24px;
     font-size: 3.2rem;
     font-weight: 900;
     text-transform: uppercase;
