@@ -1,0 +1,10 @@
+<section class="gh-related gh-outer">
+    <div class="gh-related-inner gh-inner">
+        <h4 class="gh-related-title">Read next</h4>
+        <div class="gh-related-feed">
+            {{#get "posts" include="tags" filter="tags:[{{post.tags}}]+id:-{{post.id}}" limit="4" as |next|}}
+                {{> "components/list" layout="grid" showExcerpt=true showPrimaryTag=true hasPagination=true}}
+            {{/get}}
+        </div>
+    </div>
+</section>

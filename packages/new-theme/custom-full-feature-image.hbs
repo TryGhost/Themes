@@ -2,11 +2,12 @@
 
 {{> "components/navbar" navigationLayout=@custom.navigation_layout isTransparent=true}}
 
-{{#post}}
-
 <main class="gh-main">
-    {{> "components/article" showPrimaryTag=true showPublishedAt=true showAuthors=true showComments=true imageWidth="full"}}
-    {{> "components/cta" title=(concat "Sign up for " @site.title) description=@custom.email_signup_text}}
+    {{#post}}
+        {{> "components/article" showPrimaryTag=true showPublishedAt=true showAuthors=true showComments=true imageWidth="full"}}
+        {{#unless @site.comments_enabled}}
+            {{> "components/cta" title=(concat "Sign up for " @site.title) description=@custom.email_signup_text}}
+        {{/unless}}
+    {{/post}}
+    {{> "related-posts"}}
 </main>
-
-{{/post}}

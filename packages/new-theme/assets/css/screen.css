@@ -562,6 +562,13 @@
     padding-top: 40px;
 }
 
+.gh-related .gh-list-item-excerpt {
+    display: -webkit-box;
+    overflow-y: hidden;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
 /* Footer */
 
 .gh-foot {
