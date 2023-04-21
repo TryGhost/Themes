@@ -23,7 +23,7 @@
     margin-left: 0;
 }
 
-@media (max-width: 767px) {
+@media (width <= 767px) {
     .post-feed .post {
         display: block;
     }

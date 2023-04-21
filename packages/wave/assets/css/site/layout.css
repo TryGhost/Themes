@@ -9,7 +9,7 @@
     padding: 80px 0 40px;
 }
 
-@media (max-width: 767px) {
+@media (width <= 767px) {
     .site-content {
         padding: 40px 0;
     }

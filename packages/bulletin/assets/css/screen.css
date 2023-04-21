@@ -23,6 +23,16 @@ h6 {
     padding: 0;
 }
 
+.home-template #announcement-bar-root {
+    position: absolute;
+    right: 0;
+    left: 0;
+}
+
+#announcement-bar-root + .gh-site .gh-home {
+    padding-top: 48px;
+}
+
 .gh-home {
     display: grid;
     grid-template-columns: 2fr 3fr;
@@ -420,7 +430,7 @@ h6 {
     color: var(--ghost-accent-color);
 }
 
-@media (max-width: 767px) {
+@media (width <= 767px) {
     .gh-home-cta {
         padding: 3.2rem var(--gap);
     }
@@ -480,7 +490,7 @@ h6 {
     }
 }
 
-@media (max-width: 991px) {
+@media (width <= 991px) {
     .gh-home {
         grid-template-columns: 1fr;
         height: auto;
@@ -499,7 +509,7 @@ h6 {
     }
 }
 
-@media (min-width: 992px) {
+@media (width >= 992px) {
     .is-head-left-logo .gh-head-menu {
         justify-content: center;
         margin: 0;

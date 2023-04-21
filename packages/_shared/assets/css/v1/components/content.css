@@ -95,7 +95,7 @@ is the very first element in the post content */
     margin-top: 0.8rem;
 }
 
-@media (max-width: 767px) {
+@media (width <= 767px) {
     .gh-content {
         margin-top: 3.2rem;
         font-size: 1.7rem;

@@ -43,7 +43,7 @@
     color: var(--color-darker-gray);
 }
 
-@media (max-width: 767px) {
+@media (width <= 767px) {
     .gh-cta-actions {
         column-gap: 0.8rem;
     }

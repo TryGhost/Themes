@@ -114,25 +114,25 @@
     object-fit: cover;
 }
 
-@media (max-width: 767px) {
+@media (width <= 767px) {
     .post-feed {
         grid-template-columns: 1fr;
     }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (width >= 768px) and (width <= 991px) {
     .post-feed {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (width >= 992px) and (width <= 1199px) {
     .post-feed {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media (min-width: 992px) {
+@media (width >= 992px) {
     .is-head-stacked .post-feed {
         margin-top: 32px;
     }

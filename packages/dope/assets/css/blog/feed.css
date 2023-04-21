@@ -18,7 +18,7 @@
     letter-spacing: -0.5px;
 }
 
-@media (max-width: 767px) {
+@media (width <= 767px) {
     .post-feed .post {
         display: block;
     }
@@ -43,7 +43,7 @@
     }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (width >= 768px) and (width <= 991px) {
     .post-feed .post-media {
         width: 250px;
         margin-right: 30px;

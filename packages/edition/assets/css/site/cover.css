@@ -113,13 +113,13 @@ body:not(.with-full-cover) .cover {
     color: #fff;
 }
 
-@media (max-width: 767px) {
+@media (width <= 767px) {
     .cover-description {
         font-size: 2.7rem;
     }
 }
 
-@media (max-width: 991px) {
+@media (width <= 991px) {
     .menu-opened .cover {
         margin-top: 0;
     }

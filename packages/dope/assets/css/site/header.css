@@ -1,3 +1,13 @@
+#announcement-bar-root {
+    position: absolute;
+    right: 0;
+    left: 0;
+}
+
+#announcement-bar-root + .site .site-header {
+    margin-top: 48px;
+}
+
 .site-header {
     position: absolute;
     right: 0;
@@ -29,7 +39,7 @@
     line-height: 1;
 }
 
-@media (max-width: 767px) {
+@media (width <= 767px) {
     .navbar {
         height: 80px;
     }

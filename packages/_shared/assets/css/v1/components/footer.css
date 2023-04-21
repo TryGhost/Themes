@@ -48,7 +48,7 @@
     opacity: 1;
 }
 
-@media (max-width: 767px) {
+@media (width <= 767px) {
     .gh-foot {
         padding-top: 6.4rem;
         padding-bottom: 12rem;

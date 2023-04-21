@@ -8,7 +8,7 @@
     font-weight: 600;
 }
 
-@media (max-width: 767px) {
+@media (width <= 767px) {
     .related-posts {
         margin-top: 60px;
     }

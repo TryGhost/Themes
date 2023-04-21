@@ -27,7 +27,7 @@
     width: 100%;
 }
 
-@media (max-width: 767px) {
+@media (width <= 767px) {
     .gh-article-excerpt {
         font-size: 1.9rem;
     }

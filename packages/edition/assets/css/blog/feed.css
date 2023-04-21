@@ -266,7 +266,7 @@
     display: none;
 }
 
-@media (max-width: 575px) {
+@media (width <= 575px) {
     .post-feed.expanded .feed {
         flex-direction: column;
     }

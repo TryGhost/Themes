@@ -100,7 +100,7 @@
     font-family: var(--font-serif);
 }
 
-@media (max-width: 767px) {
+@media (width <= 767px) {
     .post-title {
         font-size: 17px;
     }

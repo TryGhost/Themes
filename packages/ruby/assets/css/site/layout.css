@@ -10,7 +10,7 @@
     padding-bottom: 30px;
 }
 
-@media (min-width: 992px) {
+@media (width >= 992px) {
     .related-column {
         order: 1;
     }

@@ -79,7 +79,7 @@
     opacity: 0.7;
 }
 
-@media (max-width: 767px) {
+@media (width <= 767px) {
     .tag-content {
         padding: 30px 30px 45px;
     }

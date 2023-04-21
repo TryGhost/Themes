@@ -118,7 +118,7 @@ iframe {
     border: 0;
 }
 
-@media (max-width: 767px) {
+@media (width <= 767px) {
     h2 {
         font-size: 2.4rem;
     }

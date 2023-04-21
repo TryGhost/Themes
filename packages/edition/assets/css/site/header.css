@@ -13,7 +13,7 @@
     font-weight: 700;
 }
 
-@media (min-width: 992px) {
+@media (width >= 992px) {
     .is-head-left-logo .gh-head-menu {
         justify-content: center;
         margin: 0;
