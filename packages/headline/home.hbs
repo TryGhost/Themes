@@ -2,6 +2,45 @@
 
 <main class="gh-main gh-outer">
     <div class="gh-inner">
+        <div class="gh-top">
+            <div class="gh-featured">
+                {{!-- {{#get "posts" filter="featured:true" limit="4" include="tags"}} --}}
+                {{#get "posts" limit="4" include="tags"}}
+                    {{#foreach posts}}
+                        <article>
+                            {{#if feature_image}}
+                                <img src="{{feature_image}}">
+                            {{/if}}
+                            <div>
+                                <span>{{primary_tag.name}}</span>
+                                <h3>{{title}}</h3>
+                                <p>{{excerpt}}</p>
+                            </div>
+                        </article>
+                    {{/foreach}}
+                {{/get}}
+            </div>
+            <div class="gh-latest">
+                <h2>Latest</h2>
+                <div class="gh-latest-feed">
+                    {{#get "posts" limit="10" include="tags"}}
+                        {{#foreach posts from="4" limit="5"}}
+                            <article>
+                                {{#if feature_image}}
+                                    <img src="{{feature_image}}">
+                                {{/if}}
+                                <div>
+                                    <span>{{primary_tag.name}}</span>
+                                    <h3>{{title}}</h3>
+                                    <p>{{excerpt}}</p>
+                                </div>
+                            </article>
+                        {{/foreach}}
+                    {{/get}}
+                </div>
+            </div>
+        </div>
+
         <section class="gh-topic gh-topic-grid">
             <h2 class="gh-topic-name">
                 {{#match pagination.pages ">" 1}}

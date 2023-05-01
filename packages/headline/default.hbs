@@ -10,7 +10,7 @@
     {{ghost_head}}
 </head>
 
-<body class="{{body_class}}{{{block "body_class"}}} is-head-{{#match @custom.navigation_layout "Logo on the left"}}left-logo{{else match @custom.navigation_layout "Logo in the middle"}}middle-logo{{else}}stacked{{/match}}{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Elegant serif"}} has-serif-body{{/match}}{{#is "tag"}}{{#if tag.feature_image}} is-head-transparent{{/if}}{{/is}}{{#match @custom.header_style "Accent color"}} is-head-brand{{/match}}{{#match @custom.header_style "Dark"}} is-head-dark{{/match}}">
+<body class="{{body_class}}{{{block "body_class"}}} is-head-{{#match @custom.navigation_layout "Logo on the left"}}left-logo{{else match @custom.navigation_layout "Logo in the middle"}}middle-logo{{else}}stacked{{/match}}{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Elegant serif"}} has-serif-body{{/match}}{{#is "tag"}}{{#if tag.feature_image}} is-head-transparent{{/if}}{{/is}}{{#match @custom.header_style "Accent color"}} is-head-brand{{/match}}{{#match @custom.header_style "Dark"}} is-head-dark{{/match}}{{#if @custom.sticky_header}} has-sticky-header{{/if}}">
 <div class="gh-site">
 
     <header id="gh-head" class="gh-head gh-outer">
@@ -106,6 +106,118 @@
 <script src="{{asset "built/main.min.js"}}"></script>
 
 {{ghost_foot}}
+
+<style>
+    html {
+        margin-top: 48px;
+    }
+
+    .gh-head {
+        position: relative;
+    }
+
+    .has-sticky-header .gh-head {
+        position: sticky;
+        top: 0;
+    }
+
+    .is-head-stacked .gh-head-menu::after {
+        opacity: 0;
+    }
+
+    .gh-announcement {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 48px;
+        font-size: 1.5rem;
+    }
+
+    .gh-announcement a {
+        color: inherit !important;
+    }
+
+    .gh-announcement.light {
+        background-color: #fff;
+        color: #15171a;
+        box-shadow: 0 1px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    .gh-announcement.accent {
+        background-color: var(--ghost-accent-color);
+        color: #fff;
+    }
+
+    .gh-announcement.dark {
+        background-color: #15171a;
+        color: #fff;
+    }
+
+    .gh-announcement a {
+        color: #fff;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    .gh-announcement.light a {
+        color: var(--ghost-accent-color) !important;
+    }
+
+    .gh-announcement button {
+        position: absolute;
+        top: 50%;
+        right: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: -16px;
+        width: 32px;
+        height: 32px;
+        padding: 0;
+        background-color: transparent;
+        border: 0;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .gh-announcement.light button {
+        color: #888;
+    }
+
+    .gh-announcement svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    @media (max-width: 1200px) {
+        .gh-main {
+            padding-top: 48px;
+        }
+
+        .gh-featured > :first-child {
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 32px;
+        }
+
+        .gh-latest img {
+            display: none;
+        }
+    }
+</style>
+
+<div class="gh-announcement {{#match @custom.announcement_color "Light"}}light{{else match @custom.announcement_color "Accent color"}}accent{{else}}dark{{/match}}">
+    <div class="gh-announcement-inner">
+        {{{@custom.announcement_text}}}
+        <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg>
+        </button>
+    </div>
+</div>
 
 </body>
 

@@ -42,6 +42,18 @@
         },
         "card_assets": true,
         "custom": {
+            "announcement_text": {
+                "type": "text"
+            },
+            "announcement_color": {
+                "type": "select",
+                "options": ["Light", "Accent color", "Dark"],
+                "default": "Light"
+            },
+            "sticky_header": {
+                "type": "boolean",
+                "default": false
+            },
             "navigation_layout": {
                 "type": "select",
                 "options": ["Logo on the left", "Logo in the middle", "Stacked"],
