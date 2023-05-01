@@ -418,7 +418,7 @@ body:not(.home-template) .gh-article-image {
     margin: 0;
 }
 
-@media (width <= 767px) {
+@media (max-width: 767px) {
     .gh-head-description {
         display: none;
     }

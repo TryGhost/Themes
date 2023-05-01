@@ -27,7 +27,7 @@
     font-family: var(--font-serif);
 }
 
-@media (width <= 767px) {
+@media (max-width: 767px) {
     .featured-wrapper {
         margin-top: 0;
         margin-bottom: 60px;

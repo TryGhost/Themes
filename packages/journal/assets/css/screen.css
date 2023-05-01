@@ -482,7 +482,7 @@
     margin-left: 0.8rem;
 }
 
-@media (width <= 767px) {
+@media (max-width: 767px) {
     .gh-latest {
         margin-bottom: 8rem;
     }
@@ -527,7 +527,7 @@
     }
 }
 
-@media (width >= 768px) and (width <= 991px) {
+@media (min-width: 768px) and (max-width: 991px) {
     .gh-sidebar {
         padding-left: 1.6rem;
     }
@@ -548,7 +548,7 @@
     }
 }
 
-@media (width <= 991px) {
+@media (max-width: 991px) {
     .gh-latest {
         margin-top: 0;
     }

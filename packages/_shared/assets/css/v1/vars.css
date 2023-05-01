@@ -16,7 +16,7 @@
     --gap: 3.6rem;
 }
 
-@media (width <= 767px) {
+@media (max-width: 767px) {
     :root {
         --h1-size: 3.2rem !important;
         --gap: 2rem;

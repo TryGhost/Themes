@@ -110,7 +110,7 @@ is the very first element in the post content */
     border: 0;
 }
 
-@media (width <= 767px) {
+@media (max-width: 767px) {
     .gh-content {
         margin-top: 3.2rem;
         font-size: 1.7rem;

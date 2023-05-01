@@ -61,7 +61,8 @@
             "keyframe-block-no-duplicate-selectors": null,
             "import-notation": null,
             "keyframe-selector-notation": null,
-            "declaration-block-no-redundant-longhand-properties": null
+            "declaration-block-no-redundant-longhand-properties": null,
+            "media-feature-range-notation": "prefix"
         }
     },
     "renovate": {

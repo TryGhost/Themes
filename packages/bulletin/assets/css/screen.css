@@ -430,7 +430,7 @@ h6 {
     color: var(--ghost-accent-color);
 }
 
-@media (width <= 767px) {
+@media (max-width: 767px) {
     .gh-home-cta {
         padding: 3.2rem var(--gap);
     }
@@ -490,7 +490,7 @@ h6 {
     }
 }
 
-@media (width <= 991px) {
+@media (max-width: 991px) {
     .gh-home {
         grid-template-columns: 1fr;
         height: auto;
@@ -509,7 +509,7 @@ h6 {
     }
 }
 
-@media (width >= 992px) {
+@media (min-width: 992px) {
     .is-head-left-logo .gh-head-menu {
         justify-content: center;
         margin: 0;

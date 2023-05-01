@@ -187,7 +187,7 @@
     background-size: 264px 88px;
 }
 
-@media (-webkit-min-device-pixel-ratio: 1.1), (-webkit-min-device-pixel-ratio: 1.09375), (resolution >= 105dpi), (resolution >= 1.1dppx) {
+@media (-webkit-min-device-pixel-ratio: 1.1), (-webkit-min-device-pixel-ratio: 1.09375), (min-resolution: 105dpi), (min-resolution: 1.1dppx) {
     .pswp--svg .pswp__button,
     .pswp--svg .pswp__button--arrow--left::before,
     .pswp--svg .pswp__button--arrow--right::before {
@@ -398,7 +398,7 @@
     border-radius: 50%;
 }
 
-@media screen and (width <= 1024px) {
+@media screen and (max-width: 1024px) {
     .pswp__preloader {
         position: relative;
         top: auto;

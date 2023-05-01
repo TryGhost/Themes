@@ -46,7 +46,7 @@
     opacity: 0.8;
 }
 
-@media (width <= 767px) {
+@media (max-width: 767px) {
     .navigation {
         display: block;
     }

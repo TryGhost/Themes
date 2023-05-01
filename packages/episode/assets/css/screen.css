@@ -60,7 +60,7 @@ body {
     font-variation-settings: "wdth" 80;
 }
 
-@media (width <= 767px) {
+@media (max-width: 767px) {
     #gh-head a:not(.gh-primary-btn) {
         color: var(--color-black);
     }
@@ -119,7 +119,7 @@ body {
     letter-spacing: -0.02em;
 }
 
-@media (width <= 767px) {
+@media (max-width: 767px) {
     .gh-header.has-background-image {
         min-height: unset;
         aspect-ratio: 1;
@@ -177,7 +177,7 @@ body {
     font-weight: 600;
 }
 
-@media (width <= 767px) {
+@media (max-width: 767px) {
     .gh-podcast-service-list {
         gap: 40px;
         padding: 32px 0;
@@ -292,7 +292,7 @@ body {
     font-weight: 700;
 }
 
-@media (width <= 767px) {
+@media (max-width: 767px) {
     .gh-list-item-image {
         width: 100%;
     }

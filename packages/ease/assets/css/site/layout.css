@@ -10,7 +10,7 @@
     padding-bottom: 30px;
 }
 
-@media (width <= 767px) {
+@media (max-width: 767px) {
     .site-content {
         padding-bottom: 0;
     }

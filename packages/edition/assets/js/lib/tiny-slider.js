@@ -49,7 +49,7 @@ function setLocalStorage(storage, key, value, access) {
 function getSlideId() {
   var id = window.tnsId;
   window.tnsId = !id ? 1 : id + 1;
-  
+
   return 'tns' + window.tnsId;
 }
 
@@ -91,13 +91,13 @@ function resetFakeBody (body, docOverflow) {
   }
 }
 
-// get css-calc 
+// get css-calc
 
 function calc() {
-  var doc = document, 
+  var doc = document,
       body = getBody(),
       docOverflow = setFakeBody(body),
-      div = doc.createElement('div'), 
+      div = doc.createElement('div'),
       result = false;
 
   body.appendChild(div);
@@ -108,13 +108,13 @@ function calc() {
     for (var i = 0; i < 3; i++) {
       val = vals[i];
       div.style.width = val;
-      if (div.offsetWidth === 100) { 
-        result = val.replace(str, ''); 
+      if (div.offsetWidth === 100) {
+        result = val.replace(str, '');
         break;
       }
     }
   } catch (e) {}
-  
+
   body.fake ? resetFakeBody(body, docOverflow) : div.remove();
 
   return result;
@@ -156,7 +156,7 @@ function mediaquerySupport () {
   if (window.matchMedia || window.msMatchMedia) {
     return true;
   }
-  
+
   var doc = document,
       body = getBody(),
       docOverflow = setFakeBody(body),
@@ -237,7 +237,7 @@ function toDegree (y, x) {
 function getTouchDirection(angle, range) {
   var direction = false,
       gap = Math.abs(90 - Math.abs(angle));
-      
+
   if (gap >= 90 - range) {
     direction = 'horizontal';
   } else if (gap <= range) {
@@ -286,7 +286,7 @@ function getAttr(el, attr) {
 
 function isNodeList(el) {
   // Only NodeList has the "item()" function
-  return typeof el.item !== "undefined"; 
+  return typeof el.item !== "undefined";
 }
 
 function setAttrs(els, attrs) {
@@ -337,7 +337,7 @@ function whichProperty(props){
     var arr = [props],
         Props = props.charAt(0).toUpperCase() + props.substr(1),
         prefixes = ['Webkit', 'Moz', 'ms', 'O'];
-        
+
     prefixes.forEach(function(prefix) {
       if (prefix !== 'ms' || props === 'transform') {
         arr.push(prefix + Props);
@@ -360,7 +360,7 @@ function whichProperty(props){
 function has3DTransforms(tf){
   if (!tf) { return false; }
   if (!window.getComputedStyle) { return false; }
-  
+
   var doc = document,
       body = getBody(),
       docOverflow = setFakeBody(body),
@@ -464,8 +464,8 @@ function jsTransform(element, attr, prefix, postfix, to, duration, callback) {
     duration -= tick;
     from += positionTick;
     element.style[attr] = prefix + from + unit + postfix;
-    if (duration > 0) { 
-      setTimeout(moveElement, tick); 
+    if (duration > 0) {
+      setTimeout(moveElement, tick);
     } else {
       callback();
     }
@@ -1965,14 +1965,14 @@ var tns = function(options) {
       vp -= fixedWidth ? (viewport - fixedWidth) / 2 : (viewport - (slidePositions[index + 1] - slidePositions[index] - gutter)) / 2;
     }
 
-    return width <= vp;
+    return max-width: vp;
   }
 
   function setBreakpointZone () {
     breakpointZone = 0;
     for (var bp in responsive) {
       bp = parseInt(bp); // convert string to number
-      if (windowWidth >= bp) { breakpointZone = bp; }
+      if (windowmin-width: bp) { breakpointZone = bp; }
     }
   }
 

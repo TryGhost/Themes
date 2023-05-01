@@ -17,7 +17,7 @@
     gap: 4px;
 }
 
-@media (width <= 767px) {
+@media (max-width: 767px) {
     .subscribe .subscribe-text {
         display: none;
     }

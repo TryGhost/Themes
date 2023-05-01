@@ -24,7 +24,7 @@
     width: 100%;
 }
 
-@media (width <= 640px) {
+@media (max-width: 640px) {
     .post-feed {
         --grid-gap: 4px;
 
@@ -36,7 +36,7 @@
     }
 }
 
-@media (width >= 641px) and (width <= 1019px) {
+@media (min-width: 641px) and (max-width: 1019px) {
     .post-feed {
         --grid-gap: 8px;
 
@@ -48,19 +48,19 @@
     }
 }
 
-@media (width >= 1020px) {
+@media (min-width: 1020px) {
     .post-feed {
         max-width: 990px;
     }
 }
 
-@media (width >= 1350px) {
+@media (min-width: 1350px) {
     .post-feed {
         max-width: 1320px;
     }
 }
 
-@media (width >= 1680px) {
+@media (min-width: 1680px) {
     .post-feed {
         max-width: 1650px;
     }

@@ -43,13 +43,13 @@
     font-weight: 700;
 }
 
-@media (width <= 460px) {
+@media (max-width: 460px) {
     .site-cover .search {
         width: 100%;
     }
 }
 
-@media (width <= 767px) {
+@media (max-width: 767px) {
     .site-cover {
         min-height: 400px;
     }

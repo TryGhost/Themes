@@ -59,7 +59,7 @@
     letter-spacing: -0.005em;
 }
 
-@media (width <= 767px) {
+@media (max-width: 767px) {
     .topic-feed {
         grid-template-columns: 1fr;
     }

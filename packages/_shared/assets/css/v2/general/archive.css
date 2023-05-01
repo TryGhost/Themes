@@ -59,7 +59,7 @@
     font-size: 0;
 }
 
-@media (width <= 767px) {
+@media (max-width: 767px) {
     .gh-archive-inner {
         grid-template-columns: 1fr;
     }

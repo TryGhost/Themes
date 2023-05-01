@@ -111,7 +111,7 @@
     margin-right: 8px;
 }
 
-@media (width <= 767px) {
+@media (max-width: 767px) {
     .gh-head-members {
         flex-direction: column-reverse;
         gap: 16px;
@@ -123,7 +123,7 @@
     }
 }
 
-@media (width >= 768px) {
+@media (min-width: 768px) {
     .gh-head-brand .gh-search {
         display: none;
     }
@@ -146,7 +146,7 @@ LOGO   Home About Collection Author Portal             Login Subscribe
     grid-template-columns: auto 1fr auto;
 }
 
-@media (width >= 992px) {
+@media (min-width: 992px) {
     .is-head-left-logo .gh-head-menu {
         margin-right: 64px;
         margin-left: 16px;
@@ -171,7 +171,7 @@ Home About Collection            LOGO                  Login Subscribe
     gap: 28px;
 }
 
-@media (width >= 992px) {
+@media (min-width: 992px) {
     .is-head-middle-logo .gh-head-menu {
         margin-right: 64px;
     }
@@ -200,13 +200,13 @@ Search                         LOGO                    Login Subscribe
     min-height: 80px;
 }
 
-@media (width <= 767px) {
+@media (max-width: 767px) {
     .is-head-stacked .gh-head-brand {
         min-height: unset;
     }
 }
 
-@media (width >= 992px) {
+@media (min-width: 992px) {
     .is-head-stacked .gh-head-inner {
         padding: 0;
     }
@@ -456,7 +456,7 @@ Search                         LOGO                    Login Subscribe
     transform: rotate(-45deg);
 }
 
-@media (width <= 767px) {
+@media (max-width: 767px) {
     #gh-head {
         height: 64px;
     }

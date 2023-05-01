@@ -39,7 +39,7 @@
     line-height: 1;
 }
 
-@media (width <= 767px) {
+@media (max-width: 767px) {
     .navbar {
         height: 80px;
     }
