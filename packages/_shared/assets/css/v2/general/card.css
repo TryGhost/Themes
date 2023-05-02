@@ -74,6 +74,11 @@ except for when immediately preceeded by a heading */
 /* Blockquote
 /* ---------------------------------------------------------- */
 
+blockquote:not([class]) {
+    padding-left: 2rem;
+    border-left: 4px solid var(--ghost-accent-color);
+}
+
 blockquote.kg-blockquote-alt {
     font-style: normal;
     font-weight: 400;
