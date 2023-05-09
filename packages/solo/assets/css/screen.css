@@ -130,7 +130,7 @@ hr {
 }
 
 @media (max-width: 991px) {
-    .is-head-open:not(.is-head-brand):not(.is-head-dark):not(.is-head-transparent) #gh-head {
+    .is-head-open:not(.is-head-brand):not(.is-head-dark):not(.is-head-transparent) :is(#gh-head, #gh-head .gh-head-actions) {
         background-color: var(--background-color);
     }
 }
