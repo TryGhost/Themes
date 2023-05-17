@@ -286,7 +286,9 @@ body {
 }
 
 .gh-article-title {
-    font-size: 5.8rem;
+    --font-multiplier: 1.25;
+
+    word-break: break-word;
 }
 
 .gh-article-meta {
