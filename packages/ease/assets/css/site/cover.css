@@ -36,6 +36,7 @@
     font-size: 3.6rem;
     font-weight: 600;
     line-height: 1.4;
+    word-break: break-word;
 }
 
 .has-serif-title .cover-description {

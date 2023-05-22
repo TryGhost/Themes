@@ -40,6 +40,7 @@
     margin: 8px 0 0;
     font-size: 2rem;
     line-height: 1.4;
+    word-break: break-word;
 }
 
 .navigation-item:hover .navigation-title {

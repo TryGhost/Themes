@@ -17,6 +17,7 @@
     font-weight: 700;
     line-height: 1.25;
     letter-spacing: -0.005em;
+    word-break: break-word;
 }
 
 .has-serif-title .featured-wrapper .post-title {

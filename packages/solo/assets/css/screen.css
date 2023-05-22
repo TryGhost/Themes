@@ -142,6 +142,10 @@ hr {
     margin-bottom: 40px;
 }
 
+.gh-about-content {
+    word-break: break-word;
+}
+
 .gh-about-primary {
     max-width: 1200px;
     font-size: clamp(3.2rem, 2.4452rem + 2.0968vw, 5.8rem);
@@ -335,6 +339,7 @@ hr {
 
 .gh-card-title {
     font-weight: 800;
+    word-break: break-word;
 }
 
 .has-serif-font .gh-card-title {

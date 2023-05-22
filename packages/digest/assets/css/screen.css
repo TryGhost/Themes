@@ -93,6 +93,7 @@ body {
 .gh-card-title {
     font-size: 3.2rem;
     font-weight: 800;
+    word-break: break-word;
     transition: color 0.1s ease-in-out;
 }
 
@@ -104,6 +105,7 @@ body {
     font-size: 1.8rem;
     line-height: 1.5;
     color: var(--color-secondary-text);
+    word-break: break-word;
 }
 
 .gh-card-footer {

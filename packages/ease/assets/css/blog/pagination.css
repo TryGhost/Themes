@@ -44,4 +44,5 @@
     font-weight: 600;
     color: var(--secondary-text-color);
     text-transform: uppercase;
+    word-break: break-word;
 }

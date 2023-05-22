@@ -22,6 +22,7 @@
     font-size: 4rem;
     line-height: 1.2;
     letter-spacing: -0.1rem;
+    word-break: break-word;
 }
 
 .has-serif-title .single-title {
@@ -31,6 +32,7 @@
 .single-excerpt {
     margin-top: 2rem;
     font-size: 1.8rem;
+    word-break: break-word;
 }
 
 .has-serif-body .single-excerpt {

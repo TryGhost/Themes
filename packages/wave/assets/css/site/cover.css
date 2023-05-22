@@ -24,4 +24,5 @@
     font-size: 2.4rem;
     font-weight: 600;
     line-height: 1.5;
+    word-break: break-word;
 }

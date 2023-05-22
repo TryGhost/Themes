@@ -20,6 +20,7 @@
     max-width: 920px;
     margin: 0 auto;
     text-align: center;
+    word-break: break-word;
 }
 
 .gh-header-primary {

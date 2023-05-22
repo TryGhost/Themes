@@ -38,6 +38,7 @@
     font-weight: 700;
     line-height: 1.25;
     letter-spacing: -0.005em;
+    word-break: break-word;
 }
 
 .is-font-serif .gh-list-item-title {
@@ -48,6 +49,7 @@
     margin-top: 16px;
     margin-bottom: 12px;
     font-size: calc(1.5rem * var(--font-multiplier, 1));
+    word-break: break-word;
 }
 
 .gh-list-item-primary-tag,

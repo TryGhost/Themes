@@ -2,6 +2,10 @@
     color: var(--ghost-accent-color);
 }
 
+.gh-article-title {
+    word-break: break-word;
+}
+
 .has-serif-title .gh-article-title {
     font-family: var(--font-serif);
     letter-spacing: -0.01em;

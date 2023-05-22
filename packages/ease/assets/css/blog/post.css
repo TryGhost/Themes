@@ -8,6 +8,7 @@
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: -0.005em;
+    word-break: break-word;
 }
 
 .post-link:hover + .post-wrapper .post-title {
@@ -96,6 +97,7 @@
     font-size: 1.6rem;
     line-height: 1.5;
     color: var(--secondary-text-color);
+    word-break: break-word;
 }
 
 .post-tags {

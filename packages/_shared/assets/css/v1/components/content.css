@@ -6,6 +6,7 @@ headings, text, images and lists. We deal with cards lower down. */
     margin-top: 4rem;
     font-size: var(--content-font-size, 1.8rem);
     letter-spacing: var(--content-letter-spacing, 0);
+    word-break: break-word;
 }
 
 /* Default vertical spacing */

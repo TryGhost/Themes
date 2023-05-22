@@ -104,6 +104,7 @@ body {
 
 .gh-header-content {
     max-width: unset;
+    word-break: break-word;
 }
 
 .gh-header-primary {
