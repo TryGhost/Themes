@@ -1,11 +1,11 @@
 /* Add extra margin before/after any cards,
 except for when immediately preceeded by a heading */
 
-.gh-content :not(.kg-card):not([id]) + .kg-card {
+.gh-content :not(.kg-card):not(table):not([id]) + :is(.kg-card, table) {
     margin-top: calc(2em * var(--content-spacing-multiplier, 1));
 }
 
-.gh-content .kg-card + :not(.kg-card):not([id]) {
+.gh-content :is(.kg-card, table) + :not(.kg-card):not(table):not([id]) {
     margin-top: calc(2em * var(--content-spacing-multiplier, 1));
 }
 
