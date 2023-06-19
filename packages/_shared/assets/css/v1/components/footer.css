@@ -12,6 +12,13 @@
     font-size: 1.3rem;
 }
 
+.no-menu .gh-foot-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+}
+
 .gh-foot-menu .nav {
     display: inline-flex;
     flex-wrap: wrap;
@@ -59,10 +66,6 @@
         text-align: center;
     }
 
-    .gh-foot-menu {
-        margin-top: 3.2rem;
-    }
-
     .gh-foot-menu .nav {
         flex-direction: column;
     }
@@ -76,7 +79,6 @@
     }
 
     .gh-powered-by {
-        margin-top: 3.2rem;
         text-align: center;
     }
 }
