@@ -6,10 +6,10 @@ input[type="search"] {
     height: 50px;
     padding: 0 15px;
     font-size: 16px;
+    appearance: none;
     border: 1px solid var(--mid-gray-color);
     border-radius: 5px;
     outline: none;
-    appearance: none;
 }
 
 input[type="text"]:focus,

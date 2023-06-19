@@ -151,11 +151,11 @@
     padding: 0;
     margin: 0;
     overflow: visible;
+    appearance: none;
     cursor: pointer;
     background: none;
     border: 0;
     box-shadow: none;
-    appearance: none;
     transition: opacity 0.2s;
 }
 
