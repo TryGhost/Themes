@@ -423,8 +423,8 @@ Search                         LOGO                    Login Subscribe
     margin-right: -3px;
     cursor: pointer;
     background-color: transparent;
-    border: 0;
     appearance: none;
+    border: 0;
 }
 
 .gh-burger::before,

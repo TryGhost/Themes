@@ -155,8 +155,8 @@
     background: none;
     border: 0;
     box-shadow: none;
-    transition: opacity 0.2s;
     appearance: none;
+    transition: opacity 0.2s;
 }
 
 .pswp__button:focus,
