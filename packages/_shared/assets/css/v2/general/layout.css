@@ -33,32 +33,32 @@
 is laid out on top of. Canvas just defines the grid, we don't
 use it for applying any other styles. */
 
-.gh-canvas {
+.gh-canvas,
+.kg-width-full.kg-content-wide {
+    --main: min(var(--content-width, 720px), 100% - var(--gap) * 2);
+    --wide: minmax(0, calc((var(--container-width, 1200px) - var(--content-width, 720px)) / 2));
+    --full: minmax(var(--gap), 1fr);
+
     display: grid;
     grid-template-columns:
-        [full-start]
-        minmax(var(--gap), auto)
-        [wide-start]
-        minmax(auto, calc((var(--container-width, 1200px) - var(--content-width, 720px)) / 2))
-        [main-start]
-        min(var(--content-width, 720px), calc(100% - calc(var(--gap) * 2)))
-        [main-end]
-        minmax(auto, calc((var(--container-width, 1200px) - var(--content-width, 720px)) / 2))
-        [wide-end]
-        minmax(var(--gap), auto)
-        [full-end];
+        [full-start] var(--full)
+        [wide-start] var(--wide)
+        [main-start] var(--main) [main-end]
+        var(--wide) [wide-end]
+        var(--full) [full-end];
 }
 
 .gh-canvas > * {
-    grid-column: main-start/main-end;
+    grid-column: main;
 }
 
-.kg-width-wide {
-    grid-column: wide-start/wide-end;
+.kg-width-wide,
+.kg-content-wide > div {
+    grid-column: wide;
 }
 
 .kg-width-full {
-    grid-column: full-start/full-end;
+    grid-column: full;
 }
 
 .kg-width-full img {
