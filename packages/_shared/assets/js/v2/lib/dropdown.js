@@ -25,7 +25,7 @@ function dropdown() {
                 submenuItems.unshift(nav.lastElementChild);
                 nav.lastElementChild.remove();
             } else {
-                return;
+                break;
             }
         }
 
