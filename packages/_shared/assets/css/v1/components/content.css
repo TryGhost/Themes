@@ -92,8 +92,16 @@ is the very first element in the post content */
     padding-left: 2.8rem;
 }
 
-.gh-content li + li {
+.gh-content :is(li + li, li :is(ul, ol)) {
     margin-top: 0.8rem;
+}
+
+.gh-content ol ol li {
+    list-style-type: lower-alpha;
+}
+
+.gh-content ol ol ol li {
+    list-style-type: lower-roman;
 }
 
 .gh-content table:not(.gist table) {
@@ -141,14 +149,6 @@ is the very first element in the post content */
 .gh-content table:not(.gist table) td {
     padding: 6px 12px;
     border: 1px solid var(--color-light-gray);
-}
-
-.gh-content ol ol li {
-    list-style-type: lower-alpha;
-}
-
-.gh-content ol ol ol li {
-    list-style-type: lower-roman;
 }
 
 @media (max-width: 767px) {
