@@ -158,10 +158,6 @@ is the very first element in the post content */
     border: 1px solid var(--color-light-gray);
 }
 
-.gh-content .kg-nested-list-item {
-    list-style-type: none;
-}
-
 .gh-content ol ol li {
     list-style-type: lower-alpha;
 }
