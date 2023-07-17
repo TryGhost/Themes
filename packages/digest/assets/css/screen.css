@@ -221,6 +221,10 @@ body:not(.home-template) .no-image .gh-article-header {
     padding-bottom: 4rem;
 }
 
+.page-template .gh-article-header {
+    margin-top: 0;
+}
+
 .gh-article-meta {
     display: flex;
     align-items: center;

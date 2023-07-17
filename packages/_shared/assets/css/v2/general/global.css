@@ -16,6 +16,7 @@
     --font-mono: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
     --gap: clamp(2rem, 1.82vw + 1.27rem, 3.6rem);
     --head-nav-gap: 28px;
+    --header-spacing: 80px;
 }
 
 :root.has-light-text {

@@ -29,10 +29,6 @@ headings, text, images and lists. We deal with cards lower down. */
     letter-spacing: -0.01em;
 }
 
-.gh-content > *:first-child {
-    margin-top: 0 !important;
-}
-
 /* Add back a top margin to all headings, unless a heading
 is the very first element in the post content */
 .gh-content > [id]:not(:first-child) {
@@ -164,6 +160,19 @@ is the very first element in the post content */
 .gh-content table:not(.gist table) td {
     padding: 6px 12px;
     border: 1px solid var(--color-light-gray);
+}
+
+/* Page without header */
+.page-template .gh-content:only-child {
+    margin-top: 0 !important;
+}
+
+.page-template .gh-content:only-child > *:first-child:not(.kg-width-full) {
+    margin-top: var(--header-spacing, 80px);
+}
+
+.page-template .gh-content > *:last-child:not(.kg-width-full) {
+    margin-bottom: var(--footer-spacing, 0);
 }
 
 @media (max-width: 767px) {

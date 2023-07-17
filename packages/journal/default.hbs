@@ -64,6 +64,7 @@
 
     {{{body}}}
 
+    {{^is "page"}}
     {{#if @site.members_enabled}}
     {{#unless @member}}
         <div class="gh-subscribe">
@@ -83,6 +84,7 @@
         </div>
     {{/unless}}
     {{/if}}
+    {{/is}}
 
     <footer class="gh-foot{{#unless @site.secondary_navigation}} no-menu{{/unless}} gh-outer">
         <div class="gh-foot-inner gh-inner">

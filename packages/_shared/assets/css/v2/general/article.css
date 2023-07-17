@@ -2,6 +2,14 @@
     padding-top: 80px;
 }
 
+.page-template .gh-article {
+    padding-top: 0;
+}
+
+.page-template .gh-article-header {
+    margin-top: var(--header-spacing, 80px);
+}
+
 .gh-article-meta {
     display: flex;
     flex-wrap: wrap;

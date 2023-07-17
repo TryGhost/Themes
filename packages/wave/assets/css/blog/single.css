@@ -7,6 +7,10 @@
     text-align: center;
 }
 
+.page-template .single > .post-header {
+    margin-top: var(--header-spacing);
+}
+
 .single > .post-header .post-title {
     font-size: 4rem;
     font-weight: 700;
