@@ -5,7 +5,7 @@
 <main id="gh-main" class="gh-main">
 <article class="gh-article {{post_class}}">
 
-    {{#if show_title_and_feature_image}}
+    {{#match @page.show_title_and_feature_image}}
         <header class="gh-article-header gh-canvas{{#match @custom.feature_image_width "Full"}} image-full{{else match @custom.feature_image_width "=" "Wide"}} image-wide{{/match}}">
             <h1 class="gh-article-title">{{title}}</h1>
             {{#if custom_excerpt}}
@@ -13,7 +13,7 @@
             {{/if}}
             {{> "feature-image"}}
         </header>
-    {{/if}}
+    {{/match}}
 
     <div class="gh-content gh-canvas">
         {{content}}

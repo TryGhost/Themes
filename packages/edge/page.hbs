@@ -6,8 +6,8 @@
     {{#post}}
 
     <article class="{{post_class}} gh-article">
-            
-        {{#if show_title_and_feature_image}}
+
+        {{#match @page.show_title_and_feature_image}}
             <header class="gh-article-header gh-canvas">
                 {{> "feature-image"}}
 
@@ -17,7 +17,7 @@
                     <div class="gh-article-excerpt">{{custom_excerpt}}</div>
                 {{/if}}
             </header>
-        {{/if}}
+        {{/match}}
 
         <div class="gh-content gh-canvas">
             {{content}}
