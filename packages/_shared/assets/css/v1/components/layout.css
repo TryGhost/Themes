@@ -10,6 +10,10 @@
     padding-bottom: 8rem;
 }
 
+.page-template .gh-main {
+    padding-block: 0;
+}
+
 .gh-outer {
     padding-right: var(--gap);
     padding-left: var(--gap);

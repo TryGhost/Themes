@@ -151,6 +151,19 @@ is the very first element in the post content */
     border: 1px solid var(--color-light-gray);
 }
 
+/* Page without header */
+.page-template .gh-content:only-child {
+    margin-top: 0 !important;
+}
+
+.page-template .gh-content:only-child > *:first-child:not(.kg-width-full) {
+    margin-top: var(--header-spacing, 80px);
+}
+
+.page-template .gh-content > *:last-child:not(.kg-width-full) {
+    margin-bottom: var(--footer-spacing, 0);
+}
+
 @media (max-width: 767px) {
     .gh-content {
         margin-top: 3.2rem;

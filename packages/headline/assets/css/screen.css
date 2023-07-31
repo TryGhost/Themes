@@ -7,6 +7,13 @@
     --head-nav-gap: 32px;
     --color-primary-text: var(--color-darker-gray);
     --h1-size: 4.4rem;
+    --footer-spacing: 120px;
+}
+
+@media (max-width: 767px) {
+    :root {
+        --footer-spacing: 64px;
+    }
 }
 
 figcaption {
@@ -641,6 +648,10 @@ body:not(.home-template) .gh-topic-grid .gh-card {
     padding-bottom: 120px;
     margin-top: 120px;
     background-color: var(--color-darker-gray);
+}
+
+.page-template .gh-foot {
+    margin-top: 0;
 }
 
 .gh-foot,

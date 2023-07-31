@@ -14,11 +14,13 @@
     --head-nav-gap: 2.8rem;
     --h1-size: 4.6rem;
     --gap: 3.6rem;
+    --header-spacing: 80px;
 }
 
 @media (max-width: 767px) {
     :root {
         --h1-size: 3.2rem !important;
         --gap: 2rem;
+        --header-spacing: 48px;
     }
 }

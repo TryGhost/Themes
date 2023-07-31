@@ -9,6 +9,10 @@
     padding: 80px 0 40px;
 }
 
+.page-template .site-content {
+    padding-block: 0;
+}
+
 @media (max-width: 767px) {
     .site-content {
         padding: 40px 0;

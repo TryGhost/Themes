@@ -20,6 +20,11 @@
     --font-serif: Lora, Times, serif;
     --navbar-height: 80px;
     --content-font-size: 1.7rem;
+    --header-spacing: 6vmin;
+}
+
+.is-head-brand {
+    --header-spacing: 8vmin;
 }
 
 :where(h1, h2, h3, h4, h5, h6) {

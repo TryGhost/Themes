@@ -14,6 +14,7 @@
     --head-nav-gap: 32px;
     --container-width: 1440px;
     --content-font-size: clamp(1.7rem, 0.38vw + 1.4rem, 2rem);
+    --header-spacing: clamp(4.8rem, 4rem + 2.5vw, 8rem);
 }
 
 :root.has-light-text {

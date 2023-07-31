@@ -17,6 +17,11 @@ except for when immediately preceeded by a heading */
     margin-top: calc(4em * var(--content-spacing-multiplier, 1));
 }
 
+/* Remove space between full-width cards */
+.gh-content > .kg-width-full + .kg-width-full:not(.kg-width-full.kg-card-hascaption + .kg-width-full) {
+    margin-top: 0;
+}
+
 /* Image
 /* ---------------------------------------------------------- */
 

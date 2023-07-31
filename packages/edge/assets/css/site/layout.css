@@ -8,3 +8,7 @@
     flex-grow: 1;
     padding: 48px 0 96px;
 }
+
+.page-template .site-content {
+    padding-block: 0;
+}

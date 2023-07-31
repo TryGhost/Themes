@@ -5,15 +5,17 @@
 <main id="gh-main" class="gh-main">
 <article class="gh-article {{post_class}}">
 
-    <header class="gh-article-header gh-canvas">
-        <h1 class="gh-article-title">{{title}}</h1>
+    {{#match @page.show_title_and_feature_image}}
+        <header class="gh-article-header gh-canvas">
+            <h1 class="gh-article-title">{{title}}</h1>
 
-        {{#if custom_excerpt}}
-            <p class="gh-article-excerpt">{{custom_excerpt}}</p>
-        {{/if}}
-    </header>
+            {{#if custom_excerpt}}
+                <p class="gh-article-excerpt">{{custom_excerpt}}</p>
+            {{/if}}
+        </header>
 
-    {{> "feature-image"}}
+        {{> "feature-image"}}
+    {{/match}}
 
     <section class="gh-content gh-canvas">
         {{content}}
