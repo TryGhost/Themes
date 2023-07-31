@@ -4,6 +4,10 @@
     min-height: 100vh;
 }
 
+#announcement-bar-root + .site .site-content {
+    padding-top: 148px;
+}
+
 .site-content {
     flex-grow: 1;
     padding-top: 100px;
