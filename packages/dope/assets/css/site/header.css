@@ -4,7 +4,7 @@
     left: 0;
 }
 
-#announcement-bar-root + .site .site-header {
+#announcement-bar-root:not(:empty) + .site .site-header {
     margin-top: 48px;
 }
 

@@ -4,7 +4,7 @@
     min-height: 100vh;
 }
 
-#announcement-bar-root + .site .site-content {
+#announcement-bar-root:not(:empty) + .site .site-content {
     padding-top: 148px;
 }
 

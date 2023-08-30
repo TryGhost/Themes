@@ -290,7 +290,7 @@ Search                         LOGO                    Login Subscribe
     left: 0;
 }
 
-.is-head-transparent #announcement-bar-root + :is(.site, .gh-site) .gh-head {
+.is-head-transparent #announcement-bar-root:not(:empty) + :is(.site, .gh-site) .gh-head {
     margin-top: 48px;
 }
 

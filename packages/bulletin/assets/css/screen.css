@@ -29,7 +29,7 @@ h6 {
     left: 0;
 }
 
-#announcement-bar-root + .gh-site .gh-home {
+#announcement-bar-root:not(:empty) + .gh-site .gh-home {
     padding-top: 48px;
 }
 
