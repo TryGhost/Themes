@@ -99,13 +99,14 @@ body:not(.with-full-cover) .cover {
     bottom: 40px;
     left: 50%;
     z-index: 10;
+    display: none;
     width: 40px;
     height: 40px;
     margin-left: -20px;
 }
 
-.cover.half .cover-arrow {
-    display: none;
+.with-full-cover .cover-arrow {
+    display: inline-flex;
 }
 
 .cover-arrow .icon {
