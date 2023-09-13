@@ -123,3 +123,14 @@ blockquote.kg-blockquote-alt {
 .kg-bookmark-card .kg-bookmark-thumbnail img {
     border-radius: 0 0.2em 0.2em 0;
 }
+
+/* Audio
+/* ---------------------------------------------------------- */
+
+.has-light-text .kg-audio-card button {
+    color: #fff;
+}
+
+.has-light-text .kg-audio-card .kg-audio-volume-slider {
+    color: rgb(255 255 255 / 0.3)
+}

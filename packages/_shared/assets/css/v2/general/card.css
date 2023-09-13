@@ -175,6 +175,17 @@ blockquote.kg-blockquote-alt {
     margin-left: 6px;
 }
 
+/* Audio
+/* ---------------------------------------------------------- */
+
+.has-light-text .kg-audio-card button {
+    color: #fff;
+}
+
+.has-light-text .kg-audio-card .kg-audio-volume-slider {
+    color: rgb(255 255 255 / 0.3)
+}
+
 /* Caption
 /* ---------------------------------------------------------- */
 
