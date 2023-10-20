@@ -912,6 +912,77 @@ hr {
     line-height: 0;
 }
 
+/* Recommendations
+/* ---------------------------------------------------------- */
+
+.gh-recommendations {
+    margin-top: 80px;
+}
+
+.gh-recommendations-title {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 32px;
+    font-weight: 800;
+    letter-spacing: -0.015em;
+}
+
+.gh-recommendations-title::after {
+    position: relative;
+    top: 3px;
+    flex-grow: 1;
+    height: 1px;
+    content: "";
+    background-color: var(--color-light-gray);
+}
+
+.gh-recommendations .recommendations {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(24px, 2.01vw + 15.95px, 48px);
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.gh-recommendations .recommendation a {
+    display: block;
+    height: 100%;
+    padding: 32px;
+    background-color: var(--color-lighter-gray);
+    border-radius: 8px;
+}
+
+.gh-recommendations .recommendation a:hover {
+    opacity: 1;
+}
+
+.gh-recommendations .recommendation-favicon {
+    width: 48px;
+    margin-bottom: 24px;
+}
+
+.gh-recommendations .recommendation-title {
+    margin-bottom: 4px;
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+.gh-recommendations .recommendation-url {
+    color: var(--color-secondary-text);
+}
+
+.gh-recommendations .recommendation-description {
+    margin-top: 12px;
+}
+
+@media (max-width: 991px) {
+    .gh-recommendations .recommendations {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Footer
 /* ---------------------------------------------------------- */
 
