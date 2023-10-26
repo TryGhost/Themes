@@ -33,6 +33,14 @@
         {{/get}}
     </div>
 
+    {{#if @site.recommendations_enabled}}
+        <section class="widget widget-recommendations">
+            <h4 class="widget-title">Recommendations</h4>
+            {{recommendations}}
+            <button data-portal="recommendations">See all {{> "icons/arrow-right"}}</button>
+        </section>
+    {{/if}}
+
     <section class="widget widget-links">
         <h4 class="widget-title">More links</h4>
         {{navigation type="secondary"}}
