@@ -227,7 +227,10 @@ function testCI(done) {
         gscanDone();
     }
 
-    return series(testGScan)();
+    return series(testGScan, tasksDone => {
+        tasksDone();
+        done();
+    })();
 }
 
 function css(done) {
