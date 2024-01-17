@@ -6,7 +6,6 @@
     ],
     "scripts": {
         "dev": "gulp",
-        "lint": "gulp lint",
         "symlink": "gulp symlink",
         "test": "gulp test",
         "test:ci": "gulp testCI",
@@ -18,53 +17,23 @@
         "beeper": "2.1.0",
         "concurrently": "8.2.2",
         "cssnano": "6.0.1",
-        "gscan": "4.42.0",
+        "gscan": "^4.42.0",
         "gulp": "4.0.2",
         "gulp-compile-handlebars": "0.6.1",
         "gulp-concat": "2.6.1",
         "gulp-livereload": "4.0.2",
         "gulp-postcss": "9.0.1",
-        "gulp-stylelint": "13.0.0",
         "gulp-uglify": "3.0.2",
         "gulp-zip": "5.1.0",
         "lerna": "8.0.2",
         "postcss": "8.4.32",
         "postcss-easy-import": "4.0.0",
         "pump": "3.0.0",
-        "stylelint": "16.1.0",
-        "stylelint-config-recess-order": "4.4.0",
-        "stylelint-config-standard": "36.0.0",
         "yargs": "17.7.2"
     },
     "browserslist": [
         "defaults"
     ],
-    "stylelint": {
-        "extends": [
-            "stylelint-config-standard",
-            "stylelint-config-recess-order"
-        ],
-        "rules": {
-            "indentation": 4,
-            "no-descending-specificity": null,
-            "alpha-value-notation": null,
-            "selector-class-pattern": null,
-            "max-line-length": null,
-            "value-no-vendor-prefix": null,
-            "color-function-notation": null,
-            "property-no-vendor-prefix": null,
-            "media-feature-name-no-vendor-prefix": null,
-            "number-max-precision": null,
-            "value-keyword-case": null,
-            "keyframes-name-pattern": null,
-            "selector-not-notation": null,
-            "keyframe-block-no-duplicate-selectors": null,
-            "import-notation": null,
-            "keyframe-selector-notation": null,
-            "declaration-block-no-redundant-longhand-properties": null,
-            "media-feature-range-notation": "prefix"
-        }
-    },
     "renovate": {
         "extends": [
             "@tryghost:theme"

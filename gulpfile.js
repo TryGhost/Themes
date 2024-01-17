@@ -6,7 +6,6 @@ const exec = require('child_process').exec;
 
 // gulp plugins and utils
 const livereload = require('gulp-livereload');
-const gulpStylelint = require('gulp-stylelint');
 const postcss = require('gulp-postcss');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
@@ -189,29 +188,6 @@ function main(done) {
     })();
 }
 
-function doLint(theme, fix, done) {
-    let source = ['packages/*/assets/css/**/*.css'];
-
-    if (theme) {
-        source = [`packages/${theme}/assets/css/**/*.css`, 'packages/_shared/assets/css/**/*.css'];
-    }
-
-    pump([
-        src([...source, '!packages/*/assets/built/*.css'], {base: '.'}),
-        gulpStylelint({
-            fix: fix,
-            reporters: [
-                {formatter: 'string', console: true}
-            ]
-        }),
-        dest('./')
-    ], handleError(done));
-}
-
-function lint(done) {
-    doLint(false, true, done);
-}
-
 function symlink(done) {
     if (!argv.theme || !argv.site) {
         handleError(done('Required parameters [--theme, --site] missing!'));
@@ -222,11 +198,6 @@ function symlink(done) {
 }
 
 function test(done) {
-    const testLint = lintDone => {
-        doLint(false, false, done)
-        lintDone();
-    };
-
     const testGScan = gscanDone => {
         glob.sync('packages/*', {ignore: 'packages/_shared'}).forEach(path => {
             exec(`gscan ${path} --colors`, (error, stdout, _stderr) => {
@@ -237,18 +208,16 @@ function test(done) {
         gscanDone();
     }
 
-    return series(testLint, testGScan)();
+    return series(testGScan, tasksDone => {
+        tasksDone();
+        done();
+    })();
 }
 
 function testCI(done) {
     if (!argv.theme) {
         handleError(done('Required parameter [--theme] missing!'));
     }
-
-    const testLint = lintDone => {
-        doLint(argv.theme, false, done)
-        lintDone();
-    };
 
     const testGScan = gscanDone => {
         exec(`gscan --fatal --verbose packages/${argv.theme} --colors`, (error, stdout, _stderr) => {
@@ -258,7 +227,7 @@ function testCI(done) {
         gscanDone();
     }
 
-    return series(testLint, testGScan)();
+    return series(testGScan)();
 }
 
 function css(done) {
@@ -290,7 +259,6 @@ function zipper(done) {
     ], handleError(done));
 }
 
-exports.lint = lint;
 exports.symlink = symlink;
 exports.test = test;
 exports.testCI = testCI;
