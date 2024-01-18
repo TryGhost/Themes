@@ -29,7 +29,6 @@
     font-size: calc(2.6rem * var(--font-multiplier, 1));
     font-weight: 700;
     letter-spacing: -0.02em;
-    white-space: nowrap;
 }
 
 .gh-head-logo img {
