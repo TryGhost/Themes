@@ -28,8 +28,8 @@ jobs:
       - name: Deploy theme
         uses: TryGhost/action-deploy-theme@v1
         with:
-          api-url: ${{ secrets.JOURNAL_GHOST_ADMIN_API_URL }}
-          api-key: ${{ secrets.JOURNAL_GHOST_ADMIN_API_KEY }}
+          api-url: ${{ secrets.GHOST_ADMIN_API_URL }}
+          api-key: ${{ secrets.GHOST_ADMIN_API_KEY }}
           working-directory: packages/journal
   subtree:
     name: Subtree
@@ -44,5 +44,5 @@ jobs:
         with:
           repo: 'TryGhost/Journal'
           path: 'packages/journal'
-          deploy_key: ${{secrets.JOURNAL_GITHUB_DEPLOY_KEY}}
+          deploy_key: ${{secrets.GITHUB_DEPLOY_KEY}}
           force: true
