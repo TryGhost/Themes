@@ -31,7 +31,7 @@
 
         <div class="gh-wrapper">
             <section class="gh-section">
-                <h2 class="gh-section-title">More issues</h2>
+                <h2 class="gh-section-title">More posts</h2>
 
                 <div class="gh-feed">
                     {{^is "paged"}}
@@ -46,10 +46,10 @@
                 </div>
 
                 {{#match posts.length "=" 1}}
-                    Additional issues will be published soon.
+                    Additional posts will be published soon.
                 {{/match}}
 
-                <button class="gh-loadmore gh-btn">Load more issues</button>
+                <button class="gh-loadmore gh-btn">Load more posts</button>
             </section>
 
             <aside class="gh-sidebar">
@@ -118,7 +118,7 @@
                                 <a class="gh-topic-item" href="{{url}}">
                                     <h3 class="gh-topic-name">{{name}}</h3>
                                     <span class="gh-topic-count">
-                                        {{plural count.posts empty="0 issues" singular="% issue" plural="% issues"}}
+                                        {{plural count.posts empty="0 posts" singular="% post" plural="% posts"}}
                                     </span>
                                 </a>
                             {{/foreach}}
