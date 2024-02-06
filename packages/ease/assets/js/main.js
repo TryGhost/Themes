@@ -1,4 +1,6 @@
-(function () {
+jQuery.noConflict();
+
+(function ($) {
     var image = $('.jarallax-img');
     if (!image) return;
 
@@ -11,9 +13,9 @@
     image.imagesLoaded(function () {
         image.parent().jarallax(options).addClass('initialized');
     });
-})();
+})(jQuery);
 
-(function () {
+(function ($) {
     'use strict';
     $('.featured-posts').owlCarousel({
         dots: false,
@@ -38,4 +40,4 @@
             },
         },
     });
-})();
+})(jQuery);
