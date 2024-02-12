@@ -26,7 +26,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Deploy theme
-        uses: minimaluminium/action-deploy-theme@custom-dir
+        uses: TryGhost/action-deploy-theme@v1
         with:
           api-url: ${{ secrets.DIGEST_GHOST_ADMIN_API_URL }}
           api-key: ${{ secrets.DIGEST_GHOST_ADMIN_API_KEY }}
