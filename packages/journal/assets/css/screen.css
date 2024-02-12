@@ -250,6 +250,7 @@
     line-height: 1;
     border: 1px solid var(--color-light-gray);
     border-radius: 32px;
+    white-space: nowrap;
 }
 
 .gh-recommendations .recommendations {
