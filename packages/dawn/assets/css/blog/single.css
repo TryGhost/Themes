@@ -111,7 +111,7 @@
 }
 
 .single-content code {
-    color: var(--color-primary-text);
+    color: var(--primary-text-color);
 }
 
 @media (max-width: 767px) {
