@@ -110,6 +110,10 @@
     margin-top: 2rem;
 }
 
+.single-content code {
+    color: var(--color-primary-text);
+}
+
 @media (max-width: 767px) {
     .single-header {
         margin-bottom: 3rem;
