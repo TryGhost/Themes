@@ -110,9 +110,9 @@
     margin-top: 2rem;
 }
 
-.single-content code {
+/* .single-content code {
     color: var(--primary-text-color);
-}
+} */
 
 @media (max-width: 767px) {
     .single-header {
