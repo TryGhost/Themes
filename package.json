@@ -16,7 +16,7 @@
         "autoprefixer": "10.4.17",
         "beeper": "2.1.0",
         "concurrently": "8.2.2",
-        "cssnano": "6.0.4",
+        "cssnano": "6.0.5",
         "gscan": "^4.42.0",
         "gulp": "4.0.2",
         "gulp-compile-handlebars": "0.6.1",
