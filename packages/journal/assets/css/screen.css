@@ -660,3 +660,74 @@
         top: 1px;
     }
 }
+
+/* Dark mode START */
+
+/* Light Color Scheme */
+:root,
+:root[data-force-color-mode="light"] {
+  color-scheme: light dark;
+
+  --color-primary-text: #333;
+  --color-secondary-text: #999;
+  --color-white: #fff;
+  --color-lighter-gray: #f6f6f6;
+  --color-light-gray: #e6e6e6;
+  --color-mid-gray: #ccc;
+  --color-dark-gray: #444;
+  --color-darker-gray: #15171a;
+  --color-black: #000;
+
+}
+
+/* Dark Color Scheme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary-text: #ccc;
+    --color-secondary-text: #666; 
+    --color-white: #181818;
+    --color-lighter-gray: #090909;
+    --color-light-gray: #191919; 
+    --color-mid-gray: #444;
+    --color-dark-gray: #bbb;
+    --color-darker-gray: #eae8e5;
+    --color-black: #eee;
+    }
+}
+:root[data-force-color-mode="dark"] {
+    --color-primary-text: #ccc;
+    --color-secondary-text: #666; 
+    --color-white: #181818;
+    --color-lighter-gray: #090909;
+    --color-light-gray: #191919; 
+    --color-mid-gray: #444;
+    --color-dark-gray: #bbb;
+    --color-darker-gray: #eae8e5;
+    --color-black: #eee;
+}
+
+/* Visually hide the label text and Inject Light/Dark Mode Icon (based on checkbox value) */
+#toggle-darkmode {
+  display: none;
+}
+#toggle-darkmode + label > span {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+#toggle-darkmode + label:after {
+  content: "☀";
+  font-size: 1.2em;
+  cursor: pointer;
+}
+#toggle-darkmode:checked + label:after {
+  content: "☾";
+}
+
+/* Dark mode END */
+

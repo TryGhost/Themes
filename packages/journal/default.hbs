@@ -2,6 +2,16 @@
 <html lang="{{@site.locale}}">
 
 <head>
+<!-- Dark mode START -->
+    <script>
+      // Check if there's any override. If so, let the markup know by setting an attribute on the <html> element
+      const colorModeOverride = window.localStorage.getItem('color-mode');
+      const hasColorModeOverride = typeof colorModeOverride === 'string';
+      if (hasColorModeOverride) {
+        document.documentElement.setAttribute('data-force-color-mode', colorModeOverride);
+      }
+    </script>
+<!-- Dark mode END -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{meta_title}}</title>
@@ -91,11 +101,24 @@
             <div class="gh-copyright">
                 {{@site.title}} © {{date format="YYYY"}}
             </div>
-            {{#if @site.secondary_navigation}}
                 <nav class="gh-foot-menu">
-                    {{navigation type="secondary"}}
+ <!-- Dark mode START -->
+
+  <div>
+    <input type="checkbox" id="toggle-darkmode" />
+    <label for="toggle-darkmode"><span>Toggle Light/Dark Mode</span></label>
+    <script>
+      // Check the dark-mode checkbox if
+      // - The override is set to dark
+      // - No override is set but the system prefers dark mode
+      if ((colorModeOverride == 'dark') || (!hasColorModeOverride && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.querySelector('#toggle-darkmode').checked = true;
+      }
+    </script>
+  </div>
+
+ <!-- Dark mode END -->
                 </nav>
-            {{/if}}
             <div class="gh-powered-by">
                 <a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a>
             </div>
