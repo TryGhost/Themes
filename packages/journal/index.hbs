@@ -44,7 +44,11 @@
                         {{/foreach}}
                     {{else}}
                         {{#foreach posts}}
-                            {{> loop}}
+                            {{#has tag="newsletter"}}
+                                {{!-- show nothing nothing --}}
+                            {{else}}
+                                {{> "loop"}}
+                            {{/has}}
                         {{/foreach}}
                     {{/is}}
                 </div>
