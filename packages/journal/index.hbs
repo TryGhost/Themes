@@ -36,7 +36,11 @@
                 <div class="gh-feed">
                     {{^is "paged"}}
                         {{#foreach posts from="2"}}
-                            {{> loop}}
+                            {{#has tag="newsletter"}}
+                                {{!-- show nothing nothing --}}
+                            {{else}}
+                                {{> "loop"}}
+                            {{/has}}
                         {{/foreach}}
                     {{else}}
                         {{#foreach posts}}
