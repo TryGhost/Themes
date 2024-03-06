@@ -109,6 +109,22 @@
                     {{/if}}
                 {{/get}}
 
+                {{#get "posts" filter="tag:newsletter" limit="all" as |newsletter|}}
+                    {{#if newsletter}}
+                        <section class="gh-section">
+                            <h3 class="gh-section-title">Newsletter issues</h3>
+
+                            <div class="gh-featured gh-feed">
+                                {{#foreach newsletter}}
+                                    <a class="gh-topic-item" href="{{url}}">
+                                        <h3 class="gh-topic-name">{{title}}</h3>
+                                    </a>
+                                {{/foreach}}
+                            </div>
+                        </section>
+                    {{/if}}
+                {{/get}}
+
                 {{#get "tags" include="count.posts" limit="all" as |topic|}}
                     <section class="gh-section">
                         <h3 class="gh-section-title">Topics</h3>
