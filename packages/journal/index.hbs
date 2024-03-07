@@ -117,7 +117,7 @@
                     {{/if}}
                 {{/get}}
 
-                {{#get "posts" filter="tag:newsletter" limit="all" as |newsletter|}}
+                {{#get "posts" filter="primary_tag:newsletter" limit="all" as |newsletter|}}
                     {{#if newsletter}}
                         <section class="gh-section">
                             <h3 class="gh-section-title">Newsletter issues</h3>
