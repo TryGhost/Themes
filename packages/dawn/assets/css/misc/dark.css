@@ -61,6 +61,7 @@
         --dark-gray-color: #e6e6e6;
         --darker-gray-color: #fff;
         --color-darker-gray: #fff;
+        --color-lighter-gray: #2f333c;
     }
 
     html:not(.theme-light) .gh-head-logo img:first-child:not(:only-child) {
