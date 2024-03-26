@@ -595,12 +595,15 @@ hr {
     top: 48px;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding-right: 16px;
 }
 
 .gh-article-meta .gh-author-image {
     width: 72px;
     height: 72px;
-    margin-bottom: 16px;
+    margin-bottom: 0;
 }
 
 .gh-article-meta .gh-author-name {
@@ -620,10 +623,15 @@ hr {
     color: var(--color-secondary-text);
 }
 
+.gh-article-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
 .gh-article-tag {
     width: fit-content;
     padding: 2px 12px;
-    margin-top: 20px;
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--tag-color, var(--color-darker-gray)) !important;
@@ -745,21 +753,21 @@ hr {
     .gh-article-meta-inner {
         flex-direction: row;
         align-items: center;
+        gap: 12px;
+        padding-right: 0;
     }
 
     .gh-article-meta .gh-author-image {
         width: 64px;
         height: 64px;
-        margin-right: 12px;
-        margin-bottom: 0;
     }
 
     .gh-article-meta-wrapper {
         flex-grow: 1;
     }
 
-    .gh-article-tag {
-        margin-top: 0;
+    .gh-article-tags {
+        gap: 6px;
     }
 }
 
