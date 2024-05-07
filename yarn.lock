@@ -6288,6 +6288,13 @@ ora@^5.4.1:
     strip-ansi "^6.0.0"
     wcwidth "^1.0.1"
 
+ordered-read-streams@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/ordered-read-streams/-/ordered-read-streams-2.0.0.tgz#c6a8f025f8f701be533d5d6decdb5d98b63a295d"
+  integrity sha512-YT9wHHV9mB/qadhWnBsC57JKhAMA22/aR+RwZRgcf4K4Q7IIfmSsnYGxgiu9LVZP3wddRAm5pfYkzkmBb+HuwA==
+  dependencies:
+    streamx "^2.12.5"
+
 os-tmpdir@~1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/os-tmpdir/-/os-tmpdir-1.0.2.tgz#bbe67406c79aa85c5cfec766fe5734555dfa1274"

@@ -1,6 +1,8 @@
 const {series, parallel, watch, src, dest} = require('gulp');
 const pump = require('pump');
+const fs = require('fs');
 const glob = require('glob');
+const order = require('ordered-read-streams');
 const argv = require('yargs').argv;
 const exec = require('child_process').exec;
 
@@ -51,15 +53,25 @@ function doCSS(path, done) {
     ], handleError(done));
 }
 
+function getJsFiles(version, path) {
+    const jsFiles = [
+        src(`packages/_shared/assets/js/${version}/lib/**/*.js`),
+        src(`packages/_shared/assets/js/${version}/main.js`),
+    ];
+
+    if (fs.existsSync(`${path}/assets/js/lib`)) {
+        jsFiles.push(src(`${path}/assets/js/lib/**/*.js`));
+    }
+
+    jsFiles.push(src(`${path}/assets/js/main.js`));
+
+    return jsFiles;
+}
+
 function doJS(path, done) {
     const version = oldPackages.includes(path.replace(/^.\//, '')) ? 'v1' : 'v2';
     pump([
-        src([
-            `packages/_shared/assets/js/${version}/lib/**/*.js`,
-            `packages/_shared/assets/js/${version}/main.js`,
-            `${path}/assets/js/lib/**/*.js`,
-            `${path}/assets/js/main.js`,
-        ], {sourcemaps: true}),
+        order(getJsFiles(version, path), {sourcemaps: true}),
         concat('main.min.js'),
         uglify(),
         dest(`${path}/assets/built/`, {sourcemaps: '.'}),
@@ -136,12 +148,7 @@ function main(done) {
     function sharedJS_v1(done) {
         oldPackages.map(path => {
             pump([
-                src([
-                    'packages/_shared/assets/js/v1/lib/**/*.js',
-                    'packages/_shared/assets/js/v1/main.js',
-                    `${path}/assets/js/lib/**/*.js`,
-                    `${path}/assets/js/main.js`,
-                ], {sourcemaps: true}),
+                order(getJsFiles('v1', path), {sourcemaps: true}),
                 concat('main.min.js'),
                 uglify(),
                 dest(`${path}/assets/built/`, {sourcemaps: '.'}),
@@ -154,12 +161,7 @@ function main(done) {
     function sharedJS_v2(done) {
         glob.sync('packages/*', {ignore: ['packages/_shared', ...oldPackages]}).map(path => {
             pump([
-                src([
-                    'packages/_shared/assets/js/v2/lib/**/*.js',
-                    'packages/_shared/assets/js/v2/main.js',
-                    `${path}/assets/js/lib/**/*.js`,
-                    `${path}/assets/js/main.js`,
-                ], {sourcemaps: true}),
+                order(getJsFiles('v2', path), {sourcemaps: true}),
                 concat('main.min.js'),
                 uglify(),
                 dest(`${path}/assets/built/`, {sourcemaps: '.'}),
