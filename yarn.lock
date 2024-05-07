@@ -1716,7 +1716,7 @@
     "@tryghost/root-utils" "^0.3.27"
     semver "^7.3.5"
 
-"@tryghost/zip@^1.1.38", "@tryghost/zip@^1.1.42":
+"@tryghost/zip@^1.1.42":
   version "1.1.42"
   resolved "https://registry.yarnpkg.com/@tryghost/zip/-/zip-1.1.42.tgz#33f8ebaed17339db89a8b165563709385ed7f041"
   integrity sha512-liEO01q0vztvcBmCT4m8fDEsDjXHzPOqJlXboMHOw/gTrjUkLVfBTZzooIgERvBRPuw60ICcPTtI2/OhiAoNrw==
@@ -4141,34 +4141,6 @@ graceful-fs@4.2.11, graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2
   version "4.2.11"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.11.tgz#4183e4e8bf08bb6e05bbb2f7d2e0c8f712ca40e3"
   integrity sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==
-
-gscan@4.42.0:
-  version "4.42.0"
-  resolved "https://registry.yarnpkg.com/gscan/-/gscan-4.42.0.tgz#f25208327642680a5210094af20c1f1c6b5251df"
-  integrity sha512-LDNksyNY4Pb3Hc3OC56Zu3uNDODmcJSP2Rtzc1UVZ3/SWLoqcIU9+nyzHNy3uCdbIGg3HK0Ho2D89jiumWD0LA==
-  dependencies:
-    "@sentry/node" "^7.73.0"
-    "@tryghost/config" "^0.2.18"
-    "@tryghost/debug" "^0.1.26"
-    "@tryghost/errors" "^1.2.26"
-    "@tryghost/logging" "^2.4.7"
-    "@tryghost/nql" "^0.12.0"
-    "@tryghost/pretty-cli" "^1.2.38"
-    "@tryghost/server" "^0.1.37"
-    "@tryghost/zip" "^1.1.38"
-    chalk "^4.1.2"
-    common-tags "^1.8.2"
-    express "^4.18.2"
-    express-hbs "^2.4.2"
-    fs-extra "^11.1.1"
-    glob "^8.1.0"
-    lodash "^4.17.21"
-    multer "^1.4.4"
-    pluralize "^8.0.0"
-    require-dir "^1.2.0"
-    semver "^7.5.4"
-    uuid "^9.0.1"
-    validator "^13.0.0"
 
 gscan@4.43.1:
   version "4.43.1"
