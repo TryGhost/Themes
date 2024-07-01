@@ -27,7 +27,7 @@
         "gulp-zip": "5.1.0",
         "lerna": "8.1.5",
         "ordered-read-streams": "2.0.0",
-        "postcss": "8.4.38",
+        "postcss": "8.4.39",
         "postcss-easy-import": "4.0.0",
         "pump": "3.0.0",
         "yargs": "17.7.2"
