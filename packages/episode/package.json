@@ -78,14 +78,14 @@
                 "default": "https://podcasts.apple.com/",
                 "group": "homepage"
             },
-            "google_podcasts_link": {
-                "type": "text",
-                "default": "https://podcasts.google.com/",
-                "group": "homepage"
-            },
             "spotify_link": {
                 "type": "text",
                 "default": "https://open.spotify.com/",
+                "group": "homepage"
+            },
+            "youtube_music_link": {
+                "type": "text",
+                "default": "https://music.youtube.com/",
                 "group": "homepage"
             }
         }
