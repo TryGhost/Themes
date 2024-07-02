@@ -22,7 +22,7 @@
             {{#unless @site.members_invite_only}}
                 {{#unless @member}}
                     <form class="form-wrapper cover-form" data-members-form>
-                        <input class="auth-email" type="email" data-members-email placeholder="Your email address" required="true" autocomplete="false">
+                        <input class="auth-email" type="email" name="email" data-members-email placeholder="Your email address" required="true">
                         <button class="form-button" type="submit" aria-label="Submit">
                             <span class="default">Subscribe</span>
                             <span class="loader">{{> "icons/loader"}}</span>
