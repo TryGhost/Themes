@@ -111,6 +111,11 @@ blockquote.kg-blockquote-alt {
 /* Bookmark
 /* ---------------------------------------------------------- */
 
+.kg-bookmark-card a.kg-bookmark-container,
+.kg-bookmark-card a.kg-bookmark-container:hover {
+    background: var(--background-color, #fff) !important;
+}
+
 .kg-bookmark-card .kg-bookmark-container {
     border-radius: 0.25em !important;
 }
