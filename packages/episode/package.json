@@ -78,14 +78,14 @@
                 "default": "https://podcasts.apple.com/",
                 "group": "homepage"
             },
-            "google_podcasts_link": {
-                "type": "text",
-                "default": "https://podcasts.google.com/",
-                "group": "homepage"
-            },
             "spotify_link": {
                 "type": "text",
                 "default": "https://open.spotify.com/",
+                "group": "homepage"
+            },
+            "youtube_music_link": {
+                "type": "text",
+                "default": "https://music.youtube.com/",
                 "group": "homepage"
             }
         }
@@ -96,11 +96,11 @@
         "zip": "gulp zip"
     },
     "devDependencies": {
-        "@tryghost/shared-theme-assets": "2.4.3",
+        "@tryghost/shared-theme-assets": "2.4.5",
         "autoprefixer": "10.4.19",
         "beeper": "2.1.0",
-        "cssnano": "7.0.2",
-        "gscan": "4.43.1",
+        "cssnano": "7.0.4",
+        "gscan": "4.43.2",
         "gulp": "5.0.0",
         "gulp-concat": "2.6.1",
         "gulp-livereload": "4.0.2",
@@ -108,7 +108,7 @@
         "gulp-uglify": "3.0.2",
         "gulp-zip": "5.1.0",
         "ordered-read-streams": "2.0.0",
-        "postcss": "8.4.38",
+        "postcss": "8.4.40",
         "postcss-easy-import": "4.0.0",
         "pump": "3.0.0"
     }

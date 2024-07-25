@@ -6,18 +6,18 @@
             <span>Apple Podcasts</span>
         </a>
     {{/if}}
-    {{#if @custom.google_podcasts_link}}
-        <a href="{{@custom.google_podcasts_link}}" target="_blank" rel="noopener noreferrer">
-            {{> "icons/google"}}
-            <span>Listen on</span>
-            <span>Google Podcasts</span>
-        </a>
-    {{/if}}
     {{#if @custom.spotify_link}}
         <a href="{{@custom.spotify_link}}" target="_blank" rel="noopener noreferrer">
             {{> "icons/spotify"}}
             <span>Listen on</span>
             <span>Spotify</span>
+        </a>
+    {{/if}}
+    {{#if @custom.youtube_music_link}}
+        <a href="{{@custom.youtube_music_link}}" target="_blank" rel="noopener noreferrer">
+            {{> "icons/youtube"}}
+            <span>Listen on</span>
+            <span>YouTube Music</span>
         </a>
     {{/if}}
 </div>
