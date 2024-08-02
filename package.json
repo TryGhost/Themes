@@ -13,7 +13,7 @@
         "ship": "lerna publish --no-private"
     },
     "devDependencies": {
-        "autoprefixer": "10.4.19",
+        "autoprefixer": "10.4.20",
         "beeper": "2.1.0",
         "concurrently": "8.2.2",
         "cssnano": "7.0.4",
