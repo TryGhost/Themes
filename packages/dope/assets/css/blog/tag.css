@@ -1,10 +1,10 @@
-.tag {
+.home-template .tag {
     z-index: 10;
     height: 100%;
     overflow: hidden;
 }
 
-.tag::before {
+.home-template .tag::before {
     position: absolute;
     top: 0;
     right: 0;
@@ -17,16 +17,16 @@
     transition: 0.4s opacity var(--animation-base);
 }
 
-.tag:hover::before {
+.home-template .tag:hover::before {
     opacity: 1;
 }
 
-.tag:hover .tag-name::before {
+.home-template .tag:hover .tag-name::before {
     width: 30px;
     margin-right: 10px;
 }
 
-.tag-content {
+.home-template .tag-content {
     position: absolute;
     right: 0;
     bottom: 0;
@@ -35,7 +35,7 @@
     padding: 45px 45px 60px;
 }
 
-.tag-content::before {
+.home-template .tag-content::before {
     position: absolute;
     right: 0;
     bottom: 0;
@@ -47,7 +47,7 @@
     background-repeat: no-repeat;
 }
 
-.tag-name {
+.home-template .tag-name {
     display: flex;
     align-items: center;
     margin-bottom: 0;
@@ -58,7 +58,7 @@
     word-break: break-word;
 }
 
-.tag-name::before {
+.home-template .tag-name::before {
     width: 0;
     height: 3px;
     margin-right: 0;
@@ -68,11 +68,11 @@
     transition-property: margin-right, width;
 }
 
-.has-serif-title .tag-name {
+.home-template.has-serif-title .tag-name {
     font-family: var(--font-serif);
 }
 
-.tag-description {
+.home-template .tag-description {
     margin-top: 12px;
     font-size: 1.7rem;
     line-height: 1.4;
@@ -82,11 +82,11 @@
 }
 
 @media (max-width: 767px) {
-    .tag-content {
+    .home-template .tag-content {
         padding: 30px 30px 45px;
     }
 
-    .tag-name {
+    .home-template .tag-name {
         font-size: 30px;
     }
 }
