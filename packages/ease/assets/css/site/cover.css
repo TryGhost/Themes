@@ -40,7 +40,7 @@
 }
 
 .has-serif-title .cover-description {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-heading, var(--font-serif));
     font-weight: 700;
 }
 

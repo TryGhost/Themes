@@ -69,7 +69,7 @@
 }
 
 .home-template.has-serif-title .tag-name {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-heading, var(--font-serif));
 }
 
 .home-template .tag-description {

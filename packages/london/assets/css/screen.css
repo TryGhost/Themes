@@ -69,7 +69,7 @@ production stylesheet in assets/built/screen.css using gulp dev
 }
 
 .has-serif-title .page-head-title {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-heading, var(--font-serif));
 }
 
 @media (max-width: 500px) {
@@ -208,7 +208,7 @@ production stylesheet in assets/built/screen.css using gulp dev
 }
 
 .has-serif-title .post-card-title {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-heading, var(--font-serif));
 }
 
 /* Posts without images */
@@ -272,7 +272,7 @@ production stylesheet in assets/built/screen.css using gulp dev
 }
 
 .has-serif-title .post-content-title {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-heading, var(--font-serif));
 }
 
 .post-content-excerpt {
@@ -285,7 +285,7 @@ production stylesheet in assets/built/screen.css using gulp dev
 }
 
 .has-serif-body .post-content-excerpt {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-body, var(--font-serif));
 }
 
 @media (max-width: 500px) {

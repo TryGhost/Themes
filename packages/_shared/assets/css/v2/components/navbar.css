@@ -3,7 +3,7 @@
 }
 
 .is-font-serif .gh-head {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-heading, var(--font-serif));
 }
 
 .gh-head-inner {

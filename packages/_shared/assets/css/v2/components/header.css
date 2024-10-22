@@ -29,7 +29,7 @@
 }
 
 .is-font-serif .gh-header-primary {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-heading, var(--font-serif));
     line-height: 1.1;
 }
 

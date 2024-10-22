@@ -20,7 +20,7 @@
 }
 
 .is-font-serif .gh-list-title {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-heading, var(--font-serif));
 }
 
 .gh-list-item-inner {
@@ -42,7 +42,7 @@
 }
 
 .is-font-serif .gh-list-item-title {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-heading, var(--font-serif));
 }
 
 .gh-list-item-excerpt {

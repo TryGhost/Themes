@@ -15,9 +15,9 @@
 }
 
 .has-serif-title .gh-cover-title {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-heading, var(--font-serif));
 }
 
 .has-serif-body .gh-cover-description {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-body, var(--font-serif));
 }

@@ -155,11 +155,11 @@ hr {
 }
 
 .has-serif-font .gh-about-primary {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-heading, var(--font-serif));
 }
 
 .has-mono-font .gh-about-primary {
-    font-family: var(--font-mono);
+    font-family: var(--gh-font-heading, var(--font-mono));
 }
 
 .gh-about-primary a {
@@ -174,11 +174,11 @@ hr {
 }
 
 .has-serif-font .gh-about-secondary {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-body, var(--font-serif));
 }
 
 .has-mono-font .gh-about-secondary {
-    font-family: var(--font-mono);
+    font-family: var(--gh-font-body, var(--font-mono));
 }
 
 .gh-about-primary + .gh-about-secondary {
@@ -344,11 +344,11 @@ hr {
 }
 
 .has-serif-font .gh-card-title {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-heading, var(--font-serif));
 }
 
 .has-mono-font .gh-card-title {
-    font-family: var(--font-mono);
+    font-family: var(--gh-font-heading, var(--font-mono));
 }
 
 .gh-card-link:hover .gh-card-title {
@@ -489,11 +489,11 @@ hr {
 }
 
 .has-serif-font.has-typographic-feed .gh-card-excerpt {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-body, var(--font-serif));
 }
 
 .has-mono-font.has-typographic-feed .gh-card-excerpt {
-    font-family: var(--font-mono);
+    font-family: var(--gh-font-body, var(--font-mono));
 }
 
 .has-typographic-feed .gh-card-meta {
@@ -653,11 +653,11 @@ hr {
 }
 
 .has-serif-font .gh-article-title {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-heading, var(--font-serif));
 }
 
 .has-mono-font .gh-article-title {
-    font-family: var(--font-mono);
+    font-family: var(--gh-font-heading, var(--font-mono));
 }
 
 .gh-article-excerpt {
@@ -673,11 +673,11 @@ hr {
 }
 
 .has-serif-font .gh-article-excerpt {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-body, var(--font-serif));
 }
 
 .has-mono-font .gh-article-excerpt {
-    font-family: var(--font-mono);
+    font-family: var(--gh-font-body, var(--font-mono));
 }
 
 .gh-article-excerpt .emoji {
@@ -710,11 +710,11 @@ hr {
 }
 
 .has-serif-font .gh-content > :is([id], p, ul, ol) {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-body, var(--font-serif));
 }
 
 .has-mono-font .gh-content > :is([id], p, ul, ol) {
-    font-family: var(--font-mono);
+    font-family: var(--gh-font-body, var(--font-mono));
 }
 
 .gh-article-footer {
@@ -795,11 +795,11 @@ hr {
 }
 
 .has-serif-font .gh-cta-title {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-heading, var(--font-serif));
 }
 
 .has-mono-font .gh-cta-title {
-    font-family: var(--font-mono);
+    font-family: var(--gh-font-heading, var(--font-mono));
 }
 
 .gh-cta .gh-btn {
@@ -821,11 +821,11 @@ hr {
 }
 
 .has-serif-font .gh-navigation {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-heading, var(--font-serif));
 }
 
 .has-mono-font .gh-navigation {
-    font-family: var(--font-mono);
+    font-family: var(--gh-font-heading, var(--font-mono));
 }
 
 /* Comments
@@ -841,11 +841,11 @@ hr {
 }
 
 .has-serif-font .gh-comments-title {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-heading, var(--font-serif));
 }
 
 .has-mono-font .gh-comments-title {
-    font-family: var(--font-mono);
+    font-family: var(--gh-font-heading, var(--font-mono));
 }
 
 /* Subscribe

@@ -25,7 +25,7 @@ headings, text, images and lists. We deal with cards lower down. */
 }
 
 .has-serif-title .gh-content > [id] {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-heading, var(--font-serif));
     letter-spacing: -0.01em;
 }
 
@@ -83,7 +83,7 @@ is the very first element in the post content */
 .has-serif-body .gh-content .kg-toggle-content > ol,
 .has-serif-body .gh-content .kg-toggle-content > ul,
 .has-serif-body .gh-content .kg-toggle-content > p {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-body, var(--font-serif));
 }
 
 .gh-content ul,

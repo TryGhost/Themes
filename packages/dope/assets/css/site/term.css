@@ -12,7 +12,7 @@
 }
 
 .has-serif-title .term-name {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-heading, var(--font-serif));
 }
 
 .term-description {

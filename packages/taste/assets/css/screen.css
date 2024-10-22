@@ -12,13 +12,13 @@ body {
 .is-font-serif {
     --font-multiplier: 1.1;
 
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-body, var(--font-serif));
 }
 
 /* Navbar */
 
 .is-font-serif .gh-head-btn {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-body, var(--font-serif));
     font-size: 1.85rem;
     font-weight: 700;
     border-radius: 0;
@@ -61,12 +61,13 @@ body {
 }
 
 .is-font-serif .gh-header-primary {
+    font-family: var(--gh-font-heading, var(--font-serif));
     font-weight: 500;
     letter-spacing: -0.015em;
 }
 
 .is-font-serif .gh-header-input {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-body, var(--font-serif));
     font-size: 2.2rem;
 }
 
@@ -313,7 +314,7 @@ body {
 }
 
 .is-font-serif .gh-cta-input {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-body, var(--font-serif));
     font-size: 1.9rem;
 }
 

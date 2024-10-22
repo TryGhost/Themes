@@ -52,7 +52,7 @@
 }
 
 .has-serif-title .post-title {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-heading, var(--font-serif));
 }
 
 .post-tags {
@@ -74,7 +74,7 @@
 }
 
 .has-serif-body .post-excerpt {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-body, var(--font-serif));
 }
 
 .post-footer {

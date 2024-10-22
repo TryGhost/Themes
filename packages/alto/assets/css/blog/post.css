@@ -43,7 +43,7 @@
 }
 
 .has-serif-title :where(.post-feed, .single-post) .post-title {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-heading, var(--font-serif));
 }
 
 .post-meta {
@@ -70,7 +70,7 @@
 }
 
 .has-serif-body .post-excerpt {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-body, var(--font-serif));
 }
 
 @media (max-width: 767px) {

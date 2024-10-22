@@ -24,7 +24,7 @@
 }
 
 .has-serif-title .featured-title {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-heading, var(--font-serif));
 }
 
 @media (max-width: 767px) {

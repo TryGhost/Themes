@@ -16,7 +16,7 @@
 }
 
 .is-font-serif .gh-cta-title {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-heading, var(--font-serif));
 }
 
 .gh-cta-input {
