@@ -616,7 +616,6 @@ hr {
 .gh-article-date {
     margin-top: 4px;
     font-size: 1.4rem;
-    font-weight: 480;
     color: var(--color-secondary-text);
 }
 
@@ -703,10 +702,6 @@ hr {
 
 .gh-content > [id] {
     font-weight: 800;
-}
-
-.gh-content > :is(p, ul, ol) {
-    font-weight: 480;
 }
 
 .has-serif-font .gh-content > :is([id], p, ul, ol) {
