@@ -29,6 +29,11 @@
     <div class="post-wrapper">
         <header class="post-header">
             <div class="post-meta">
+                {{#unless access}}
+                {{^has visibility="public"}}
+                    {{> "icons/lock"}}
+                {{/has}}
+                {{/unless}}
                 <span class="post-meta-item post-meta-date">
                     <time datetime="{{date format="YYYY-MM-DD"}}">{{date published_at}}</time>
                 </span>
