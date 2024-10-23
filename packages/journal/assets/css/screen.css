@@ -241,7 +241,7 @@
 }
 
 .has-serif-title .gh-topic-name {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-heading, var(--font-serif));
 }
 
 .gh-topic-count {
@@ -356,7 +356,7 @@
 }
 
 .has-serif-title .gh-subscribe-title {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-heading, var(--font-serif));
     letter-spacing: -0.01em;
 }
 

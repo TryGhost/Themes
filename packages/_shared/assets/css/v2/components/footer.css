@@ -6,7 +6,7 @@
 }
 
 .is-font-serif .gh-foot {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-body, var(--font-serif));
 }
 
 .gh-foot-inner {

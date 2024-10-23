@@ -25,6 +25,13 @@
     text-transform: lowercase;
 }
 
+.post-meta svg {
+    position: relative;
+    top: 3px;
+    width: 16px;
+    height: 16px;
+}
+
 .post-meta-item + .post-meta-item::before {
     padding: 0 8px 0 4px;
     font-family: serif;
@@ -52,7 +59,7 @@
 }
 
 .has-serif-title .post-title {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-heading, var(--font-serif));
 }
 
 .post-tags {
@@ -74,7 +81,7 @@
 }
 
 .has-serif-body .post-excerpt {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-body, var(--font-serif));
 }
 
 .post-footer {

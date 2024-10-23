@@ -104,7 +104,7 @@
 .has-serif-title .u-text-format h4,
 .has-serif-title .u-text-format h5,
 .has-serif-title .u-text-format h6 {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-heading, var(--font-serif));
     font-weight: 700;
 }
 
@@ -174,5 +174,5 @@
 .has-serif-body .u-text-format > ul,
 .has-serif-body .u-text-format > dl,
 .has-serif-body .u-text-format > p {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-body, var(--font-serif));
 }

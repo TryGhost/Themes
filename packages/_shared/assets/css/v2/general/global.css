@@ -31,7 +31,7 @@ html {
 }
 
 body {
-    font-family: var(--font-sans);
+    font-family: var(--gh-font-body, var(--font-sans));
     font-size: 1.6rem;
     line-height: 1.6;
     color: var(--color-primary-text);
@@ -54,6 +54,7 @@ a:hover {
 }
 
 :is(h1, h2, h3, h4, h5, h6) {
+    font-family: var(--gh-font-heading, var(--font-sans));
     line-height: 1.2;
     color: var(--color-darker-gray);
     letter-spacing: -0.01em;

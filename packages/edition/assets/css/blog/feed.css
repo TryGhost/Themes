@@ -149,7 +149,7 @@
 }
 
 .has-serif-title .feed-title {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-heading, var(--font-serif));
 }
 
 .feed-excerpt {
@@ -164,7 +164,7 @@
 }
 
 .has-serif-body .feed-excerpt {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-body, var(--font-serif));
 }
 
 .post-feed:not(.expanded) .feed-excerpt {

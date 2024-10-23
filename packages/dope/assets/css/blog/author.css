@@ -1,9 +1,10 @@
 .author {
     display: flex;
+    margin-top: 64px;
 }
 
 .author + .author {
-    margin-top: 30px;
+    margin-top: 24px;
 }
 
 .author-image-placeholder {

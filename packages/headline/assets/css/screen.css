@@ -570,7 +570,7 @@ body:not(.home-template) .gh-topic-grid .gh-card {
 }
 
 .has-serif-body .gh-cover-description {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-body, var(--font-serif));
 }
 
 /* Page head */
@@ -595,7 +595,7 @@ body:not(.home-template) .gh-topic-grid .gh-card {
 }
 
 .has-serif-body .gh-pagehead-description {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-body, var(--font-serif));
 }
 
 /* Subscription banner */
@@ -613,7 +613,7 @@ body:not(.home-template) .gh-topic-grid .gh-card {
 }
 
 .has-serif-title .gh-subscribe-title {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-heading, var(--font-serif));
 }
 
 .gh-subscribe-description {
@@ -623,7 +623,7 @@ body:not(.home-template) .gh-topic-grid .gh-card {
 }
 
 .has-serif-body .gh-subscribe-description {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-body, var(--font-serif));
 }
 
 .gh-subscribe-btn {

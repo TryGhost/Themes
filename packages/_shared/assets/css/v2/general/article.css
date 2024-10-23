@@ -42,7 +42,7 @@
 }
 
 .is-font-serif .gh-article-title {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-heading, var(--font-serif));
 }
 
 .gh-article-excerpt {
@@ -51,7 +51,7 @@
 }
 
 .is-font-serif .gh-article-excerpt {
-    font-family: var(--font-serif);
+    font-family: var(--gh-font-body, var(--font-serif));
 }
 
 .gh-article-image {
