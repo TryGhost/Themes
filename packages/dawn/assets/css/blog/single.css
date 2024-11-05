@@ -33,7 +33,7 @@
     word-break: break-word;
 }
 
-.has-serif-title .single-title {
+.has-serif-title:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]) .single-title {
     font-family: var(--gh-font-heading, var(--font-serif));
 }
 
@@ -43,7 +43,7 @@
     word-break: break-word;
 }
 
-.has-serif-body .single-excerpt {
+.has-serif-body:not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .single-excerpt {
     font-family: var(--gh-font-body, var(--font-serif));
 }
 

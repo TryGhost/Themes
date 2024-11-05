@@ -148,7 +148,7 @@
     white-space: normal;
 }
 
-.has-serif-title .feed-title {
+.has-serif-title:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]) .feed-title {
     font-family: var(--gh-font-heading, var(--font-serif));
 }
 
@@ -163,7 +163,7 @@
     -webkit-box-orient: vertical;
 }
 
-.has-serif-body .feed-excerpt {
+.has-serif-body:not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .feed-excerpt {
     font-family: var(--gh-font-body, var(--font-serif));
 }
 

@@ -240,7 +240,7 @@
     letter-spacing: 0;
 }
 
-.has-serif-title .gh-topic-name {
+.has-serif-title:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]) .gh-topic-name {
     font-family: var(--gh-font-heading, var(--font-serif));
 }
 
@@ -355,7 +355,7 @@
     color: #fff;
 }
 
-.has-serif-title .gh-subscribe-title {
+.has-serif-title:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]) .gh-subscribe-title {
     font-family: var(--gh-font-heading, var(--font-serif));
     letter-spacing: -0.01em;
 }

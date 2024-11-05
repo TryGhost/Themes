@@ -17,7 +17,7 @@
     letter-spacing: -0.005em;
 }
 
-.has-serif-title .topic-name {
+.has-serif-title:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]) .topic-name {
     font-family: var(--gh-font-heading, var(--font-serif));
 }
 
@@ -42,7 +42,7 @@
     word-break: break-word;
 }
 
-.has-serif-body .topic-article-title {
+.has-serif-body:not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .topic-article-title {
     font-family: var(--gh-font-heading, var(--font-serif));
 }
 

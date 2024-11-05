@@ -68,7 +68,7 @@ production stylesheet in assets/built/screen.css using gulp dev
     word-break: break-word;
 }
 
-.has-serif-title .page-head-title {
+.has-serif-title:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]) .page-head-title {
     font-family: var(--gh-font-heading, var(--font-serif));
 }
 
@@ -207,7 +207,7 @@ production stylesheet in assets/built/screen.css using gulp dev
     word-break: break-word;
 }
 
-.has-serif-title .post-card-title {
+.has-serif-title:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]) .post-card-title {
     font-family: var(--gh-font-heading, var(--font-serif));
 }
 
@@ -271,7 +271,7 @@ production stylesheet in assets/built/screen.css using gulp dev
     word-break: break-word;
 }
 
-.has-serif-title .post-content-title {
+.has-serif-title:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]) .post-content-title {
     font-family: var(--gh-font-heading, var(--font-serif));
 }
 
@@ -284,7 +284,7 @@ production stylesheet in assets/built/screen.css using gulp dev
     opacity: 0.5;
 }
 
-.has-serif-body .post-content-excerpt {
+.has-serif-body:not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .post-content-excerpt {
     font-family: var(--gh-font-body, var(--font-serif));
 }
 

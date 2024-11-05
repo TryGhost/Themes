@@ -20,7 +20,7 @@
     word-break: break-word;
 }
 
-.has-serif-title .featured-wrapper .post-title {
+.has-serif-title:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]) .featured-wrapper .post-title {
     font-family: var(--gh-font-heading, var(--font-serif));
 }
 
