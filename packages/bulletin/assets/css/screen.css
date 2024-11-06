@@ -53,6 +53,7 @@ h6 {
 }
 
 .gh-home-logo {
+    font-family: var(--gh-font-heading, var(--font-sans));
     font-size: 2.4rem;
     font-weight: 800;
     line-height: 1;
