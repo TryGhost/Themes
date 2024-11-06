@@ -9,7 +9,7 @@ body {
     background-color: var(--background-color);
 }
 
-.is-font-serif {
+.is-font-serif:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) {
     --font-multiplier: 1.1;
 
     font-family: var(--gh-font-body, var(--font-serif));
@@ -17,7 +17,7 @@ body {
 
 /* Navbar */
 
-.is-font-serif .gh-head-btn {
+.is-font-serif:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-head-btn {
     font-family: var(--gh-font-body, var(--font-serif));
     font-size: 1.85rem;
     font-weight: 700;
@@ -60,23 +60,23 @@ body {
     --font-multipler: 1.06;
 }
 
-.is-font-serif .gh-header-primary {
+.is-font-serif:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-header-primary {
     font-family: var(--gh-font-heading, var(--font-serif));
     font-weight: 600;
     letter-spacing: -0.015em;
 }
 
-.is-font-serif .gh-header-input {
+.is-font-serif:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-header-input {
     font-family: var(--gh-font-body, var(--font-serif));
     font-size: 2.2rem;
 }
 
-.is-font-serif .gh-header-input span {
+.is-font-serif:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-header-input span {
     font-weight: 700;
 }
 
-.is-font-serif .gh-header-input,
-.is-font-serif .gh-header-input span {
+.is-font-serif:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-header-input,
+.is-font-serif:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-header-input span {
     border-radius: 0;
 }
 
@@ -106,7 +106,7 @@ body {
     color: var(--ghost-accent-color);
 }
 
-.is-font-serif .gh-list-item-primary-tag {
+.is-font-serif:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-list-item-primary-tag {
     --font-multiplier: 1.2;
 }
 
@@ -117,8 +117,8 @@ body {
     text-transform: uppercase;
 }
 
-.is-font-sans .gh-list-item-image img,
-.is-font-sans .gh-article-image img {
+.is-font-sans:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-list-item-image img,
+.is-font-sans:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-article-image img {
     border-radius: 20px;
 }
 
@@ -254,11 +254,11 @@ body {
     line-height: 1.1em;
 }
 
-.is-font-serif .gh-list.grid.magazine .gh-list-item:first-child .gh-list-item-title {
+.is-font-serif:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-list.grid.magazine .gh-list-item:first-child .gh-list-item-title {
     font-weight: 600;
 }
 
-.is-font-serif .gh-list.grid.magazine .gh-list-item:first-child .gh-list-item-excerpt {
+.is-font-serif:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-list.grid.magazine .gh-list-item:first-child .gh-list-item-excerpt {
     --font-multiplier: 1.25;
 
     line-height: 1.4;
@@ -276,9 +276,9 @@ body {
 
 /* Article */
 
-.is-font-sans h1,
-.is-font-sans h2,
-.is-font-sans h3 {
+.is-font-sans:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) h1,
+.is-font-sans:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) h2,
+.is-font-sans:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) h3 {
     letter-spacing: -0.025em;
 }
 
@@ -308,52 +308,52 @@ body {
     border-bottom: 1px solid var(--color-border);
 }
 
-.is-font-serif .gh-cta-input,
-.is-font-serif .gh-cta-input span {
+.is-font-serif:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-cta-input,
+.is-font-serif:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-cta-input span {
     border-radius: 0;
 }
 
-.is-font-serif .gh-cta-input {
+.is-font-serif:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-cta-input {
     font-family: var(--gh-font-body, var(--font-serif));
     font-size: 1.9rem;
 }
 
-.is-font-serif .gh-cta-input span {
+.is-font-serif:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-cta-input span {
     font-weight: 700;
 }
 
 /* Archive */
 
-.is-font-sans.tag-template .gh-archive-image img {
+.is-font-sans.tag-template:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-archive-image img {
     border-radius: 16px;
 }
 
 /* Cards */
 
-.is-font-sans .kg-product-card-container {
+.is-font-sans:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .kg-product-card-container {
     border-radius: 16px;
 }
 
-.is-font-serif .kg-product-card-container {
+.is-font-serif:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .kg-product-card-container {
     border-radius: 0;
 }
 
-.is-font-sans .kg-product-card-image {
+.is-font-sans:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .kg-product-card-image {
     border-radius: 8px;
 }
 
-.is-font-sans .kg-product-card .kg-product-card-button {
+.is-font-sans:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .kg-product-card .kg-product-card-button {
     border-radius: 32px;
 }
 
-.is-font-serif .kg-product-card .kg-product-card-button {
+.is-font-serif:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .kg-product-card .kg-product-card-button {
     border-radius: 0;
 }
 
-.is-font-sans .kg-image-card img {
+.is-font-sans:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .kg-image-card img {
     border-radius: 16px;
 }
 
-.is-font-serif figcaption {
+.is-font-serif:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) figcaption {
     --font-multiplier: 1.15;
 }

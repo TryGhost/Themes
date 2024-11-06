@@ -154,11 +154,11 @@ hr {
     line-height: 1.2;
 }
 
-.has-serif-font .gh-about-primary {
+.has-serif-font:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-about-primary {
     font-family: var(--gh-font-heading, var(--font-serif));
 }
 
-.has-mono-font .gh-about-primary {
+.has-mono-font:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-about-primary {
     font-family: var(--gh-font-heading, var(--font-mono));
 }
 
@@ -173,11 +173,11 @@ hr {
     letter-spacing: -0.008em;
 }
 
-.has-serif-font .gh-about-secondary {
+.has-serif-font:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-about-secondary {
     font-family: var(--gh-font-body, var(--font-serif));
 }
 
-.has-mono-font .gh-about-secondary {
+.has-mono-font:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-about-secondary {
     font-family: var(--gh-font-body, var(--font-mono));
 }
 
@@ -343,11 +343,11 @@ hr {
     word-break: break-word;
 }
 
-.has-serif-font .gh-card-title {
+.has-serif-font:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-card-title {
     font-family: var(--gh-font-heading, var(--font-serif));
 }
 
-.has-mono-font .gh-card-title {
+.has-mono-font:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-card-title {
     font-family: var(--gh-font-heading, var(--font-mono));
 }
 
@@ -488,11 +488,11 @@ hr {
     letter-spacing: -0.005em;
 }
 
-.has-serif-font.has-typographic-feed .gh-card-excerpt {
+.has-serif-font.has-typographic-feed:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-card-excerpt {
     font-family: var(--gh-font-body, var(--font-serif));
 }
 
-.has-mono-font.has-typographic-feed .gh-card-excerpt {
+.has-mono-font.has-typographic-feed:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-card-excerpt {
     font-family: var(--gh-font-body, var(--font-mono));
 }
 
@@ -651,11 +651,11 @@ hr {
     grid-column: 4 / span 6;
 }
 
-.has-serif-font .gh-article-title {
+.has-serif-font:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-article-title {
     font-family: var(--gh-font-heading, var(--font-serif));
 }
 
-.has-mono-font .gh-article-title {
+.has-mono-font:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-article-title {
     font-family: var(--gh-font-heading, var(--font-mono));
 }
 
@@ -671,11 +671,11 @@ hr {
     grid-column: 4 / span 6;
 }
 
-.has-serif-font .gh-article-excerpt {
+.has-serif-font:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-article-excerpt {
     font-family: var(--gh-font-body, var(--font-serif));
 }
 
-.has-mono-font .gh-article-excerpt {
+.has-mono-font:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-article-excerpt {
     font-family: var(--gh-font-body, var(--font-mono));
 }
 
@@ -704,11 +704,11 @@ hr {
     font-weight: 800;
 }
 
-.has-serif-font .gh-content > :is([id], p, ul, ol) {
+.has-serif-font:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-content > :is([id], p, ul, ol) {
     font-family: var(--gh-font-body, var(--font-serif));
 }
 
-.has-mono-font .gh-content > :is([id], p, ul, ol) {
+.has-mono-font:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-content > :is([id], p, ul, ol) {
     font-family: var(--gh-font-body, var(--font-mono));
 }
 
@@ -789,11 +789,11 @@ hr {
     letter-spacing: -0.03em;
 }
 
-.has-serif-font .gh-cta-title {
+.has-serif-font:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-cta-title {
     font-family: var(--gh-font-heading, var(--font-serif));
 }
 
-.has-mono-font .gh-cta-title {
+.has-mono-font:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-cta-title {
     font-family: var(--gh-font-heading, var(--font-mono));
 }
 
@@ -815,11 +815,11 @@ hr {
     letter-spacing: -0.02em;
 }
 
-.has-serif-font .gh-navigation {
+.has-serif-font:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-navigation {
     font-family: var(--gh-font-heading, var(--font-serif));
 }
 
-.has-mono-font .gh-navigation {
+.has-mono-font:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-navigation {
     font-family: var(--gh-font-heading, var(--font-mono));
 }
 
@@ -835,11 +835,11 @@ hr {
     font-weight: 800;
 }
 
-.has-serif-font .gh-comments-title {
+.has-serif-font:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-comments-title {
     font-family: var(--gh-font-heading, var(--font-serif));
 }
 
-.has-mono-font .gh-comments-title {
+.has-mono-font:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-comments-title {
     font-family: var(--gh-font-heading, var(--font-mono));
 }
 

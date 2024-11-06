@@ -19,7 +19,7 @@
     font-size: calc(2.7rem * var(--font-multiplier, 1));
 }
 
-.is-font-serif .gh-list-title {
+.is-font-serif:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]) .gh-list-title {
     font-family: var(--gh-font-heading, var(--font-serif));
 }
 
@@ -41,7 +41,7 @@
     word-break: break-word;
 }
 
-.is-font-serif .gh-list-item-title {
+.is-font-serif:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]) .gh-list-item-title {
     font-family: var(--gh-font-heading, var(--font-serif));
 }
 

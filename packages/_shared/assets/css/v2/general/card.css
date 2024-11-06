@@ -155,12 +155,12 @@ blockquote.kg-blockquote-alt {
     margin-top: 12px;
 }
 
-.is-font-serif .kg-product-card.kg-card .kg-product-card-title {
+.is-font-serif:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]) .kg-product-card.kg-card .kg-product-card-title {
     font-family: var(--gh-font-heading, var(--font-serif));
 }
 
-.is-font-serif .kg-product-card.kg-card .kg-product-card-description :is(p, ul, ol),
-.is-font-serif .kg-product-card.kg-card .kg-product-card-button {
+.is-font-serif:not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .kg-product-card.kg-card .kg-product-card-description :is(p, ul, ol),
+.is-font-serif:not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .kg-product-card.kg-card .kg-product-card-button {
     font-family: var(--gh-font-body, var(--font-serif));
 }
 

@@ -2,7 +2,7 @@
     height: 100px;
 }
 
-.is-font-serif .gh-head {
+.is-font-serif:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]) .gh-head {
     font-family: var(--gh-font-heading, var(--font-serif));
 }
 

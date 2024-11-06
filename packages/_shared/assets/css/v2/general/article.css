@@ -41,7 +41,7 @@
     word-break: break-word;
 }
 
-.is-font-serif .gh-article-title {
+.is-font-serif:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]) .gh-article-title {
     font-family: var(--gh-font-heading, var(--font-serif));
 }
 
@@ -50,7 +50,7 @@
     font-size: calc(1.8rem * var(--font-multiplier, 1));
 }
 
-.is-font-serif .gh-article-excerpt {
+.is-font-serif:not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-article-excerpt {
     font-family: var(--gh-font-body, var(--font-serif));
 }
 

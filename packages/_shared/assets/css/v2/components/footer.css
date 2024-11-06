@@ -5,7 +5,7 @@
     text-align: center;
 }
 
-.is-font-serif .gh-foot {
+.is-font-serif:not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-foot {
     font-family: var(--gh-font-body, var(--font-serif));
 }
 
