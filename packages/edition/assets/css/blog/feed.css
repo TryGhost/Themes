@@ -148,8 +148,8 @@
     white-space: normal;
 }
 
-.has-serif-title .feed-title {
-    font-family: var(--font-serif);
+.has-serif-title:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]) .feed-title {
+    font-family: var(--gh-font-heading, var(--font-serif));
 }
 
 .feed-excerpt {
@@ -163,8 +163,8 @@
     -webkit-box-orient: vertical;
 }
 
-.has-serif-body .feed-excerpt {
-    font-family: var(--font-serif);
+.has-serif-body:not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .feed-excerpt {
+    font-family: var(--gh-font-body, var(--font-serif));
 }
 
 .post-feed:not(.expanded) .feed-excerpt {

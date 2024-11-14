@@ -17,8 +17,8 @@
     letter-spacing: -0.005em;
 }
 
-.has-serif-title .topic-name {
-    font-family: var(--font-serif);
+.has-serif-title:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]) .topic-name {
+    font-family: var(--gh-font-heading, var(--font-serif));
 }
 
 .topic-count {
@@ -34,11 +34,16 @@
 
 .topic-article-title {
     margin-bottom: 0;
+    font-family: var(--gh-font-body, var(--font-sans));
     font-size: 1.5rem;
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0;
     word-break: break-word;
+}
+
+.has-serif-body:not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .topic-article-title {
+    font-family: var(--gh-font-heading, var(--font-serif));
 }
 
 .topic-article-link {

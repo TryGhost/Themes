@@ -23,6 +23,7 @@
 
 .gh-head-logo {
     position: relative;
+    font-family: var(--gh-font-heading, var(--font-sans));
     font-size: 2.4rem;
     font-weight: 700;
     letter-spacing: -0.02em;

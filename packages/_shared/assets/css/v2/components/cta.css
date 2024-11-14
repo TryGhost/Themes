@@ -15,8 +15,8 @@
     font-size: calc(clamp(2.4rem, 1.36vw + 1.85rem, 3.6rem) * var(--font-multiplier, 1));
 }
 
-.is-font-serif .gh-cta-title {
-    font-family: var(--font-serif);
+.is-font-serif:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]) .gh-cta-title {
+    font-family: var(--gh-font-heading, var(--font-serif));
 }
 
 .gh-cta-input {

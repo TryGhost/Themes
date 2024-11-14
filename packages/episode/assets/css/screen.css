@@ -18,7 +18,7 @@ body {
     background-color: var(--background-color);
 }
 
-.is-font-narrow {
+.is-font-narrow:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) {
     font-variation-settings: "wdth" 100;
 }
 
@@ -31,7 +31,7 @@ body {
     font-weight: 800;
 }
 
-.is-font-narrow :is(h1, h2, h3, h4, h5, h6) {
+.is-font-narrow:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) :is(h1, h2, h3, h4, h5, h6) {
     font-variation-settings: "wdth" 80;
     font-weight: 600;
 }
@@ -42,7 +42,7 @@ body {
     border-radius: 0;
 }
 
-.is-font-narrow .gh-btn {
+.is-font-narrow:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-btn {
     --multiplier: 0.85;
 
     font-size: 1.9rem;
@@ -55,7 +55,7 @@ body {
     margin-top: -3px;
 }
 
-.is-font-narrow .gh-head-logo {
+.is-font-narrow:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-head-logo {
     font-size: 2.8rem;
     font-variation-settings: "wdth" 80;
 }
@@ -112,7 +112,7 @@ body {
     line-height: 1.1;
 }
 
-.is-font-narrow .gh-header-primary {
+.is-font-narrow:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-header-primary {
     --font-multiplier: 1.3;
 
     font-weight: 600;
@@ -211,7 +211,7 @@ body {
     border-color: rgba(255, 255, 255, 0.3);
 }
 
-.is-font-narrow .gh-list-item-inner {
+.is-font-narrow:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-list-item-inner {
     border-width: 2px;
 }
 
@@ -243,7 +243,7 @@ body {
     font-weight: 800;
 }
 
-.is-font-narrow .gh-list-item-title {
+.is-font-narrow:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-list-item-title {
     --font-multiplier: 1.3;
 
     font-weight: 650;
@@ -282,7 +282,7 @@ body {
     background-color: var(--ghost-accent-color);
 }
 
-.is-font-narrow .gh-list-item-content::after {
+.is-font-narrow:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-list-item-content::after {
     font-size: 1.8rem;
     font-variation-settings: "wdth" 80;
 }
@@ -316,7 +316,7 @@ body {
     --font-multiplier: 1.3;
 }
 
-.is-font-narrow .gh-cta-title {
+.is-font-narrow:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-cta-title {
     --font-multiplier: 1.6;
 
     font-weight: 600;
@@ -334,7 +334,7 @@ body {
     border-radius: 0;
 }
 
-.is-font-narrow .gh-cta-input span {
+.is-font-narrow:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-cta-input span {
     font-size: 1.8rem;
     font-variation-settings: "wdth" 80;
 }

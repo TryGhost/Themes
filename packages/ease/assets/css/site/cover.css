@@ -33,14 +33,15 @@
 .cover-description {
     max-width: 720px;
     margin: 0 auto;
+    font-family: var(--gh-font-heading, var(--font-sans));
     font-size: 3.6rem;
     font-weight: 600;
     line-height: 1.4;
     word-break: break-word;
 }
 
-.has-serif-title .cover-description {
-    font-family: var(--font-serif);
+.has-serif-title:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]) .cover-description {
+    font-family: var(--gh-font-heading, var(--font-serif));
     font-weight: 700;
 }
 

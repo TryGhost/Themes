@@ -14,10 +14,10 @@
     height: 100%;
 }
 
-.has-serif-title .gh-cover-title {
-    font-family: var(--font-serif);
+.has-serif-title:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]) .gh-cover-title {
+    font-family: var(--gh-font-heading, var(--font-serif));
 }
 
-.has-serif-body .gh-cover-description {
-    font-family: var(--font-serif);
+.has-serif-body:not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-cover-description {
+    font-family: var(--gh-font-body, var(--font-serif));
 }

@@ -24,8 +24,8 @@ headings, text, images and lists. We deal with cards lower down. */
     margin-top: calc(2em * var(--content-spacing-multiplier, 1)) !important;
 }
 
-.has-serif-title .gh-content > [id] {
-    font-family: var(--font-serif);
+.has-serif-title:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]) .gh-content > [id] {
+    font-family: var(--gh-font-heading, var(--font-serif));
     letter-spacing: -0.01em;
 }
 
@@ -74,16 +74,16 @@ is the very first element in the post content */
     font-size: 0.95em;
 }
 
-.has-serif-body .gh-content > blockquote,
-.has-serif-body .gh-content > ol,
-.has-serif-body .gh-content > ul,
-.has-serif-body .gh-content > dl,
-.has-serif-body .gh-content > p,
-.has-serif-body .gh-content .kg-callout-text,
-.has-serif-body .gh-content .kg-toggle-content > ol,
-.has-serif-body .gh-content .kg-toggle-content > ul,
-.has-serif-body .gh-content .kg-toggle-content > p {
-    font-family: var(--font-serif);
+.has-serif-body:not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-content > blockquote,
+.has-serif-body:not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-content > ol,
+.has-serif-body:not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-content > ul,
+.has-serif-body:not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-content > dl,
+.has-serif-body:not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-content > p,
+.has-serif-body:not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-content .kg-callout-text,
+.has-serif-body:not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-content .kg-toggle-content > ol,
+.has-serif-body:not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-content .kg-toggle-content > ul,
+.has-serif-body:not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-content .kg-toggle-content > p {
+    font-family: var(--gh-font-body, var(--font-serif));
 }
 
 .gh-content ul,

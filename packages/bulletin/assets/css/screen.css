@@ -53,6 +53,7 @@ h6 {
 }
 
 .gh-home-logo {
+    font-family: var(--gh-font-heading, var(--font-sans));
     font-size: 2.4rem;
     font-weight: 800;
     line-height: 1;
@@ -81,8 +82,8 @@ h6 {
     color: #fff;
 }
 
-.has-serif-title .gh-home-subscribe-title {
-    font-family: var(--font-serif);
+.has-serif-title:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]) .gh-home-subscribe-title {
+    font-family: var(--gh-font-heading, var(--font-serif));
     letter-spacing: -0.01em;
 }
 
@@ -276,8 +277,8 @@ h6 {
     font-size: 3.6rem;
 }
 
-.has-serif-title .gh-pagehead-title {
-    font-family: var(--font-serif);
+.has-serif-title:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]) .gh-pagehead-title {
+    font-family: var(--gh-font-heading, var(--font-serif));
     letter-spacing: -0.01em;
 }
 

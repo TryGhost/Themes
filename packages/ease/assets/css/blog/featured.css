@@ -23,8 +23,8 @@
     margin-bottom: 45px;
 }
 
-.has-serif-title .featured-title {
-    font-family: var(--font-serif);
+.has-serif-title:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]) .featured-title {
+    font-family: var(--gh-font-heading, var(--font-serif));
 }
 
 @media (max-width: 767px) {

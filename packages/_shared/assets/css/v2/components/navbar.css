@@ -2,8 +2,8 @@
     height: 100px;
 }
 
-.is-font-serif .gh-head {
-    font-family: var(--font-serif);
+.is-font-serif:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]) .gh-head {
+    font-family: var(--gh-font-heading, var(--font-serif));
 }
 
 .gh-head-inner {
@@ -26,6 +26,7 @@
 
 .gh-head-logo {
     position: relative;
+    font-family: var(--gh-font-heading, var(--font-sans));
     font-size: calc(2.6rem * var(--font-multiplier, 1));
     font-weight: 700;
     letter-spacing: -0.02em;

@@ -28,8 +28,8 @@
     line-height: 1.2;
 }
 
-.is-font-serif .gh-header-primary {
-    font-family: var(--font-serif);
+.is-font-serif:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]) .gh-header-primary {
+    font-family: var(--gh-font-heading, var(--font-serif));
     line-height: 1.1;
 }
 

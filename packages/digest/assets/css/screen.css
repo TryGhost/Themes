@@ -149,8 +149,8 @@ body {
     font-weight: 800;
 }
 
-.has-serif-title .gh-subscribe-title {
-    font-family: var(--font-serif);
+.has-serif-title:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]) .gh-subscribe-title {
+    font-family: var(--gh-font-heading, var(--font-serif));
     letter-spacing: -0.01em;
 }
 
@@ -328,8 +328,8 @@ body:not(.home-template) .gh-article-image {
     font-weight: 800;
 }
 
-.has-serif-title .gh-pagehead-title {
-    font-family: var(--font-serif);
+.has-serif-title:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]) .gh-pagehead-title {
+    font-family: var(--gh-font-heading, var(--font-serif));
     letter-spacing: -0.01em;
 }
 

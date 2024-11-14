@@ -11,8 +11,8 @@
     font-weight: 800;
 }
 
-.has-serif-title .term-name {
-    font-family: var(--font-serif);
+.has-serif-title:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]) .term-name {
+    font-family: var(--gh-font-heading, var(--font-serif));
 }
 
 .term-description {

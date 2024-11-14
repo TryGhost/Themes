@@ -41,8 +41,8 @@
     word-break: break-word;
 }
 
-.is-font-serif .gh-article-title {
-    font-family: var(--font-serif);
+.is-font-serif:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]) .gh-article-title {
+    font-family: var(--gh-font-heading, var(--font-serif));
 }
 
 .gh-article-excerpt {
@@ -50,8 +50,8 @@
     font-size: calc(1.8rem * var(--font-multiplier, 1));
 }
 
-.is-font-serif .gh-article-excerpt {
-    font-family: var(--font-serif);
+.is-font-serif:not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-article-excerpt {
+    font-family: var(--gh-font-body, var(--font-serif));
 }
 
 .gh-article-image {

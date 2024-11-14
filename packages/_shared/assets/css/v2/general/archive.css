@@ -19,16 +19,16 @@
     font-size: calc(3.6rem * var(--font-multiplier, 1));
 }
 
-.is-font-serif .gh-archive-title {
-    font-family: var(--font-serif);
+.is-font-serif:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]) .gh-archive-title {
+    font-family: var(--gh-font-heading, var(--font-serif));
 }
 
 .gh-archive-description {
     font-size: calc(1.7rem * var(--font-multiplier, 1));
 }
 
-.is-font-serif .gh-archive-description {
-    font-family: var(--font-serif);
+.is-font-serif:not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-archive-description {
+    font-family: var(--gh-font-body, var(--font-serif));
 }
 
 .author-template .gh-archive-image {

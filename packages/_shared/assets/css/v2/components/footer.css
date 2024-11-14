@@ -5,8 +5,8 @@
     text-align: center;
 }
 
-.is-font-serif .gh-foot {
-    font-family: var(--font-serif);
+.is-font-serif:not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-foot {
+    font-family: var(--gh-font-body, var(--font-serif));
 }
 
 .gh-foot-inner {
