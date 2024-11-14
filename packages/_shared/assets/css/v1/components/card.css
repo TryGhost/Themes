@@ -99,9 +99,14 @@ blockquote.kg-blockquote-alt {
 /* ---------------------------------------------------------- */
 
 .kg-bookmark-card a.kg-bookmark-container,
-.kg-bookmark-card a.kg-bookmark-container:hover {
+.kg-bookmark-card a.kg-bookmark-container:hover,
+.kg-file-card-container,
+.kg-file-card-container:hover,
+.kg-audio-card,
+.kg-product-card-container {
     background: var(--background-color, #fff) !important;
     color: var(--color-darker-gray, #222) !important;
+    opacity: 1;
 }
 
 .kg-bookmark-card .kg-bookmark-container {
