@@ -597,20 +597,55 @@ hr {
     flex-direction: column;
 }
 
+.gh-article-meta .gh-author-image-list {
+    display: flex;
+    margin-bottom: 12px;
+    margin-left: -2px;
+}
+
 .gh-article-meta .gh-author-image {
+    display: block;
     width: 72px;
     height: 72px;
-    margin-bottom: 16px;
+    margin-bottom: 0;
+    border: 2px solid var(--color-white);
 }
 
-.gh-article-meta .gh-author-name {
+.gh-article-meta .gh-author-icon {
+    background-color: var(--color-light-gray);
+}
+
+.gh-article-meta .gh-author-image:hover {
+    opacity: 1;
+}
+
+.gh-article-meta .gh-author-image-list .gh-author-image + .gh-author-image {
+    margin-left: -20px;
+}
+
+.gh-article-meta .gh-author-image-list .gh-author-image:nth-child(1) {
+    z-index: 30;
+}
+
+.gh-article-meta .gh-author-image-list .gh-author-image:nth-child(2) {
+    z-index: 20;
+}
+
+.gh-article-meta .gh-author-image-list .gh-author-image:nth-child(3) {
+    z-index: 10;
+}
+
+.gh-article-meta .gh-author-name-list {
+    margin-bottom: -2px;
+    line-height: 1.35;
+}
+
+.gh-article-meta .gh-author-name-list a {
     font-size: 1.9rem;
+    font-weight: 700;
     letter-spacing: -0.01em;
-}
-
-.gh-article-meta .gh-author-name a {
-    color: var(--color-darker-gray);
     text-decoration: none;
+    color: var(--color-darker-gray);
 }
 
 .gh-article-date {
@@ -621,6 +656,7 @@ hr {
 }
 
 .gh-article-tag {
+    display: inline-block;
     width: fit-content;
     padding: 2px 12px;
     margin-top: 20px;
@@ -742,11 +778,6 @@ hr {
         grid-row-start: 2;
     }
 
-    .gh-article-meta-inner {
-        flex-direction: row;
-        align-items: center;
-    }
-
     .gh-article-meta .gh-author-image {
         width: 64px;
         height: 64px;
@@ -756,10 +787,6 @@ hr {
 
     .gh-article-meta-wrapper {
         flex-grow: 1;
-    }
-
-    .gh-article-tag {
-        margin-top: 0;
     }
 }
 

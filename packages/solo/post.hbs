@@ -26,18 +26,23 @@
                     {{/unless}}
                     <aside class="gh-article-meta">
                         <div class="gh-article-meta-inner">
-                            {{#primary_author}}
-                                {{#if profile_image}}
-                                    <figure class="gh-author-image">
-                                        <img src="{{profile_image}}" alt="{{name}}">
-                                    </figure>
-                                {{/if}}
-                                <div class="gh-article-meta-wrapper">
-                                <h4 class="gh-author-name">
-                                    <a href="{{url}}">{{name}}</a>
-                                </h4>
-                            {{/primary_author}}
-                            <time class="gh-article-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time></div>
+                            <div class="gh-author-image-list instapaper_ignore">
+                                {{#foreach authors}}
+                                    <a class="gh-author-image" href="{{url}}">
+                                        {{#if profile_image}}
+                                            <img src="{{profile_image}}" alt="{{name}}">
+                                        {{else}}
+                                            <div class="gh-author-icon">{{> icons/avatar}}</div>
+                                        {{/if}}
+                                    </a>
+                                {{/foreach}}
+                            </div>
+                            <div class="gh-article-meta-wrapper">
+                                <div class="gh-author-name-list">
+                                    {{authors}}
+                                </div>
+                                <time class="gh-article-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
+                            </div>
                             {{#if primary_tag}}
                                 <a class="gh-article-tag" href="{{primary_tag.url}}" style="--tag-color: {{primary_tag.accent_color}}">{{primary_tag.name}}</a>
                             {{/if}}

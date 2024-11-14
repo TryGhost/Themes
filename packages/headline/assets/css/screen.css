@@ -230,9 +230,6 @@ body:not(.home-template) .gh-topic-grid .gh-card {
 }
 
 .gh-card-footer {
-    display: flex;
-    gap: 6px;
-    align-items: center;
     margin-top: 16px;
     font-size: 1.1rem;
     font-weight: 500;
@@ -249,19 +246,20 @@ body:not(.home-template) .gh-topic-grid .gh-card {
     color: var(--color-white);
 }
 
-.gh-card-footer > * + * {
-    display: flex;
-    gap: 6px;
-    align-items: center;
+.gh-card-footer > * {
+    display: inline-block;
 }
 
 .gh-card-footer > * + *:not(script)::before {
-    display: block;
+    display: inline-flex;
     width: 2px;
     height: 2px;
+    margin-right: 6px;
+    margin-left: 4px;
     content: "";
     background-color: currentColor;
     border-radius: 50%;
+    transform: translateY(-3px);
 }
 
 /* Styles specific to list style sections */
