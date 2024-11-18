@@ -58,7 +58,8 @@ hr {
     grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 
-.gh-canvas > * {
+.gh-canvas > *,
+.page-template .no-image :is(.gh-article-title, .gh-article-excerpt) {
     grid-column: 4 / span 6;
 }
 
@@ -75,7 +76,8 @@ hr {
 }
 
 @media (max-width: 991px) {
-    .gh-canvas > * {
+    .gh-canvas > *,
+   .page-template .no-image :is(.gh-article-title, .gh-article-excerpt) {
         grid-column: 3 / span 8;
     }
 
@@ -85,7 +87,8 @@ hr {
 }
 
 @media (max-width: 767px) {
-    .gh-canvas > * {
+    .gh-canvas > *,
+   .page-template .no-image :is(.gh-article-title, .gh-article-excerpt) {
         grid-column: 2 / span 10;
     }
 
@@ -95,7 +98,8 @@ hr {
 }
 
 @media (max-width: 480px) {
-    .gh-canvas > * {
+    .gh-canvas > *,
+   .page-template .no-image :is(.gh-article-title, .gh-article-excerpt) {
         grid-column: 1 / span 12;
     }
 }
@@ -683,10 +687,6 @@ hr {
     letter-spacing: -0.03em;
 }
 
-.page-template .no-image .gh-article-title {
-    grid-column: 4 / span 6;
-}
-
 .has-serif-font:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-article-title {
     font-family: var(--gh-font-heading, var(--font-serif));
 }
@@ -701,10 +701,6 @@ hr {
     font-size: clamp(1.8rem, 0.54vw + 1.54rem, 2.4rem);
     font-weight: 500;
     line-height: 1.45;
-}
-
-.page-template .no-image .gh-article-excerpt {
-    grid-column: 4 / span 6;
 }
 
 .has-serif-font:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-article-excerpt {
