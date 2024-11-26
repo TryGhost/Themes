@@ -19,9 +19,10 @@
                 <div class="gh-head-brand-wrapper">
                     <a class="gh-head-logo" href="{{@site.url}}">
                         {{#if @site.logo}}
-                            <img src="{{@site.logo}}" alt="{{@site.title}}">
                             {{#if @custom.white_logo_for_dark_mode}}
                                 <img src="{{img_url @custom.white_logo_for_dark_mode}}" alt="{{@site.title}}">
+                            {{else}}
+                                <img src="{{@site.logo}}" alt="{{@site.title}}">
                             {{/if}}
                         {{else}}
                             {{@site.title}}
