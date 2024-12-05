@@ -7,7 +7,7 @@
         <div class="gh-card-excerpt">{{excerpt}}</div>
 
         <footer class="gh-card-meta">
-            <time class="gh-card-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
+            <time class="gh-card-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMM YYYY"}}</time>
             <span class="gh-card-duration">{{reading_time}}</span>
             {{#if @site.comments_enabled}}
                 {{comment_count class="gh-card-comments"}}

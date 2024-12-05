@@ -25,7 +25,7 @@
 
             {{#is "post"}}
             <div class="post-meta">
-                <time class="post-meta-item post-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date published_at}}</time>
+                <time class="post-meta-item post-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date published_at format="DD MMM YYYY"}}</time>
                 <span class="post-meta-item post-meta-length">{{reading_time}}</span>
                 {{#if @site.comments_enabled}}
                     {{comment_count class="post-meta-item"}}

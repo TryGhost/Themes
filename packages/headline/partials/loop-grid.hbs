@@ -32,7 +32,7 @@
 
             <footer class="gh-card-footer">
                 <span class="gh-card-author">{{#foreach authors}}{{#if @first}}{{name}}{{else}}, {{name}}{{/if}}{{/foreach}}</span>
-                <time class="gh-card-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
+                <time class="gh-card-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMM YYYY"}}</time>
                 {{#if @site.comments_enabled}}
                     {{comment_count class="gh-card-comments"}}
                 {{/if}}

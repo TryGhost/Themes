@@ -35,7 +35,7 @@
                 {{/has}}
                 {{/unless}}
                 <span class="post-meta-item post-meta-date">
-                    <time datetime="{{date format="YYYY-MM-DD"}}">{{date published_at}}</time>
+                    <time datetime="{{date format="YYYY-MM-DD"}}">{{date published_at format="DD MMM YYYY"}}</time>
                 </span>
                 <span class="post-meta-item post-meta-length">{{reading_time}}</span>
                 {{#if @site.comments_enabled}}

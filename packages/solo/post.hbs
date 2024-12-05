@@ -41,7 +41,7 @@
                                 <div class="gh-author-name-list">
                                     {{authors}}
                                 </div>
-                                <time class="gh-article-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
+                                <time class="gh-article-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMM YYYY"}}</time>
                             </div>
                             {{#if primary_tag}}
                                 <a class="gh-article-tag" href="{{primary_tag.url}}" style="--tag-color: {{primary_tag.accent_color}}">{{primary_tag.name}}</a>

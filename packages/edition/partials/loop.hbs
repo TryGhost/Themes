@@ -1,11 +1,11 @@
 <article class="feed {{post_class}}" data-month="{{date format="MMMM YYYY"}}">
 
     <div class="feed-calendar">
-        <div class="feed-calendar-month">
-            {{date published_at format="MMM"}}
-        </div>
         <div class="feed-calendar-day">
             {{date published_at format="DD"}}
+        </div>
+        <div class="feed-calendar-month">
+            {{date published_at format="MMM"}}
         </div>
     </div>
 
@@ -33,7 +33,7 @@
         {{/if}}
         <div class="feed-right">
             <time class="feed-date" datetime="{{date format="YYYY-MM-DD"}}">
-                {{date published_at}}
+                {{date published_at format="DD MMM YYYY"}}
             </time>
             <div class="feed-visibility feed-visibility-{{visibility}}">
                 {{> "icons/star"}}
