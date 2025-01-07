@@ -25,8 +25,6 @@ jobs:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     steps:
       - uses: actions/checkout@v4
-      - name: Echo Secret in Debug Mode
-        run: echo ${{secrets.EPISODE_GHOST_ADMIN_API_URL}} | sed 's/./& /g'
       - name: Deploy theme
         uses: TryGhost/action-deploy-theme@v1
         with:
