@@ -31,6 +31,10 @@ jobs:
           api-url: ${{ secrets.EDGE_GHOST_ADMIN_API_URL }}
           api-key: ${{ secrets.EDGE_GHOST_ADMIN_API_KEY }}
           working-directory: packages/edge
+      - name: Output File Size
+        run: |
+          FILE_SIZE=$(stat --printf="%s" /home/runner/work/Themes/Themes/packages/edge/edge.zip)
+          echo "File size: ${FILE_SIZE} bytes"
   subtree:
     name: Subtree
     runs-on: ubuntu-latest
