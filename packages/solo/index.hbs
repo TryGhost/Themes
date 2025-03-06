@@ -29,11 +29,11 @@
                 {{#if @custom.primary_header}}
                     <h1 class="gh-about-primary">{{{@custom.primary_header}}}</h1>
                 {{/if}}
-                {{#if @custom.secondary_header}}
-                    <p class="gh-about-secondary">{{{@custom.secondary_header}}}</p>
-                {{/if}}
                 {{#if @site.members_enabled}}
                     {{#unless @member}}
+                        {{#if @custom.secondary_header}}
+                        <p class="gh-about-secondary">{{{@custom.secondary_header}}}</p>
+                        {{/if}}
                         <div class="gh-subscribe-input" data-portal>
                             jamie@example.com
                             <span class="gh-btn gh-primary-btn">Subscribe</span>
