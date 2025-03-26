@@ -690,6 +690,7 @@ body:not(.home-template) .gh-topic-grid .gh-card {
     margin-top: 32px;
     color: var(--color-secondary-text);
     letter-spacing: -0.006em;
+    text-wrap: wrap;
 }
 
 .gh-subscribe ~ .gh-copyright {
