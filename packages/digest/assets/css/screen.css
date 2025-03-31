@@ -277,8 +277,9 @@ body:not(.home-template) .gh-article-image {
     margin-top: 24px;
 }
 
-.no-pagination .gh-article-footer {
-    display: none;
+.no-pagination .gh-article-footer .gh-navigation-middle {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .gh-navigation {
