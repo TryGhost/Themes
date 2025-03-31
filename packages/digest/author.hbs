@@ -32,13 +32,10 @@
                 </div>
             </header>
         </section>
-
-        <div class="gh-feed">
-            {{#get "posts" filter="primary_author:{{slug}}" limit="all"}}
-                {{#foreach posts}}
-                    {{> loop}}
-                {{/foreach}}
-            {{/get}}
-        </div>
     {{/author}}
+    <div class="gh-feed">
+        {{#foreach posts}}
+            {{> loop}}
+        {{/foreach}}
+    </div>
 </main>

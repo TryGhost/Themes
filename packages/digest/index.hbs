@@ -15,7 +15,7 @@
         </header>
     </section>
 
-    {{#get "posts" filter="featured:true" limit="all" as |featured|}}
+    {{#get "posts" filter="featured:true" limit="5" as |featured|}}
         {{#if featured}}
             <section class="gh-section gh-section-featured">
                 <h3 class="gh-section-title"><span>Featured</span></h3>
@@ -33,11 +33,16 @@
         <h3 class="gh-section-title"><span>Latest</span></h3>
 
         <div class="gh-feed">
-            {{#get "posts" limit="all"}}
-                {{#foreach posts}}
-                    {{> loop}}
-                {{/foreach}}
-            {{/get}}
+            {{#match pagination.page 2}}
+                {{#get "posts" limit=@config.posts_per_page as |recent|}}
+                    {{#foreach recent}}
+                        {{> "loop"}}
+                    {{/foreach}}
+                {{/get}}
+            {{/match}}
+            {{#foreach posts}}
+                {{> "loop"}}
+            {{/foreach}}
         </div>
     </section>
 </main>
