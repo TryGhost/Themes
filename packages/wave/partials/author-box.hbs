@@ -6,14 +6,49 @@
         <header class="author-header">
             <h4 class="author-name"><a href="{{url}}">{{name}}</a></h4>
             <div class="author-social">
+                {{#if twitter}}
+                    <a class="author-social-item author-twitter" href="{{social_url type="twitter"}}" target="_blank" rel="noopener noreferrer">
+                        {{> "icons/twitter"}}
+                    </a>
+                {{/if}}
                 {{#if facebook}}
-                    <a class="author-social-item author-facebook" href="https://www.facebook.com/{{facebook}}" target="_blank" rel="noopener noreferrer">
+                    <a class="author-social-item author-facebook" href="{{social_url type="facebook"}}" target="_blank" rel="noopener noreferrer">
                         {{> "icons/facebook"}}
                     </a>
                 {{/if}}
-                {{#if twitter}}
-                    <a class="author-social-item author-twitter" href="https://twitter.com/{{twitter}}" target="_blank" rel="noopener noreferrer">
-                        {{> "icons/twitter"}}
+                {{#if linkedin}}
+                    <a class="author-social-item author-linkedin" href="{{social_url type="linkedin"}}" target="_blank" rel="noopener noreferrer">
+                        {{> "icons/linkedin"}}
+                    </a>
+                {{/if}}
+                {{#if bluesky}}
+                    <a class="author-social-item author-bluesky" href="{{social_url type="bluesky"}}" target="_blank" rel="noopener noreferrer">
+                        {{> "icons/bluesky"}}
+                    </a>
+                {{/if}}
+                {{#if threads}}
+                    <a class="author-social-item author-threads" href="{{social_url type="threads"}}" target="_blank" rel="noopener noreferrer">
+                        {{> "icons/threads"}}
+                    </a>
+                {{/if}}
+                {{#if mastodon}}
+                    <a class="author-social-item author-mastodon" href="{{social_url type="mastodon"}}" target="_blank" rel="noopener noreferrer">
+                        {{> "icons/mastodon"}}
+                    </a>
+                {{/if}}
+                {{#if tiktok}}
+                    <a class="author-social-item author-tiktok" href="{{social_url type="tiktok"}}" target="_blank" rel="noopener noreferrer">
+                        {{> "icons/tiktok"}}
+                    </a>
+                {{/if}}
+                {{#if youtube}}
+                    <a class="author-social-item author-youtube" href="{{social_url type="youtube"}}" target="_blank" rel="noopener noreferrer">
+                        {{> "icons/youtube"}}
+                    </a>
+                {{/if}}
+                {{#if instagram}}
+                    <a class="author-social-item author-instagram" href="{{social_url type="instagram"}}" target="_blank" rel="noopener noreferrer">
+                        {{> "icons/instagram"}}
                     </a>
                 {{/if}}
             </div>
