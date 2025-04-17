@@ -4130,6 +4130,34 @@ gscan@4.47.0:
     uuid "^9.0.1"
     validator "^13.0.0"
 
+gscan@4.48.0:
+  version "4.48.0"
+  resolved "https://registry.yarnpkg.com/gscan/-/gscan-4.48.0.tgz#7dacd14c2911420636395799d611c2f9e42d751b"
+  integrity sha512-lqWwUwuuD9tZJiwelzw0PnzrcT/J0Nwwpg5Y8fBGrIe4kw7SOKgNZR3zbj/t5Wgg8Df/xY/zG4MeQr9PJpmdiQ==
+  dependencies:
+    "@sentry/node" "^7.73.0"
+    "@tryghost/config" "^0.2.18"
+    "@tryghost/debug" "^0.1.26"
+    "@tryghost/errors" "^1.2.26"
+    "@tryghost/logging" "^2.4.7"
+    "@tryghost/nql" "^0.12.5"
+    "@tryghost/pretty-cli" "^1.2.38"
+    "@tryghost/server" "^0.1.37"
+    "@tryghost/zip" "^1.1.42"
+    chalk "^4.1.2"
+    common-tags "^1.8.2"
+    express "^4.18.2"
+    express-hbs "^2.4.2"
+    fs-extra "^11.1.1"
+    glob "^8.1.0"
+    lodash "^4.17.21"
+    multer "^1.4.4"
+    pluralize "^8.0.0"
+    require-dir "^1.2.0"
+    semver "^7.5.4"
+    uuid "^9.0.1"
+    validator "^13.0.0"
+
 gulp-cli@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/gulp-cli/-/gulp-cli-3.0.0.tgz#577008f5323fad6106b44db24803c27c3a649841"
