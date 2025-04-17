@@ -311,13 +311,8 @@ h6 {
     margin-left: 1.6rem;
 }
 
-.gh-author-twitter,
-.gh-author-facebook {
+.gh-author-social-link {
     line-height: 0;
-}
-
-.gh-author-facebook {
-    margin-left: 1.2rem;
 }
 
 .gh-card-link {
