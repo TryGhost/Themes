@@ -3,7 +3,7 @@ const pump = require('pump');
 const fs = require('fs');
 const glob = require('glob');
 const order = require('ordered-read-streams');
-const argv = require('yargs').argv;
+const argv = require('yargs/yargs')(process.argv.slice(2)).argv;
 const exec = require('child_process').exec;
 
 // gulp plugins and utils
