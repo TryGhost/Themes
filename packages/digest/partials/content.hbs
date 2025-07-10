@@ -37,7 +37,13 @@
             {{/prev_post}}
         </div>
 
-        <a class="gh-navigation-middle" href="/page/2"><span>Browse</span> all issues</a>
+        <div>
+            {{#get "posts" limit="10" page="2" as |secondPage|}}
+                {{#if secondPage}}
+                    <a class="gh-navigation-middle" href="/page/2"><span>Browse</span> all issues</a>
+                {{/if}}
+            {{/get}}
+        </div>
 
         <div class="gh-navigation-next">
             {{#next_post}}
