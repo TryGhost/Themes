@@ -94,7 +94,7 @@
                     {{/if}}
                 </section>
 
-                {{#get "posts" filter="featured:true" limit="all" as |featured|}}
+                {{#get "posts" filter="featured:true" limit="5" as |featured|}}
                     {{#if featured}}
                         <section class="gh-section">
                             <h3 class="gh-section-title">Featured</h3>
@@ -108,7 +108,7 @@
                     {{/if}}
                 {{/get}}
 
-                {{#get "tags" include="count.posts" limit="all" as |topic|}}
+                {{#get "tags" include="count.posts" limit="100" as |topic|}}
                     <section class="gh-section">
                         <h3 class="gh-section-title">Topics</h3>
 
