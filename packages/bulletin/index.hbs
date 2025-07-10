@@ -16,10 +16,15 @@
     </section>
 
     <div class="gh-feed">
-        {{#get "posts" limit="all"}}
-            {{#foreach posts}}
-                {{> loop}}
-            {{/foreach}}
-        {{/get}}
+        {{#match pagination.page 2}}
+            {{#get "posts" limit=@config.posts_per_page as |recent|}}
+                {{#foreach recent}}
+                    {{> "loop"}}
+                {{/foreach}}
+            {{/get}}
+        {{/match}}
+        {{#foreach posts}}
+            {{> "loop"}}
+        {{/foreach}}
     </div>
 </main>

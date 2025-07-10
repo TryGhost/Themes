@@ -15,13 +15,10 @@
                 </div>
             </header>
         </section>
-
-        <div class="gh-feed">
-            {{#get "posts" filter="tags:{{slug}}" limit="all"}}
-                {{#foreach posts}}
-                    {{> loop}}
-                {{/foreach}}
-            {{/get}}
-        </div>
     {{/tag}}
+    <div class="gh-feed">
+        {{#foreach posts}}
+            {{> loop}}
+        {{/foreach}}
+    </div>
 </main>

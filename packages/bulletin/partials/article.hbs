@@ -43,7 +43,11 @@
             </div>
 
             <div class="gh-navigation-middle">
-                <a class="gh-navigation-link" href="/page/2">Browse archive</a>
+                {{#get "posts" limit="10" page="2" as |secondPage|}}
+                    {{#if secondPage}}
+                        <a class="gh-navigation-link" href="/page/2">Browse archive</a>
+                    {{/if}}
+                {{/get}}
             </div>
 
             <div class="gh-navigation-next">
