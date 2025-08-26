@@ -2576,12 +2576,12 @@ braces@^3.0.3, braces@~3.0.2:
     fill-range "^7.1.1"
 
 browserslist@^4.0.0, browserslist@^4.24.4, browserslist@^4.25.1:
-  version "4.25.2"
-  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.25.2.tgz#90c1507143742d743544ae6e92bca3348adff667"
-  integrity sha512-0si2SJK3ooGzIawRu61ZdPCO1IncZwS8IzuX73sPZsXW6EQ/w/DAfPyKI8l1ETTCr2MnvqWitmlCUxgdul45jA==
+  version "4.25.3"
+  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.25.3.tgz#9167c9cbb40473f15f75f85189290678b99b16c5"
+  integrity sha512-cDGv1kkDI4/0e5yON9yM5G/0A5u8sf5TnmdX5C9qHzI9PPu++sQ9zjm1k9NiOrf3riY4OkK0zSGqfvJyJsgCBQ==
   dependencies:
-    caniuse-lite "^1.0.30001733"
-    electron-to-chromium "^1.5.199"
+    caniuse-lite "^1.0.30001735"
+    electron-to-chromium "^1.5.204"
     node-releases "^2.0.19"
     update-browserslist-db "^1.1.3"
 
@@ -2737,10 +2737,10 @@ caniuse-api@^3.0.0:
     lodash.memoize "^4.1.2"
     lodash.uniq "^4.5.0"
 
-caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001702, caniuse-lite@^1.0.30001733:
-  version "1.0.30001735"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001735.tgz#ba658fd3fd24a4106fd68d5ce472a2c251494dbe"
-  integrity sha512-EV/laoX7Wq2J9TQlyIXRxTJqIw4sxfXS4OYgudGxBYRuTv0q7AM6yMEpU/Vo1I94thg9U6EZ2NfZx9GJq83u7w==
+caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001702, caniuse-lite@^1.0.30001735:
+  version "1.0.30001737"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001737.tgz#8292bb7591932ff09e9a765f12fdf5629a241ccc"
+  integrity sha512-BiloLiXtQNrY5UyF0+1nSJLXUENuhka2pzy2Fx5pGxqavdrxSCW4U6Pn/PoG3Efspi2frRbHpBV2XsrPE6EDlw==
 
 caseless@~0.12.0:
   version "0.12.0"
@@ -3570,10 +3570,10 @@ ejs@^3.1.7:
   dependencies:
     jake "^10.8.5"
 
-electron-to-chromium@^1.5.199:
-  version "1.5.203"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.203.tgz#ef7fc2f7e1b816fa4535c861d1ec1348204142b6"
-  integrity sha512-uz4i0vLhfm6dLZWbz/iH88KNDV+ivj5+2SA+utpgjKaj9Q0iDLuwk6Idhe9BTxciHudyx6IvTvijhkPvFGUQ0g==
+electron-to-chromium@^1.5.204:
+  version "1.5.208"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.208.tgz#609c29502fd7257b4d721e3446f3ae391a0ca1b3"
+  integrity sha512-ozZyibehoe7tOhNaf16lKmljVf+3npZcJIEbJRVftVsmAg5TeA1mGS9dVCZzOwr2xT7xK15V0p7+GZqSPgkuPg==
 
 emoji-regex@^10.3.0:
   version "10.4.0"
