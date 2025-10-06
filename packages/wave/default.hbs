@@ -96,16 +96,16 @@
                         <span class="subscribe-text">Apple</span>
                     </a>
                 {{/if}}
-                {{#if @custom.google_podcasts_link}}
-                    <a href="{{@custom.google_podcasts_link}}" class="subscribe-link" target="_blank" rel="noopener noreferrer">
-                        {{> "icons/google"}}
-                        <span class="subscribe-text">Google</span>
-                    </a>
-                {{/if}}
                 {{#if @custom.spotify_link}}
                     <a href="{{@custom.spotify_link}}" class="subscribe-link" target="_blank" rel="noopener noreferrer">
                         {{> "icons/spotify"}}
                         <span class="subscribe-text">Spotify</span>
+                    </a>
+                {{/if}}
+                {{#if @custom.youtube_music_link}}
+                    <a href="{{@custom.youtube_music_link}}" class="subscribe-link" target="_blank" rel="noopener noreferrer">
+                        {{> "icons/youtube-music"}}
+                        <span class="subscribe-text">YouTube Music</span>
                     </a>
                 {{/if}}
                 <a href="{{#if @custom.rss_link}}{{@custom.rss_link}}{{else}}{{@site.url}}/rss{{/if}}" class="subscribe-link rss" target="_blank" rel="noopener noreferrer">
