@@ -43,7 +43,7 @@
             </div>
 
             <div class="gh-navigation-middle">
-                {{#get "posts" limit="10" page="2" as |secondPage|}}
+                {{#get "posts" fields="id" limit="10" page="2" as |secondPage|}}
                     {{#if secondPage}}
                         <a class="gh-navigation-link" href="/page/2">Browse archive</a>
                     {{/if}}
