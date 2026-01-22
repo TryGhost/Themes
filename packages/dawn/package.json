@@ -1,7 +1,7 @@
 {
     "name": "dawn",
     "description": "A Ghost theme",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "private": true,
     "engines": {
         "ghost": ">=5.0.0"
@@ -19,7 +19,7 @@
     ],
     "docs": "https://dawn.ghost.io/about/",
     "config": {
-        "posts_per_page": 5,
+        "posts_per_page": 20,
         "image_sizes": {
             "xs": {
                 "width": 150

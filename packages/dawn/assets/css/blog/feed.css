@@ -89,3 +89,10 @@
     transition: transform 0.2s var(--animation-base);
     transform: translateX(2rem);
 }
+
+/* Hide the year on small screens to leave only month and day visible */
+@media (max-width: 600px) {
+    .feed-calendar-year {
+        display: none;
+    }
+}
