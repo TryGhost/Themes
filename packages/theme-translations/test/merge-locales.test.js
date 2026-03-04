@@ -19,7 +19,7 @@ function setup() {
 }
 
 function teardown() {
-    fs.rmSync(tmpDir, {recursive: true});
+    fs.rmSync(tmpDir, {recursive: true, force: true});
 }
 
 function writeJSON(dir, filename, data) {
@@ -39,7 +39,7 @@ function runMerge(options = {}) {
         });
         task((err) => {
             if (err) {
-                reject(err);
+                return reject(err);
             }
             resolve();
         });
