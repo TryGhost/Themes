@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{meta_title}}</title>
+    <title>{{meta_title page=(t " (Page %)")}}</title>
     <link rel="stylesheet" href="{{asset "built/screen.css"}}">
 
     {{{block "styles"}}}
@@ -43,7 +43,7 @@
                 </nav>
             {{/if}}
             <div class="gh-powered-by">
-                <a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a>
+                {{{t "Powered by {ghostlink}" ghostlink="<a href=\"https://ghost.org/\" target=\"_blank\" rel=\"noopener\">Ghost</a>"}}}
             </div>
         </div>
     </footer>

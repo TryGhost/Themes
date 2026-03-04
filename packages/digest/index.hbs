@@ -9,7 +9,7 @@
                 {{#if description}}
                     {{description}}
                 {{else}}
-                    A collection of {{plural pagination.total empty="0 issues" singular="% issue" plural="% issues"}}
+                    {{t "A collection of"}} {{plural pagination.total empty=(t "0 issues") singular=(t "1 issue") plural=(t "% issues")}}
                 {{/if}}
             </div>
         </header>
@@ -30,7 +30,7 @@
     {{/get}}
 
     <section class="gh-section">
-        <h3 class="gh-section-title"><span>Latest</span></h3>
+        <h3 class="gh-section-title"><span>{{t "Latest"}}</span></h3>
 
         <div class="gh-feed">
             {{#match pagination.page 2}}

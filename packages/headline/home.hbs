@@ -5,9 +5,9 @@
         <section class="gh-topic gh-topic-grid">
             <h2 class="gh-topic-name">
                 {{#match pagination.pages ">" 1}}
-                    <a href="{{@site.url}}/page/2">Latest</a>
+                    <a href="{{@site.url}}/page/2">{{t "Latest"}}</a>
                 {{else}}
-                    Latest
+                    {{t "Latest"}}
                 {{/match}}
             </h2>
 
@@ -19,7 +19,7 @@
 
             <footer class="gh-topic-footer">
                 {{#match pagination.pages ">" 1}}
-                    <a class="gh-topic-link" href="{{@site.url}}/page/2">Show more {{> "icons/arrow"}}</a>
+                    <a class="gh-topic-link" href="{{@site.url}}/page/2">{{t "Show more"}} {{> "icons/arrow"}}</a>
                 {{/match}}
             </footer>
         </section>

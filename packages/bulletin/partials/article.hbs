@@ -37,7 +37,7 @@
             <div class="gh-navigation-previous">
                 {{#prev_post}}
                     <a class="gh-navigation-link" href="{{url}}">
-                        {{> icons/arrow-left}} <span class="gh-navigation-hide">Previous issue</span>
+                        {{> icons/arrow-left}} <span class="gh-navigation-hide">{{t "Previous issue"}}</span>
                     </a>
                 {{/prev_post}}
             </div>
@@ -45,7 +45,7 @@
             <div class="gh-navigation-middle">
                 {{#get "posts" fields="id" limit="10" page="2" as |secondPage|}}
                     {{#if secondPage}}
-                        <a class="gh-navigation-link" href="/page/2">Browse archive</a>
+                        <a class="gh-navigation-link" href="/page/2">{{t "Browse archive"}}</a>
                     {{/if}}
                 {{/get}}
             </div>
@@ -53,7 +53,7 @@
             <div class="gh-navigation-next">
                 {{#next_post}}
                     <a class="gh-navigation-link" href="{{url}}">
-                        <span class="gh-navigation-hide">Next issue</span> {{> icons/arrow-right}}
+                        <span class="gh-navigation-hide">{{t "Next issue"}}</span> {{> icons/arrow-right}}
                     </a>
                 {{/next_post}}
             </div>

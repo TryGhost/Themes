@@ -11,7 +11,7 @@
 
         <div class="gh-copyright">
             {{#unless footerText}}
-                {{@site.title}} &copy; {{date format="YYYY"}}. Powered by <a href="https://ghost.org/" target="_blank" rel="noopener">Ghost</a>
+                {{@site.title}} &copy; {{date format="YYYY"}}. {{{t "Powered by {ghostlink}" ghostlink="<a href=\"https://ghost.org/\" target=\"_blank\" rel=\"noopener\">Ghost</a>"}}}
             {{else}}
                 {{footerText}}
             {{/unless}}

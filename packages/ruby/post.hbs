@@ -8,9 +8,9 @@
 
         <header class="gh-article-header gh-canvas">
             <span class="gh-article-meta"{{#if primary_tag.accent_color}} style="--tag-color: {{primary_tag.accent_color}};"{{/if}}>
-                By {{authors}}
+                {{t "By"}} {{authors}}
                 {{#if primary_tag}}
-                    in
+                    {{t "in"}}
                     <a class="gh-article-tag" href="{{primary_tag.url}}">{{primary_tag.name}}</a>
                 {{/if}}
                 —

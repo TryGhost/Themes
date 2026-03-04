@@ -1,7 +1,7 @@
 <header class="gh-article-header gh-canvas">
     <div class="gh-article-meta">
         {{#is "home"}}
-            <span class="gh-article-label">Latest issue</span>
+            <span class="gh-article-label">{{t "Latest issue"}}</span>
         {{/is}}
         <time class="gh-article-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMM YYYY"}}</time>
     </div>
@@ -32,7 +32,7 @@
                 <a class="gh-navigation-link u-hover reverse" href="{{url}}">
                     <span class="u-hover-arrow">{{> icons/chevron-left}}</span>
                     <span class="u-hover-arrow">{{> icons/chevron-left}}</span>
-                    Previous<span class="gh-navigation-hide">&nbsp;issue</span>
+                    {{t "Previous"}}<span class="gh-navigation-hide">&nbsp;{{t "issue"}}</span>
                 </a>
             {{/prev_post}}
         </div>
@@ -40,7 +40,7 @@
         <div>
             {{#get "posts" fields="id" limit="10" page="2" as |secondPage|}}
                 {{#if secondPage}}
-                    <a class="gh-navigation-middle" href="/page/2"><span>Browse</span> all issues</a>
+                    <a class="gh-navigation-middle" href="/page/2">{{t "Browse all issues"}}</a>
                 {{/if}}
             {{/get}}
         </div>
@@ -48,7 +48,7 @@
         <div class="gh-navigation-next">
             {{#next_post}}
                 <a class="gh-navigation-link u-hover" href="{{url}}">
-                    Next<span class="gh-navigation-hide">&nbsp;issue</span>
+                    {{t "Next"}}<span class="gh-navigation-hide">&nbsp;{{t "issue"}}</span>
                     <span class="u-hover-arrow">{{> icons/chevron-right}}</span>
                     <span class="u-hover-arrow">{{> icons/chevron-right}}</span>
                 </a>
