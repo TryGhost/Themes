@@ -1,0 +1,11 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "packageRules": [
+        {
+            "matchPackageNames": ["@tryghost/theme-translations"],
+            "automerge": true,
+            "automergeType": "pr",
+            "schedule": ["every weekday"]
+        }
+    ]
+}

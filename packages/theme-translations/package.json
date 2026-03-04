@@ -1,0 +1,35 @@
+{
+    "name": "@tryghost/theme-translations",
+    "description": "Shared translations for Ghost themes",
+    "version": "0.0.1",
+    "license": "MIT",
+    "author": {
+        "name": "Ghost Foundation",
+        "email": "hello@ghost.org",
+        "url": "https://ghost.org"
+    },
+    "keywords": [
+        "ghost",
+        "theme",
+        "translations",
+        "locales",
+        "i18n"
+    ],
+    "files": [
+        "locales",
+        "build",
+        "renovate-config.json"
+    ],
+    "scripts": {
+        "test": "node --test test/*.test.js"
+    },
+    "publishConfig": {
+        "access": "public",
+        "provenance": true
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/TryGhost/Themes",
+        "directory": "packages/theme-translations"
+    }
+}

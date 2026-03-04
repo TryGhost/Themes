@@ -2,6 +2,9 @@
   "packages": [
     "packages/*"
   ],
+  "ignoreChanges": [
+    "packages/theme-translations/**"
+  ],
   "useNx": false,
   "version": "2.5.2",
   "npmClient": "yarn"

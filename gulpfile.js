@@ -80,7 +80,7 @@ function doJS(path, done) {
 }
 
 function main(done) {
-    const tasks = glob.sync('packages/*', {ignore: 'packages/_shared'}).map(path => {
+    const tasks = glob.sync('packages/*', {ignore: ['packages/_shared', 'packages/theme-translations']}).map(path => {
         const packageName = require(`./${path}/package.json`).name;
 
         function package(taskDone) {
@@ -201,7 +201,7 @@ function symlink(done) {
 
 function test(done) {
     const testGScan = gscanDone => {
-        glob.sync('packages/*', {ignore: 'packages/_shared'}).forEach(path => {
+        glob.sync('packages/*', {ignore: ['packages/_shared', 'packages/theme-translations']}).forEach(path => {
             exec(`gscan ${path} --colors`, (error, stdout, _stderr) => {
                 console.log(stdout);
                 if (error) process.exit(1);
