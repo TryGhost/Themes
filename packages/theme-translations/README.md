@@ -54,8 +54,8 @@ If wrapping strings, favor wrapping full sentences whenever possible, to give tr
 Poor:  `{{t "By"}} {{authors}}` // does not allow "Jamie Larson tarafından"
 Better:  `{{t "By {authors}" authors=(authors) }}`
 
-Poor:  `{{t "Previous}} <span class="desktop-only">{{t "issue"}}</span>` // does not allow "número anterior"
-Better: <span class="desktop-only">{{t "Previous issue"}}</span><span class="mobile-only">{{t "Previous"}}</span>`
+Poor: `{{t "Previous"}} <span class="desktop-only">{{t "issue"}}</span>` // does not allow "número anterior"
+Better: `<span class="desktop-only">{{t "Previous issue"}}</span><span class="mobile-only">{{t "Previous"}}</span>`
 ---
 
 ## Background/Architecture
