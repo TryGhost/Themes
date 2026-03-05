@@ -3,7 +3,7 @@
 <main id="gh-main" class="gh-main gh-canvas">
     <section class="gh-pagehead">
         <header class="gh-pagehead-content">
-            <h1 class="gh-pagehead-title">Archive</h1>
+            <h1 class="gh-pagehead-title">{{t "Archive"}}</h1>
 
             <div class="gh-pagehead-description">
                 {{#if description}}
@@ -18,7 +18,7 @@
     {{#get "posts" filter="featured:true" limit="5" as |featured|}}
         {{#if featured}}
             <section class="gh-section gh-section-featured">
-                <h3 class="gh-section-title"><span>Featured</span></h3>
+                <h3 class="gh-section-title"><span>{{t "Featured"}}</span></h3>
 
                 <div class="gh-featured">
                     {{#foreach featured}}
