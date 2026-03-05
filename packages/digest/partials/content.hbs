@@ -30,9 +30,11 @@
         <div class="gh-navigation-previous">
             {{#prev_post}}
                 <a class="gh-navigation-link u-hover reverse" href="{{url}}">
-                    <span class="u-hover-arrow">{{> icons/chevron-left}}</span>
-                    <span class="u-hover-arrow">{{> icons/chevron-left}}</span>
-                    {{t "Previous"}}<span class="gh-navigation-hide">&nbsp;{{t "issue"}}</span>
+                    <span class="gh-navigation-arrow-container">
+                        <span class="u-hover-arrow">{{> icons/chevron-left}}</span>
+                        <span class="u-hover-arrow">{{> icons/chevron-left}}</span>
+                    </span>
+                    <span class="gh-navigation-desktop-only">{{t "Previous issue"}}</span><span class="gh-navigation-mobile-only">{{t "Previous"}}</span>
                 </a>
             {{/prev_post}}
         </div>
@@ -48,9 +50,11 @@
         <div class="gh-navigation-next">
             {{#next_post}}
                 <a class="gh-navigation-link u-hover" href="{{url}}">
-                    {{t "Next"}}<span class="gh-navigation-hide">&nbsp;{{t "issue"}}</span>
-                    <span class="u-hover-arrow">{{> icons/chevron-right}}</span>
-                    <span class="u-hover-arrow">{{> icons/chevron-right}}</span>
+                    <span class="gh-navigation-desktop-only">{{t "Next issue"}}</span><span class="gh-navigation-mobile-only">{{t "Next"}}</span>
+                    <span class="gh-navigation-arrow-container">
+                        <span class="u-hover-arrow">{{> icons/chevron-right}}</span>
+                        <span class="u-hover-arrow">{{> icons/chevron-right}}</span> 
+                    </span> 
                 </a>
             {{/next_post}}
         </div>

@@ -414,6 +414,11 @@ body:not(.home-template) .gh-article-image {
     transform: translateX(0);
 }
 
+.gh-navigation-arrow-container {
+    position: relative;
+    display: inline-flex;
+}
+
 .u-hover svg {
     width: 17px;
     height: 17px;
