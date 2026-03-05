@@ -16,8 +16,8 @@ Ghost themes.
 3. Open a PR
 
 ### Adding a new language
-1. Identify the appropriate locale code.  Because there's one locale settings that impacts translations ofthe Ghost core, apps, and themes,
-you should match [https://github.com/TryGhost/Ghost/blob/main/ghost/i18n/lib/locale-data.json](the Ghost core options) whenever possible. 
+1. Identify the appropriate locale code. Because there's one locale setting that impacts translations of the Ghost core, apps, and themes,
+you should match [the Ghost core options](https://github.com/TryGhost/Ghost/blob/main/ghost/i18n/lib/locale-data.json) whenever possible. 
 2. Copy `locales/en.json` to a new file named with the language code (e.g. `locales/de.json`)
 3. Translate the values — leave the keys as-is, they match the English strings used in templates
 4. Open a PR
