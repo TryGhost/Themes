@@ -9,9 +9,9 @@
                 {{#if description}}
                     {{description}}
                 {{else}}
-                {{plural ../pagination.total 
+                {{plural pagination.total 
                     empty=(t "A collection of 0 issues") singular=(t "A collection of 1 issue") 
-                    plural=(t "A collection of {numberOfIssues} issues" numberOfIssues=../pagination.total) }}
+                    plural=(t "A collection of {numberOfIssues} issues" numberOfIssues=pagination.total) }}
                 {{/if}}
             </div>
         </header>
