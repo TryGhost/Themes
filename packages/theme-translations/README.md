@@ -52,10 +52,13 @@ Themes/packages.  Do not submit PRs to fix string wrapping individual theme repo
 If wrapping strings, favor wrapping full sentences whenever possible, to give translators maximum flexibility to match the appropriate word order in their language.
 
 Poor:  `{{t "By"}} {{authors}}` // does not allow "Jamie Larson tarafından"
+
 Better:  `{{t "By {authors}" authors=(authors) }}`
 
 Poor: `{{t "Previous"}} <span class="desktop-only">{{t "issue"}}</span>` // does not allow "número anterior"
+
 Better: `<span class="desktop-only">{{t "Previous issue"}}</span><span class="mobile-only">{{t "Previous"}}</span>`
+
 ---
 
 ## Background/Architecture
