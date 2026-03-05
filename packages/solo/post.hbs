@@ -52,7 +52,7 @@
 
                 {{#if comments}}
                     <div class="gh-comments gh-canvas">
-                        <h2 class="gh-comments-title">{{comment_count empty="" single="comment" plural="comments"}}</h2>
+                        <h2 class="gh-comments-title">{{comment_count empty="" singular=(t "comment") plural=(t "comments")}}</h2>
                         {{comments title="" count=false}}
                     </div>
                 {{/if}}
@@ -61,7 +61,7 @@
                     <nav class="gh-navigation">
                         <div class="gh-navigation-previous">
                             {{#prev_post}}
-                                <a class="gh-navigation-link" href="{{url}}">← Previous</a>
+                                <a class="gh-navigation-link" href="{{url}}">{{t "← Previous"}}</a>
                             {{/prev_post}}
                         </div>
 
@@ -69,7 +69,7 @@
 
                         <div class="gh-navigation-next">
                             {{#next_post}}
-                                <a class="gh-navigation-link" href="{{url}}">Next →</a>
+                                <a class="gh-navigation-link" href="{{url}}">{{t "Next →"}}</a>
                             {{/next_post}}
                         </div>
                     </nav>

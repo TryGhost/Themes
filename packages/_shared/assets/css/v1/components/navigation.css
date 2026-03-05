@@ -32,8 +32,17 @@
     margin-left: 0.4rem;
 }
 
+.gh-navigation-mobile-only {
+    display: none;
+}
+.gh-navigation-desktop-only {
+    display: inline;
+}
 @media (max-width: 767px) {
-    .gh-navigation-hide {
+    .gh-navigation-hide, .gh-navigation-desktop-only {
         display: none;
+    }
+    .gh-navigation-mobile-only {
+        display: inline;
     }
 }

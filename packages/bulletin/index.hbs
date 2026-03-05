@@ -3,13 +3,15 @@
 <main id="gh-main" class="gh-main gh-canvas">
     <section class="gh-pagehead">
         <header class="gh-pagehead-content">
-            <h1 class="gh-pagehead-title">Archive</h1>
+            <h1 class="gh-pagehead-title">{{t "Archive"}}</h1>
 
             <div class="gh-pagehead-description">
                 {{#if description}}
                     {{description}}
                 {{else}}
-                    A collection of {{plural pagination.total empty="0 issues" singular="% issue" plural="% issues"}}
+                {{plural pagination.total 
+                    empty=(t "A collection of 0 issues") singular=(t "A collection of 1 issue") 
+                    plural=(t "A collection of {numberOfIssues} issues" numberOfIssues=pagination.total) }}
                 {{/if}}
             </div>
         </header>
