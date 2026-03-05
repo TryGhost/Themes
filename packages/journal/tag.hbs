@@ -4,7 +4,7 @@
     {{#tag}}
         <section class="gh-pagehead">
             <header class="gh-pagehead-content">
-                <div class="gh-tag-label">Topic</div>
+                <div class="gh-tag-label">{{t "Topic"}}</div>
 
                 <h1 class="gh-tag-name gh-pagehead-title">{{name}}</h1>
 
@@ -12,7 +12,7 @@
                     {{#if description}}
                         {{description}}
                     {{else}}
-                        A collection of {{plural ../pagination.total empty="0 issues" singular="% issue" plural="% issues"}}
+                        {{t "A collection of"}} {{plural ../pagination.total empty=(t "0 issues") singular=(t "1 issue") plural=(t "% issues")}}
                     {{/if}}
                 </div>
             </header>
@@ -25,5 +25,5 @@
         {{/foreach}}
     </div>
 
-    <button class="gh-loadmore gh-btn">Load more issues</button>
+    <button class="gh-loadmore gh-btn">{{t "Load more issues"}}</button>
 </main>
