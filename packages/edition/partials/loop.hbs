@@ -40,7 +40,7 @@
             </div>
             {{#if reading_time}}
                 <div class="feed-length">
-                    {{reading_time}}
+                    {{reading_time minute=(t "1 min read") minutes=(t "% min read")}}
                 </div>
             {{/if}}
             {{#if @site.comments_enabled}}
