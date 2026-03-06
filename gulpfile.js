@@ -287,6 +287,9 @@ function zipper(done) {
 }
 
 function translations(done) {
+    if (!argv.theme) {
+        handleError(done('Required parameter [--theme] missing!'));
+    }
     doTranslations(`./packages/${argv.theme}`, done);
 }
 
