@@ -81,6 +81,14 @@ function doJS(path, done) {
     ], handleError(done));
 }
 
+function doTranslations(path, done) {
+    mergeLocales({
+        shared: './packages/theme-translations/locales',
+        local: `./${path}/locales-local`,
+        output: `./${path}/locales`
+    })(done);
+}
+
 function main(done) {
     const tasks = glob.sync('packages/*', {ignore: ['packages/_shared', 'packages/theme-translations']}).map(path => {
         const packageName = require(`./${path}/package.json`).name;
@@ -104,9 +112,12 @@ function main(done) {
             const jsWatcher = () => watch(`${path}/assets/js/**/*.js`, js);
             jsWatcher.displayName = `jsWatcher_${packageName}`;
 
-            const localTranslationsWatcher = () => watch(`${path}/locales-local/*.json`, translations);
+            const trans = (done) => doTranslations(path, done);
+            trans.displayName = `translations_${packageName}`;
+
+            const localTranslationsWatcher = () => watch(`${path}/locales-local/*.json`, trans);
             const watcher = parallel(hbsWatcher, cssWatcher, jsWatcher, localTranslationsWatcher);
-            const build = series(css, js, translations);
+            const build = series(css, js, trans);
 
             series(build, serve, watcher)();
             taskDone();
@@ -184,7 +195,12 @@ function main(done) {
         });
     }
 
-    const translationsWatcher = () => watch('packages/theme-translations/locales/*.json', translations);
+    function sharedTranslations(done) {
+        glob.sync('packages/*', {ignore: ['packages/_shared', 'packages/theme-translations']}).forEach(path => {
+            doTranslations(path, done);
+        });
+    }
+    const translationsWatcher = () => watch('packages/theme-translations/locales/*.json', sharedTranslations);
 
     const sharedPartialWatcher = () => watch('packages/_shared/partials/*.hbs', copyPartials);
 
@@ -271,11 +287,7 @@ function zipper(done) {
 }
 
 function translations(done) {
-    mergeLocales({
-        shared: `./packages/theme-translations/locales`,
-        local: `./packages/${argv.theme}/locales-local`,
-        output: `./packages/${argv.theme}/locales`
-    })(done);
+    doTranslations(`./packages/${argv.theme}`, done);
 }
 
 // re-build all themes
@@ -291,13 +303,7 @@ function buildAll(done) {
         const js = (cbDone) => doJS(themePath, cbDone);
         js.displayName = `js_${packageName}`;
 
-        const trans = (cbDone) => {
-            mergeLocales({
-                shared: './packages/theme-translations/locales',
-                local: `./${themePath}/locales-local`,
-                output: `./${themePath}/locales`
-            })(cbDone);
-        };
+        const trans = (cbDone) => doTranslations(themePath, cbDone);
         trans.displayName = `translations_${packageName}`;
 
         const themeBuild = series(css, js, trans);
