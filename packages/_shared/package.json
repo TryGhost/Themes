@@ -1,7 +1,7 @@
 {
     "name": "@tryghost/shared-theme-assets",
     "description": "Shared theme assets for official Ghost themes",
-    "version": "2.5.0",
+    "version": "2.5.2",
     "license": "MIT",
     "author": {
         "name": "Ghost Foundation",

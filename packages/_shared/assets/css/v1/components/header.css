@@ -284,16 +284,6 @@ Search                         LOGO                    Login Subscribe
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-.is-head-transparent #announcement-bar-root {
-    position: absolute;
-    right: 0;
-    left: 0;
-}
-
-.is-head-transparent #announcement-bar-root:not(:empty) + :is(.site, .gh-site) .gh-head {
-    margin-top: 48px;
-}
-
 /* Dark header
 /* ---------------------------------------------------------- */
 

@@ -277,8 +277,9 @@ body:not(.home-template) .gh-article-image {
     margin-top: 24px;
 }
 
-.no-pagination .gh-article-footer {
-    display: none;
+.no-pagination .gh-article-footer .gh-navigation-middle {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .gh-navigation {
@@ -365,13 +366,8 @@ body:not(.home-template) .gh-article-image {
     margin-left: 2rem;
 }
 
-.gh-author-twitter,
-.gh-author-facebook {
+.gh-author-social-link {
     line-height: 0;
-}
-
-.gh-author-facebook {
-    margin-left: 1.2rem;
 }
 
 .u-hover,
@@ -416,6 +412,11 @@ body:not(.home-template) .gh-article-image {
 .u-hover:hover .u-hover-arrow:nth-of-type(2) {
     opacity: 1;
     transform: translateX(0);
+}
+
+.gh-navigation-arrow-container {
+    position: relative;
+    display: inline-flex;
 }
 
 .u-hover svg {

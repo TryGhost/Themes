@@ -23,16 +23,6 @@ h6 {
     padding: 0;
 }
 
-.home-template #announcement-bar-root {
-    position: absolute;
-    right: 0;
-    left: 0;
-}
-
-#announcement-bar-root:not(:empty) + .gh-site .gh-home {
-    padding-top: 48px;
-}
-
 .gh-home {
     display: grid;
     grid-template-columns: 2fr 3fr;
@@ -311,13 +301,8 @@ h6 {
     margin-left: 1.6rem;
 }
 
-.gh-author-twitter,
-.gh-author-facebook {
+.gh-author-social-link {
     line-height: 0;
-}
-
-.gh-author-facebook {
-    margin-left: 1.2rem;
 }
 
 .gh-card-link {

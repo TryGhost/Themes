@@ -3,7 +3,7 @@ const pump = require('pump');
 const fs = require('fs');
 const glob = require('glob');
 const order = require('ordered-read-streams');
-const argv = require('yargs').argv;
+const argv = require('yargs/yargs')(process.argv.slice(2)).argv;
 const exec = require('child_process').exec;
 
 // gulp plugins and utils
@@ -80,7 +80,7 @@ function doJS(path, done) {
 }
 
 function main(done) {
-    const tasks = glob.sync('packages/*', {ignore: 'packages/_shared'}).map(path => {
+    const tasks = glob.sync('packages/*', {ignore: ['packages/_shared', 'packages/theme-translations']}).map(path => {
         const packageName = require(`./${path}/package.json`).name;
 
         function package(taskDone) {
@@ -130,7 +130,7 @@ function main(done) {
     const sharedCSSWatcher_v1 = () => watch('packages/_shared/assets/css/v1/**/*.css', sharedCSS_v1);
 
     function sharedCSS_v2(done) {
-        glob.sync('packages/*', {ignore: ['packages/_shared', ...oldPackages]}).map(path => {
+        glob.sync('packages/*', {ignore: ['packages/_shared', 'packages/theme-translations', ...oldPackages]}).map(path => {
             pump([
                 src(`${path}/assets/css/screen.css`, {sourcemaps: true}),
                 postcss([
@@ -159,7 +159,7 @@ function main(done) {
     const sharedJSWatcher_v1 = () => watch('packages/_shared/assets/js/v1/**/*.js', sharedJS_v1);
 
     function sharedJS_v2(done) {
-        glob.sync('packages/*', {ignore: ['packages/_shared', ...oldPackages]}).map(path => {
+        glob.sync('packages/*', {ignore: ['packages/_shared', 'packages/theme-translations', ...oldPackages]}).map(path => {
             pump([
                 order(getJsFiles('v2', path), {sourcemaps: true}),
                 concat('main.min.js'),
@@ -172,7 +172,7 @@ function main(done) {
     const sharedJSWatcher_v2 = () => watch('packages/_shared/assets/js/v2/**/*.js', sharedJS_v2);
 
     function copyPartials(done) {
-        glob.sync('packages/*', {ignore: ['packages/_shared', ...oldPackages]}).map(path => {
+        glob.sync('packages/*', {ignore: ['packages/_shared', 'packages/theme-translations', ...oldPackages]}).map(path => {
             pump([
                 src('packages/_shared/partials/*'),
                 dest(`${path}/partials/components/`),
@@ -201,7 +201,7 @@ function symlink(done) {
 
 function test(done) {
     const testGScan = gscanDone => {
-        glob.sync('packages/*', {ignore: 'packages/_shared'}).forEach(path => {
+        glob.sync('packages/*', {ignore: ['packages/_shared', 'packages/theme-translations']}).forEach(path => {
             exec(`gscan ${path} --colors`, (error, stdout, _stderr) => {
                 console.log(stdout);
                 if (error) process.exit(1);

@@ -42,6 +42,10 @@ To create an installable theme zip file in `packages/<theme-name>/dist/`:
 yarn zip --theme <theme-name>
 ```
 
+## Theme translations
+
+Please see the @Tryghost/Themes/theme-translations/README.md for how to edit or contribute translations.
+
 ## Copyright & License
 
-Copyright (c) 2013-2025 Ghost Foundation - Released under the [MIT license](LICENSE).
+Copyright (c) 2013-2026 Ghost Foundation - Released under the [MIT license](LICENSE).

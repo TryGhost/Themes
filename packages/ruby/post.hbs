@@ -8,10 +8,9 @@
 
         <header class="gh-article-header gh-canvas">
             <span class="gh-article-meta"{{#if primary_tag.accent_color}} style="--tag-color: {{primary_tag.accent_color}};"{{/if}}>
-                By {{authors}}
+            {{{t "By {authors}" authors=(authors) }}}
                 {{#if primary_tag}}
-                    in
-                    <a class="gh-article-tag" href="{{primary_tag.url}}">{{primary_tag.name}}</a>
+                    {{{t "in {primaryTag}" primaryTag=(concat "<a class=\"gh-article-tag\" href=\"" primary_tag.url "\">" primary_tag.name "</a>")}}}
                 {{/if}}
                 —
                 <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMM YYYY"}}</time>

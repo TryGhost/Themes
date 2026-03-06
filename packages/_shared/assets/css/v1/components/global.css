@@ -119,6 +119,10 @@ iframe {
     border: 0;
 }
 
+sub, sup {
+    line-height: 1;
+}
+
 @media (max-width: 767px) {
     h2 {
         font-size: 2.4rem;

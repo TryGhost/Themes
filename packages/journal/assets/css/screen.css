@@ -563,11 +563,8 @@
 
 .gh-author-social {
     display: flex;
+    gap: 0.8rem;
     margin-top: 2.4rem;
-}
-
-.gh-author-facebook {
-    margin-left: 0.8rem;
 }
 
 @media (max-width: 767px) {

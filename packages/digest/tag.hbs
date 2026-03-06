@@ -10,18 +10,17 @@
                     {{#if description}}
                         {{description}}
                     {{else}}
-                        A collection of {{plural ../pagination.total empty="0 issues" singular="% issue" plural="% issues"}}
+                        {{plural ../pagination.total 
+                            empty=(t "A collection of 0 issues") singular=(t "A collection of 1 issue") 
+                            plural=(t "A collection of {numberOfIssues} issues" numberOfIssues=../pagination.total) }}
                     {{/if}}
                 </div>
             </header>
         </section>
-
-        <div class="gh-feed">
-            {{#get "posts" filter="tags:{{slug}}" limit="all"}}
-                {{#foreach posts}}
-                    {{> loop}}
-                {{/foreach}}
-            {{/get}}
-        </div>
     {{/tag}}
+    <div class="gh-feed">
+        {{#foreach posts}}
+            {{> loop}}
+        {{/foreach}}
+    </div>
 </main>

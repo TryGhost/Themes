@@ -53,6 +53,10 @@ a:hover {
     opacity: 0.8;
 }
 
+sub, sup {
+    line-height: 1;
+}
+
 :is(h1, h2, h3, h4, h5, h6) {
     font-family: var(--gh-font-heading, var(--font-sans));
     line-height: 1.2;

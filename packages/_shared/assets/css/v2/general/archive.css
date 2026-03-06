@@ -55,7 +55,14 @@
 }
 
 .gh-archive-social a[href*="facebook"],
-.gh-archive-social a[href*="twitter"] {
+.gh-archive-social a[href*="twitter"],
+.gh-archive-social a[href*="instagram"],
+.gh-archive-social a[href*="youtube"],
+.gh-archive-social a[href*="linkedin"],
+.gh-archive-social a[href*="bluesky"],
+.gh-archive-social a[href*="threads"],
+.gh-archive-social a[href*="mastodon"],
+.gh-archive-social a[href*="tiktok"] {
     font-size: 0;
 }
 
