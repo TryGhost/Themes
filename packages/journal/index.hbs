@@ -16,7 +16,7 @@
                         <p class="gh-article-excerpt">{{excerpt}}</p>
 
                         <footer class="gh-card-meta">
-                            <span class="gh-card-duration">{{reading_time}}</span>
+                            <span class="gh-card-duration">{{reading_time minute=(t "1 min read") minutes=(t "% min read")}}</span>
                             {{#if @site.comments_enabled}}
                                 {{comment_count class="gh-card-comments"}}
                             {{/if}}
