@@ -19,6 +19,8 @@ const easyimport = require('postcss-easy-import');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 
+const {mergeLocales} = require('./packages/theme-translations/build');
+
 const oldPackages = ['packages/alto', 'packages/bulletin', 'packages/dawn', 'packages/digest', 'packages/dope', 'packages/ease', 'packages/edge', 'packages/edition', 'packages/headline', 'packages/journal', 'packages/london', 'packages/ruby', 'packages/solo', 'packages/wave'];
 
 function serve(done) {
@@ -79,6 +81,14 @@ function doJS(path, done) {
     ], handleError(done));
 }
 
+function doTranslations(path, done) {
+    mergeLocales({
+        shared: './packages/theme-translations/locales',
+        local: `./${path}/locales-local`,
+        output: `./${path}/locales`
+    })(done);
+}
+
 function main(done) {
     const tasks = glob.sync('packages/*', {ignore: ['packages/_shared', 'packages/theme-translations']}).map(path => {
         const packageName = require(`./${path}/package.json`).name;
@@ -102,8 +112,12 @@ function main(done) {
             const jsWatcher = () => watch(`${path}/assets/js/**/*.js`, js);
             jsWatcher.displayName = `jsWatcher_${packageName}`;
 
-            const watcher = parallel(hbsWatcher, cssWatcher, jsWatcher);
-            const build = series(css, js);
+            const trans = (done) => doTranslations(path, done);
+            trans.displayName = `translations_${packageName}`;
+
+            const localTranslationsWatcher = () => watch(`${path}/locales-local/*.json`, trans);
+            const watcher = parallel(hbsWatcher, cssWatcher, jsWatcher, localTranslationsWatcher);
+            const build = series(css, js, trans);
 
             series(build, serve, watcher)();
             taskDone();
@@ -180,9 +194,21 @@ function main(done) {
             ], handleError(done));
         });
     }
+
+    function sharedTranslations(done) {
+        const themes = glob.sync('packages/*', {ignore: ['packages/_shared', 'packages/theme-translations']});
+        const tasks = themes.map(p => {
+            const t = (cb) => doTranslations(p, cb);
+            t.displayName = `sharedTrans_${p}`;
+            return t;
+        });
+        return parallel(...tasks)(done);
+    }
+    const translationsWatcher = () => watch('packages/theme-translations/locales/*.json', sharedTranslations);
+
     const sharedPartialWatcher = () => watch('packages/_shared/partials/*.hbs', copyPartials);
 
-    const sharedWatcher = parallel(sharedCSSWatcher_v1, sharedCSSWatcher_v2, sharedJSWatcher_v1, sharedJSWatcher_v2, sharedPartialWatcher);
+    const sharedWatcher = parallel(sharedCSSWatcher_v1, sharedCSSWatcher_v2, sharedJSWatcher_v1, sharedJSWatcher_v2, sharedPartialWatcher, translationsWatcher);
 
     return series(parallel(...tasks), copyPartials, sharedWatcher, tasksDone => {
         tasksDone();
@@ -243,7 +269,7 @@ function js(done) {
     doJS(`./packages/${argv.theme}`, done);
 }
 
-const build = series(css, js);
+const build = series(css, js, translations);
 
 function zipper(done) {
     if (!argv.theme) {
@@ -264,6 +290,64 @@ function zipper(done) {
     ], handleError(done));
 }
 
+function translations(done) {
+    if (!argv.theme) {
+        handleError(done('Required parameter [--theme] missing!'));
+        return;
+    }
+    doTranslations(`./packages/${argv.theme}`, done);
+}
+
+// re-build all themes
+function buildAll(done) {
+    const themes = glob.sync('packages/*', {ignore: ['packages/_shared', 'packages/theme-translations']});
+
+    const tasks = themes.map(themePath => {
+        const packageName = require(`./${themePath}/package.json`).name;
+
+        const css = (cbDone) => doCSS(themePath, cbDone);
+        css.displayName = `css_${packageName}`;
+
+        const js = (cbDone) => doJS(themePath, cbDone);
+        js.displayName = `js_${packageName}`;
+
+        const trans = (cbDone) => doTranslations(themePath, cbDone);
+        trans.displayName = `translations_${packageName}`;
+
+        const themeBuild = series(css, js, trans);
+        themeBuild.displayName = `build_${packageName}`;
+        return themeBuild;
+    });
+
+    function copyPartials(cbDone) {
+        const v2Themes = themes.filter(t => !oldPackages.includes(t));
+        let pending = v2Themes.length;
+        let called = false;
+        if (pending === 0) return cbDone();
+
+        v2Themes.forEach(themePath => {
+            pump([
+                src('packages/_shared/partials/*'),
+                dest(`${themePath}/partials/components/`)
+            ], (err) => {
+                if (called) return;
+                if (err) {
+                    called = true;
+                    return cbDone(err);
+                }
+                if (--pending === 0) {
+                    called = true;
+                    cbDone();
+                }
+            });
+        });
+    }
+
+    return series(copyPartials, parallel(...tasks))(done);
+}
+
+exports.buildAll = buildAll;
+exports.translations = translations;
 exports.symlink = symlink;
 exports.test = test;
 exports.testCI = testCI;

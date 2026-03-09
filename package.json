@@ -10,7 +10,7 @@
         "test": "gulp test",
         "test:ci": "gulp testCI",
         "zip": "gulp zip",
-        "ship": "lerna publish --no-private"
+        "ship": "gulp buildAll && lerna publish --no-private"
     },
     "devDependencies": {
         "autoprefixer": "10.4.27",
