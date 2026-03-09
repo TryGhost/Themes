@@ -42,9 +42,38 @@ To create an installable theme zip file in `packages/<theme-name>/dist/`:
 yarn zip --theme <theme-name>
 ```
 
-## Theme translations
+## Publishing & CI
 
-Please see the @Tryghost/Themes/theme-translations/README.md for how to edit or contribute translations.
+This monorepo contains three types of packages, each with a different shipping mechanism:
+
+### Themes (e.g. `packages/taste/`, `packages/dawn/`, ...)
+
+Each theme has its own CI workflow (`.github/workflows/<theme>.yml`). On push to `main`, the workflow runs tests, deploys the theme to its Ghost demo site via `action-deploy-theme`, and pushes to its standalone subtree repo (e.g. `TryGhost/Taste`). Themes are marked `"private": true` and are not published to npm.
+
+### `@tryghost/shared-theme-assets` (`packages/_shared/`)
+
+Shared CSS, JS, and Handlebars partials used by all themes. Published to npm so themes can pin a version via `devDependencies`.
+
+- **Version bumps happen via `yarn ship:shared`**, which runs `npm version patch` on `_shared`. For minor or major bumps, run `npm --prefix packages/_shared version minor` (or `major`) instead.
+- On push to `main`, CI (`.github/workflows/shared-theme-assets.yml`) compares the local version against what's on npm. If the version is newer, it publishes to npm with provenance. If the version hasn't changed, CI skips publishing.
+- Renovate will later open PRs to bump the `@tryghost/shared-theme-assets` devDep in each theme.
+
+### `@tryghost/theme-translations` (`packages/theme-translations/`)
+
+Translation files for all themes. Published to npm.
+
+- **Version bumps are automatic.** On every push to `main` that touches `packages/theme-translations/`, CI (`.github/workflows/theme-translations.yml`) runs `npm version patch`, publishes to npm, and commits the version bump back to the repo.
+- See `packages/theme-translations/README.md` for how to edit or contribute translations.
+
+### Local commands
+
+```bash
+yarn dev            # run development server with live reload
+yarn build          # build all themes
+yarn ship:shared    # bump _shared version (patch)
+yarn test           # run tests locally
+yarn zip --theme <name>  # create an installable .zip for a theme
+```
 
 ## Copyright & License
 
