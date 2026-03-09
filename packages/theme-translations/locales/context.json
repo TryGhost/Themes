@@ -32,6 +32,7 @@
     "comments": "_shared/article.hbs, episode/partials/components/article.hbs, solo/post.hbs, taste/partials/components/article.hbs",
     "Comments": "alto/post.hbs, headline/partials/comments.hbs",
     "Don’t miss out on the latest issues. Sign up now to get access to the library of members-only issues.": "bulletin/home.hbs, journal/default.hbs",
+    "Email sent": "source/partials/email-subscription.hbs",
     "Enter your email": "casper/post.hbs",
     "Featured": "digest/index.hbs, journal/index.hbs, source/partials/components/featured.hbs",
     "Go to the front page →": "casper/error-404.hbs, casper/error.hbs",
