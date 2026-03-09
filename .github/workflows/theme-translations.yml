@@ -46,16 +46,17 @@ jobs:
       - name: Bump version
         working-directory: packages/theme-translations
         run: npm version patch --no-git-tag-version
+      - name: Publish to npm
+        working-directory: packages/theme-translations
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          npm view "@tryghost/theme-translations@${VERSION}" version 2>/dev/null && echo "v${VERSION} already published, skipping" || npm publish --provenance
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Commit version bump
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           VERSION=$(node -p "require('./packages/theme-translations/package.json').version")
           git add packages/theme-translations/package.json
-          git commit -m "chore(theme-translations): bump to v${VERSION}"
-          git push
-      - name: Publish to npm
-        working-directory: packages/theme-translations
-        run: npm publish --provenance
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          git diff --staged --quiet && echo "Version already committed, skipping" || (git commit -m "chore(theme-translations): bump to v${VERSION}" && git pull --rebase && git push)
