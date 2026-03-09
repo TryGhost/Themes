@@ -322,6 +322,7 @@ function buildAll(done) {
     function copyPartials(cbDone) {
         const v2Themes = themes.filter(t => !oldPackages.includes(t));
         let pending = v2Themes.length;
+        let called = false;
         if (pending === 0) return cbDone();
 
         v2Themes.forEach(themePath => {
@@ -329,8 +330,15 @@ function buildAll(done) {
                 src('packages/_shared/partials/*'),
                 dest(`${themePath}/partials/components/`)
             ], (err) => {
-                if (err) return cbDone(err);
-                if (--pending === 0) cbDone();
+                if (called) return;
+                if (err) {
+                    called = true;
+                    return cbDone(err);
+                }
+                if (--pending === 0) {
+                    called = true;
+                    cbDone();
+                }
             });
         });
     }
