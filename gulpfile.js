@@ -23,6 +23,14 @@ const {mergeLocales} = require('./packages/theme-translations/build');
 
 const oldPackages = ['packages/alto', 'packages/bulletin', 'packages/dawn', 'packages/digest', 'packages/dope', 'packages/ease', 'packages/edge', 'packages/edition', 'packages/headline', 'packages/journal', 'packages/london', 'packages/ruby', 'packages/solo', 'packages/wave'];
 
+function getThemePaths() {
+    return glob.sync('packages/*', {ignore: ['packages/_shared', 'packages/theme-translations']});
+}
+
+function getV2ThemePaths() {
+    return getThemePaths().filter(p => !oldPackages.includes(p));
+}
+
 function serve(done) {
     livereload.listen();
     done();
@@ -89,19 +97,44 @@ function doTranslations(path, done) {
     })(done);
 }
 
+function buildTasksForTheme(themePath) {
+    const packageName = require(`./${themePath}/package.json`).name;
+
+    const css = (cb) => doCSS(themePath, cb);
+    css.displayName = `css_${packageName}`;
+
+    const js = (cb) => doJS(themePath, cb);
+    js.displayName = `js_${packageName}`;
+
+    const trans = (cb) => doTranslations(themePath, cb);
+    trans.displayName = `translations_${packageName}`;
+
+    return {packageName, css, js, trans};
+}
+
+function doCopyPartials(paths, useLivereload, done) {
+    if (paths.length === 0) return done();
+
+    const tasks = paths.map(themePath => {
+        const streams = [
+            src('packages/_shared/partials/*'),
+            dest(`${themePath}/partials/components/`)
+        ];
+        if (useLivereload) streams.push(livereload());
+        const t = (cb) => pump(streams, handleError(cb));
+        t.displayName = `copyPartials_${themePath}`;
+        return t;
+    });
+    return parallel(...tasks)(done);
+}
+
 function main(done) {
-    const tasks = glob.sync('packages/*', {ignore: ['packages/_shared', 'packages/theme-translations']}).map(path => {
-        const packageName = require(`./${path}/package.json`).name;
+    const tasks = getThemePaths().map(path => {
+        const {packageName, css, js, trans} = buildTasksForTheme(path);
 
         function package(taskDone) {
             const hbs = (done) => doHBS(path, done);
             hbs.displayName = `hbs_${packageName}`;
-
-            const css = (done) => doCSS(path, done);
-            css.displayName = `css_${packageName}`;
-
-            const js = (done) => doJS(path, done);
-            js.displayName = `js_${packageName}`;
 
             const hbsWatcher = () => watch([`${path}/*.hbs`, `${path}/partials/**/*.hbs`], hbs);
             hbsWatcher.displayName = `hbsWatcher_${packageName}`;
@@ -111,9 +144,6 @@ function main(done) {
 
             const jsWatcher = () => watch(`${path}/assets/js/**/*.js`, js);
             jsWatcher.displayName = `jsWatcher_${packageName}`;
-
-            const trans = (done) => doTranslations(path, done);
-            trans.displayName = `translations_${packageName}`;
 
             const localTranslationsWatcher = () => watch(`${path}/locales-local/*.json`, trans);
             const watcher = parallel(hbsWatcher, cssWatcher, jsWatcher, localTranslationsWatcher);
@@ -128,8 +158,8 @@ function main(done) {
     });
 
     function sharedCSS_v1(done) {
-        oldPackages.map(path => {
-            pump([
+        const tasks = oldPackages.map(path => {
+            const t = (cb) => pump([
                 src(`${path}/assets/css/screen.css`, {sourcemaps: true}),
                 postcss([
                     easyimport,
@@ -138,14 +168,17 @@ function main(done) {
                 ]),
                 dest(`${path}/assets/built/`, {sourcemaps: '.'}),
                 livereload()
-            ], handleError(done));
+            ], handleError(cb));
+            t.displayName = `sharedCSS_v1_${path}`;
+            return t;
         });
+        return parallel(...tasks)(done);
     }
     const sharedCSSWatcher_v1 = () => watch('packages/_shared/assets/css/v1/**/*.css', sharedCSS_v1);
 
     function sharedCSS_v2(done) {
-        glob.sync('packages/*', {ignore: ['packages/_shared', 'packages/theme-translations', ...oldPackages]}).map(path => {
-            pump([
+        const tasks = getV2ThemePaths().map(path => {
+            const t = (cb) => pump([
                 src(`${path}/assets/css/screen.css`, {sourcemaps: true}),
                 postcss([
                     easyimport,
@@ -154,49 +187,50 @@ function main(done) {
                 ]),
                 dest(`${path}/assets/built/`, {sourcemaps: '.'}),
                 livereload()
-            ], handleError(done));
+            ], handleError(cb));
+            t.displayName = `sharedCSS_v2_${path}`;
+            return t;
         });
+        return parallel(...tasks)(done);
     }
     const sharedCSSWatcher_v2 = () => watch('packages/_shared/assets/css/v2/**/*.css', sharedCSS_v2);
 
     function sharedJS_v1(done) {
-        oldPackages.map(path => {
-            pump([
+        const tasks = oldPackages.map(path => {
+            const t = (cb) => pump([
                 order(getJsFiles('v1', path), {sourcemaps: true}),
                 concat('main.min.js'),
                 uglify(),
                 dest(`${path}/assets/built/`, {sourcemaps: '.'}),
                 livereload()
-            ], handleError(done));
+            ], handleError(cb));
+            t.displayName = `sharedJS_v1_${path}`;
+            return t;
         });
+        return parallel(...tasks)(done);
     }
     const sharedJSWatcher_v1 = () => watch('packages/_shared/assets/js/v1/**/*.js', sharedJS_v1);
 
     function sharedJS_v2(done) {
-        glob.sync('packages/*', {ignore: ['packages/_shared', 'packages/theme-translations', ...oldPackages]}).map(path => {
-            pump([
+        const tasks = getV2ThemePaths().map(path => {
+            const t = (cb) => pump([
                 order(getJsFiles('v2', path), {sourcemaps: true}),
                 concat('main.min.js'),
                 uglify(),
                 dest(`${path}/assets/built/`, {sourcemaps: '.'}),
                 livereload()
-            ], handleError(done));
+            ], handleError(cb));
+            t.displayName = `sharedJS_v2_${path}`;
+            return t;
         });
+        return parallel(...tasks)(done);
     }
     const sharedJSWatcher_v2 = () => watch('packages/_shared/assets/js/v2/**/*.js', sharedJS_v2);
 
-    function copyPartials(done) {
-        glob.sync('packages/*', {ignore: ['packages/_shared', 'packages/theme-translations', ...oldPackages]}).map(path => {
-            pump([
-                src('packages/_shared/partials/*'),
-                dest(`${path}/partials/components/`),
-                livereload()
-            ], handleError(done));
-        });
-    }
+    const copyPartials = (done) => doCopyPartials(getV2ThemePaths(), true, done);
 
     function sharedTranslations(done) {
-        const themes = glob.sync('packages/*', {ignore: ['packages/_shared', 'packages/theme-translations']});
+        const themes = getThemePaths();
         const tasks = themes.map(p => {
             const t = (cb) => doTranslations(p, cb);
             t.displayName = `sharedTrans_${p}`;
@@ -219,6 +253,7 @@ function main(done) {
 function symlink(done) {
     if (!argv.theme || !argv.site) {
         handleError(done('Required parameters [--theme, --site] missing!'));
+        return;
     }
 
     exec(`ln -sfn ${__dirname}/packages/${argv.theme} ${argv.site}/content/themes`);
@@ -227,7 +262,7 @@ function symlink(done) {
 
 function test(done) {
     const testGScan = gscanDone => {
-        glob.sync('packages/*', {ignore: ['packages/_shared', 'packages/theme-translations']}).forEach(path => {
+        getThemePaths().forEach(path => {
             exec(`gscan ${path} --colors`, (error, stdout, _stderr) => {
                 console.log(stdout);
                 if (error) process.exit(1);
@@ -245,6 +280,7 @@ function test(done) {
 function testCI(done) {
     if (!argv.theme) {
         handleError(done('Required parameter [--theme] missing!'));
+        return;
     }
 
     const testGScan = gscanDone => {
@@ -274,6 +310,7 @@ const build = series(css, js, translations);
 function zipper(done) {
     if (!argv.theme) {
         handleError(done('Required parameter [--theme] missing!'));
+        return;
     }
 
     const filename = require(`./packages/${argv.theme}/package.json`).name + '.zip';
@@ -300,48 +337,16 @@ function translations(done) {
 
 // re-build all themes
 function buildAll(done) {
-    const themes = glob.sync('packages/*', {ignore: ['packages/_shared', 'packages/theme-translations']});
+    const themes = getThemePaths();
 
     const tasks = themes.map(themePath => {
-        const packageName = require(`./${themePath}/package.json`).name;
-
-        const css = (cbDone) => doCSS(themePath, cbDone);
-        css.displayName = `css_${packageName}`;
-
-        const js = (cbDone) => doJS(themePath, cbDone);
-        js.displayName = `js_${packageName}`;
-
-        const trans = (cbDone) => doTranslations(themePath, cbDone);
-        trans.displayName = `translations_${packageName}`;
-
+        const {packageName, css, js, trans} = buildTasksForTheme(themePath);
         const themeBuild = series(css, js, trans);
         themeBuild.displayName = `build_${packageName}`;
         return themeBuild;
     });
 
-    function copyPartials(cbDone) {
-        const v2Themes = themes.filter(t => !oldPackages.includes(t));
-        let pending = v2Themes.length;
-        let called = false;
-        if (pending === 0) return cbDone();
-
-        v2Themes.forEach(themePath => {
-            pump([
-                src('packages/_shared/partials/*'),
-                dest(`${themePath}/partials/components/`)
-            ], (err) => {
-                if (called) return;
-                if (err) {
-                    called = true;
-                    return cbDone(err);
-                }
-                if (--pending === 0) {
-                    called = true;
-                    cbDone();
-                }
-            });
-        });
-    }
+    const copyPartials = (cbDone) => doCopyPartials(themes.filter(t => !oldPackages.includes(t)), false, cbDone);
 
     return series(copyPartials, parallel(...tasks))(done);
 }
