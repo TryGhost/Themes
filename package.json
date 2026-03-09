@@ -10,7 +10,8 @@
         "test": "gulp test",
         "test:ci": "gulp testCI",
         "zip": "gulp zip",
-        "ship": "gulp buildAll && lerna publish --no-private"
+        "build": "gulp buildAll",
+        "ship:shared": "npm --prefix packages/_shared version patch --no-git-tag-version"
     },
     "devDependencies": {
         "autoprefixer": "10.4.27",
@@ -25,7 +26,6 @@
         "gulp-postcss": "10.0.0",
         "gulp-uglify": "3.0.2",
         "gulp-zip": "5.1.0",
-        "lerna": "9.0.5",
         "ordered-read-streams": "2.0.0",
         "postcss": "8.5.8",
         "postcss-easy-import": "4.0.0",

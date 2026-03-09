@@ -8,5 +8,8 @@
         "email": "hello@ghost.org",
         "url": "https://ghost.org"
     },
-    "gitHead": "665eb621759869a51d4f3830955a29039e2622ba"
+    "publishConfig": {
+        "access": "public",
+        "provenance": true
+    }
 }
