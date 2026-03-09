@@ -128,8 +128,8 @@ function main(done) {
     });
 
     function sharedCSS_v1(done) {
-        oldPackages.map(path => {
-            pump([
+        const tasks = oldPackages.map(path => {
+            const t = (cb) => pump([
                 src(`${path}/assets/css/screen.css`, {sourcemaps: true}),
                 postcss([
                     easyimport,
@@ -138,14 +138,17 @@ function main(done) {
                 ]),
                 dest(`${path}/assets/built/`, {sourcemaps: '.'}),
                 livereload()
-            ], handleError(done));
+            ], handleError(cb));
+            t.displayName = `sharedCSS_v1_${path}`;
+            return t;
         });
+        return parallel(...tasks)(done);
     }
     const sharedCSSWatcher_v1 = () => watch('packages/_shared/assets/css/v1/**/*.css', sharedCSS_v1);
 
     function sharedCSS_v2(done) {
-        glob.sync('packages/*', {ignore: ['packages/_shared', 'packages/theme-translations', ...oldPackages]}).map(path => {
-            pump([
+        const tasks = glob.sync('packages/*', {ignore: ['packages/_shared', 'packages/theme-translations', ...oldPackages]}).map(path => {
+            const t = (cb) => pump([
                 src(`${path}/assets/css/screen.css`, {sourcemaps: true}),
                 postcss([
                     easyimport,
@@ -154,45 +157,57 @@ function main(done) {
                 ]),
                 dest(`${path}/assets/built/`, {sourcemaps: '.'}),
                 livereload()
-            ], handleError(done));
+            ], handleError(cb));
+            t.displayName = `sharedCSS_v2_${path}`;
+            return t;
         });
+        return parallel(...tasks)(done);
     }
     const sharedCSSWatcher_v2 = () => watch('packages/_shared/assets/css/v2/**/*.css', sharedCSS_v2);
 
     function sharedJS_v1(done) {
-        oldPackages.map(path => {
-            pump([
+        const tasks = oldPackages.map(path => {
+            const t = (cb) => pump([
                 order(getJsFiles('v1', path), {sourcemaps: true}),
                 concat('main.min.js'),
                 uglify(),
                 dest(`${path}/assets/built/`, {sourcemaps: '.'}),
                 livereload()
-            ], handleError(done));
+            ], handleError(cb));
+            t.displayName = `sharedJS_v1_${path}`;
+            return t;
         });
+        return parallel(...tasks)(done);
     }
     const sharedJSWatcher_v1 = () => watch('packages/_shared/assets/js/v1/**/*.js', sharedJS_v1);
 
     function sharedJS_v2(done) {
-        glob.sync('packages/*', {ignore: ['packages/_shared', 'packages/theme-translations', ...oldPackages]}).map(path => {
-            pump([
+        const tasks = glob.sync('packages/*', {ignore: ['packages/_shared', 'packages/theme-translations', ...oldPackages]}).map(path => {
+            const t = (cb) => pump([
                 order(getJsFiles('v2', path), {sourcemaps: true}),
                 concat('main.min.js'),
                 uglify(),
                 dest(`${path}/assets/built/`, {sourcemaps: '.'}),
                 livereload()
-            ], handleError(done));
+            ], handleError(cb));
+            t.displayName = `sharedJS_v2_${path}`;
+            return t;
         });
+        return parallel(...tasks)(done);
     }
     const sharedJSWatcher_v2 = () => watch('packages/_shared/assets/js/v2/**/*.js', sharedJS_v2);
 
     function copyPartials(done) {
-        glob.sync('packages/*', {ignore: ['packages/_shared', 'packages/theme-translations', ...oldPackages]}).map(path => {
-            pump([
+        const tasks = glob.sync('packages/*', {ignore: ['packages/_shared', 'packages/theme-translations', ...oldPackages]}).map(path => {
+            const t = (cb) => pump([
                 src('packages/_shared/partials/*'),
                 dest(`${path}/partials/components/`),
                 livereload()
-            ], handleError(done));
+            ], handleError(cb));
+            t.displayName = `copyPartials_${path}`;
+            return t;
         });
+        return parallel(...tasks)(done);
     }
 
     function sharedTranslations(done) {
@@ -219,6 +234,7 @@ function main(done) {
 function symlink(done) {
     if (!argv.theme || !argv.site) {
         handleError(done('Required parameters [--theme, --site] missing!'));
+        return;
     }
 
     exec(`ln -sfn ${__dirname}/packages/${argv.theme} ${argv.site}/content/themes`);
@@ -245,6 +261,7 @@ function test(done) {
 function testCI(done) {
     if (!argv.theme) {
         handleError(done('Required parameter [--theme] missing!'));
+        return;
     }
 
     const testGScan = gscanDone => {
@@ -274,6 +291,7 @@ const build = series(css, js, translations);
 function zipper(done) {
     if (!argv.theme) {
         handleError(done('Required parameter [--theme] missing!'));
+        return;
     }
 
     const filename = require(`./packages/${argv.theme}/package.json`).name + '.zip';
@@ -321,26 +339,17 @@ function buildAll(done) {
 
     function copyPartials(cbDone) {
         const v2Themes = themes.filter(t => !oldPackages.includes(t));
-        let pending = v2Themes.length;
-        let called = false;
-        if (pending === 0) return cbDone();
+        if (v2Themes.length === 0) return cbDone();
 
-        v2Themes.forEach(themePath => {
-            pump([
+        const tasks = v2Themes.map(themePath => {
+            const t = (cb) => pump([
                 src('packages/_shared/partials/*'),
                 dest(`${themePath}/partials/components/`)
-            ], (err) => {
-                if (called) return;
-                if (err) {
-                    called = true;
-                    return cbDone(err);
-                }
-                if (--pending === 0) {
-                    called = true;
-                    cbDone();
-                }
-            });
+            ], handleError(cb));
+            t.displayName = `copyPartials_${themePath}`;
+            return t;
         });
+        return parallel(...tasks)(cbDone);
     }
 
     return series(copyPartials, parallel(...tasks))(done);
