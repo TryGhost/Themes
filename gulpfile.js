@@ -196,9 +196,13 @@ function main(done) {
     }
 
     function sharedTranslations(done) {
-        glob.sync('packages/*', {ignore: ['packages/_shared', 'packages/theme-translations']}).forEach(path => {
-            doTranslations(path, done);
+        const themes = glob.sync('packages/*', {ignore: ['packages/_shared', 'packages/theme-translations']});
+        const tasks = themes.map(p => {
+            const t = (cb) => doTranslations(p, cb);
+            t.displayName = `sharedTrans_${p}`;
+            return t;
         });
+        return parallel(...tasks)(done);
     }
     const translationsWatcher = () => watch('packages/theme-translations/locales/*.json', sharedTranslations);
 
