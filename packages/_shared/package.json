@@ -8,6 +8,11 @@
         "email": "hello@ghost.org",
         "url": "https://ghost.org"
     },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/TryGhost/Themes",
+        "directory": "packages/_shared"
+    },
     "publishConfig": {
         "access": "public",
         "provenance": true
