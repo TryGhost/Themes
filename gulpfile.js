@@ -19,7 +19,17 @@ const easyimport = require('postcss-easy-import');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 
+const {mergeLocales} = require('./packages/theme-translations/build');
+
 const oldPackages = ['packages/alto', 'packages/bulletin', 'packages/dawn', 'packages/digest', 'packages/dope', 'packages/ease', 'packages/edge', 'packages/edition', 'packages/headline', 'packages/journal', 'packages/london', 'packages/ruby', 'packages/solo', 'packages/wave'];
+
+function getThemePaths() {
+    return glob.sync('packages/*', {ignore: ['packages/_shared', 'packages/theme-translations']});
+}
+
+function getV2ThemePaths() {
+    return getThemePaths().filter(p => !oldPackages.includes(p));
+}
 
 function serve(done) {
     livereload.listen();
@@ -79,19 +89,52 @@ function doJS(path, done) {
     ], handleError(done));
 }
 
+function doTranslations(path, done) {
+    mergeLocales({
+        shared: './packages/theme-translations/locales',
+        local: `./${path}/locales-local`,
+        output: `./${path}/locales`
+    })(done);
+}
+
+function buildTasksForTheme(themePath) {
+    const packageName = require(`./${themePath}/package.json`).name;
+
+    const css = (cb) => doCSS(themePath, cb);
+    css.displayName = `css_${packageName}`;
+
+    const js = (cb) => doJS(themePath, cb);
+    js.displayName = `js_${packageName}`;
+
+    const trans = (cb) => doTranslations(themePath, cb);
+    trans.displayName = `translations_${packageName}`;
+
+    return {packageName, css, js, trans};
+}
+
+function doCopyPartials(paths, useLivereload, done) {
+    if (paths.length === 0) return done();
+
+    const tasks = paths.map(themePath => {
+        const streams = [
+            src('packages/_shared/partials/*'),
+            dest(`${themePath}/partials/components/`)
+        ];
+        if (useLivereload) streams.push(livereload());
+        const t = (cb) => pump(streams, handleError(cb));
+        t.displayName = `copyPartials_${themePath}`;
+        return t;
+    });
+    return parallel(...tasks)(done);
+}
+
 function main(done) {
-    const tasks = glob.sync('packages/*', {ignore: ['packages/_shared', 'packages/theme-translations']}).map(path => {
-        const packageName = require(`./${path}/package.json`).name;
+    const tasks = getThemePaths().map(path => {
+        const {packageName, css, js, trans} = buildTasksForTheme(path);
 
         function package(taskDone) {
             const hbs = (done) => doHBS(path, done);
             hbs.displayName = `hbs_${packageName}`;
-
-            const css = (done) => doCSS(path, done);
-            css.displayName = `css_${packageName}`;
-
-            const js = (done) => doJS(path, done);
-            js.displayName = `js_${packageName}`;
 
             const hbsWatcher = () => watch([`${path}/*.hbs`, `${path}/partials/**/*.hbs`], hbs);
             hbsWatcher.displayName = `hbsWatcher_${packageName}`;
@@ -102,8 +145,9 @@ function main(done) {
             const jsWatcher = () => watch(`${path}/assets/js/**/*.js`, js);
             jsWatcher.displayName = `jsWatcher_${packageName}`;
 
-            const watcher = parallel(hbsWatcher, cssWatcher, jsWatcher);
-            const build = series(css, js);
+            const localTranslationsWatcher = () => watch(`${path}/locales-local/*.json`, trans);
+            const watcher = parallel(hbsWatcher, cssWatcher, jsWatcher, localTranslationsWatcher);
+            const build = series(css, js, trans);
 
             series(build, serve, watcher)();
             taskDone();
@@ -114,8 +158,8 @@ function main(done) {
     });
 
     function sharedCSS_v1(done) {
-        oldPackages.map(path => {
-            pump([
+        const tasks = oldPackages.map(path => {
+            const t = (cb) => pump([
                 src(`${path}/assets/css/screen.css`, {sourcemaps: true}),
                 postcss([
                     easyimport,
@@ -124,14 +168,17 @@ function main(done) {
                 ]),
                 dest(`${path}/assets/built/`, {sourcemaps: '.'}),
                 livereload()
-            ], handleError(done));
+            ], handleError(cb));
+            t.displayName = `sharedCSS_v1_${path}`;
+            return t;
         });
+        return parallel(...tasks)(done);
     }
     const sharedCSSWatcher_v1 = () => watch('packages/_shared/assets/css/v1/**/*.css', sharedCSS_v1);
 
     function sharedCSS_v2(done) {
-        glob.sync('packages/*', {ignore: ['packages/_shared', 'packages/theme-translations', ...oldPackages]}).map(path => {
-            pump([
+        const tasks = getV2ThemePaths().map(path => {
+            const t = (cb) => pump([
                 src(`${path}/assets/css/screen.css`, {sourcemaps: true}),
                 postcss([
                     easyimport,
@@ -140,49 +187,62 @@ function main(done) {
                 ]),
                 dest(`${path}/assets/built/`, {sourcemaps: '.'}),
                 livereload()
-            ], handleError(done));
+            ], handleError(cb));
+            t.displayName = `sharedCSS_v2_${path}`;
+            return t;
         });
+        return parallel(...tasks)(done);
     }
     const sharedCSSWatcher_v2 = () => watch('packages/_shared/assets/css/v2/**/*.css', sharedCSS_v2);
 
     function sharedJS_v1(done) {
-        oldPackages.map(path => {
-            pump([
+        const tasks = oldPackages.map(path => {
+            const t = (cb) => pump([
                 order(getJsFiles('v1', path), {sourcemaps: true}),
                 concat('main.min.js'),
                 uglify(),
                 dest(`${path}/assets/built/`, {sourcemaps: '.'}),
                 livereload()
-            ], handleError(done));
+            ], handleError(cb));
+            t.displayName = `sharedJS_v1_${path}`;
+            return t;
         });
+        return parallel(...tasks)(done);
     }
     const sharedJSWatcher_v1 = () => watch('packages/_shared/assets/js/v1/**/*.js', sharedJS_v1);
 
     function sharedJS_v2(done) {
-        glob.sync('packages/*', {ignore: ['packages/_shared', 'packages/theme-translations', ...oldPackages]}).map(path => {
-            pump([
+        const tasks = getV2ThemePaths().map(path => {
+            const t = (cb) => pump([
                 order(getJsFiles('v2', path), {sourcemaps: true}),
                 concat('main.min.js'),
                 uglify(),
                 dest(`${path}/assets/built/`, {sourcemaps: '.'}),
                 livereload()
-            ], handleError(done));
+            ], handleError(cb));
+            t.displayName = `sharedJS_v2_${path}`;
+            return t;
         });
+        return parallel(...tasks)(done);
     }
     const sharedJSWatcher_v2 = () => watch('packages/_shared/assets/js/v2/**/*.js', sharedJS_v2);
 
-    function copyPartials(done) {
-        glob.sync('packages/*', {ignore: ['packages/_shared', 'packages/theme-translations', ...oldPackages]}).map(path => {
-            pump([
-                src('packages/_shared/partials/*'),
-                dest(`${path}/partials/components/`),
-                livereload()
-            ], handleError(done));
+    const copyPartials = (done) => doCopyPartials(getV2ThemePaths(), true, done);
+
+    function sharedTranslations(done) {
+        const themes = getThemePaths();
+        const tasks = themes.map(p => {
+            const t = (cb) => doTranslations(p, cb);
+            t.displayName = `sharedTrans_${p}`;
+            return t;
         });
+        return parallel(...tasks)(done);
     }
+    const translationsWatcher = () => watch('packages/theme-translations/locales/*.json', sharedTranslations);
+
     const sharedPartialWatcher = () => watch('packages/_shared/partials/*.hbs', copyPartials);
 
-    const sharedWatcher = parallel(sharedCSSWatcher_v1, sharedCSSWatcher_v2, sharedJSWatcher_v1, sharedJSWatcher_v2, sharedPartialWatcher);
+    const sharedWatcher = parallel(sharedCSSWatcher_v1, sharedCSSWatcher_v2, sharedJSWatcher_v1, sharedJSWatcher_v2, sharedPartialWatcher, translationsWatcher);
 
     return series(parallel(...tasks), copyPartials, sharedWatcher, tasksDone => {
         tasksDone();
@@ -193,6 +253,7 @@ function main(done) {
 function symlink(done) {
     if (!argv.theme || !argv.site) {
         handleError(done('Required parameters [--theme, --site] missing!'));
+        return;
     }
 
     exec(`ln -sfn ${__dirname}/packages/${argv.theme} ${argv.site}/content/themes`);
@@ -201,7 +262,7 @@ function symlink(done) {
 
 function test(done) {
     const testGScan = gscanDone => {
-        glob.sync('packages/*', {ignore: ['packages/_shared', 'packages/theme-translations']}).forEach(path => {
+        getThemePaths().forEach(path => {
             exec(`gscan ${path} --colors`, (error, stdout, _stderr) => {
                 console.log(stdout);
                 if (error) process.exit(1);
@@ -219,6 +280,7 @@ function test(done) {
 function testCI(done) {
     if (!argv.theme) {
         handleError(done('Required parameter [--theme] missing!'));
+        return;
     }
 
     const testGScan = gscanDone => {
@@ -243,11 +305,12 @@ function js(done) {
     doJS(`./packages/${argv.theme}`, done);
 }
 
-const build = series(css, js);
+const build = series(css, js, translations);
 
 function zipper(done) {
     if (!argv.theme) {
         handleError(done('Required parameter [--theme] missing!'));
+        return;
     }
 
     const filename = require(`./packages/${argv.theme}/package.json`).name + '.zip';
@@ -264,6 +327,32 @@ function zipper(done) {
     ], handleError(done));
 }
 
+function translations(done) {
+    if (!argv.theme) {
+        handleError(done('Required parameter [--theme] missing!'));
+        return;
+    }
+    doTranslations(`./packages/${argv.theme}`, done);
+}
+
+// re-build all themes
+function buildAll(done) {
+    const themes = getThemePaths();
+
+    const tasks = themes.map(themePath => {
+        const {packageName, css, js, trans} = buildTasksForTheme(themePath);
+        const themeBuild = series(css, js, trans);
+        themeBuild.displayName = `build_${packageName}`;
+        return themeBuild;
+    });
+
+    const copyPartials = (cbDone) => doCopyPartials(themes.filter(t => !oldPackages.includes(t)), false, cbDone);
+
+    return series(copyPartials, parallel(...tasks))(done);
+}
+
+exports.buildAll = buildAll;
+exports.translations = translations;
 exports.symlink = symlink;
 exports.test = test;
 exports.testCI = testCI;

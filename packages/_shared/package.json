@@ -1,11 +1,20 @@
 {
     "name": "@tryghost/shared-theme-assets",
     "description": "Shared theme assets for official Ghost themes",
-    "version": "2.5.2",
+    "version": "2.6.0",
     "license": "MIT",
     "author": {
         "name": "Ghost Foundation",
         "email": "hello@ghost.org",
         "url": "https://ghost.org"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/TryGhost/Themes",
+        "directory": "packages/_shared"
+    },
+    "publishConfig": {
+        "access": "public",
+        "provenance": true
     }
 }
