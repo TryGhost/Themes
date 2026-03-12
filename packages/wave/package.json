@@ -7,11 +7,11 @@
         "ghost": ">=5.0.0"
     },
     "license": "MIT",
-        "author": {
-            "name": "Ghost Foundation",
-            "email": "hello@ghost.org",
-            "url": "https://ghost.org"
-        },
+    "author": {
+        "name": "Ghost Foundation",
+        "email": "hello@ghost.org",
+        "url": "https://ghost.org"
+    },
     "keywords": [
         "ghost",
         "theme",
@@ -44,26 +44,36 @@
         "custom": {
             "navigation_layout": {
                 "type": "select",
-                "options": ["Logo on the left", "Logo in the middle", "Stacked"],
+                "options": [
+                    "Logo on the left",
+                    "Logo in the middle",
+                    "Stacked"
+                ],
                 "default": "Logo on the left"
             },
             "title_font": {
                 "type": "select",
-                "options": ["Modern sans-serif", "Elegant serif"],
+                "options": [
+                    "Modern sans-serif",
+                    "Elegant serif"
+                ],
                 "default": "Modern sans-serif"
             },
             "body_font": {
                 "type": "select",
-                "options": ["Modern sans-serif", "Elegant serif"],
+                "options": [
+                    "Modern sans-serif",
+                    "Elegant serif"
+                ],
                 "default": "Modern sans-serif"
             },
             "apple_podcasts_link": {
                 "type": "text",
                 "default": "https://podcasts.apple.com/"
             },
-            "google_podcasts_link": {
+            "youtube_music_link": {
                 "type": "text",
-                "default": "https://podcasts.google.com/"
+                "default": "https://music.youtube.com/"
             },
             "spotify_link": {
                 "type": "text",
