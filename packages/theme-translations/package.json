@@ -1,7 +1,7 @@
 {
     "name": "@tryghost/theme-translations",
     "description": "Shared translations for Ghost themes",
-    "version": "0.0.14",
+    "version": "0.0.15",
     "license": "MIT",
     "author": {
         "name": "Ghost Foundation",
