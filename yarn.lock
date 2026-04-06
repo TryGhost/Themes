@@ -594,11 +594,6 @@
     "@tryghost/debug" "^2.0.3"
     "@tryghost/logging" "^4.0.3"
 
-"@tryghost/shared-theme-assets@2.5.2":
-  version "2.5.2"
-  resolved "https://registry.yarnpkg.com/@tryghost/shared-theme-assets/-/shared-theme-assets-2.5.2.tgz#b5ae63dfb71a3c97501da57aebd9a7c4e46fcf7f"
-  integrity sha512-uYwFPg1x3NU+c5ps11wu5yM2uPYldXV8I3rmwFgsa14XtZMH/znI+rHdiE74yMOLnELol0pyWkCmvU3ikrHqfA==
-
 "@tryghost/theme-translations@^0.0.9":
   version "0.0.9"
   resolved "https://registry.yarnpkg.com/@tryghost/theme-translations/-/theme-translations-0.0.9.tgz#a112dcb9dd07735d1e4e814da4e8859a37dce4e4"
