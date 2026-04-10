@@ -5,7 +5,7 @@
         <span class="gh-article-meta">
             {{{t "By {authors}" authors=(authors) }}}
             {{#if primary_tag}}
-                {{{t "in {primaryTag}" primaryTag=(concat "<a class=\"gh-article-tag\" href=\"" primary_tag.url "\">" primary_tag.name "</a>")}}}                
+                {{{t "in {primaryTag}" primaryTag=(concat "<a class=\"gh-article-tag\" href=\"" primary_tag.url "\">" primary_tag.name "</a>")}}}
             {{/if}}
             —
             <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMM YYYY"}}</time>
@@ -14,6 +14,10 @@
         {{#if custom_excerpt}}
             <p class="gh-article-excerpt">{{custom_excerpt}}</p>
         {{/if}}
+
+        <div class="gh-meta-share">
+            <a href="#/share" class="gh-button-share">{{t "Share"}} {{> "icons/share"}}</a>
+        </div>
 
         {{> "feature-image"}}
     </header>

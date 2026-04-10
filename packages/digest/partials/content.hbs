@@ -1,9 +1,12 @@
 <header class="gh-article-header gh-canvas">
-    <div class="gh-article-meta">
-        {{#is "home"}}
-            <span class="gh-article-label">{{t "Latest issue"}}</span>
-        {{/is}}
-        <time class="gh-article-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMM YYYY"}}</time>
+    <div class="gh-meta-share">
+        <div class="gh-article-meta">
+            {{#is "home"}}
+                <span class="gh-article-label">{{t "Latest issue"}}</span>
+            {{/is}}
+            <time class="gh-article-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMM YYYY"}}</time>
+        </div>
+        <a href="#/share" class="gh-button-share">{{t "Share"}}</a>
     </div>
 
     <h1 class="gh-article-title">{{title}}</h1>
@@ -53,8 +56,8 @@
                     <span class="gh-navigation-desktop-only">{{t "Next issue"}}</span><span class="gh-navigation-mobile-only">{{t "Next"}}</span>
                     <span class="gh-navigation-arrow-container">
                         <span class="u-hover-arrow">{{> icons/chevron-right}}</span>
-                        <span class="u-hover-arrow">{{> icons/chevron-right}}</span> 
-                    </span> 
+                        <span class="u-hover-arrow">{{> icons/chevron-right}}</span>
+                    </span>
                 </a>
             {{/next_post}}
         </div>

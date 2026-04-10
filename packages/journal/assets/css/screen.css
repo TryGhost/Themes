@@ -468,6 +468,10 @@
     height: 100%;
 }
 
+.gh-navigation-middle {
+    padding-top: 4px;
+}
+
 .gh-navigation-link {
     flex-direction: column;
     align-items: flex-start;
@@ -599,7 +603,20 @@
 
     .gh-navigation {
         grid-template-columns: 1fr;
-        row-gap: 1.6rem;
+        row-gap: 3.2rem;
+    }
+
+    .gh-navigation > div,
+    .gh-navigation-link,
+    .gh-navigation-next .gh-navigation-link {
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .gh-navigation-middle {
+        order: -1;
+        padding-top: 0;
     }
 
     .gh-subscribe {

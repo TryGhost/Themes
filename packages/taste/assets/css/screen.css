@@ -328,6 +328,17 @@ body {
     border-radius: 16px;
 }
 
+/* Share */
+
+.gh-meta-share {
+    justify-content: center;
+    margin-top: 48px;
+}
+
+.gh-button-share {
+    font-size: 1.8rem;
+}
+
 /* Cards */
 
 .is-font-sans:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .kg-product-card-container {
