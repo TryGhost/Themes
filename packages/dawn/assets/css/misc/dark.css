@@ -148,12 +148,12 @@
         opacity: 1;
     }
 
-    .gh-button-share {
+    html:not(.theme-light) .gh-button-share {
         color: rgba(255, 255, 255, 0.85);
         border-color: rgba(255, 255, 255, 0.15);
     }
 
-    .gh-button-share:hover {
+    html:not(.theme-light) .gh-button-share:hover {
         border-color: rgba(255, 255, 255, 0.5);
     }
 }
