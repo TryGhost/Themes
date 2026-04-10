@@ -58,6 +58,10 @@
     opacity: 0.7;
 }
 
+.single-post .gh-meta-share {
+    margin-top: 24px;
+}
+
 @media (max-width: 767px) {
     .single-post .u-placeholder {
         min-height: 300px;

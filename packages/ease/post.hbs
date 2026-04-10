@@ -8,9 +8,12 @@
 
         <header class="gh-article-header gh-canvas">
             <h1 class="gh-article-title">{{title}}</h1>
-            <div class="post-meta">
-                Last updated on&nbsp;
-                <time datetime="{{date format="YYYY-MM-DD"}}">{{date updated_at format="DD MMM YYYY"}}</time>
+            <div class="gh-meta-share">
+                <div class="post-meta">
+                    Last updated on&nbsp;
+                    <time datetime="{{date format="YYYY-MM-DD"}}">{{date updated_at format="DD MMM YYYY"}}</time>
+                </div>
+                <a href="#/share" class="gh-button-share">{{t "Share"}}</a>
             </div>
             {{> "post-image"}}
         </header>

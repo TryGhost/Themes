@@ -11,6 +11,10 @@
 
             <h1 class="gh-article-title">{{title}}</h1>
 
+            <div class="gh-meta-share">
+                <a href="#/share" class="gh-button-share">{{t "Share"}}</a>
+            </div>
+
             {{#if custom_excerpt}}
                 <div class="gh-article-excerpt">{{custom_excerpt}}</div>
             {{/if}}
@@ -18,6 +22,10 @@
 
         <div class="gh-content gh-canvas">
             {{content}}
+        </div>
+
+        <div class="gh-meta-share">
+            <a href="#/share" class="gh-button-share">{{t "Share"}} {{> "icons/share"}}</a>
         </div>
     </article>
 

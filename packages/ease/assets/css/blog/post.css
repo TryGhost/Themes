@@ -22,11 +22,14 @@
 .post-meta {
     display: flex;
     align-items: center;
-    margin-top: 16px;
     font-size: 1.5rem;
     line-height: 1;
     color: var(--secondary-text-color);
     letter-spacing: -0.005em;
+}
+
+.gh-meta-share {
+    margin-top: 12px;
 }
 
 .post-author {

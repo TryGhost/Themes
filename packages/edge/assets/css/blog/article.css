@@ -14,3 +14,12 @@
 .gh-content {
     margin-top: 28px;
 }
+
+.gh-article-header .gh-meta-share {
+    justify-content: flex-end;
+}
+
+.gh-meta-share {
+    margin-top: 36px;
+    justify-content: center;
+}

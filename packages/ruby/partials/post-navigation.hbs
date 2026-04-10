@@ -1,16 +1,23 @@
 <div class="gh-canvas">
     <div class="navigation">
-        {{#prev_post}}
-            <a class="navigation-item navigation-previous" href="{{url}}">
-                <span class="navigation-label">{{t "Previous"}}</span>
-                <h4 class="navigation-title">{{title}}</h4>
-            </a>
-        {{/prev_post}}
-        {{#next_post}}
-            <a class="navigation-item navigation-next" href="{{url}}">
-                <span class="navigation-label">{{t "Next"}}</span>
-                <h4 class="navigation-title">{{title}}</h4>
-            </a>
-        {{/next_post}}
+        <div class="navigation-previous-wrapper">
+            {{#prev_post}}
+                <a class="navigation-item navigation-previous" href="{{url}}">
+                    <span class="navigation-label">{{t "Previous"}}</span>
+                    <h4 class="navigation-title">{{title}}</h4>
+                </a>
+            {{/prev_post}}
+        </div>
+        <div class="navigation-middle">
+            <a href="#/share" class="gh-button-share">{{t "Share"}} {{> "icons/share"}}</a>
+        </div>
+        <div class="navigation-next-wrapper">
+            {{#next_post}}
+                <a class="navigation-item navigation-next" href="{{url}}">
+                    <span class="navigation-label">{{t "Next"}}</span>
+                    <h4 class="navigation-title">{{title}}</h4>
+                </a>
+            {{/next_post}}
+        </div>
     </div>
 </div>

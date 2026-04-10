@@ -668,7 +668,7 @@ hr {
     color: var(--tag-color, var(--color-darker-gray)) !important;
     text-decoration: none !important;
     letter-spacing: -0.01em;
-    border: 2px solid var(--color-border);
+    border: 1px solid var(--color-border);
     border-radius: 24px;
 }
 
@@ -838,12 +838,36 @@ hr {
     letter-spacing: -0.02em;
 }
 
+.gh-navigation-link {
+    gap: 6px;
+}
+
 .has-serif-font:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-navigation {
     font-family: var(--gh-font-heading, var(--font-serif));
 }
 
 .has-mono-font:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]):not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-navigation {
     font-family: var(--gh-font-heading, var(--font-mono));
+}
+
+.gh-button-share {
+    font-size: 2rem;
+    letter-spacing: 0;
+}
+
+@media (max-width: 767px) {
+    .gh-navigation {
+        font-size: 2.8rem;
+        font-weight: 500;
+    }
+
+    .gh-navigation-text {
+        display: none;
+    }
+
+    .gh-button-share {
+        font-size: 1.7rem;
+    }
 }
 
 /* Comments

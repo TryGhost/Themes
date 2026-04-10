@@ -916,3 +916,7 @@ body:not(.home-template) .gh-topic-grid .gh-card {
         line-height: 1;
     }
 }
+
+.gh-article-sidebar .gh-button-share {
+    margin-top: 16px;
+}

@@ -228,7 +228,6 @@ body:not(.home-template) .no-image .gh-article-header {
 .gh-article-meta {
     display: flex;
     align-items: center;
-    margin-bottom: 1.6rem;
     font-size: 1.3rem;
     font-weight: 700;
     line-height: 1;
@@ -241,6 +240,10 @@ body:not(.home-template) .no-image .gh-article-header {
     align-items: center;
     margin-right: 1.6rem;
     color: var(--ghost-accent-color);
+}
+
+.gh-meta-share {
+    margin-bottom: 16px;
 }
 
 .gh-article-title {
