@@ -392,6 +392,11 @@ h6 {
     width: 100%;
 }
 
+.gh-meta-share {
+    justify-content: center;
+    margin-top: 32px;
+}
+
 .gh-article-footer {
     padding-top: 3.2rem;
     margin-top: 8rem;

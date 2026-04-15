@@ -89,3 +89,49 @@
 .gh-article-comments-count {
     color: var(--color-secondary-text);
 }
+
+/* Share */
+
+.gh-meta-share {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.gh-button-share {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0.5em 1.2em;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 999px;
+    color: rgba(0, 0, 0, 0.85);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.gh-button-share:hover {
+    border-color: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+}
+
+.gh-button-share svg {
+    width: 20px;
+    height: 20px;
+    margin-top: -2px;
+    margin-right: -4px;
+}
+
+:is(.dark-mode, .theme-dark, .has-light-text) .gh-button-share {
+    color: rgba(255, 255, 255, 0.85);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+:is(.dark-mode, .theme-dark, .has-light-text) .gh-button-share:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+}

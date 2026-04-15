@@ -348,3 +348,13 @@ body {
 .gh-podcast-service-list + .gh-archive {
     margin-top: clamp(6.4rem, 4.09vw + 4.76rem, 10rem);
 }
+
+/* Share */
+
+.gh-meta-share {
+    margin-top: 24px;
+}
+
+.gh-button-share {
+    font-size: 1.6rem;
+}
