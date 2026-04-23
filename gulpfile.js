@@ -325,7 +325,7 @@ function zipper(done) {
             '!pnpm-workspace.yaml',
             '!AGENTS.md',
             '!CLAUDE.md',
-        ], {cwd: `./packages/${argv.theme}`}),
+        ], {cwd: `./packages/${argv.theme}`, encoding: false}),
         zip(filename),
         dest(`packages/${argv.theme}/dist/`)
     ], handleError(done));
