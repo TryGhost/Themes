@@ -31,6 +31,7 @@
 }
 
 .player .button-play {
+    position: relative;
     display: inline-flex;
     flex-shrink: 0;
     align-items: center;
@@ -54,6 +55,42 @@
 
 .player .button-play.playing svg:nth-child(2) {
     display: block;
+}
+
+.button-play.is-buffering svg,
+.post-play.is-buffering svg {
+    visibility: hidden;
+}
+
+.player-spinner {
+    display: none;
+    width: 22px;
+    height: 22px;
+    border: 2px solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: player-spinner-rotate 0.75s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -11px 0 0 -11px;
+}
+
+.button-play.is-buffering .player-spinner,
+.post-play.is-buffering .player-spinner {
+    display: block;
+}
+
+@keyframes player-spinner-rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .player-spinner {
+        animation-duration: 1.5s;
+    }
 }
 
 .player .post-title {
@@ -112,6 +149,14 @@
     width: 100%;
     font-size: 1.2rem;
     line-height: 1;
+}
+
+@media (hover: hover) {
+    .player-backward:hover,
+    .player-forward:hover,
+    .player-speed:hover {
+        color: var(--ghost-accent-color);
+    }
 }
 
 @media (max-width: 767px) {
