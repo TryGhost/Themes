@@ -104,8 +104,9 @@ function player() {
         }
 
         if (audio.paused || isNewPost) {
-            playRequestTrigger = trigger;
-            setBuffering(trigger);
+            var bufferingTarget = jQuery(trigger).find('.player-spinner').length ? trigger : playButton[0];
+            playRequestTrigger = bufferingTarget;
+            setBuffering(bufferingTarget);
             audio.play().catch(function (error) {
                 console.error(error);
                 playRequestTrigger = null;
@@ -199,6 +200,10 @@ function player() {
 
         document.addEventListener('touchend', function () {
             if (dragging && !locked) seek(startX);
+            dragging = false; locked = false;
+        });
+
+        document.addEventListener('touchcancel', function () {
             dragging = false; locked = false;
         });
     }

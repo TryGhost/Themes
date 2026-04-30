@@ -1,7 +1,7 @@
 <article class="{{post_class}}"{{#if og_description}} data-url="{{og_description}}"{{/if}} data-id="{{comment_id}}">
     <div class="post-media">
         {{#if og_description}}
-            <div class="post-play js-play" role="button" aria-label="Play episode">
+            <div class="post-play js-play" role="button" aria-label="{{t "Play episode"}}">
                 {{> "icons/play"}}
                 {{> "icons/pause"}}
                 <span class="player-spinner" aria-hidden="true"></span>
