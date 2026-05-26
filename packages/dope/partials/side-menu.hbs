@@ -48,6 +48,17 @@
 
     <button class="gh-search gh-icon-btn" aria-label="{{t "Search this site"}}" data-ghost-search>{{> "icons/search"}}</button>
 
+    <div class="gh-social-links">
+        {{#social_accounts @site}}
+            <a href="{{href}}" target="_blank" rel="noopener" aria-label="{{name}}">
+                {{#> (concat "icons/" type)}}
+                    {{!-- Fallback when no per-platform icon partial exists --}}
+                    <span>{{name}}</span>
+                {{/undefined}}
+            </a>
+        {{/social_accounts}}
+    </div>
+
     <div class="canvas-close">
         {{> "icons/close"}}
     </div>

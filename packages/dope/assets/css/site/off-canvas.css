@@ -5,12 +5,29 @@
     z-index: 100;
     width: 350px;
     height: 100vh;
-    padding: 96px 30px 64px;
+    padding: 96px 30px 88px;
     overflow-y: scroll;
     background-color: var(--white-color);
     transition: transform 0.4s var(--animation-base);
     transform: translateX(350px);
     -webkit-overflow-scrolling: touch;
+}
+
+.off-canvas .gh-social-links {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-start;
+    gap: 16px;
+    padding: 20px 30px 30px;
+    background-color: var(--white-color);
+}
+
+.off-canvas .gh-social-links svg {
+    width: 16px;
+    height: 16px;
 }
 
 .gh-search {

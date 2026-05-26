@@ -15,3 +15,11 @@
 .gh-copyright {
     margin-top: 16px;
 }
+
+.gh-social-links:has(a) {
+    margin-top: 24px;
+}
+
+.gh-social-links:has(a) + .gh-copyright {
+    margin-top: -16px;
+}

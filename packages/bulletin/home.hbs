@@ -28,6 +28,16 @@
                     </section>
 
                     <footer class="gh-home-footer">
+                        <div class="gh-social-links">
+                            {{#social_accounts @site}}
+                                <a href="{{href}}" target="_blank" rel="noopener" aria-label="{{name}}">
+                                    {{#> (concat "icons/" type)}}
+                                        {{!-- Fallback when no per-platform icon partial exists --}}
+                                        <span>{{name}}</span>
+                                    {{/undefined}}
+                                </a>
+                            {{/social_accounts}}
+                        </div>
                         <p class="gh-home-copyright">{{@site.title}} © {{date format="YYYY"}}</p>
                     </footer>
                 </div>

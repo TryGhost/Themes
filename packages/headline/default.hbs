@@ -87,6 +87,17 @@
                 {{navigation type="secondary"}}
             </nav>
 
+            <div class="gh-social-links">
+                {{#social_accounts @site}}
+                    <a href="{{href}}" target="_blank" rel="noopener" aria-label="{{name}}">
+                        {{#> (concat "icons/" type)}}
+                            {{!-- Fallback when no per-platform icon partial exists --}}
+                            <span>{{name}}</span>
+                        {{/undefined}}
+                    </a>
+                {{/social_accounts}}
+            </div>
+
             <div class="gh-copyright">
                 {{#unless @custom.footer_text}}
                     {{@site.title}} © {{date format="YYYY"}}. {{{t "Powered by {ghostlink}" ghostlink="<a href=\"https://ghost.org/\" target=\"_blank\" rel=\"noopener\">Ghost</a>"}}}

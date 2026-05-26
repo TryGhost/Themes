@@ -722,6 +722,14 @@ body:not(.home-template) .gh-topic-grid .gh-card {
     margin-top: 64px;
 }
 
+.gh-social-links:has(a) {
+    margin-top: 32px;
+}
+
+.gh-social-links:has(a) + .gh-copyright {
+    margin-top: -16px;
+}
+
 /* Media queries */
 
 @media (max-width: 767px) {
