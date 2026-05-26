@@ -33,3 +33,24 @@
     color: var(--color-secondary-text);
     text-decoration: underline;
 }
+
+.gh-foot-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.gh-social-links {
+    display: flex;
+    gap: 16px;
+}
+
+.gh-social-links a {
+    display: inline-flex;
+}
+
+.gh-social-links svg {
+    width: 16px;
+    height: 16px;
+}
