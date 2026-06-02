@@ -18,7 +18,7 @@
         "beeper": "2.1.0",
         "concurrently": "10.0.0",
         "cssnano": "8.0.1",
-        "gscan": "6.2.0",
+        "gscan": "6.2.1",
         "gulp": "5.0.1",
         "gulp-compile-handlebars": "0.6.1",
         "gulp-concat": "2.6.1",
