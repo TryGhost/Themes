@@ -1,0 +1,10 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": [
+        "@tryghost:theme",
+        "github>TryGhost/Themes//packages/theme-translations/renovate-config"
+    ],
+    "ignoreDeps": [
+        "gulp-zip"
+    ]
+}

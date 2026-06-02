@@ -34,11 +34,5 @@
     },
     "browserslist": [
         "defaults"
-    ],
-    "renovate": {
-        "extends": [
-            "@tryghost:theme"
-        ],
-        "ignoreDeps": ["gulp-zip"]
-    }
+    ]
 }
