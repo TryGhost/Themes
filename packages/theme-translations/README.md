@@ -154,15 +154,17 @@ Blank values (`""`) in override files are ignored, so you won't accidentally cle
 
 ## Renovate auto-merge
 
-To automatically merge translation updates, extend the shipped Renovate preset in your theme's `renovate.json`:
+Official Ghost theme repositories should extend the shared theme preset in `TryGhost/renovate-config`. This includes the translation auto-merge rule:
 
 ```json
 {
-    "extends": ["github>TryGhost/Themes:packages/theme-translations/renovate-config"]
+    "extends": ["local>TryGhost/renovate-config:theme.json5"]
 }
 ```
 
-This auto-merges `@tryghost/theme-translations` version bumps on weekdays via PR (so CI still runs).
+This auto-merges `@tryghost/theme-translations` version bumps on weekdays via PR (so CI still runs). The package-local `renovate-config.json` is available for repos that only need the translation update rule without the full Ghost theme preset.
+
+TODO: remove the package-local `renovate-config.json` once all themes that extend it directly have migrated to the shared theme preset.
 
 ## Package development
 
