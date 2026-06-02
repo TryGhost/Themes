@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && !startsWith(github.head_ref, 'renovate/'))
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
       - run: yarn
       - run: yarn test:ci --theme ruby
   deploy:
@@ -24,9 +24,9 @@ jobs:
     needs: test
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
       - name: Deploy theme
-        uses: TryGhost/action-deploy-theme@v1
+        uses: TryGhost/action-deploy-theme@a0ee1147d15641db25681e54549c4db9a53c2629 # v1
         with:
           api-url: ${{ secrets.RUBY_GHOST_ADMIN_API_URL }}
           api-key: ${{ secrets.RUBY_GHOST_ADMIN_API_KEY }}
@@ -37,10 +37,10 @@ jobs:
     needs: test
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
         with:
           fetch-depth: 0
-      - uses: nxtlvlsoftware/git-subtree-action@1.1
+      - uses: nxtlvlsoftware/git-subtree-action@3d555981a570a2275a91c07b04b38d5e90d48c05 # 1.1
         with:
           repo: 'TryGhost/Ruby'
           path: 'packages/ruby'
