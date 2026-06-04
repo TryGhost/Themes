@@ -8,6 +8,7 @@
 .gh-foot-inner {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
+    align-items: center;
     gap: 40px;
     font-size: 1.3rem;
 }
@@ -17,6 +18,27 @@
     flex-direction: column;
     gap: 24px;
     align-items: center;
+}
+
+.gh-foot-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.gh-social-links {
+    display: flex;
+    gap: 16px;
+}
+
+.gh-social-links a {
+    display: inline-flex;
+}
+
+.gh-social-links svg {
+    width: 16px;
+    height: 16px;
 }
 
 .gh-foot-menu .nav {
