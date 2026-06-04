@@ -128,6 +128,17 @@ h6 {
     border-radius: 50%;
 }
 
+.gh-home-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.gh-home-footer .gh-social-links a {
+    color: inherit;
+}
+
 .gh-home-copyright {
     font-size: 1.4rem;
     color: rgba(255, 255, 255, 0.8);
