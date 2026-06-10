@@ -1,0 +1,12 @@
+packages:
+  - 'packages/*'
+
+allowBuilds:
+  # Optional dtrace bindings for bunyan (a gscan dependency); not needed to
+  # build, test, or zip the themes.
+  dtrace-provider: false
+
+# Mirror yarn workspaces behaviour: when a theme's dependency range matches a
+# local workspace package (e.g. @tryghost/shared-theme-assets), link it instead
+# of installing from the registry.
+linkWorkspacePackages: true

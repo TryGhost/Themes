@@ -178,4 +178,4 @@ Tests use Node's built-in test runner (`node:test`) with no external dependencie
 
 The package is published automatically. When changes to `packages/theme-translations/` are merged to `main`, CI bumps the patch version, commits the bump, and publishes to npm with OIDC provenance. No manual steps needed.
 
-This package is excluded from the monorepo's Lerna publishing (`yarn ship`) — it ships independently so translation updates can be published without bumping `@tryghost/shared-theme-assets`.
+This package ships independently of the rest of the monorepo, so translation updates can be published without bumping `@tryghost/shared-theme-assets`.
