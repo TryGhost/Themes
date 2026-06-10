@@ -32,7 +32,7 @@ jobs:
     steps:
       - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
       - name: Deploy theme
-        uses: TryGhost/action-deploy-theme@a0ee1147d15641db25681e54549c4db9a53c2629 # v1
+        uses: TryGhost/action-deploy-theme@101a83f96f8e54826640a62e8ce47201f8b10d4b # v2
         with:
           api-url: ${{ secrets.DOPE_GHOST_ADMIN_API_URL }}
           api-key: ${{ secrets.DOPE_GHOST_ADMIN_API_KEY }}
