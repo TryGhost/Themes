@@ -17,8 +17,7 @@
     ],
     "files": [
         "locales",
-        "build",
-        "renovate-config.json"
+        "build"
     ],
     "scripts": {
         "test": "node --test test/*.test.js"
