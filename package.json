@@ -13,11 +13,12 @@
         "build": "gulp buildAll",
         "ship:shared": "npm --prefix packages/_shared version patch --no-git-tag-version"
     },
+    "packageManager": "pnpm@11.5.1",
     "devDependencies": {
         "autoprefixer": "10.5.0",
         "beeper": "2.1.0",
-        "concurrently": "10.0.3",
         "cssnano": "8.0.1",
+        "glob": "13.0.6",
         "gscan": "6.2.1",
         "gulp": "5.0.1",
         "gulp-compile-handlebars": "0.6.1",

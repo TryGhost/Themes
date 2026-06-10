@@ -13,20 +13,20 @@ This is the `TryGhost/Themes` monorepo for official Ghost themes. Work from the 
 
 ## Setup
 
-- Use Yarn for the monorepo. Do not create or commit `package-lock.json`.
-- Install with `yarn`.
-- The repo uses Gulp 5, PostCSS, `gscan`, and Yarn workspaces.
+- Use pnpm for the monorepo (pinned via the root `packageManager` field). Do not create or commit `package-lock.json` or `yarn.lock`.
+- Install with `pnpm install`.
+- The repo uses Gulp 5, PostCSS, `gscan`, and pnpm workspaces (`pnpm-workspace.yaml`).
 
 ## Common Commands
 
 ```bash
-yarn                         # install dependencies
-yarn dev                     # build/watch all themes with livereload
-yarn build                   # build all themes
-yarn test                    # run gscan for all themes
-yarn test:ci --theme <name>  # run fatal/verbose gscan for one theme
-yarn zip --theme <name>      # build and write packages/<theme>/dist/<theme>.zip
-yarn symlink --theme <name> --site /path/to/Ghost/ghost/core
+pnpm install                 # install dependencies
+pnpm dev                     # build/watch all themes with livereload
+pnpm build                   # build all themes
+pnpm test                    # run gscan for all themes
+pnpm test:ci --theme <name>  # run fatal/verbose gscan for one theme
+pnpm zip --theme <name>      # build and write packages/<theme>/dist/<theme>.zip
+pnpm symlink --theme <name> --site /path/to/Ghost/ghost/core
 ```
 
 For translation package tests:
@@ -40,14 +40,14 @@ npm test
 
 - Edit source CSS in `packages/<theme>/assets/css/`, source JS in `packages/<theme>/assets/js/`, and templates/partials as `.hbs`.
 - Rebuild after CSS, JS, shared asset, or locale changes. Built files under `assets/built/` are part of theme output and should be kept in sync when source changes.
-- Validate a changed theme with `yarn test:ci --theme <name>`. Prefer targeted validation over running every theme unless the change is cross-cutting.
-- For local Ghost verification, symlink the theme into a Ghost checkout with `yarn symlink --theme <name> --site /path/to/Ghost/ghost/core`, restart Ghost, then select the theme in Design settings.
+- Validate a changed theme with `pnpm test:ci --theme <name>`. Prefer targeted validation over running every theme unless the change is cross-cutting.
+- For local Ghost verification, symlink the theme into a Ghost checkout with `pnpm symlink --theme <name> --site /path/to/Ghost/ghost/core`, restart Ghost, then select the theme in Design settings.
 
 ## Shared Assets
 
 - `packages/_shared/assets/js/v1` is used by older themes; `v2` is used by newer themes. Let `gulpfile.js` determine affected themes rather than guessing.
 - Shared partials in `packages/_shared/partials/` are copied into newer themes' `partials/components/` during root builds.
-- Only run `yarn ship:shared` when intentionally bumping `packages/_shared/package.json` patch version. Minor/major bumps use `npm --prefix packages/_shared version minor|major`.
+- Only run `pnpm ship:shared` when intentionally bumping `packages/_shared/package.json` patch version. Minor/major bumps use `npm --prefix packages/_shared version minor|major`.
 
 ## Translations
 
@@ -64,9 +64,9 @@ npm test
 
 ## CI Notes
 
-- Theme workflows run `yarn`, then `yarn test:ci --theme <theme>`.
+- Theme workflows run `pnpm install --frozen-lockfile`, then `pnpm test:ci --theme <theme>`.
 - On `main`, theme workflows deploy to demo Ghost sites and push package subtrees to standalone repos.
-- `_shared` CI sanity-checks with `yarn test:ci --theme taste` and publishes only when its package version is newer than npm.
+- `_shared` CI sanity-checks with `pnpm test:ci --theme taste` and publishes only when its package version is newer than npm.
 
 ## PR Review Threads
 
