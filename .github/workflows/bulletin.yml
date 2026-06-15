@@ -9,6 +9,9 @@ on:
       - 'packages/bulletin/**'
       - '.github/workflows/bulletin.yml'
 
+permissions:
+  contents: read
+
 jobs:
   test:
     name: Test
@@ -24,6 +27,16 @@ jobs:
           cache-dependency-path: pnpm-lock.yaml
       - run: pnpm install --frozen-lockfile
       - run: pnpm test:ci --theme bulletin
+  all-tests-pass:
+    name: All tests pass
+    if: always()
+    needs: [test]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify all required jobs succeeded
+        if: contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled')
+        run: exit 1
+
   deploy:
     name: Deploy
     runs-on: ubuntu-latest

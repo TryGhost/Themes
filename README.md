@@ -50,6 +50,8 @@ This monorepo contains three types of packages, each with a different shipping m
 
 Each theme has its own CI workflow (`.github/workflows/<theme>.yml`). On push to `main`, the workflow runs tests, deploys the theme to its Ghost demo site via `action-deploy-theme`, and pushes to its standalone subtree repo (e.g. `TryGhost/Taste`). Themes are marked `"private": true` and are not published to npm.
 
+See [docs/architecture.md](docs/architecture.md) for the package, deploy, and subtree sync flow.
+
 ### `@tryghost/shared-theme-assets` (`packages/_shared/`)
 
 Shared CSS, JS, and Handlebars partials used by all themes. Published to npm so themes can pin a version via `devDependencies`.
