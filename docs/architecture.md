@@ -25,4 +25,6 @@ flowchart TD
 
 ## CI boundaries
 
-Per-theme workflows live at `.github/workflows/<theme>.yml`. Each workflow scopes validation by passing the package name to `pnpm test:ci --theme <theme>`, then performs deploy and subtree work after merge. Do not add separate package-local workflow files for monorepo packages; the root workflows are the source of truth.
+Per-theme monorepo workflows live at `.github/workflows/<theme>.yml`. Each workflow scopes validation by passing the package name to `pnpm test:ci --theme <theme>`, then performs deploy and subtree work after merge.
+
+Package-local workflows under `packages/<theme>/.github/workflows/` are for the standalone subtree mirror repositories. They are copied to the root of `TryGhost/<Theme>` during subtree sync and run zip plus fatal gscan checks for Renovate and direct mirror PRs. They are not the source of truth for monorepo package validation.
