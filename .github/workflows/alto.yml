@@ -45,7 +45,7 @@ jobs:
     steps:
       - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
       - name: Deploy theme
-        uses: TryGhost/action-deploy-theme@1a25f014c92aac9240db4823faaf2ab942d36e78 # v2
+        uses: TryGhost/action-deploy-theme@57d2c493d3fc90d624bb9b906d29066c61bbbfe1 # v2
         with:
           api-url: ${{ secrets.ALTO_GHOST_ADMIN_API_URL }}
           api-key: ${{ secrets.ALTO_GHOST_ADMIN_API_KEY }}
