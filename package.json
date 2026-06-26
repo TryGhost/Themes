@@ -13,7 +13,7 @@
         "build": "gulp buildAll",
         "ship:shared": "npm --prefix packages/_shared version patch --no-git-tag-version"
     },
-    "packageManager": "pnpm@11.8.0",
+    "packageManager": "pnpm@11.9.0",
     "devDependencies": {
         "autoprefixer": "10.5.0",
         "beeper": "2.1.0",
