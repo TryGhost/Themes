@@ -27,8 +27,8 @@ jobs:
           cache-dependency-path: pnpm-lock.yaml
       - run: pnpm install --frozen-lockfile
       - run: pnpm test:ci --theme edition
-  all-tests-pass:
-    name: All tests pass
+  required-checks-pass:
+    name: Required checks pass
     if: always()
     needs: [test]
     runs-on: ubuntu-latest
