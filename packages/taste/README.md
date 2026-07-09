@@ -1,5 +1,8 @@
 # Taste
 
+> [!IMPORTANT]
+> This repo is synced automatically with the [TryGhost/Themes](https://github.com/TryGhost/Themes) monorepo. If you're looking to contribute or raise an issue, head over to the main repository [TryGhost/Themes](https://github.com/TryGhost/Themes) where our official themes are developed.
+
 Taste is a recipe-focused [Ghost](https://github.com/TryGhost/Ghost) theme for food publishers who want magazine-style sections, email signup prompts, and configurable homepage topics.
 
 **Demo: https://taste.ghost.io**
@@ -28,10 +31,6 @@ The `zip` Gulp task packages the theme files into `dist/taste.zip`, which you ca
 ```bash
 pnpm zip
 ```
-
-# Contribution
-
-This repo is synced automatically with the [TryGhost/Themes](https://github.com/TryGhost/Themes) monorepo. If you're looking to contribute or raise an issue, head over to the main repository where our official themes are developed.
 
 ## Theme translations
 

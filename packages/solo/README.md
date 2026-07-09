@@ -1,5 +1,8 @@
 # Solo
 
+> [!IMPORTANT]
+> This repo is synced automatically with the [TryGhost/Themes](https://github.com/TryGhost/Themes) monorepo. If you're looking to contribute or raise an issue, head over to the main repository [TryGhost/Themes](https://github.com/TryGhost/Themes) where our official themes are developed.
+
 Solo is a minimal theme for [Ghost](https://github.com/TryGhost/Ghost) focused on showcasing the work of an individual writer or creator. This theme is highly customizable, with a few simple settings that allow you to quickly apply your own personal style to your site.
 
 **Demo: https://solo.ghost.io**
@@ -28,10 +31,6 @@ The `zip` Gulp task packages the theme files into `dist/solo.zip`, which you can
 ```bash
 pnpm zip
 ```
-
-# Contribution
-
-This repo is synced automatically with [TryGhost/Themes](https://github.com/TryGhost/Themes) monorepo. If you're looking to contribute or raise an issue, head over to the main repository [TryGhost/Themes](https://github.com/TryGhost/Themes) where our official themes are developed.
 
 ### Theme translations
 
