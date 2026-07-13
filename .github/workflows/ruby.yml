@@ -45,7 +45,7 @@ jobs:
     steps:
       - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
       - name: Deploy theme
-        uses: TryGhost/action-deploy-theme@fabdc560bd55f2e9316e7cb3d726d77418fdcfa5 # v2
+        uses: TryGhost/action-deploy-theme@b1ff2a5eeac1d5438a0aab35eb996fe4010d889e # v2
         with:
           api-url: ${{ secrets.RUBY_GHOST_ADMIN_API_URL }}
           api-key: ${{ secrets.RUBY_GHOST_ADMIN_API_KEY }}
