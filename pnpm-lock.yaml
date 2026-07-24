@@ -9,20 +9,20 @@ importers:
   .:
     devDependencies:
       autoprefixer:
-        specifier: 10.5.2
-        version: 10.5.2(postcss@8.5.16)
+        specifier: 10.5.4
+        version: 10.5.4(postcss@8.5.21)
       beeper:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
         specifier: 8.0.2
-        version: 8.0.2(postcss@8.5.16)
+        version: 8.0.2(postcss@8.5.21)
       glob:
         specifier: 13.0.6
         version: 13.0.6
       gscan:
         specifier: 6.4.2
-        version: 6.4.2(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))
+        version: 6.4.2(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))(supports-color@7.2.0)
       gulp:
         specifier: 5.0.1
         version: 5.0.1
@@ -31,10 +31,10 @@ importers:
         version: 2.6.1
       gulp-livereload:
         specifier: 4.0.2
-        version: 4.0.2
+        version: 4.0.2(supports-color@7.2.0)
       gulp-postcss:
         specifier: 10.0.0
-        version: 10.0.0(postcss@8.5.16)
+        version: 10.0.0(postcss@8.5.21)
       gulp-uglify:
         specifier: 3.0.2
         version: 3.0.2
@@ -45,11 +45,11 @@ importers:
         specifier: 2.0.0
         version: 2.0.0
       postcss:
-        specifier: 8.5.16
-        version: 8.5.16
+        specifier: 8.5.21
+        version: 8.5.21
       postcss-easy-import:
         specifier: 4.0.0
-        version: 4.0.0(postcss@8.5.16)
+        version: 4.0.0(postcss@8.5.21)
       pump:
         specifier: 3.0.4
         version: 3.0.4
@@ -68,17 +68,17 @@ importers:
         specifier: ^0.0.9
         version: 0.0.9
       autoprefixer:
-        specifier: 10.5.2
-        version: 10.5.2(postcss@8.5.16)
+        specifier: 10.5.4
+        version: 10.5.4(postcss@8.5.21)
       beeper:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
         specifier: 8.0.2
-        version: 8.0.2(postcss@8.5.16)
+        version: 8.0.2(postcss@8.5.21)
       gscan:
         specifier: 6.4.2
-        version: 6.4.2(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))
+        version: 6.4.2(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))(supports-color@7.2.0)
       gulp:
         specifier: 5.0.1
         version: 5.0.1
@@ -87,10 +87,10 @@ importers:
         version: 2.6.1
       gulp-livereload:
         specifier: 4.0.2
-        version: 4.0.2
+        version: 4.0.2(supports-color@7.2.0)
       gulp-postcss:
         specifier: 10.0.0
-        version: 10.0.0(postcss@8.5.16)
+        version: 10.0.0(postcss@8.5.21)
       gulp-uglify:
         specifier: 3.0.2
         version: 3.0.2
@@ -101,11 +101,11 @@ importers:
         specifier: 2.0.0
         version: 2.0.0
       postcss:
-        specifier: 8.5.16
-        version: 8.5.16
+        specifier: 8.5.21
+        version: 8.5.21
       postcss-easy-import:
         specifier: 4.0.0
-        version: 4.0.0(postcss@8.5.16)
+        version: 4.0.0(postcss@8.5.21)
       pump:
         specifier: 3.0.4
         version: 3.0.4
@@ -119,17 +119,17 @@ importers:
         specifier: ^0.0.9
         version: 0.0.9
       autoprefixer:
-        specifier: 10.5.2
-        version: 10.5.2(postcss@8.5.16)
+        specifier: 10.5.4
+        version: 10.5.4(postcss@8.5.21)
       beeper:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
         specifier: 8.0.2
-        version: 8.0.2(postcss@8.5.16)
+        version: 8.0.2(postcss@8.5.21)
       gscan:
         specifier: 6.4.2
-        version: 6.4.2(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))
+        version: 6.4.2(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))(supports-color@7.2.0)
       gulp:
         specifier: 5.0.1
         version: 5.0.1
@@ -138,10 +138,10 @@ importers:
         version: 2.6.1
       gulp-livereload:
         specifier: 4.0.2
-        version: 4.0.2
+        version: 4.0.2(supports-color@7.2.0)
       gulp-postcss:
         specifier: 10.0.0
-        version: 10.0.0(postcss@8.5.16)
+        version: 10.0.0(postcss@8.5.21)
       gulp-uglify:
         specifier: 3.0.2
         version: 3.0.2
@@ -152,11 +152,11 @@ importers:
         specifier: 2.0.0
         version: 2.0.0
       postcss:
-        specifier: 8.5.16
-        version: 8.5.16
+        specifier: 8.5.21
+        version: 8.5.21
       postcss-easy-import:
         specifier: 4.0.0
-        version: 4.0.0(postcss@8.5.16)
+        version: 4.0.0(postcss@8.5.21)
       pump:
         specifier: 3.0.4
         version: 3.0.4
@@ -170,17 +170,17 @@ importers:
         specifier: ^0.0.9
         version: 0.0.9
       autoprefixer:
-        specifier: 10.5.2
-        version: 10.5.2(postcss@8.5.16)
+        specifier: 10.5.4
+        version: 10.5.4(postcss@8.5.21)
       beeper:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
         specifier: 8.0.2
-        version: 8.0.2(postcss@8.5.16)
+        version: 8.0.2(postcss@8.5.21)
       gscan:
         specifier: 6.4.2
-        version: 6.4.2(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))
+        version: 6.4.2(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))(supports-color@7.2.0)
       gulp:
         specifier: 5.0.1
         version: 5.0.1
@@ -189,10 +189,10 @@ importers:
         version: 2.6.1
       gulp-livereload:
         specifier: 4.0.2
-        version: 4.0.2
+        version: 4.0.2(supports-color@7.2.0)
       gulp-postcss:
         specifier: 10.0.0
-        version: 10.0.0(postcss@8.5.16)
+        version: 10.0.0(postcss@8.5.21)
       gulp-uglify:
         specifier: 3.0.2
         version: 3.0.2
@@ -203,11 +203,11 @@ importers:
         specifier: 2.0.0
         version: 2.0.0
       postcss:
-        specifier: 8.5.16
-        version: 8.5.16
+        specifier: 8.5.21
+        version: 8.5.21
       postcss-easy-import:
         specifier: 4.0.0
-        version: 4.0.0(postcss@8.5.16)
+        version: 4.0.0(postcss@8.5.21)
       pump:
         specifier: 3.0.4
         version: 3.0.4
@@ -221,17 +221,17 @@ importers:
         specifier: ^0.0.9
         version: 0.0.9
       autoprefixer:
-        specifier: 10.5.2
-        version: 10.5.2(postcss@8.5.16)
+        specifier: 10.5.4
+        version: 10.5.4(postcss@8.5.21)
       beeper:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
         specifier: 8.0.2
-        version: 8.0.2(postcss@8.5.16)
+        version: 8.0.2(postcss@8.5.21)
       gscan:
         specifier: 6.4.2
-        version: 6.4.2(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))
+        version: 6.4.2(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))(supports-color@7.2.0)
       gulp:
         specifier: 5.0.1
         version: 5.0.1
@@ -240,10 +240,10 @@ importers:
         version: 2.6.1
       gulp-livereload:
         specifier: 4.0.2
-        version: 4.0.2
+        version: 4.0.2(supports-color@7.2.0)
       gulp-postcss:
         specifier: 10.0.0
-        version: 10.0.0(postcss@8.5.16)
+        version: 10.0.0(postcss@8.5.21)
       gulp-uglify:
         specifier: 3.0.2
         version: 3.0.2
@@ -254,11 +254,11 @@ importers:
         specifier: 2.0.0
         version: 2.0.0
       postcss:
-        specifier: 8.5.16
-        version: 8.5.16
+        specifier: 8.5.21
+        version: 8.5.21
       postcss-easy-import:
         specifier: 4.0.0
-        version: 4.0.0(postcss@8.5.16)
+        version: 4.0.0(postcss@8.5.21)
       pump:
         specifier: 3.0.4
         version: 3.0.4
@@ -272,17 +272,17 @@ importers:
         specifier: ^0.0.9
         version: 0.0.9
       autoprefixer:
-        specifier: 10.5.2
-        version: 10.5.2(postcss@8.5.16)
+        specifier: 10.5.4
+        version: 10.5.4(postcss@8.5.21)
       beeper:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
         specifier: 8.0.2
-        version: 8.0.2(postcss@8.5.16)
+        version: 8.0.2(postcss@8.5.21)
       gscan:
         specifier: 6.4.2
-        version: 6.4.2(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))
+        version: 6.4.2(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))(supports-color@7.2.0)
       gulp:
         specifier: 5.0.1
         version: 5.0.1
@@ -291,10 +291,10 @@ importers:
         version: 2.6.1
       gulp-livereload:
         specifier: 4.0.2
-        version: 4.0.2
+        version: 4.0.2(supports-color@7.2.0)
       gulp-postcss:
         specifier: 10.0.0
-        version: 10.0.0(postcss@8.5.16)
+        version: 10.0.0(postcss@8.5.21)
       gulp-uglify:
         specifier: 3.0.2
         version: 3.0.2
@@ -305,11 +305,11 @@ importers:
         specifier: 2.0.0
         version: 2.0.0
       postcss:
-        specifier: 8.5.16
-        version: 8.5.16
+        specifier: 8.5.21
+        version: 8.5.21
       postcss-easy-import:
         specifier: 4.0.0
-        version: 4.0.0(postcss@8.5.16)
+        version: 4.0.0(postcss@8.5.21)
       pump:
         specifier: 3.0.4
         version: 3.0.4
@@ -323,17 +323,17 @@ importers:
         specifier: ^0.0.9
         version: 0.0.9
       autoprefixer:
-        specifier: 10.5.2
-        version: 10.5.2(postcss@8.5.16)
+        specifier: 10.5.4
+        version: 10.5.4(postcss@8.5.21)
       beeper:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
         specifier: 8.0.2
-        version: 8.0.2(postcss@8.5.16)
+        version: 8.0.2(postcss@8.5.21)
       gscan:
         specifier: 6.4.2
-        version: 6.4.2(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))
+        version: 6.4.2(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))(supports-color@7.2.0)
       gulp:
         specifier: 5.0.1
         version: 5.0.1
@@ -342,10 +342,10 @@ importers:
         version: 2.6.1
       gulp-livereload:
         specifier: 4.0.2
-        version: 4.0.2
+        version: 4.0.2(supports-color@7.2.0)
       gulp-postcss:
         specifier: 10.0.0
-        version: 10.0.0(postcss@8.5.16)
+        version: 10.0.0(postcss@8.5.21)
       gulp-uglify:
         specifier: 3.0.2
         version: 3.0.2
@@ -356,11 +356,11 @@ importers:
         specifier: 2.0.0
         version: 2.0.0
       postcss:
-        specifier: 8.5.16
-        version: 8.5.16
+        specifier: 8.5.21
+        version: 8.5.21
       postcss-easy-import:
         specifier: 4.0.0
-        version: 4.0.0(postcss@8.5.16)
+        version: 4.0.0(postcss@8.5.21)
       pump:
         specifier: 3.0.4
         version: 3.0.4
@@ -374,17 +374,17 @@ importers:
         specifier: ^0.0.9
         version: 0.0.9
       autoprefixer:
-        specifier: 10.5.2
-        version: 10.5.2(postcss@8.5.16)
+        specifier: 10.5.4
+        version: 10.5.4(postcss@8.5.21)
       beeper:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
         specifier: 8.0.2
-        version: 8.0.2(postcss@8.5.16)
+        version: 8.0.2(postcss@8.5.21)
       gscan:
         specifier: 6.4.2
-        version: 6.4.2(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))
+        version: 6.4.2(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))(supports-color@7.2.0)
       gulp:
         specifier: 5.0.1
         version: 5.0.1
@@ -393,10 +393,10 @@ importers:
         version: 2.6.1
       gulp-livereload:
         specifier: 4.0.2
-        version: 4.0.2
+        version: 4.0.2(supports-color@7.2.0)
       gulp-postcss:
         specifier: 10.0.0
-        version: 10.0.0(postcss@8.5.16)
+        version: 10.0.0(postcss@8.5.21)
       gulp-uglify:
         specifier: 3.0.2
         version: 3.0.2
@@ -407,11 +407,11 @@ importers:
         specifier: 2.0.0
         version: 2.0.0
       postcss:
-        specifier: 8.5.16
-        version: 8.5.16
+        specifier: 8.5.21
+        version: 8.5.21
       postcss-easy-import:
         specifier: 4.0.0
-        version: 4.0.0(postcss@8.5.16)
+        version: 4.0.0(postcss@8.5.21)
       pump:
         specifier: 3.0.4
         version: 3.0.4
@@ -425,17 +425,17 @@ importers:
         specifier: ^0.0.9
         version: 0.0.9
       autoprefixer:
-        specifier: 10.5.2
-        version: 10.5.2(postcss@8.5.16)
+        specifier: 10.5.4
+        version: 10.5.4(postcss@8.5.21)
       beeper:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
         specifier: 8.0.2
-        version: 8.0.2(postcss@8.5.16)
+        version: 8.0.2(postcss@8.5.21)
       gscan:
         specifier: 6.4.2
-        version: 6.4.2(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))
+        version: 6.4.2(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))(supports-color@7.2.0)
       gulp:
         specifier: 5.0.1
         version: 5.0.1
@@ -444,10 +444,10 @@ importers:
         version: 2.6.1
       gulp-livereload:
         specifier: 4.0.2
-        version: 4.0.2
+        version: 4.0.2(supports-color@7.2.0)
       gulp-postcss:
         specifier: 10.0.0
-        version: 10.0.0(postcss@8.5.16)
+        version: 10.0.0(postcss@8.5.21)
       gulp-uglify:
         specifier: 3.0.2
         version: 3.0.2
@@ -458,11 +458,11 @@ importers:
         specifier: 2.0.0
         version: 2.0.0
       postcss:
-        specifier: 8.5.16
-        version: 8.5.16
+        specifier: 8.5.21
+        version: 8.5.21
       postcss-easy-import:
         specifier: 4.0.0
-        version: 4.0.0(postcss@8.5.16)
+        version: 4.0.0(postcss@8.5.21)
       pump:
         specifier: 3.0.4
         version: 3.0.4
@@ -476,17 +476,17 @@ importers:
         specifier: ^0.0.9
         version: 0.0.9
       autoprefixer:
-        specifier: 10.5.2
-        version: 10.5.2(postcss@8.5.16)
+        specifier: 10.5.4
+        version: 10.5.4(postcss@8.5.21)
       beeper:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
         specifier: 8.0.2
-        version: 8.0.2(postcss@8.5.16)
+        version: 8.0.2(postcss@8.5.21)
       gscan:
         specifier: 6.4.2
-        version: 6.4.2(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))
+        version: 6.4.2(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))(supports-color@7.2.0)
       gulp:
         specifier: 5.0.1
         version: 5.0.1
@@ -495,10 +495,10 @@ importers:
         version: 2.6.1
       gulp-livereload:
         specifier: 4.0.2
-        version: 4.0.2
+        version: 4.0.2(supports-color@7.2.0)
       gulp-postcss:
         specifier: 10.0.0
-        version: 10.0.0(postcss@8.5.16)
+        version: 10.0.0(postcss@8.5.21)
       gulp-uglify:
         specifier: 3.0.2
         version: 3.0.2
@@ -509,11 +509,11 @@ importers:
         specifier: 2.0.0
         version: 2.0.0
       postcss:
-        specifier: 8.5.16
-        version: 8.5.16
+        specifier: 8.5.21
+        version: 8.5.21
       postcss-easy-import:
         specifier: 4.0.0
-        version: 4.0.0(postcss@8.5.16)
+        version: 4.0.0(postcss@8.5.21)
       pump:
         specifier: 3.0.4
         version: 3.0.4
@@ -527,17 +527,17 @@ importers:
         specifier: ^0.0.9
         version: 0.0.9
       autoprefixer:
-        specifier: 10.5.2
-        version: 10.5.2(postcss@8.5.16)
+        specifier: 10.5.4
+        version: 10.5.4(postcss@8.5.21)
       beeper:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
         specifier: 8.0.2
-        version: 8.0.2(postcss@8.5.16)
+        version: 8.0.2(postcss@8.5.21)
       gscan:
         specifier: 6.4.2
-        version: 6.4.2(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))
+        version: 6.4.2(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))(supports-color@7.2.0)
       gulp:
         specifier: 5.0.1
         version: 5.0.1
@@ -546,10 +546,10 @@ importers:
         version: 2.6.1
       gulp-livereload:
         specifier: 4.0.2
-        version: 4.0.2
+        version: 4.0.2(supports-color@7.2.0)
       gulp-postcss:
         specifier: 10.0.0
-        version: 10.0.0(postcss@8.5.16)
+        version: 10.0.0(postcss@8.5.21)
       gulp-uglify:
         specifier: 3.0.2
         version: 3.0.2
@@ -560,11 +560,11 @@ importers:
         specifier: 2.0.0
         version: 2.0.0
       postcss:
-        specifier: 8.5.16
-        version: 8.5.16
+        specifier: 8.5.21
+        version: 8.5.21
       postcss-easy-import:
         specifier: 4.0.0
-        version: 4.0.0(postcss@8.5.16)
+        version: 4.0.0(postcss@8.5.21)
       pump:
         specifier: 3.0.4
         version: 3.0.4
@@ -578,17 +578,17 @@ importers:
         specifier: ^0.0.9
         version: 0.0.9
       autoprefixer:
-        specifier: 10.5.2
-        version: 10.5.2(postcss@8.5.16)
+        specifier: 10.5.4
+        version: 10.5.4(postcss@8.5.21)
       beeper:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
         specifier: 8.0.2
-        version: 8.0.2(postcss@8.5.16)
+        version: 8.0.2(postcss@8.5.21)
       gscan:
         specifier: 6.4.2
-        version: 6.4.2(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))
+        version: 6.4.2(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))(supports-color@7.2.0)
       gulp:
         specifier: 5.0.1
         version: 5.0.1
@@ -597,10 +597,10 @@ importers:
         version: 2.6.1
       gulp-livereload:
         specifier: 4.0.2
-        version: 4.0.2
+        version: 4.0.2(supports-color@7.2.0)
       gulp-postcss:
         specifier: 10.0.0
-        version: 10.0.0(postcss@8.5.16)
+        version: 10.0.0(postcss@8.5.21)
       gulp-uglify:
         specifier: 3.0.2
         version: 3.0.2
@@ -611,11 +611,11 @@ importers:
         specifier: 2.0.0
         version: 2.0.0
       postcss:
-        specifier: 8.5.16
-        version: 8.5.16
+        specifier: 8.5.21
+        version: 8.5.21
       postcss-easy-import:
         specifier: 4.0.0
-        version: 4.0.0(postcss@8.5.16)
+        version: 4.0.0(postcss@8.5.21)
       pump:
         specifier: 3.0.4
         version: 3.0.4
@@ -629,17 +629,17 @@ importers:
         specifier: ^0.0.9
         version: 0.0.9
       autoprefixer:
-        specifier: 10.5.2
-        version: 10.5.2(postcss@8.5.16)
+        specifier: 10.5.4
+        version: 10.5.4(postcss@8.5.21)
       beeper:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
         specifier: 8.0.2
-        version: 8.0.2(postcss@8.5.16)
+        version: 8.0.2(postcss@8.5.21)
       gscan:
         specifier: 6.4.2
-        version: 6.4.2(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))
+        version: 6.4.2(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))(supports-color@7.2.0)
       gulp:
         specifier: 5.0.1
         version: 5.0.1
@@ -648,10 +648,10 @@ importers:
         version: 2.6.1
       gulp-livereload:
         specifier: 4.0.2
-        version: 4.0.2
+        version: 4.0.2(supports-color@7.2.0)
       gulp-postcss:
         specifier: 10.0.0
-        version: 10.0.0(postcss@8.5.16)
+        version: 10.0.0(postcss@8.5.21)
       gulp-uglify:
         specifier: 3.0.2
         version: 3.0.2
@@ -662,11 +662,11 @@ importers:
         specifier: 2.0.0
         version: 2.0.0
       postcss:
-        specifier: 8.5.16
-        version: 8.5.16
+        specifier: 8.5.21
+        version: 8.5.21
       postcss-easy-import:
         specifier: 4.0.0
-        version: 4.0.0(postcss@8.5.16)
+        version: 4.0.0(postcss@8.5.21)
       pump:
         specifier: 3.0.4
         version: 3.0.4
@@ -680,17 +680,17 @@ importers:
         specifier: ^0.0.9
         version: 0.0.9
       autoprefixer:
-        specifier: 10.5.2
-        version: 10.5.2(postcss@8.5.16)
+        specifier: 10.5.4
+        version: 10.5.4(postcss@8.5.21)
       beeper:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
         specifier: 8.0.2
-        version: 8.0.2(postcss@8.5.16)
+        version: 8.0.2(postcss@8.5.21)
       gscan:
         specifier: 6.4.2
-        version: 6.4.2(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))
+        version: 6.4.2(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))(supports-color@7.2.0)
       gulp:
         specifier: 5.0.1
         version: 5.0.1
@@ -699,10 +699,10 @@ importers:
         version: 2.6.1
       gulp-livereload:
         specifier: 4.0.2
-        version: 4.0.2
+        version: 4.0.2(supports-color@7.2.0)
       gulp-postcss:
         specifier: 10.0.0
-        version: 10.0.0(postcss@8.5.16)
+        version: 10.0.0(postcss@8.5.21)
       gulp-uglify:
         specifier: 3.0.2
         version: 3.0.2
@@ -713,11 +713,11 @@ importers:
         specifier: 2.0.0
         version: 2.0.0
       postcss:
-        specifier: 8.5.16
-        version: 8.5.16
+        specifier: 8.5.21
+        version: 8.5.21
       postcss-easy-import:
         specifier: 4.0.0
-        version: 4.0.0(postcss@8.5.16)
+        version: 4.0.0(postcss@8.5.21)
       pump:
         specifier: 3.0.4
         version: 3.0.4
@@ -731,17 +731,17 @@ importers:
         specifier: ^0.0.9
         version: 0.0.9
       autoprefixer:
-        specifier: 10.5.2
-        version: 10.5.2(postcss@8.5.16)
+        specifier: 10.5.4
+        version: 10.5.4(postcss@8.5.21)
       beeper:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
         specifier: 8.0.2
-        version: 8.0.2(postcss@8.5.16)
+        version: 8.0.2(postcss@8.5.21)
       gscan:
         specifier: 6.4.2
-        version: 6.4.2(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))
+        version: 6.4.2(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))(supports-color@7.2.0)
       gulp:
         specifier: 5.0.1
         version: 5.0.1
@@ -750,10 +750,10 @@ importers:
         version: 2.6.1
       gulp-livereload:
         specifier: 4.0.2
-        version: 4.0.2
+        version: 4.0.2(supports-color@7.2.0)
       gulp-postcss:
         specifier: 10.0.0
-        version: 10.0.0(postcss@8.5.16)
+        version: 10.0.0(postcss@8.5.21)
       gulp-uglify:
         specifier: 3.0.2
         version: 3.0.2
@@ -764,11 +764,11 @@ importers:
         specifier: 2.0.0
         version: 2.0.0
       postcss:
-        specifier: 8.5.16
-        version: 8.5.16
+        specifier: 8.5.21
+        version: 8.5.21
       postcss-easy-import:
         specifier: 4.0.0
-        version: 4.0.0(postcss@8.5.16)
+        version: 4.0.0(postcss@8.5.21)
       pump:
         specifier: 3.0.4
         version: 3.0.4
@@ -782,17 +782,17 @@ importers:
         specifier: ^0.0.9
         version: 0.0.9
       autoprefixer:
-        specifier: 10.5.2
-        version: 10.5.2(postcss@8.5.16)
+        specifier: 10.5.4
+        version: 10.5.4(postcss@8.5.21)
       beeper:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
         specifier: 8.0.2
-        version: 8.0.2(postcss@8.5.16)
+        version: 8.0.2(postcss@8.5.21)
       gscan:
         specifier: 6.4.2
-        version: 6.4.2(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))
+        version: 6.4.2(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))(supports-color@7.2.0)
       gulp:
         specifier: 5.0.1
         version: 5.0.1
@@ -801,10 +801,10 @@ importers:
         version: 2.6.1
       gulp-livereload:
         specifier: 4.0.2
-        version: 4.0.2
+        version: 4.0.2(supports-color@7.2.0)
       gulp-postcss:
         specifier: 10.0.0
-        version: 10.0.0(postcss@8.5.16)
+        version: 10.0.0(postcss@8.5.21)
       gulp-uglify:
         specifier: 3.0.2
         version: 3.0.2
@@ -815,11 +815,11 @@ importers:
         specifier: 2.0.0
         version: 2.0.0
       postcss:
-        specifier: 8.5.16
-        version: 8.5.16
+        specifier: 8.5.21
+        version: 8.5.21
       postcss-easy-import:
         specifier: 4.0.0
-        version: 4.0.0(postcss@8.5.16)
+        version: 4.0.0(postcss@8.5.21)
       pump:
         specifier: 3.0.4
         version: 3.0.4
@@ -835,17 +835,17 @@ importers:
         specifier: ^0.0.9
         version: 0.0.9
       autoprefixer:
-        specifier: 10.5.2
-        version: 10.5.2(postcss@8.5.16)
+        specifier: 10.5.4
+        version: 10.5.4(postcss@8.5.21)
       beeper:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
         specifier: 8.0.2
-        version: 8.0.2(postcss@8.5.16)
+        version: 8.0.2(postcss@8.5.21)
       gscan:
         specifier: 6.4.2
-        version: 6.4.2(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))
+        version: 6.4.2(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))(supports-color@7.2.0)
       gulp:
         specifier: 5.0.1
         version: 5.0.1
@@ -854,10 +854,10 @@ importers:
         version: 2.6.1
       gulp-livereload:
         specifier: 4.0.2
-        version: 4.0.2
+        version: 4.0.2(supports-color@7.2.0)
       gulp-postcss:
         specifier: 10.0.0
-        version: 10.0.0(postcss@8.5.16)
+        version: 10.0.0(postcss@8.5.21)
       gulp-uglify:
         specifier: 3.0.2
         version: 3.0.2
@@ -868,11 +868,11 @@ importers:
         specifier: 2.0.0
         version: 2.0.0
       postcss:
-        specifier: 8.5.16
-        version: 8.5.16
+        specifier: 8.5.21
+        version: 8.5.21
       postcss-easy-import:
         specifier: 4.0.0
-        version: 4.0.0(postcss@8.5.16)
+        version: 4.0.0(postcss@8.5.21)
       pump:
         specifier: 3.0.4
         version: 3.0.4
@@ -1222,8 +1222,8 @@ packages:
   async@3.2.6:
     resolution: {integrity: sha512-htCUDlxyyCLMgaM3xXg0C0LW2xqfuQ6p05pCEIsXuyQ+a1koYKTuBMzRNwmybfLgvJDMd0r1LTn4+E0Ti6C2AA==}
 
-  autoprefixer@10.5.2:
-    resolution: {integrity: sha512-rD5t5DwOjJdmSORcTq64j8MawTC+tbQ+HHqjR4NDumamy/ambn1UJrlKL+KdwujWxMkFjPM3pPHOEA9tl4767Q==}
+  autoprefixer@10.5.4:
+    resolution: {integrity: sha512-MaU0U/za7N3r6brxD4YB/l4NSrFzLPlANv6wEuQVaIPlD3L4W9rFcQPbL/EilY9BHhHvhfcz3gInDLrEtWT4EA==}
     engines: {node: ^10 || ^12 || >=14}
     hasBin: true
     peerDependencies:
@@ -1297,6 +1297,11 @@ packages:
     engines: {node: '>=6.0.0'}
     hasBin: true
 
+  baseline-browser-mapping@2.11.1:
+    resolution: {integrity: sha512-HYXq73DDpCtNzOmrFsm9eSwCvWCql0RzqjpDzXN9EadiLJ4DNat0nsZ/Bzmy+Ud12mb4/zKDY0cQ805ZzN+i0A==}
+    engines: {node: '>=6.0.0'}
+    hasBin: true
+
   beeper@2.1.0:
     resolution: {integrity: sha512-85+CcymhlP0jM4fs4ZMiMRl58VthoN9NRdvi+knXiQpP2UggkSre+A9rOZ0c2g2Vh+pEF5ZAlT+k8dsJNoanAA==}
     engines: {node: '>=8'}
@@ -1336,6 +1341,11 @@ packages:
 
   browserslist@4.28.4:
     resolution: {integrity: sha512-MTc8i/x9jBQd1iMw2CFGS+rwMa07eYjLR0CCTLDACl9xhxy+nIs3KeML/biicXtk9JrZ6dnnTatmc7ErPXIxqw==}
+    engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
+    hasBin: true
+
+  browserslist@4.28.7:
+    resolution: {integrity: sha512-JxV13hNrFxqjOc8alRbq9dK1MM79NEXYpma2B2J4wAtpWS5zIEIKqWPGCl7N4o7Uc7B7itylh7SuDujATRyyTw==}
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
 
@@ -1396,6 +1406,9 @@ packages:
 
   caniuse-lite@1.0.30001799:
     resolution: {integrity: sha512-hG1bReV+OUU+MOqK4t/ZWI0tZOyz3rqS9XuhOUz1cIcbwBKjOyJEJuw9ER5JuNyqxNk8u/JUVbGibBOL1yrjFw==}
+
+  caniuse-lite@1.0.30001806:
+    resolution: {integrity: sha512-72Cuvd95zbSYPKq6Fhg8eDJRlzgWDf7/mtoZv6Qe/DYNCEBdNxoA3+rZAU2ZhGCpZlns3EssFavaZomckT5Uuw==}
 
   chalk-template@0.4.0:
     resolution: {integrity: sha512-/ghrgmhfY8RaSdeo43hNXxpoHAtxdbskUHjPpfqUWGttFgycUhYPGx3YZBCnUCvOa7Doivn1IZec3DEGFoMgLg==}
@@ -1648,6 +1661,9 @@ packages:
 
   electron-to-chromium@1.5.376:
     resolution: {integrity: sha512-cUVA7/RvbFTEuw/i3obUwDTRIXojaxkResf+ibByPFxjc6XK3VNtcQXV0NSbAlJ0FMjcJGgftVVB4Qo184EXvA==}
+
+  electron-to-chromium@1.5.395:
+    resolution: {integrity: sha512-7zt9Aw+SrmxLWLN0zhaTWZQiCdryLVrYTq5R7iZakLvi2UQPYMMsROYV/2qVCzMeCiSXHwKOU+sZ4zOVVlrtKA==}
 
   emoji-regex@10.6.0:
     resolution: {integrity: sha512-toUI84YS5YmxW219erniWD0CIVOo46xGKColeNQRgOzDorgBi1v4D71/OFzgD9GO2UGKIv1C3Sp8DAn0+j5w7A==}
@@ -2327,8 +2343,8 @@ packages:
   nan@2.27.0:
     resolution: {integrity: sha512-hC+0LidcL3XE4rp1C4H54KujgXKzbfyTngZTwBByQxsOxCEKZT0MPQ4hOKUH2jU1OYstqdDH4onyHPDzcV0XdQ==}
 
-  nanoid@3.3.14:
-    resolution: {integrity: sha512-U9kYi5bpVMEI31yC8iw4bJJp0avcHXA0W8/wNfLfnvJYzihQo2ZRPYPvpAAd570HAcCBjCTN7vnr+v4StKl1IQ==}
+  nanoid@3.3.16:
+    resolution: {integrity: sha512-bzlKTyNJ7+LdGIIwy8ijFpIqEQIvafahV7eYykJ8Cvh42EdJeODoJ6gUJXpQJvej1BddH8OqTXZNE/KfbWAu8Q==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
@@ -2349,6 +2365,10 @@ packages:
 
   node-releases@2.0.48:
     resolution: {integrity: sha512-1uz8041X6LoI6ZSdZacM9lVY28vuzDlSKitnpbSNK0RfKoIJkX29NBPVEFXhnuSuEOA9Ww0xnPJ+ILWbGAv8DA==}
+    engines: {node: '>=18'}
+
+  node-releases@2.0.51:
+    resolution: {integrity: sha512-wRNIrw4DmVLKQlbgOMdkMx27Wrpzes2hh5Jtbi2bjPd+4wJstWIqP5A+lscnqbm0xxmT5Bpg8Lec5ItEBwx6BQ==}
     engines: {node: '>=18'}
 
   normalize-path@3.0.0:
@@ -2672,8 +2692,8 @@ packages:
   postcss-value-parser@4.2.0:
     resolution: {integrity: sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==}
 
-  postcss@8.5.16:
-    resolution: {integrity: sha512-vuwillviilfKZsg0VGj5R/YwwcHx4SLsIOI/7K6mQkWx+l5cUHTjj5g0AasTBcyXsbfTgrwsUNmVUb5xVwyPwg==}
+  postcss@8.5.21:
+    resolution: {integrity: sha512-v4sDNP3fdNiWMfabO7OwOQdOX8TiQSztKyT1Wj0w+j7LDallJThJRBBBmzVGyYj0crMh7jlV4zepPkiNu9UwDQ==}
     engines: {node: ^10 || ^12 || >=14}
 
   prettyjson@1.2.5:
@@ -3215,10 +3235,10 @@ snapshots:
       semifies: 1.0.0
       source-map: 0.6.1
 
-  '@apm-js-collab/tracing-hooks@0.10.1':
+  '@apm-js-collab/tracing-hooks@0.10.1(supports-color@7.2.0)':
     dependencies:
       '@apm-js-collab/code-transformer': 0.15.0
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
       module-details-from-path: 1.0.4
     transitivePeerDependencies:
       - supports-color
@@ -3227,20 +3247,20 @@ snapshots:
 
   '@colordx/core@5.4.3': {}
 
-  '@elastic/elasticsearch@8.19.1':
+  '@elastic/elasticsearch@8.19.1(supports-color@7.2.0)':
     dependencies:
-      '@elastic/transport': 8.10.1
+      '@elastic/transport': 8.10.1(supports-color@7.2.0)
       apache-arrow: 21.1.0
       tslib: 2.8.1
     transitivePeerDependencies:
       - '@75lb/nature'
       - supports-color
 
-  '@elastic/transport@8.10.1':
+  '@elastic/transport@8.10.1(supports-color@7.2.0)':
     dependencies:
       '@opentelemetry/api': 1.9.1
       '@opentelemetry/core': 2.8.0(@opentelemetry/api@1.9.1)
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
       hpagent: 1.2.0
       ms: 2.1.3
       secure-json-parse: 3.0.2
@@ -3277,12 +3297,12 @@ snapshots:
       '@opentelemetry/api': 1.9.1
       '@opentelemetry/semantic-conventions': 1.41.1
 
-  '@opentelemetry/instrumentation@0.220.0(@opentelemetry/api@1.9.1)':
+  '@opentelemetry/instrumentation@0.220.0(@opentelemetry/api@1.9.1)(supports-color@7.2.0)':
     dependencies:
       '@opentelemetry/api': 1.9.1
       '@opentelemetry/api-logs': 0.220.0
       import-in-the-middle: 3.1.0
-      require-in-the-middle: 8.0.1
+      require-in-the-middle: 8.0.1(supports-color@7.2.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -3317,7 +3337,7 @@ snapshots:
     dependencies:
       '@sentry/conventions': 0.15.1
 
-  '@sentry/node-core@10.65.0(@opentelemetry/api@1.9.1)(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))(@opentelemetry/instrumentation@0.220.0(@opentelemetry/api@1.9.1))(@opentelemetry/sdk-trace-base@2.9.0(@opentelemetry/api@1.9.1))':
+  '@sentry/node-core@10.65.0(@opentelemetry/api@1.9.1)(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))(@opentelemetry/instrumentation@0.220.0(@opentelemetry/api@1.9.1)(supports-color@7.2.0))(@opentelemetry/sdk-trace-base@2.9.0(@opentelemetry/api@1.9.1))':
     dependencies:
       '@sentry/conventions': 0.15.1
       '@sentry/core': 10.65.0
@@ -3326,19 +3346,19 @@ snapshots:
     optionalDependencies:
       '@opentelemetry/api': 1.9.1
       '@opentelemetry/core': 2.9.0(@opentelemetry/api@1.9.1)
-      '@opentelemetry/instrumentation': 0.220.0(@opentelemetry/api@1.9.1)
+      '@opentelemetry/instrumentation': 0.220.0(@opentelemetry/api@1.9.1)(supports-color@7.2.0)
       '@opentelemetry/sdk-trace-base': 2.9.0(@opentelemetry/api@1.9.1)
 
-  '@sentry/node@10.65.0(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))':
+  '@sentry/node@10.65.0(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))(supports-color@7.2.0)':
     dependencies:
       '@opentelemetry/api': 1.9.1
-      '@opentelemetry/instrumentation': 0.220.0(@opentelemetry/api@1.9.1)
+      '@opentelemetry/instrumentation': 0.220.0(@opentelemetry/api@1.9.1)(supports-color@7.2.0)
       '@opentelemetry/sdk-trace-base': 2.9.0(@opentelemetry/api@1.9.1)
       '@sentry/conventions': 0.15.1
       '@sentry/core': 10.65.0
-      '@sentry/node-core': 10.65.0(@opentelemetry/api@1.9.1)(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))(@opentelemetry/instrumentation@0.220.0(@opentelemetry/api@1.9.1))(@opentelemetry/sdk-trace-base@2.9.0(@opentelemetry/api@1.9.1))
+      '@sentry/node-core': 10.65.0(@opentelemetry/api@1.9.1)(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))(@opentelemetry/instrumentation@0.220.0(@opentelemetry/api@1.9.1)(supports-color@7.2.0))(@opentelemetry/sdk-trace-base@2.9.0(@opentelemetry/api@1.9.1))
       '@sentry/opentelemetry': 10.65.0(@opentelemetry/api@1.9.1)(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))(@opentelemetry/sdk-trace-base@2.9.0(@opentelemetry/api@1.9.1))
-      '@sentry/server-utils': 10.65.0
+      '@sentry/server-utils': 10.65.0(supports-color@7.2.0)
       import-in-the-middle: 3.1.0
     transitivePeerDependencies:
       - '@opentelemetry/core'
@@ -3353,11 +3373,11 @@ snapshots:
       '@sentry/conventions': 0.15.1
       '@sentry/core': 10.65.0
 
-  '@sentry/server-utils@10.65.0':
+  '@sentry/server-utils@10.65.0(supports-color@7.2.0)':
     dependencies:
       '@apm-js-collab/code-transformer': 0.15.0
       '@apm-js-collab/code-transformer-bundler-plugins': 0.5.0
-      '@apm-js-collab/tracing-hooks': 0.10.1
+      '@apm-js-collab/tracing-hooks': 0.10.1(supports-color@7.2.0)
       '@sentry/conventions': 0.15.1
       '@sentry/core': 10.65.0
       magic-string: 0.30.21
@@ -3379,17 +3399,17 @@ snapshots:
       '@tryghost/root-utils': 2.3.1
       nconf: 0.13.0
 
-  '@tryghost/debug@2.3.1':
+  '@tryghost/debug@2.3.1(supports-color@7.2.0)':
     dependencies:
       '@tryghost/root-utils': 2.3.1
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
     transitivePeerDependencies:
       - supports-color
 
-  '@tryghost/elasticsearch@5.3.1':
+  '@tryghost/elasticsearch@5.3.1(supports-color@7.2.0)':
     dependencies:
-      '@elastic/elasticsearch': 8.19.1
-      '@tryghost/debug': 2.3.1
+      '@elastic/elasticsearch': 8.19.1(supports-color@7.2.0)
+      '@tryghost/debug': 2.3.1(supports-color@7.2.0)
       split2: 4.2.0
     transitivePeerDependencies:
       - '@75lb/nature'
@@ -3402,10 +3422,10 @@ snapshots:
       '@tryghost/errors': 3.3.1
       '@tryghost/request': 3.3.1
 
-  '@tryghost/logging@5.1.1':
+  '@tryghost/logging@5.1.1(supports-color@7.2.0)':
     dependencies:
       '@tryghost/bunyan-rotating-filestream': 0.0.7
-      '@tryghost/elasticsearch': 5.3.1
+      '@tryghost/elasticsearch': 5.3.1(supports-color@7.2.0)
       '@tryghost/http-stream': 2.3.1
       '@tryghost/pretty-stream': 2.3.1
       '@tryghost/root-utils': 2.3.1
@@ -3418,9 +3438,9 @@ snapshots:
       - '@75lb/nature'
       - supports-color
 
-  '@tryghost/mongo-knex@0.10.1':
+  '@tryghost/mongo-knex@0.10.1(supports-color@7.2.0)':
     dependencies:
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
       lodash: 4.18.1
     transitivePeerDependencies:
       - supports-color
@@ -3433,9 +3453,9 @@ snapshots:
     dependencies:
       date-fns: 2.30.0
 
-  '@tryghost/nql@0.13.1':
+  '@tryghost/nql@0.13.1(supports-color@7.2.0)':
     dependencies:
-      '@tryghost/mongo-knex': 0.10.1
+      '@tryghost/mongo-knex': 0.10.1(supports-color@7.2.0)
       '@tryghost/mongo-utils': 0.6.5
       '@tryghost/nql-lang': 0.6.6
       lodash: 4.18.1
@@ -3468,10 +3488,10 @@ snapshots:
       caller: 1.1.0
       find-root: 1.1.0
 
-  '@tryghost/server@3.1.1':
+  '@tryghost/server@3.1.1(supports-color@7.2.0)':
     dependencies:
-      '@tryghost/debug': 2.3.1
-      '@tryghost/logging': 5.1.1
+      '@tryghost/debug': 2.3.1(supports-color@7.2.0)
+      '@tryghost/logging': 5.1.1(supports-color@7.2.0)
     transitivePeerDependencies:
       - '@75lb/nature'
       - supports-color
@@ -3493,11 +3513,11 @@ snapshots:
       '@tryghost/root-utils': 2.3.1
       semver: 7.8.5
 
-  '@tryghost/zip@3.5.0':
+  '@tryghost/zip@3.5.0(supports-color@7.2.0)':
     dependencies:
       '@tryghost/errors': 3.3.1
       archiver: 8.0.0
-      extract-zip: 2.0.1
+      extract-zip: 2.0.1(supports-color@7.2.0)
     transitivePeerDependencies:
       - bare-abort-controller
       - bare-buffer
@@ -3634,13 +3654,13 @@ snapshots:
 
   async@3.2.6: {}
 
-  autoprefixer@10.5.2(postcss@8.5.16):
+  autoprefixer@10.5.4(postcss@8.5.21):
     dependencies:
-      browserslist: 4.28.4
-      caniuse-lite: 1.0.30001799
+      browserslist: 4.28.7
+      caniuse-lite: 1.0.30001806
       fraction.js: 5.3.4
       picocolors: 1.1.1
-      postcss: 8.5.16
+      postcss: 8.5.21
       postcss-value-parser: 4.2.0
 
   b4a@1.8.1: {}
@@ -3692,6 +3712,8 @@ snapshots:
 
   baseline-browser-mapping@2.10.38: {}
 
+  baseline-browser-mapping@2.11.1: {}
+
   beeper@2.1.0:
     dependencies:
       yoctodelay: 1.2.0
@@ -3704,11 +3726,11 @@ snapshots:
       inherits: 2.0.4
       readable-stream: 3.6.2
 
-  body-parser@2.3.0:
+  body-parser@2.3.0(supports-color@7.2.0):
     dependencies:
       bytes: 3.1.2
       content-type: 2.0.0
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
       http-errors: 2.0.1
       iconv-lite: 0.7.2
       on-finished: 2.4.1
@@ -3755,6 +3777,14 @@ snapshots:
       electron-to-chromium: 1.5.376
       node-releases: 2.0.48
       update-browserslist-db: 1.2.3(browserslist@4.28.4)
+
+  browserslist@4.28.7:
+    dependencies:
+      baseline-browser-mapping: 2.11.1
+      caniuse-lite: 1.0.30001806
+      electron-to-chromium: 1.5.395
+      node-releases: 2.0.51
+      update-browserslist-db: 1.2.3(browserslist@4.28.7)
 
   buffer-crc32@0.2.13: {}
 
@@ -3810,10 +3840,12 @@ snapshots:
 
   caniuse-api@4.0.0:
     dependencies:
-      browserslist: 4.28.2
+      browserslist: 4.28.4
       caniuse-lite: 1.0.30001799
 
   caniuse-lite@1.0.30001799: {}
+
+  caniuse-lite@1.0.30001806: {}
 
   chalk-template@0.4.0:
     dependencies:
@@ -3979,48 +4011,48 @@ snapshots:
 
   cssesc@3.0.0: {}
 
-  cssnano-preset-default@8.0.2(postcss@8.5.16):
+  cssnano-preset-default@8.0.2(postcss@8.5.21):
     dependencies:
       browserslist: 4.28.2
-      cssnano-utils: 6.0.1(postcss@8.5.16)
-      postcss: 8.5.16
-      postcss-calc: 10.1.1(postcss@8.5.16)
-      postcss-colormin: 8.0.1(postcss@8.5.16)
-      postcss-convert-values: 8.0.1(postcss@8.5.16)
-      postcss-discard-comments: 8.0.1(postcss@8.5.16)
-      postcss-discard-duplicates: 8.0.1(postcss@8.5.16)
-      postcss-discard-empty: 8.0.1(postcss@8.5.16)
-      postcss-discard-overridden: 8.0.1(postcss@8.5.16)
-      postcss-merge-longhand: 8.0.1(postcss@8.5.16)
-      postcss-merge-rules: 8.0.1(postcss@8.5.16)
-      postcss-minify-font-values: 8.0.1(postcss@8.5.16)
-      postcss-minify-gradients: 8.0.1(postcss@8.5.16)
-      postcss-minify-params: 8.0.1(postcss@8.5.16)
-      postcss-minify-selectors: 8.0.2(postcss@8.5.16)
-      postcss-normalize-charset: 8.0.1(postcss@8.5.16)
-      postcss-normalize-display-values: 8.0.1(postcss@8.5.16)
-      postcss-normalize-positions: 8.0.1(postcss@8.5.16)
-      postcss-normalize-repeat-style: 8.0.1(postcss@8.5.16)
-      postcss-normalize-string: 8.0.1(postcss@8.5.16)
-      postcss-normalize-timing-functions: 8.0.1(postcss@8.5.16)
-      postcss-normalize-unicode: 8.0.1(postcss@8.5.16)
-      postcss-normalize-url: 8.0.1(postcss@8.5.16)
-      postcss-normalize-whitespace: 8.0.1(postcss@8.5.16)
-      postcss-ordered-values: 8.0.1(postcss@8.5.16)
-      postcss-reduce-initial: 8.0.1(postcss@8.5.16)
-      postcss-reduce-transforms: 8.0.1(postcss@8.5.16)
-      postcss-svgo: 8.0.1(postcss@8.5.16)
-      postcss-unique-selectors: 8.0.1(postcss@8.5.16)
+      cssnano-utils: 6.0.1(postcss@8.5.21)
+      postcss: 8.5.21
+      postcss-calc: 10.1.1(postcss@8.5.21)
+      postcss-colormin: 8.0.1(postcss@8.5.21)
+      postcss-convert-values: 8.0.1(postcss@8.5.21)
+      postcss-discard-comments: 8.0.1(postcss@8.5.21)
+      postcss-discard-duplicates: 8.0.1(postcss@8.5.21)
+      postcss-discard-empty: 8.0.1(postcss@8.5.21)
+      postcss-discard-overridden: 8.0.1(postcss@8.5.21)
+      postcss-merge-longhand: 8.0.1(postcss@8.5.21)
+      postcss-merge-rules: 8.0.1(postcss@8.5.21)
+      postcss-minify-font-values: 8.0.1(postcss@8.5.21)
+      postcss-minify-gradients: 8.0.1(postcss@8.5.21)
+      postcss-minify-params: 8.0.1(postcss@8.5.21)
+      postcss-minify-selectors: 8.0.2(postcss@8.5.21)
+      postcss-normalize-charset: 8.0.1(postcss@8.5.21)
+      postcss-normalize-display-values: 8.0.1(postcss@8.5.21)
+      postcss-normalize-positions: 8.0.1(postcss@8.5.21)
+      postcss-normalize-repeat-style: 8.0.1(postcss@8.5.21)
+      postcss-normalize-string: 8.0.1(postcss@8.5.21)
+      postcss-normalize-timing-functions: 8.0.1(postcss@8.5.21)
+      postcss-normalize-unicode: 8.0.1(postcss@8.5.21)
+      postcss-normalize-url: 8.0.1(postcss@8.5.21)
+      postcss-normalize-whitespace: 8.0.1(postcss@8.5.21)
+      postcss-ordered-values: 8.0.1(postcss@8.5.21)
+      postcss-reduce-initial: 8.0.1(postcss@8.5.21)
+      postcss-reduce-transforms: 8.0.1(postcss@8.5.21)
+      postcss-svgo: 8.0.1(postcss@8.5.21)
+      postcss-unique-selectors: 8.0.1(postcss@8.5.21)
 
-  cssnano-utils@6.0.1(postcss@8.5.16):
+  cssnano-utils@6.0.1(postcss@8.5.21):
     dependencies:
-      postcss: 8.5.16
+      postcss: 8.5.21
 
-  cssnano@8.0.2(postcss@8.5.16):
+  cssnano@8.0.2(postcss@8.5.21):
     dependencies:
-      cssnano-preset-default: 8.0.2(postcss@8.5.16)
+      cssnano-preset-default: 8.0.2(postcss@8.5.21)
       lilconfig: 3.1.3
-      postcss: 8.5.16
+      postcss: 8.5.21
 
   csso@5.0.5:
     dependencies:
@@ -4032,13 +4064,17 @@ snapshots:
 
   date-format@4.0.14: {}
 
-  debug@3.2.7:
+  debug@3.2.7(supports-color@7.2.0):
     dependencies:
       ms: 2.1.3
+    optionalDependencies:
+      supports-color: 7.2.0
 
-  debug@4.4.3:
+  debug@4.4.3(supports-color@7.2.0):
     dependencies:
       ms: 2.1.3
+    optionalDependencies:
+      supports-color: 7.2.0
 
   decompress-response@10.0.0:
     dependencies:
@@ -4085,6 +4121,8 @@ snapshots:
   ee-first@1.1.1: {}
 
   electron-to-chromium@1.5.376: {}
+
+  electron-to-chromium@1.5.395: {}
 
   emoji-regex@10.6.0: {}
 
@@ -4146,20 +4184,20 @@ snapshots:
       graceful-fs: 4.2.11
       handlebars: 4.7.9
 
-  express@5.2.1:
+  express@5.2.1(supports-color@7.2.0):
     dependencies:
       accepts: 2.0.0
-      body-parser: 2.3.0
+      body-parser: 2.3.0(supports-color@7.2.0)
       content-disposition: 1.1.0
       content-type: 1.0.5
       cookie: 0.7.2
       cookie-signature: 1.2.2
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
       depd: 2.0.0
       encodeurl: 2.0.0
       escape-html: 1.0.3
       etag: 1.8.1
-      finalhandler: 2.1.1
+      finalhandler: 2.1.1(supports-color@7.2.0)
       fresh: 2.0.0
       http-errors: 2.0.1
       merge-descriptors: 2.0.0
@@ -4170,9 +4208,9 @@ snapshots:
       proxy-addr: 2.0.7
       qs: 6.15.2
       range-parser: 1.2.1
-      router: 2.2.0
-      send: 1.2.1
-      serve-static: 2.2.1
+      router: 2.2.0(supports-color@7.2.0)
+      send: 1.2.1(supports-color@7.2.0)
+      serve-static: 2.2.1(supports-color@7.2.0)
       statuses: 2.0.2
       type-is: 2.1.0
       vary: 1.1.2
@@ -4186,9 +4224,9 @@ snapshots:
 
   extend@3.0.2: {}
 
-  extract-zip@2.0.1:
+  extract-zip@2.0.1(supports-color@7.2.0):
     dependencies:
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
       get-stream: 5.2.0
       yauzl: 2.10.0
     optionalDependencies:
@@ -4231,9 +4269,9 @@ snapshots:
     dependencies:
       to-regex-range: 5.0.1
 
-  finalhandler@2.1.1:
+  finalhandler@2.1.1(supports-color@7.2.0):
     dependencies:
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
       encodeurl: 2.0.0
       escape-html: 1.0.3
       on-finished: 2.4.1
@@ -4451,19 +4489,19 @@ snapshots:
 
   graceful-fs@4.2.11: {}
 
-  gscan@6.4.2(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1)):
+  gscan@6.4.2(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))(supports-color@7.2.0):
     dependencies:
-      '@sentry/node': 10.65.0(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))
+      '@sentry/node': 10.65.0(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))(supports-color@7.2.0)
       '@tryghost/config': 2.3.1
-      '@tryghost/debug': 2.3.1
+      '@tryghost/debug': 2.3.1(supports-color@7.2.0)
       '@tryghost/errors': 3.3.1
-      '@tryghost/logging': 5.1.1
-      '@tryghost/nql': 0.13.1
+      '@tryghost/logging': 5.1.1(supports-color@7.2.0)
+      '@tryghost/nql': 0.13.1(supports-color@7.2.0)
       '@tryghost/pretty-cli': 3.3.1
-      '@tryghost/server': 3.1.1
-      '@tryghost/zip': 3.5.0
+      '@tryghost/server': 3.1.1(supports-color@7.2.0)
+      '@tryghost/zip': 3.5.0(supports-color@7.2.0)
       chalk: 5.6.2
-      express: 5.2.1
+      express: 5.2.1(supports-color@7.2.0)
       express-handlebars: 8.0.1
       glob: 13.0.6
       handlebars: 4.7.9
@@ -4501,24 +4539,24 @@ snapshots:
       through2: 2.0.5
       vinyl: 2.2.1
 
-  gulp-livereload@4.0.2:
+  gulp-livereload@4.0.2(supports-color@7.2.0):
     dependencies:
       chalk: 2.4.2
-      debug: 3.2.7
+      debug: 3.2.7(supports-color@7.2.0)
       fancy-log: 1.3.3
       lodash.assign: 4.2.0
       readable-stream: 3.6.2
-      tiny-lr: 1.1.1
+      tiny-lr: 1.1.1(supports-color@7.2.0)
       vinyl: 2.2.1
     transitivePeerDependencies:
       - supports-color
 
-  gulp-postcss@10.0.0(postcss@8.5.16):
+  gulp-postcss@10.0.0(postcss@8.5.21):
     dependencies:
       fancy-log: 2.0.0
       plugin-error: 2.0.1
-      postcss: 8.5.16
-      postcss-load-config: 5.1.0(postcss@8.5.16)
+      postcss: 8.5.21
+      postcss-load-config: 5.1.0(postcss@8.5.21)
       vinyl-sourcemaps-apply: 0.2.1
     transitivePeerDependencies:
       - jiti
@@ -4845,7 +4883,7 @@ snapshots:
   nan@2.27.0:
     optional: true
 
-  nanoid@3.3.14: {}
+  nanoid@3.3.16: {}
 
   nconf@0.13.0:
     dependencies:
@@ -4862,6 +4900,8 @@ snapshots:
   neo-async@2.6.2: {}
 
   node-releases@2.0.48: {}
+
+  node-releases@2.0.51: {}
 
   normalize-path@3.0.0: {}
 
@@ -4967,169 +5007,169 @@ snapshots:
     dependencies:
       ansi-colors: 1.1.0
 
-  postcss-calc@10.1.1(postcss@8.5.16):
+  postcss-calc@10.1.1(postcss@8.5.21):
     dependencies:
-      postcss: 8.5.16
+      postcss: 8.5.21
       postcss-selector-parser: 7.1.4
       postcss-value-parser: 4.2.0
 
-  postcss-colormin@8.0.1(postcss@8.5.16):
+  postcss-colormin@8.0.1(postcss@8.5.21):
     dependencies:
       '@colordx/core': 5.4.3
-      browserslist: 4.28.2
+      browserslist: 4.28.4
       caniuse-api: 4.0.0
-      postcss: 8.5.16
+      postcss: 8.5.21
       postcss-value-parser: 4.2.0
 
-  postcss-convert-values@8.0.1(postcss@8.5.16):
+  postcss-convert-values@8.0.1(postcss@8.5.21):
     dependencies:
-      browserslist: 4.28.2
-      postcss: 8.5.16
+      browserslist: 4.28.4
+      postcss: 8.5.21
       postcss-value-parser: 4.2.0
 
-  postcss-discard-comments@8.0.1(postcss@8.5.16):
+  postcss-discard-comments@8.0.1(postcss@8.5.21):
     dependencies:
-      postcss: 8.5.16
+      postcss: 8.5.21
       postcss-selector-parser: 7.1.4
 
-  postcss-discard-duplicates@8.0.1(postcss@8.5.16):
+  postcss-discard-duplicates@8.0.1(postcss@8.5.21):
     dependencies:
-      postcss: 8.5.16
+      postcss: 8.5.21
 
-  postcss-discard-empty@8.0.1(postcss@8.5.16):
+  postcss-discard-empty@8.0.1(postcss@8.5.21):
     dependencies:
-      postcss: 8.5.16
+      postcss: 8.5.21
 
-  postcss-discard-overridden@8.0.1(postcss@8.5.16):
+  postcss-discard-overridden@8.0.1(postcss@8.5.21):
     dependencies:
-      postcss: 8.5.16
+      postcss: 8.5.21
 
-  postcss-easy-import@4.0.0(postcss@8.5.16):
+  postcss-easy-import@4.0.0(postcss@8.5.21):
     dependencies:
       globby: 6.1.0
       is-glob: 4.0.3
       lodash: 4.18.1
       object-assign: 4.1.1
       pify: 3.0.0
-      postcss: 8.5.16
-      postcss-import: 14.1.0(postcss@8.5.16)
+      postcss: 8.5.21
+      postcss-import: 14.1.0(postcss@8.5.21)
       resolve: 1.22.12
 
-  postcss-import@14.1.0(postcss@8.5.16):
+  postcss-import@14.1.0(postcss@8.5.21):
     dependencies:
-      postcss: 8.5.16
+      postcss: 8.5.21
       postcss-value-parser: 4.2.0
       read-cache: 1.0.0
       resolve: 1.22.12
 
-  postcss-load-config@5.1.0(postcss@8.5.16):
+  postcss-load-config@5.1.0(postcss@8.5.21):
     dependencies:
       lilconfig: 3.1.3
       yaml: 2.9.0
     optionalDependencies:
-      postcss: 8.5.16
+      postcss: 8.5.21
 
-  postcss-merge-longhand@8.0.1(postcss@8.5.16):
+  postcss-merge-longhand@8.0.1(postcss@8.5.21):
     dependencies:
-      postcss: 8.5.16
+      postcss: 8.5.21
       postcss-value-parser: 4.2.0
-      stylehacks: 8.0.1(postcss@8.5.16)
+      stylehacks: 8.0.1(postcss@8.5.21)
 
-  postcss-merge-rules@8.0.1(postcss@8.5.16):
+  postcss-merge-rules@8.0.1(postcss@8.5.21):
     dependencies:
-      browserslist: 4.28.2
+      browserslist: 4.28.4
       caniuse-api: 4.0.0
-      cssnano-utils: 6.0.1(postcss@8.5.16)
-      postcss: 8.5.16
+      cssnano-utils: 6.0.1(postcss@8.5.21)
+      postcss: 8.5.21
       postcss-selector-parser: 7.1.4
 
-  postcss-minify-font-values@8.0.1(postcss@8.5.16):
+  postcss-minify-font-values@8.0.1(postcss@8.5.21):
     dependencies:
-      postcss: 8.5.16
+      postcss: 8.5.21
       postcss-value-parser: 4.2.0
 
-  postcss-minify-gradients@8.0.1(postcss@8.5.16):
+  postcss-minify-gradients@8.0.1(postcss@8.5.21):
     dependencies:
       '@colordx/core': 5.4.3
-      cssnano-utils: 6.0.1(postcss@8.5.16)
-      postcss: 8.5.16
+      cssnano-utils: 6.0.1(postcss@8.5.21)
+      postcss: 8.5.21
       postcss-value-parser: 4.2.0
 
-  postcss-minify-params@8.0.1(postcss@8.5.16):
+  postcss-minify-params@8.0.1(postcss@8.5.21):
     dependencies:
-      browserslist: 4.28.2
-      cssnano-utils: 6.0.1(postcss@8.5.16)
-      postcss: 8.5.16
+      browserslist: 4.28.4
+      cssnano-utils: 6.0.1(postcss@8.5.21)
+      postcss: 8.5.21
       postcss-value-parser: 4.2.0
 
-  postcss-minify-selectors@8.0.2(postcss@8.5.16):
+  postcss-minify-selectors@8.0.2(postcss@8.5.21):
     dependencies:
-      browserslist: 4.28.2
+      browserslist: 4.28.4
       caniuse-api: 4.0.0
       cssesc: 3.0.0
-      postcss: 8.5.16
+      postcss: 8.5.21
       postcss-selector-parser: 7.1.4
 
-  postcss-normalize-charset@8.0.1(postcss@8.5.16):
+  postcss-normalize-charset@8.0.1(postcss@8.5.21):
     dependencies:
-      postcss: 8.5.16
+      postcss: 8.5.21
 
-  postcss-normalize-display-values@8.0.1(postcss@8.5.16):
+  postcss-normalize-display-values@8.0.1(postcss@8.5.21):
     dependencies:
-      postcss: 8.5.16
+      postcss: 8.5.21
       postcss-value-parser: 4.2.0
 
-  postcss-normalize-positions@8.0.1(postcss@8.5.16):
+  postcss-normalize-positions@8.0.1(postcss@8.5.21):
     dependencies:
-      postcss: 8.5.16
+      postcss: 8.5.21
       postcss-value-parser: 4.2.0
 
-  postcss-normalize-repeat-style@8.0.1(postcss@8.5.16):
+  postcss-normalize-repeat-style@8.0.1(postcss@8.5.21):
     dependencies:
-      postcss: 8.5.16
+      postcss: 8.5.21
       postcss-value-parser: 4.2.0
 
-  postcss-normalize-string@8.0.1(postcss@8.5.16):
+  postcss-normalize-string@8.0.1(postcss@8.5.21):
     dependencies:
-      postcss: 8.5.16
+      postcss: 8.5.21
       postcss-value-parser: 4.2.0
 
-  postcss-normalize-timing-functions@8.0.1(postcss@8.5.16):
+  postcss-normalize-timing-functions@8.0.1(postcss@8.5.21):
     dependencies:
-      postcss: 8.5.16
+      postcss: 8.5.21
       postcss-value-parser: 4.2.0
 
-  postcss-normalize-unicode@8.0.1(postcss@8.5.16):
+  postcss-normalize-unicode@8.0.1(postcss@8.5.21):
     dependencies:
-      browserslist: 4.28.2
-      postcss: 8.5.16
+      browserslist: 4.28.4
+      postcss: 8.5.21
       postcss-value-parser: 4.2.0
 
-  postcss-normalize-url@8.0.1(postcss@8.5.16):
+  postcss-normalize-url@8.0.1(postcss@8.5.21):
     dependencies:
-      postcss: 8.5.16
+      postcss: 8.5.21
       postcss-value-parser: 4.2.0
 
-  postcss-normalize-whitespace@8.0.1(postcss@8.5.16):
+  postcss-normalize-whitespace@8.0.1(postcss@8.5.21):
     dependencies:
-      postcss: 8.5.16
+      postcss: 8.5.21
       postcss-value-parser: 4.2.0
 
-  postcss-ordered-values@8.0.1(postcss@8.5.16):
+  postcss-ordered-values@8.0.1(postcss@8.5.21):
     dependencies:
-      cssnano-utils: 6.0.1(postcss@8.5.16)
-      postcss: 8.5.16
+      cssnano-utils: 6.0.1(postcss@8.5.21)
+      postcss: 8.5.21
       postcss-value-parser: 4.2.0
 
-  postcss-reduce-initial@8.0.1(postcss@8.5.16):
+  postcss-reduce-initial@8.0.1(postcss@8.5.21):
     dependencies:
-      browserslist: 4.28.2
+      browserslist: 4.28.4
       caniuse-api: 4.0.0
-      postcss: 8.5.16
+      postcss: 8.5.21
 
-  postcss-reduce-transforms@8.0.1(postcss@8.5.16):
+  postcss-reduce-transforms@8.0.1(postcss@8.5.21):
     dependencies:
-      postcss: 8.5.16
+      postcss: 8.5.21
       postcss-value-parser: 4.2.0
 
   postcss-selector-parser@7.1.4:
@@ -5137,22 +5177,22 @@ snapshots:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
 
-  postcss-svgo@8.0.1(postcss@8.5.16):
+  postcss-svgo@8.0.1(postcss@8.5.21):
     dependencies:
-      postcss: 8.5.16
+      postcss: 8.5.21
       postcss-value-parser: 4.2.0
       svgo: 4.0.1
 
-  postcss-unique-selectors@8.0.1(postcss@8.5.16):
+  postcss-unique-selectors@8.0.1(postcss@8.5.21):
     dependencies:
-      postcss: 8.5.16
+      postcss: 8.5.21
       postcss-selector-parser: 7.1.4
 
   postcss-value-parser@4.2.0: {}
 
-  postcss@8.5.16:
+  postcss@8.5.21:
     dependencies:
-      nanoid: 3.3.14
+      nanoid: 3.3.16
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
@@ -5245,9 +5285,9 @@ snapshots:
 
   require-directory@2.1.1: {}
 
-  require-in-the-middle@8.0.1:
+  require-in-the-middle@8.0.1(supports-color@7.2.0):
     dependencies:
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
       module-details-from-path: 1.0.4
     transitivePeerDependencies:
       - supports-color
@@ -5281,9 +5321,9 @@ snapshots:
       glob: 6.0.4
     optional: true
 
-  router@2.2.0:
+  router@2.2.0(supports-color@7.2.0):
     dependencies:
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
       depd: 2.0.0
       is-promise: 4.0.0
       parseurl: 1.3.3
@@ -5319,9 +5359,9 @@ snapshots:
 
   semver@7.8.5: {}
 
-  send@1.2.1:
+  send@1.2.1(supports-color@7.2.0):
     dependencies:
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
       encodeurl: 2.0.0
       escape-html: 1.0.3
       etag: 1.8.1
@@ -5335,12 +5375,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  serve-static@2.2.1:
+  serve-static@2.2.1(supports-color@7.2.0):
     dependencies:
       encodeurl: 2.0.0
       escape-html: 1.0.3
       parseurl: 1.3.3
-      send: 1.2.1
+      send: 1.2.1(supports-color@7.2.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -5448,10 +5488,10 @@ snapshots:
     dependencies:
       ansi-regex: 6.2.2
 
-  stylehacks@8.0.1(postcss@8.5.16):
+  stylehacks@8.0.1(postcss@8.5.21):
     dependencies:
-      browserslist: 4.28.2
-      postcss: 8.5.16
+      browserslist: 4.28.4
+      postcss: 8.5.21
       postcss-selector-parser: 7.1.4
 
   supports-color@5.5.0:
@@ -5521,10 +5561,10 @@ snapshots:
 
   time-stamp@1.1.0: {}
 
-  tiny-lr@1.1.1:
+  tiny-lr@1.1.1(supports-color@7.2.0):
     dependencies:
       body: 5.1.0
-      debug: 3.2.7
+      debug: 3.2.7(supports-color@7.2.0)
       faye-websocket: 0.10.0
       livereload-js: 2.4.0
       object-assign: 4.1.1
@@ -5597,6 +5637,12 @@ snapshots:
   update-browserslist-db@1.2.3(browserslist@4.28.4):
     dependencies:
       browserslist: 4.28.4
+      escalade: 3.2.0
+      picocolors: 1.1.1
+
+  update-browserslist-db@1.2.3(browserslist@4.28.7):
+    dependencies:
+      browserslist: 4.28.7
       escalade: 3.2.0
       picocolors: 1.1.1
 
