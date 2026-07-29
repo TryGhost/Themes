@@ -30,7 +30,7 @@
         "postcss": "8.5.16",
         "postcss-easy-import": "4.0.0",
         "pump": "3.0.4",
-        "yargs": "18.0.0"
+        "yargs": "18.1.0"
     },
     "browserslist": [
         "defaults"
