@@ -2,6 +2,7 @@ const {series, parallel, watch, src, dest} = require('gulp');
 const pump = require('pump');
 const fs = require('fs');
 const glob = require('glob');
+const path = require('path');
 const order = require('ordered-read-streams');
 const argv = require('yargs/yargs')(process.argv.slice(2)).argv;
 const exec = require('child_process').exec;
@@ -22,6 +23,41 @@ const cssnano = require('cssnano');
 const {mergeLocales} = require('./packages/theme-translations/build');
 
 const oldPackages = ['packages/alto', 'packages/bulletin', 'packages/dawn', 'packages/digest', 'packages/dope', 'packages/ease', 'packages/edge', 'packages/edition', 'packages/headline', 'packages/journal', 'packages/london', 'packages/ruby', 'packages/solo', 'packages/wave'];
+const sharedAssetsImportPattern = /^(['"])@tryghost\/shared-theme-assets\/([^'"]+)\1(.*)$/;
+const localSharedAssetsPath = path.join(__dirname, 'packages/_shared');
+
+function localSharedAssetsImport() {
+    return {
+        postcssPlugin: 'local-shared-theme-assets-import',
+        Once(root) {
+            root.walkAtRules('import', (atRule) => {
+                const match = atRule.params.match(sharedAssetsImportPattern);
+                if (!match) return;
+
+                const [, quote, assetPath, trailingParams] = match;
+                const sourceFile = atRule.source?.input?.file;
+                const sourceDir = sourceFile ? path.dirname(sourceFile) : __dirname;
+                const localAssetPath = path.join(localSharedAssetsPath, assetPath);
+                let relativeAssetPath = path.relative(sourceDir, localAssetPath).replace(/\\/g, '/');
+
+                if (!relativeAssetPath.startsWith('.')) {
+                    relativeAssetPath = `./${relativeAssetPath}`;
+                }
+
+                atRule.params = `${quote}${relativeAssetPath}${quote}${trailingParams}`;
+            });
+        }
+    };
+}
+
+function cssPlugins({useLocalSharedAssets = false} = {}) {
+    return [
+        useLocalSharedAssets && localSharedAssetsImport(),
+        easyimport,
+        autoprefixer(),
+        cssnano()
+    ].filter(Boolean);
+}
 
 function getThemePaths() {
     return glob.sync('packages/*', {ignore: ['packages/_shared', 'packages/theme-translations']});
@@ -50,14 +86,10 @@ function doHBS(path, done) {
     ], handleError(done));
 }
 
-function doCSS(path, done) {
+function doCSS(path, done, options) {
     pump([
         src(`${path}/assets/css/screen.css`, {sourcemaps: true}),
-        postcss([
-            easyimport,
-            autoprefixer(),
-            cssnano()
-        ]),
+        postcss(cssPlugins(options)),
         dest(`${path}/assets/built/`, {sourcemaps: '.'}),
         livereload()
     ], handleError(done));
@@ -97,10 +129,10 @@ function doTranslations(path, done) {
     })(done);
 }
 
-function buildTasksForTheme(themePath) {
+function buildTasksForTheme(themePath, options) {
     const packageName = require(`./${themePath}/package.json`).name;
 
-    const css = (cb) => doCSS(themePath, cb);
+    const css = (cb) => doCSS(themePath, cb, options);
     css.displayName = `css_${packageName}`;
 
     const js = (cb) => doJS(themePath, cb);
@@ -130,7 +162,7 @@ function doCopyPartials(paths, useLivereload, done) {
 
 function main(done) {
     const tasks = getThemePaths().map(path => {
-        const {packageName, css, js, trans} = buildTasksForTheme(path);
+        const {packageName, css, js, trans} = buildTasksForTheme(path, {useLocalSharedAssets: true});
 
         function package(taskDone) {
             const hbs = (done) => doHBS(path, done);
@@ -161,11 +193,7 @@ function main(done) {
         const tasks = oldPackages.map(path => {
             const t = (cb) => pump([
                 src(`${path}/assets/css/screen.css`, {sourcemaps: true}),
-                postcss([
-                    easyimport,
-                    autoprefixer(),
-                    cssnano()
-                ]),
+                postcss(cssPlugins({useLocalSharedAssets: true})),
                 dest(`${path}/assets/built/`, {sourcemaps: '.'}),
                 livereload()
             ], handleError(cb));
@@ -180,11 +208,7 @@ function main(done) {
         const tasks = getV2ThemePaths().map(path => {
             const t = (cb) => pump([
                 src(`${path}/assets/css/screen.css`, {sourcemaps: true}),
-                postcss([
-                    easyimport,
-                    autoprefixer(),
-                    cssnano()
-                ]),
+                postcss(cssPlugins({useLocalSharedAssets: true})),
                 dest(`${path}/assets/built/`, {sourcemaps: '.'}),
                 livereload()
             ], handleError(cb));
