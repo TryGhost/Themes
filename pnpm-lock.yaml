@@ -62,7 +62,7 @@ importers:
   packages/alto:
     devDependencies:
       '@tryghost/shared-theme-assets':
-        specifier: 2.7.1
+        specifier: 2.7.2
         version: link:../_shared
       '@tryghost/theme-translations':
         specifier: ^0.0.9
@@ -113,7 +113,7 @@ importers:
   packages/bulletin:
     devDependencies:
       '@tryghost/shared-theme-assets':
-        specifier: 2.7.1
+        specifier: 2.7.2
         version: link:../_shared
       '@tryghost/theme-translations':
         specifier: ^0.0.9
@@ -164,7 +164,7 @@ importers:
   packages/dawn:
     devDependencies:
       '@tryghost/shared-theme-assets':
-        specifier: 2.7.1
+        specifier: 2.7.2
         version: link:../_shared
       '@tryghost/theme-translations':
         specifier: ^0.0.9
@@ -215,7 +215,7 @@ importers:
   packages/digest:
     devDependencies:
       '@tryghost/shared-theme-assets':
-        specifier: 2.7.1
+        specifier: 2.7.2
         version: link:../_shared
       '@tryghost/theme-translations':
         specifier: ^0.0.9
@@ -266,7 +266,7 @@ importers:
   packages/dope:
     devDependencies:
       '@tryghost/shared-theme-assets':
-        specifier: 2.7.1
+        specifier: 2.7.2
         version: link:../_shared
       '@tryghost/theme-translations':
         specifier: ^0.0.9
@@ -317,7 +317,7 @@ importers:
   packages/ease:
     devDependencies:
       '@tryghost/shared-theme-assets':
-        specifier: 2.7.1
+        specifier: 2.7.2
         version: link:../_shared
       '@tryghost/theme-translations':
         specifier: ^0.0.9
@@ -368,7 +368,7 @@ importers:
   packages/edge:
     devDependencies:
       '@tryghost/shared-theme-assets':
-        specifier: 2.7.1
+        specifier: 2.7.2
         version: link:../_shared
       '@tryghost/theme-translations':
         specifier: ^0.0.9
@@ -419,7 +419,7 @@ importers:
   packages/edition:
     devDependencies:
       '@tryghost/shared-theme-assets':
-        specifier: 2.7.1
+        specifier: 2.7.2
         version: link:../_shared
       '@tryghost/theme-translations':
         specifier: ^0.0.9
@@ -470,7 +470,7 @@ importers:
   packages/episode:
     devDependencies:
       '@tryghost/shared-theme-assets':
-        specifier: 2.7.1
+        specifier: 2.7.2
         version: link:../_shared
       '@tryghost/theme-translations':
         specifier: ^0.0.9
@@ -521,7 +521,7 @@ importers:
   packages/headline:
     devDependencies:
       '@tryghost/shared-theme-assets':
-        specifier: 2.7.1
+        specifier: 2.7.2
         version: link:../_shared
       '@tryghost/theme-translations':
         specifier: ^0.0.9
@@ -572,7 +572,7 @@ importers:
   packages/journal:
     devDependencies:
       '@tryghost/shared-theme-assets':
-        specifier: 2.7.1
+        specifier: 2.7.2
         version: link:../_shared
       '@tryghost/theme-translations':
         specifier: ^0.0.9
@@ -623,7 +623,7 @@ importers:
   packages/london:
     devDependencies:
       '@tryghost/shared-theme-assets':
-        specifier: 2.7.1
+        specifier: 2.7.2
         version: link:../_shared
       '@tryghost/theme-translations':
         specifier: ^0.0.9
@@ -674,7 +674,7 @@ importers:
   packages/ruby:
     devDependencies:
       '@tryghost/shared-theme-assets':
-        specifier: 2.7.1
+        specifier: 2.7.2
         version: link:../_shared
       '@tryghost/theme-translations':
         specifier: ^0.0.9
@@ -725,7 +725,7 @@ importers:
   packages/solo:
     devDependencies:
       '@tryghost/shared-theme-assets':
-        specifier: 2.7.1
+        specifier: 2.7.2
         version: link:../_shared
       '@tryghost/theme-translations':
         specifier: ^0.0.9
@@ -776,7 +776,7 @@ importers:
   packages/taste:
     devDependencies:
       '@tryghost/shared-theme-assets':
-        specifier: 2.7.1
+        specifier: 2.7.2
         version: link:../_shared
       '@tryghost/theme-translations':
         specifier: ^0.0.9
@@ -829,7 +829,7 @@ importers:
   packages/wave:
     devDependencies:
       '@tryghost/shared-theme-assets':
-        specifier: 2.7.1
+        specifier: 2.7.2
         version: link:../_shared
       '@tryghost/theme-translations':
         specifier: ^0.0.9
