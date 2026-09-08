@@ -116,8 +116,8 @@ importers:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
-        specifier: 9.0.2
-        version: 9.0.2(postcss@8.5.28)
+        specifier: 9.0.3
+        version: 9.0.3(postcss@8.5.28)
       glob:
         specifier: 13.0.6
         version: 13.0.6
@@ -175,8 +175,8 @@ importers:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
-        specifier: 9.0.2
-        version: 9.0.2(postcss@8.5.28)
+        specifier: 9.0.3
+        version: 9.0.3(postcss@8.5.28)
       gscan:
         specifier: 6.5.0
         version: 6.5.0(@opentelemetry/core@2.11.0(@opentelemetry/api@1.9.1))(supports-color@7.2.0)
@@ -226,8 +226,8 @@ importers:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
-        specifier: 9.0.2
-        version: 9.0.2(postcss@8.5.28)
+        specifier: 9.0.3
+        version: 9.0.3(postcss@8.5.28)
       gscan:
         specifier: 6.5.0
         version: 6.5.0(@opentelemetry/core@2.11.0(@opentelemetry/api@1.9.1))(supports-color@7.2.0)
@@ -277,8 +277,8 @@ importers:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
-        specifier: 9.0.2
-        version: 9.0.2(postcss@8.5.28)
+        specifier: 9.0.3
+        version: 9.0.3(postcss@8.5.28)
       gscan:
         specifier: 6.5.0
         version: 6.5.0(@opentelemetry/core@2.11.0(@opentelemetry/api@1.9.1))(supports-color@7.2.0)
@@ -328,8 +328,8 @@ importers:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
-        specifier: 9.0.2
-        version: 9.0.2(postcss@8.5.28)
+        specifier: 9.0.3
+        version: 9.0.3(postcss@8.5.28)
       gscan:
         specifier: 6.5.0
         version: 6.5.0(@opentelemetry/core@2.11.0(@opentelemetry/api@1.9.1))(supports-color@7.2.0)
@@ -379,8 +379,8 @@ importers:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
-        specifier: 9.0.2
-        version: 9.0.2(postcss@8.5.28)
+        specifier: 9.0.3
+        version: 9.0.3(postcss@8.5.28)
       gscan:
         specifier: 6.5.0
         version: 6.5.0(@opentelemetry/core@2.11.0(@opentelemetry/api@1.9.1))(supports-color@7.2.0)
@@ -430,8 +430,8 @@ importers:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
-        specifier: 9.0.2
-        version: 9.0.2(postcss@8.5.28)
+        specifier: 9.0.3
+        version: 9.0.3(postcss@8.5.28)
       gscan:
         specifier: 6.5.0
         version: 6.5.0(@opentelemetry/core@2.11.0(@opentelemetry/api@1.9.1))(supports-color@7.2.0)
@@ -481,8 +481,8 @@ importers:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
-        specifier: 9.0.2
-        version: 9.0.2(postcss@8.5.28)
+        specifier: 9.0.3
+        version: 9.0.3(postcss@8.5.28)
       gscan:
         specifier: 6.5.0
         version: 6.5.0(@opentelemetry/core@2.11.0(@opentelemetry/api@1.9.1))(supports-color@7.2.0)
@@ -532,8 +532,8 @@ importers:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
-        specifier: 9.0.2
-        version: 9.0.2(postcss@8.5.28)
+        specifier: 9.0.3
+        version: 9.0.3(postcss@8.5.28)
       gscan:
         specifier: 6.5.0
         version: 6.5.0(@opentelemetry/core@2.11.0(@opentelemetry/api@1.9.1))(supports-color@7.2.0)
@@ -583,8 +583,8 @@ importers:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
-        specifier: 9.0.2
-        version: 9.0.2(postcss@8.5.28)
+        specifier: 9.0.3
+        version: 9.0.3(postcss@8.5.28)
       gscan:
         specifier: 6.5.0
         version: 6.5.0(@opentelemetry/core@2.11.0(@opentelemetry/api@1.9.1))(supports-color@7.2.0)
@@ -634,8 +634,8 @@ importers:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
-        specifier: 9.0.2
-        version: 9.0.2(postcss@8.5.28)
+        specifier: 9.0.3
+        version: 9.0.3(postcss@8.5.28)
       gscan:
         specifier: 6.5.0
         version: 6.5.0(@opentelemetry/core@2.11.0(@opentelemetry/api@1.9.1))(supports-color@7.2.0)
@@ -685,8 +685,8 @@ importers:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
-        specifier: 9.0.2
-        version: 9.0.2(postcss@8.5.28)
+        specifier: 9.0.3
+        version: 9.0.3(postcss@8.5.28)
       gscan:
         specifier: 6.5.0
         version: 6.5.0(@opentelemetry/core@2.11.0(@opentelemetry/api@1.9.1))(supports-color@7.2.0)
@@ -736,8 +736,8 @@ importers:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
-        specifier: 9.0.2
-        version: 9.0.2(postcss@8.5.28)
+        specifier: 9.0.3
+        version: 9.0.3(postcss@8.5.28)
       gscan:
         specifier: 6.5.0
         version: 6.5.0(@opentelemetry/core@2.11.0(@opentelemetry/api@1.9.1))(supports-color@7.2.0)
@@ -787,8 +787,8 @@ importers:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
-        specifier: 9.0.2
-        version: 9.0.2(postcss@8.5.28)
+        specifier: 9.0.3
+        version: 9.0.3(postcss@8.5.28)
       gscan:
         specifier: 6.5.0
         version: 6.5.0(@opentelemetry/core@2.11.0(@opentelemetry/api@1.9.1))(supports-color@7.2.0)
@@ -838,8 +838,8 @@ importers:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
-        specifier: 9.0.2
-        version: 9.0.2(postcss@8.5.28)
+        specifier: 9.0.3
+        version: 9.0.3(postcss@8.5.28)
       gscan:
         specifier: 6.5.0
         version: 6.5.0(@opentelemetry/core@2.11.0(@opentelemetry/api@1.9.1))(supports-color@7.2.0)
@@ -889,8 +889,8 @@ importers:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
-        specifier: 9.0.2
-        version: 9.0.2(postcss@8.5.28)
+        specifier: 9.0.3
+        version: 9.0.3(postcss@8.5.28)
       gscan:
         specifier: 6.5.0
         version: 6.5.0(@opentelemetry/core@2.11.0(@opentelemetry/api@1.9.1))(supports-color@7.2.0)
@@ -942,8 +942,8 @@ importers:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
-        specifier: 9.0.2
-        version: 9.0.2(postcss@8.5.28)
+        specifier: 9.0.3
+        version: 9.0.3(postcss@8.5.28)
       gscan:
         specifier: 6.5.0
         version: 6.5.0(@opentelemetry/core@2.11.0(@opentelemetry/api@1.9.1))(supports-color@7.2.0)
@@ -1607,11 +1607,11 @@ packages:
     peerDependencies:
       postcss: ^8.5.28
 
-  cssnano@9.0.2:
-    resolution: {integrity: sha512-fYp+fVpGHLk/EQWKiHokARZlsnEvvVcw+VP9+ggGr5oD+Kw9p4nDs1CAjQQylL+2ZtuLoxzI0jDl+GbqC0YrhA==}
+  cssnano@9.0.3:
+    resolution: {integrity: sha512-v4oRMYCXcJtI1MlGcwVgSP/TG/RrznC3iKQeNcFTQZZYWomp2j8CmgT9iiSO2v64K4LJSi6pWdyznmUUutLCKw==}
     engines: {node: ^22.22.3 || ^24.15.0 || >=26.0}
     peerDependencies:
-      postcss: ^8.5.26
+      postcss: ^8.5.28
 
   csso@5.0.5:
     resolution: {integrity: sha512-0LrrStPOdJj+SPCCrGhzryycLjwcgUSHBtxNA8aIDxf0GLsRh1cKYhB00Gd1lDOS4yGH69+SNn13+TWbVHETFQ==}
@@ -3919,7 +3919,7 @@ snapshots:
     dependencies:
       postcss: 8.5.28
 
-  cssnano@9.0.2(postcss@8.5.28):
+  cssnano@9.0.3(postcss@8.5.28):
     dependencies:
       cssnano-preset-default: 9.0.3(postcss@8.5.28)
       postcss: 8.5.28
