@@ -225,7 +225,7 @@ Search                         LOGO                    Login Subscribe
     min-height: 80px;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
     .is-head-stacked .gh-head-inner {
         padding: 0;
     }
