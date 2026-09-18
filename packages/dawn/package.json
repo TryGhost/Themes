@@ -1,7 +1,7 @@
 {
     "name": "dawn",
     "description": "A Ghost theme",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "private": true,
     "engines": {
         "ghost": ">=5.0.0"
@@ -102,12 +102,14 @@
         "test": "gscan .",
         "zip": "gulp zip"
     },
+    "packageManager": "pnpm@12.4.1",
     "devDependencies": {
-        "@tryghost/shared-theme-assets": "2.5.2",
-        "autoprefixer": "10.4.23",
+        "@tryghost/shared-theme-assets": "2.7.4",
+        "@tryghost/theme-translations": "^0.0.9",
+        "autoprefixer": "10.5.6",
         "beeper": "2.1.0",
-        "cssnano": "7.1.2",
-        "gscan": "5.2.2",
+        "cssnano": "9.0.4",
+        "gscan": "6.6.1",
         "gulp": "5.0.1",
         "gulp-concat": "2.6.1",
         "gulp-livereload": "4.0.2",
@@ -115,8 +117,8 @@
         "gulp-uglify": "3.0.2",
         "gulp-zip": "5.1.0",
         "ordered-read-streams": "2.0.0",
-        "postcss": "8.5.6",
+        "postcss": "8.5.28",
         "postcss-easy-import": "4.0.0",
-        "pump": "3.0.3"
+        "pump": "3.0.4"
     }
 }

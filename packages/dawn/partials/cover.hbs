@@ -7,14 +7,14 @@
         {{/if}}
 
         {{#if @site.description}}
-            <div class="cover-description">{{@site.description}}. Exploring the future of <a href="tag/quality/">software quality</a> in the age of <a href="tag/ai/">AI</a>.</div>
+            <div class="cover-description">{{@site.description}}. Focused on the intersection of <a href="tag/ai/">AI</a>, <a href="tag/testing/">Testing</a> and <a href="tag/quality/">Software Quality</a>.</div>
         {{/if}}
 
         {{#if @site.members_enabled}}
             {{#unless @member}}
             <div class="cover-cta">
-                <button class="button members-subscribe" data-portal="signup">Subscribe now</button>
-                <button class="button button-secondary members-login" data-portal="signin">Login</button>
+                <button class="button members-subscribe" data-portal="signup">{{t "Subscribe now"}}</button>
+                <button class="button button-secondary members-login" data-portal="signin">{{t "Login"}}</button>
             </div>
             {{/unless}}
         {{/if}}
