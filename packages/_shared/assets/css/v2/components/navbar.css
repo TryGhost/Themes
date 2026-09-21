@@ -420,6 +420,18 @@ Search                         LOGO                    Login Subscribe
 /* Mobile menu
 /* ---------------------------------------------------------- */
 
+html.gh-navigation-open {
+    overflow: hidden;
+}
+
+.gh-navigation-open body {
+    position: fixed;
+    top: var(--gh-navigation-scroll-top);
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
 .gh-burger {
     position: relative;
     display: none;
@@ -547,7 +559,8 @@ Search                         LOGO                    Login Subscribe
         inset: 0;
         z-index: 3999999;
         height: 100%;
-        overflow-y: scroll;
+        overflow-y: auto;
+        overscroll-behavior-y: contain;
         -webkit-overflow-scrolling: touch;
     }
 

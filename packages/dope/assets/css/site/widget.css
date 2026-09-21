@@ -30,7 +30,6 @@
 }
 
 .widget-recent .recent-posts {
-    margin-bottom: 32px;
     counter-reset: recent;
 }
 

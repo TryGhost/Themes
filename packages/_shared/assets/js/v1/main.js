@@ -1,14 +1,37 @@
 /* Mobile menu burger toggle */
 (function () {
-    var burger = document.querySelector('.gh-burger');
+    const navigation = document.body;
+    const burger = navigation.querySelector('.gh-burger');
     if (!burger) return;
 
+    const mobile = window.matchMedia('(max-width: 767px)');
+    const root = document.documentElement;
+    let scrollPosition = 0;
+
+    function closeMenu() {
+        if (!navigation.classList.contains('is-head-open')) return;
+
+        navigation.classList.remove('is-head-open');
+        root.classList.remove('gh-navigation-open');
+        root.style.removeProperty('--gh-navigation-scroll-top');
+        window.scrollTo({top: scrollPosition, behavior: 'instant'});
+    }
+
     burger.addEventListener('click', function () {
-        if (!document.body.classList.contains('is-head-open')) {
-            document.body.classList.add('is-head-open');
+        if (!navigation.classList.contains('is-head-open')) {
+            if (!mobile.matches) return;
+
+            scrollPosition = window.scrollY;
+            root.style.setProperty('--gh-navigation-scroll-top', `${-scrollPosition}px`);
+            root.classList.add('gh-navigation-open');
+            navigation.classList.add('is-head-open');
         } else {
-            document.body.classList.remove('is-head-open');
+            closeMenu();
         }
+    });
+
+    mobile.addEventListener('change', function () {
+        if (!mobile.matches) closeMenu();
     });
 })();
 

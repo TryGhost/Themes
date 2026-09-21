@@ -1,15 +1,37 @@
 /* Mobile menu burger toggle */
 (function () {
-    var head = document.querySelector('.gh-head');
-    var burger = head.querySelector('.gh-burger');
+    const navigation = document.querySelector('.gh-head');
+    const burger = navigation.querySelector('.gh-burger');
     if (!burger) return;
 
+    const mobile = window.matchMedia('(max-width: 767px)');
+    const root = document.documentElement;
+    let scrollPosition = 0;
+
+    function closeMenu() {
+        if (!navigation.classList.contains('is-head-open')) return;
+
+        navigation.classList.remove('is-head-open');
+        root.classList.remove('gh-navigation-open');
+        root.style.removeProperty('--gh-navigation-scroll-top');
+        window.scrollTo({top: scrollPosition, behavior: 'instant'});
+    }
+
     burger.addEventListener('click', function () {
-        if (!head.classList.contains('is-head-open')) {
-            head.classList.add('is-head-open');
+        if (!navigation.classList.contains('is-head-open')) {
+            if (!mobile.matches) return;
+
+            scrollPosition = window.scrollY;
+            root.style.setProperty('--gh-navigation-scroll-top', `${-scrollPosition}px`);
+            root.classList.add('gh-navigation-open');
+            navigation.classList.add('is-head-open');
         } else {
-            head.classList.remove('is-head-open');
+            closeMenu();
         }
+    });
+
+    mobile.addEventListener('change', function () {
+        if (!mobile.matches) closeMenu();
     });
 })();
 
