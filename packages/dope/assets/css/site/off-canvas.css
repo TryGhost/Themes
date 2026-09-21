@@ -1,27 +1,33 @@
 .off-canvas {
+    display: flex;
+    flex-direction: column;
     position: fixed;
     top: 0;
     right: 0;
     z-index: 100;
     width: 350px;
     height: 100vh;
-    padding: 96px 30px 88px;
-    overflow-y: scroll;
+    height: 100dvh;
+    padding: 96px 30px 30px;
+    padding-bottom: calc(30px + env(safe-area-inset-bottom, 0px));
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
     background-color: var(--white-color);
     transition: transform 0.4s var(--animation-base);
     transform: translateX(350px);
     -webkit-overflow-scrolling: touch;
 }
 
+.off-canvas > * {
+    flex-shrink: 0;
+}
+
 .off-canvas .gh-social-links {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    margin-top: auto;
     display: flex;
     justify-content: flex-start;
     gap: 16px;
-    padding: 20px 30px 30px;
+    padding-top: 60px;
     background-color: var(--white-color);
 }
 
