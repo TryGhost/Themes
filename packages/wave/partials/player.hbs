@@ -2,7 +2,7 @@
 
     <audio class="player-audio" src="{{og_description}}"></audio>
 
-    <div class="post-media">
+    <div class="post-media js-play">
         <div class="u-placeholder square">
             <img class="post-image u-object-fit" src="{{img_url feature_image size="m"}}" alt="{{title}}">
         </div>
@@ -11,17 +11,18 @@
     <div class="player-wrapper">
 
         <header class="post-header">
-            <button class="button button-play js-play">
+            <button class="button button-play js-play" type="button" aria-label="{{t "Play episode"}}">
                 {{> "icons/play"}}
                 {{> "icons/pause"}}
+                <span class="player-spinner" aria-hidden="true"></span>
             </button>
             <div class="post-header-wrapper">
                 <h1 class="post-title">{{#is "post"}}{{title}}{{else}}Episode{{/is}}</h1>
                 <div class="post-meta">
                     <time datetime="{{date format="YYYY-MM-DD"}}">{{date published_at format="DD MMM YYYY"}}</time>
-                    <button class="player-backward">-10s</button>
-                    <button class="player-forward">+30s</button>
-                    <button class="player-speed">1x</button>
+                    <button class="player-backward" type="button">-10s</button>
+                    <button class="player-forward" type="button">+30s</button>
+                    <button class="player-speed" type="button">1x</button>
                 </div>
             </div>
         </header>
