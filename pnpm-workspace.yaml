@@ -1,3 +1,7 @@
+minimumReleaseAge: 4320
+strictDepBuilds: true
+blockExoticSubdeps: true
+
 packages:
   - 'packages/*'
 
