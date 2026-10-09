@@ -25,7 +25,7 @@ pnpm symlink --theme <theme-name> --site /dir/to/your/ghost-site
 
 If you're running the Ghost monorepo:
 ```bash
-pnpm symlink --theme <theme-name> --site /dir/to/Ghost/ghost/core
+pnpm symlink --theme <theme-name> --site /dir/to/Ghost/ghost
 ```
 
 Or if you're running a Ghost instance via the CLI:

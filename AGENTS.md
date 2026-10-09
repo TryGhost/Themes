@@ -26,7 +26,7 @@ pnpm build                   # build all themes
 pnpm test                    # run gscan for all themes
 pnpm test:ci --theme <name>  # run fatal/verbose gscan for one theme
 pnpm zip --theme <name>      # build and write packages/<theme>/dist/<theme>.zip
-pnpm symlink --theme <name> --site /path/to/Ghost/ghost/core
+pnpm symlink --theme <name> --site /path/to/Ghost/ghost
 ```
 
 For translation package tests:
@@ -41,7 +41,7 @@ npm test
 - Edit source CSS in `packages/<theme>/assets/css/`, source JS in `packages/<theme>/assets/js/`, and templates/partials as `.hbs`.
 - Rebuild after CSS, JS, shared asset, or locale changes. Built files under `assets/built/` are part of theme output and should be kept in sync when source changes.
 - Validate a changed theme with `pnpm test:ci --theme <name>`. Prefer targeted validation over running every theme unless the change is cross-cutting.
-- For local Ghost verification, symlink the theme into a Ghost checkout with `pnpm symlink --theme <name> --site /path/to/Ghost/ghost/core`, restart Ghost, then select the theme in Design settings.
+- For local Ghost verification, symlink the theme into a Ghost checkout with `pnpm symlink --theme <name> --site /path/to/Ghost/ghost`, restart Ghost, then select the theme in Design settings.
 
 ## Shared Assets
 
