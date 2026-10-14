@@ -13,13 +13,13 @@
         "build": "gulp buildAll",
         "ship:shared": "npm --prefix packages/_shared version patch --no-git-tag-version"
     },
-    "packageManager": "pnpm@11.8.0",
+    "packageManager": "pnpm@12.11.2",
     "devDependencies": {
-        "autoprefixer": "10.5.0",
+        "autoprefixer": "10.6.1",
         "beeper": "2.1.0",
-        "cssnano": "8.0.2",
+        "cssnano": "9.6.0",
         "glob": "13.0.6",
-        "gscan": "6.3.0",
+        "gscan": "6.6.1",
         "gulp": "5.0.1",
         "gulp-concat": "2.6.1",
         "gulp-livereload": "4.0.2",
@@ -27,10 +27,10 @@
         "gulp-uglify": "3.0.2",
         "gulp-zip": "5.1.0",
         "ordered-read-streams": "2.0.0",
-        "postcss": "8.5.15",
+        "postcss": "8.5.29",
         "postcss-easy-import": "4.0.0",
         "pump": "3.0.4",
-        "yargs": "18.0.0"
+        "yargs": "18.2.0"
     },
     "browserslist": [
         "defaults"
