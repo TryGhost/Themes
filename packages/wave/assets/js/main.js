@@ -67,22 +67,20 @@ function player() {
         }
     });
 
-    playerAudio.on('timeupdate', function () {
+    playerAudio.on('timeupdate', function (e) {
         const duration = isNaN(playerAudio[0].duration) ? 0 : playerAudio[0].duration;
         timeDuration.text(
             new Date(duration * 1000).toISOString().substring(11, 19)
         );
-        playerAudio[0].addEventListener('timeupdate', function (e) {
-            timeCurrent.text(
-                new Date(e.target.currentTime * 1000)
-                    .toISOString()
-                    .substring(11, 19)
-            );
-            playerProgress.css(
-                'width',
-                (e.target.currentTime / playerAudio[0].duration) * 100 + '%'
-            );
-        });
+        timeCurrent.text(
+            new Date(e.target.currentTime * 1000)
+                .toISOString()
+                .substring(11, 19)
+        );
+        playerProgress.css(
+            'width',
+            (e.target.currentTime / playerAudio[0].duration) * 100 + '%'
+        );
     });
 
     backwardButton.on('click', function () {
