@@ -21,6 +21,7 @@ function player() {
     var player = jQuery('.player');
     var playerAudio = jQuery('.player-audio');
     var playerProgress = jQuery('.player-progress');
+    var playerSeek = jQuery('.player-seek');
     var timeCurrent = jQuery('.player-time-current');
     var timeDuration = jQuery('.player-time-duration');
     var playButton = jQuery('.button-play');
@@ -28,6 +29,8 @@ function player() {
     var forwardButton = jQuery('.player-forward');
     var playerSpeed = 1;
     var speedButton = jQuery('.player-speed');
+
+    if (!playerAudio.length) return;
 
     jQuery('.site').on('click', '.js-play', function () {
         var clicked = jQuery(this);
@@ -67,20 +70,31 @@ function player() {
         }
     });
 
-    playerAudio.on('timeupdate', function (e) {
-        const duration = isNaN(playerAudio[0].duration) ? 0 : playerAudio[0].duration;
-        timeDuration.text(
-            new Date(duration * 1000).toISOString().substring(11, 19)
-        );
-        timeCurrent.text(
-            new Date(e.target.currentTime * 1000)
-                .toISOString()
-                .substring(11, 19)
-        );
+    function updateProgress() {
+        var audio = playerAudio[0];
+        var duration = Number.isFinite(audio.duration) ? audio.duration : 0;
+        var currentTime = duration > 0 ? audio.currentTime : 0;
+        var currentText = new Date(currentTime * 1000).toISOString().substring(11, 19);
+        var durationText = new Date(duration * 1000).toISOString().substring(11, 19);
+        timeDuration.text(durationText);
+        timeCurrent.text(currentText);
+        playerSeek.prop('disabled', duration <= 0).attr('max', duration).val(currentTime);
+        playerSeek.attr('aria-valuetext', currentText + ' / ' + durationText);
         playerProgress.css(
             'width',
-            (e.target.currentTime / playerAudio[0].duration) * 100 + '%'
+            (duration > 0 ? currentTime / duration : 0) * 100 + '%'
         );
+    }
+
+    playerAudio.on('loadedmetadata durationchange timeupdate emptied', updateProgress);
+    updateProgress();
+
+    playerSeek.on('input', function () {
+        var audio = playerAudio[0];
+        if (!Number.isFinite(audio.duration) || audio.duration <= 0) return;
+
+        audio.currentTime = Math.min(audio.duration, Math.max(0, Number(this.value)));
+        updateProgress();
     });
 
     backwardButton.on('click', function () {
