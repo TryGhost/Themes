@@ -456,20 +456,20 @@ html.gh-navigation-open {
 }
 
 .gh-burger::before {
-    top: 11px;
+    top: 10.5px;
 }
 
 .gh-burger::after {
-    bottom: 11px;
+    bottom: 10.5px;
 }
 
 .is-head-open .gh-burger::before {
-    top: 15px;
+    top: 14.5px;
     transform: rotate(45deg);
 }
 
 .is-head-open .gh-burger::after {
-    bottom: 14px;
+    bottom: 14.5px;
     transform: rotate(-45deg);
 }
 
