@@ -1,12 +1,20 @@
 {{#get "posts" filter="featured:true" limit="20" include="tags" as |featured|}}
     {{#if featured}}
-    <section class="featured-wrapper">
+    <section class="featured-wrapper" aria-labelledby="featured-title">
 
         <header class="featured-header topic-header">
-            <h2 class="featured-title topic-name">Featured</h2>
+            <h2 class="featured-title topic-name" id="featured-title">{{t "Featured"}}</h2>
+            <div class="featured-controls" hidden>
+                <button type="button" data-direction="previous" aria-label="{{t "Previous"}}" aria-controls="featured-posts">
+                    <svg aria-hidden="true" viewBox="0 0 32 32" width="18" height="18" fill="currentColor"><path d="M20.547 22.107L14.44 16l6.107-6.12L18.667 8l-8 8 8 8 1.88-1.893z"></path></svg>
+                </button>
+                <button type="button" data-direction="next" aria-label="{{t "Next"}}" aria-controls="featured-posts">
+                    <svg aria-hidden="true" viewBox="0 0 32 32" width="18" height="18" fill="currentColor"><path d="M11.453 22.107L17.56 16l-6.107-6.12L13.333 8l8 8-8 8-1.88-1.893z"></path></svg>
+                </button>
+            </div>
         </header>
 
-        <div class="featured-posts owl">
+        <div class="featured-posts" id="featured-posts" tabindex="0" role="group" aria-labelledby="featured-title">
         {{#foreach featured}}
             <article class="{{post_class}}">
 
