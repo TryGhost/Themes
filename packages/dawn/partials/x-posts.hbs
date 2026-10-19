@@ -1,0 +1,39 @@
+{{#if @custom.x_post_1}}
+    <div class="gh-outer x-posts-outer">
+        <section class="x-posts gh-inner" aria-labelledby="x-posts-title">
+            <div class="x-posts-inner">
+                <div class="x-posts-intro">
+                    <h2 id="x-posts-title" class="x-posts-title">
+                        {{#if @custom.x_posts_title}}
+                            {{@custom.x_posts_title}}
+                        {{else}}
+                            A few things I’m saying
+                        {{/if}}
+                    </h2>
+                    {{#if @custom.x_posts_description}}
+                        <p class="x-posts-description">{{@custom.x_posts_description}}</p>
+                    {{/if}}
+                    {{#if @custom.x_profile_url}}
+                        <a class="x-posts-follow gh-btn" href="{{@custom.x_profile_url}}" target="_blank" rel="noopener">Follow on X</a>
+                    {{/if}}
+                </div>
+
+                <div class="x-posts-list">
+                    <blockquote class="twitter-tweet" data-dnt="true">
+                        <a href="{{@custom.x_post_1}}">{{@custom.x_post_1}}</a>
+                    </blockquote>
+                    {{#if @custom.x_post_2}}
+                        <blockquote class="twitter-tweet" data-dnt="true">
+                            <a href="{{@custom.x_post_2}}">{{@custom.x_post_2}}</a>
+                        </blockquote>
+                    {{/if}}
+                    {{#if @custom.x_post_3}}
+                        <blockquote class="twitter-tweet" data-dnt="true">
+                            <a href="{{@custom.x_post_3}}">{{@custom.x_post_3}}</a>
+                        </blockquote>
+                    {{/if}}
+                </div>
+            </div>
+        </section>
+    </div>
+{{/if}}

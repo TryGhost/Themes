@@ -71,6 +71,11 @@
         {{#if @custom.show_featured_posts}}
             {{> "featured-posts"}}
         {{/if}}
+
+        {{#if @custom.show_x_posts}}
+            {{> "x-posts"}}
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        {{/if}}
     {{/is}}
 
     <div class="site-content">

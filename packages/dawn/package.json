@@ -85,6 +85,37 @@
                 "default": "Featured articles",
                 "group": "homepage"
             },
+            "show_x_posts": {
+                "type": "boolean",
+                "default": false,
+                "group": "homepage"
+            },
+            "x_posts_title": {
+                "type": "text",
+                "default": "A few things I’m saying",
+                "group": "homepage"
+            },
+            "x_posts_description": {
+                "type": "text",
+                "default": "Short notes and ideas from X.",
+                "group": "homepage"
+            },
+            "x_profile_url": {
+                "type": "text",
+                "group": "homepage"
+            },
+            "x_post_1": {
+                "type": "text",
+                "group": "homepage"
+            },
+            "x_post_2": {
+                "type": "text",
+                "group": "homepage"
+            },
+            "x_post_3": {
+                "type": "text",
+                "group": "homepage"
+            },
             "show_author": {
                 "type": "boolean",
                 "default": true,

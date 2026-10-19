@@ -1,0 +1,67 @@
+.x-posts-outer {
+    margin-top: 60px;
+}
+
+.x-posts {
+    padding-top: 1rem;
+    border-top: 1px solid var(--light-gray-color);
+}
+
+.x-posts-inner {
+    display: grid;
+    grid-template-columns: minmax(180px, 0.35fr) minmax(0, 1fr);
+    gap: 4.5rem;
+}
+
+.x-posts-title {
+    margin: 0 0 1.25rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+}
+
+.x-posts-title::before {
+    content: "✦";
+    display: inline-block;
+    margin-right: 0.5rem;
+    color: var(--brand-color);
+}
+
+.x-posts-description {
+    margin: 0 0 1.5rem;
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    line-height: 1.5;
+}
+
+.x-posts-follow {
+    display: inline-flex;
+    margin-top: 0.25rem;
+}
+
+.x-posts-list {
+    min-width: 0;
+}
+
+.x-posts-list .twitter-tweet {
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 1rem 0 !important;
+    border-top: 1px solid var(--light-gray-color);
+}
+
+.x-posts-list .twitter-tweet:last-child {
+    border-bottom: 1px solid var(--light-gray-color);
+}
+
+@media (max-width: 767px) {
+    .x-posts-inner {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .x-posts-title {
+        font-size: 1.35rem;
+    }
+}
