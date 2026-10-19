@@ -32,6 +32,12 @@ function player() {
 
     if (!playerAudio.length) return;
 
+    function playingPost() {
+        return jQuery('.post').filter(function () {
+            return jQuery(this).attr('data-id') === player.attr('data-playing');
+        });
+    }
+
     jQuery('.site').on('click', '.js-play', function () {
         var clicked = jQuery(this);
 
@@ -39,7 +45,7 @@ function player() {
             var episode = clicked.closest('.post');
             if (player.attr('data-playing') !== episode.attr('data-id')) {
                 playerAudio.attr('src', episode.attr('data-url'));
-                jQuery('.post[data-id="' + player.attr('data-playing') + '"]').find('.post-play').removeClass('playing');
+                playingPost().find('.post-play').removeClass('playing');
                 player.attr('data-playing', episode.attr('data-id'));
                 player.find('.post-image').attr('src', episode.find('.post-image').attr('src'));
                 player.find('.post-title').text(episode.find('.post-title').text());
@@ -55,7 +61,7 @@ function player() {
                     .then(function () {
                         clicked.addClass('playing');
                         playButton.addClass('playing');
-                        jQuery('.post[data-id="' + player.attr('data-playing') + '"]').find('.post-play').addClass('playing');
+                        playingPost().find('.post-play').addClass('playing');
                         jQuery('body').addClass('player-opened');
                     })
                     .catch(function (error) {
@@ -66,7 +72,7 @@ function player() {
             playerAudio[0].pause();
             clicked.removeClass('playing');
             playButton.removeClass('playing');
-            jQuery('.post[data-id="' + player.attr('data-playing') + '"]').find('.post-play').removeClass('playing');
+            playingPost().find('.post-play').removeClass('playing');
         }
     });
 
