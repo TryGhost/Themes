@@ -44,7 +44,7 @@
                 {{/has}}
                 {{/unless}}
                 {{#if @site.comments_enabled}}
-                    {{comment_count class="gh-card-comments"}}
+                    {{comment_count class="gh-card-comments" singular=(t "comment") plural=(t "comments")}}
                 {{/if}}
             </footer>
         </div>

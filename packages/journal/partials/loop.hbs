@@ -10,7 +10,7 @@
             <time class="gh-card-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMM YYYY"}}</time>
             <span class="gh-card-duration">{{reading_time minute=(t "1 min read") minutes=(t "% min read")}}</span>
             {{#if @site.comments_enabled}}
-                {{comment_count class="gh-card-comments"}}
+                {{comment_count class="gh-card-comments" singular=(t "comment") plural=(t "comments")}}
             {{/if}}
             {{^has visibility="public"}}
                 {{> icons/star}}

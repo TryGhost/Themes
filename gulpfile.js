@@ -4,7 +4,7 @@ const fs = require('fs');
 const glob = require('glob');
 const order = require('ordered-read-streams');
 const argv = require('yargs/yargs')(process.argv.slice(2)).argv;
-const exec = require('child_process').exec;
+const execFile = require('child_process').execFile;
 
 // gulp plugins and utils
 const livereload = require('gulp-livereload');
@@ -256,14 +256,13 @@ function symlink(done) {
         return;
     }
 
-    exec(`ln -sfn ${__dirname}/packages/${argv.theme} ${argv.site}/content/themes`);
-    done();
+    execFile('ln', ['-sfn', `${__dirname}/packages/${argv.theme}`, `${argv.site}/content/themes`], done);
 }
 
 function test(done) {
     const testGScan = gscanDone => {
         getThemePaths().forEach(path => {
-            exec(`gscan ${path} --colors`, (error, stdout, _stderr) => {
+            execFile('gscan', [path, '--colors'], (error, stdout, _stderr) => {
                 console.log(stdout);
                 if (error) process.exit(1);
             });
@@ -284,7 +283,7 @@ function testCI(done) {
     }
 
     const testGScan = gscanDone => {
-        exec(`gscan --fatal --verbose packages/${argv.theme} --colors`, (error, stdout, _stderr) => {
+        execFile('gscan', ['--fatal', '--verbose', `packages/${argv.theme}`, '--colors'], (error, stdout, _stderr) => {
             console.log(stdout);
             if (error) process.exit(1);
         });

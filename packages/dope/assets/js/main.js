@@ -88,32 +88,35 @@ function offCanvas() {
     'use strict';
     var burger = jQuery('.burger');
     var canvasClose = jQuery('.canvas-close');
+    var root = document.documentElement;
+    var scrollPosition = 0;
+
+    function closeMenu() {
+        if (!html.hasClass('canvas-opened')) return;
+
+        html.removeClass('canvas-opened gh-navigation-open');
+        root.style.removeProperty('--gh-navigation-scroll-top');
+        window.scrollTo({top: scrollPosition, behavior: 'instant'});
+        dimmer('close', 'medium');
+    }
 
     burger.on('click', function () {
-        html.toggleClass('canvas-opened');
-        html.addClass('canvas-visible');
+        if (html.hasClass('canvas-opened')) {
+            closeMenu();
+            return;
+        }
+
+        scrollPosition = window.scrollY;
+        root.style.setProperty('--gh-navigation-scroll-top', `${-scrollPosition}px`);
+        html.addClass('canvas-opened canvas-visible gh-navigation-open');
         dimmer('open', 'medium');
     });
 
-    canvasClose.on('click', function () {
-        if (html.hasClass('canvas-opened')) {
-            html.removeClass('canvas-opened');
-            dimmer('close', 'medium');
-        }
-    });
-
-    jQuery('.dimmer').on('click', function () {
-        if (html.hasClass('canvas-opened')) {
-            html.removeClass('canvas-opened');
-            dimmer('close', 'medium');
-        }
-    });
+    canvasClose.on('click', closeMenu);
+    jQuery('.dimmer').on('click', closeMenu);
 
     jQuery(document).keyup(function (e) {
-        if (e.keyCode == 27 && html.hasClass('canvas-opened')) {
-            html.removeClass('canvas-opened');
-            dimmer('close', 'medium');
-        }
+        if (e.keyCode == 27) closeMenu();
     });
 }
 

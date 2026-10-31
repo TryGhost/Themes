@@ -29,7 +29,7 @@
                         </span>
                     {{/if}}
                     {{#if @site.comments_enabled}}
-                        {{comment_count class="post-meta-item"}}
+                        {{comment_count class="post-meta-item" singular=(t "comment") plural=(t "comments")}}
                     {{/if}}
                 </div>
             </header>

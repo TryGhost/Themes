@@ -52,6 +52,15 @@
     border-radius: 50%;
 }
 
+.post-play svg {
+    width: 66.666667%;
+    height: auto;
+}
+
+.post-play svg:nth-child(2) {
+    width: 62.5%;
+}
+
 .post-play svg:nth-child(2),
 .post-play.playing svg:nth-child(1) {
     display: none;
