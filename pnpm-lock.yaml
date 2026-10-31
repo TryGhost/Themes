@@ -176,8 +176,8 @@ importers:
         specifier: 9.9.0
         version: 9.9.0(postcss@8.5.32)
       glob:
-        specifier: 14.0.2
-        version: 14.0.2
+        specifier: 14.0.3
+        version: 14.0.3
       gscan:
         specifier: 6.6.1
         version: 6.6.1(supports-color@7.2.0)
@@ -1598,8 +1598,8 @@ packages:
     resolution: {integrity: sha512-wGM28Ehmcnk2NqRORXFOTOR064L4imSw3EeOqU5bIwUf62eXGwg89WivH6VMahL8zlQHeodzvHpXplrqzrz3Nw==}
     engines: {node: '>= 10.13.0'}
 
-  glob@14.0.2:
-    resolution: {integrity: sha512-vfMgTR2djMHPUchsJMLpZlYQvtjVL+mHpEr5wPpoCbQs2vr/FBNK+3Gnl9Ara1DSs4Aeg4eG9HiADb5/rkY/ZA==}
+  glob@14.0.3:
+    resolution: {integrity: sha512-A1vjIwC3qpdCso45Iw127gnp7sPhqgY8lUQhDrArIs+GbmfaaVPFuoyy7WyLT9EPZCRZ7j7aLdwUhQmHWesEow==}
     engines: {node: 18 || 20 || >=22}
 
   glob@7.2.3:
@@ -3003,7 +3003,7 @@ snapshots:
       async-done: 2.0.0
       chokidar: 3.6.0
 
-  glob@14.0.2:
+  glob@14.0.3:
     dependencies:
       minimatch: 11.0.3
       minipass: 7.1.3
