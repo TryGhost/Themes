@@ -56,6 +56,21 @@
     list-style: none;
 }
 
+.nav a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    vertical-align: middle;
+}
+
+.nav-icon {
+    display: block;
+    width: 1em;
+    height: 1em;
+    flex: 0 0 auto;
+    object-fit: contain;
+}
+
 .gh-head .nav-more-toggle {
     position: relative;
     margin: 0 -6px;
@@ -206,7 +221,7 @@ Search                         LOGO                    Login Subscribe
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
     .is-head-stacked .gh-head-inner {
         padding: 0;
     }
@@ -404,6 +419,18 @@ Search                         LOGO                    Login Subscribe
 /* Mobile menu
 /* ---------------------------------------------------------- */
 
+html.gh-navigation-open {
+    overflow: hidden;
+}
+
+.gh-navigation-open body {
+    position: fixed;
+    top: var(--gh-navigation-scroll-top);
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
 .gh-burger {
     position: relative;
     display: none;
@@ -429,20 +456,20 @@ Search                         LOGO                    Login Subscribe
 }
 
 .gh-burger::before {
-    top: 11px;
+    top: 10.5px;
 }
 
 .gh-burger::after {
-    bottom: 11px;
+    bottom: 10.5px;
 }
 
 .is-head-open .gh-burger::before {
-    top: 15px;
+    top: 14.5px;
     transform: rotate(45deg);
 }
 
 .is-head-open .gh-burger::after {
-    bottom: 14px;
+    bottom: 14.5px;
     transform: rotate(-45deg);
 }
 
@@ -531,7 +558,8 @@ Search                         LOGO                    Login Subscribe
         inset: 0;
         z-index: 3999999;
         height: 100%;
-        overflow-y: scroll;
+        overflow-y: auto;
+        overscroll-behavior-y: contain;
         -webkit-overflow-scrolling: touch;
     }
 

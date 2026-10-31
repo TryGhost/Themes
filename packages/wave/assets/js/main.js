@@ -19,8 +19,9 @@ function cover() {
 function player() {
     'use strict';
     var player = jQuery('.player');
-    var playerAudio = jQuery('.player-audio');
+    var playerAudio = jQuery('audio.player-audio');
     var playerProgress = jQuery('.player-progress');
+    var playerSeek = jQuery('.player-seek');
     var timeCurrent = jQuery('.player-time-current');
     var timeDuration = jQuery('.player-time-duration');
     var playButton = jQuery('.button-play');
@@ -29,14 +30,33 @@ function player() {
     var playerSpeed = 1;
     var speedButton = jQuery('.player-speed');
 
+    if (!playerAudio.length) return;
+
+    function playingPost() {
+        return jQuery('.post').filter(function () {
+            return jQuery(this).attr('data-id') === player.attr('data-playing');
+        });
+    }
+
     jQuery('.site').on('click', '.js-play', function () {
         var clicked = jQuery(this);
 
         if (clicked.hasClass('post-play')) {
             var episode = clicked.closest('.post');
             if (player.attr('data-playing') !== episode.attr('data-id')) {
-                playerAudio.attr('src', episode.attr('data-url'));
-                jQuery('.post[data-id="' + player.attr('data-playing') + '"]').find('.post-play').removeClass('playing');
+                var audioSource = episode.attr('data-url');
+                if (!audioSource || !audioSource.trim()) return;
+
+                var audioUrl;
+                try {
+                    audioUrl = new URL(audioSource, document.baseURI);
+                } catch (error) {
+                    return;
+                }
+                if (audioUrl.protocol !== 'http:' && audioUrl.protocol !== 'https:') return;
+
+                playerAudio[0].src = audioUrl.href;
+                playingPost().find('.post-play').removeClass('playing');
                 player.attr('data-playing', episode.attr('data-id'));
                 player.find('.post-image').attr('src', episode.find('.post-image').attr('src'));
                 player.find('.post-title').text(episode.find('.post-title').text());
@@ -52,7 +72,7 @@ function player() {
                     .then(function () {
                         clicked.addClass('playing');
                         playButton.addClass('playing');
-                        jQuery('.post[data-id="' + player.attr('data-playing') + '"]').find('.post-play').addClass('playing');
+                        playingPost().find('.post-play').addClass('playing');
                         jQuery('body').addClass('player-opened');
                     })
                     .catch(function (error) {
@@ -63,26 +83,35 @@ function player() {
             playerAudio[0].pause();
             clicked.removeClass('playing');
             playButton.removeClass('playing');
-            jQuery('.post[data-id="' + player.attr('data-playing') + '"]').find('.post-play').removeClass('playing');
+            playingPost().find('.post-play').removeClass('playing');
         }
     });
 
-    playerAudio.on('timeupdate', function () {
-        const duration = isNaN(playerAudio[0].duration) ? 0 : playerAudio[0].duration;
-        timeDuration.text(
-            new Date(duration * 1000).toISOString().substring(11, 19)
+    function updateProgress() {
+        var audio = playerAudio[0];
+        var duration = Number.isFinite(audio.duration) ? audio.duration : 0;
+        var currentTime = duration > 0 ? audio.currentTime : 0;
+        var currentText = new Date(currentTime * 1000).toISOString().substring(11, 19);
+        var durationText = new Date(duration * 1000).toISOString().substring(11, 19);
+        timeDuration.text(durationText);
+        timeCurrent.text(currentText);
+        playerSeek.prop('disabled', duration <= 0).attr('max', duration).val(currentTime);
+        playerSeek.attr('aria-valuetext', currentText + ' / ' + durationText);
+        playerProgress.css(
+            'width',
+            (duration > 0 ? currentTime / duration : 0) * 100 + '%'
         );
-        playerAudio[0].addEventListener('timeupdate', function (e) {
-            timeCurrent.text(
-                new Date(e.target.currentTime * 1000)
-                    .toISOString()
-                    .substring(11, 19)
-            );
-            playerProgress.css(
-                'width',
-                (e.target.currentTime / playerAudio[0].duration) * 100 + '%'
-            );
-        });
+    }
+
+    playerAudio.on('loadedmetadata durationchange timeupdate emptied', updateProgress);
+    updateProgress();
+
+    playerSeek.on('input', function () {
+        var audio = playerAudio[0];
+        if (!Number.isFinite(audio.duration) || audio.duration <= 0) return;
+
+        audio.currentTime = Math.min(audio.duration, Math.max(0, Number(this.value)));
+        updateProgress();
     });
 
     backwardButton.on('click', function () {

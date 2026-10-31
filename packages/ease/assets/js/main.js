@@ -15,29 +15,40 @@ jQuery.noConflict();
     });
 })(jQuery);
 
-(function ($) {
+(function () {
     'use strict';
-    $('.featured-posts').owlCarousel({
-        dots: false,
-        margin: 30,
-        nav: true,
-        navText: [
-            '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="18" height="18" fill="currentColor"><path d="M20.547 22.107L14.44 16l6.107-6.12L18.667 8l-8 8 8 8 1.88-1.893z"></path></svg>',
-            '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="18" height="18" fill="currentColor"><path d="M11.453 22.107L17.56 16l-6.107-6.12L13.333 8l8 8-8 8-1.88-1.893z"></path></svg>',
-        ],
-        responsive: {
-            0: {
-                items: 1,
-                slideBy: 1,
-            },
-            768: {
-                items: 3,
-                slideBy: 3,
-            },
-            992: {
-                items: 4,
-                slideBy: 4,
-            },
-        },
+    var feed = document.querySelector('.featured-posts');
+    if (!feed) return;
+
+    var controls = document.querySelector('.featured-controls');
+    var previous = controls.querySelector('[data-direction="previous"]');
+    var next = controls.querySelector('[data-direction="next"]');
+    var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    var direction = getComputedStyle(feed).direction === 'rtl' ? -1 : 1;
+
+    function updateControls() {
+        var maxScroll = feed.scrollWidth - feed.clientWidth;
+        var position = Math.abs(feed.scrollLeft);
+        controls.hidden = maxScroll <= 1;
+        previous.setAttribute('aria-disabled', position <= 1);
+        next.setAttribute('aria-disabled', position >= maxScroll - 1);
+    }
+
+    controls.addEventListener('click', function (event) {
+        var button = event.target.closest('button');
+        if (!button || button.getAttribute('aria-disabled') === 'true') return;
+
+        var cardWidth = feed.firstElementChild.getBoundingClientRect().width;
+        var gap = parseFloat(getComputedStyle(feed).columnGap);
+        var items = Math.round((feed.clientWidth + gap) / (cardWidth + gap));
+        var step = items * (cardWidth + gap);
+        feed.scrollBy({
+            left: direction * (button === next ? step : -step),
+            behavior: reducedMotion.matches ? 'instant' : 'smooth',
+        });
     });
-})(jQuery);
+
+    feed.addEventListener('scroll', updateControls, {passive: true});
+    new ResizeObserver(updateControls).observe(feed);
+    updateControls();
+})();

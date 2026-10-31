@@ -36,17 +36,26 @@ function initParallax() {
     const element = document.querySelector('.gh-article-excerpt');
     if (!element) return;
 
-    let text = element.textContent;
+    const text = element.textContent;
     const emojiRE = /\p{EPres}|\p{ExtPict}/gu;
 
-    const emojis = text.match(emojiRE);
-    if (!emojis) return;
+    const emojis = Array.from(text.matchAll(emojiRE));
+    if (!emojis.length) return;
+
+    const fragment = document.createDocumentFragment();
+    let offset = 0;
 
     emojis.forEach(function (emoji) {
-        text = text.replace(emoji, `<span class="emoji">${emoji}</span>`);
+        fragment.appendChild(document.createTextNode(text.slice(offset, emoji.index)));
+        const span = document.createElement('span');
+        span.className = 'emoji';
+        span.textContent = emoji[0];
+        fragment.appendChild(span);
+        offset = emoji.index + emoji[0].length;
     });
 
-    element.innerHTML = text;
+    fragment.appendChild(document.createTextNode(text.slice(offset)));
+    element.replaceChildren(fragment);
 })();
 
 (function () {

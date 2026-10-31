@@ -41,7 +41,7 @@ function feed() {
 
     pswp(
         '.post-feed',
-        '.post',
+        '.post:has(.post-lightbox)',
         '.post-lightbox',
         '.post-caption',
         false

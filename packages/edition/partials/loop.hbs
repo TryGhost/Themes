@@ -44,7 +44,7 @@
                 </div>
             {{/if}}
             {{#if @site.comments_enabled}}
-                {{comment_count autowrap="div" class="feed-comments"}}
+                {{comment_count autowrap="div" class="feed-comments" singular=(t "comment") plural=(t "comments")}}
             {{/if}}
             <div class="feed-icon">
                 {{> "icons/chevron-right"}}
