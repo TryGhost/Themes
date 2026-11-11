@@ -14,3 +14,7 @@ allowBuilds:
 # local workspace package (e.g. @tryghost/shared-theme-assets), link it instead
 # of installing from the registry.
 linkWorkspacePackages: true
+
+# archiver still requests minimatch 10 through readdir-glob 3.
+overrides:
+  "minimatch@>=7 <11.0.1": 11.0.4
