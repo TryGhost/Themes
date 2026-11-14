@@ -17,4 +17,4 @@ linkWorkspacePackages: true
 
 # archiver still requests minimatch 10 through readdir-glob 3.
 overrides:
-  "minimatch@>=7 <11.0.1": 11.0.5
+  "minimatch@>=7 <11.0.1": 11.0.8
