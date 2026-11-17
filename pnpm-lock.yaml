@@ -180,13 +180,13 @@ importers:
     devDependencies:
       autoprefixer:
         specifier: 10.6.2
-        version: 10.6.2(postcss@8.5.32)
+        version: 10.6.2(postcss@8.5.33)
       beeper:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
         specifier: 9.9.0
-        version: 9.9.0(postcss@8.5.32)
+        version: 9.9.0(postcss@8.5.33)
       glob:
         specifier: 14.0.6
         version: 14.0.6
@@ -204,7 +204,7 @@ importers:
         version: 4.0.2(supports-color@7.2.0)
       gulp-postcss:
         specifier: 10.0.0
-        version: 10.0.0(postcss@8.5.32)
+        version: 10.0.0(postcss@8.5.33)
       gulp-uglify:
         specifier: 3.0.2
         version: 3.0.2
@@ -215,11 +215,11 @@ importers:
         specifier: 2.0.0
         version: 2.0.0
       postcss:
-        specifier: 8.5.32
-        version: 8.5.32
+        specifier: 8.5.33
+        version: 8.5.33
       postcss-easy-import:
         specifier: 4.0.0
-        version: 4.0.0(postcss@8.5.32)
+        version: 4.0.0(postcss@8.5.33)
       pump:
         specifier: 3.0.4
         version: 3.0.4
@@ -239,13 +239,13 @@ importers:
         version: 0.0.9
       autoprefixer:
         specifier: 10.6.2
-        version: 10.6.2(postcss@8.5.32)
+        version: 10.6.2(postcss@8.5.33)
       beeper:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
         specifier: 9.9.0
-        version: 9.9.0(postcss@8.5.32)
+        version: 9.9.0(postcss@8.5.33)
       gscan:
         specifier: 6.7.0
         version: 6.7.0(bare-buffer@3.7.1)(supports-color@7.2.0)
@@ -260,7 +260,7 @@ importers:
         version: 4.0.2(supports-color@7.2.0)
       gulp-postcss:
         specifier: 10.0.0
-        version: 10.0.0(postcss@8.5.32)
+        version: 10.0.0(postcss@8.5.33)
       gulp-uglify:
         specifier: 3.0.2
         version: 3.0.2
@@ -271,11 +271,11 @@ importers:
         specifier: 2.0.0
         version: 2.0.0
       postcss:
-        specifier: 8.5.32
-        version: 8.5.32
+        specifier: 8.5.33
+        version: 8.5.33
       postcss-easy-import:
         specifier: 4.0.0
-        version: 4.0.0(postcss@8.5.32)
+        version: 4.0.0(postcss@8.5.33)
       pump:
         specifier: 3.0.4
         version: 3.0.4
@@ -290,13 +290,13 @@ importers:
         version: 0.0.9
       autoprefixer:
         specifier: 10.6.2
-        version: 10.6.2(postcss@8.5.32)
+        version: 10.6.2(postcss@8.5.33)
       beeper:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
         specifier: 9.9.0
-        version: 9.9.0(postcss@8.5.32)
+        version: 9.9.0(postcss@8.5.33)
       gscan:
         specifier: 6.7.0
         version: 6.7.0(bare-buffer@3.7.1)(supports-color@7.2.0)
@@ -311,7 +311,7 @@ importers:
         version: 4.0.2(supports-color@7.2.0)
       gulp-postcss:
         specifier: 10.0.0
-        version: 10.0.0(postcss@8.5.32)
+        version: 10.0.0(postcss@8.5.33)
       gulp-uglify:
         specifier: 3.0.2
         version: 3.0.2
@@ -322,11 +322,11 @@ importers:
         specifier: 2.0.0
         version: 2.0.0
       postcss:
-        specifier: 8.5.32
-        version: 8.5.32
+        specifier: 8.5.33
+        version: 8.5.33
       postcss-easy-import:
         specifier: 4.0.0
-        version: 4.0.0(postcss@8.5.32)
+        version: 4.0.0(postcss@8.5.33)
       pump:
         specifier: 3.0.4
         version: 3.0.4
@@ -341,13 +341,13 @@ importers:
         version: 0.0.9
       autoprefixer:
         specifier: 10.6.2
-        version: 10.6.2(postcss@8.5.32)
+        version: 10.6.2(postcss@8.5.33)
       beeper:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
         specifier: 9.9.0
-        version: 9.9.0(postcss@8.5.32)
+        version: 9.9.0(postcss@8.5.33)
       gscan:
         specifier: 6.7.0
         version: 6.7.0(bare-buffer@3.7.1)(supports-color@7.2.0)
@@ -362,7 +362,7 @@ importers:
         version: 4.0.2(supports-color@7.2.0)
       gulp-postcss:
         specifier: 10.0.0
-        version: 10.0.0(postcss@8.5.32)
+        version: 10.0.0(postcss@8.5.33)
       gulp-uglify:
         specifier: 3.0.2
         version: 3.0.2
@@ -373,11 +373,11 @@ importers:
         specifier: 2.0.0
         version: 2.0.0
       postcss:
-        specifier: 8.5.32
-        version: 8.5.32
+        specifier: 8.5.33
+        version: 8.5.33
       postcss-easy-import:
         specifier: 4.0.0
-        version: 4.0.0(postcss@8.5.32)
+        version: 4.0.0(postcss@8.5.33)
       pump:
         specifier: 3.0.4
         version: 3.0.4
@@ -392,13 +392,13 @@ importers:
         version: 0.0.9
       autoprefixer:
         specifier: 10.6.2
-        version: 10.6.2(postcss@8.5.32)
+        version: 10.6.2(postcss@8.5.33)
       beeper:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
         specifier: 9.9.0
-        version: 9.9.0(postcss@8.5.32)
+        version: 9.9.0(postcss@8.5.33)
       gscan:
         specifier: 6.7.0
         version: 6.7.0(bare-buffer@3.7.1)(supports-color@7.2.0)
@@ -413,7 +413,7 @@ importers:
         version: 4.0.2(supports-color@7.2.0)
       gulp-postcss:
         specifier: 10.0.0
-        version: 10.0.0(postcss@8.5.32)
+        version: 10.0.0(postcss@8.5.33)
       gulp-uglify:
         specifier: 3.0.2
         version: 3.0.2
@@ -424,11 +424,11 @@ importers:
         specifier: 2.0.0
         version: 2.0.0
       postcss:
-        specifier: 8.5.32
-        version: 8.5.32
+        specifier: 8.5.33
+        version: 8.5.33
       postcss-easy-import:
         specifier: 4.0.0
-        version: 4.0.0(postcss@8.5.32)
+        version: 4.0.0(postcss@8.5.33)
       pump:
         specifier: 3.0.4
         version: 3.0.4
@@ -443,13 +443,13 @@ importers:
         version: 0.0.9
       autoprefixer:
         specifier: 10.6.2
-        version: 10.6.2(postcss@8.5.32)
+        version: 10.6.2(postcss@8.5.33)
       beeper:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
         specifier: 9.9.0
-        version: 9.9.0(postcss@8.5.32)
+        version: 9.9.0(postcss@8.5.33)
       gscan:
         specifier: 6.7.0
         version: 6.7.0(bare-buffer@3.7.1)(supports-color@7.2.0)
@@ -464,7 +464,7 @@ importers:
         version: 4.0.2(supports-color@7.2.0)
       gulp-postcss:
         specifier: 10.0.0
-        version: 10.0.0(postcss@8.5.32)
+        version: 10.0.0(postcss@8.5.33)
       gulp-uglify:
         specifier: 3.0.2
         version: 3.0.2
@@ -475,11 +475,11 @@ importers:
         specifier: 2.0.0
         version: 2.0.0
       postcss:
-        specifier: 8.5.32
-        version: 8.5.32
+        specifier: 8.5.33
+        version: 8.5.33
       postcss-easy-import:
         specifier: 4.0.0
-        version: 4.0.0(postcss@8.5.32)
+        version: 4.0.0(postcss@8.5.33)
       pump:
         specifier: 3.0.4
         version: 3.0.4
@@ -494,13 +494,13 @@ importers:
         version: 0.0.9
       autoprefixer:
         specifier: 10.6.2
-        version: 10.6.2(postcss@8.5.32)
+        version: 10.6.2(postcss@8.5.33)
       beeper:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
         specifier: 9.9.0
-        version: 9.9.0(postcss@8.5.32)
+        version: 9.9.0(postcss@8.5.33)
       gscan:
         specifier: 6.7.0
         version: 6.7.0(bare-buffer@3.7.1)(supports-color@7.2.0)
@@ -515,7 +515,7 @@ importers:
         version: 4.0.2(supports-color@7.2.0)
       gulp-postcss:
         specifier: 10.0.0
-        version: 10.0.0(postcss@8.5.32)
+        version: 10.0.0(postcss@8.5.33)
       gulp-uglify:
         specifier: 3.0.2
         version: 3.0.2
@@ -526,11 +526,11 @@ importers:
         specifier: 2.0.0
         version: 2.0.0
       postcss:
-        specifier: 8.5.32
-        version: 8.5.32
+        specifier: 8.5.33
+        version: 8.5.33
       postcss-easy-import:
         specifier: 4.0.0
-        version: 4.0.0(postcss@8.5.32)
+        version: 4.0.0(postcss@8.5.33)
       pump:
         specifier: 3.0.4
         version: 3.0.4
@@ -545,13 +545,13 @@ importers:
         version: 0.0.9
       autoprefixer:
         specifier: 10.6.2
-        version: 10.6.2(postcss@8.5.32)
+        version: 10.6.2(postcss@8.5.33)
       beeper:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
         specifier: 9.9.0
-        version: 9.9.0(postcss@8.5.32)
+        version: 9.9.0(postcss@8.5.33)
       gscan:
         specifier: 6.7.0
         version: 6.7.0(bare-buffer@3.7.1)(supports-color@7.2.0)
@@ -566,7 +566,7 @@ importers:
         version: 4.0.2(supports-color@7.2.0)
       gulp-postcss:
         specifier: 10.0.0
-        version: 10.0.0(postcss@8.5.32)
+        version: 10.0.0(postcss@8.5.33)
       gulp-uglify:
         specifier: 3.0.2
         version: 3.0.2
@@ -577,11 +577,11 @@ importers:
         specifier: 2.0.0
         version: 2.0.0
       postcss:
-        specifier: 8.5.32
-        version: 8.5.32
+        specifier: 8.5.33
+        version: 8.5.33
       postcss-easy-import:
         specifier: 4.0.0
-        version: 4.0.0(postcss@8.5.32)
+        version: 4.0.0(postcss@8.5.33)
       pump:
         specifier: 3.0.4
         version: 3.0.4
@@ -596,13 +596,13 @@ importers:
         version: 0.0.9
       autoprefixer:
         specifier: 10.6.2
-        version: 10.6.2(postcss@8.5.32)
+        version: 10.6.2(postcss@8.5.33)
       beeper:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
         specifier: 9.9.0
-        version: 9.9.0(postcss@8.5.32)
+        version: 9.9.0(postcss@8.5.33)
       gscan:
         specifier: 6.7.0
         version: 6.7.0(bare-buffer@3.7.1)(supports-color@7.2.0)
@@ -617,7 +617,7 @@ importers:
         version: 4.0.2(supports-color@7.2.0)
       gulp-postcss:
         specifier: 10.0.0
-        version: 10.0.0(postcss@8.5.32)
+        version: 10.0.0(postcss@8.5.33)
       gulp-uglify:
         specifier: 3.0.2
         version: 3.0.2
@@ -628,11 +628,11 @@ importers:
         specifier: 2.0.0
         version: 2.0.0
       postcss:
-        specifier: 8.5.32
-        version: 8.5.32
+        specifier: 8.5.33
+        version: 8.5.33
       postcss-easy-import:
         specifier: 4.0.0
-        version: 4.0.0(postcss@8.5.32)
+        version: 4.0.0(postcss@8.5.33)
       pump:
         specifier: 3.0.4
         version: 3.0.4
@@ -647,13 +647,13 @@ importers:
         version: 0.0.9
       autoprefixer:
         specifier: 10.6.2
-        version: 10.6.2(postcss@8.5.32)
+        version: 10.6.2(postcss@8.5.33)
       beeper:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
         specifier: 9.9.0
-        version: 9.9.0(postcss@8.5.32)
+        version: 9.9.0(postcss@8.5.33)
       gscan:
         specifier: 6.7.0
         version: 6.7.0(bare-buffer@3.7.1)(supports-color@7.2.0)
@@ -668,7 +668,7 @@ importers:
         version: 4.0.2(supports-color@7.2.0)
       gulp-postcss:
         specifier: 10.0.0
-        version: 10.0.0(postcss@8.5.32)
+        version: 10.0.0(postcss@8.5.33)
       gulp-uglify:
         specifier: 3.0.2
         version: 3.0.2
@@ -679,11 +679,11 @@ importers:
         specifier: 2.0.0
         version: 2.0.0
       postcss:
-        specifier: 8.5.32
-        version: 8.5.32
+        specifier: 8.5.33
+        version: 8.5.33
       postcss-easy-import:
         specifier: 4.0.0
-        version: 4.0.0(postcss@8.5.32)
+        version: 4.0.0(postcss@8.5.33)
       pump:
         specifier: 3.0.4
         version: 3.0.4
@@ -698,13 +698,13 @@ importers:
         version: 0.0.9
       autoprefixer:
         specifier: 10.6.2
-        version: 10.6.2(postcss@8.5.32)
+        version: 10.6.2(postcss@8.5.33)
       beeper:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
         specifier: 9.9.0
-        version: 9.9.0(postcss@8.5.32)
+        version: 9.9.0(postcss@8.5.33)
       gscan:
         specifier: 6.7.0
         version: 6.7.0(bare-buffer@3.7.1)(supports-color@7.2.0)
@@ -719,7 +719,7 @@ importers:
         version: 4.0.2(supports-color@7.2.0)
       gulp-postcss:
         specifier: 10.0.0
-        version: 10.0.0(postcss@8.5.32)
+        version: 10.0.0(postcss@8.5.33)
       gulp-uglify:
         specifier: 3.0.2
         version: 3.0.2
@@ -730,11 +730,11 @@ importers:
         specifier: 2.0.0
         version: 2.0.0
       postcss:
-        specifier: 8.5.32
-        version: 8.5.32
+        specifier: 8.5.33
+        version: 8.5.33
       postcss-easy-import:
         specifier: 4.0.0
-        version: 4.0.0(postcss@8.5.32)
+        version: 4.0.0(postcss@8.5.33)
       pump:
         specifier: 3.0.4
         version: 3.0.4
@@ -749,13 +749,13 @@ importers:
         version: 0.0.9
       autoprefixer:
         specifier: 10.6.2
-        version: 10.6.2(postcss@8.5.32)
+        version: 10.6.2(postcss@8.5.33)
       beeper:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
         specifier: 9.9.0
-        version: 9.9.0(postcss@8.5.32)
+        version: 9.9.0(postcss@8.5.33)
       gscan:
         specifier: 6.7.0
         version: 6.7.0(bare-buffer@3.7.1)(supports-color@7.2.0)
@@ -770,7 +770,7 @@ importers:
         version: 4.0.2(supports-color@7.2.0)
       gulp-postcss:
         specifier: 10.0.0
-        version: 10.0.0(postcss@8.5.32)
+        version: 10.0.0(postcss@8.5.33)
       gulp-uglify:
         specifier: 3.0.2
         version: 3.0.2
@@ -781,11 +781,11 @@ importers:
         specifier: 2.0.0
         version: 2.0.0
       postcss:
-        specifier: 8.5.32
-        version: 8.5.32
+        specifier: 8.5.33
+        version: 8.5.33
       postcss-easy-import:
         specifier: 4.0.0
-        version: 4.0.0(postcss@8.5.32)
+        version: 4.0.0(postcss@8.5.33)
       pump:
         specifier: 3.0.4
         version: 3.0.4
@@ -800,13 +800,13 @@ importers:
         version: 0.0.9
       autoprefixer:
         specifier: 10.6.2
-        version: 10.6.2(postcss@8.5.32)
+        version: 10.6.2(postcss@8.5.33)
       beeper:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
         specifier: 9.9.0
-        version: 9.9.0(postcss@8.5.32)
+        version: 9.9.0(postcss@8.5.33)
       gscan:
         specifier: 6.7.0
         version: 6.7.0(bare-buffer@3.7.1)(supports-color@7.2.0)
@@ -821,7 +821,7 @@ importers:
         version: 4.0.2(supports-color@7.2.0)
       gulp-postcss:
         specifier: 10.0.0
-        version: 10.0.0(postcss@8.5.32)
+        version: 10.0.0(postcss@8.5.33)
       gulp-uglify:
         specifier: 3.0.2
         version: 3.0.2
@@ -832,11 +832,11 @@ importers:
         specifier: 2.0.0
         version: 2.0.0
       postcss:
-        specifier: 8.5.32
-        version: 8.5.32
+        specifier: 8.5.33
+        version: 8.5.33
       postcss-easy-import:
         specifier: 4.0.0
-        version: 4.0.0(postcss@8.5.32)
+        version: 4.0.0(postcss@8.5.33)
       pump:
         specifier: 3.0.4
         version: 3.0.4
@@ -851,13 +851,13 @@ importers:
         version: 0.0.9
       autoprefixer:
         specifier: 10.6.2
-        version: 10.6.2(postcss@8.5.32)
+        version: 10.6.2(postcss@8.5.33)
       beeper:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
         specifier: 9.9.0
-        version: 9.9.0(postcss@8.5.32)
+        version: 9.9.0(postcss@8.5.33)
       gscan:
         specifier: 6.7.0
         version: 6.7.0(bare-buffer@3.7.1)(supports-color@7.2.0)
@@ -872,7 +872,7 @@ importers:
         version: 4.0.2(supports-color@7.2.0)
       gulp-postcss:
         specifier: 10.0.0
-        version: 10.0.0(postcss@8.5.32)
+        version: 10.0.0(postcss@8.5.33)
       gulp-uglify:
         specifier: 3.0.2
         version: 3.0.2
@@ -883,11 +883,11 @@ importers:
         specifier: 2.0.0
         version: 2.0.0
       postcss:
-        specifier: 8.5.32
-        version: 8.5.32
+        specifier: 8.5.33
+        version: 8.5.33
       postcss-easy-import:
         specifier: 4.0.0
-        version: 4.0.0(postcss@8.5.32)
+        version: 4.0.0(postcss@8.5.33)
       pump:
         specifier: 3.0.4
         version: 3.0.4
@@ -902,13 +902,13 @@ importers:
         version: 0.0.9
       autoprefixer:
         specifier: 10.6.2
-        version: 10.6.2(postcss@8.5.32)
+        version: 10.6.2(postcss@8.5.33)
       beeper:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
         specifier: 9.9.0
-        version: 9.9.0(postcss@8.5.32)
+        version: 9.9.0(postcss@8.5.33)
       gscan:
         specifier: 6.7.0
         version: 6.7.0(bare-buffer@3.7.1)(supports-color@7.2.0)
@@ -923,7 +923,7 @@ importers:
         version: 4.0.2(supports-color@7.2.0)
       gulp-postcss:
         specifier: 10.0.0
-        version: 10.0.0(postcss@8.5.32)
+        version: 10.0.0(postcss@8.5.33)
       gulp-uglify:
         specifier: 3.0.2
         version: 3.0.2
@@ -934,11 +934,11 @@ importers:
         specifier: 2.0.0
         version: 2.0.0
       postcss:
-        specifier: 8.5.32
-        version: 8.5.32
+        specifier: 8.5.33
+        version: 8.5.33
       postcss-easy-import:
         specifier: 4.0.0
-        version: 4.0.0(postcss@8.5.32)
+        version: 4.0.0(postcss@8.5.33)
       pump:
         specifier: 3.0.4
         version: 3.0.4
@@ -953,13 +953,13 @@ importers:
         version: 0.0.9
       autoprefixer:
         specifier: 10.6.2
-        version: 10.6.2(postcss@8.5.32)
+        version: 10.6.2(postcss@8.5.33)
       beeper:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
         specifier: 9.9.0
-        version: 9.9.0(postcss@8.5.32)
+        version: 9.9.0(postcss@8.5.33)
       gscan:
         specifier: 6.7.0
         version: 6.7.0(bare-buffer@3.7.1)(supports-color@7.2.0)
@@ -974,7 +974,7 @@ importers:
         version: 4.0.2(supports-color@7.2.0)
       gulp-postcss:
         specifier: 10.0.0
-        version: 10.0.0(postcss@8.5.32)
+        version: 10.0.0(postcss@8.5.33)
       gulp-uglify:
         specifier: 3.0.2
         version: 3.0.2
@@ -985,11 +985,11 @@ importers:
         specifier: 2.0.0
         version: 2.0.0
       postcss:
-        specifier: 8.5.32
-        version: 8.5.32
+        specifier: 8.5.33
+        version: 8.5.33
       postcss-easy-import:
         specifier: 4.0.0
-        version: 4.0.0(postcss@8.5.32)
+        version: 4.0.0(postcss@8.5.33)
       pump:
         specifier: 3.0.4
         version: 3.0.4
@@ -1006,13 +1006,13 @@ importers:
         version: 0.0.9
       autoprefixer:
         specifier: 10.6.2
-        version: 10.6.2(postcss@8.5.32)
+        version: 10.6.2(postcss@8.5.33)
       beeper:
         specifier: 2.1.0
         version: 2.1.0
       cssnano:
         specifier: 9.9.0
-        version: 9.9.0(postcss@8.5.32)
+        version: 9.9.0(postcss@8.5.33)
       gscan:
         specifier: 6.7.0
         version: 6.7.0(bare-buffer@3.7.1)(supports-color@7.2.0)
@@ -1027,7 +1027,7 @@ importers:
         version: 4.0.2(supports-color@7.2.0)
       gulp-postcss:
         specifier: 10.0.0
-        version: 10.0.0(postcss@8.5.32)
+        version: 10.0.0(postcss@8.5.33)
       gulp-uglify:
         specifier: 3.0.2
         version: 3.0.2
@@ -1038,11 +1038,11 @@ importers:
         specifier: 2.0.0
         version: 2.0.0
       postcss:
-        specifier: 8.5.32
-        version: 8.5.32
+        specifier: 8.5.33
+        version: 8.5.33
       postcss-easy-import:
         specifier: 4.0.0
-        version: 4.0.0(postcss@8.5.32)
+        version: 4.0.0(postcss@8.5.33)
       pump:
         specifier: 3.0.4
         version: 3.0.4
@@ -2034,8 +2034,8 @@ packages:
   postcss-value-parser@4.2.0:
     resolution: {integrity: sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==}
 
-  postcss@8.5.32:
-    resolution: {integrity: sha512-LJlKCCAUFKOuZxipUdYw1NzIITEsPcgyOG9LkvRJvuKj/bRzbuRY0ARXvL0pWGpsZvn8jku+LMep2eU0seHp8g==}
+  postcss@8.5.33:
+    resolution: {integrity: sha512-RVHEU9/Pp1Fnjr/MpAJsZoADukCKhfIi15OunEYiGktIkYLkPVvC1sioWolGDS7XByMTx9m/IGbro0Js13zhnQ==}
     engines: {node: ^10 || ^12 || >=14}
 
   process-nextick-args@2.0.1:
@@ -2548,13 +2548,13 @@ snapshots:
 
   async@3.2.6: {}
 
-  autoprefixer@10.6.2(postcss@8.5.32):
+  autoprefixer@10.6.2(postcss@8.5.33):
     dependencies:
       browserslist: 4.29.5
       caniuse-lite: 1.0.30001822
       fraction.js: 5.3.4
       picocolors: 1.1.1
-      postcss: 8.5.32
+      postcss: 8.5.33
       postcss-value-parser: 4.2.0
 
   b4a@1.9.0: {}
@@ -2773,14 +2773,14 @@ snapshots:
       crc-32: 1.2.2
       readable-stream: 4.8.0
 
-  cssnano@9.9.0(postcss@8.5.32):
+  cssnano@9.9.0(postcss@8.5.33):
     dependencies:
       '@colordx/core': 7.3.0
       '@csstools/css-tokenizer': 4.0.2
       browserslist: 4.29.5
       caniuse-api: 4.0.0
-      postcss: 8.5.32
-      postcss-calc: 11.2.3(postcss@8.5.32)
+      postcss: 8.5.33
+      postcss-calc: 11.2.3(postcss@8.5.33)
 
   debug@3.2.7(supports-color@7.2.0):
     dependencies:
@@ -3080,12 +3080,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  gulp-postcss@10.0.0(postcss@8.5.32):
+  gulp-postcss@10.0.0(postcss@8.5.33):
     dependencies:
       fancy-log: 2.0.0
       plugin-error: 2.0.1
-      postcss: 8.5.32
-      postcss-load-config: 5.1.0(postcss@8.5.32)
+      postcss: 8.5.33
+      postcss-load-config: 5.1.0(postcss@8.5.33)
       vinyl-sourcemaps-apply: 0.2.1
     transitivePeerDependencies:
       - jiti
@@ -3387,39 +3387,39 @@ snapshots:
     dependencies:
       ansi-colors: 1.1.0
 
-  postcss-calc@11.2.3(postcss@8.5.32):
+  postcss-calc@11.2.3(postcss@8.5.33):
     dependencies:
       '@csstools/css-tokenizer': 4.0.2
-      postcss: 8.5.32
+      postcss: 8.5.33
 
-  postcss-easy-import@4.0.0(postcss@8.5.32):
+  postcss-easy-import@4.0.0(postcss@8.5.33):
     dependencies:
       globby: 6.1.0
       is-glob: 4.0.3
       lodash: 4.18.1
       object-assign: 4.1.1
       pify: 3.0.0
-      postcss: 8.5.32
-      postcss-import: 14.1.0(postcss@8.5.32)
+      postcss: 8.5.33
+      postcss-import: 14.1.0(postcss@8.5.33)
       resolve: 1.22.14
 
-  postcss-import@14.1.0(postcss@8.5.32):
+  postcss-import@14.1.0(postcss@8.5.33):
     dependencies:
-      postcss: 8.5.32
+      postcss: 8.5.33
       postcss-value-parser: 4.2.0
       read-cache: 1.0.2
       resolve: 1.22.14
 
-  postcss-load-config@5.1.0(postcss@8.5.32):
+  postcss-load-config@5.1.0(postcss@8.5.33):
     dependencies:
       lilconfig: 3.1.4
       yaml: 2.9.1
     optionalDependencies:
-      postcss: 8.5.32
+      postcss: 8.5.33
 
   postcss-value-parser@4.2.0: {}
 
-  postcss@8.5.32:
+  postcss@8.5.33:
     dependencies:
       nanoid: 3.3.20
       picocolors: 1.1.1
