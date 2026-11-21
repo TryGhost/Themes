@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - 'renovate/*'
     paths:
       - 'packages/taste/**'
       - '.github/workflows/taste.yml'
@@ -15,6 +16,7 @@ jobs:
   test:
     name: Test
     runs-on: ubuntu-latest
+    if: github.event_name == 'push' || (github.event_name == 'pull_request' && !startsWith(github.head_ref, 'renovate/'))
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
       - uses: pnpm/action-setup@73e46992e05b19abd31f2f3c20e0e7370d762115 # v6
@@ -32,7 +34,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Verify all required jobs succeeded
-        if: needs.test.result != 'success'
+        if: contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled')
         run: exit 1
 
   deploy:
